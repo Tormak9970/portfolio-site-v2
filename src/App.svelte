@@ -1,12 +1,24 @@
 <script lang="ts">
-	import Contact from "./components/Contact.svelte";
 	import About from "./components/About.svelte";
 	import Experience from "./components/Experience.svelte";
-	import Organizations from "./components/Organizations.svelte";
-	import Projects from "./components/Projects.svelte";
 	import Featured from "./components/Featured.svelte";
+	import Projects from "./components/Projects.svelte";
+	import Organizations from "./components/Organizations.svelte";
+	import Contact from "./components/Contact.svelte";
 
-	function handleNavHover1(e: Event) {
+	const PagesLut = {
+		'1': About,
+		'2': Experience,
+		'3': Featured,
+		'4': Projects,
+		'5': Organizations,
+		'6': Contact,
+	}
+
+	let currentRendered:string;
+	$: currentRendered = '1';
+
+	function removeAllIndicators() {
 		const intInds = document.querySelectorAll('.interaction-indicator');
 
 		for (const elem of intInds) {
@@ -15,6 +27,9 @@
 				elem.style.width = "0px";
 			}
 		}
+	}
+	function handleNavHover1(e: Event) {
+		removeAllIndicators();
 
 		const navCont = e.currentTarget;
 		const intInd = navCont.children[1];
@@ -23,7 +38,6 @@
 			intInd.style.width = "100%";
 		}
 	}
-
 	function handleNavHover2(e: Event) {
 		const navCont = e.currentTarget;
 		const intInd = navCont.children[1];
@@ -32,13 +46,17 @@
 			intInd.style.width = "0px";
 		}
 	}
-
 	function handleNavClick(e: Event) {
-		document.querySelector('.rendered').classList.remove('rendered');
-		e.currentTarget.children[1].classList.add('rendered');
+		e.preventDefault();
+		const elem = e.currentTarget;
+		
+		if (!elem.classList.contains('rendered')) {
+			document.querySelector('.rendered').classList.remove('rendered');
+			removeAllIndicators();
+			elem.children[1].classList.add('rendered');
+			currentRendered = elem.id;
+		}
 	}
-
-	export let name: string;
 </script>
 
 <main>
@@ -47,34 +65,34 @@
 
 		</div>
 		<div class="navigation">
-			<div class="nav-btn-cont" on:mouseenter="{handleNavHover1}" on:mouseleave="{handleNavHover2}" on:click="{handleNavClick}">
-				<a href="#" class="nav-btn">About</a>
-				<div class="rendered interaction-indicator" style="width: 100%; background-color: rgb(231, 231, 231);"></div>
+			<div id='1' class="nav-btn-cont" on:mouseenter="{handleNavHover1}" on:mouseleave="{handleNavHover2}" on:click="{handleNavClick}">
+				<a href="." class="nav-btn">About</a>
+				<div class="rendered interaction-indicator"></div>
 			</div>
-			<div class="nav-btn-cont" on:mouseenter="{handleNavHover1}" on:mouseleave="{handleNavHover2}" on:click="{handleNavClick}">
-				<a href="#" class="nav-btn">Experience</a>
+			<div id='2' class="nav-btn-cont" on:mouseenter="{handleNavHover1}" on:mouseleave="{handleNavHover2}" on:click="{handleNavClick}">
+				<a href="." class="nav-btn">Experience</a>
 				<div class="interaction-indicator"></div>
 			</div>
-			<div class="nav-btn-cont" on:mouseenter="{handleNavHover1}" on:mouseleave="{handleNavHover2}" on:click="{handleNavClick}">
-				<a href="#" class="nav-btn">Featured</a>
+			<div id='3' class="nav-btn-cont" on:mouseenter="{handleNavHover1}" on:mouseleave="{handleNavHover2}" on:click="{handleNavClick}">
+				<a href="." class="nav-btn">Featured</a>
 				<div class="interaction-indicator"></div>
 			</div>
-			<div class="nav-btn-cont" on:mouseenter="{handleNavHover1}" on:mouseleave="{handleNavHover2}" on:click="{handleNavClick}">
-				<a href="#" class="nav-btn">Projects</a>
+			<div id='4' class="nav-btn-cont" on:mouseenter="{handleNavHover1}" on:mouseleave="{handleNavHover2}" on:click="{handleNavClick}">
+				<a href="." class="nav-btn">Projects</a>
 				<div class="interaction-indicator"></div>
 			</div>
-			<div class="nav-btn-cont" on:mouseenter="{handleNavHover1}" on:mouseleave="{handleNavHover2}" on:click="{handleNavClick}">
-				<a href="#" class="nav-btn">Organizations</a>
+			<div id='5' class="nav-btn-cont" on:mouseenter="{handleNavHover1}" on:mouseleave="{handleNavHover2}" on:click="{handleNavClick}">
+				<a href="." class="nav-btn">Organizations</a>
 				<div class="interaction-indicator"></div>
 			</div>
-			<div class="nav-btn-cont" on:mouseenter="{handleNavHover1}" on:mouseleave="{handleNavHover2}" on:click="{handleNavClick}">
-				<a href="#" class="nav-btn">Contact</a>
+			<div id='6' class="nav-btn-cont" on:mouseenter="{handleNavHover1}" on:mouseleave="{handleNavHover2}" on:click="{handleNavClick}">
+				<a href="." class="nav-btn">Contact</a>
 				<div class="interaction-indicator"></div>
 			</div>
 		</div>
 	</div>
 	<div class="content-body">
-
+		<svelte:component this={PagesLut[currentRendered]}/>
 	</div>
 </main>
 
@@ -145,13 +163,15 @@
 
 						transition: width 0.3s ease-in-out;
 					}
+
+					.rendered {
+						width: 100% !important;
+						
+						background-color: $font-color !important;
+					}
 				}
 				.nav-btn-cont:hover {
 					cursor: pointer;
-				}
-				.rendered {
-					width: 100%;
-					background-color: $font-color;
 				}
 			}
 		}
