@@ -32,9 +32,6 @@
         border-radius: 8px;
 
         box-shadow: #151515 1px 1px 10px 0px;
-
-        margin-top: 80px;
-        margin-left: 40px;
 	}
 
     .experience-header {

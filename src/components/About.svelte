@@ -35,8 +35,6 @@
         border-radius: 8px;
 
         box-shadow: #151515 1px 1px 10px 0px;
-
-        margin-left: 20px;
 	}
 
     .about-header {
