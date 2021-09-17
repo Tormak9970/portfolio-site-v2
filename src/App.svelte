@@ -1,18 +1,26 @@
 <script lang="ts">
-	import MyInfo from "./Info.svelte";
+	import MyInfo from "./components/Info.svelte";
+	import About from "./components/About.svelte";
+	import Experience from "./components/Experience.svelte";
+	import Organizations from "./components/Organizations.svelte";
+	import Projects from "./components/Projects.svelte";
+	import Featured from "./components/Featured.svelte";
 
 	export let name: string;
 </script>
 
 <main>
-	<div class="container" style="margin-right: 15px;">
+	<div class="container" style="margin-right: 0px; width: 27%;">
 		<MyInfo/>
+		<Experience/>
 	</div>
-	<div class="container" style="margin-left: 15px;">
-		<div class="color-tester" style="background-color: rgb(138, 194, 78);"></div>
-		<div class="color-tester" style="background-color: #82b74bff;"></div>
-		<div class="color-tester" style="background-color: #405d27ff;"></div>
-		<div class="color-tester" style="background-color: #32481eff;"></div>
+	<div class="container" style="margin-left: 0px; margin-right: 0px; width: 35%;">
+		<About/>
+		<Projects/>
+	</div>
+	<div class="container" style="margin-left: 10px; width: 34%">
+		<Featured/>
+		<Organizations/>
 	</div>
 </main>
 
@@ -35,13 +43,8 @@
 
 	.container {
 		height: calc(100% - 60px);
-		width: calc(50% - 45px);
+		width: calc(33% - 30px);
 
 		margin: 30px;
-	}
-
-	.color-tester {
-		width: 50px;
-		height: 50px;
 	}
 </style>

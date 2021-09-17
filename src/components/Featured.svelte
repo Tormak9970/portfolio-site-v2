@@ -2,15 +2,10 @@
 	
 </script>
 
-<div id="infoSection">
-	<h2 class="info-header">Information</h2>
-    <div class="info-container">
-        <div class="info-left">
-
-        </div>
-        <div class="info-right">
-
-        </div>
+<div id="featuredProj">
+	<h2 class="featured-header">Featured Project</h2>
+    <div class="featured-container">
+        
     </div>
 </div>
 
@@ -22,11 +17,11 @@
     $dark-moss-green: #405d27ff;
     $army-green: #32481eff;
 
-	#infoSection {
+	#featuredProj {
 		width: 100%;
         max-width: 400px;
-		height: 30%;
-        min-height: 265px;
+		height: 40%;
+        min-height: 425px;
 
 		display: flex;
 		flex-direction: column;
@@ -37,9 +32,11 @@
         border-radius: 8px;
 
         box-shadow: #151515 1px 1px 10px 0px;
+
+        margin-left: 40px;
 	}
 
-    .info-header {
+    .featured-header {
         margin: 7px;
 
         padding: 0;
@@ -48,7 +45,7 @@
 
         align-self: flex-start;
     }
-    .info-container {
+    .featured-container {
         height: calc(100% - 49px);
         width: calc(100% - 20px);
 
@@ -57,14 +54,5 @@
         align-items: center;
         justify-content: space-between;
 
-    }
-
-    .info-container > div {
-        width: calc(50% - 5px);
-        height: 100%;
-
-        display: flex;
-        flex-direction: column;
-        align-items: center;
     }
 </style>
