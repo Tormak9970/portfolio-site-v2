@@ -57,12 +57,14 @@
 			currentRendered = elem.id;
 		}
 	}
+
+	let src="img/logo.svg";
 </script>
 
 <main>
 	<div class="header">
 		<div class="home-container">
-			<img src="./img/logo.svg" alt="logo" height="30" width="30">
+			<img src={src} alt="logo" height="30" width="30">
 		</div>
 		<div class="navigation">
 			<div id='1' class="nav-btn-cont" on:mouseenter="{handleNavHover1}" on:mouseleave="{handleNavHover2}" on:click="{handleNavClick}">
