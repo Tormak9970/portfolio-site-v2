@@ -1,0 +1,55 @@
+{
+    "projects": {
+        "Web Games": {
+            "Minesweeper": {
+    
+            },
+            "Tetris": {
+    
+            },
+            "Pong": {
+    
+            }
+        },
+        "Web Development": {
+            "portfolio": {
+
+            },
+            "portfolio-v2": {
+    
+            },
+            "TORC-Character-Designer": {
+
+            }
+        },
+        "Software Engineering": {
+            "Slicers-GUI": {
+
+            }
+        },
+        "Education": {
+            "web-dev-intro-camp": {
+
+            }
+        },
+        "Miscellaneous": {
+            "Modbot": {
+
+            },
+            "MemeDB": {
+    
+            }
+        }
+    },
+    "featured": "Slicers-GUI",
+    "organizations": {
+
+    },
+    "art": [
+        {
+            "name": "SWTOR Neon Sign",
+            "path": "./img/art pieces/SWTOR Neon Final Marked.png",
+            "description": ""
+        }
+    ]
+}

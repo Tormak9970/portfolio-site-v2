@@ -4,6 +4,7 @@
 	import Featured from "./components/Featured.svelte";
 	import Projects from "./components/Projects.svelte";
 	import Organizations from "./components/Organizations.svelte";
+	import Art from "./components/Art.svelte";
 	import Contact from "./components/Contact.svelte";
 	import Socials from "./components/Socials.svelte";
 
@@ -13,7 +14,8 @@
 		'3': Featured,
 		'4': Projects,
 		'5': Organizations,
-		'6': Contact,
+		'6': Art,
+		'7': Contact,
 	}
 
 	let currentRendered:string;
@@ -87,6 +89,10 @@
 				<div class="interaction-indicator"></div>
 			</div>
 			<div id='6' class="nav-btn-cont" on:mouseenter="{handleNavHover1}" on:mouseleave="{handleNavHover2}" on:click="{handleNavClick}">
+				<a href="." class="nav-btn">Art Pieces</a>
+				<div class="interaction-indicator"></div>
+			</div>
+			<div id='7' class="nav-btn-cont" on:mouseenter="{handleNavHover1}" on:mouseleave="{handleNavHover2}" on:click="{handleNavClick}">
 				<a href="." class="nav-btn">Contact</a>
 				<div class="interaction-indicator"></div>
 			</div>
