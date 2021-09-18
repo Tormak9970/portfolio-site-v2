@@ -12,9 +12,9 @@
     <div class="container">
         <p class="bio">
             I am an aspiring software engineer and game developer. I enjoy learning new concepts through 
-            self guided projects, and sharing my knowledge with others. I am one of SWTOR Slicers collaborators, and 
+            self guided projects, and sharing my knowledge with others. Additionally, I am one of SWTOR Slicers collaborators, 
             develop new datamining and extraction tools for Star Wars The Old Republic, and do community development for 
-            TORCommunity.com. I got interested in programming in highschool, and I have continued to expand my knowledge 
+            TORCommunity.com. My interest in programming started in highschool, and I have continued to expand my knowledge 
             and skills since. Along side being a developer, I also like to make art in my free time. I enjoy mixing my two 
             passions in a fusion of technology and art.
         </p>
