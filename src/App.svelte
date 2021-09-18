@@ -62,7 +62,7 @@
 <main>
 	<div class="header">
 		<div class="home-container">
-
+			<img src="./img/logo.svg" alt="logo" height="30" width="30">
 		</div>
 		<div class="navigation">
 			<div id='1' class="nav-btn-cont" on:mouseenter="{handleNavHover1}" on:mouseleave="{handleNavHover2}" on:click="{handleNavClick}">
@@ -126,6 +126,16 @@
 			flex-direction: row;
 			align-items: center;
 			justify-content: space-between;
+
+			.home-container {
+				height: 100%;
+				width: 50px;
+
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+			}
 
 			.navigation {
 				height: 100%;
