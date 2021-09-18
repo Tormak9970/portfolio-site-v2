@@ -2,10 +2,16 @@
 	
 </script>
 
-<div id="featuredProj">
-	<h2 class="featured-header">Featured Project</h2>
-    <div class="featured-container">
-        
+<div id="featured">
+	<div class="container">
+        <div class="img-container">
+            
+        </div>
+    </div>
+    <div class="container">
+        <p class="info">
+            
+        </p>
     </div>
 </div>
 
@@ -17,40 +23,35 @@
     $dark-moss-green: #405d27ff;
     $army-green: #32481eff;
 
-	#featuredProj {
-		width: 100%;
-        max-width: 400px;
-		height: 40%;
-        min-height: 425px;
+	#featured {
+		width: 80%;
+		height: 80%;
 
 		display: flex;
-		flex-direction: column;
+		flex-direction: row;
         align-items: center;
 
-        background-color: $grey-secondary;
+        animation-name: fade-in;
+        animation-fill-mode: both;
+        animation-duration: 1.5s;
 
-        border-radius: 8px;
+        .container {
+            width: 50%;
+            height: 100%;
 
-        box-shadow: #151515 1px 1px 10px 0px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .info {
+                font-size: 30px;
+            }
+        }
 	}
 
-    .featured-header {
-        margin: 7px;
-
-        padding: 0;
-
-        font-size: 1.45em;
-
-        align-self: flex-start;
-    }
-    .featured-container {
-        height: calc(100% - 49px);
-        width: calc(100% - 20px);
-
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-
+    @keyframes fade-in {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
     }
 </style>
