@@ -5,6 +5,7 @@
 <div id="aboutSection">
 	<div class="container">
         <div class="img-container">
+            <!-- svelte-ignore a11y-img-redundant-alt -->
             <img src="img/profile pic temp.png" alt="temporary profile picture">
         </div>
     </div>
@@ -18,12 +19,6 @@
             passions in a fusion of technology and art.
         </p>
     </div>
-    <!-- <div class="about-container">
-        <div class="color-tester" style="background-color: rgb(138, 194, 78);"></div>
-		<div class="color-tester" style="background-color: #82b74bff;"></div>
-		<div class="color-tester" style="background-color: #405d27ff;"></div>
-		<div class="color-tester" style="background-color: #32481eff;"></div>
-    </div> -->
 </div>
 
 <style lang="scss">
@@ -41,6 +36,10 @@
 		display: flex;
 		flex-direction: row;
         align-items: center;
+
+        animation-name: fade-in;
+        animation-fill-mode: both;
+        animation-duration: 1.5s;
 
         .container {
             width: 50%;
@@ -60,4 +59,9 @@
             }
         }
 	}
+
+    @keyframes fade-in {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+    }
 </style>
