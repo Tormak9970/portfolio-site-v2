@@ -89,7 +89,7 @@
 				<div class="interaction-indicator"></div>
 			</div>
 			<div id='6' class="nav-btn-cont" on:mouseenter="{handleNavHover1}" on:mouseleave="{handleNavHover2}" on:click="{handleNavClick}">
-				<a href="." class="nav-btn">Art Pieces</a>
+				<a href="." class="nav-btn">Art Gallery</a>
 				<div class="interaction-indicator"></div>
 			</div>
 			<div id='7' class="nav-btn-cont" on:mouseenter="{handleNavHover1}" on:mouseleave="{handleNavHover2}" on:click="{handleNavClick}">
@@ -202,6 +202,8 @@
 			flex-direction: column;
 			justify-content: center;
 			align-items: center;
+
+			overflow-y: scroll;
 		}
 	}
 </style>

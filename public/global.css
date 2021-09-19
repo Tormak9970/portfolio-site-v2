@@ -8,3 +8,19 @@ html, body {
 	color: rgb(231, 231, 231);
 	font-family: 'Source Sans Pro', sans-serif;
 }
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background: #383838;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #82b74bff;
+}
+::-webkit-scrollbar-corner { background: transparent; }
