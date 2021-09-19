@@ -2,16 +2,17 @@
 	import ArtEntry from './art/ArtEntry.svelte';
 
     interface ArtPiece {
-        name:String,
-        path:String,
-        description:String,
-        hidden:boolean
+        name:string,
+        path:string,
+        description:string,
+        hidden:boolean,
+        scrollType:string
     }
 
     interface ConfigPiece {
-        name:String,
-        path:String,
-        description:String
+        name:string,
+        path:string,
+        description:string
     }
 
     let artPromise = loadEntries();
@@ -20,43 +21,47 @@
         return fetch('./config.json').then(response => { return response.json(); }).then(json => { return json['art']; });
     }
 
-    const pieces:ArtPiece[] = [];
+    const pieces:ArtPiece[] = [
+        {
+            "name": "Foreword",
+            "path": undefined,
+            "description": `I am by no means a professional artist, but I have always liked being creative and making different forms of art. 
+                I enjoy practicing art, and it is a good to take a break from development every now and again. 
+                Additionally, I find this practice invaluable when it comes to being a developer, 
+                as being able to impliment creativity into your work can really set you apart, and greatly improve whatever product you are designing.`,
+            "hidden": false,
+            "scrollType": 'down-in'
+        }
+    ];
 
     let scrollIdx:number = 0;
     function interceptScroll(e: WheelEvent) {
         const direction:boolean = e.deltaY > 0 && Math.abs(e.deltaY) != 0; // true = up, false = down
         
-        const foreword = document.querySelector('.foreword');
-        const artGall = document.querySelector('.art-gallery');
-        if (!(scrollIdx == 0 && !direction) && !(scrollIdx == artGall.children.length && direction)) {
-            if (scrollIdx == 1 && !direction) {
+        const artElem = document.getElementById('art');
+        if (!(scrollIdx == 0 && !direction) && !(scrollIdx == artElem.children.length-1 && direction)) {
+            if (direction) {
+                pieces[scrollIdx+1].scrollType = 'down-in';
+                pieces[scrollIdx+1].hidden = false;
+                pieces[scrollIdx].scrollType = 'down-out';
                 setTimeout(() => {
-                    artGall.classList.add('true-hide');
-                }, 700);
-                foreword.classList.remove('true-hide');
-                foreword.classList.remove('hidden');
-                foreword.classList.add('visible');
-                scrollIdx--;
-            } else if (scrollIdx == 0 && direction) {
-                foreword.classList.add('hidden');
-                foreword.classList.remove('visible');
-                setTimeout(() => {
-                    foreword.classList.add('true-hide');
-                }, 700);
-                artGall.classList.remove('hidden');
-                artGall.classList.remove('true-hide');
-                pieces[0].hidden = false;
-                scrollIdx++;
+                    pieces[scrollIdx].hidden = true;
+                    scrollIdx++;
+                }, 1500);
             } else {
-                pieces[scrollIdx-1].hidden = true;
-                if (direction) scrollIdx++; else scrollIdx--;
+                pieces[scrollIdx-1].scrollType = 'up-in';
                 pieces[scrollIdx-1].hidden = false;
+                pieces[scrollIdx].scrollType = 'up-out';
+                setTimeout(() => {
+                    pieces[scrollIdx].hidden = true;
+                    scrollIdx--;
+                },  1500);
             }
         }
     }
 
     function processEntries(entr:ConfigPiece , i) {
-        pieces.push({...entr, "hidden": true});
+        pieces.push({...entr, "hidden": true, scrollType: 'up-out'});
         return entr;
     }
 </script>
@@ -64,29 +69,15 @@
 <svelte:window on:wheel|stopPropagation="{interceptScroll}" />
 
 <div id="art">
-    <div class="foreword visible">
-        <div class="art-header">
-            <h2>Foreword</h2>
-        </div>
-        <p>
-            I am by no means a professional artist, but I have always liked being creative and making different forms of art. 
-            I enjoy practicing art, and it is a good to take a break from development every now and again. 
-            Additionally, I find this practice invaluable when it comes to being a developer, 
-            as being able to impliment creativity into your work can really set you apart, and greatly improve whatever product you are designing.
-        </p>
+    <ArtEntry entryData={pieces[0]} hidden={pieces[0].hidden} scrollType={pieces[0].scrollType}/>
 
-        <div class="msg">Scroll to continue...</div>
-    </div>
-
-    <div class="art-gallery hidden true-hide">
-        {#await artPromise}
-            <div class="loading-data">Loading art pieces...</div>
-        {:then artData} 
-            {#each artData.map(processEntries) as artEntr, idx}
-                <ArtEntry entryData={artEntr} hidden={pieces[idx].hidden}/>
-            {/each }
-        {/await}
-    </div>
+    {#await artPromise}
+        <div class="loading-data">Loading art pieces...</div>
+    {:then artData} 
+        {#each artData.map(processEntries) as artEntr, idx}
+            <ArtEntry entryData={artEntr} hidden={pieces[idx+1].hidden} scrollType={pieces[idx+1].scrollType}/>
+        {/each }
+    {/await}
 </div>
 
 <style lang="scss">
@@ -101,48 +92,16 @@
 		width: 80%;
 		height: 100%;
 
-		display: flex;
-		flex-direction: column;
-        align-items: center;
+        position: relative;
 
         animation-name: fade-in;
         animation-fill-mode: both;
+        animation-direction: alternate;
         animation-duration: 1.5s;
 
         overflow: hidden;
-
-        .art-header {
-            font-size: 27px;
-        }
-        .foreword {
-            width: 80%;
-            
-            font-size: 24px;
-            text-align: center;
-
-            transform: translateY(0%);
-        }  
-        .msg {
-            margin-top: 56px;
-            font-size: 24px;
-        }
-
-        .visible {
-            opacity: 1;
-            transform: translateY(20%);
-            transition: opacity 0.7s, transform 0.7s;
-        }
-
-        .hidden {
-            opacity: 0;
-            transform: translateY(0%);
-            transition: opacity 0.7s, transform 0.7s;
-        }
-
-        .true-hide {
-            display: none;
-        }
     }
+
 
     @keyframes fade-in {
         0% { opacity: 0; }
