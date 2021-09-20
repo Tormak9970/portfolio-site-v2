@@ -46,6 +46,8 @@
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
+
+                text-decoration: none;
             }
 
             .fa-github-square {

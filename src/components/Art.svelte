@@ -38,10 +38,10 @@
     let isScrolling:boolean = false;
     function interceptScroll(e: WheelEvent) {
         if (!isScrolling) {
-            const direction:boolean = e.deltaY > 0 && Math.abs(e.deltaY) != 0; // true = up, false = down
+            const direction:boolean = e.deltaY > 0; // true = down, false = up
             
             const artElem = document.getElementById('art');
-            if (!(scrollIdx == 0 && !direction) && !(scrollIdx == artElem.children.length-1 && direction)) {
+            if (!(scrollIdx == 0 && !direction) && !(scrollIdx == artElem.children.length-1 && direction) && Math.abs(e.deltaY) != 0) {
                 isScrolling = true;
                 if (direction) {
                     pieces[scrollIdx+1].scrollType = 'down-in';
@@ -66,10 +66,7 @@
         }
     }
 
-    function processEntries(entr:ConfigPiece , i) {
-        pieces.push({...entr, "hidden": true, scrollType: 'up-out'});
-        return entr;
-    }
+    function processEntries(entr:ConfigPiece , i) { pieces.push({...entr, "hidden": true, scrollType: 'up-out'}); return entr; }
 </script>
 
 <svelte:window on:wheel|stopPropagation="{interceptScroll}" />

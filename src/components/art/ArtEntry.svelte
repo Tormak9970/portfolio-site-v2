@@ -1,21 +1,10 @@
 <script lang="ts">
-    import Modal from "../utils/Modal.svelte";
+    import { showing } from "../../Stores";
+    import ImageModal from "../utils/ImageModal.svelte";
 
     export let entryData:ConfigPiece;
     export let hidden:boolean;
     export let scrollType:string;
-
-    type Dims = {
-        height:number,
-        width:number
-    }
-
-    interface Config {
-        id:string,
-        styles:string,
-        markup:string,
-        dimensions:Dims
-    }
 
     interface ConfigPiece {
         name:string,
@@ -23,30 +12,26 @@
         description:string
     }
 
-    let previewModal:Modal;
+    let previewModal:ImageModal;
 
     function showModal(e: MouseEvent) {
-        
-    }
-
-    async function init() {
-        const img = new Image();
-        img.src = entryData.path;
-
-        img.onloadedmetadata = (e: Event) => {
-            previewModal = new Modal({
+        if (previewModal) {
+            showing.set(true);
+        } else {
+            previewModal = new ImageModal({
                 target: document.body,
                 props: {
                     config: {
                         id: `${entryData.name}Modal`,
-                        styles: "",
-                        markup: `<img src="${entryData.path}" alt="${entryData.name}"/>`,
-                        dimensions: {
-                            height: e.height,
-                            width: 
+                        data: {
+                            path: entryData.path, 
+                            name: entryData.name
+                        },
+                        maxes: {
+                            h: `auto`,
+                            w: `100%`
                         }
-                    },
-                    showing: false
+                    }
                 }
             });
         }
@@ -103,7 +88,8 @@
             grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
             column-gap: 14px;
             
-            img { width: 100%; height: auto; margin-top: 14px; }
+            img { width: 100%; height: auto; margin-top: 14px; border-radius: 5px; cursor: pointer; transition: 0.3s; }
+            img:hover { opacity: 0.7; }
         }
         .description { width: 100%; margin-top: 14px; font-size: 24px; text-align: center; }
         .msg { margin-top: 56px; font-size: 24px; }
@@ -116,21 +102,9 @@
 
     .hidden { display: none; }
 
-    @keyframes down-fade-in {
-        0% { opacity: 0; transform: translate(-50%, 50%); }
-        100% { opacity: 1; transform: translate(-50%, -50%); }
-    }
-    @keyframes down-fade-out {
-        0% { opacity: 1; transform: translate(-50%, -50%); }
-        100% { opacity: 0; transform: translate(-50%, -150%); }
-    }
+    @keyframes down-fade-in { 0% { opacity: 0; transform: translate(-50%, 50%); } 100% { opacity: 1; transform: translate(-50%, -50%); } }
+    @keyframes down-fade-out { 0% { opacity: 1; transform: translate(-50%, -50%); } 100% { opacity: 0; transform: translate(-50%, -150%); } }
 
-    @keyframes up-fade-in {
-        0% { opacity: 0; transform: translate(-50%, -150%); }
-        100% { opacity: 1; transform: translate(-50%, -50%); }
-    }
-    @keyframes up-fade-out {
-        0% { opacity: 1; transform: translate(-50%, -50%); }
-        100% { opacity: 0; transform: translate(-50%, 50%); }
-    }
+    @keyframes up-fade-in { 0% { opacity: 0; transform: translate(-50%, -150%); } 100% { opacity: 1; transform: translate(-50%, -50%); } }
+    @keyframes up-fade-out { 0% { opacity: 1; transform: translate(-50%, -50%); } 100% { opacity: 0; transform: translate(-50%, 50%); } }
 </style>
