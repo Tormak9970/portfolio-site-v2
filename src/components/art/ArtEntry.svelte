@@ -88,7 +88,7 @@
             grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
             column-gap: 14px;
             
-            img { width: 100%; height: auto; margin-top: 14px; border-radius: 5px; cursor: pointer; transition: 0.3s; }
+            img { width: 100%; height: auto; margin-top: 14px; border-radius: 5px; cursor: pointer; }
             img:hover { opacity: 0.7; }
         }
         .description { width: 100%; margin-top: 14px; font-size: 24px; text-align: center; }

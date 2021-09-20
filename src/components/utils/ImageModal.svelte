@@ -36,8 +36,8 @@
 </script>
 
 <div id={config.id} class="modal-container {showingVal ? '' : 'hidden'}" on:wheel|stopPropagation="{catchScroll}">
+    <span class="close" on:click="{closeSelf}">&times;</span>
     <div class="modal">
-        <span class="close" on:click="{closeSelf}">&times;</span>
         <img src="{config.data.path}" alt="{config.data.name}" style="{config.maxes.h ? `max-height: ${config.maxes.h};` : ''}{config.maxes.w ? ` max-width: ${config.maxes.w};` : ''}"/>
     </div>
 </div>
@@ -76,38 +76,27 @@
             flex-direction: column;
             align-items: center;
 
-            @keyframes zoom {
-                from {
-                    transform: scale(0);
-                }
-                to {
-                    transform: scale(1);
-                }
-            }
+            @keyframes zoom { from { transform: scale(0); } to { transform: scale(1); } }
 
-            /* The Close Button */
-            .close {
-                position: absolute;
-                top: 15px;
-                right: 35px;
-                color: #f1f1f1;
-                font-size: 40px;
-                font-weight: bold;
-                transition: 0.3s;
-            }
+            @media only screen and (max-width: 700px) { .modal { width: 100%; } }
+        }
 
-            .close:hover,
-            .close:focus {
-                color: #bbb;
-                text-decoration: none;
-                cursor: pointer;
-            }
+        /* The Close Button */
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
 
-            @media only screen and (max-width: 700px) {
-                .modal {
-                    width: 100%;
-                }
-            }
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
         }
     }
 
