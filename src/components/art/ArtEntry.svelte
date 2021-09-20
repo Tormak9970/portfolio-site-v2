@@ -1,4 +1,21 @@
 <script lang="ts">
+    import Modal from "../utils/Modal.svelte";
+
+    export let entryData:ConfigPiece;
+    export let hidden:boolean;
+    export let scrollType:string;
+
+    type Dims = {
+        height:number,
+        width:number
+    }
+
+    interface Config {
+        id:string,
+        styles:string,
+        markup:string,
+        dimensions:Dims
+    }
 
     interface ConfigPiece {
         name:string,
@@ -6,21 +23,52 @@
         description:string
     }
 
-	export let entryData:ConfigPiece;
-	export let hidden:boolean;
-    export let scrollType:string;
+    let previewModal:Modal;
+
+    function showModal(e: MouseEvent) {
+        
+    }
+
+    async function init() {
+        const img = new Image();
+        img.src = entryData.path;
+
+        img.onloadedmetadata = (e: Event) => {
+            previewModal = new Modal({
+                target: document.body,
+                props: {
+                    config: {
+                        id: `${entryData.name}Modal`,
+                        styles: "",
+                        markup: `<img src="${entryData.path}" alt="${entryData.name}"/>`,
+                        dimensions: {
+                            height: e.height,
+                            width: 
+                        }
+                    },
+                    showing: false
+                }
+            });
+        }
+    }
 </script>
 
 <div id="{entryData.name}" class="artEntry{` ${scrollType}`}{hidden ? " hidden" : ""}">
     <div class="art-header">
         <h2>{entryData.name}</h2>
     </div>
-	{#if entryData.path}
-        <img src="{entryData.path}" alt="{entryData.name}">
+    {#if entryData.path}
+        <div class="content-container">
+            <img src="{entryData.path}" alt="{entryData.name}" on:click="{showModal}">
+            <div class="description">
+                <p>{entryData.description}</p>
+            </div>
+        </div>
+    {:else}
+        <div class="description">
+            <p>{entryData.description}</p>
+        </div>
     {/if}
-    <div class="description">
-        <p>{entryData.description}</p>
-    </div>
 
     <div class="msg">Scroll to continue...</div>
 </div>
@@ -30,8 +78,6 @@
 	$grey-secondary: #383838;
 	$bud-green: #82b74bff;
     $bud-green__hover: rgb(138, 194, 78);
-    $dark-moss-green: #405d27ff;
-    $army-green: #32481eff;
 
     .artEntry {
         width: 80%;
@@ -51,26 +97,16 @@
         animation-duration: 1.5s;
 
         .art-header { font-size: 27px; }
-
-        img {
+        .content-container {
             width: 100%;
-            height: auto;
-
-            margin-top: 14px;
-        }
-
-        .description {
-            width: 100%;
-
-            margin-top: 14px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+            column-gap: 14px;
             
-            font-size: 24px;
-            text-align: center;
+            img { width: 100%; height: auto; margin-top: 14px; }
         }
-        .msg {
-            margin-top: 56px;
-            font-size: 24px;
-        }
+        .description { width: 100%; margin-top: 14px; font-size: 24px; text-align: center; }
+        .msg { margin-top: 56px; font-size: 24px; }
     }
 
     .down-in { animation-name: down-fade-in; }
@@ -78,11 +114,9 @@
     .down-out { animation-name: down-fade-out; }
     .up-out { animation-name: up-fade-out; }
 
-    .hidden {
-        display: none;
-    }
+    .hidden { display: none; }
 
-    @keyframes down-fade-in { // working
+    @keyframes down-fade-in {
         0% { opacity: 0; transform: translate(-50%, 50%); }
         100% { opacity: 1; transform: translate(-50%, -50%); }
     }

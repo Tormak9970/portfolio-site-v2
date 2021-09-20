@@ -35,27 +35,33 @@
     ];
 
     let scrollIdx:number = 0;
+    let isScrolling:boolean = false;
     function interceptScroll(e: WheelEvent) {
-        const direction:boolean = e.deltaY > 0 && Math.abs(e.deltaY) != 0; // true = up, false = down
-        
-        const artElem = document.getElementById('art');
-        if (!(scrollIdx == 0 && !direction) && !(scrollIdx == artElem.children.length-1 && direction)) {
-            if (direction) {
-                pieces[scrollIdx+1].scrollType = 'down-in';
-                pieces[scrollIdx+1].hidden = false;
-                pieces[scrollIdx].scrollType = 'down-out';
-                setTimeout(() => {
-                    pieces[scrollIdx].hidden = true;
-                    scrollIdx++;
-                }, 1500);
-            } else {
-                pieces[scrollIdx-1].scrollType = 'up-in';
-                pieces[scrollIdx-1].hidden = false;
-                pieces[scrollIdx].scrollType = 'up-out';
-                setTimeout(() => {
-                    pieces[scrollIdx].hidden = true;
-                    scrollIdx--;
-                },  1500);
+        if (!isScrolling) {
+            const direction:boolean = e.deltaY > 0 && Math.abs(e.deltaY) != 0; // true = up, false = down
+            
+            const artElem = document.getElementById('art');
+            if (!(scrollIdx == 0 && !direction) && !(scrollIdx == artElem.children.length-1 && direction)) {
+                isScrolling = true;
+                if (direction) {
+                    pieces[scrollIdx+1].scrollType = 'down-in';
+                    pieces[scrollIdx+1].hidden = false;
+                    pieces[scrollIdx].scrollType = 'down-out';
+                    setTimeout(() => {
+                        pieces[scrollIdx].hidden = true;
+                        scrollIdx++;
+                        isScrolling = false;
+                    }, 1500);
+                } else {
+                    pieces[scrollIdx-1].scrollType = 'up-in';
+                    pieces[scrollIdx-1].hidden = false;
+                    pieces[scrollIdx].scrollType = 'up-out';
+                    setTimeout(() => {
+                        pieces[scrollIdx].hidden = true;
+                        scrollIdx--;
+                        isScrolling = false;
+                    },  1500);
+                }
             }
         }
     }
