@@ -3,9 +3,19 @@
 </script>
 
 <div id="experience">
-	<h2 class="experience-header">Experience</h2>
     <div class="experience-container">
-        
+        <h2 class="experience-header">Work</h2>
+        <div class="experience-sub-section">
+            
+        </div>
+        <h2 class="experience-header">Languages</h2>
+        <div class="experience-sub-section">
+
+        </div>
+        <h2 class="experience-header">Frameworks</h2>
+        <div class="experience-sub-section">
+
+        </div>
     </div>
 </div>
 
@@ -14,8 +24,6 @@
 	$grey-secondary: #383838;
 	$bud-green: #82b74bff;
     $bud-green__hover: rgb(138, 194, 78);
-    $dark-moss-green: #405d27ff;
-    $army-green: #32481eff;
 
 	#experience {
 		width: 100%;
@@ -26,8 +34,6 @@
 		display: flex;
 		flex-direction: column;
         align-items: center;
-
-        background-color: $grey-secondary;
 
         border-radius: 8px;
 
@@ -44,13 +50,11 @@
         align-self: flex-start;
     }
     .experience-container {
-        height: calc(100% - 49px);
-        width: calc(100% - 20px);
+        height: 100%;
+        width: 80%;
 
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         align-items: center;
-        justify-content: space-between;
-
     }
 </style>
