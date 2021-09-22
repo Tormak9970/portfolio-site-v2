@@ -72,13 +72,13 @@
 <svelte:window on:wheel|stopPropagation="{interceptScroll}" />
 
 <div id="art">
-    <ArtEntry entryData={pieces[0]} hidden={pieces[0].hidden} scrollType={pieces[0].scrollType}/>
+    <ArtEntry entryData={pieces[0]} hidden={pieces[0].hidden} scrollType={pieces[0].scrollType} isLast={false}/>
 
     {#await artPromise}
         <div class="loading-data">Loading art pieces...</div>
     {:then artData} 
         {#each artData.map(processEntries) as artEntr, idx}
-            <ArtEntry entryData={artEntr} hidden={pieces[idx+1].hidden} scrollType={pieces[idx+1].scrollType}/>
+            <ArtEntry entryData={artEntr} hidden={pieces[idx+1].hidden} scrollType={pieces[idx+1].scrollType} isLast={idx+1 == artData.length}/>
         {/each }
     {/await}
 </div>

@@ -26,35 +26,26 @@
     $bud-green__hover: rgb(138, 194, 78);
 
 	#experience {
-		width: 100%;
-        max-width: 400px;
-		height: 40%;
-        min-height: 425px;
+		width: 80%;
+		height: 100%;
 
 		display: flex;
 		flex-direction: column;
         align-items: center;
+        .experience-container {
+            height: 100%;
+            width: 80%;
 
-        border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
 
-        box-shadow: #151515 1px 1px 10px 0px;
+            .experience-header {
+                font-size: 27px;
+            }
+            .experience-sub-section {
+                
+            }
+        }
 	}
-
-    .experience-header {
-        margin: 7px;
-
-        padding: 0;
-
-        font-size: 1.45em;
-
-        align-self: flex-start;
-    }
-    .experience-container {
-        height: 100%;
-        width: 80%;
-
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
 </style>

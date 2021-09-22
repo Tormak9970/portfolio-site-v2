@@ -5,6 +5,7 @@
     export let entryData:ConfigPiece;
     export let hidden:boolean;
     export let scrollType:string;
+    export let isLast:boolean;
 
     interface ConfigPiece {
         name:string,
@@ -55,7 +56,7 @@
         </div>
     {/if}
 
-    <div class="msg">Scroll to continue...</div>
+    <div class="msg">{isLast ? "To be continued..." : "Scroll to continue..."}</div>
 </div>
 
 <style lang="scss">

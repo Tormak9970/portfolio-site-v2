@@ -50,6 +50,26 @@
             "name": "SWTOR Neon Sign",
             "path": "./img/art pieces/SWTOR Neon Final Marked.png",
             "description": "This piece is a 3D render of a neon sign inspired SWTOR (Star Wars The Old Republic) logo, made in blender. This was my first original piece."
+        },
+        {
+            "name": "Operative Neon Sign",
+            "path": "./img/art pieces/Operative Neon Marked.png",
+            "description": "This was my second attempt to make a neon sign using blender. It has a bit more detail then the previous one, and the pipes and corners are a bit cleaner."
+        },
+        {
+            "name": "Guardian Neon Sign",
+            "path": "./img/art pieces/Guardian Neon Marked.png",
+            "description": "This piece was my third and most recent attemp at making a neon sign in blender. I was satisfied with how the previous sign turned out, however I wanted to add more detail. I settled on modeling a bracket, screws, and clips to 'hold' the sign to the brick wall behind, which turned out really nice."
+        },
+        {
+            "name": "Let the Wookie Win",
+            "path": "./img/art pieces/Let the Wookie Win Final.png",
+            "description": "If you are a Star Wars fan you may recognize the name of this piece. It was inspired by a scene from Star Wars IV: A New Hope."
+        },
+        {
+            "name": "The Gathering Storm",
+            "path": "./img/art pieces/Eye of the Gathering Storm Final.png",
+            "description": "This is a piece inspired by artwork I saw online years ago. It is a sorcerer summoning a storm around himself."
         }
     ]
 }
