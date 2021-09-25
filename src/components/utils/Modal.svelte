@@ -8,7 +8,6 @@
     interface Config {
         id:string,
         styles:string,
-        markup:string,
         dimensions:Dims
     }
 
@@ -18,7 +17,9 @@
 
 <div id="{config.id}" class="modal-container {showing ? "" : " hidden"}">
     <div class="modal" style="{config.styles}">
-        {@html config.markup}
+        <slot name="content">
+
+        </slot>
     </div>
 </div>
 

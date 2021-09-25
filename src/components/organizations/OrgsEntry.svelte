@@ -1,13 +1,21 @@
 <script lang="ts">
+
     export let entryData:ConfigPiece;
     export let hidden:boolean;
     export let scrollType:string;
     export let isLast:boolean;
 
+    interface ConfigProj {
+        name:string,
+        link:string
+    }
+
     interface ConfigPiece {
         name:string,
         path:string,
-        description:string
+		about:string,
+        description:string,
+		projects:ConfigProj[]
     }
 </script>
 
@@ -19,12 +27,31 @@
         <div class="content-container">
             <img src="{entryData.path}" alt="{entryData.name}">
             <div class="description">
-                <p>{entryData.description}</p>
+                <div class="org-header-2">
+                    <h2>About</h2>
+                </div>
+                <p>{@html entryData.about}</p>
+                <div class="org-header-2">
+                    <h2>Involvement</h2>
+                </div>
+                <p>{@html entryData.description}</p>
+            </div>
+            <div class="projects">
+                <div class="org-header-2">
+                    <h2>Projects</h2>
+                </div>
+                <ul>
+                    {#each entryData.projects as proj}
+                        <li>
+                            <div class="name">{proj.name}</div>
+                        </li>
+                    {/each }
+                </ul>
             </div>
         </div>
     {:else}
         <div class="description">
-            <p>{entryData.description}</p>
+            <p>{@html entryData.description}</p>
         </div>
     {/if}
 
@@ -38,7 +65,7 @@
     $bud-green__hover: rgb(138, 194, 78);
 
     .orgEntry {
-        width: 80%;
+        width: 100%;
 
         position: absolute;
         top: 50%;
@@ -55,17 +82,25 @@
         animation-duration: 1.5s;
 
         .org-header { font-size: 27px; }
+        .org-header-2 { text-align: center; }
         .content-container {
             width: 100%;
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+            grid-template-columns: minmax(400px, 1fr) minmax(400px, 2fr) minmax(200px, 1fr);
             column-gap: 14px;
+            justify-items: center;
+            align-items: center;
             
-            img { width: 100%; height: auto; margin-top: 14px; border-radius: 5px; cursor: pointer; }
-            img:hover { opacity: 0.7; }
+            img { width: 80%; height: auto; margin-top: 14px; }
         }
-        .description { width: 100%; margin-top: 14px; font-size: 24px; text-align: center; }
+        .description { width: 100%; margin-top: 14px; font-size: 20px; text-align: center; }
         .msg { margin-top: 56px; font-size: 24px; }
+        .projects {
+            margin-top: 14px;
+            width: 100%;
+            height: 100%;
+            font-size: 20px;
+        }
     }
 
     .down-in { animation-name: down-fade-in; }
