@@ -7,6 +7,9 @@
 	import Art from "./components/Art.svelte";
 	import Contact from "./components/Contact.svelte";
 	import Socials from "./components/Socials.svelte";
+	import { loadProjects } from "./LinkProj";
+	
+	loadProjects();
 
 	const PagesLut = {
 		'1': About,
