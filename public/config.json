@@ -1,47 +1,47 @@
 {
     "projects": {
-        "Web Games": {
-            "Minesweeper": {
+        "web-games": {
+            "minesweeper": {
     
             },
-            "Tetris": {
+            "tetris": {
     
             },
-            "Pong": {
+            "pong": {
     
             }
         },
-        "Web Development": {
+        "web-dev": {
             "portfolio": {
 
             },
             "portfolio-v2": {
     
             },
-            "TORC-Character-Designer": {
+            "torc-character-designer": {
 
             }
         },
-        "Software Engineering": {
-            "Slicers-GUI": {
+        "software-engineering": {
+            "slicers-gui": {
 
             }
         },
-        "Education": {
+        "education": {
             "web-dev-intro-camp": {
 
             }
         },
-        "Miscellaneous": {
-            "Modbot": {
+        "miscellaneous": {
+            "modbot": {
 
             },
-            "MemeDB": {
+            "memedb": {
     
             }
         }
     },
-    "featured": "Slicers-GUI",
+    "featured": "slicers-gui",
     "organizations": [
         {
             "name": "SWTOR Slicers",
@@ -51,15 +51,15 @@
             "projects": [
                 {
                     "name": "Slicers GUI",
-                    "link": ""
+                    "linkId": "slicers-gui"
                 },
                 {
                     "name": "TORC Character Designer",
-                    "link": ""
+                    "linkId": "torc-character-designer"
                 },
                 {
                     "name": "Wiki",
-                    "link": ""
+                    "linkId": "slicers-wiki"
                 }
             ]
         },

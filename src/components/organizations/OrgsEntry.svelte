@@ -1,4 +1,5 @@
 <script lang="ts">
+    import { displayProject } from "../../LinkProj";
 
     export let entryData:ConfigPiece;
     export let hidden:boolean;
@@ -7,7 +8,7 @@
 
     interface ConfigProj {
         name:string,
-        link:string
+        linkId:string
     }
 
     interface ConfigPiece {
@@ -43,7 +44,12 @@
                 <ul>
                     {#each entryData.projects as proj}
                         <li>
-                            <div class="name">{proj.name}</div>
+                            <div class="proj-entr">
+                                <div class="name">{proj.name}</div>
+                                <div class="proj-link" on:click|stopPropagation="{() => { displayProject(proj.linkId); }}">
+                                    <i class="fas fa-link"></i>
+                                </div>
+                            </div>
                         </li>
                     {/each }
                 </ul>
@@ -100,6 +106,43 @@
             width: 100%;
             height: 100%;
             font-size: 20px;
+
+            ul {
+                width: 100%;
+
+                li {
+                    width: 100%;
+
+                    .proj-entr {
+                        height: 100%;
+
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+
+                        .name {
+                            margin-right: 7px;
+                        }
+
+                        .proj-link {
+                            height: 100%;
+                        
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+
+                            color: $bud-green;
+
+                            cursor: pointer;
+                            font-size: 14px;
+
+                            &:hover {
+                                color: $bud-green__hover;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 
