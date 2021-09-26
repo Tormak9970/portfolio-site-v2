@@ -14,8 +14,8 @@ interface Project {
     description:string,
     reasons:string[],
     takeaways:string[],
-    releases: Release[] | undefined,
-    link:string | undefined,
+    releases?: Release[],
+    link?:string,
     imgMarkup:string
 }
 
