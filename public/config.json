@@ -2,58 +2,109 @@
     "projects": {
         "web-games": {
             "minesweeper": {
-                "name": "",
-                "time": "",
-                "status": "",
-                "difficulty": "",
-                "description": "",
-                "link": "",
-                "imgMarkup": ""
+                
             },
             "tetris": {
-                "name": "",
-                "time": "",
-                "status": "",
-                "difficulty": "",
-                "description": "",
-                "link": "",
-                "imgMarkup": ""
+                
             },
             "pong": {
-                "name": "",
-                "time": "",
-                "status": "",
-                "difficulty": "",
-                "description": "",
-                "link": "",
-                "imgMarkup": ""
+                
             }
         },
         "web-dev": {
             "portfolio": {
-                "name": "",
-                "time": "",
-                "status": "",
-                "difficulty": "",
-                "description": "",
-                "link": "",
-                "imgMarkup": ""
+                
             },
             "portfolio-v2": {
-                "name": "",
-                "time": "",
-                "status": "",
-                "difficulty": "",
-                "description": "",
-                "link": "",
-                "imgMarkup": ""
+                
             },
             "torc-character-designer": {
-                "name": "",
+                "name": "TORC Character Designer",
                 "time": "",
                 "status": "",
                 "difficulty": "",
-                "description": "",
+                "description": "This is one of my favorite projects. It is an external character creator and outfit designer for Star Wars The Old Republic. I really love this game and the community, and wanted to do something everyone could use and enjoy. It is very complexed, and I had to learn alot of new topics and skills while working on it. Im also very proud of it since it is the first tool of its kind made by anyone, ever, and that required me to solve alot of problems no one else has done  before.",
+                "reasons": [
+                    "I wanted to make something truly unique that had not been done before",
+                    [
+                        "This is the only Star Wars The Old Republic external character designer"
+                    ],
+                    "I also wanted to make something people would not only want to use, but also something that would inspire people, and help them realise what they can do.",
+                    "I had read comments and posts on a variety of platforms from people requesting/asking about a character viewer/creator, the earliest dating back to around 2014",
+                    "I also wanted to expedite the process from re-creating your character outside of the game (for 3D modeling, printing, or just for fun).",
+                    [
+                        "The process could take upwards of one to two hour for one character",
+                        "With my program, it takes ~20 minutes"
+                    ]
+                ],
+                "takeaways": [
+                    "How to read hexadecimal headers",
+                    "How to read custom file formats",
+                    "Basics of PHP",
+                    "Advanced JavaScript",
+                    "How to better manage the layout of my code",
+                    "How to better structure and organize my time",
+                    "How to break down problems into achievable sections",
+                    "How to effectively troubleshoot issues and debug",
+                    "Sometimes the best solution is to take a break and work on different part/something else for a while",
+                    "How to use the THREE.js library",
+                    "Basics of 3D design/modeling",
+                    [
+                        "HLSL",
+                        "GLSL",
+                        "The graphics pipeline (how 3D models are shaded and rendered)",
+                        "How models work",
+                        "How textures work",
+                        "How lighting works",
+                        "How shadows work"
+                    ]
+                ],
+                "releases": [
+                    {
+                        "name": "Release one",
+                        "date": "March 14, 2021",
+                        "time": "270+ hours",
+                        "changes": [
+                            "Users can download a <i>.zip</i> with all the nessesary info to re-create their character in blender",
+                            "Has all character creator options that the game has",
+                            [
+                                "Customization sliders",
+                                "Gender",
+                                "Classes",
+                                "Species"
+                            ],
+                            "Allows changing of light-color gradient",
+                            "Users can search by keywords to get a list of every related item, which they can then select from to display one",
+                            "Users can add a global dye to their outfit",
+                            "Users can share their creations using the sharing url button at the bottom"
+                        ]
+                    },
+                    {
+                        "name": "Release two",
+                        "date": "March 25, 2021",
+                        "time": "300+ hours",
+                        "bug-fixes": [
+                            "Fixed many broken items (only a few left still needing to be fixed)",
+                            "Fixed a few edge cases where things like hoods would render on Togrutas and Twi'leks",
+                            "Fixed an issue where exporting the zip had no file extension on Firefox",
+                            "Fixed long loading times"
+                        ],
+                        "changes": [
+                            "Now has dark side corruption",
+                            "<img src=\"./src/img/Release2__corruption.png\" alt=\"\" height=\"200px\" class=\"proj-img-resize-eye\">",
+                            "Added Eye Cube Maps (the glossy reflection on the character's eyes)",
+                            "<img src=\"./src/img/EyeCubeMap.png\" alt=\"\" class=\"proj-img-resize-eye\">",
+                            "Changed the lighting to be closer to the preview window. (this is the default for now, but more on that later)",
+                            "Added a Unify Colors option for each armor slot (this makes the slot in question become the same color as the chest slot)",
+                            "Added ability to apply dyes for each slot",
+                            "Added tick marks to make it easier to tell where to click to move the slider to a specific value",
+                            "Re-arranged the order of a few customizations to match in-game numbering",
+                            "Updated many of the UI images to make them clearer",
+                            "Now have a randomize button, and it also randomizes the slider values on load.",
+                            "Tweaked a bunch of the rendering settings (camera position, lighting angle, lighting intensity, etc.)"
+                        ]
+                    }
+                ],
                 "link": "",
                 "imgMarkup": ""
             },
@@ -63,6 +114,17 @@
                 "status": "",
                 "difficulty": "",
                 "description": "",
+                "reasons": [],
+                "takeaways": [],
+                "releases": [
+                    {
+                        "name": "",
+                        "date": "",
+                        "time": "",
+                        "bug-fixes": [],
+                        "changes": []
+                    }
+                ],
                 "link": "",
                 "imgMarkup": ""
             }
@@ -70,10 +132,21 @@
         "software-engineering": {
             "slicers-gui": {
                 "name": "Slicers GUI",
-                "time": "",
-                "status": "In progress",
-                "difficulty": "complexed",
+                "time": "250+ hours",
+                "status": "In progress (Beta)",
+                "difficulty": "Complexed",
                 "description": "",
+                "reasons": [],
+                "takeaways": [],
+                "releases": [
+                    {
+                        "name": "",
+                        "date": "",
+                        "time": "",
+                        "bug-fixes": [],
+                        "changes": []
+                    }
+                ],
                 "link": "",
                 "imgMarkup": ""
             }
@@ -85,28 +158,18 @@
                 "status": "",
                 "difficulty": "",
                 "description": "",
+                "reasons": [],
+                "takeaways": [],
                 "link": "",
                 "imgMarkup": ""
             }
         },
         "miscellaneous": {
             "modbot": {
-                "name": "",
-                "time": "",
-                "status": "",
-                "difficulty": "",
-                "description": "",
-                "link": "",
-                "imgMarkup": ""
+                
             },
             "memedb": {
-                "name": "",
-                "time": "",
-                "status": "",
-                "difficulty": "",
-                "description": "",
-                "link": "",
-                "imgMarkup": ""
+                
             }
         }
     },
