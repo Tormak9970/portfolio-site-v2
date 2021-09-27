@@ -17,7 +17,7 @@
 
     function showModal(e: MouseEvent) {
         if (previewModal) {
-            showing.set(true);
+            $showing = true;
         } else {
             previewModal = new ImageModal({
                 target: document.body,

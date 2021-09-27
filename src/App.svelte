@@ -2,7 +2,7 @@
 	import About from "./components/About.svelte";
 	import Experience from "./components/Experience.svelte";
 	import Featured from "./components/Featured.svelte";
-	import Projects from "./components/Projects.svelte";
+	import Projects, { jumpTo } from "./components/Projects.svelte";
 	import Organizations from "./components/Organizations.svelte";
 	import Art from "./components/Art.svelte";
 	import Contact from "./components/Contact.svelte";
@@ -28,9 +28,10 @@
 		const intInds = document.querySelectorAll('.interaction-indicator');
 
 		for (const elem of intInds) {
-			if (!elem.classList.contains('rendered')) {
-				elem.style.display = "hidden";
-				elem.style.width = "0px";
+			const cElem = elem as HTMLElement;
+			if (!cElem.classList.contains('rendered')) {
+				cElem.style.display = "hidden";
+				cElem.style.width = "0px";
 			}
 		}
 	}
@@ -38,7 +39,7 @@
 		removeAllIndicators();
 
 		const navCont = e.currentTarget;
-		const intInd = navCont.children[1];
+		const intInd = (navCont as HTMLElement).children[1] as HTMLElement;
 		if (!intInd.classList.contains('rendered')) {
 			intInd.style.backgroundColor = "#82b74bff";
 			intInd.style.width = "100%";
@@ -46,7 +47,7 @@
 	}
 	function handleNavHover2(e: Event) {
 		const navCont = e.currentTarget;
-		const intInd = navCont.children[1];
+		const intInd = (navCont as HTMLElement).children[1] as HTMLElement;
 		if (!intInd.classList.contains('rendered')) {
 			intInd.style.display = "hidden";
 			intInd.style.width = "0px";
@@ -54,7 +55,7 @@
 	}
 	function handleNavClick(e: Event) {
 		e.preventDefault();
-		const elem = e.currentTarget;
+		const elem = e.currentTarget as HTMLElement;
 		
 		if (!elem.classList.contains('rendered')) {
 			document.querySelector('.rendered').classList.remove('rendered');
@@ -103,7 +104,7 @@
 	</div>
 	<div class="content-body">
 		<Socials/>
-		<svelte:component this={PagesLut[currentRendered]}/>
+		<svelte:component this={PagesLut[currentRendered]} startIdx="{currentRendered == '4' ? 0 : undefined}"/>
 	</div>
 </main>
 
