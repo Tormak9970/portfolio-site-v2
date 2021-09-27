@@ -1,5 +1,3 @@
-import { jumpTo } from "./components/Projects.svelte";
-
 interface Release {
     name:string,
     date:string,
@@ -32,7 +30,5 @@ async function loadProjects() {
     }
 }
 
-async function displayProject(projId: string) { jumpTo(projId); }
-
-export { loadProjects, displayProject, projects };
+export { loadProjects, projects };
 export type { Project, Release };

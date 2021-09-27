@@ -1,7 +1,25 @@
 <script lang="ts">
-    import type { Project } from "../../LinkProj";
+    interface Release {
+        name:string,
+        date:string,
+        length:string,
+        changes:string[],
+        bugFixes?:string[]
+    }
+    
+    interface Project {
+        name:string,
+        time:string,
+        status:string,
+        difficulty:string,
+        description:string,
+        takeaways:string[],
+        releases?:Release[],
+        link?:string,
+        imgMarkup:string
+    }
 
-    export let data:Project;
+    export let entryData:Project;
     export let hidden:boolean;
     export let scrollType:string;
     export let isLast:boolean;
@@ -9,7 +27,8 @@
 
 </script>
 
-<div id="{data.name}" class="projEntry{` ${scrollType}`}{hidden ? " hidden" : ""}">
+<div class="projEntry{` ${scrollType}`}{hidden ? " hidden" : ""}">
+    <div class="proj-header">{entryData.name}</div>
     <!-- 
         images
         description

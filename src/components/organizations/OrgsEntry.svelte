@@ -1,5 +1,7 @@
 <script lang="ts">
-    import { displayProject } from "../../LinkProj";
+    import { currentRendered } from "../../Stores";
+
+    import { jumpTo } from "../Projects.svelte";
 
     export let entryData:ConfigPiece;
     export let hidden:boolean;
@@ -17,6 +19,11 @@
 		about:string,
         description:string,
 		projects:ConfigProj[]
+    }
+
+    function linkToProj(id:string) {
+        jumpTo(id);
+        $currentRendered = '4';
     }
 </script>
 
@@ -46,7 +53,7 @@
                         <li>
                             <div class="proj-entr">
                                 <div class="name">{proj.name}</div>
-                                <div class="proj-link" on:click|stopPropagation="{() => { displayProject(proj.linkId); }}">
+                                <div class="proj-link" on:click|stopPropagation="{() => { linkToProj(proj.linkId); }}">
                                     <i class="fas fa-link"></i>
                                 </div>
                             </div>

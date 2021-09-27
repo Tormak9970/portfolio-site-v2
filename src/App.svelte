@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { startProjIdx, currentRendered } from "./Stores";
 	import About from "./components/About.svelte";
 	import Experience from "./components/Experience.svelte";
 	import Featured from "./components/Featured.svelte";
@@ -20,9 +21,6 @@
 		'6': Art,
 		'7': Contact,
 	}
-
-	let currentRendered:string;
-	$: currentRendered = '1';
 
 	function removeAllIndicators() {
 		const intInds = document.querySelectorAll('.interaction-indicator');
@@ -61,7 +59,10 @@
 			document.querySelector('.rendered').classList.remove('rendered');
 			removeAllIndicators();
 			elem.children[1].classList.add('rendered');
-			currentRendered = elem.id;
+			if (elem.id == '4') {
+				$startProjIdx = 0;
+			}
+			$currentRendered = elem.id;
 		}
 	}
 </script>
@@ -104,7 +105,7 @@
 	</div>
 	<div class="content-body">
 		<Socials/>
-		<svelte:component this={PagesLut[currentRendered]} startIdx="{currentRendered == '4' ? 0 : undefined}"/>
+		<svelte:component this={PagesLut[$currentRendered]}/>
 	</div>
 </main>
 
