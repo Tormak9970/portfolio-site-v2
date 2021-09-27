@@ -1,9 +1,9 @@
 interface Release {
     name:string,
     date:string,
-    time:string,
-    bugFixes:string[],
-    changes:string[]
+    length:string,
+    changes:string[],
+    bugFixes?:string[]
 }
 
 interface Project {
@@ -12,9 +12,8 @@ interface Project {
     status:string,
     difficulty:string,
     description:string,
-    reasons:string[],
     takeaways:string[],
-    releases?: Release[],
+    releases?:Release[],
     link?:string,
     imgMarkup:string
 }
@@ -31,8 +30,5 @@ async function loadProjects() {
     }
 }
 
-async function displayProject(projId: string) {
-    console.log(projects.get(projId));
-}
-
-export { loadProjects, displayProject };
+export { loadProjects, projects };
+export type { Project, Release };

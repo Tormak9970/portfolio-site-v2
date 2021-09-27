@@ -1,7 +1,7 @@
 <script lang="ts" type="module">
 	import OrgsEntry from "./organizations/OrgsEntry.svelte";
 
-    interface OrgsPiece {
+    type OrgsPiece = {
         name:string,
         path:string,
         description:string,
@@ -9,12 +9,12 @@
         scrollType:string
     }
 
-	interface ConfigProj {
+	type ConfigProj = {
 		name:String,
 		link:string
 	}
 
-    interface ConfigPiece {
+    type ConfigPiece = {
         name:string,
         path:string,
 		about:String,
@@ -73,7 +73,7 @@
     {:then orgData} 
         {#each orgData.map(processEntries) as artEntr, idx}
             <OrgsEntry entryData={artEntr} hidden={pieces[idx].hidden} scrollType={pieces[idx].scrollType} isLast={idx+1 == orgData.length}/>
-        {/each }
+        {/each}
     {/await}
 </div>
 

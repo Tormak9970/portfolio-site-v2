@@ -2,13 +2,6 @@
     import { onDestroy } from 'svelte';
     import { showing } from "../../Stores";
 
-    let showingVal:boolean
-
-    const unSub = showing.subscribe(val => {
-        showingVal = val;
-    });
-
-
     type Dims = {
         h: string;
         w: string;
@@ -28,14 +21,12 @@
     export let config: Config;
 
     function closeSelf(e: MouseEvent) {
-        showing.set(false);
+        $showing = false;
     }
     function catchScroll(e: WheelEvent) {}
-
-    onDestroy(unSub);
 </script>
 
-<div id={config.id} class="modal-container {showingVal ? '' : 'hidden'}" on:wheel|stopPropagation="{catchScroll}">
+<div id={config.id} class="modal-container {$showing ? '' : 'hidden'}" on:wheel|stopPropagation="{catchScroll}">
     <span class="close" on:click="{closeSelf}">&times;</span>
     <div class="modal">
         <img src="{config.data.path}" alt="{config.data.name}" style="{config.maxes.h ? `max-height: ${config.maxes.h};` : ''}{config.maxes.w ? ` max-width: ${config.maxes.w};` : ''}"/>

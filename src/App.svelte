@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { startProjIdx, currentRendered } from "./Stores";
 	import About from "./components/About.svelte";
 	import Experience from "./components/Experience.svelte";
 	import Featured from "./components/Featured.svelte";
@@ -21,16 +22,14 @@
 		'7': Contact,
 	}
 
-	let currentRendered:string;
-	$: currentRendered = '1';
-
 	function removeAllIndicators() {
 		const intInds = document.querySelectorAll('.interaction-indicator');
 
 		for (const elem of intInds) {
-			if (!elem.classList.contains('rendered')) {
-				elem.style.display = "hidden";
-				elem.style.width = "0px";
+			const cElem = elem as HTMLElement;
+			if (!cElem.classList.contains('rendered')) {
+				cElem.style.display = "hidden";
+				cElem.style.width = "0px";
 			}
 		}
 	}
@@ -38,7 +37,7 @@
 		removeAllIndicators();
 
 		const navCont = e.currentTarget;
-		const intInd = navCont.children[1];
+		const intInd = (navCont as HTMLElement).children[1] as HTMLElement;
 		if (!intInd.classList.contains('rendered')) {
 			intInd.style.backgroundColor = "#82b74bff";
 			intInd.style.width = "100%";
@@ -46,7 +45,7 @@
 	}
 	function handleNavHover2(e: Event) {
 		const navCont = e.currentTarget;
-		const intInd = navCont.children[1];
+		const intInd = (navCont as HTMLElement).children[1] as HTMLElement;
 		if (!intInd.classList.contains('rendered')) {
 			intInd.style.display = "hidden";
 			intInd.style.width = "0px";
@@ -54,13 +53,16 @@
 	}
 	function handleNavClick(e: Event) {
 		e.preventDefault();
-		const elem = e.currentTarget;
+		const elem = e.currentTarget as HTMLElement;
 		
 		if (!elem.classList.contains('rendered')) {
 			document.querySelector('.rendered').classList.remove('rendered');
 			removeAllIndicators();
 			elem.children[1].classList.add('rendered');
-			currentRendered = elem.id;
+			if (elem.id == '4') {
+				$startProjIdx = 0;
+			}
+			$currentRendered = elem.id;
 		}
 	}
 </script>
@@ -103,7 +105,7 @@
 	</div>
 	<div class="content-body">
 		<Socials/>
-		<svelte:component this={PagesLut[currentRendered]}/>
+		<svelte:component this={PagesLut[$currentRendered]}/>
 	</div>
 </main>
 
