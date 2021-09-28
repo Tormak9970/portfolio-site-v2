@@ -9,6 +9,8 @@
 	import Contact from "./components/Contact.svelte";
 	import Socials from "./components/Socials.svelte";
 	import { loadProjects } from "./LinkProj";
+
+	import { beforeUpdate } from 'svelte';
 	
 	loadProjects();
 
@@ -65,6 +67,16 @@
 			$currentRendered = elem.id;
 		}
 	}
+
+	beforeUpdate(() => {
+		const elem = document.getElementById($currentRendered);
+		const rendered = document.querySelector('.rendered');
+		if (rendered) {
+			rendered.classList.remove('rendered');
+			removeAllIndicators();
+			elem.children[1].classList.add('rendered');
+		}
+	});
 </script>
 
 <main>
