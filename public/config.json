@@ -106,7 +106,10 @@
                     }
                 ],
                 "link": "https://torcommunity.com/tools/character-designer",
-                "imgMarkup": ""
+                "imgs": [
+                    "./img/projs/Release_one.png",
+                    "./img/orgs/torc-icon-2016.png"
+                ]
             },
             "torc-npc-viewers": {
                 "name": "",
@@ -126,7 +129,7 @@
                     }
                 ],
                 "link": "",
-                "imgMarkup": ""
+                "imgs": []
             }
         },
         "software-engineering": {
@@ -148,7 +151,7 @@
                     }
                 ],
                 "link": "",
-                "imgMarkup": ""
+                "imgs": []
             }
         },
         "education": {
@@ -161,7 +164,7 @@
                 "reasons": [],
                 "takeaways": [],
                 "link": "",
-                "imgMarkup": ""
+                "imgs": []
             }
         },
         "miscellaneous": {

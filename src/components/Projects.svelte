@@ -113,11 +113,15 @@
     $bud-green__hover: rgb(138, 194, 78);
 
 	#projects {
-		width: 90%;
-		height: 80%;
+		width: 100%;
+		height:90%;
 
 		display: flex;
 		flex-direction: column;
         align-items: center;
+
+        position: relative;
+
+        overflow: hidden;
 	}
 </style>

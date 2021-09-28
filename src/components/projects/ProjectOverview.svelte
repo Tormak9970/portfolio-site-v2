@@ -16,7 +16,7 @@
         takeaways:string[],
         releases?:Release[],
         link?:string,
-        imgMarkup:string
+        imgs:string[]
     }
 
     export let entryData:Project;
@@ -31,7 +31,7 @@
     <div class="proj-header">{entryData.name}</div>
     <div class="content-container">
         <div class="img-markup-cont">
-            {@html entryData.imgMarkup}
+            {@html entryData.imgs}
         </div>
         <div class="proj-overview-cont">
             <p class="overview">
@@ -39,14 +39,6 @@
             </p>
         </div>
     </div>
-    <!-- 
-        images
-        description
-        takeaways
-        releases
-        check it out section
-        learn more
-     -->
     <div class="msg">{isLast ? "" : "Scroll to continue..."}</div>
 </div>
 

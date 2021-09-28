@@ -15,7 +15,7 @@ interface Project {
     takeaways:string[],
     releases?:Release[],
     link?:string,
-    imgMarkup:string
+    imgs:string[]
 }
 
 const projects:Map<string, Project> = new Map();

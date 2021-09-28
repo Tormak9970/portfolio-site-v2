@@ -16,7 +16,7 @@
         takeaways:string[],
         releases?:Release[],
         link?:string,
-        imgMarkup:string
+        imgs:string[]
     }
 
     export let entryData:Project;
@@ -29,7 +29,7 @@
     <div class="proj-header">{entryData.name}</div>
     <div class="proj-layout-cont">
         <div class="img-markup-cont">
-            {@html entryData.imgMarkup}
+            {@html entryData.imgs}
         </div>
         <div class="proj-overview-cont">
 
@@ -43,7 +43,6 @@
         check it out section
         learn more
      -->
-    <div class="msg">{isLast ? "" : "Scroll to continue..."}</div>
 </div>
 
 <style lang="scss">
@@ -55,32 +54,13 @@
     .projEntry {
         width: 100%;
 
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
 
-        animation-fill-mode: both;
-        animation-direction: alternate;
-        animation-duration: 1.5s;
-
         .proj-header { font-size: 27px; }
         .proj-header-2 { text-align: center; }
-        .content-container {
-            width: 100%;
-            display: grid;
-            grid-template-columns: minmax(400px, 1fr) minmax(400px, 2fr) minmax(200px, 1fr);
-            column-gap: 14px;
-            justify-items: center;
-            align-items: center;
-            
-            img { width: 80%; height: auto; margin-top: 14px; }
-        }
         .description { width: 100%; margin-top: 14px; font-size: 20px; text-align: center; }
         .msg { margin-top: 56px; font-size: 24px; }
     }
