@@ -31,7 +31,8 @@
     <div class="proj-header">{entryData.name}</div>
     <div class="content-container">
         <div class="img-markup-cont">
-            {@html entryData.imgs}
+            <img src="{(entryData.imgs) ? entryData.imgs[0] : ""}" alt="">
+            <img src="{(entryData.imgs) ? entryData.imgs[1] : ""}" alt="">
         </div>
         <div class="proj-overview-cont">
             <p class="overview">

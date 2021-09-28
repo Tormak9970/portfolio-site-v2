@@ -129,7 +129,7 @@
                     }
                 ],
                 "link": "",
-                "imgs": []
+                "imgs": ["", ""]
             }
         },
         "software-engineering": {
@@ -151,7 +151,7 @@
                     }
                 ],
                 "link": "",
-                "imgs": []
+                "imgs": ["", ""]
             }
         },
         "education": {
@@ -164,7 +164,7 @@
                 "reasons": [],
                 "takeaways": [],
                 "link": "",
-                "imgs": []
+                "imgs": ["", ""]
             }
         },
         "miscellaneous": {
