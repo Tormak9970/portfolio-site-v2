@@ -3,7 +3,7 @@
 </script>
 <script lang="ts">
     import { Project, projects } from "../LinkProj";
-    import ProjectEntry from "./projects/ProjectEntry.svelte";
+    import ProjectOverview from "./projects/ProjectOverview.svelte";
     import { startProjIdx } from "../Stores";
 
     interface ProjectEnt {
@@ -27,7 +27,7 @@
             projectEntries[curHIdx].hidden = true;
             
             scrollIdx = curIdx < curHIdx ? curIdx-1 : curIdx+1;
-            interceptScrollFromIdx(curIdx < curHIdx);
+            interceptScrollFromIdx(false);
         } else {
             throw Error(`Expected key ${id} to be in map but was not.`);
         }
@@ -102,7 +102,7 @@
 
 <div id="projects">
     {#each Array.from(projects).map(processEntries) as artEntr, idx}
-        <ProjectEntry entryData={artEntr} hidden={projectEntries[idx].hidden} scrollType={projectEntries[idx].scrollType} isLast={projectEntries[idx].isLast}/>
+        <ProjectOverview entryData={artEntr} hidden={projectEntries[idx].hidden} scrollType={projectEntries[idx].scrollType} isLast={projectEntries[idx].isLast}/>
     {/each}
 </div>
 

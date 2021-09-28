@@ -21,18 +21,22 @@
 
     export let entryData:Project;
     export let hidden:boolean;
+    export let scrollType:string;
+    export let isLast:boolean;
 
 
 </script>
 
-<div class="projEntry{hidden ? " hidden" : ""}">
+<div class="projOview{` ${scrollType}`}{hidden ? " hidden" : ""}">
     <div class="proj-header">{entryData.name}</div>
-    <div class="proj-layout-cont">
+    <div class="content-container">
         <div class="img-markup-cont">
             {@html entryData.imgMarkup}
         </div>
         <div class="proj-overview-cont">
-
+            <p class="overview">
+                {entryData.description}
+            </p>
         </div>
     </div>
     <!-- 
@@ -52,7 +56,7 @@
     $bud-green: #82b74bff;
     $bud-green__hover: rgb(138, 194, 78);
 
-    .projEntry {
+    .projOview {
         width: 100%;
 
         position: absolute;
@@ -79,9 +83,28 @@
             justify-items: center;
             align-items: center;
             
-            img { width: 80%; height: auto; margin-top: 14px; }
+            .img-markup-cont {
+
+            }
+            .proj-overview-cont {
+                .overview {
+                    width: 100%; margin-top: 14px; font-size: 20px; text-align: center;
+                }
+            }
         }
-        .description { width: 100%; margin-top: 14px; font-size: 20px; text-align: center; }
         .msg { margin-top: 56px; font-size: 24px; }
     }
+
+    .down-in { animation-name: down-fade-in; }
+    .up-in { animation-name: up-fade-in; }
+    .down-out { animation-name: down-fade-out; }
+    .up-out { animation-name: up-fade-out; }
+
+    .hidden { display: none; }
+
+    @keyframes down-fade-in { 0% { opacity: 0; transform: translate(-50%, 50%); } 100% { opacity: 1; transform: translate(-50%, -50%); } }
+    @keyframes down-fade-out { 0% { opacity: 1; transform: translate(-50%, -50%); } 100% { opacity: 0; transform: translate(-50%, -150%); } }
+
+    @keyframes up-fade-in { 0% { opacity: 0; transform: translate(-50%, -150%); } 100% { opacity: 1; transform: translate(-50%, -50%); } }
+    @keyframes up-fade-out { 0% { opacity: 1; transform: translate(-50%, -50%); } 100% { opacity: 0; transform: translate(-50%, 50%); } }
 </style>
