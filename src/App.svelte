@@ -3,7 +3,7 @@
 	import About from "./components/About.svelte";
 	import Experience from "./components/Experience.svelte";
 	import Featured from "./components/Featured.svelte";
-	import Projects from "./components/Projects.svelte";
+	import Projects, { jumpTo } from "./components/Projects.svelte";
 	import Organizations from "./components/Organizations.svelte";
 	import Art from "./components/Art.svelte";
 	import Contact from "./components/Contact.svelte";
