@@ -51,7 +51,7 @@
             align-items: center;
 
             .bio {
-                font-size: 30px;
+                font-size: 24px;
             }
 
             img {

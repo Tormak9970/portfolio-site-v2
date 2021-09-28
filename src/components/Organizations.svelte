@@ -86,7 +86,7 @@
     $army-green: #32481eff;
 
     #orgs {
-		width: 80%;
+		width: 100%;
 		height: 100%;
 
         position: relative;

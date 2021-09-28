@@ -22,9 +22,7 @@
 
     function linkToProj(id:string) {
         $currentRendered = '4';
-        setTimeout(() => {
-            jumpTo(id);
-        }, 300);
+        setTimeout(() => { jumpTo(id); }, 10);
     }
 </script>
 
