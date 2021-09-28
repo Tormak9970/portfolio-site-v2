@@ -1,6 +1,5 @@
 <script lang="ts">
     import { currentRendered } from "../../Stores";
-
     import { jumpTo } from "../Projects.svelte";
 
     export let entryData:ConfigPiece;
@@ -22,8 +21,10 @@
     }
 
     function linkToProj(id:string) {
-        jumpTo(id);
         $currentRendered = '4';
+        setTimeout(() => {
+            jumpTo(id);
+        }, 300);
     }
 </script>
 
