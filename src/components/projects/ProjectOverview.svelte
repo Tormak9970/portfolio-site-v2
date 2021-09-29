@@ -27,7 +27,6 @@
     function openProjectEntry() {
 
     }
-
 </script>
 
 <div class="projOview{` ${scrollType}`}{hidden ? " hidden" : ""}">
@@ -39,7 +38,9 @@
             </div>
         </div>
         <div class="proj-overview-cont">
-            <div class="proj-header">{entryData.name}</div>
+            <div class="proj-header">
+                <h2>{entryData.name}</h2>
+            </div>
             <p class="overview">
                 {entryData.description}
             </p>
