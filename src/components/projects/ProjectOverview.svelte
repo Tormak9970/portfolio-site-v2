@@ -24,20 +24,31 @@
     export let scrollType:string;
     export let isLast:boolean;
 
+    function openProjectEntry() {
+
+    }
 
 </script>
 
 <div class="projOview{` ${scrollType}`}{hidden ? " hidden" : ""}">
-    <div class="proj-header">{entryData.name}</div>
     <div class="content-container">
-        <div class="img-markup-cont">
-            <img src="{(entryData.imgs) ? entryData.imgs[0] : ""}" alt="">
+        <div class="imgs-cont">
             <img src="{(entryData.imgs) ? entryData.imgs[1] : ""}" alt="">
+            <div class="proj-main-img">
+                <img src="{(entryData.imgs) ? entryData.imgs[0] : ""}" alt="">
+            </div>
         </div>
         <div class="proj-overview-cont">
+            <div class="proj-header">{entryData.name}</div>
             <p class="overview">
                 {entryData.description}
             </p>
+            <div class="proj-link-cont">
+                <div class="name">Learn more:</div>
+                <div class="proj-link" on:click|stopPropagation="{openProjectEntry}">
+                    <i class="fas fa-external-link-alt"></i>
+                </div>
+            </div>
         </div>
     </div>
     <div class="msg">{isLast ? "" : "Scroll to continue..."}</div>
@@ -50,7 +61,8 @@
     $bud-green__hover: rgb(138, 194, 78);
 
     .projOview {
-        width: 100%;
+        height: 90%;
+        width: 80%;
 
         position: absolute;
         top: 50%;
@@ -70,18 +82,102 @@
         .proj-header-2 { text-align: center; }
         .content-container {
             width: 100%;
+            height: calc(100% - 87px);
+
             display: grid;
-            grid-template-columns: minmax(400px, 1fr) minmax(400px, 2fr) minmax(200px, 1fr);
+            grid-template-columns: minmax(600px, 3fr) minmax(400px, 2fr);
             column-gap: 14px;
             justify-items: center;
             align-items: center;
             
-            .img-markup-cont {
+            .imgs-cont {
+                width: 100%;
+                height: 100%;
 
+                position: relative;
+
+                :nth-child(1) {
+                    position: absolute;
+
+                    top: 0;
+                    left: 0;
+
+                    width: 200px;
+                    height: auto;
+                }
+                .proj-main-img {
+                    position: absolute;
+                    
+                    top: 100px;
+                    left: 120px;
+
+                    width: 400px;
+                    height: auto;
+
+                    padding: 10px;
+
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+
+                    background-color: $grey-secondary;
+
+                    border-radius: 8px;
+
+                    box-shadow: black -6px -6px 16px 2px;
+
+                    img {
+                        position: static;
+                        width: 100%;
+                        height: auto;
+                        
+                        border-radius: 8px;
+                    }
+                }
             }
             .proj-overview-cont {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+
                 .overview {
                     width: 100%; margin-top: 14px; font-size: 20px; text-align: center;
+                }
+
+                .proj-link-cont {
+                    height: 100%;
+                    width: 100%;
+
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+
+                    .name {
+                        height: 100%;
+                        
+                        margin-right: 7px;
+                        font-size: 20px;
+                    }
+
+                    .proj-link {
+                        padding-top: 3px;
+                    
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+
+                        color: $bud-green;
+
+                        cursor: pointer;
+                        font-size: 14px;
+
+                        &:hover {
+                            color: $bud-green__hover;
+                        }
+                    }
                 }
             }
         }
