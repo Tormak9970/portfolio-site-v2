@@ -9,7 +9,7 @@
 
     interface ConfigProj {
         name:string,
-        linkId:string
+        link:string
     }
 
     interface ConfigPiece {
@@ -52,7 +52,7 @@
                         <li>
                             <div class="proj-entr">
                                 <div class="name">{proj.name}</div>
-                                <div class="proj-link" on:click|stopPropagation="{() => { linkToProj(proj.linkId); }}">
+                                <div class="proj-link" on:click|stopPropagation="{() => { linkToProj(proj.link); }}">
                                     <i class="fas fa-link"></i>
                                 </div>
                             </div>

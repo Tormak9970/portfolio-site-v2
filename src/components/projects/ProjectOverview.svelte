@@ -83,7 +83,6 @@
         animation-duration: 1.5s;
 
         .proj-header { font-size: 27px; }
-        .proj-header-2 { text-align: center; }
         .content-container {
             width: 100%;
             height: calc(100% - 87px);

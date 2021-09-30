@@ -17,7 +17,7 @@
 
     let artPromise = loadEntries();
 
-    function loadEntries() {
+    function loadEntries(): Promise<ConfigPiece[]> {
         return fetch('./config.json').then(response => { return response.json(); }).then(json => { return json['art']; });
     }
 

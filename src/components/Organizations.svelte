@@ -10,21 +10,21 @@
     }
 
 	type ConfigProj = {
-		name:String,
+		name:string,
 		link:string
 	}
 
     type ConfigPiece = {
         name:string,
         path:string,
-		about:String,
+		about:string,
         description:string,
 		projects:ConfigProj[]
     }
 
     let orgsPromise = loadEntries();
 
-    function loadEntries() {
+    function loadEntries(): Promise<ConfigPiece[]> {
         return fetch('./config.json').then(response => { return response.json(); }).then(json => { return json['organizations']; });
     }
 

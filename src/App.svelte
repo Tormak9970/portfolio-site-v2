@@ -228,19 +228,7 @@ import ProjectEntry from "./components/projects/ProjectEntry.svelte";
 			align-items: center;
 
 			overflow: hidden;
-
-			.dynamic-wrapper {
-				height: 100%;
-				width: 100%;
-
-				display: flex;
-				flex-direction: column;
-				justify-content: center;
-				align-items: center;
-
-				overflow-y: scroll;
-			}
-
+			
 			.project-container {
 				z-index: 2;
 
