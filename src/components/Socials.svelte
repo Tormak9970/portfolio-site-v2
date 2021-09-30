@@ -19,6 +19,7 @@
     $army-green: #32481eff;
 
 	#socials {
+        z-index: 10;
 
         background-color: $grey-secondary;
 

@@ -1,4 +1,6 @@
 <script lang="ts">
+    import { projectDisplay, showProject } from "../../Stores";
+
     interface Release {
         name:string,
         date:string,
@@ -25,7 +27,8 @@
     export let isLast:boolean;
 
     function openProjectEntry() {
-
+        $projectDisplay = entryData;
+        $showProject = true;
     }
 </script>
 

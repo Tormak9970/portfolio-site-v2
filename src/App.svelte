@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { startProjIdx, currentRendered } from "./Stores";
+	import { startProjIdx, currentRendered, projectDisplay, showProject } from "./Stores";
 	import About from "./components/About.svelte";
 	import Experience from "./components/Experience.svelte";
 	import Featured from "./components/Featured.svelte";
@@ -11,6 +11,7 @@
 	import { loadProjects } from "./LinkProj";
 
 	import { beforeUpdate } from 'svelte';
+import ProjectEntry from "./components/projects/ProjectEntry.svelte";
 	
 	loadProjects();
 
@@ -54,6 +55,7 @@
 		}
 	}
 	function handleNavClick(e: Event) {
+		$showProject = false;
 		e.preventDefault();
 		const elem = e.currentTarget as HTMLElement;
 		
@@ -116,8 +118,11 @@
 		</div>
 	</div>
 	<div class="content-body">
-		<Socials/>
+		<Socials />
 		<svelte:component this={PagesLut[$currentRendered]}/>
+		<div class="project-container{$showProject ? '' : ' hidden'}">
+			<ProjectEntry entryData={$projectDisplay}/>
+		</div>
 	</div>
 </main>
 
@@ -212,6 +217,8 @@
 		}
 
 		.content-body {
+			position: relative;
+
 			height: calc(100% - 50px);
 			width: 100%;
 
@@ -220,7 +227,40 @@
 			justify-content: center;
 			align-items: center;
 
-			overflow-y: scroll;
+			overflow: hidden;
+
+			.dynamic-wrapper {
+				height: 100%;
+				width: 100%;
+
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+
+				overflow-y: scroll;
+			}
+
+			.project-container {
+				z-index: 2;
+
+				height: 100%;
+				width: 100%;
+
+				position: absolute;
+				top: 0;
+
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+
+				background-color: $grey-primary;
+
+				transition: top 0.5s ease-in-out;
+			}
+			.hidden {
+				top: 100%;
+			}
 		}
 	}
 </style>

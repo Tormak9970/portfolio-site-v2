@@ -20,12 +20,11 @@
     }
 
     export let entryData:Project;
-    export let hidden:boolean;
 
 
 </script>
 
-<div class="projEntry{hidden ? " hidden" : ""}">
+<div class="projEntry">
     <div class="proj-header">{entryData.name}</div>
     <div class="proj-layout-cont">
         <div class="img-markup-cont">
@@ -53,6 +52,7 @@
 
     .projEntry {
         width: 100%;
+        height: 100%;
 
         display: flex;
         flex-direction: column;
