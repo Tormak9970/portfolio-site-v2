@@ -1,6 +1,7 @@
 <script lang="ts">
 	export let len: number;
     export let handler:Function;
+    export let scrollIdx:number;
 
     function wrapper(e: MouseEvent) {
         handler(e);
@@ -10,7 +11,13 @@
 <div id="jumpToCont">
     {#each Array(len) as _, i}
         <div>
-            <a id="{i}-jumpNav" on:click="{wrapper}">{i+1}</a>
+            <a id="{i}-jumpNav" class="{i == scrollIdx ? 'selected' : ''}" on:click="{wrapper}">
+                {#if i == scrollIdx}
+                    <i class="fas fa-circle"></i>
+                {:else}
+                    <i class="far fa-circle"></i>
+                {/if}
+            </a>
         </div>
     {/each}
 </div>
@@ -42,8 +49,12 @@
         box-shadow: #151515 1px 1px 10px 0px;
 
         div {
-            margin: 2px 4px;
+            margin: 1px 2px;
             cursor: pointer;
+
+            .selected {
+                color: $bud-green;
+            }
 
             a {
                 width: 20px;
@@ -56,16 +67,24 @@
 
                 text-decoration: none;
 
-                font-size: 20px;
+                font-size: 16px;
+
+                i {
+                    width: 16px;
+                    height: 16px;
+                }
+            }
+            a:hover {
+                color: $bud-green__hover;
             }
         }
 
         :first-child {
-            margin-top: 4px;
+            margin-top: 2px;
         }
 
         :last-child {
-            margin-bottom: 4px;
+            margin-bottom: 2px;
         }
     }
 </style>

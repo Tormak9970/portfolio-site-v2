@@ -110,7 +110,7 @@
         {#each orgData.map(processEntries) as orgEntr, idx}
             <OrgsEntry entryData={orgEntr} hidden={pieces[idx].hidden} scrollType={pieces[idx].scrollType} isLast={idx+1 == orgData.length}/>
         {/each}
-        <JumpList len={orgData.length} handler={jumpToHandler}/>
+        <JumpList len={orgData.length} handler={jumpToHandler} scrollIdx={scrollIdx}/>
     {/await}
 </div>
 
