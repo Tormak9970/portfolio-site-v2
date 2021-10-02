@@ -66,7 +66,7 @@
     $bud-green__hover: rgb(138, 194, 78);
 
     .artEntry {
-        width: 80%;
+        width: 64%;
 
         position: absolute;
         top: 50%;

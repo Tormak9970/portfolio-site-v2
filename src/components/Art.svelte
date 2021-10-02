@@ -1,5 +1,6 @@
 <script lang="ts" type="module">
 	import ArtEntry from './art/ArtEntry.svelte';
+    import JumpList from "./utils/JumpList.svelte";
 
     interface ArtPiece {
         name:string,
@@ -65,8 +66,40 @@
             }
         }
     }
+    function interceptScrollFromIdx(direction:boolean) {
+        if (!isScrolling) {
+            isScrolling = true;
+            if (direction) {
+                pieces[scrollIdx+1].scrollType = 'down-in';
+                pieces[scrollIdx+1].hidden = false;
+                pieces[scrollIdx].scrollType = 'down-out';
+                setTimeout(() => {
+                    pieces[scrollIdx].hidden = true;
+                    scrollIdx++;
+                    isScrolling = false;
+                }, 1500);
+            } else {
+                pieces[scrollIdx-1].scrollType = 'up-in';
+                pieces[scrollIdx-1].hidden = false;
+                pieces[scrollIdx].scrollType = 'up-out';
+                setTimeout(() => {
+                    pieces[scrollIdx].hidden = true;
+                    scrollIdx--;
+                    isScrolling = false;
+                },  1500);
+            }
+        }
+    }
 
     function processEntries(entr:ConfigPiece , i) { pieces.push({...entr, "hidden": true, scrollType: 'up-out'}); return entr; }
+    function jumpToHandler(e: MouseEvent) {
+        const target:HTMLElement = <HTMLElement>e.currentTarget;
+        const curIdx = scrollIdx;
+        const tarIdx:number = parseInt(target.id.substr(0, target.id.indexOf('-')));
+        
+        scrollIdx = curIdx < tarIdx ? tarIdx-1 : tarIdx+1;
+        interceptScrollFromIdx(curIdx < tarIdx);
+    }
 </script>
 
 <svelte:window on:wheel|stopPropagation="{interceptScroll}" />
@@ -80,6 +113,7 @@
         {#each artData.map(processEntries) as artEntr, idx}
             <ArtEntry entryData={artEntr} hidden={pieces[idx+1].hidden} scrollType={pieces[idx+1].scrollType} isLast={idx+1 == artData.length}/>
         {/each }
+        <JumpList len={artData.length+1} handler={jumpToHandler} scrollIdx={scrollIdx}/>
     {/await}
 </div>
 
@@ -92,7 +126,7 @@
     $army-green: #32481eff;
 
     #art {
-		width: 80%;
+		width: 100%;
 		height: 100%;
 
         position: relative;

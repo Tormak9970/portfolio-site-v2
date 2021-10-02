@@ -6,6 +6,7 @@
     import { Project, projects } from "../LinkProj";
     import ProjectOverview from "./projects/ProjectOverview.svelte";
     import { startProjIdx } from "../Stores";
+    import JumpList from "./utils/JumpList.svelte";
 
     interface ProjectEnt {
         key:string,
@@ -15,7 +16,7 @@
         isLast:boolean
     }
 
-    const projectEntries:ProjectEnt[] = [];
+    const pieces:ProjectEnt[] = [];
     let scrollIdx:number = 0;
     let isScrolling:boolean = false;
 
@@ -23,9 +24,9 @@
         console.log(id);
         const project:Project = projects.get(id);
         if (project) {
-            const curIdx = projectEntries.findIndex((val:ProjectEnt, i:number) => { return val.key == id; });
-            const curHIdx = projectEntries.findIndex((val:ProjectEnt, i:number) => { return !val.hidden; });
-            projectEntries[curHIdx].hidden = true;
+            const curIdx = pieces.findIndex((val:ProjectEnt, i:number) => { return val.key == id; });
+            const curHIdx = pieces.findIndex((val:ProjectEnt, i:number) => { return !val.hidden; });
+            pieces[curHIdx].hidden = true;
             
             scrollIdx = curIdx < curHIdx ? curIdx-1 : curIdx+1;
             interceptScrollFromIdx(false);
@@ -42,20 +43,20 @@
             if (!(scrollIdx == 0 && !direction) && !(scrollIdx == projElem.children.length-1 && direction) && Math.abs(e.deltaY) != 0) {
                 isScrolling = true;
                 if (direction) {
-                    projectEntries[scrollIdx+1].scrollType = 'down-in';
-                    projectEntries[scrollIdx+1].hidden = false;
-                    projectEntries[scrollIdx].scrollType = 'down-out';
+                    pieces[scrollIdx+1].scrollType = 'down-in';
+                    pieces[scrollIdx+1].hidden = false;
+                    pieces[scrollIdx].scrollType = 'down-out';
                     setTimeout(() => {
-                        projectEntries[scrollIdx].hidden = true;
+                        pieces[scrollIdx].hidden = true;
                         scrollIdx++;
                         isScrolling = false;
                     }, 1500);
                 } else {
-                    projectEntries[scrollIdx-1].scrollType = 'up-in';
-                    projectEntries[scrollIdx-1].hidden = false;
-                    projectEntries[scrollIdx].scrollType = 'up-out';
+                    pieces[scrollIdx-1].scrollType = 'up-in';
+                    pieces[scrollIdx-1].hidden = false;
+                    pieces[scrollIdx].scrollType = 'up-out';
                     setTimeout(() => {
-                        projectEntries[scrollIdx].hidden = true;
+                        pieces[scrollIdx].hidden = true;
                         scrollIdx--;
                         isScrolling = false;
                     },  1500);
@@ -67,20 +68,20 @@
         if (!isScrolling) {
             isScrolling = true;
             if (direction) {
-                projectEntries[scrollIdx+1].scrollType = 'down-in';
-                projectEntries[scrollIdx+1].hidden = false;
-                projectEntries[scrollIdx].scrollType = 'down-out';
+                pieces[scrollIdx+1].scrollType = 'down-in';
+                pieces[scrollIdx+1].hidden = false;
+                pieces[scrollIdx].scrollType = 'down-out';
                 setTimeout(() => {
-                    projectEntries[scrollIdx].hidden = true;
+                    pieces[scrollIdx].hidden = true;
                     scrollIdx++;
                     isScrolling = false;
                 }, 1500);
             } else {
-                projectEntries[scrollIdx-1].scrollType = 'up-in';
-                projectEntries[scrollIdx-1].hidden = false;
-                projectEntries[scrollIdx].scrollType = 'up-out';
+                pieces[scrollIdx-1].scrollType = 'up-in';
+                pieces[scrollIdx-1].hidden = false;
+                pieces[scrollIdx].scrollType = 'up-out';
                 setTimeout(() => {
-                    projectEntries[scrollIdx].hidden = true;
+                    pieces[scrollIdx].hidden = true;
                     scrollIdx--;
                     isScrolling = false;
                 },  1500);
@@ -89,7 +90,7 @@
     }
 
     function processEntries([key, entr]:[string, Project], i:number) { 
-        projectEntries.push({
+        pieces.push({
             "key": key,
             "data": entr, 
             "hidden": i !== $startProjIdx, 
@@ -98,13 +99,22 @@
         }); 
         return entr; 
     }
+    function jumpToHandler(e: MouseEvent) {
+        const target:HTMLElement = <HTMLElement>e.currentTarget;
+        const curIdx = scrollIdx;
+        const tarIdx:number = parseInt(target.id.substr(0, target.id.indexOf('-')));
+        
+        scrollIdx = curIdx < tarIdx ? tarIdx-1 : tarIdx+1;
+        interceptScrollFromIdx(curIdx < tarIdx);
+    }
 </script>
 <svelte:window on:wheel|stopPropagation="{interceptScroll}" />
 
 <div id="projects">
     {#each Array.from(projects).map(processEntries) as artEntr, idx}
-        <ProjectOverview entryData={artEntr} hidden={projectEntries[idx].hidden} scrollType={projectEntries[idx].scrollType} isLast={projectEntries[idx].isLast}/>
+        <ProjectOverview entryData={artEntr} hidden={pieces[idx].hidden} scrollType={pieces[idx].scrollType} isLast={pieces[idx].isLast}/>
     {/each}
+    <JumpList len={projects.size} handler={jumpToHandler} scrollIdx={scrollIdx}/>
 </div>
 
 <style lang="scss">
