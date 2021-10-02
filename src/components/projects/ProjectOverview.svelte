@@ -65,7 +65,7 @@
     $bud-green__hover: rgb(138, 194, 78);
 
     .projOview {
-        height: 90%;
+        height: 81%;
         width: 80%;
 
         position: absolute;

@@ -66,40 +66,38 @@
             }
         }
     }
-    function interceptScrollFromIdx(direction:boolean) {
+    function interceptScrollFromIdx(direction:boolean, tarIdx:number) {
         if (!isScrolling) {
             isScrolling = true;
             if (direction) {
-                pieces[scrollIdx+1].scrollType = 'down-in';
-                pieces[scrollIdx+1].hidden = false;
+                pieces[tarIdx].scrollType = 'down-in';
+                pieces[tarIdx].hidden = false;
                 pieces[scrollIdx].scrollType = 'down-out';
                 setTimeout(() => {
                     pieces[scrollIdx].hidden = true;
-                    scrollIdx++;
+                    scrollIdx = tarIdx;
                     isScrolling = false;
                 }, 1500);
             } else {
-                pieces[scrollIdx-1].scrollType = 'up-in';
-                pieces[scrollIdx-1].hidden = false;
+                pieces[tarIdx].scrollType = 'up-in';
+                pieces[tarIdx].hidden = false;
                 pieces[scrollIdx].scrollType = 'up-out';
                 setTimeout(() => {
                     pieces[scrollIdx].hidden = true;
-                    scrollIdx--;
+                    scrollIdx = tarIdx;
                     isScrolling = false;
                 },  1500);
             }
         }
     }
-
-    function processEntries(entr:ConfigPiece , i) { pieces.push({...entr, "hidden": true, scrollType: 'up-out'}); return entr; }
     function jumpToHandler(e: MouseEvent) {
         const target:HTMLElement = <HTMLElement>e.currentTarget;
         const curIdx = scrollIdx;
         const tarIdx:number = parseInt(target.id.substr(0, target.id.indexOf('-')));
-        
-        scrollIdx = curIdx < tarIdx ? tarIdx-1 : tarIdx+1;
-        interceptScrollFromIdx(curIdx < tarIdx);
+        interceptScrollFromIdx(curIdx < tarIdx, tarIdx);
     }
+
+    function processEntries(entr:ConfigPiece , i) { pieces.push({...entr, "hidden": true, scrollType: 'up-out'}); return entr; }
 </script>
 
 <svelte:window on:wheel|stopPropagation="{interceptScroll}" />

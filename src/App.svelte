@@ -11,7 +11,7 @@
 	import { loadProjects } from "./LinkProj";
 
 	import { beforeUpdate } from 'svelte';
-import ProjectEntry from "./components/projects/ProjectEntry.svelte";
+	import ProjectEntry from "./components/projects/ProjectEntry.svelte";
 	
 	loadProjects();
 

@@ -29,7 +29,7 @@
             pieces[curHIdx].hidden = true;
             
             scrollIdx = curIdx < curHIdx ? curIdx-1 : curIdx+1;
-            interceptScrollFromIdx(false);
+            interceptScrollFromJump(false);
         } else {
             throw Error(`Expected key ${id} to be in map but was not.`);
         }
@@ -64,7 +64,31 @@
             }
         }
     }
-    function interceptScrollFromIdx(direction:boolean) {
+    function interceptScrollFromIdx(direction:boolean, tarIdx:number) {
+        if (!isScrolling) {
+            isScrolling = true;
+            if (direction) {
+                pieces[tarIdx].scrollType = 'down-in';
+                pieces[tarIdx].hidden = false;
+                pieces[scrollIdx].scrollType = 'down-out';
+                setTimeout(() => {
+                    pieces[scrollIdx].hidden = true;
+                    scrollIdx = tarIdx;
+                    isScrolling = false;
+                }, 1500);
+            } else {
+                pieces[tarIdx].scrollType = 'up-in';
+                pieces[tarIdx].hidden = false;
+                pieces[scrollIdx].scrollType = 'up-out';
+                setTimeout(() => {
+                    pieces[scrollIdx].hidden = true;
+                    scrollIdx = tarIdx;
+                    isScrolling = false;
+                },  1500);
+            }
+        }
+    }
+    function interceptScrollFromJump(direction:boolean) {
         if (!isScrolling) {
             isScrolling = true;
             if (direction) {
@@ -88,6 +112,12 @@
             }
         }
     }
+    function jumpToHandler(e: MouseEvent) {
+        const target:HTMLElement = <HTMLElement>e.currentTarget;
+        const curIdx = scrollIdx;
+        const tarIdx:number = parseInt(target.id.substr(0, target.id.indexOf('-')));
+        interceptScrollFromIdx(curIdx < tarIdx, tarIdx);
+    }
 
     function processEntries([key, entr]:[string, Project], i:number) { 
         pieces.push({
@@ -98,14 +128,6 @@
             "isLast": i+1 == projects.size
         }); 
         return entr; 
-    }
-    function jumpToHandler(e: MouseEvent) {
-        const target:HTMLElement = <HTMLElement>e.currentTarget;
-        const curIdx = scrollIdx;
-        const tarIdx:number = parseInt(target.id.substr(0, target.id.indexOf('-')));
-        
-        scrollIdx = curIdx < tarIdx ? tarIdx-1 : tarIdx+1;
-        interceptScrollFromIdx(curIdx < tarIdx);
     }
 </script>
 <svelte:window on:wheel|stopPropagation="{interceptScroll}" />
@@ -125,7 +147,7 @@
 
 	#projects {
 		width: 100%;
-		height:90%;
+		height: 100%;
 
 		display: flex;
 		flex-direction: column;
