@@ -1,11 +1,5 @@
 <script lang="ts">
-    import { onDestroy } from 'svelte';
     import { showing } from "../../Stores";
-
-    type Dims = {
-        h: string;
-        w: string;
-    }
 
     interface ConfigPiece {
         name:string,
@@ -15,7 +9,6 @@
     interface Config {
         id: string;
         data: ConfigPiece;
-        maxes: Dims;
     }
 
     export let config: Config;
@@ -26,10 +19,10 @@
     function catchScroll(e: WheelEvent) {}
 </script>
 
-<div id={config.id} class="modal-container {$showing ? '' : 'hidden'}" on:wheel|stopPropagation="{catchScroll}">
+<div id={config.id} class="modal-container{$showing ? ' show' : ''}" on:wheel|stopPropagation="{catchScroll}">
     <span class="close" on:click="{closeSelf}">&times;</span>
-    <div class="modal">
-        <img src="{config.data.path}" alt="{config.data.name}" style="{config.maxes.h ? `max-height: ${config.maxes.h};` : ''}{config.maxes.w ? ` max-width: ${config.maxes.w};` : ''}"/>
+    <div class="modal show">
+        <img src="{config.data.path}" alt="{config.data.name}" style="max-height: auto; max-width: 100%;"/>
     </div>
 </div>
 
@@ -45,17 +38,12 @@
         height: 100%;
 
         position: fixed;
+        display: none;
 
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-
-        z-index: 3; 
         left: 0;
         top: 0;
-        overflow: none; 
-        background-color: rgb(0, 0, 0); /* Fallback color */
+        overflow: hidden; 
+        background-color: rgb(0, 0, 0);
         background-color: rgba(0, 0, 0, 0.9); 
 
         .modal {
@@ -64,16 +52,13 @@
             animation-name: zoom;
             animation-duration: 0.6s;
 
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            margin: auto;
 
             @keyframes zoom { from { transform: scale(0); } to { transform: scale(1); } }
 
             @media only screen and (max-width: 700px) { .modal { width: 100%; } }
         }
 
-        /* The Close Button */
         .close {
             position: absolute;
             top: 15px;
@@ -92,7 +77,7 @@
         }
     }
 
-    .hidden {
-        display: none;
+    .show {
+        display: flex;
     }
 </style>

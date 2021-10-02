@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { startProjIdx, currentRendered, projectDisplay, showProject } from "./Stores";
+	import { startProjIdx, currentRendered, projectDisplay, showProject, imageModalData } from "./Stores";
 	import About from "./components/About.svelte";
 	import Experience from "./components/Experience.svelte";
 	import Featured from "./components/Featured.svelte";
@@ -12,6 +12,7 @@
 
 	import { beforeUpdate } from 'svelte';
 	import ProjectEntry from "./components/projects/ProjectEntry.svelte";
+import ImageModal from "./components/utils/ImageModal.svelte";
 	
 	loadProjects();
 
@@ -124,6 +125,7 @@
 			<ProjectEntry entryData={$projectDisplay}/>
 		</div>
 	</div>
+	<ImageModal config={$imageModalData} />
 </main>
 
 <style lang="scss">

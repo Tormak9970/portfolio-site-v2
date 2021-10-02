@@ -1,7 +1,7 @@
 import { Writable, writable } from "svelte/store";
 import type { Project } from "./LinkProj";
 
-export const showing = writable(true);
+export const showing = writable(false);
 export const startProjIdx = writable(0);
 export const currentRendered = writable('1');
 export const projectDisplay: Writable<Project> = writable({
@@ -20,3 +20,10 @@ export const projectDisplay: Writable<Project> = writable({
     ]
 });
 export const showProject = writable(false);
+export const imageModalData = writable({
+    "id": "artPreviewModal",
+    "data": {
+        "path": "", 
+        "name": ""
+    }
+});

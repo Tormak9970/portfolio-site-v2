@@ -1,6 +1,5 @@
 <script lang="ts">
-    import { showing } from "../../Stores";
-    import ImageModal from "../utils/ImageModal.svelte";
+    import { imageModalData, showing } from "../../Stores";
 
     export let entryData:ConfigPiece;
     export let hidden:boolean;
@@ -13,29 +12,9 @@
         description:string
     }
 
-    let previewModal:ImageModal;
-
     function showModal(e: MouseEvent) {
-        if (previewModal) {
-            $showing = true;
-        } else {
-            previewModal = new ImageModal({
-                target: document.body,
-                props: {
-                    config: {
-                        id: `${entryData.name}Modal`,
-                        data: {
-                            path: entryData.path, 
-                            name: entryData.name
-                        },
-                        maxes: {
-                            h: `auto`,
-                            w: `100%`
-                        }
-                    }
-                }
-            });
-        }
+        $imageModalData = { "id": "artPreviewModal", "data": { "path": entryData.path, "name": entryData.name } };
+        setTimeout(() => { $showing = true; }, 30);
     }
 </script>
 
