@@ -217,6 +217,7 @@
 		}
 
 		.content-body {
+			z-index: 2;
 			position: relative;
 
 			height: calc(100% - 50px);

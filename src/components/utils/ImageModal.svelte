@@ -40,6 +40,7 @@
     $bud-green__hover: rgb(138, 194, 78);
 
     .modal-container {
+        z-index: 100;
         width: 100%;
         height: 100%;
 
