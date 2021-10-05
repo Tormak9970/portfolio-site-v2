@@ -150,8 +150,11 @@
                         "changes": []
                     }
                 ],
-                "link": "",
-                "imgs": ["", ""]
+                "link": "https://github.com/SWTOR-Slicers/Slicers-GUI",
+                "imgs": [
+                    "./img/projs/Slicers GUI.png",
+                    "./img/orgs/SwtorSlicers.png"
+                ]
             }
         },
         "education": {
