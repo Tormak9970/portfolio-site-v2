@@ -3,15 +3,31 @@
     export let handler:Function;
     export let scrollIdx:number;
 
-    function wrapper(e: MouseEvent) {
-        handler(e);
+    let lastSelected:number = -1;
+    function setLast(i:number) {
+        if (lastSelected != i) {
+            lastSelected = i;
+            return 'selected';
+        } else {
+            return '';
+        }
+    };
+
+    function wrapper(e:MouseEvent) {
+        const wrapperDiv:ParentNode = (<HTMLElement>e.currentTarget).parentNode;
+
+        const isSameIdx:boolean = Array.from(wrapperDiv.parentNode.children).indexOf(<Element>wrapperDiv) == lastSelected;
+
+        if (!isSameIdx) {
+            handler(e);
+        }
     }
 </script>
 
 <div id="jumpToCont">
     {#each Array(len) as _, i}
         <div>
-            <a id="{i}-jumpNav" class="{i == scrollIdx ? 'selected' : ''}" on:click="{wrapper}">
+            <a id="{i}-jumpNav" class="{i == scrollIdx ? setLast(i) : ''}" on:click="{wrapper}">
                 {#if i == scrollIdx}
                     <i class="fas fa-circle"></i>
                 {:else}
