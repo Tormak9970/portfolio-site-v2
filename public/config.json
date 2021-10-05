@@ -112,7 +112,7 @@
                 ]
             },
             "torc-npc-viewers": {
-                "name": "",
+                "name": "TORC NPC 3D Viewers",
                 "time": "",
                 "status": "",
                 "difficulty": "",
@@ -169,10 +169,26 @@
         },
         "miscellaneous": {
             "modbot": {
-                
+                "name": "Discord Modbot",
+                "time": "",
+                "status": "",
+                "difficulty": "",
+                "description": "",
+                "reasons": [],
+                "takeaways": [],
+                "link": "",
+                "imgs": ["", ""]
             },
             "memedb": {
-                
+                "name": "The MemeDB",
+                "time": "",
+                "status": "",
+                "difficulty": "",
+                "description": "",
+                "reasons": [],
+                "takeaways": [],
+                "link": "",
+                "imgs": ["", ""]
             }
         }
     },
