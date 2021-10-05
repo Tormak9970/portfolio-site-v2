@@ -243,6 +243,11 @@
             "name": "The Gathering Storm",
             "path": "./img/art pieces/Eye of the Gathering Storm Final.png",
             "description": "This is a piece inspired by artwork I saw online years ago. It is a sorcerer summoning a storm around himself."
+        },
+        {
+            "name": "Vaulthunter Neon",
+            "path": "./img/art pieces/Vault finished v2.png",
+            "description": "This piece is based on the vaulthunter's icon from borderlands 2. I tried making a more realistic brick wall, but the realism took away from the sign itself, so I reverted it back to the older material."
         }
     ]
 }
