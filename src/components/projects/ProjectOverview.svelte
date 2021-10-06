@@ -1,13 +1,5 @@
 <script lang="ts">
     import { projectDisplay, showProject } from "../../Stores";
-
-    interface Release {
-        name:string,
-        date:string,
-        length:string,
-        changes:string[],
-        bugFixes?:string[]
-    }
     
     interface Project {
         name:string,
@@ -15,8 +7,7 @@
         status:string,
         difficulty:string,
         description:string,
-        takeaways:string[],
-        releases?:Release[],
+        content:Object,
         link?:string,
         imgs:string[]
     }
@@ -35,9 +26,9 @@
 <div class="projOview{` ${scrollType}`}{hidden ? " hidden" : ""}">
     <div class="content-container">
         <div class="imgs-cont">
-            <img src="{(entryData.imgs) ? entryData.imgs[1] : ""}" alt="">
+            <img src="{(entryData.imgs[1] != "") ? entryData.imgs[1] : "./img/orgs/Logo-black-round.png"}" class="{(entryData.imgs[1] != "") ? "" : "round"}" alt="">
             <div class="proj-main-img">
-                <img src="{(entryData.imgs) ? entryData.imgs[0] : ""}" alt="">
+                <img src="{entryData.imgs[0]}" alt="">
             </div>
         </div>
         <div class="proj-overview-cont">
@@ -137,6 +128,10 @@
                         
                         border-radius: 8px;
                     }
+                }
+
+                .round {
+                    border-radius: 50%;
                 }
             }
             .proj-overview-cont {

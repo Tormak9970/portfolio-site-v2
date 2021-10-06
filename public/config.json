@@ -2,27 +2,87 @@
     "projects": {
         "web-games": {
             "minesweeper": {
-                
+                "name": "Minesweeper",
+                "time": "",
+                "status": "",
+                "difficulty": "",
+                "description": "",
+                "content": {
+
+                },
+                "link": "",
+                "imgs": [
+                    "",
+                    ""
+                ]
             },
             "tetris": {
-                
+                "name": "Tetris",
+                "time": "",
+                "status": "",
+                "difficulty": "",
+                "description": "",
+                "content": {
+
+                },
+                "link": "",
+                "imgs": [
+                    "",
+                    ""
+                ]
             },
             "pong": {
-                
+                "name": "Pong",
+                "time": "",
+                "status": "",
+                "difficulty": "",
+                "description": "",
+                "content": {
+
+                },
+                "link": "",
+                "imgs": [
+                    "",
+                    ""
+                ]
             }
         },
         "web-dev": {
             "portfolio": {
-                
-            },
-            "portfolio-v2": {
-                
-            },
-            "torc-character-designer": {
-                "name": "TORC Character Designer",
+                "name": "Portfolio V1",
                 "time": "",
                 "status": "",
                 "difficulty": "",
+                "description": "",
+                "content": {
+
+                },
+                "link": "",
+                "imgs": [
+                    "",
+                    ""
+                ]
+            },
+            "portfolio-v2": {
+                "name": "Portfolio V2",
+                "time": "",
+                "status": "Complete (continually updated)",
+                "difficulty": "Moderate",
+                "description": "",
+                "content": {
+
+                },
+                "link": "",
+                "imgs": [
+                    "",
+                    ""
+                ]
+            },
+            "torc-character-designer": {
+                "name": "TORC Character Designer",
+                "time": "350+ hours",
+                "status": "In progress (stable)",
+                "difficulty": "Complexed",
                 "description": "This is one of my favorite projects. It is an external character creator and outfit designer for Star Wars The Old Republic. I really love this game and the community, and wanted to do something everyone could use and enjoy. It is very complexed, and I had to learn alot of new topics and skills while working on it. Im also very proud of it since it is the first tool of its kind made by anyone, ever, and that required me to solve alot of problems no one else has done  before.",
                 "reasons": [
                     "I wanted to make something truly unique that had not been done before",
@@ -105,6 +165,9 @@
                         ]
                     }
                 ],
+                "content": {
+
+                },
                 "link": "https://torcommunity.com/tools/character-designer",
                 "imgs": [
                     "./img/projs/Release_one.png",
@@ -117,19 +180,14 @@
                 "status": "",
                 "difficulty": "",
                 "description": "",
-                "reasons": [],
-                "takeaways": [],
-                "releases": [
-                    {
-                        "name": "",
-                        "date": "",
-                        "time": "",
-                        "bug-fixes": [],
-                        "changes": []
-                    }
-                ],
+                "content": {
+
+                },
                 "link": "",
-                "imgs": ["", ""]
+                "imgs": [
+                    "",
+                    ""
+                ]
             }
         },
         "software-engineering": {
@@ -139,17 +197,9 @@
                 "status": "In progress (Beta)",
                 "difficulty": "Complexed",
                 "description": "",
-                "reasons": [],
-                "takeaways": [],
-                "releases": [
-                    {
-                        "name": "",
-                        "date": "",
-                        "time": "",
-                        "bug-fixes": [],
-                        "changes": []
-                    }
-                ],
+                "content": {
+
+                },
                 "link": "https://github.com/SWTOR-Slicers/Slicers-GUI",
                 "imgs": [
                     "./img/projs/Slicers GUI.png",
@@ -164,10 +214,14 @@
                 "status": "",
                 "difficulty": "",
                 "description": "",
-                "reasons": [],
-                "takeaways": [],
+                "content": {
+
+                },
                 "link": "",
-                "imgs": ["", ""]
+                "imgs": [
+                    "",
+                    ""
+                ]
             }
         },
         "miscellaneous": {
@@ -177,10 +231,14 @@
                 "status": "",
                 "difficulty": "",
                 "description": "",
-                "reasons": [],
-                "takeaways": [],
+                "content": {
+
+                },
                 "link": "",
-                "imgs": ["", ""]
+                "imgs": [
+                    "",
+                    ""
+                ]
             },
             "memedb": {
                 "name": "The MemeDB",
@@ -188,10 +246,14 @@
                 "status": "",
                 "difficulty": "",
                 "description": "",
-                "reasons": [],
-                "takeaways": [],
+                "content": {
+
+                },
                 "link": "",
-                "imgs": ["", ""]
+                "imgs": [
+                    "",
+                    ""
+                ]
             }
         }
     },

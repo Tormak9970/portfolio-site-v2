@@ -1,20 +1,11 @@
 <script lang="ts">
-    interface Release {
-        name:string,
-        date:string,
-        length:string,
-        changes:string[],
-        bugFixes?:string[]
-    }
-    
     interface Project {
         name:string,
         time:string,
         status:string,
         difficulty:string,
         description:string,
-        takeaways:string[],
-        releases?:Release[],
+        content:Object,
         link?:string,
         imgs:string[]
     }
