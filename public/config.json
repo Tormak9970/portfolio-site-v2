@@ -84,89 +84,352 @@
                 "status": "In progress (stable)",
                 "difficulty": "Complexed",
                 "description": "This is one of my favorite projects. It is an external character creator and outfit designer for Star Wars The Old Republic. I really love this game and the community, and wanted to do something everyone could use and enjoy. It is very complexed, and I had to learn alot of new topics and skills while working on it. Im also very proud of it since it is the first tool of its kind made by anyone, ever, and that required me to solve alot of problems no one else has done  before.",
-                "reasons": [
-                    "I wanted to make something truly unique that had not been done before",
-                    [
-                        "This is the only Star Wars The Old Republic external character designer"
-                    ],
-                    "I also wanted to make something people would not only want to use, but also something that would inspire people, and help them realise what they can do.",
-                    "I had read comments and posts on a variety of platforms from people requesting/asking about a character viewer/creator, the earliest dating back to around 2014",
-                    "I also wanted to expedite the process from re-creating your character outside of the game (for 3D modeling, printing, or just for fun).",
-                    [
-                        "The process could take upwards of one to two hour for one character",
-                        "With my program, it takes ~20 minutes"
-                    ]
-                ],
-                "takeaways": [
-                    "How to read hexadecimal headers",
-                    "How to read custom file formats",
-                    "Basics of PHP",
-                    "Advanced JavaScript",
-                    "How to better manage the layout of my code",
-                    "How to better structure and organize my time",
-                    "How to break down problems into achievable sections",
-                    "How to effectively troubleshoot issues and debug",
-                    "Sometimes the best solution is to take a break and work on different part/something else for a while",
-                    "How to use the THREE.js library",
-                    "Basics of 3D design/modeling",
-                    [
-                        "HLSL",
-                        "GLSL",
-                        "The graphics pipeline (how 3D models are shaded and rendered)",
-                        "How models work",
-                        "How textures work",
-                        "How lighting works",
-                        "How shadows work"
-                    ]
-                ],
-                "releases": [
-                    {
-                        "name": "Release one",
-                        "date": "March 14, 2021",
-                        "time": "270+ hours",
-                        "changes": [
-                            "Users can download a <i>.zip</i> with all the nessesary info to re-create their character in blender",
-                            "Has all character creator options that the game has",
-                            [
-                                "Customization sliders",
-                                "Gender",
-                                "Classes",
-                                "Species"
-                            ],
-                            "Allows changing of light-color gradient",
-                            "Users can search by keywords to get a list of every related item, which they can then select from to display one",
-                            "Users can add a global dye to their outfit",
-                            "Users can share their creations using the sharing url button at the bottom"
-                        ]
-                    },
-                    {
-                        "name": "Release two",
-                        "date": "March 25, 2021",
-                        "time": "300+ hours",
-                        "bug-fixes": [
-                            "Fixed many broken items (only a few left still needing to be fixed)",
-                            "Fixed a few edge cases where things like hoods would render on Togrutas and Twi'leks",
-                            "Fixed an issue where exporting the zip had no file extension on Firefox",
-                            "Fixed long loading times"
-                        ],
-                        "changes": [
-                            "Now has dark side corruption",
-                            "<img src=\"./src/img/Release2__corruption.png\" alt=\"\" height=\"200px\" class=\"proj-img-resize-eye\">",
-                            "Added Eye Cube Maps (the glossy reflection on the character's eyes)",
-                            "<img src=\"./src/img/EyeCubeMap.png\" alt=\"\" class=\"proj-img-resize-eye\">",
-                            "Changed the lighting to be closer to the preview window. (this is the default for now, but more on that later)",
-                            "Added a Unify Colors option for each armor slot (this makes the slot in question become the same color as the chest slot)",
-                            "Added ability to apply dyes for each slot",
-                            "Added tick marks to make it easier to tell where to click to move the slider to a specific value",
-                            "Re-arranged the order of a few customizations to match in-game numbering",
-                            "Updated many of the UI images to make them clearer",
-                            "Now have a randomize button, and it also randomizes the slider values on load.",
-                            "Tweaked a bunch of the rendering settings (camera position, lighting angle, lighting intensity, etc.)"
-                        ]
-                    }
-                ],
                 "content": {
-
+                    "time": 1633549867543,
+                    "blocks": [
+                        {
+                            "id": "Hr1P2ZVs1P",
+                            "type": "header",
+                            "data": {
+                                "text": "Description",
+                                "level": 2
+                            }
+                        },
+                        {
+                            "id": "Z_ibVmilFC",
+                            "type": "paragraph",
+                            "data": {
+                                "text": "This is one of my favorite projects. It is an external character creator and outfit designer for Star Wars The Old Republic. I really love this game and the community, and wanted to do something everyone could use and enjoy. It is very complexed, and I had to learn a lot of new topics and skills while working on it. I'm also very proud of it since it is the first tool of its kind made by anyone, ever, and that required me to solve a lot of problems no one else has done  before."
+                            }
+                        },
+                        {
+                            "id": "7wGwqDv3JP",
+                            "type": "header",
+                            "data": {
+                                "text": "Reasons",
+                                "level": 2
+                            }
+                        },
+                        {
+                            "id": "GIJaPDViYn",
+                            "type": "list",
+                            "data": {
+                                "style": "unordered",
+                                "items": [
+                                    {
+                                        "content": "I wanted to make something truly unique that had not been done before.",
+                                        "items": [
+                                            {
+                                                "content": "This is the only Star Wars The Old Republic external character designer",
+                                                "items": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "content": "I also wanted to make something people would not only want to use, but also something that would inspire people, and help them realize what they can do.",
+                                        "items": []
+                                    },
+                                    {
+                                        "content": "I had read comments and posts on a variety of platforms from people requesting/asking about a character viewer/creator, the earliest dating back to around 2014.",
+                                        "items": []
+                                    },
+                                    {
+                                        "content": "I also wanted to expedite the process from re-creating your character outside of the game (for 3D modeling, printing, or just for fun).",
+                                        "items": [
+                                            {
+                                                "content": "The process could take upwards of one to two hour for one character.",
+                                                "items": []
+                                            },
+                                            {
+                                                "content": "With my program, it takes ~20 minutes.",
+                                                "items": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "id": "GjKDJqUFzQ",
+                            "type": "header",
+                            "data": {
+                                "text": "Takeaways",
+                                "level": 2
+                            }
+                        },
+                        {
+                            "id": "J4pkgn-Eko",
+                            "type": "list",
+                            "data": {
+                                "style": "unordered",
+                                "items": [
+                                    {
+                                        "content": "How to read hexadecimal headers",
+                                        "items": []
+                                    },
+                                    {
+                                        "content": "How to read custom file formats",
+                                        "items": []
+                                    },
+                                    {
+                                        "content": "Basics of PHP",
+                                        "items": []
+                                    },
+                                    {
+                                        "content": "Advanced JavaScript",
+                                        "items": []
+                                    },
+                                    {
+                                        "content": "Better code organization",
+                                        "items": []
+                                    },
+                                    {
+                                        "content": "Better planning strategies",
+                                        "items": []
+                                    },
+                                    {
+                                        "content": "How to break down problems into achievable sections",
+                                        "items": []
+                                    },
+                                    {
+                                        "content": "How to effectively troubleshoot issues and debug",
+                                        "items": []
+                                    },
+                                    {
+                                        "content": "Sometimes the best solution is to take a break and work on different part/something else for a while",
+                                        "items": []
+                                    },
+                                    {
+                                        "content": "How to use the THREE.js library",
+                                        "items": []
+                                    },
+                                    {
+                                        "content": "Basics of 3D design/modeling",
+                                        "items": [
+                                            {
+                                                "content": "HLSL",
+                                                "items": []
+                                            },
+                                            {
+                                                "content": "GLSL",
+                                                "items": []
+                                            },
+                                            {
+                                                "content": "The graphics pipeline (how 3D models are shaded and rendered)",
+                                                "items": []
+                                            },
+                                            {
+                                                "content": "How models, textures, lighting and shadows work",
+                                                "items": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "id": "phWf751nHJ",
+                            "type": "header",
+                            "data": {
+                                "text": "Release one",
+                                "level": 2
+                            }
+                        },
+                        {
+                            "id": "UnOPXgDHGc",
+                            "type": "paragraph",
+                            "data": {
+                                "text": "Date: March 14, 2021<br>Time: 270+ hours<br>Changes:"
+                            }
+                        },
+                        {
+                            "id": "UtAn8loNXU",
+                            "type": "list",
+                            "data": {
+                                "style": "unordered",
+                                "items": [
+                                    {
+                                        "content": "Users can download a <i>.zip</i> with all the necessary info to re-create their character in blender",
+                                        "items": []
+                                    },
+                                    {
+                                        "content": "Has all character creator options that the game has",
+                                        "items": [
+                                            {
+                                                "content": "Customization sliders",
+                                                "items": []
+                                            },
+                                            {
+                                                "content": "Gender",
+                                                "items": []
+                                            },
+                                            {
+                                                "content": "Classes",
+                                                "items": []
+                                            },
+                                            {
+                                                "content": "Species",
+                                                "items": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "content": "Allows changing of light-color gradient",
+                                        "items": []
+                                    },
+                                    {
+                                        "content": "Users can search by keywords to get a list of every related item, which they can then select from to display one",
+                                        "items": []
+                                    },
+                                    {
+                                        "content": "Users can add a global dye to their outfit",
+                                        "items": []
+                                    },
+                                    {
+                                        "content": "Users can share their creations using the sharing url button at the bottom",
+                                        "items": []
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "id": "LX4pxBmLp1",
+                            "type": "header",
+                            "data": {
+                                "text": "Release two",
+                                "level": 2
+                            }
+                        },
+                        {
+                            "id": "PRoxoiGs_k",
+                            "type": "paragraph",
+                            "data": {
+                                "text": "Date: March 25, 2021<br>Time: 300+ hours<br>Bug Fixes:"
+                            }
+                        },
+                        {
+                            "id": "0KDYqJ2WAc",
+                            "type": "list",
+                            "data": {
+                                "style": "unordered",
+                                "items": [
+                                    {
+                                        "content": "Fixed many broken items (only a few left still needing to be fixed)",
+                                        "items": []
+                                    },
+                                    {
+                                        "content": "Fixed a few edge cases where things like hoods would render on Togrutas and Twi'leks",
+                                        "items": []
+                                    },
+                                    {
+                                        "content": "Fixed an issue where exporting the zip had no file extension on Firefox",
+                                        "items": []
+                                    },
+                                    {
+                                        "content": "Fixed long loading times",
+                                        "items": []
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "id": "UE1PWmPCZO",
+                            "type": "paragraph",
+                            "data": {
+                                "text": "Changes:"
+                            }
+                        },
+                        {
+                            "id": "xjjLeJudXG",
+                            "type": "list",
+                            "data": {
+                                "style": "unordered",
+                                "items": [
+                                    {
+                                        "content": "Now has dark side corruption",
+                                        "items": []
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "id": "rXcChFl3ch",
+                            "type": "image",
+                            "data": {
+                                "file": {},
+                                "caption": "",
+                                "withBorder": false,
+                                "stretched": false,
+                                "withBackground": false
+                            }
+                        },
+                        {
+                            "id": "CzLhCiUG21",
+                            "type": "list",
+                            "data": {
+                                "style": "unordered",
+                                "items": [
+                                    {
+                                        "content": "Added Eye Cube Maps (the glossy reflection on the character's eyes)",
+                                        "items": []
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "id": "L6fWJJIRH3",
+                            "type": "image",
+                            "data": {
+                                "file": {},
+                                "caption": "",
+                                "withBorder": false,
+                                "stretched": false,
+                                "withBackground": false
+                            }
+                        },
+                        {
+                            "id": "L8A6Ifg9Be",
+                            "type": "list",
+                            "data": {
+                                "style": "unordered",
+                                "items": [
+                                    {
+                                        "content": "Changed the lighting to be closer to the preview window",
+                                        "items": []
+                                    },
+                                    {
+                                        "content": "Added a Unify Colors option for each armor slot (this makes the slot in question become the same color as the chest slot)",
+                                        "items": []
+                                    },
+                                    {
+                                        "content": "Added ability to apply dyes for each slot",
+                                        "items": []
+                                    },
+                                    {
+                                        "content": "Added tick marks to make it easier to tell where to click to move the slider to a specific value",
+                                        "items": []
+                                    },
+                                    {
+                                        "content": "Re-arranged the order of a few customizations to match in-game numbering",
+                                        "items": []
+                                    },
+                                    {
+                                        "content": "Updated many of the UI images to make them clearer",
+                                        "items": []
+                                    },
+                                    {
+                                        "content": "Now have a randomize button, and it also randomizes the slider values on load.",
+                                        "items": []
+                                    },
+                                    {
+                                        "content": "Tweaked a bunch of the rendering settings (camera position, lighting angle, lighting intensity, etc.)",
+                                        "items": []
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "version": "2.22.2"
                 },
                 "link": "https://torcommunity.com/tools/character-designer",
                 "imgs": [
