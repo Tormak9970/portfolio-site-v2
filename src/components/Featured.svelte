@@ -1,18 +1,10 @@
 <script lang="ts">
-	
+	import { featured } from "../LinkProj";
+    import ProjectOverview from "./projects/ProjectOverview.svelte";
 </script>
 
 <div id="featured">
-	<div class="container">
-        <div class="img-container">
-            
-        </div>
-    </div>
-    <div class="container">
-        <p class="info">
-            
-        </p>
-    </div>
+	<ProjectOverview entryData={featured} hidden={false} scrollType="" isLast={true}/>
 </div>
 
 <style lang="scss">
@@ -24,30 +16,20 @@
     $army-green: #32481eff;
 
 	#featured {
-		width: 80%;
-		height: 80%;
+		width: 100%;
+		height: 100%;
 
 		display: flex;
-		flex-direction: row;
+		flex-direction: column;
         align-items: center;
+
+        position: relative;
+
+        overflow: hidden;
 
         animation-name: fade-in;
         animation-fill-mode: both;
         animation-duration: 1.5s;
-
-        .container {
-            width: 50%;
-            height: 100%;
-
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-
-            .info {
-                font-size: 30px;
-            }
-        }
 	}
 
     @keyframes fade-in {

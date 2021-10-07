@@ -10,6 +10,7 @@ interface Project {
 }
 
 const projects:Map<string, Project> = new Map();
+let featured:Project;
 
 async function loadProjects() {
     const config = await fetch('./config.json').then(response => { return response.json(); }).then(json => { return json['projects']; });
@@ -19,7 +20,10 @@ async function loadProjects() {
             projects.set(proj[0], proj[1] as Project);
         }
     }
+
+    const feat = await fetch('./config.json').then(response => { return response.json(); }).then(json => { return json['featured']; });
+    featured = projects.get(feat);
 }
 
-export { loadProjects, projects };
+export { loadProjects, projects, featured };
 export type { Project };
