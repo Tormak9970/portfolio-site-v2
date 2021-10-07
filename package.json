@@ -25,6 +25,15 @@
     "typescript": "^4.4.3"
   },
   "dependencies": {
+    "@editorjs/code": "^2.7.0",
+    "@editorjs/delimiter": "^1.2.0",
+    "@editorjs/editorjs": "^2.22.2",
+    "@editorjs/embed": "^2.4.6",
+    "@editorjs/header": "^2.6.1",
+    "@editorjs/image": "^2.6.1",
+    "@editorjs/link": "^2.3.1",
+    "@editorjs/nested-list": "^1.0.2",
+    "@editorjs/paragraph": "^2.8.0",
     "@fortawesome/fontawesome-free": "^5.15.4",
     "sass": "^1.41.0",
     "sirv-cli": "^1.0.0"

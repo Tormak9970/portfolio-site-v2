@@ -1,4 +1,52 @@
 <script lang="ts">
+    import EditorJs from '@editorjs/editorjs';
+	import Header from '@editorjs/header';
+	import Code from '@editorjs/code';
+	import Image from '@editorjs/image';
+	import Link from '@editorjs/link';
+	import List from '@editorjs/nested-list';
+	import Delimiter from '@editorjs/delimiter';
+	import Paragraph from '@editorjs/paragraph';
+	import Embed from '@editorjs/embed';
+
+	const editor = new EditorJs({
+		holder : 'entrContent',
+		tools: {
+			header: {
+				class: Header,
+				inlineToolbar : true
+			},
+			code: {
+				class: Code,
+				inlineToolbar : true
+			},
+			image: {
+				class: Image,
+				inlineToolbar : true
+			},
+			link: {
+				class: Link,
+				inlineToolbar : true
+			},
+			list: {
+				class: List,
+				inlineToolbar : true
+			},
+			delimiter: {
+				class: Delimiter,
+				inlineToolbar : true
+			},
+			paragraph: {
+				class: Paragraph,
+				inlineToolbar : true
+			},
+			embed: {
+				class: Embed,
+				inlineToolbar : true
+			}
+		}
+	});
+
     interface Project {
         name:string,
         time:string,
@@ -21,9 +69,7 @@
         <div class="img-markup-cont">
             {@html entryData.imgs}
         </div>
-        <div class="proj-overview-cont">
-
-        </div>
+        <div id="entrContent"></div>
     </div>
     <!-- 
         images
