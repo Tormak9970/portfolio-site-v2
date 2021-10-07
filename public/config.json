@@ -356,7 +356,9 @@
                             "id": "rXcChFl3ch",
                             "type": "image",
                             "data": {
-                                "file": {},
+                                "file": {
+                                    "url" : "./img/projs/Release2__corruption.png"
+                                },
                                 "caption": "",
                                 "withBorder": false,
                                 "stretched": false,
@@ -380,7 +382,9 @@
                             "id": "L6fWJJIRH3",
                             "type": "image",
                             "data": {
-                                "file": {},
+                                "file": {
+                                    "url" : "./img/projs/EyeCubeMap.png"
+                                },
                                 "caption": "",
                                 "withBorder": false,
                                 "stretched": false,

@@ -12,7 +12,7 @@
 
 	import { beforeUpdate } from 'svelte';
 	import ProjectEntry from "./components/projects/ProjectEntry.svelte";
-import ImageModal from "./components/utils/ImageModal.svelte";
+	import ImageModal from "./components/utils/ImageModal.svelte";
 	
 	loadProjects();
 

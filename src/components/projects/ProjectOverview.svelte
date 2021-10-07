@@ -7,7 +7,7 @@
         status:string,
         difficulty:string,
         description:string,
-        content:Object,
+        content:any,
         link?:string,
         imgs:string[]
     }
