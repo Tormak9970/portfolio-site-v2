@@ -25,3 +25,4 @@ export const imageModalData = writable({
         "name": ""
     }
 });
+export const orientation = writable(0);
