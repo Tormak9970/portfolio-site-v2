@@ -1,5 +1,6 @@
 <script lang="ts">
 	export let len: number;
+    export let tooltips: Map<number, string>;
     export let handler:Function;
     export let scrollIdx:number;
 
@@ -16,10 +17,12 @@
     function wrapper(e:MouseEvent) {
         const wrapperDiv:ParentNode = (<HTMLElement>e.currentTarget).parentNode;
 
-        const isSameIdx:boolean = Array.from(wrapperDiv.parentNode.children).indexOf(<Element>wrapperDiv) == lastSelected;
+        const newIdx = Array.from(wrapperDiv.parentNode.children).indexOf(<Element>wrapperDiv);
+        const isSameIdx:boolean = newIdx == lastSelected;
 
         if (!isSameIdx) {
             handler(e);
+            console.log(tooltips.get(newIdx));
         }
     }
 </script>

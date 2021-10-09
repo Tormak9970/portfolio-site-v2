@@ -1,5 +1,4 @@
 import { Writable, writable } from "svelte/store";
-import type { Project } from "./LinkProj";
 
 export const showing = writable(false);
 export const startProjIdx = writable(0);
@@ -10,10 +9,9 @@ export const projectDisplay: Writable<Project> = writable({
     "status":"",
     "difficulty":"",
     "description":"",
-    "takeaways":[
-        "",
-        ""
-    ],
+    "content": {
+
+    },
     "imgs":[
         "",
         ""

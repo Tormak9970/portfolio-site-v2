@@ -1,16 +1,5 @@
 <script lang="ts">
     import { projectDisplay, showProject } from "../../Stores";
-    
-    interface Project {
-        name:string,
-        time:string,
-        status:string,
-        difficulty:string,
-        description:string,
-        content:any,
-        link?:string,
-        imgs:string[]
-    }
 
     export let entryData:Project;
     export let hidden:boolean;

@@ -1,14 +1,3 @@
-interface Project {
-    name:string,
-    time:string,
-    status:string,
-    difficulty:string,
-    description:string,
-    content:Object,
-    link?:string,
-    imgs:string[]
-}
-
 const projects:Map<string, Project> = new Map();
 let featured:Project;
 
@@ -26,4 +15,3 @@ async function loadProjects() {
 }
 
 export { loadProjects, projects, featured };
-export type { Project };

@@ -26,6 +26,7 @@
     let orgsPromise = loadEntries();
     function loadEntries(): Promise<ConfigPiece[]> { return fetch('./config.json').then(response => { return response.json(); }).then(json => { return json['organizations']; }); }
     const pieces:OrgsPiece[] = [];
+    const jumpNames:Map<number, string> = new Map();
 
     let scrollIdx:number = 0;
     let isScrolling:boolean = false;
@@ -95,6 +96,7 @@
             "hidden": i != 0,
             scrollType: i == 0 ? 'down-in' : 'up-out'
         });
+        jumpNames.set(i, entr.name);
         return entr;
     }
 </script>
@@ -108,7 +110,7 @@
         {#each orgData.map(processEntries) as orgEntr, idx}
             <OrgsEntry entryData={orgEntr} hidden={pieces[idx].hidden} scrollType={pieces[idx].scrollType} isLast={idx+1 == orgData.length}/>
         {/each}
-        <JumpList len={orgData.length} handler={jumpToHandler} scrollIdx={scrollIdx}/>
+        <JumpList len={orgData.length} tooltips={jumpNames} handler={jumpToHandler} scrollIdx={scrollIdx}/>
     {/await}
 </div>
 

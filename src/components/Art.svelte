@@ -18,9 +18,8 @@
 
     let artPromise = loadEntries();
 
-    function loadEntries(): Promise<ConfigPiece[]> {
-        return fetch('./config.json').then(response => { return response.json(); }).then(json => { return json['art']; });
-    }
+    function loadEntries(): Promise<ConfigPiece[]> { return fetch('./config.json').then(response => { return response.json(); }).then(json => { return json['art']; }); }
+    const jumpNames:Map<number, string> = new Map([[0, "Foreword"]]);
 
     const pieces:ArtPiece[] = [
         {
@@ -97,7 +96,11 @@
         interceptScrollFromIdx(curIdx < tarIdx, tarIdx);
     }
 
-    function processEntries(entr:ConfigPiece , i) { pieces.push({...entr, "hidden": true, scrollType: 'up-out'}); return entr; }
+    function processEntries(entr:ConfigPiece , i) {
+        pieces.push({...entr, "hidden": true, scrollType: 'up-out'});
+        jumpNames.set(i+1, entr.name);
+        return entr;
+    }
 </script>
 
 <svelte:window on:wheel|stopPropagation="{interceptScroll}" />
@@ -111,7 +114,7 @@
         {#each artData.map(processEntries) as artEntr, idx}
             <ArtEntry entryData={artEntr} hidden={pieces[idx+1].hidden} scrollType={pieces[idx+1].scrollType} isLast={idx+1 == artData.length}/>
         {/each }
-        <JumpList len={artData.length+1} handler={jumpToHandler} scrollIdx={scrollIdx}/>
+        <JumpList len={artData.length+1} tooltips={jumpNames} handler={jumpToHandler} scrollIdx={scrollIdx}/>
     {/await}
 </div>
 

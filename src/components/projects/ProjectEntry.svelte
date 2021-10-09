@@ -1,6 +1,4 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
-
     import EditorJs from '@editorjs/editorjs';
 	import Header from '@editorjs/header';
 	import Code from '@editorjs/code';
@@ -13,17 +11,6 @@
 	import Raw from '@editorjs/raw';
 	
 	import { showProject } from '../../Stores';
-
-    interface Project {
-        name:string,
-        time:string,
-        status:string,
-        difficulty:string,
-        description:string,
-        content:any,
-        link?:string,
-        imgs:string[]
-    }
 
     export let entryData:Project;
 

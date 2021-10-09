@@ -3,7 +3,7 @@
     export let jumpTo = (id:string) => {}
 </script>
 <script lang="ts">
-    import { Project, projects } from "../LinkProj";
+    import { projects } from "../LinkProj";
     import ProjectOverview from "./projects/ProjectOverview.svelte";
     import { startProjIdx } from "../Stores";
     import JumpList from "./utils/JumpList.svelte";
@@ -19,6 +19,7 @@
     const pieces:ProjectEnt[] = [];
     let scrollIdx:number = 0;
     let isScrolling:boolean = false;
+    const jumpNames:Map<number, string> = new Map();
 
     jumpTo = (id:string) => {
         console.log(id);
@@ -126,7 +127,8 @@
             "hidden": i !== $startProjIdx, 
             "scrollType": i == 0 ? 'down-in' : 'up-out',
             "isLast": i+1 == projects.size
-        }); 
+        });
+        jumpNames.set(i, entr.name);
         return entr; 
     }
 </script>
@@ -136,7 +138,7 @@
     {#each Array.from(projects).map(processEntries) as artEntr, idx}
         <ProjectOverview entryData={artEntr} hidden={pieces[idx].hidden} scrollType={pieces[idx].scrollType} isLast={pieces[idx].isLast}/>
     {/each}
-    <JumpList len={projects.size} handler={jumpToHandler} scrollIdx={scrollIdx}/>
+    <JumpList len={projects.size} tooltips={jumpNames} handler={jumpToHandler} scrollIdx={scrollIdx}/>
 </div>
 
 <style lang="scss">
