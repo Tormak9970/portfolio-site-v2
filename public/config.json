@@ -7,9 +7,7 @@
                 "status": "",
                 "difficulty": "",
                 "description": "",
-                "content": {
-
-                },
+                "content": {},
                 "link": "",
                 "imgs": [
                     "",
@@ -22,9 +20,7 @@
                 "status": "",
                 "difficulty": "",
                 "description": "",
-                "content": {
-
-                },
+                "content": {},
                 "link": "",
                 "imgs": [
                     "",
@@ -37,9 +33,7 @@
                 "status": "",
                 "difficulty": "",
                 "description": "",
-                "content": {
-
-                },
+                "content": {},
                 "link": "",
                 "imgs": [
                     "",
@@ -48,18 +42,180 @@
             }
         },
         "web-dev": {
-            "portfolio": {
+            "portfolio-v1": {
                 "name": "Portfolio V1",
-                "time": "",
-                "status": "",
-                "difficulty": "",
-                "description": "",
+                "time": "25 hours",
+                "status": "Obsolete",
+                "difficulty": "Easy",
+                "description": "I wanted to create a professional and classy website that I could use to display all of the projects I create. I think this is a unique and relevant way to display my projects and works in a way that represents me and what I love doing. I continuously update this as I continue to come up with projects and complete them, as well as work on projects ether for school, or one of the organizations I am a part of.",
                 "content": {
-
+                    "time": 1633880900126,
+                    "blocks": [
+                        {
+                            "id": "W_xuzsjFBt",
+                            "type": "header",
+                            "data": {
+                                "text": "Description",
+                                "level": 2
+                            }
+                        },
+                        {
+                            "id": "A-p92rIsaH",
+                            "type": "paragraph",
+                            "data": {
+                                "text": "I wanted to create a professional and classy website that I could use to display all of the projects I create. I think this is a unique and relevant way to display my projects and works in a way that represents me and what I love doing. I continuously update this as I continue to come up with projects and complete them, as well as work on projects ether for school, or one of the organizations I am a part of."
+                            }
+                        },
+                        {
+                            "id": "K9_vhMevvu",
+                            "type": "header",
+                            "data": {
+                                "text": "Reasons",
+                                "level": 2
+                            }
+                        },
+                        {
+                            "id": "NGd6jV0Oa6",
+                            "type": "list",
+                            "data": {
+                                "style": "unordered",
+                                "items": [
+                                    {
+                                        "content": "I wanted to have a unique way to display all of my projects.",
+                                        "items": []
+                                    },
+                                    {
+                                        "content": "I wanted to display this in a relevant manner to my interests and passions.",
+                                        "items": []
+                                    },
+                                    {
+                                        "content": "I wanted to reflect on what I have learned, and what my takeaways have been.",
+                                        "items": []
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "id": "X4R6J6w249",
+                            "type": "header",
+                            "data": {
+                                "text": "Takeaways",
+                                "level": 2
+                            }
+                        },
+                        {
+                            "id": "lEwIT0sE2T",
+                            "type": "list",
+                            "data": {
+                                "style": "unordered",
+                                "items": [
+                                    {
+                                        "content": "I was able to create a classy, informative website that is simple yet effective.",
+                                        "items": []
+                                    },
+                                    {
+                                        "content": "I now have a nice way to display and represent my projects in a manner I am proud of.",
+                                        "items": []
+                                    },
+                                    {
+                                        "content": "I learned some really interesting tricks you can do with CSS and HTML5 (such as the flip cards I use for project previews).",
+                                        "items": []
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "id": "W6ECctwqi0",
+                            "type": "header",
+                            "data": {
+                                "text": "Components",
+                                "level": 2
+                            }
+                        },
+                        {
+                            "id": "-wlFnFy-ew",
+                            "type": "list",
+                            "data": {
+                                "style": "unordered",
+                                "items": [
+                                    {
+                                        "content": "The home page/landing page. This has some information about me, and a list of some of my skills.",
+                                        "items": []
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "id": "hEzD74sdou",
+                            "type": "image",
+                            "data": {
+                                "file": {
+                                    "url": "./img/projs/Portfolio site hompage.png"
+                                },
+                                "caption": "",
+                                "withBorder": false,
+                                "stretched": false,
+                                "withBackground": false
+                            }
+                        },
+                        {
+                            "id": "IjsBX05Yah",
+                            "type": "list",
+                            "data": {
+                                "style": "unordered",
+                                "items": [
+                                    {
+                                        "content": "The project category and organization tabs. These contain previews of my projects, based on what category of computer science they fall under.",
+                                        "items": []
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "id": "ND3HRNtExk",
+                            "type": "image",
+                            "data": {
+                                "file": {
+                                    "url": "./img/projs/Portfolio site category tab.png"
+                                },
+                                "caption": "",
+                                "withBorder": false,
+                                "stretched": false,
+                                "withBackground": false
+                            }
+                        },
+                        {
+                            "id": "2LsV8tktKJ",
+                            "type": "list",
+                            "data": {
+                                "style": "unordered",
+                                "items": [
+                                    {
+                                        "content": "The third and final component of the website is the project pages themselves. These pages have information about each project, including: an overview, reasons for and purpose of the project, and the outcome of the project.",
+                                        "items": []
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "id": "-JYdHcMe6c",
+                            "type": "image",
+                            "data": {
+                                "file": {
+                                    "url": "./img/projs/Portfolio site project tab.png"
+                                },
+                                "caption": "",
+                                "withBorder": false,
+                                "stretched": false,
+                                "withBackground": false
+                            }
+                        }
+                    ],
+                    "version": "2.22.2"
                 },
                 "link": "",
                 "imgs": [
-                    "",
+                    "./img/projs/Portfolio site hompage.png",
                     ""
                 ]
             },
@@ -69,9 +225,7 @@
                 "status": "Complete (continually updated)",
                 "difficulty": "Moderate",
                 "description": "",
-                "content": {
-
-                },
+                "content": {},
                 "link": "",
                 "imgs": [
                     "",
@@ -357,7 +511,7 @@
                             "type": "image",
                             "data": {
                                 "file": {
-                                    "url" : "./img/projs/Release2__corruption.png"
+                                    "url": "./img/projs/Release2__corruption.png"
                                 },
                                 "caption": "",
                                 "withBorder": false,
@@ -383,7 +537,7 @@
                             "type": "image",
                             "data": {
                                 "file": {
-                                    "url" : "./img/projs/EyeCubeMap.png"
+                                    "url": "./img/projs/EyeCubeMap.png"
                                 },
                                 "caption": "",
                                 "withBorder": false,
@@ -447,9 +601,7 @@
                 "status": "",
                 "difficulty": "",
                 "description": "",
-                "content": {
-
-                },
+                "content": {},
                 "link": "",
                 "imgs": [
                     "",
@@ -464,9 +616,7 @@
                 "status": "In progress (Beta)",
                 "difficulty": "Complexed",
                 "description": "",
-                "content": {
-
-                },
+                "content": {},
                 "link": "https://github.com/SWTOR-Slicers/Slicers-GUI",
                 "imgs": [
                     "./img/projs/Slicers GUI.png",
@@ -481,9 +631,7 @@
                 "status": "",
                 "difficulty": "",
                 "description": "",
-                "content": {
-
-                },
+                "content": {},
                 "link": "",
                 "imgs": [
                     "",
@@ -498,9 +646,7 @@
                 "status": "",
                 "difficulty": "",
                 "description": "",
-                "content": {
-
-                },
+                "content": {},
                 "link": "",
                 "imgs": [
                     "",
@@ -513,9 +659,7 @@
                 "status": "",
                 "difficulty": "",
                 "description": "",
-                "content": {
-
-                },
+                "content": {},
                 "link": "",
                 "imgs": [
                     "",
@@ -563,9 +707,7 @@
             ]
         }
     ],
-    "experience": {
-
-    },
+    "experience": {},
     "art": [
         {
             "name": "SWTOR Neon Sign",
