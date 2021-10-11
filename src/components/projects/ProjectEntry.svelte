@@ -14,52 +14,51 @@
 
     export let entryData:Project;
 
-	let editor:EditorJs;
+	const editor = new EditorJs({
+		readOnly: true,
+		holder : 'entrContent',
+		tools: {
+			header: {
+				class: Header,
+				inlineToolbar : true
+			},
+			code: {
+				class: Code,
+				inlineToolbar : true
+			},
+			image: {
+				class: Image,
+				inlineToolbar : true
+			},
+			link: {
+				class: Link,
+				inlineToolbar : true
+			},
+			list: {
+				class: List,
+				inlineToolbar : true
+			},
+			delimiter: {
+				class: Delimiter,
+				inlineToolbar : true
+			},
+			paragraph: {
+				class: Paragraph,
+				inlineToolbar : true
+			},
+			embed: {
+				class: Embed,
+				inlineToolbar : true
+			},
+			raw: {
+				class: Raw,
+				inlineToolbar : true
+			},
+		}
+	});
 
 	$: if ($showProject) {
-		editor = new EditorJs({
-			readOnly: true,
-			holder : 'entrContent',
-			tools: {
-				header: {
-					class: Header,
-					inlineToolbar : true
-				},
-				code: {
-					class: Code,
-					inlineToolbar : true
-				},
-				image: {
-					class: Image,
-					inlineToolbar : true
-				},
-				link: {
-					class: Link,
-					inlineToolbar : true
-				},
-				list: {
-					class: List,
-					inlineToolbar : true
-				},
-				delimiter: {
-					class: Delimiter,
-					inlineToolbar : true
-				},
-				paragraph: {
-					class: Paragraph,
-					inlineToolbar : true
-				},
-				embed: {
-					class: Embed,
-					inlineToolbar : true
-				},
-				raw: {
-					class: Raw,
-					inlineToolbar : true
-				},
-			},
-			data: entryData.content
-		});
+		editor.render(entryData.content);
 	}
 
 	function goBack(): void { $showProject = false; }
@@ -230,6 +229,12 @@
 
 				:global(.cdx-block) { background-color: $grey-secondary; }
 				:global(.image-tool__caption) { display: none; }
+				:global(.embed-project-link) {
+					color: $font-color;
+
+					&:hover { color: $bud-green__hover; }
+					&:focus { color: $bud-green__hover; }
+				}
 			}
 		}
     }

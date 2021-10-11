@@ -3,24 +3,89 @@
 		"web-games": {
 			"minesweeper": {
 				"name": "Minesweeper",
-				"time": "",
-				"status": "",
-				"difficulty": "",
-				"description": "",
-				"content": {},
-				"link": "",
-				"imgs": [
-					"",
-					""
-				]
-			},
-			"tetris": {
-				"name": "Tetris",
-				"time": "",
-				"status": "",
-				"difficulty": "",
-				"description": "",
-				"content": {},
+				"time": "15 hours",
+				"status": "Complete",
+				"difficulty": "Simple",
+				"description": "Minesweeper is a classic logic based strategy game. As I was learning JavaScript, I thought it would be fun to make one of my favorite classic games using what I was learning. In the process, I learned about the html5 canvas, which is now used instead of flash for web based games and animations. After completing the normal minesweeper, I wanted to add something more advanced to the project. I decided to add animations (inspired by Google' Minesweeper), so I used the html5 canvas API to animate it.",
+				"content": {
+					"time": 1633959986929,
+					"blocks": [
+						{
+							"id": "fDaKuK9e17",
+							"type": "header",
+							"data": {
+								"text": "Description",
+								"level": 2
+							}
+						},
+						{
+							"id": "SCY6AOLVoo",
+							"type": "paragraph",
+							"data": {
+								"text": "Minesweeper is a classic logic based strategy game. As I was learning JavaScript, I thought it would be fun to make one of my favorite classic games using what I was learning. In the process, I learned about the html5 canvas, which is now used instead of flash for web based games and animations. After completing the normal minesweeper, I wanted to add something more advanced to the project. I decided to add animations (inspired by Google' Minesweeper), so I used the html5 canvas API to animate it."
+							}
+						},
+						{
+							"id": "JppKuXin_o",
+							"type": "header",
+							"data": {
+								"text": "Reasons",
+								"level": 2
+							}
+						},
+						{
+							"id": "YEHt9cZRD6",
+							"type": "list",
+							"data": {
+								"style": "unordered",
+								"items": [
+									{
+										"content": "Wanted to learn how to use the HTML5 canvas",
+										"items": []
+									},
+									{
+										"content": "Love Minesweeper, so wanted to make my own version",
+										"items": []
+									},
+									{
+										"content": "Wanted to learn more javascript and do some more web development",
+										"items": []
+									}
+								]
+							}
+						},
+						{
+							"id": "bJjpWp73MG",
+							"type": "header",
+							"data": {
+								"text": "Takeaways",
+								"level": 2
+							}
+						},
+						{
+							"id": "qO6rJLop7Q",
+							"type": "list",
+							"data": {
+								"style": "unordered",
+								"items": [
+									{
+										"content": "I was comfortable and familiar with html, css, javascript, and the Canvas API",
+										"items": []
+									},
+									{
+										"content": "How to approach a problem from different angles (realized that I would need to use the html5 canvas api if I wanted to make animations)",
+										"items": []
+									},
+									{
+										"content": "Learned about recursion",
+										"items": []
+									}
+								]
+							}
+						}
+					],
+					"version": "2.22.2"
+				},
 				"link": "",
 				"imgs": [
 					"",
@@ -29,11 +94,180 @@
 			},
 			"pong": {
 				"name": "Pong",
-				"time": "",
-				"status": "",
-				"difficulty": "",
-				"description": "",
-				"content": {},
+				"time": "10 hours",
+				"status": "Complete",
+				"difficulty": "Simple",
+				"description": "Keeping with the theme of the previous projects I had just finished, I decided to make a 2 player pong game. This was much more complexed then minesweeper as I needed to update the canvas on key press, as well as slowly increase the ball speed and have collision detection.",
+				"content": {
+					"time": 1633960355613,
+					"blocks": [
+						{
+							"id": "4APXidhcEF",
+							"type": "header",
+							"data": {
+								"text": "Description",
+								"level": 2
+							}
+						},
+						{
+							"id": "zbG47D4jM7",
+							"type": "paragraph",
+							"data": {
+								"text": "Keeping with the theme of the previous projects I had just finished, I decided to make a 2 player pong game. This was much more complexed then minesweeper as I needed to update the canvas on key press, as well as slowly increase the ball speed and have collision detection."
+							}
+						},
+						{
+							"id": "Wc5vaX4R5y",
+							"type": "header",
+							"data": {
+								"text": "Reasons",
+								"level": 2
+							}
+						},
+						{
+							"id": "APS_pwr7Dk",
+							"type": "list",
+							"data": {
+								"style": "unordered",
+								"items": [
+									{
+										"content": "Wanted to expand my javascript knowledge",
+										"items": []
+									},
+									{
+										"content": "Always thought it would be fun to make pong",
+										"items": []
+									},
+									{
+										"content": "Wanted to learn more about the HTML5 canvas API",
+										"items": []
+									}
+								]
+							}
+						},
+						{
+							"id": "E5c5fBID_B",
+							"type": "header",
+							"data": {
+								"text": "Takeaways",
+								"level": 2
+							}
+						},
+						{
+							"id": "vpp5a3jCJx",
+							"type": "list",
+							"data": {
+								"style": "unordered",
+								"items": [
+									{
+										"content": "How to animate multiple objects at a time using canvas",
+										"items": []
+									},
+									{
+										"content": "I learned more advanced javascript",
+										"items": []
+									},
+									{
+										"content": "How to make a simple UI users could use, and save their options",
+										"items": []
+									}
+								]
+							}
+						}
+					],
+					"version": "2.22.2"
+				},
+				"link": "",
+				"imgs": [
+					"",
+					""
+				]
+			},
+			"tetris": {
+				"name": "Tetris",
+				"time": "30 hours",
+				"status": "Working (unfinished)",
+				"difficulty": "Moderate-Complexed",
+				"description": "For my last classic game project, I wanted to do something much more complexed. I decided to do Tetris, as it is one of my favorite games, and had a lot of complexed elements. It took much longer then the previous three projects, but was very satisfying to finish.",
+				"content": {
+					"time": 1633960233761,
+					"blocks": [
+						{
+							"id": "w2NLjrsOZr",
+							"type": "header",
+							"data": {
+								"text": "Description",
+								"level": 2
+							}
+						},
+						{
+							"id": "eRDQjgQL3e",
+							"type": "paragraph",
+							"data": {
+								"text": "For my last classic game project, I wanted to do something much more complexed. I decided to do Tetris, as it is one of my favorite games, and had a lot of complexed elements. It took much longer then the previous three projects, but was very satisfying to finish."
+							}
+						},
+						{
+							"id": "9BD101MWmx",
+							"type": "header",
+							"data": {
+								"text": "Reasons",
+								"level": 2
+							}
+						},
+						{
+							"id": "3GNMw55XkZ",
+							"type": "list",
+							"data": {
+								"style": "unordered",
+								"items": [
+									{
+										"content": "Wanted to finish of my web game projects with something that was more complicated",
+										"items": []
+									},
+									{
+										"content": "Wanted to practice and advance my javascript knowledge",
+										"items": []
+									},
+									{
+										"content": "Tetris has <a href=\"https://tetris.fandom.com/wiki/Tetris_Guideline\" target=\"_blank\" rel=\"noreferrer noopener\" class=\"embed-project-link\">guidelines</a> you need to follow if you are going to publish it under the Tetris name, and I thought it would be good practice to make a project with specifications I also needed to meet",
+										"items": []
+									}
+								]
+							}
+						},
+						{
+							"id": "pwFfpS8MIr",
+							"type": "header",
+							"data": {
+								"text": "Takeaways",
+								"level": 2
+							}
+						},
+						{
+							"id": "q8SU_ZaDaO",
+							"type": "list",
+							"data": {
+								"style": "unordered",
+								"items": [
+									{
+										"content": "Learned how to better mitigate methods and functions to the most relevant class object",
+										"items": []
+									},
+									{
+										"content": "I became comfortable and very familiar with javascript",
+										"items": []
+									},
+									{
+										"content": "I met most the required guidelines. (Some were too advanced for me at the time, but I plan to come back and update it to meet them)",
+										"items": []
+									}
+								]
+							}
+						}
+					],
+					"version": "2.22.2"
+				},
 				"link": "",
 				"imgs": [
 					"",
