@@ -25,7 +25,7 @@
                 <h2>{entryData.name}</h2>
             </div>
             <p class="overview">
-                {entryData.description}
+                {@html entryData.description}
             </p>
             <div class="proj-link-cont">
                 <div class="name">Learn more:</div>

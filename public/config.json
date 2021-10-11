@@ -1112,7 +1112,7 @@
 				"time": "30-40 hours",
 				"status": "Complete (not hosted)",
 				"difficulty": "Simple",
-				"description": "The memeDB was one of my first projects. I had finished AP Java a few months earlier, so I was                   still relatively new to programming. I read about <i>SpringBoot </i>(an API framework for Java), and                   immediately wanted to make my own. I decided that a fun and interesting idea would be to                   make a meme database, so I went with that. First I made an API with <i>SpringBoot</i>, and then a                   <i>React.js</i> front end. I later realized that React was not suited for my needs, as I wanted to make a                   multipage website, so I switched to normal JavaScript, HTML, and CSS. This was my                   first attempt at web development, and I enjoyed it a lot.",
+				"description": "The memeDB was one of my first projects. I had finished AP Java a few months earlier, so I was still relatively new to programming. I read about <i>SpringBoot</i> (an API framework for Java), and immediately wanted to make my own. I decided that a fun and interesting idea would be to make a meme database, so I went with that. First I made an API with <i>SpringBoot</i>, and then a <i>React.js</i> front end. I later realized that React was not suited for my needs, as I wanted to make a multipage website, so I switched to normal JavaScript, HTML, and CSS. This was my first attempt at web development, and I enjoyed it a lot.",
 				"content": {
 					"time": 1633888617151,
 					"blocks": [

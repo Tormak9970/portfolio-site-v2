@@ -81,6 +81,12 @@
         <div class="proj-main-img">
 			<img src="{entryData.imgs[0]}" alt="">
 		</div>
+		<div class="data-container">
+			<div class="data-entr"><b>Name:</b> {entryData.name}</div>
+			<div class="data-entr"><b>Time:</b> {entryData.time}</div>
+			<div class="data-entr"><b>Status:</b> {entryData.status}</div>
+			<div class="data-entr"><b>Difficulty:</b> {entryData.difficulty}</div>
+		</div>
         <div id="entrContent"></div>
     </div>
 </div>
@@ -217,6 +223,27 @@
 					
 					border-radius: 8px;
 				}
+			}
+
+			.data-container {
+				margin-top: 20px;
+				width: 650px;
+				padding: 7px 50px;
+				background-color:  $grey-secondary;
+
+				border-radius: 8px;
+
+				display: flex;
+				flex-direction: column;
+				align-items: flex-start;
+				justify-content: space-around;
+
+				.data-entr {
+					margin: 2px 0px;
+				}
+
+				:first-child { margin-top: 4px; }
+            	:last-child { margin-bottom: 4px; }
 			}
 
 			#entrContent {
