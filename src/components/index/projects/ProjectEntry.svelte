@@ -10,7 +10,7 @@
 	import Embed from '@editorjs/embed';
 	import Raw from '@editorjs/raw';
 	
-	import { showProject } from '../../Stores';
+	import { showProject } from '../../../Stores';
 
     export let entryData:Project;
 

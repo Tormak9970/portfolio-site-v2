@@ -1,18 +1,18 @@
 <script lang="ts">
 	import { startProjIdx, currentRendered, projectDisplay, showProject, imageModalData } from "../Stores";
-	import About from "../components/About.svelte";
-	import Experience from "../components/Experience.svelte";
-	import Featured from "../components/Featured.svelte";
-	import Projects, { jumpTo } from "../components/Projects.svelte";
-	import Organizations from "../components/Organizations.svelte";
-	import Art from "../components/Art.svelte";
-	import Contact from "../components/Contact.svelte";
-	import Socials from "../components/Socials.svelte";
+	import About from "../components/index/About.svelte";
+	import Experience from "../components/index/Experience.svelte";
+	import Featured from "../components/index/Featured.svelte";
+	import Projects, { jumpTo } from "../components/index/Projects.svelte";
+	import Organizations from "../components/index/Organizations.svelte";
+	import Art from "../components/index/Art.svelte";
+	import Contact from "../components/index/Contact.svelte";
+	import Socials from "../components/index/Socials.svelte";
 	import { loadProjects } from "../LinkProj";
 
 	import { beforeUpdate } from 'svelte';
-	import ProjectEntry from "../components/projects/ProjectEntry.svelte";
-	import ImageModal from "../components/utils/ImageModal.svelte";
+	import ProjectEntry from "../components/index/projects/ProjectEntry.svelte";
+	import ImageModal from "../components/index/utils/ImageModal.svelte";
 	
 	loadProjects();
 

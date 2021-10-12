@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { featured } from "../LinkProj";
+	import { featured } from "../../LinkProj";
     import ProjectOverview from "./projects/ProjectOverview.svelte";
 </script>
 

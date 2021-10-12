@@ -3,9 +3,9 @@
     export let jumpTo = (id:string) => {}
 </script>
 <script lang="ts">
-    import { projects } from "../LinkProj";
+    import { projects } from "../../LinkProj";
     import ProjectOverview from "./projects/ProjectOverview.svelte";
-    import { startProjIdx } from "../Stores";
+    import { startProjIdx } from "../../Stores";
     import JumpList from "./utils/JumpList.svelte";
 
     interface ProjectEnt {
