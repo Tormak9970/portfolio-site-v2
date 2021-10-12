@@ -6,6 +6,7 @@
         status:string,
         difficulty:string,
         description:string,
+        isRelative?:boolean,
         content:any,
         link?:string,
         imgs:string[]

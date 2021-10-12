@@ -11,6 +11,7 @@
 	import Raw from '@editorjs/raw';
 	
 	import { showProject } from '../../../Stores';
+import { isActive } from '@roxi/routify';
 
     export let entryData:Project;
 
@@ -62,6 +63,10 @@
 	}
 
 	function goBack(): void { $showProject = false; }
+
+	function handleClick(e: Event): void {
+		// rel="noreferrer noopener" target="_blank"
+	}
 </script>
 
 <div class="projEntry">
@@ -72,7 +77,7 @@
 		<h2 class="proj-header">{entryData.name}</h2>
 		<div class="cit-cont {entryData.link != "" ? "" : " hidden"}">
 			<div class="cit-label">Check it out:</div>
-			<a class="proj-link" href="{entryData.link}" rel="noreferrer noopener" target="_blank">
+			<a class="proj-link" href="{entryData.link}" on:click|stopPropagation="{handleClick}">
 				<i class="fas fa-external-link-alt"></i>
 			</a>
 		</div>
