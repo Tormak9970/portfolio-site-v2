@@ -1,6 +1,6 @@
 <script lang="ts" type="module">
-	import OrgsEntry from "./organizations/OrgsEntry.svelte";
-    import JumpList from "./utils/JumpList.svelte";
+	import OrgsEntry from "./_orgsEntry.svelte";
+    import JumpList from "../_utils/JumpList.svelte";
 
     type OrgsPiece = {
         name:string,

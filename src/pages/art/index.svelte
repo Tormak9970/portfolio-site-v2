@@ -1,6 +1,6 @@
 <script lang="ts" type="module">
-	import ArtEntry from './art/ArtEntry.svelte';
-    import JumpList from "./utils/JumpList.svelte";
+	import ArtEntry from './_artEntry.svelte';
+    import JumpList from "../_utils/JumpList.svelte";
 
     interface ArtPiece {
         name:string,

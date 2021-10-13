@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { projectDisplay, showProject } from "../../../Stores";
+    import { projectDisplay, showProject } from "../../stores";
 
     export let entryData:Project;
     export let hidden:boolean;

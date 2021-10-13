@@ -10,7 +10,7 @@
 	import Embed from '@editorjs/embed';
 	import Raw from '@editorjs/raw';
 	
-	import { showProject } from '../../../Stores';
+	import { showProject } from '../../stores';
 	import { afterPageLoad, isChangingPage, url } from '@roxi/routify';
 
     export let entryData:Project;
@@ -21,7 +21,7 @@
 	let editor:EditorJs;
 
 	$afterPageLoad(() => {
-		editor = new EditorJs({
+		editor = editor||new EditorJs({
 			readOnly: true,
 			holder : 'entrContent',
 			tools: {

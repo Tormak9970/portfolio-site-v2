@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { featured } from "../../LinkProj";
-    import ProjectOverview from "./projects/ProjectOverview.svelte";
+	import { featured } from "../linkProj";
+    import ProjectOverview from "./projects/_projectOverview.svelte";
 </script>
 
 <div id="featured">

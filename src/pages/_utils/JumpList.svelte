@@ -1,5 +1,5 @@
 <script lang="ts">
-import { orientation } from "../../../Stores";
+import { orientation } from "../../stores";
 
 
 	export let len: number;
