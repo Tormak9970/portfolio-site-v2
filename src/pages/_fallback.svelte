@@ -3,7 +3,7 @@
 </script>
 
 <main>
-	
+	<div>Error 404: Invalid URL Adress</div>
 </main>
 
 <style lang="scss">

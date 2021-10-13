@@ -1,6 +1,6 @@
 import SquareObj from "./SquareObject";
-const canvas = <HTMLCanvasElement>document.getElementById("gameBoard");
-const ctx = canvas.getContext('2d');
+let canvas:HTMLCanvasElement;
+let ctx:CanvasRenderingContext2D;
 
 let squares = [];
 let isGameOver = false;
@@ -22,7 +22,40 @@ let baseDimensions = [];
 let baseStartCoordinates = [];
 let flagDimensions = [];
 let circleDimensions = 0;
-let header = document.getElementById("ms-header");
+let header:HTMLElement;
+
+function init() {
+  canvas = <HTMLCanvasElement>document.getElementById("gameBoard");
+  ctx = canvas.getContext('2d');
+  header = document.getElementById("ms-header");
+
+  canvas.addEventListener('click', function(e) {
+    let clickCoordinates = getCursorPosition(canvas, e);
+    squares.forEach(elem => {
+      if (inpoly(4, 
+        [elem.topLeftVertex[0], elem.topRightVertex[0], elem.bottomRightVertex[0], elem.bottomLeftVertex[0]], 
+        [elem.topLeftVertex[1], elem.topRightVertex[1], elem.bottomRightVertex[1], elem.bottomLeftVertex[1]], 
+        clickCoordinates[0], clickCoordinates[1])) {
+  
+        onSquareClick(elem);  
+      }
+    });
+  });
+  
+  canvas.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+    let clickCoordinates = getCursorPosition(canvas, e);
+    squares.forEach(elem => {
+      if (inpoly(4, 
+        [elem.topLeftVertex[0], elem.topRightVertex[0], elem.bottomRightVertex[0], elem.bottomLeftVertex[0]], 
+        [elem.topLeftVertex[1], elem.topRightVertex[1], elem.bottomRightVertex[1], elem.bottomLeftVertex[1]], 
+        clickCoordinates[0], clickCoordinates[1])) {
+  
+          onSquareRightClick(elem);  
+      }
+    })
+  });
+}
 
 async function createBoard() {
   let shuffledGameArray;
@@ -631,36 +664,4 @@ function mineColorGenerator() {
   return color[Math.floor(Math.random() * 8)];
 }
 
-canvas.addEventListener('click', function(e) {
-  let clickCoordinates = getCursorPosition(canvas, e);
-  squares.forEach(elem => {
-    if (inpoly(4, 
-      [elem.topLeftVertex[0], elem.topRightVertex[0], elem.bottomRightVertex[0], elem.bottomLeftVertex[0]], 
-      [elem.topLeftVertex[1], elem.topRightVertex[1], elem.bottomRightVertex[1], elem.bottomLeftVertex[1]], 
-      clickCoordinates[0], clickCoordinates[1])) {
-
-      onSquareClick(elem);  
-    }
-  });
-});
-
-canvas.addEventListener('contextmenu', function(e) {
-  e.preventDefault();
-  let clickCoordinates = getCursorPosition(canvas, e);
-  squares.forEach(elem => {
-    if (inpoly(4, 
-      [elem.topLeftVertex[0], elem.topRightVertex[0], elem.bottomRightVertex[0], elem.bottomLeftVertex[0]], 
-      [elem.topLeftVertex[1], elem.topRightVertex[1], elem.bottomRightVertex[1], elem.bottomLeftVertex[1]], 
-      clickCoordinates[0], clickCoordinates[1])) {
-
-        onSquareRightClick(elem);  
-    }
-  })
-});
-
-document.getElementById("difficulty-dropdown-menu").onclick = async () => {
-  console.log("ran func");
-  await createBoard();
-};
-
-export { createBoard }
+export { init, createBoard }
