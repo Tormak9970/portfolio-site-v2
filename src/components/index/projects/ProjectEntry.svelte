@@ -11,58 +11,62 @@
 	import Raw from '@editorjs/raw';
 	
 	import { showProject } from '../../../Stores';
-	import { url } from '@roxi/routify';
+	import { afterPageLoad, isChangingPage, url } from '@roxi/routify';
 
     export let entryData:Project;
 
 	let isRelative:boolean;
 	$: isRelative = false;
 
-	const editor = new EditorJs({
-		readOnly: true,
-		holder : 'entrContent',
-		tools: {
-			header: {
-				class: Header,
-				inlineToolbar : true
-			},
-			code: {
-				class: Code,
-				inlineToolbar : true
-			},
-			image: {
-				class: Image,
-				inlineToolbar : true
-			},
-			link: {
-				class: Link,
-				inlineToolbar : true
-			},
-			list: {
-				class: List,
-				inlineToolbar : true
-			},
-			delimiter: {
-				class: Delimiter,
-				inlineToolbar : true
-			},
-			paragraph: {
-				class: Paragraph,
-				inlineToolbar : true
-			},
-			embed: {
-				class: Embed,
-				inlineToolbar : true
-			},
-			raw: {
-				class: Raw,
-				inlineToolbar : true
-			},
-		}
+	let editor:EditorJs;
+
+	$afterPageLoad(() => {
+		editor = new EditorJs({
+			readOnly: true,
+			holder : 'entrContent',
+			tools: {
+				header: {
+					class: Header,
+					inlineToolbar : true
+				},
+				code: {
+					class: Code,
+					inlineToolbar : true
+				},
+				image: {
+					class: Image,
+					inlineToolbar : true
+				},
+				link: {
+					class: Link,
+					inlineToolbar : true
+				},
+				list: {
+					class: List,
+					inlineToolbar : true
+				},
+				delimiter: {
+					class: Delimiter,
+					inlineToolbar : true
+				},
+				paragraph: {
+					class: Paragraph,
+					inlineToolbar : true
+				},
+				embed: {
+					class: Embed,
+					inlineToolbar : true
+				},
+				raw: {
+					class: Raw,
+					inlineToolbar : true
+				},
+			}
+		});
 	});
 
 	$: if ($showProject) {
-		editor.render(entryData.content);
+		if (editor) { editor.isReady.then(() => { editor.render(entryData.content); }); }
 		isRelative = entryData.isRelative;
 	}
 

@@ -49,7 +49,6 @@
             </div>
         </div>
     </div>
-    <div id="entrContent" style="display: none;"></div>
 </main>
 
 <style lang="scss">
