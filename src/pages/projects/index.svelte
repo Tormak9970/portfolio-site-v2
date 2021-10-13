@@ -3,7 +3,7 @@
     export let jumpTo = (id:string) => {}
 </script>
 <script lang="ts">
-    import { projects } from "../../linkProj";
+    import { projects } from "../../linkConfig";
     import ProjectOverview from "./_projectOverview.svelte";
     import { startProjIdx } from "../../stores";
     import JumpList from "../_utils/JumpList.svelte";
@@ -135,8 +135,8 @@
 <svelte:window on:wheel|stopPropagation="{interceptScroll}" />
 
 <div id="projects">
-    {#each Array.from(projects).map(processEntries) as artEntr, idx}
-        <ProjectOverview entryData={artEntr} hidden={pieces[idx].hidden} scrollType={pieces[idx].scrollType} isLast={pieces[idx].isLast}/>
+    {#each Array.from(projects).map(processEntries) as projEntr, idx}
+        <ProjectOverview entryData={projEntr} hidden={pieces[idx].hidden} scrollType={pieces[idx].scrollType} isLast={pieces[idx].isLast}/>
     {/each}
     <JumpList len={projects.size} tooltips={jumpNames} handler={jumpToHandler} scrollIdx={scrollIdx}/>
 </div>

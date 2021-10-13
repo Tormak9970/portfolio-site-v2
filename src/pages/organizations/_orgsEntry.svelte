@@ -2,23 +2,10 @@
     import { currentRendered } from "../../stores";
     import { jumpTo } from "../projects/index.svelte";
 
-    export let entryData:ConfigPiece;
+    export let entryData:Organization;
     export let hidden:boolean;
     export let scrollType:string;
     export let isLast:boolean;
-
-    interface ConfigProj {
-        name:string,
-        link:string
-    }
-
-    interface ConfigPiece {
-        name:string,
-        path:string,
-		about:string,
-        description:string,
-		projects:ConfigProj[]
-    }
 
     function linkToProj(id:string) {
         $currentRendered = '4';

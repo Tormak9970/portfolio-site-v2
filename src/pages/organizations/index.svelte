@@ -1,31 +1,17 @@
 <script lang="ts" type="module">
 	import OrgsEntry from "./_orgsEntry.svelte";
     import JumpList from "../_utils/JumpList.svelte";
+    import { organizations } from "../../linkConfig";
 
-    type OrgsPiece = {
-        name:string,
-        path:string,
-        description:string,
+    type OrganizationsEnt = {
+        key:string,
+        data:Organization,
         hidden:boolean,
-        scrollType:string
+        scrollType:string,
+        isLast:boolean
     }
 
-	type ConfigProj = {
-		name:string,
-		link:string
-	}
-
-    type ConfigPiece = {
-        name:string,
-        path:string,
-		about:string,
-        description:string,
-		projects:ConfigProj[]
-    }
-
-    let orgsPromise = loadEntries();
-    function loadEntries(): Promise<ConfigPiece[]> { return fetch('./config.json').then(response => { return response.json(); }).then(json => { return json['organizations']; }); }
-    const pieces:OrgsPiece[] = [];
+    const pieces:OrganizationsEnt[] = [];
     const jumpNames:Map<number, string> = new Map();
 
     let scrollIdx:number = 0;
@@ -90,28 +76,26 @@
         interceptScrollFromIdx(curIdx < tarIdx, tarIdx);
     }
 
-    function processEntries(entr:ConfigPiece , i) {
+    function processEntries([key, entr]:[string, Organization], i:number) { 
         pieces.push({
-            ...entr,
-            "hidden": i != 0,
-            scrollType: i == 0 ? 'down-in' : 'up-out'
+            "key": key,
+            "data": entr, 
+            "hidden": i !== 0, 
+            "scrollType": i == 0 ? 'down-in' : 'up-out',
+            "isLast": i+1 == organizations.size
         });
         jumpNames.set(i, entr.name);
-        return entr;
+        return entr; 
     }
 </script>
 
 <svelte:window on:wheel|stopPropagation="{interceptScroll}" />
 
 <div id="orgs">
-    {#await orgsPromise}
-        <div class="loading-data">Loading Organization pieces...</div>
-    {:then orgData}
-        {#each orgData.map(processEntries) as orgEntr, idx}
-            <OrgsEntry entryData={orgEntr} hidden={pieces[idx].hidden} scrollType={pieces[idx].scrollType} isLast={idx+1 == orgData.length}/>
-        {/each}
-        <JumpList len={orgData.length} tooltips={jumpNames} handler={jumpToHandler} scrollIdx={scrollIdx}/>
-    {/await}
+    {#each Array.from(organizations).map(processEntries) as orgEntr, idx}
+        <OrgsEntry entryData={orgEntr} hidden={pieces[idx].hidden} scrollType={pieces[idx].scrollType} isLast={pieces[idx].isLast}/>
+    {/each}
+    <JumpList len={organizations.size} tooltips={jumpNames} handler={jumpToHandler} scrollIdx={scrollIdx}/>
 </div>
 
 <style lang="scss">
@@ -128,17 +112,6 @@
 
         position: relative;
 
-        animation-name: fade-in;
-        animation-fill-mode: both;
-        animation-direction: alternate;
-        animation-duration: 1.5s;
-
         overflow: hidden;
-    }
-
-
-    @keyframes fade-in {
-        0% { opacity: 0; }
-        100% { opacity: 1; }
     }
 </style>

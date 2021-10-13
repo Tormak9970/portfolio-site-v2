@@ -1272,8 +1272,8 @@
 		}
 	},
 	"featured": "slicers-gui",
-	"organizations": [
-		{
+	"organizations": {
+		"swtor-slicers": {
 			"name": "SWTOR Slicers",
 			"path": "./img/orgs/SwtorSlicers.png",
 			"about": "The SWTOR Slicers Collaboration is a group who enjoys taking Star Wars The Old Republic beyond the game. Whether this be through using models for fan films, or creating tools for the community (such as my <i>Character and Outfit Designer</i>), the community enjoys finding new and unique was to utilize the game.",
@@ -1293,7 +1293,7 @@
 				}
 			]
 		},
-		{
+		"torcommunity": {
 			"name": "TORCommunity.com",
 			"path": "./img/orgs/torc-icon-2016.png",
 			"about": "TORCommunity.com is a fan site for Star Wars The Old Republic. It was started in 2008, and has many neat features, such as guides, walkthroughs, tips, tools, and multiple databases. The sites goal is to provide great resources, and improve the experience players have while playing the game.",
@@ -1309,7 +1309,7 @@
 				}
 			]
 		}
-	],
+	},
 	"experience": {},
 	"art": [
 		{

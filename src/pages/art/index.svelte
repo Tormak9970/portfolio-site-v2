@@ -1,36 +1,32 @@
 <script lang="ts" type="module">
 	import ArtEntry from './_artEntry.svelte';
     import JumpList from "../_utils/JumpList.svelte";
+    import { art } from '../../linkConfig';
 
-    interface ArtPiece {
-        name:string,
-        path:string,
-        description:string,
+    interface ArtEnt {
+        key:string,
+        data:Art,
         hidden:boolean,
-        scrollType:string
+        scrollType:string,
+        isLast:boolean
     }
 
-    interface ConfigPiece {
-        name:string,
-        path:string,
-        description:string
-    }
-
-    let artPromise = loadEntries();
-
-    function loadEntries(): Promise<ConfigPiece[]> { return fetch('./config.json').then(response => { return response.json(); }).then(json => { return json['art']; }); }
     const jumpNames:Map<number, string> = new Map([[0, "Foreword"]]);
 
-    const pieces:ArtPiece[] = [
+    const pieces:ArtEnt[] = [
         {
-            "name": "Foreword",
-            "path": undefined,
-            "description": `I am by no means a professional artist, but I have always liked being creative and making different forms of art. 
-                I enjoy practicing art, and it is a good to take a break from development every now and again. 
-                Additionally, I find this practice invaluable when it comes to being a developer, 
-                as being able to impliment creativity into your work can really set you apart, and greatly improve whatever product you are designing.`,
+            "key": "forword",
+            "data": {
+                "name": "Foreword",
+                "path": undefined,
+                "description": `I am by no means a professional artist, but I have always liked being creative and making different forms of art. 
+                    I enjoy practicing art, and it is a good to take a break from development every now and again. 
+                    Additionally, I find this practice invaluable when it comes to being a developer, 
+                    as being able to impliment creativity into your work can really set you apart, and greatly improve whatever product you are designing.`
+            },
             "hidden": false,
-            "scrollType": 'down-in'
+            "scrollType": 'down-in',
+            "isLast": false
         }
     ];
 
@@ -96,26 +92,28 @@
         interceptScrollFromIdx(curIdx < tarIdx, tarIdx);
     }
 
-    function processEntries(entr:ConfigPiece , i) {
-        pieces.push({...entr, "hidden": true, scrollType: 'up-out'});
-        jumpNames.set(i+1, entr.name);
-        return entr;
+    function processEntries([key, entr]:[string, Art], i:number) { 
+        pieces.push({
+            "key": key,
+            "data": entr, 
+            "hidden": i+1 !== 0,
+            "scrollType": i+1 == 0 ? 'down-in' : 'up-out',
+            "isLast": i+1 == art.size
+        });
+        jumpNames.set(i, entr.name);
+        return entr; 
     }
 </script>
 
 <svelte:window on:wheel|stopPropagation="{interceptScroll}" />
 
 <div id="art">
-    <ArtEntry entryData={pieces[0]} hidden={pieces[0].hidden} scrollType={pieces[0].scrollType} isLast={false}/>
+    <ArtEntry entryData={pieces[0].data} hidden={pieces[0].hidden} scrollType={pieces[0].scrollType} isLast={false}/>
 
-    {#await artPromise}
-        <div class="loading-data">Loading art pieces...</div>
-    {:then artData} 
-        {#each artData.map(processEntries) as artEntr, idx}
-            <ArtEntry entryData={artEntr} hidden={pieces[idx+1].hidden} scrollType={pieces[idx+1].scrollType} isLast={idx+1 == artData.length}/>
-        {/each }
-        <JumpList len={artData.length+1} tooltips={jumpNames} handler={jumpToHandler} scrollIdx={scrollIdx}/>
-    {/await}
+    {#each Array.from(art).map(processEntries) as artEntr, idx}
+        <ArtEntry entryData={artEntr} hidden={pieces[idx+1].hidden} scrollType={pieces[idx+1].scrollType} isLast={pieces[idx+1].isLast}/>
+    {/each }
+    <JumpList len={art.size} tooltips={jumpNames} handler={jumpToHandler} scrollIdx={scrollIdx}/>
 </div>
 
 <style lang="scss">
@@ -132,17 +130,6 @@
 
         position: relative;
 
-        animation-name: fade-in;
-        animation-fill-mode: both;
-        animation-direction: alternate;
-        animation-duration: 1.5s;
-
         overflow: hidden;
-    }
-
-
-    @keyframes fade-in {
-        0% { opacity: 0; }
-        100% { opacity: 1; }
     }
 </style>

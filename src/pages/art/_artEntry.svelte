@@ -1,16 +1,10 @@
 <script lang="ts">
     import { imageModalData, showing } from "../../stores";
 
-    export let entryData:ConfigPiece;
+    export let entryData:Art;
     export let hidden:boolean;
     export let scrollType:string;
     export let isLast:boolean;
-
-    interface ConfigPiece {
-        name:string,
-        path:string,
-        description:string
-    }
 
     function showModal(e: MouseEvent) {
         $imageModalData = { "id": "artPreviewModal", "data": { "path": entryData.path, "name": entryData.name } };

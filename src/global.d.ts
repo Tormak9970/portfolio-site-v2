@@ -11,3 +11,22 @@
         link?:string,
         imgs:string[]
     }
+
+    interface Art {
+        name:string,
+        path:string,
+        description:string
+    }
+
+    interface Organization {
+        name:string,
+        path:string,
+		about:string,
+        description:string,
+		projects:OrganizationProj[]
+    }
+
+    interface OrganizationProj {
+        name:string,
+        link:string
+    }

@@ -15,7 +15,7 @@
     }
 </script>
 
-<main>
+<div id="minesweeperCont">
 	<div class="game-container{showGame ? '' : ' hidden'}">
         <div id="ms-header" class="header">
             <div id="difficulty-dropdown-menu" class="difficulty-dropdown-menu" style="width: min(22.222vw, 100px); height: min(8vw, 36px);">
@@ -56,7 +56,7 @@
             <button type="button" class="newGameButton" id="newGameOnWinButton">NEW GAME</button>
         </div>
     </div>
-</main>
+</div>
 
 <style lang="scss">
 	$grey-primary: #252525;
@@ -65,7 +65,7 @@
 	$bud-green: #82b74bff;
     $bud-green__hover: rgb(138, 194, 78);
 
-    main {
+    #minesweeperCont {
         width: 100%;
         height: 100%;
 
