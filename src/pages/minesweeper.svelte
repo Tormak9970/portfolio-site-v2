@@ -1,13 +1,13 @@
 <script lang="ts">
     import { onMount } from "svelte";
-    import { createBoard } from "../components/minesweeper/index";
+    // import { createBoard } from "../components/minesweeper/index";
     
     function selectionHandler(): void {
 
     }
 
     onMount(() => {
-        createBoard();
+        // createBoard();
     });
 </script>
 
@@ -49,6 +49,7 @@
             </div>
         </div>
     </div>
+    <div id="entrContent" style="display: none;"></div>
 </main>
 
 <style lang="scss">

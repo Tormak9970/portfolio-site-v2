@@ -11,9 +11,12 @@
 	import Raw from '@editorjs/raw';
 	
 	import { showProject } from '../../../Stores';
-import { isActive } from '@roxi/routify';
+	import { url } from '@roxi/routify';
 
     export let entryData:Project;
+
+	let isRelative:boolean;
+	$: isRelative = false;
 
 	const editor = new EditorJs({
 		readOnly: true,
@@ -60,13 +63,10 @@ import { isActive } from '@roxi/routify';
 
 	$: if ($showProject) {
 		editor.render(entryData.content);
+		isRelative = entryData.isRelative;
 	}
 
 	function goBack(): void { $showProject = false; }
-
-	function handleClick(e: Event): void {
-		// rel="noreferrer noopener" target="_blank"
-	}
 </script>
 
 <div class="projEntry">
@@ -77,9 +77,15 @@ import { isActive } from '@roxi/routify';
 		<h2 class="proj-header">{entryData.name}</h2>
 		<div class="cit-cont {entryData.link != "" ? "" : " hidden"}">
 			<div class="cit-label">Check it out:</div>
-			<a class="proj-link" href="{entryData.link}" on:click|stopPropagation="{handleClick}">
-				<i class="fas fa-external-link-alt"></i>
-			</a>
+			{#if isRelative}
+				<a class="proj-link" href="{$url(entryData.link)}">
+					<i class="fas fa-external-link-alt"></i>
+				</a>
+			{:else}
+				<a class="proj-link" href="{entryData.link}" rel="noreferrer noopener" target="_blank">
+					<i class="fas fa-external-link-alt"></i>
+				</a>
+			{/if}
 		</div>
 	</div>
     <div class="proj-layout-cont">

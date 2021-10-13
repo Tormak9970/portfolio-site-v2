@@ -179,6 +179,7 @@
 					"version": "2.22.2"
 				},
 				"link": "",
+				"isRelative": true,
 				"imgs": [
 					"",
 					""
@@ -270,6 +271,7 @@
 					"version": "2.22.2"
 				},
 				"link": "",
+				"isRelative": true,
 				"imgs": [
 					"",
 					""
@@ -449,6 +451,7 @@
 					"version": "2.22.2"
 				},
 				"link": "",
+				"isRelative": false,
 				"imgs": [
 					"./img/projs/Portfolio site hompage.png",
 					""
@@ -462,6 +465,7 @@
 				"description": "",
 				"content": {},
 				"link": "",
+				"isRelative": false,
 				"imgs": [
 					"",
 					""
@@ -825,6 +829,7 @@
 					"version": "2.22.2"
 				},
 				"link": "https://torcommunity.com/tools/character-designer",
+				"isRelative": false,
 				"imgs": [
 					"./img/projs/Release_one.png",
 					"./img/orgs/torc-icon-2016.png"
@@ -838,6 +843,7 @@
 				"description": "",
 				"content": {},
 				"link": "",
+				"isRelative": false,
 				"imgs": [
 					"",
 					""
@@ -853,6 +859,7 @@
 				"description": "",
 				"content": {},
 				"link": "https://github.com/SWTOR-Slicers/Slicers-GUI",
+				"isRelative": false,
 				"imgs": [
 					"./img/projs/Slicers GUI.png",
 					"./img/orgs/SwtorSlicers.png"
@@ -868,6 +875,7 @@
 				"description": "",
 				"content": {},
 				"link": "",
+				"isRelative": false,
 				"imgs": [
 					"",
 					""
@@ -1103,6 +1111,7 @@
 					"version": "2.22.2"
 				},
 				"link": "",
+				"isRelative": false,
 				"imgs": [
 					"./img/projs/Dashboard.png",
 					""
@@ -1254,6 +1263,7 @@
 					"version": "2.22.2"
 				},
 				"link": "",
+				"isRelative": false,
 				"imgs": [
 					"./img/projs/MemeDB homepage.png",
 					""
