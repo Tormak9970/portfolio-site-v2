@@ -1,5 +1,8 @@
 <script lang="ts">
+import { afterPageLoad } from "@roxi/routify";
+
     import { init, createBoard } from "../components/minesweeper/index";
+    import { showProject } from "../stores";
     
     let showGame:boolean;
     $: showGame = false;
@@ -13,6 +16,10 @@
         init();
         await createBoard();
     }
+
+    $afterPageLoad(() => {
+        $showProject = false;
+    });
 </script>
 
 <div id="minesweeperCont">

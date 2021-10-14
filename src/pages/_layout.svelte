@@ -6,7 +6,7 @@
 	import { beforeUpdate } from 'svelte';
 	import ProjectEntry from "./projects/_projectEntry.svelte";
 	import ImageModal from "./_utils/ImageModal.svelte";
-	import { url } from "@roxi/routify";
+	import { isActive, url } from "@roxi/routify";
 
 	function removeAllIndicators() {
 		const intInds = document.querySelectorAll('.interaction-indicator');
@@ -54,16 +54,6 @@
 			}
 		}
 	}
-
-	beforeUpdate(() => {
-		// const elem = document.getElementById($currentRendered);
-		// const rendered = document.querySelector('.rendered');
-		// if (rendered) {
-		// 	rendered.classList.remove('rendered');
-		// 	removeAllIndicators();
-		// 	elem.children[1].classList.add('rendered');
-		// }
-	});
 </script>
 
 <main>
@@ -75,31 +65,31 @@
 			<div class="navigation">
 				<div id='1' class="nav-btn-cont" on:mouseenter="{handleNavHover1}" on:mouseleave="{handleNavHover2}" on:click="{forwardClick}">
 					<a href="{$url('./index')}" class="nav-btn" on:click="{handleNavClick}">About</a>
-					<div class="rendered interaction-indicator"></div>
+					<div class="{$isActive('./index') ? 'rendered ' : ''}interaction-indicator"></div>
 				</div>
 				<div id='2' class="nav-btn-cont" on:mouseenter="{handleNavHover1}" on:mouseleave="{handleNavHover2}" on:click="{forwardClick}">
 					<a href="{$url('./experience')}" class="nav-btn" on:click="{handleNavClick}">Experience</a>
-					<div class="interaction-indicator"></div>
+					<div class="{$isActive('./experience') ? 'rendered ' : ''}interaction-indicator"></div>
 				</div>
 				<div id='3' class="nav-btn-cont" on:mouseenter="{handleNavHover1}" on:mouseleave="{handleNavHover2}" on:click="{forwardClick}">
 					<a href="{$url('./featured')}" class="nav-btn" on:click="{handleNavClick}">Featured</a>
-					<div class="interaction-indicator"></div>
+					<div class="{$isActive('./featured') ? 'rendered ' : ''}interaction-indicator"></div>
 				</div>
 				<div id='4' class="nav-btn-cont" on:mouseenter="{handleNavHover1}" on:mouseleave="{handleNavHover2}" on:click="{forwardClick}">
 					<a href="{$url('./projects')}" class="nav-btn" on:click="{handleNavClick}">Projects</a>
-					<div class="interaction-indicator"></div>
+					<div class="{$isActive('./projects') ? 'rendered ' : ''}interaction-indicator"></div>
 				</div>
 				<div id='5' class="nav-btn-cont" on:mouseenter="{handleNavHover1}" on:mouseleave="{handleNavHover2}" on:click="{forwardClick}">
 					<a href="{$url('./organizations')}" class="nav-btn" on:click="{handleNavClick}">Organizations</a>
-					<div class="interaction-indicator"></div>
+					<div class="{$isActive('./organizations') ? 'rendered ' : ''}interaction-indicator"></div>
 				</div>
 				<div id='6' class="nav-btn-cont" on:mouseenter="{handleNavHover1}" on:mouseleave="{handleNavHover2}" on:click="{forwardClick}">
 					<a href="{$url('./art')}" class="nav-btn" on:click="{handleNavClick}">Art Gallery</a>
-					<div class="interaction-indicator"></div>
+					<div class="{$isActive('./art') ? 'rendered ' : ''}interaction-indicator"></div>
 				</div>
 				<div id='7' class="nav-btn-cont" on:mouseenter="{handleNavHover1}" on:mouseleave="{handleNavHover2}" on:click="{forwardClick}">
 					<a href="{$url('./contact')}" class="nav-btn" on:click="{handleNavClick}">Contact</a>
-					<div class="interaction-indicator"></div>
+					<div class="{$isActive('./contact') ? 'rendered ' : ''}interaction-indicator"></div>
 				</div>
 			</div>
 		</div>
