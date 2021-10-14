@@ -1,9 +1,9 @@
-import { Writable, writable } from "svelte/store";
+import { writable } from "svelte/store";
 
 export const showing = writable(false);
 export const startProjIdx = writable(0);
 export const currentRendered = writable('1');
-export const projectDisplay: Writable<Project> = writable({
+export const projectDisplay = writable({
     "name":"",
     "time":"",
     "status":"",
@@ -16,7 +16,7 @@ export const projectDisplay: Writable<Project> = writable({
         "",
         ""
     ]
-});
+} as Project);
 export const showProject = writable(false);
 export const imageModalData = writable({
     "id": "artPreviewModal",

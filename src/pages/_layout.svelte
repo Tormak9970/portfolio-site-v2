@@ -7,8 +7,6 @@
 	import ProjectEntry from "./projects/_projectEntry.svelte";
 	import ImageModal from "./_utils/ImageModal.svelte";
 	import { url } from "@roxi/routify";
-	
-	loadConfig();
 
 	function removeAllIndicators() {
 		const intInds = document.querySelectorAll('.interaction-indicator');
@@ -69,49 +67,52 @@
 </script>
 
 <main>
-	<div class="header">
-		<div class="home-container">
-			<img src="img/logo.svg" alt="logo" height="30" width="30">
+	{#await loadConfig() then _}
+		<div class="header">
+			<div class="home-container">
+				<img src="img/logo.svg" alt="logo" height="30" width="30">
+			</div>
+			<div class="navigation">
+				<div id='1' class="nav-btn-cont" on:mouseenter="{handleNavHover1}" on:mouseleave="{handleNavHover2}" on:click="{forwardClick}">
+					<a href="{$url('./index')}" class="nav-btn" on:click="{handleNavClick}">About</a>
+					<div class="rendered interaction-indicator"></div>
+				</div>
+				<div id='2' class="nav-btn-cont" on:mouseenter="{handleNavHover1}" on:mouseleave="{handleNavHover2}" on:click="{forwardClick}">
+					<a href="{$url('./experience')}" class="nav-btn" on:click="{handleNavClick}">Experience</a>
+					<div class="interaction-indicator"></div>
+				</div>
+				<div id='3' class="nav-btn-cont" on:mouseenter="{handleNavHover1}" on:mouseleave="{handleNavHover2}" on:click="{forwardClick}">
+					<a href="{$url('./featured')}" class="nav-btn" on:click="{handleNavClick}">Featured</a>
+					<div class="interaction-indicator"></div>
+				</div>
+				<div id='4' class="nav-btn-cont" on:mouseenter="{handleNavHover1}" on:mouseleave="{handleNavHover2}" on:click="{forwardClick}">
+					<a href="{$url('./projects')}" class="nav-btn" on:click="{handleNavClick}">Projects</a>
+					<div class="interaction-indicator"></div>
+				</div>
+				<div id='5' class="nav-btn-cont" on:mouseenter="{handleNavHover1}" on:mouseleave="{handleNavHover2}" on:click="{forwardClick}">
+					<a href="{$url('./organizations')}" class="nav-btn" on:click="{handleNavClick}">Organizations</a>
+					<div class="interaction-indicator"></div>
+				</div>
+				<div id='6' class="nav-btn-cont" on:mouseenter="{handleNavHover1}" on:mouseleave="{handleNavHover2}" on:click="{forwardClick}">
+					<a href="{$url('./art')}" class="nav-btn" on:click="{handleNavClick}">Art Gallery</a>
+					<div class="interaction-indicator"></div>
+				</div>
+				<div id='7' class="nav-btn-cont" on:mouseenter="{handleNavHover1}" on:mouseleave="{handleNavHover2}" on:click="{forwardClick}">
+					<a href="{$url('./contact')}" class="nav-btn" on:click="{handleNavClick}">Contact</a>
+					<div class="interaction-indicator"></div>
+				</div>
+			</div>
 		</div>
-		<div class="navigation">
-			<div id='1' class="nav-btn-cont" on:mouseenter="{handleNavHover1}" on:mouseleave="{handleNavHover2}" on:click="{forwardClick}">
-				<a href="{$url('./index')}" class="nav-btn" on:click="{handleNavClick}">About</a>
-				<div class="rendered interaction-indicator"></div>
-			</div>
-			<div id='2' class="nav-btn-cont" on:mouseenter="{handleNavHover1}" on:mouseleave="{handleNavHover2}" on:click="{forwardClick}">
-				<a href="{$url('./experience')}" class="nav-btn" on:click="{handleNavClick}">Experience</a>
-				<div class="interaction-indicator"></div>
-			</div>
-			<div id='3' class="nav-btn-cont" on:mouseenter="{handleNavHover1}" on:mouseleave="{handleNavHover2}" on:click="{forwardClick}">
-				<a href="{$url('./featured')}" class="nav-btn" on:click="{handleNavClick}">Featured</a>
-				<div class="interaction-indicator"></div>
-			</div>
-			<div id='4' class="nav-btn-cont" on:mouseenter="{handleNavHover1}" on:mouseleave="{handleNavHover2}" on:click="{forwardClick}">
-				<a href="{$url('./projects')}" class="nav-btn" on:click="{handleNavClick}">Projects</a>
-				<div class="interaction-indicator"></div>
-			</div>
-			<div id='5' class="nav-btn-cont" on:mouseenter="{handleNavHover1}" on:mouseleave="{handleNavHover2}" on:click="{forwardClick}">
-				<a href="{$url('./organizations')}" class="nav-btn" on:click="{handleNavClick}">Organizations</a>
-				<div class="interaction-indicator"></div>
-			</div>
-			<div id='6' class="nav-btn-cont" on:mouseenter="{handleNavHover1}" on:mouseleave="{handleNavHover2}" on:click="{forwardClick}">
-				<a href="{$url('./art')}" class="nav-btn" on:click="{handleNavClick}">Art Gallery</a>
-				<div class="interaction-indicator"></div>
-			</div>
-			<div id='7' class="nav-btn-cont" on:mouseenter="{handleNavHover1}" on:mouseleave="{handleNavHover2}" on:click="{forwardClick}">
-				<a href="{$url('./contact')}" class="nav-btn" on:click="{handleNavClick}">Contact</a>
-				<div class="interaction-indicator"></div>
+		<div class="content-body">
+			<Socials />
+			<slot />
+			<div class="project-container{$showProject ? '' : ' hidden'}">
+				<ProjectEntry entryData={$projectDisplay}/>
 			</div>
 		</div>
-	</div>
-	<div class="content-body">
-		<Socials />
-		<slot />
-		<div class="project-container{$showProject ? '' : ' hidden'}">
-			<ProjectEntry entryData={$projectDisplay}/>
-		</div>
-	</div>
-	<ImageModal config={$imageModalData} />
+		<ImageModal config={$imageModalData} />
+    {/await}
+	
 </main>
 
 <style lang="scss">
