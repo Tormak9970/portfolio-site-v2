@@ -1,5 +1,5 @@
 <script lang="ts">
-import { afterPageLoad } from "@roxi/routify";
+    import { afterPageLoad, beforeUrlChange } from "@roxi/routify";
 
     import { init, createBoard } from "../components/minesweeper/index";
     import { showProject } from "../stores";
@@ -20,6 +20,9 @@ import { afterPageLoad } from "@roxi/routify";
     $afterPageLoad(() => {
         $showProject = false;
     });
+    $beforeUrlChange(() => {
+        $showProject = true;
+    })
 </script>
 
 <div id="minesweeperCont">

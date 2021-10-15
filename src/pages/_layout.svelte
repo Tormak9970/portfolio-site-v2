@@ -77,7 +77,7 @@
 				</div>
 				<div id='4' class="nav-btn-cont" on:mouseenter="{handleNavHover1}" on:mouseleave="{handleNavHover2}" on:click="{forwardClick}">
 					<a href="{$url('./projects')}" class="nav-btn" on:click="{handleNavClick}">Projects</a>
-					<div class="{$isActive('./projects') ? 'rendered ' : ''}interaction-indicator"></div>
+					<div class="{$isActive('./projects') || $isActive('./minesweeper') || $isActive('./pong') || $isActive('./tetris') ? 'rendered ' : ''}interaction-indicator"></div>
 				</div>
 				<div id='5' class="nav-btn-cont" on:mouseenter="{handleNavHover1}" on:mouseleave="{handleNavHover2}" on:click="{forwardClick}">
 					<a href="{$url('./organizations')}" class="nav-btn" on:click="{handleNavClick}">Organizations</a>
