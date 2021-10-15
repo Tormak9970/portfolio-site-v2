@@ -2,7 +2,7 @@
     import { afterPageLoad, beforeUrlChange } from "@roxi/routify";
 
     import { init, createBoard } from "../components/minesweeper/index";
-    import { showProject } from "../stores";
+    import { showProject } from "../Stores";
     
     let showGame:boolean;
     $: showGame = false;

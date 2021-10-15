@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { imageModalData, showing } from "../../stores";
+    import { imageModalData, showing } from "../../Stores";
 
     export let entryData:Art;
     export let hidden:boolean;

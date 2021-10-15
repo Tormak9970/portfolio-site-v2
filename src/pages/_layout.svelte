@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { startProjIdx, projectDisplay, showProject, imageModalData } from "../stores";
+	import { startProjIdx, projectDisplay, showProject, imageModalData } from "../Stores";
 	import Socials from "./_utils/Socials.svelte";
 	import { loadConfig } from "../linkConfig";
 

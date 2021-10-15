@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { showing } from "../../stores";
+    import { showing } from "../../Stores";
 
     interface ConfigPiece {
         name:string,

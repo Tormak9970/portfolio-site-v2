@@ -5,7 +5,7 @@
 <script lang="ts">
     import { projects } from "../../linkConfig";
     import ProjectOverview from "./_projectOverview.svelte";
-    import { startProjIdx } from "../../stores";
+    import { startProjIdx } from "../../Stores";
     import JumpList from "../_utils/JumpList.svelte";
 
     interface ProjectEnt {

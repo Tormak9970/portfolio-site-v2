@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { currentRendered } from "../../stores";
+    import { currentRendered } from "../../Stores";
     import { jumpTo } from "../projects/index.svelte";
 
     export let entryData:Organization;

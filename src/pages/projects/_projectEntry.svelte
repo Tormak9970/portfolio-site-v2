@@ -10,7 +10,7 @@
 	import Embed from '@editorjs/embed';
 	import Raw from '@editorjs/raw';
 	
-	import { showProject } from '../../stores';
+	import { showProject } from '../../Stores';
 	import { afterPageLoad, isChangingPage, url } from '@roxi/routify';
 
     export let entryData:Project;
