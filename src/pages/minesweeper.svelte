@@ -3,6 +3,10 @@
 
     import { init, createBoard } from "../components/minesweeper/index";
     import { showProject } from "../Stores";
+    import Dropdown from "./_utils/dropdown.svelte";
+
+    let difficulty:string;
+    $: difficulty = "Easy";
     
     let showGame:boolean;
     $: showGame = false;
@@ -13,7 +17,7 @@
 
     async function start() {
         showGame = true;
-        init();
+        init(difficulty);
         await createBoard();
     }
 
@@ -22,19 +26,26 @@
     });
     $beforeUrlChange(() => {
         $showProject = true;
-    })
+    });
+
+    function callback(e:Event) {
+        const elem = <HTMLElement>e.currentTarget;
+        difficulty = elem.innerHTML;
+    }
 </script>
 
 <div id="minesweeperCont">
 	<div class="game-container{showGame ? '' : ' hidden'}">
         <div id="ms-header" class="header">
-            <div id="difficulty-dropdown-menu" class="difficulty-dropdown-menu" style="width: min(22.222vw, 100px); height: min(8vw, 36px);">
-                <select id="difficultySelector">
-                    <option value="default">Easy</option>
-                    <option value="easy">Easy</option>
-                    <option value="medium">Medium</option>
-                    <option value="hard">Hard</option>
-                </select>
+            <div class="diff-menu" style="width: min(22.222vw, 100px); height: min(8vw, 36px);">
+                <Dropdown config={{
+                    "default": "Easy",
+                    "values": [
+                        "Easy",
+                        "Medium",
+                        "Hard"
+                    ]
+                }} clickCallback={callback} />
             </div>
             <div class="flags-left">
                 <img src="./img/projs/flag.png" alt="flags" class="flags-left__img">
@@ -82,9 +93,11 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-start;
 
         .game-container {
+            margin-top: 10%;
+
             .header {
                 height: 60px;
                 background-color: $bud-green;
@@ -93,6 +106,16 @@
                 flex-direction: row;
                 align-items: center;
                 justify-content: flex-start;
+
+                .diff-menu {
+                    width: 100%;
+                    height: 100%;
+
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                }
 
                 .flags-left {
                     width: 50%;
@@ -106,12 +129,18 @@
                     height: 93.33%;
                 }
             }
-            .canvas-container {
-                position: relative;
-            }
+            .canvas-container { position: relative; }
         }
 
         .start-cont {
+            width: 100%;
+            height: 100%;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
             .btn {
                 height: 30px;
                 width: 100px;
@@ -130,8 +159,6 @@
             }
         }
 
-        .hidden {
-            display: none;
-        }
+        .hidden { display: none; }
     }
 </style>

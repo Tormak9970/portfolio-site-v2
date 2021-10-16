@@ -1,6 +1,10 @@
 import SquareObj from "./SquareObject";
+
+let header:HTMLDivElement;
 let canvas:HTMLCanvasElement;
 let ctx:CanvasRenderingContext2D;
+
+let difficultyValue:string
 
 let squares = [];
 let isGameOver = false;
@@ -22,12 +26,12 @@ let baseDimensions = [];
 let baseStartCoordinates = [];
 let flagDimensions = [];
 let circleDimensions = 0;
-let header:HTMLElement;
 
-function init() {
+function init(difficultyBind:string) {
+  difficultyValue = difficultyBind;
   canvas = <HTMLCanvasElement>document.getElementById("gameBoard");
   ctx = canvas.getContext('2d');
-  header = document.getElementById("ms-header");
+  header = <HTMLDivElement>document.getElementById("ms-header");
 
   canvas.addEventListener('click', function(e) {
     let clickCoordinates = getCursorPosition(canvas, e);
@@ -64,8 +68,8 @@ async function createBoard() {
   let numBombs;
 
   await clearGameBoard();
-  let difficulty = <HTMLSelectElement>document.getElementById("difficultySelector");
-  let value = difficulty.options[difficulty.selectedIndex].value;
+  //TODO: this will need to be updated when I switch it to a component based selector
+  let value = difficultyValue.toLowerCase();
 
 
   if (value === "easy" || value === "default") {
@@ -126,6 +130,7 @@ async function createBoard() {
   numSquares = width * height;
   let returnedVal = await placeMines(numBombs, width*height);
   shuffledGameArray = returnedVal[0];
+
   let squareDimensions = canvas.width / width;
   for (let i = 0; i < width*height; i++) {
     let row = Math.floor(i / width) + 1;
@@ -154,12 +159,14 @@ async function createBoard() {
     squares.push(square);
   }
   assignNumbers();
+
   canvas.className = "game-board-" + difficultyString;
+
   let headerWidth = canvas.width;
   let vw = 60 / headerWidth * 100;
-  header.style.maxWidth = `${headerWidth}px;`;
-  header.style.maxHeight = `min(${vw}vw, 60px);`;
-  header.parentElement.style.gridTemplateRows = `min(${vw}vw, 60px) 1fr;`;
+  header.style.width = `${headerWidth}px`;
+  header.style.height = `min(${vw}vw, 60px)`;
+  header.parentElement.style.gridTemplateRows = `min(${vw}vw, 60px) 1fr`;
 
   document.getElementById("flagsLeft").innerHTML = `${flags}`;
   document.getElementById("looseModal").style.width = `${canvas.width}px`;
