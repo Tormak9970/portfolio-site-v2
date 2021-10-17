@@ -16,12 +16,8 @@
 
     async function start() { showGame = true; init(setWin, setLoss); await createBoard(difficulty); }
 
-    const setWin = (stat:boolean) => {
-        winModal.show(stat);
-    };
-    const setLoss = (stat:boolean) => {
-        lossModal.show(stat);
-    };
+    const setWin = (stat:boolean) => { winModal.show(stat); };
+    const setLoss = (stat:boolean) => { lossModal.show(stat); };
 
     $afterPageLoad(() => { $showProject = false; });
     $beforeUrlChange(() => { $showProject = true; });

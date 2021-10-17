@@ -442,7 +442,6 @@ function getCursorPosition(canvas, event) {
   const rect = canvas.getBoundingClientRect()
   const x = event.clientX - rect.left;
   const y = event.clientY - rect.top;
-  console.log("x: " + x + " y: " + y);
   return [x, y];
 }
 
@@ -479,7 +478,7 @@ function onSquareClick(square) {
       ctx.fillStyle = square.tanColor;
       ctx.fillRect(square.topLeftVertex[0], square.topLeftVertex[1], squareDimensions, squareDimensions);
       
-      ctx.font = fontSize + " 'Baloo Tamma 2'";
+      ctx.font = `normal ${fontSize} "Baloo Tamma 2"`;
       ctx.fillStyle = getNumColor(parseInt(total));
       ctx.textAlign = "center";
       ctx.textBaseline = 'middle';
@@ -496,7 +495,7 @@ function onSquareClick(square) {
 
 function onSquareRightClick(square) {
   if (isGameOver) return;
-  if (!(square.squareType === 'checked') && (flags > 0)) {
+  if (!(square.isChecked) && (flags > 0)) {
     if (!square.isFlagged) {
       square.isFlagged = true;
       flagAnimationDone = false;
@@ -606,15 +605,19 @@ async function assignNumbers() {
     const isLeftEdge = i % width === 0;
     const isRightEdge = i % width === width - 1;
 
+    if (i == 68) {
+      console.log("test");
+    }
+
     if (squares[i].squareType === 'valid') {
-      if (i > 0 && !isLeftEdge && squares[i - 1].squareType === 'mine') total++;
-      if (i > width - 1 && !isRightEdge && squares[i + 1 - width].squareType === 'mine') total++;
-      if (i > width && squares[i - width].squareType === 'mine') total++;
-      if (i > width + 1 && !isLeftEdge && squares[i - 1 - width].squareType === 'mine') total++;
-      if (i < numSquares - 1 && !isRightEdge && squares[i + 1].squareType === 'mine') total++;
-      if (i < numSquares - width && !isLeftEdge && squares[i - 1 + width].squareType === 'mine') total++;
-      if (i < numSquares - width - 2 && !isRightEdge && squares[i + 1 + width].squareType === 'mine') total++;
-      if (i < numSquares - width - 1 && squares[i + width].squareType === 'mine') total++;
+      if (i > width + 1 && !isLeftEdge && squares[i - 1 - width].squareType === 'mine') total++;           // left top
+      if (i > width && squares[i - width].squareType === 'mine') total++;                                  // center top
+      if (i > width - 1 && !isRightEdge && squares[i + 1 - width].squareType === 'mine') total++;          // right top
+      if (i > 0 && !isLeftEdge && squares[i - 1].squareType === 'mine') total++;                           // left middle
+      if (i < numSquares - 1 && !isRightEdge && squares[i + 1].squareType === 'mine') total++;             // right middle
+      if (i < numSquares - width && !isLeftEdge && squares[i - 1 + width].squareType === 'mine') total++;  // left bottom
+      if (i < numSquares - width && squares[i + width].squareType === 'mine') total++;                     // center bottom
+      if (i < numSquares - width && !isRightEdge && squares[i + 1 + width].squareType === 'mine') total++; // right bottom
       squares[i].total = total;
     }
   }
