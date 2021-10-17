@@ -89,7 +89,7 @@
 				"link": "./minesweeper",
 				"isRelative": true,
 				"imgs": [
-					"",
+					"./img/projs/Minesweeper.png",
 					""
 				]
 			},
