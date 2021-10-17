@@ -27,8 +27,7 @@ let baseStartCoordinates = [];
 let flagDimensions = [];
 let circleDimensions = 0;
 
-function init(difficultyBind:string) {
-  difficultyValue = difficultyBind;
+function init() {
   canvas = <HTMLCanvasElement>document.getElementById("gameBoard");
   ctx = canvas.getContext('2d');
   header = <HTMLDivElement>document.getElementById("ms-header");
@@ -61,18 +60,17 @@ function init(difficultyBind:string) {
   });
 }
 
-async function createBoard() {
+async function createBoard(val:string) {
+  difficultyValue = val.toLowerCase();
   let shuffledGameArray;
   let difficultyString;
   let height;
   let numBombs;
 
   await clearGameBoard();
-  //TODO: this will need to be updated when I switch it to a component based selector
-  let value = difficultyValue.toLowerCase();
 
 
-  if (value === "easy" || value === "default") {
+  if (difficultyValue === "easy" || difficultyValue === "default") {
     difficultyString = "easy";
     width = 10;
     height = 8;
@@ -89,7 +87,7 @@ async function createBoard() {
     flagDimensions = [9, 3.9, 37, 16, 28.1, 13.9];
     flagMaxY = 6;
     circleDimensions = 11;
-  } else if (value === "medium") {
+  } else if (difficultyValue === "medium") {
     difficultyString = "medium";
     width = 18;
     height = 14;
@@ -106,7 +104,7 @@ async function createBoard() {
     flagDimensions = [7, 3.9, 25, 12, 16.1, 7.9];
     flagMaxY = 6;
     circleDimensions = 9;
-  } else if (value === "hard") {
+  } else if (difficultyValue === "hard") {
     difficultyString = "difficult";
     height = 20;
     width = 24;
@@ -187,7 +185,7 @@ function openGameLostModal() {
 
     modal.style.display = "none";
     isGameOver = false;
-    createBoard();
+    createBoard(difficultyValue);
   }
 }
 
@@ -201,7 +199,7 @@ function openGameWonModal() {
 
     modal.style.display = "none";
     isGameOver = false;
-    createBoard();
+    createBoard(difficultyValue);
   }
 }
 

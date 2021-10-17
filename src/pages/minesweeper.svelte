@@ -17,8 +17,8 @@
 
     async function start() {
         showGame = true;
-        init(difficulty);
-        await createBoard();
+        init();
+        await createBoard(difficulty);
     }
 
     $afterPageLoad(() => {
@@ -28,16 +28,17 @@
         $showProject = true;
     });
 
-    function callback(e:Event) {
+    async function callback(e:Event) {
         const elem = <HTMLElement>e.currentTarget;
         difficulty = elem.innerHTML;
+        await createBoard(difficulty);
     }
 </script>
 
 <div id="minesweeperCont">
 	<div class="game-container{showGame ? '' : ' hidden'}">
         <div id="ms-header" class="header">
-            <div class="diff-menu" style="width: min(22.222vw, 100px); height: min(8vw, 36px);">
+            <div class="diff-menu" style="width: min(22.222vw, 100px); height: min(8vw, 36px); margin: 0px 10px;">
                 <Dropdown config={{
                     "default": "Easy",
                     "values": [
