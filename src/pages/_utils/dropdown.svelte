@@ -45,10 +45,10 @@
                 let y = elem.parentElement.getElementsByClassName("same-as-selected");
                 let yl = y.length;
                 for (let k = 0; k < yl; k++) {
-                    y[k].removeAttribute("class");
+                    y[k].classList.toggle('same-as-selected');
                 }
 
-                elem.setAttribute("class", "same-as-selected");
+                elem.classList.toggle('same-as-selected');
 
                 break;
             }
@@ -99,22 +99,22 @@
     .select-selected {
         background-color: $grey-secondary;
 
-        &:after {
+        &::after {
             position: absolute;
             content: "";
-            top: 7px;
-            right: 7px;
+            top: 38.88%;
+            right: 10%;
             width: 0;
             height: 0;
-            border: 5px solid transparent;
+            border: min(1.333vw, 6px) solid transparent;
             border-color: $font-color transparent transparent transparent;
         }
-        &.select-arrow-active:after {
-            border-color: transparent transparent $font-color transparent;
-            top: 7px;
-        }
     }
-    .select-items > div div,.select-selected {
+    :global(.select-arrow-active::after) {
+        border-color: transparent transparent $font-color transparent !important;
+        top: 7px !important;
+    }
+    .select-items > div, .select-selected {
         color: $font-color;
         padding: 2px 4px;
         border: 1px solid transparent;

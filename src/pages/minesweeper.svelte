@@ -4,35 +4,29 @@
     import { init, createBoard } from "../components/minesweeper/index";
     import { showProject } from "../Stores";
     import Dropdown from "./_utils/dropdown.svelte";
+    import Modal from "./_utils/Modal.svelte";
 
     let difficulty:string;
     $: difficulty = "Easy";
     
     let showGame:boolean;
     $: showGame = false;
-    let showWin:boolean;
-    $: showWin = false;
-    let showLoss:boolean;
-    $: showLoss = false;
+    let winModal:Modal;
+    let lossModal:Modal
 
-    async function start() {
-        showGame = true;
-        init();
-        await createBoard(difficulty);
-    }
+    async function start() { showGame = true; init(setWin, setLoss); await createBoard(difficulty); }
 
-    $afterPageLoad(() => {
-        $showProject = false;
-    });
-    $beforeUrlChange(() => {
-        $showProject = true;
-    });
+    const setWin = (stat:boolean) => {
+        winModal.show(stat);
+    };
+    const setLoss = (stat:boolean) => {
+        lossModal.show(stat);
+    };
 
-    async function callback(e:Event) {
-        const elem = <HTMLElement>e.currentTarget;
-        difficulty = elem.innerHTML;
-        await createBoard(difficulty);
-    }
+    $afterPageLoad(() => { $showProject = false; });
+    $beforeUrlChange(() => { $showProject = true; });
+
+    async function callback(e:Event) { const elem = <HTMLElement>e.currentTarget; difficulty = elem.innerHTML; await createBoard(difficulty); }
 </script>
 
 <div id="minesweeperCont">
@@ -54,28 +48,24 @@
             </div>
         </div>
         <div id="canvas-container" class="canvas-container">
-            <canvas id="gameBoard" style="position: absolute; width: min(100vw, 450px); height: min(80vw, 360px);"></canvas>
+            <canvas id="gameBoard" style="position: absolute;"></canvas>
         </div>
+
+        <Modal id="looseModal" bind:this={lossModal} showing='{false}'>
+            <h1 class="looseModalH1">Game Over</h1>
+            <h3>Time: </h3>
+            <button type="button" class="newGameButton" id="newGameOnLooseButton">NEW GAME</button>
+        </Modal>
+    
+        <Modal id="winModal" bind:this={winModal} showing='{false}'>
+            <h1 class="winModalH1">Game Over</h1>
+            <h3>Time: </h3>
+            <button type="button" class="newGameButton" id="newGameOnWinButton">NEW GAME</button>
+        </Modal>
     </div>
     <div class="start-cont{!showGame ? '' : ' hidden'}">
         <div class="btn" on:click|stopPropagation="{start}">
             <div>Click to Start</div>
-        </div>
-    </div>
-
-    <div id="looseModal" class="modal{showWin ? '' : ' hidden'}">
-        <div class="modal-content">
-            <h1 class="looseModalH1">Game Over</h1>
-            <h3>Time: </h3>
-            <button type="button" class="newGameButton" id="newGameOnLooseButton">NEW GAME</button>
-        </div>
-    </div>
-
-    <div id="winModal" class="modal{showLoss ? '' : ' hidden'}">
-        <div class="modal-content">
-            <h1 class="winModalH1">You Won!</h1>
-            <h3>Time: </h3>
-            <button type="button" class="newGameButton" id="newGameOnWinButton">NEW GAME</button>
         </div>
     </div>
 </div>
@@ -99,8 +89,10 @@
         .game-container {
             margin-top: 10%;
 
+            position: relative;
+
             .header {
-                height: 60px;
+                height: 40px;
                 background-color: $bud-green;
 
                 display: flex;
@@ -108,27 +100,9 @@
                 align-items: center;
                 justify-content: flex-start;
 
-                .diff-menu {
-                    width: 100%;
-                    height: 100%;
-
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    justify-content: center;
-                }
-
-                .flags-left {
-                    width: 50%;
-                    height: 50%;
-                    display: flex;
-                    flex-direction: row;
-                    align-items: center;
-                }
-
-                .flags-left__img {
-                    height: 93.33%;
-                }
+                .diff-menu { width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+                .flags-left { width: 50%; height: 50%; display: flex; flex-direction: row; align-items: center; }
+                .flags-left__img { height: 93.33%; }
             }
             .canvas-container { position: relative; }
         }

@@ -1,23 +1,15 @@
 <script lang="ts">
-
-    type Dims = {
-        height:number,
-        width:number
-    }
-
-    interface Config {
-        id:string,
-        styles:string,
-        dimensions:Dims
-    }
-
-	export let config:Config;
+    export let id:string;
     export let showing:boolean;
+
+    export function show(stat:boolean) {
+        showing = stat;
+    }
 </script>
 
-<div id="{config.id}" class="modal-container {showing ? "" : " hidden"}">
-    <div class="modal" style="{config.styles}">
-        <slot name="content">
+<div id="{id}" class="modal-container {showing ? "" : " hidden"}">
+    <div class="modal">
+        <slot>
 
         </slot>
     </div>
@@ -30,10 +22,12 @@
     $bud-green__hover: rgb(138, 194, 78);
 
     .modal-container {
+        z-index: 100;
         width: 100%;
         height: 100%;
 
         position: absolute;
+        top: 0;
 
         display: flex;
         flex-direction: column;
@@ -45,8 +39,6 @@
         }
     }
 
-    .hidden {
-
-    }
+    .hidden { display: none; }
 
 </style>

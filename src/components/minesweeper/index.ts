@@ -27,7 +27,12 @@ let baseStartCoordinates = [];
 let flagDimensions = [];
 let circleDimensions = 0;
 
-function init() {
+let showWin:Function;
+let showLoss:Function;
+
+function init(winFunc:Function, lossFunc:Function) {
+  showWin = winFunc;
+  showLoss = lossFunc;
   canvas = <HTMLCanvasElement>document.getElementById("gameBoard");
   ctx = canvas.getContext('2d');
   header = <HTMLDivElement>document.getElementById("ms-header");
@@ -161,43 +166,41 @@ async function createBoard(val:string) {
   canvas.className = "game-board-" + difficultyString;
 
   let headerWidth = canvas.width;
-  let vw = 60 / headerWidth * 100;
+  let vw = 40 / headerWidth * 100;
   header.style.width = `${headerWidth}px`;
-  header.style.height = `min(${vw}vw, 60px)`;
-  header.parentElement.style.gridTemplateRows = `min(${vw}vw, 60px) 1fr`;
+  header.style.height = `min(${vw}vw, 40px)`;
+  header.parentElement.style.gridTemplateRows = `min(${vw}vw, 40px) 1fr`;
 
   document.getElementById("flagsLeft").innerHTML = `${flags}`;
   document.getElementById("looseModal").style.width = `${canvas.width}px`;
-  document.getElementById("looseModal").style.height = `${canvas.height + 60}px`;
+  document.getElementById("looseModal").style.height = `${canvas.height + 40}px`;
   document.getElementById("winModal").style.width = `${canvas.width}px`;
-  document.getElementById("winModal").style.height = `${canvas.height + 60}px`;
+  document.getElementById("winModal").style.height = `${canvas.height + 40}px`;
 }
 
 
 //working on currently
 function openGameLostModal() {
-  let modal = document.getElementById("looseModal");
+  showLoss(true);
   let newGameBtn = document.getElementById("newGameOnLooseButton");
-  modal.style.display = "block";
 
   newGameBtn.onclick = function(e) {
     e.preventDefault();
 
-    modal.style.display = "none";
+    showLoss(false);
     isGameOver = false;
     createBoard(difficultyValue);
   }
 }
 
 function openGameWonModal() {
-  let modal = document.getElementById("winModal");
+  showWin(true);
   let newGameBtn = document.getElementById("newGameOnWinButton");
-  modal.style.display = "block";
 
   newGameBtn.onclick = function(e) {
     e.preventDefault();
 
-    modal.style.display = "none";
+    showWin(false);
     isGameOver = false;
     createBoard(difficultyValue);
   }
