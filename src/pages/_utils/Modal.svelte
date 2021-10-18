@@ -8,11 +8,9 @@
 </script>
 
 <div id="{id}" class="modal-container {showing ? "" : " hidden"}">
-    <div class="modal">
-        <slot>
+    <slot>
 
-        </slot>
-    </div>
+    </slot>
 </div>
 
 <style lang="scss">
@@ -34,9 +32,7 @@
         justify-content: center;
         align-items: center;
 
-        .modal {
-
-        }
+        background-color: rgba(0.0, 0.0, 0.0, 0.7);
     }
 
     .hidden { display: none; }

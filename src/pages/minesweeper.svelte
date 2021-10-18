@@ -51,15 +51,19 @@
         </div>
 
         <Modal id="looseModal" bind:this={lossModal} showing='{false}'>
-            <h1 class="looseModalH1">Game Over</h1>
-            <h3>Time: </h3>
-            <button type="button" class="newGameButton" id="newGameOnLooseButton">NEW GAME</button>
+            <div class="modal">
+                <h1 class="modalH1">Game Over</h1>
+                <h3>Time: </h3>
+                <div type="button" class="newGameButton" id="newGameOnLooseButton">NEW GAME</div>
+            </div>
         </Modal>
     
         <Modal id="winModal" bind:this={winModal} showing='{false}'>
-            <h1 class="winModalH1">Game Over</h1>
-            <h3>Time: </h3>
-            <button type="button" class="newGameButton" id="newGameOnWinButton">NEW GAME</button>
+            <div class="modal">
+                <h1 class="modalH1">Game Over</h1>
+                <h3>Time: </h3>
+                <div type="button" class="newGameButton" id="newGameOnWinButton">NEW GAME</div>
+            </div>
         </Modal>
     </div>
     <div class="start-cont{!showGame ? '' : ' hidden'}">
@@ -104,6 +108,41 @@
                 .flags-left__img { height: 93.33%; }
             }
             .canvas-container { position: relative; }
+
+            .modal {
+                width: auto;
+                height: auto;
+
+                background-color: $grey-secondary;
+
+                padding: 7px 14px;
+                border-radius: 4px;
+
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-start;
+
+                .modalH1 {
+                    margin: 5px 0px;
+                }
+                .newGameButton {
+                    height: 30px;
+                    width: 100px;
+
+                    cursor: pointer;
+                    background-color: $bud-green;
+
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+
+                    border-radius: 10px;
+
+                    &:hover { background-color: $bud-green__hover; }
+                }
+            }
         }
 
         .start-cont {

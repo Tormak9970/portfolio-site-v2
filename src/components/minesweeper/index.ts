@@ -26,6 +26,7 @@ let baseDimensions = [];
 let baseStartCoordinates = [];
 let flagDimensions = [];
 let circleDimensions = 0;
+let startTime:Date;
 
 let showWin:Function;
 let showLoss:Function;
@@ -66,6 +67,7 @@ function init(winFunc:Function, lossFunc:Function) {
 }
 
 async function createBoard(val:string) {
+  startTime = new Date();
   difficultyValue = val.toLowerCase();
   let shuffledGameArray;
   let difficultyString;
@@ -181,8 +183,17 @@ async function createBoard(val:string) {
 
 //working on currently
 function openGameLostModal() {
+  let endTime:Date = new Date();
+  let timeDiff = endTime.getTime() - startTime.getTime();
+  timeDiff /= 1000;
+  let hours:number = Math.floor(timeDiff/60/60);
+  let minutes:number = Math.floor(timeDiff/60 - hours*60);
+  let seconds:number = Math.floor(timeDiff - hours*60*60 - minutes*60);
+  
+  let time:string = `${hours < 10 ? '0'+hours : hours}:${minutes < 10 ? '0'+minutes : minutes}:${seconds < 10 ? '0'+seconds : seconds}`;
   showLoss(true);
   let newGameBtn = document.getElementById("newGameOnLooseButton");
+  newGameBtn.previousElementSibling.innerHTML = `Time: ${time}`;
 
   newGameBtn.onclick = function(e) {
     e.preventDefault();
@@ -194,8 +205,17 @@ function openGameLostModal() {
 }
 
 function openGameWonModal() {
+  let endTime:Date = new Date();
+  let timeDiff = endTime.getTime() - startTime.getTime();
+  timeDiff /= 1000;
+  let hours:number = Math.floor(timeDiff/60/60);
+  let minutes:number = Math.floor(timeDiff/60 - hours*60);
+  let seconds:number = Math.floor(timeDiff - hours*60*60 - minutes*60);
+  
+  let time:string = `${hours < 10 ? '0'+hours : hours}:${minutes < 10 ? '0'+minutes : minutes}:${seconds < 10 ? '0'+seconds : seconds}`;
   showWin(true);
   let newGameBtn = document.getElementById("newGameOnWinButton");
+  newGameBtn.previousElementSibling.innerHTML = `Time: ${time}`;
 
   newGameBtn.onclick = function(e) {
     e.preventDefault();
