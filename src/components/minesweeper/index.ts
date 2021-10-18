@@ -605,10 +605,6 @@ async function assignNumbers() {
     const isLeftEdge = i % width === 0;
     const isRightEdge = i % width === width - 1;
 
-    if (i == 68) {
-      console.log("test");
-    }
-
     if (squares[i].squareType === 'valid') {
       if (i > width + 1 && !isLeftEdge && squares[i - 1 - width].squareType === 'mine') total++;           // left top
       if (i > width && squares[i - width].squareType === 'mine') total++;                                  // center top

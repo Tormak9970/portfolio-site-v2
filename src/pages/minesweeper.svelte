@@ -2,7 +2,7 @@
     import { afterPageLoad, beforeUrlChange } from "@roxi/routify";
 
     import { init, createBoard } from "../components/minesweeper/index";
-    import { showProject } from "../Stores";
+    import { navCheck, showProject } from "../Stores";
     import Dropdown from "./_utils/dropdown.svelte";
     import Modal from "./_utils/Modal.svelte";
 
@@ -20,7 +20,10 @@
     const setLoss = (stat:boolean) => { lossModal.show(stat); };
 
     $afterPageLoad(() => { $showProject = false; });
-    $beforeUrlChange(() => { $showProject = true; });
+    $beforeUrlChange((event, route) => {
+        if (route.path.indexOf('/projects') > -1 && !$navCheck) $showProject = true;
+        return true;
+    });
 
     async function callback(e:Event) { const elem = <HTMLElement>e.currentTarget; difficulty = elem.innerHTML; await createBoard(difficulty); }
 </script>
@@ -40,7 +43,7 @@
             </div>
             <div class="flags-left">
                 <img src="./img/projs/flag.png" alt="flags" class="flags-left__img">
-                <h2 id="flagsLeft" style="color: white; font-size: min(4.314159292035399vw, 19.5px);">0</h2>
+                <h2 id="flagsLeft" style="color: white; font-size: min(4.314159292035399vw, 19.5px); font-family: 'Baloo Tamma 2'">0</h2>
             </div>
         </div>
         <div id="canvas-container" class="canvas-container">

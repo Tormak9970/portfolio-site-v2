@@ -28,5 +28,5 @@
 
     interface OrganizationProj {
         name:string,
-        link:string
+        linkId:string
     }

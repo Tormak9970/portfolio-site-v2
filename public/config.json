@@ -1268,6 +1268,38 @@
 					"./img/projs/MemeDB homepage.png",
 					""
 				]
+			},
+			"slicers-wiki": {
+				"name": "SWTOR Slicers Wiki",
+				"time": "5 hours",
+				"status": "Ongoing",
+				"difficulty": "Simple",
+				"description": "",
+				"content": {
+					
+				},
+				"link": "",
+				"isRelative": false,
+				"imgs": [
+					"",
+					""
+				]
+			},
+			"slicers-blender-importer": {
+				"name": "SWTOR Slicers Blender Importer",
+				"time": "15 hours",
+				"status": "Ongoing",
+				"difficulty": "Moderate-Complexed",
+				"description": "",
+				"content": {
+					
+				},
+				"link": "",
+				"isRelative": false,
+				"imgs": [
+					"",
+					""
+				]
 			}
 		}
 	},
@@ -1290,6 +1322,10 @@
 				{
 					"name": "Wiki",
 					"linkId": "slicers-wiki"
+				},
+				{
+					"name": "Slicers Blender Plugin",
+					"linkId": "slicers-blender-import"
 				}
 			]
 		},

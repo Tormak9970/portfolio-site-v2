@@ -22,7 +22,6 @@
     const jumpNames:Map<number, string> = new Map();
 
     jumpTo = (id:string) => {
-        console.log(id);
         const project:Project = projects.get(id);
         if (project) {
             const curIdx = pieces.findIndex((val:ProjectEnt, i:number) => { return val.key == id; });

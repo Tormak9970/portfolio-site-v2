@@ -1,5 +1,6 @@
 <script lang="ts">
-    import { currentRendered } from "../../Stores";
+    import { goto } from "@roxi/routify";
+
     import { jumpTo } from "../projects/index.svelte";
 
     export let entryData:Organization;
@@ -8,7 +9,7 @@
     export let isLast:boolean;
 
     function linkToProj(id:string) {
-        $currentRendered = '4';
+        $goto('../projects');
         setTimeout(() => { jumpTo(id); }, 10);
     }
 </script>
@@ -39,7 +40,7 @@
                         <li>
                             <div class="proj-entr">
                                 <div class="name">{proj.name}</div>
-                                <div class="proj-link" on:click|stopPropagation="{() => { linkToProj(proj.link); }}">
+                                <div class="proj-link" on:click|stopPropagation="{() => { linkToProj(proj.linkId); }}">
                                     <i class="fas fa-link"></i>
                                 </div>
                             </div>

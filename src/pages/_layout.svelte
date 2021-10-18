@@ -1,9 +1,8 @@
 <script lang="ts">
-	import { startProjIdx, projectDisplay, showProject, imageModalData } from "../Stores";
+	import { startProjIdx, projectDisplay, showProject, imageModalData, navCheck } from "../Stores";
 	import Socials from "./_utils/Socials.svelte";
 	import { loadConfig } from "../linkConfig";
 
-	import { beforeUpdate } from 'svelte';
 	import ProjectEntry from "./projects/_projectEntry.svelte";
 	import ImageModal from "./_utils/ImageModal.svelte";
 	import { isActive, url } from "@roxi/routify";
@@ -43,6 +42,8 @@
 	}
 	function handleNavClick(e: Event) {
 		$showProject = false;
+		$navCheck = true;
+		setTimeout(() => { $navCheck = false; }, 300);
 		const elem = (<HTMLElement>e.currentTarget).parentElement;
 		
 		if (!elem.children[1].classList.contains('rendered')) {
