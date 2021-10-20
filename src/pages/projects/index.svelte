@@ -5,7 +5,7 @@
 <script lang="ts">
     import { projects } from "../../linkConfig";
     import ProjectOverview from "./_projectOverview.svelte";
-    import { startProjIdx } from "../../Stores";
+    import { showProject, startProjIdx } from "../../Stores";
     import JumpList from "../_utils/JumpList.svelte";
 
     interface ProjectEnt {
@@ -36,7 +36,7 @@
     }
 
     function interceptScroll(e: WheelEvent) {
-        if (!isScrolling) {
+        if (!isScrolling && !$showProject) {
             const direction:boolean = e.deltaY > 0; // true = down, false = up
             
             const projElem = document.getElementById('projects');
