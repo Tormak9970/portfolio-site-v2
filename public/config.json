@@ -178,10 +178,10 @@
 					],
 					"version": "2.22.2"
 				},
-				"link": "",
+				"link": "./pong",
 				"isRelative": true,
 				"imgs": [
-					"",
+					"./img/projs/Pong.png",
 					""
 				]
 			},
@@ -270,7 +270,7 @@
 					],
 					"version": "2.22.2"
 				},
-				"link": "",
+				"link": "./tetris",
 				"isRelative": true,
 				"imgs": [
 					"",

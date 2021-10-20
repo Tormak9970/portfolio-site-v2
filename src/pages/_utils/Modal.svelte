@@ -5,9 +5,11 @@
     export function show(stat:boolean) {
         showing = stat;
     }
+
+    export function isShowing() { return showing; }
 </script>
 
-<div id="{id}" class="modal-container {showing ? "" : " hidden"}">
+<div id="{id}" class="modal-container{showing ? "" : " hidden"}">
     <slot>
 
     </slot>
