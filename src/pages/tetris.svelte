@@ -85,7 +85,8 @@
             
                 <Modal id="gameOverModal" bind:this={lossModal} showing={false}>
                     <div class="game-over-modal-content">
-                        <button type="button" class="button notLastButton" id="playAgainButton">PLAY AGAIN</button>
+                        <div id="scoreHolder" class="score-div">Score: 0</div>
+                        <button id="playAgainButton">PLAY AGAIN</button>
                     </div>
                 </Modal>
     
@@ -358,6 +359,38 @@
                     }
                     .sak-header { color: $font-color; }
                 }
+
+                .game-over-modal-content {
+                    left: 38%;
+                    background-color: transparent;
+                    margin: 5%; /* 15% from the top and centered */
+                    padding: 20px;
+                    border: 1px solid $bud-green;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    align-items: center;
+                    border-radius: 10px;
+
+                    .score-div {
+                        margin: 15px 0px
+                    }
+
+                    #playAgainButton {
+                        width: 100px;
+                        padding: 10px;
+                        color: $font-color;
+                        background-color: transparent;
+                        border: 1px solid $bud-green;
+                        border-radius: 5px;
+                        cursor: pointer;
+                        transition: all .3s ease-in-out;
+
+                        text-align: center;
+
+                        &:hover { transform: scale(1.2); }
+                    }
+                }
             }
         }
 
@@ -388,9 +421,7 @@
             }
         }
 
-        :global(.vCanvas) {
-            z-index: 2;
-        }
+        :global(.vCanvas) { z-index: 2; }
 
         .hidden { display: none; }
     }

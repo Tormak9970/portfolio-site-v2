@@ -305,6 +305,7 @@ function checkRows(){
 }
 function addScore(num){
   document.getElementById("scoreHeader").innerHTML = "Score: " + (parseFloat(document.getElementById("scoreHeader").innerHTML.substr(document.getElementById("scoreHeader").innerHTML.indexOf(" "))) + num);
+  document.getElementById("scoreHolder").innerHTML = "Score: " + (parseFloat(document.getElementById("scoreHolder").innerHTML.substr(document.getElementById("scoreHolder").innerHTML.indexOf(" "))) + num);
 }
 function checkGameOver(t){
   let p1 = t.p1;

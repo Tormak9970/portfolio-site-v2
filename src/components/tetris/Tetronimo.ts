@@ -44,7 +44,7 @@ class Tetronimo {
 
     drawHeldTet(ctx: CanvasRenderingContext2D){
         ctx.strokeStyle = this.sColor;
-        ctx.lineWidth = 4;
+        ctx.lineWidth = 3;
         ctx.fillStyle = this.fColor;
         this.p1.drawHeld(ctx, this.id);
         this.p2.drawHeld(ctx, this.id);
