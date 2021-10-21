@@ -39,8 +39,8 @@ export function init(setOptions:Function, setSettings:Function, setSAK:Function,
   canvas = <HTMLCanvasElement>document.getElementById("gameBoard");
   ctx = canvas.getContext('2d');
 
-  canvas.width = 300;
-  canvas.height = 600;
+  canvas.width = 260;
+  canvas.height = 598;
 
   v_canvas = createVCanvas(canvas.width, canvas.height);
   v_canvas.className = "vCanvas";
@@ -184,9 +184,7 @@ function update(context, run){
     if (wasSentToHold){
       wasSentToHold = false;
     } else {
-      if(isBeingHeld){
-        isBeingHeld = false;
-      }
+      if(isBeingHeld) isBeingHeld = false;
       checkGameOver(currentT);
       if (gameOver){
         console.log(boardMatrix);
@@ -254,10 +252,10 @@ function isNotMoveAble(){
   if (p1.y / 30 + 1 == 20 || p2.y / 30 + 1 == 20 || p3.y / 30 + 1 == 20 || p4.y / 30 + 1 == 20){
     return true;
   } else {
-    if (boardMatrix[p1.y / 30 + 1][p1.x / 30] == 1 || 
-      boardMatrix[p2.y / 30 + 1][p2.x / 30] == 1 || 
-      boardMatrix[p3.y / 30 + 1][p3.x / 30] == 1 || 
-      boardMatrix[p4.y / 30 + 1][p4.x / 30] == 1){
+    if (boardMatrix[p1.y / 30 + 1 + 3][p1.x / 30] == 1 || 
+      boardMatrix[p2.y / 30 + 1 + 3][p2.x / 30] == 1 || 
+      boardMatrix[p3.y / 30 + 1 + 3][p3.x / 30] == 1 || 
+      boardMatrix[p4.y / 30 + 1 + 3][p4.x / 30] == 1){
       return true;
     }
   }
@@ -270,10 +268,10 @@ function mapTetronimoToMatrix(t){
   let p3 = t.p3;
   let p4 = t.p4;
 
-  boardMatrix[p1.y / 30][p1.x / 30] = 1;
-  boardMatrix[p2.y / 30][p2.x / 30] = 1; 
-  boardMatrix[p3.y / 30][p3.x / 30] = 1;
-  boardMatrix[p4.y / 30][p4.x / 30] = 1;
+  boardMatrix[p1.y / 30 + 3][p1.x / 30] = 1;
+  boardMatrix[p2.y / 30 + 3][p2.x / 30] = 1; 
+  boardMatrix[p3.y / 30 + 3][p3.x / 30] = 1;
+  boardMatrix[p4.y / 30 + 3][p4.x / 30] = 1;
 }
 
 function checkRows(){
@@ -316,7 +314,7 @@ function checkGameOver(t){
   if (boardMatrix[p4.y / 30] == undefined || 
     boardMatrix[p3.y / 30] == undefined || 
     boardMatrix[p2.y / 30] == undefined || 
-    boardMatrix[p1.y / 30] == undefined){
+    boardMatrix[p1.y / 30] == undefined) {
     gameOver = true;
   } else {
     gameOver = false;
@@ -345,18 +343,20 @@ async function setBoard(){
   wasSentToHold = false;
   isBeingHeld = false;
   level = 1;
-  for(let i = 0; i < 20; i++){
+  for(let i = 0; i < 23; i++){
     boardMatrix.push([0, 0, 0, 0, 0, 0, 0, 0, 0, 0]);
   }
 }
 function generateNextSevenPieces(){
-  let toReturn = [new Tetronimo(new Point(120, 0), new Point(120, -30), new Point(150, 0), new Point(90, 0), "#a903fc", "#b638f5", 1), //T
-  new Tetronimo(new Point(120, 0), new Point(90, 0), new Point(150, 0), new Point(180, 0), "#00a6ff", "#00ccff", 2), //I
-  new Tetronimo(new Point(120, 0), new Point(90, 0), new Point(150, 0), new Point(90, -30), "#002fff", "#2574cf", 3), //J
-  new Tetronimo(new Point(120, 0), new Point(90, 0), new Point(150, 0), new Point(150, -30), "#ff9500", "#e8ab1c", 4), //L
-  new Tetronimo(new Point(120, 0), new Point(150, 0), new Point(150, -30), new Point(120, -30), "#e6e61c", "yellow", 5), //O
-  new Tetronimo(new Point(120, 0), new Point(150, 0), new Point(150, -30), new Point(120, 30), "#781111", "#fa0505", 6), //S
-  new Tetronimo(new Point(120, 0), new Point(150, 0), new Point(150, 30), new Point(120, -30), "#127811", "#21e61e", 7)]; //Z
+  let toReturn = [
+    new Tetronimo(new Point(120, 0), new Point(120, -30), new Point(150, 0), new Point(90, 0), "#a903fc", "#b638f5", 1),   //T
+    new Tetronimo(new Point(120, 0), new Point(90, 0), new Point(150, 0), new Point(180, 0), "#00a6ff", "#00ccff", 2),     //I
+    new Tetronimo(new Point(120, 0), new Point(90, 0), new Point(150, 0), new Point(90, -30), "#002fff", "#2574cf", 3),    //J
+    new Tetronimo(new Point(120, 0), new Point(90, 0), new Point(150, 0), new Point(150, -30), "#ff9500", "#e8ab1c", 4),   //L
+    new Tetronimo(new Point(120, 0), new Point(150, 0), new Point(150, -30), new Point(120, -30), "#e6e61c", "yellow", 5), //O
+    new Tetronimo(new Point(120, 0), new Point(150, 0), new Point(150, -30), new Point(120, 30), "#781111", "#fa0505", 6), //S
+    new Tetronimo(new Point(120, 0), new Point(150, 0), new Point(150, 30), new Point(120, -30), "#127811", "#21e61e", 7)  //Z
+  ];
   for (let i = toReturn.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
     [toReturn[i], toReturn[j]] = [toReturn[j], toReturn[i]];

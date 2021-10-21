@@ -43,6 +43,7 @@
             <div id="game-header" class="header">
                 <h2 id="scoreHeader" class="score-header">Score: 0</h2>
             </div>
+            <div class="line"></div>
             <div id="canvas-container" class="canvas-container">
                 <canvas id="gameBoard" style="position: absolute; background: black; z-index: 1;"></canvas>
     
@@ -121,6 +122,7 @@
 	$font-color: rgb(231, 231, 231);
 	$bud-green: #82b74bff;
     $bud-green__hover: rgb(138, 194, 78);
+    $warning-red: #e24a4a;
 
     #tetrisContainer {
         width: 100%;
@@ -132,7 +134,7 @@
         justify-content: center;
 
         .game-container {
-            height: 640px;
+            height: 638px;
 
             position: relative;
 
@@ -166,22 +168,30 @@
 
                 .header {
                     height: 40px;
-                    width: 300px;
+                    width: 260px;
                     background: $bud-green;
                     display: flex;
                     flex-direction: row;
                     align-items: center;
                     justify-content: space-around;
 
-                    .score-header {
-                        color: $font-color;
-                        
-                    }
+                    .score-header { color: $font-color; }
+                }
+
+                .line {
+                    z-index: 3;
+                    position: absolute;
+
+                    top: 118px;
+
+                    height: 2px;
+                    background-color: $warning-red;
+                    width: 100%;
                 }
 
                 .canvas-container{
-                    width: 300px;
-                    height: 600px;
+                    width: 260px;
+                    height: 598px;
                 }
 
                 .settings-modal-content {
