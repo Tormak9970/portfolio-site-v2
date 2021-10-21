@@ -33,8 +33,8 @@ export function init(setOptions:Function, setSettings:Function, setSAK:Function,
   h_canvas = <HTMLCanvasElement>document.getElementById("holdingBoard");
   h_ctx = h_canvas.getContext("2d");
 
-  h_canvas.width = 150;
-  h_canvas.height = 150;
+  h_canvas.width = 5 * (26);
+  h_canvas.height = 5 * (26);
 
   canvas = <HTMLCanvasElement>document.getElementById("gameBoard");
   ctx = canvas.getContext('2d');
@@ -163,7 +163,7 @@ function update(context, run){
         hasLocked = true;
         currentT.draw(ctx);
       } else {
-        context.clearRect(0, 0, canvas.width, canvas.height);
+        context.clearRect(0, -78, canvas.width, canvas.height + 78);
         currentT.draw(context);
   
         currentT.p1.moveDown(currentT.dy);
@@ -180,7 +180,7 @@ function update(context, run){
     });
   } else {
     run = 0;
-    context.clearRect(0, 0, canvas.width, canvas.height);
+    context.clearRect(0, -78, canvas.width, canvas.height + 78);
     if (wasSentToHold){
       wasSentToHold = false;
     } else {
@@ -249,13 +249,13 @@ function isNotMoveAble(){
   let p2 = currentT.p2;
   let p3 = currentT.p3;
   let p4 = currentT.p4;
-  if (p1.y / 30 + 1 == 20 || p2.y / 30 + 1 == 20 || p3.y / 30 + 1 == 20 || p4.y / 30 + 1 == 20){
+  if (p1.y / 26 + 1 == 20 || p2.y / 26 + 1 == 20 || p3.y / 26 + 1 == 20 || p4.y / 26 + 1 == 20){
     return true;
   } else {
-    if (boardMatrix[p1.y / 30 + 1 + 3][p1.x / 30] == 1 || 
-      boardMatrix[p2.y / 30 + 1 + 3][p2.x / 30] == 1 || 
-      boardMatrix[p3.y / 30 + 1 + 3][p3.x / 30] == 1 || 
-      boardMatrix[p4.y / 30 + 1 + 3][p4.x / 30] == 1){
+    if (boardMatrix[p1.y / 26 + 1 + 3][p1.x / 26] == 1 || 
+      boardMatrix[p2.y / 26 + 1 + 3][p2.x / 26] == 1 || 
+      boardMatrix[p3.y / 26 + 1 + 3][p3.x / 26] == 1 || 
+      boardMatrix[p4.y / 26 + 1 + 3][p4.x / 26] == 1){
       return true;
     }
   }
@@ -268,10 +268,10 @@ function mapTetronimoToMatrix(t){
   let p3 = t.p3;
   let p4 = t.p4;
 
-  boardMatrix[p1.y / 30 + 3][p1.x / 30] = 1;
-  boardMatrix[p2.y / 30 + 3][p2.x / 30] = 1; 
-  boardMatrix[p3.y / 30 + 3][p3.x / 30] = 1;
-  boardMatrix[p4.y / 30 + 3][p4.x / 30] = 1;
+  boardMatrix[p1.y / 26 + 3][p1.x / 26] = 1;
+  boardMatrix[p2.y / 26 + 3][p2.x / 26] = 1; 
+  boardMatrix[p3.y / 26 + 3][p3.x / 26] = 1;
+  boardMatrix[p4.y / 26 + 3][p4.x / 26] = 1;
 }
 
 function checkRows(){
@@ -282,10 +282,10 @@ function checkRows(){
 
     if (isFull){
       numRowsRemoved++;
-      ctx.clearRect(0, index * 30, 300, 30);
-      let aboveCleared = ctx.getImageData(0, 0, 300, index * 30);
-      ctx.clearRect(0, 0, 300, index * 30);
-      ctx.putImageData(aboveCleared, 0, 30);
+      ctx.clearRect(0, index * 26, 10 * (26), 26);
+      let aboveCleared = ctx.getImageData(0, 0, 10 * (26), index * 26);
+      ctx.clearRect(0, 0, 10 * (26), index * 26);
+      ctx.putImageData(aboveCleared, 0, 26);
       boardMatrix.splice(index, 1);
       boardMatrix.unshift([0, 0, 0, 0, 0, 0, 0, 0, 0, 0]);
     }
@@ -311,16 +311,18 @@ function checkGameOver(t){
   let p3 = t.p3;
   let p4 = t.p4;
 
-  if (boardMatrix[p4.y / 30] == undefined || 
-    boardMatrix[p3.y / 30] == undefined || 
-    boardMatrix[p2.y / 30] == undefined || 
-    boardMatrix[p1.y / 30] == undefined) {
+  if (boardMatrix[p4.y / 26] == undefined || 
+    boardMatrix[p3.y / 26] == undefined || 
+    boardMatrix[p2.y / 26] == undefined || 
+    boardMatrix[p1.y / 26] == undefined) {
     gameOver = true;
   } else {
     gameOver = false;
   }
 }
 async function runGame(){
+  ctx.translate(0, 78);
+  v_ctx.translate(0, 78);
   await setBoard();
   runner();
 }
@@ -349,13 +351,13 @@ async function setBoard(){
 }
 function generateNextSevenPieces(){
   let toReturn = [
-    new Tetronimo(new Point(120, 0), new Point(120, -30), new Point(150, 0), new Point(90, 0), "#a903fc", "#b638f5", 1),   //T
-    new Tetronimo(new Point(120, 0), new Point(90, 0), new Point(150, 0), new Point(180, 0), "#00a6ff", "#00ccff", 2),     //I
-    new Tetronimo(new Point(120, 0), new Point(90, 0), new Point(150, 0), new Point(90, -30), "#002fff", "#2574cf", 3),    //J
-    new Tetronimo(new Point(120, 0), new Point(90, 0), new Point(150, 0), new Point(150, -30), "#ff9500", "#e8ab1c", 4),   //L
-    new Tetronimo(new Point(120, 0), new Point(150, 0), new Point(150, -30), new Point(120, -30), "#e6e61c", "yellow", 5), //O
-    new Tetronimo(new Point(120, 0), new Point(150, 0), new Point(150, -30), new Point(120, 30), "#781111", "#fa0505", 6), //S
-    new Tetronimo(new Point(120, 0), new Point(150, 0), new Point(150, 30), new Point(120, -30), "#127811", "#21e61e", 7)  //Z
+    new Tetronimo(new Point(4 * (26), -2 * (26)), new Point(4 * (26), -3 * (26)), new Point(5 * (26), -2 * (26)), new Point(3 * (26), -2 * (26)), "#a903fc", "#b638f5", 1), //T
+    new Tetronimo(new Point(4 * (26), -2 * (26)), new Point(3 * (26), -2 * (26)), new Point(5 * (26), -2 * (26)), new Point(6 * (26), -2 * (26)), "#00a6ff", "#00ccff", 2), //I
+    new Tetronimo(new Point(4 * (26), -2 * (26)), new Point(3 * (26), -2 * (26)), new Point(5 * (26), -2 * (26)), new Point(3 * (26), -3 * (26)), "#002fff", "#2574cf", 3), //J
+    new Tetronimo(new Point(4 * (26), -2 * (26)), new Point(3 * (26), -2 * (26)), new Point(5 * (26), -2 * (26)), new Point(5 * (26), -3 * (26)), "#ff9500", "#e8ab1c", 4), //L
+    new Tetronimo(new Point(4 * (26), -2 * (26)), new Point(5 * (26), -2 * (26)), new Point(5 * (26), -3 * (26)), new Point(4 * (26), -3 * (26)), "#e6e61c", "yellow", 5),  //O
+    new Tetronimo(new Point(4 * (26), -2 * (26)), new Point(5 * (26), -2 * (26)), new Point(5 * (26), -3 * (26)), new Point(4 * (26), -1 * (26)), "#781111", "#fa0505", 6), //S
+    new Tetronimo(new Point(4 * (26), -2 * (26)), new Point(5 * (26), -2 * (26)), new Point(5 * (26), -1 * (26)), new Point(4 * (26), -3 * (26)), "#127811", "#21e61e", 7)  //Z
   ];
   for (let i = toReturn.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
@@ -388,7 +390,7 @@ function canMoveLeft(){
   let p2 = currentT.p2.x;
   let p3 = currentT.p3.x;
   let p4 = currentT.p4.x;
-  if (p1 / 30 == 0 || p2 / 30 == 0 || p3 / 30 == 0 || p4 / 30 == 0){
+  if (p1 / 26 == 0 || p2 / 26 == 0 || p3 / 26 == 0 || p4 / 26 == 0){
     return false;
   }
   return true;
@@ -398,7 +400,7 @@ function canMoveRight(){
   let p2 = currentT.p2.x;
   let p3 = currentT.p3.x;
   let p4 = currentT.p4.x;
-  if (p1 / 30 == 9 || p2 / 30 == 9 || p3 / 30 == 9 || p4 / 30 == 9){
+  if (p1 / 26 == 9 || p2 / 26 == 9 || p3 / 26 == 9 || p4 / 26 == 9){
     return false;
   }
   return true;
@@ -406,14 +408,14 @@ function canMoveRight(){
 function moveLeft(){
   if(canMoveLeft()){
     currentT.moveLeft();
-    v_ctx.clearRect(0, 0, v_canvas.width, v_canvas.height);
+    v_ctx.clearRect(0, -78, v_canvas.width, v_canvas.height + 78);
     currentT.draw(v_ctx);
   }
 }
 function moveRight(){
   if (canMoveRight()){
     currentT.moveRight();
-    v_ctx.clearRect(0, 0, v_canvas.width, v_canvas.height);
+    v_ctx.clearRect(0, -78, v_canvas.width, v_canvas.height + 78);
     currentT.draw(v_ctx);
   }
 }
@@ -423,7 +425,7 @@ function hardDrop(){
     currentT.p2.moveDown(currentT.dy);
     currentT.p3.moveDown(currentT.dy);
     currentT.p4.moveDown(currentT.dy);
-    v_ctx.clearRect(0, 0, v_canvas.width, v_canvas.height);
+    v_ctx.clearRect(0, -78, v_canvas.width, v_canvas.height + 78);
     currentT.draw(v_ctx);
   }
   
@@ -434,7 +436,7 @@ function canRotate(){
   let p2 = currentT.p2.x;
   let p3 = currentT.p3.x;
   let p4 = currentT.p4.x;
-  if (p1 / 30 == 0 || p2 / 30 == 0 || p3 / 30 == 0 || p4 / 30 == 0 || p1 / 30 == 9 || p2 / 30 == 9 || p3 / 30 == 9 || p4 / 30 == 9){
+  if (p1 / 26 == 0 || p2 / 26 == 0 || p3 / 26 == 0 || p4 / 26 == 0 || p1 / 26 == 9 || p2 / 26 == 9 || p3 / 26 == 9 || p4 / 26 == 9){
     return false;
   }
   return true;
@@ -443,14 +445,14 @@ function canRotate(){
 function rotateLeft(){
   if(canRotate()){
     currentT.rotateLeft();
-    v_ctx.clearRect(0, 0, v_canvas.width, v_canvas.height);
+    v_ctx.clearRect(0, -78, v_canvas.width, v_canvas.height + 78);
     currentT.draw(v_ctx);
   }
 }
 function rotateRight(){
   if(canRotate()){
     currentT.rotateRight();
-    v_ctx.clearRect(0, 0, v_canvas.width, v_canvas.height);
+    v_ctx.clearRect(0, -78, v_canvas.width, v_canvas.height + 78);
     currentT.draw(v_ctx);
   }
 }

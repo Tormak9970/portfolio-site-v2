@@ -148,7 +148,7 @@
                 .hold-header {
                     color: $font-color;
                     height: 40px;
-                    width: 150px;
+                    width: 130px;
                     background: $bud-green;
                     display: flex;
                     column-gap: 7em;

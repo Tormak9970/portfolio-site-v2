@@ -6,15 +6,15 @@ class Point{
       this.y = y;
     }
   
-    draw(ctx: CanvasRenderingContext2D){ roundRect(ctx, this.x, this.y, 30, 30, true); }
+    draw(ctx: CanvasRenderingContext2D){ roundRect(ctx, this.x, this.y, 26, 26, true); }
   
     drawHeld(ctx: CanvasRenderingContext2D, id: number){
       if (id == 1 || id == 3 || id == 4){
-        roundRect(ctx, this.x - 60, this.y + 60, 30, 30, true);
+        roundRect(ctx, this.x - 2 * (26), this.y + 2 * (26), 26, 26, true);
       } else if (id == 5) {
-        roundRect(ctx, this.x - 75, this.y + 75, 30, 30, true);
+        roundRect(ctx, this.x - 75, this.y + 75, 26, 26, true);
       } else {
-        roundRect(ctx, this.x - 75, this.y + 60, 30, 30, true);
+        roundRect(ctx, this.x - 75, this.y + 2 * (26), 26, 26, true);
       }
     }
   
