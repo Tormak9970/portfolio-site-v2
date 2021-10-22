@@ -171,6 +171,11 @@ function update(context, run){
         currentT.p3.moveDown(currentT.dy);
         currentT.p4.moveDown(currentT.dy);
       }
+    } else if (run % 30 <= 25) {
+      if (!isNotMoveAble()){
+        context.clearRect(0, -78, canvas.width, canvas.height + 78);
+        currentT.draw(context);
+      }
     }
   }
   if (!hasLocked && !wasSentToHold) {
@@ -187,9 +192,6 @@ function update(context, run){
       if(isBeingHeld) isBeingHeld = false;
       checkGameOver(currentT);
       if (gameOver){
-        console.log(boardMatrix);
-        console.log(upcomingPieceList);
-        console.log(currentT);
         showGameOverModel();
       } else {
         mapTetronimoToMatrix(currentT);
@@ -276,30 +278,20 @@ function mapTetronimoToMatrix(t){
 
 function checkRows(){
   let numRowsRemoved = 0;
-  let index = 0;
-  boardMatrix.forEach((elem) => {
+  boardMatrix.forEach((elem, index) => {
     let isFull = elem.every((num) => num == 1);
 
     if (isFull){
       numRowsRemoved++;
       ctx.clearRect(0, index * 26, 10 * (26), 26);
       let aboveCleared = ctx.getImageData(0, 0, 10 * (26), index * 26);
-      ctx.clearRect(0, 0, 10 * (26), index * 26);
       ctx.putImageData(aboveCleared, 0, 26);
+
       boardMatrix.splice(index, 1);
       boardMatrix.unshift([0, 0, 0, 0, 0, 0, 0, 0, 0, 0]);
     }
-    index++;
   });
-  if (numRowsRemoved == 1){
-    addScore(100 * level);
-  } else if (numRowsRemoved == 2){
-    addScore(300 * level);
-  } else if (numRowsRemoved == 3){
-    addScore(500 * level);
-  } else if (numRowsRemoved == 4){
-    addScore(800 * level);
-  }
+  if (numRowsRemoved == 1){ addScore(100 * level); } else if (numRowsRemoved == 2){ addScore(300 * level); } else if (numRowsRemoved == 3){ addScore(500 * level); } else if (numRowsRemoved == 4){ addScore(800 * level); }
 }
 function addScore(num){
   document.getElementById("scoreHeader").innerHTML = "Score: " + (parseFloat(document.getElementById("scoreHeader").innerHTML.substr(document.getElementById("scoreHeader").innerHTML.indexOf(" "))) + num);
@@ -386,23 +378,32 @@ function getKeyPressed(e){
 
 //control methods
 function canMoveLeft(){
-  let p1 = currentT.p1.x;
-  let p2 = currentT.p2.x;
-  let p3 = currentT.p3.x;
-  let p4 = currentT.p4.x;
-  if (p1 / 26 == 0 || p2 / 26 == 0 || p3 / 26 == 0 || p4 / 26 == 0){
+  let p1 = currentT.p1;
+  let p2 = currentT.p2;
+  let p3 = currentT.p3;
+  let p4 = currentT.p4;
+  if (p1.x / 26 == 0 || p2.x / 26 == 0 || p3.x / 26 == 0 || p4.x / 26 == 0) return false;
+  if (boardMatrix[p1.y / 26 + 1 + 3][p1.x / 26 - 1] == 1 || 
+      boardMatrix[p2.y / 26 + 1 + 3][p2.x / 26 - 1] == 1 || 
+      boardMatrix[p3.y / 26 + 1 + 3][p3.x / 26 - 1] == 1 || 
+      boardMatrix[p4.y / 26 + 1 + 3][p4.x / 26 - 1] == 1){
     return false;
   }
   return true;
 }
 function canMoveRight(){
-  let p1 = currentT.p1.x;
-  let p2 = currentT.p2.x;
-  let p3 = currentT.p3.x;
-  let p4 = currentT.p4.x;
-  if (p1 / 26 == 9 || p2 / 26 == 9 || p3 / 26 == 9 || p4 / 26 == 9){
+  let p1 = currentT.p1;
+  let p2 = currentT.p2;
+  let p3 = currentT.p3;
+  let p4 = currentT.p4;
+  if (p1.x / 26 == 9 || p2.x / 26 == 9 || p3.x / 26 == 9 || p4.x / 26 == 9) return false;
+  if (boardMatrix[p1.y / 26 + 1 + 3][p1.x / 26 + 1] == 1 || 
+      boardMatrix[p2.y / 26 + 1 + 3][p2.x / 26 + 1] == 1 || 
+      boardMatrix[p3.y / 26 + 1 + 3][p3.x / 26 + 1] == 1 || 
+      boardMatrix[p4.y / 26 + 1 + 3][p4.x / 26 + 1] == 1){
     return false;
   }
+
   return true;
 }
 function moveLeft(){
