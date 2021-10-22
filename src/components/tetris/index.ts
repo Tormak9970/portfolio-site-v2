@@ -26,6 +26,8 @@ let wasSentToHold = false;
 let isBeingHeld = false;
 let level = 1;
 
+let lastMoveSide:boolean = false;
+
 let showGameOverModel = () =>{}
 
 export function init(setOptions:Function, setSettings:Function, setSAK:Function, setLoss:Function, settingsModal:Modal, optionModal:Modal, sakModal:Modal, lossModal:Modal) {
@@ -158,7 +160,7 @@ export function init(setOptions:Function, setSettings:Function, setSAK:Function,
 
 function update(context, run){
   if(!isPaused && !gameOver){
-    if(run % 30 == 0){
+    if(run % 30 == 0 && !lastMoveSide){
       if (isNotMoveAble()){
         hasLocked = true;
         currentT.draw(ctx);
@@ -172,10 +174,9 @@ function update(context, run){
         currentT.p4.moveDown(currentT.dy);
       }
     } else if (run % 30 <= 25) {
-      if (!isNotMoveAble()){
-        context.clearRect(0, -78, canvas.width, canvas.height + 78);
-        currentT.draw(context);
-      }
+      lastMoveSide = false;
+      context.clearRect(0, -78, canvas.width, canvas.height + 78);
+      currentT.draw(context);
     }
   }
   if (!hasLocked && !wasSentToHold) {
@@ -200,7 +201,6 @@ function update(context, run){
       }
       checkRows();
     }
-    
   }
 }
 
@@ -383,10 +383,10 @@ function canMoveLeft(){
   let p3 = currentT.p3;
   let p4 = currentT.p4;
   if (p1.x / 26 == 0 || p2.x / 26 == 0 || p3.x / 26 == 0 || p4.x / 26 == 0) return false;
-  if (boardMatrix[p1.y / 26 + 1 + 3][p1.x / 26 - 1] == 1 || 
-      boardMatrix[p2.y / 26 + 1 + 3][p2.x / 26 - 1] == 1 || 
-      boardMatrix[p3.y / 26 + 1 + 3][p3.x / 26 - 1] == 1 || 
-      boardMatrix[p4.y / 26 + 1 + 3][p4.x / 26 - 1] == 1){
+  if (boardMatrix[p1.y / 26 + 3][p1.x / 26 - 1] == 1 || 
+      boardMatrix[p2.y / 26 + 3][p2.x / 26 - 1] == 1 || 
+      boardMatrix[p3.y / 26 + 3][p3.x / 26 - 1] == 1 || 
+      boardMatrix[p4.y / 26 + 3][p4.x / 26 - 1] == 1){
     return false;
   }
   return true;
@@ -397,10 +397,10 @@ function canMoveRight(){
   let p3 = currentT.p3;
   let p4 = currentT.p4;
   if (p1.x / 26 == 9 || p2.x / 26 == 9 || p3.x / 26 == 9 || p4.x / 26 == 9) return false;
-  if (boardMatrix[p1.y / 26 + 1 + 3][p1.x / 26 + 1] == 1 || 
-      boardMatrix[p2.y / 26 + 1 + 3][p2.x / 26 + 1] == 1 || 
-      boardMatrix[p3.y / 26 + 1 + 3][p3.x / 26 + 1] == 1 || 
-      boardMatrix[p4.y / 26 + 1 + 3][p4.x / 26 + 1] == 1){
+  if (boardMatrix[p1.y / 26 + 3][p1.x / 26 + 1] == 1 || 
+      boardMatrix[p2.y / 26 + 3][p2.x / 26 + 1] == 1 || 
+      boardMatrix[p3.y / 26 + 3][p3.x / 26 + 1] == 1 || 
+      boardMatrix[p4.y / 26 + 3][p4.x / 26 + 1] == 1){
     return false;
   }
 
@@ -411,6 +411,7 @@ function moveLeft(){
     currentT.moveLeft();
     v_ctx.clearRect(0, -78, v_canvas.width, v_canvas.height + 78);
     currentT.draw(v_ctx);
+    lastMoveSide = true;
   }
 }
 function moveRight(){
@@ -418,6 +419,7 @@ function moveRight(){
     currentT.moveRight();
     v_ctx.clearRect(0, -78, v_canvas.width, v_canvas.height + 78);
     currentT.draw(v_ctx);
+    lastMoveSide = true;
   }
 }
 function hardDrop(){
@@ -428,8 +430,7 @@ function hardDrop(){
     currentT.p4.moveDown(currentT.dy);
     v_ctx.clearRect(0, -78, v_canvas.width, v_canvas.height + 78);
     currentT.draw(v_ctx);
-  }
-  
+  } 
 }
 
 function canRotate(){
