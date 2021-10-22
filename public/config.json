@@ -273,7 +273,7 @@
 				"link": "./tetris",
 				"isRelative": true,
 				"imgs": [
-					"",
+					"./img/projs/Tetris.png",
 					""
 				]
 			}
