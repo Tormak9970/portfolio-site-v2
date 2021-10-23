@@ -2,5 +2,6 @@
 /public/build/
 /.vscode/
 /.routify/
+/src/firebase.js
 
 .DS_Store
