@@ -19,8 +19,6 @@
 	$grey-secondary: #383838;
 	$bud-green: #82b74bff;
     $bud-green__hover: rgb(138, 194, 78);
-    $dark-moss-green: #405d27ff;
-    $army-green: #32481eff;
 
 	#infoSection {
 		width: 100%;

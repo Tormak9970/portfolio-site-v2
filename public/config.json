@@ -1346,7 +1346,39 @@
 			]
 		}
 	},
-	"experience": {},
+	"experience": {
+		"work": {
+
+		},
+		"languages": {
+			"web-dev": {
+				"name": "Web Development",
+				"description": "",
+				"frameworks": {
+					"TypeScript": {
+						"description": "",
+						"experience": ""
+					},
+					"Svelte": {
+						"description": "",
+						"experience": ""
+					},
+					"SCSS": {
+						"description": "",
+						"experience": ""
+					},
+					"Routify": {
+						"description": "",
+						"experience": ""
+					},
+					"Three.js": {
+						"description": "",
+						"experience": ""
+					}
+				}
+			}
+		}
+	},
 	"art": [
 		{
 			"name": "SWTOR Neon Sign",
