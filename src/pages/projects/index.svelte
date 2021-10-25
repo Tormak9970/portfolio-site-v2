@@ -7,6 +7,8 @@
     import ProjectOverview from "./_projectOverview.svelte";
     import { showProject, startProjIdx } from "../../Stores";
     import JumpList from "../_utils/JumpList.svelte";
+    import MediaQuery from "../_utils/MediaQuery.svelte";
+import CardEntry from "../_utils/CardEntry.svelte";
 
     interface ProjectEnt {
         key:string,
@@ -135,7 +137,13 @@
 
 <div id="projects">
     {#each Array.from(projects).map(processEntries) as projEntr, idx}
-        <ProjectOverview entryData={projEntr} hidden={pieces[idx].hidden} scrollType={pieces[idx].scrollType} isLast={pieces[idx].isLast}/>
+        <MediaQuery query="(orientation:landscape)" let:matches>
+            {#if matches}
+                <ProjectOverview entryData={projEntr} hidden={pieces[idx].hidden} scrollType={pieces[idx].scrollType} isLast={pieces[idx].isLast}/>
+            {:else}
+                <CardEntry entryData={projEntr} type={'project'}/>
+            {/if}
+        </MediaQuery>
     {/each}
     <JumpList len={projects.size} tooltips={jumpNames} handler={jumpToHandler} scrollIdx={scrollIdx}/>
 </div>
