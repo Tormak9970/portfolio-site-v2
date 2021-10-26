@@ -8,7 +8,7 @@
     import { showProject, startProjIdx } from "../../Stores";
     import JumpList from "../_utils/JumpList.svelte";
     import MediaQuery from "../_utils/MediaQuery.svelte";
-import CardEntry from "../_utils/CardEntry.svelte";
+    import CardEntry from "./_cardEntry.svelte";
 
     interface ProjectEnt {
         key:string,
