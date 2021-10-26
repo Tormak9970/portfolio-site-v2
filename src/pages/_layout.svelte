@@ -56,6 +56,12 @@
 			}
 		}
 	}
+
+	function handleMobileClick(e: Event) {
+		const elem = <HTMLElement>e.currentTarget;
+		elem.classList.toggle('change');
+		document.querySelector('.content-wrapper').classList.toggle('menu-hidden');
+	}
 </script>
 
 <main>
@@ -101,7 +107,7 @@
 				<div class="mobile-header">
 					<div class="home-container">
 						<img src="img/logo.svg" alt="logo" height="30" width="30">
-						<div id="mobileMenu" class="nav-toggle">
+						<div class="nav-toggle" on:click|stopPropagation="{handleMobileClick}">
 							<div class="bar1"></div>
 							<div class="bar2"></div>
 							<div class="bar3"></div>
@@ -124,21 +130,27 @@
 						<div id='1' class="nav-btn-cont{$isActive('./index') ? ' rendered' : ''}" on:click="{forwardClick}">
 							<a href="{$url('./index')}" class="nav-btn" on:click="{handleNavClick}">About</a>
 						</div>
+						<div class="spacer"></div>
 						<div id='2' class="nav-btn-cont{$isActive('./experience') ? ' rendered' : ''}" on:click="{forwardClick}">
 							<a href="{$url('./experience')}" class="nav-btn" on:click="{handleNavClick}">Experience</a>
 						</div>
+						<div class="spacer"></div>
 						<div id='3' class="nav-btn-cont{$isActive('./featured') ? ' rendered' : ''}" on:click="{forwardClick}">
 							<a href="{$url('./featured')}" class="nav-btn" on:click="{handleNavClick}">Featured</a>
 						</div>
+						<div class="spacer"></div>
 						<div id='4' class="nav-btn-cont{$isActive('./projects') || $isActive('./minesweeper') || $isActive('./pong') || $isActive('./tetris') ? ' rendered' : ''}" on:click="{forwardClick}">
 							<a href="{$url('./projects')}" class="nav-btn" on:click="{handleNavClick}">Projects</a>
 						</div>
+						<div class="spacer"></div>
 						<div id='5' class="nav-btn-cont{$isActive('./organizations') ? ' rendered' : ''}" on:click="{forwardClick}">
 							<a href="{$url('./organizations')}" class="nav-btn" on:click="{handleNavClick}">Organizations</a>
 						</div>
+						<div class="spacer"></div>
 						<div id='6' class="nav-btn-cont{$isActive('./art') ? ' rendered' : ''}" on:click="{forwardClick}">
 							<a href="{$url('./art')}" class="nav-btn" on:click="{handleNavClick}">Art Gallery</a>
 						</div>
+						<div class="spacer"></div>
 						<div id='7' class="nav-btn-cont{$isActive('./contact') ? ' rendered' : ''}" on:click="{forwardClick}">
 							<a href="{$url('./contact')}" class="nav-btn" on:click="{handleNavClick}">Contact</a>
 						</div>
@@ -268,10 +280,11 @@
 						margin: 6px 0;
 						transition: 0.4s;
 					}
-
-					.change .bar1 { -webkit-transform: rotate(-45deg) translate(-9px, 6px); transform: rotate(-45deg) translate(-9px, 6px); }
-					.change .bar2 { opacity: 0; }
-					.change .bar3 { -webkit-transform: rotate(45deg) translate(-8px, -8px); transform: rotate(45deg) translate(-8px, -8px); }
+				}
+				.change {
+					.bar1 { -webkit-transform: rotate(-45deg) translate(-9px, 6px); transform: rotate(-45deg) translate(-9px, 6px); }
+					.bar2 { opacity: 0; }
+					.bar3 { -webkit-transform: rotate(45deg) translate(-8px, -8px); transform: rotate(45deg) translate(-8px, -8px); }
 				}
 
 				img { margin-left: 7px; }
@@ -288,6 +301,8 @@
 			position: absolute;
 			left: -150px;
 			top: 50px;
+
+			transition: left 0.4s;
 			
 			display: flex;
 			flex-direction: row;
@@ -338,6 +353,13 @@
 
 				background-color: $grey-secondary;
 
+				.spacer {
+					width: 80%;
+					height: 1px;
+
+					background-color: rgb(94, 93, 93);
+				}
+
 				.nav-btn-cont {
 
 					height: 40px;
@@ -353,7 +375,7 @@
 						color: $font-color;
 						text-decoration: none;
 
-						margin-top: 14px;
+						margin: 7px 0px;
 
 						&:focus { color: $font-color; }
 					}
