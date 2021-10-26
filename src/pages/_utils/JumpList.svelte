@@ -106,6 +106,9 @@
 
             margin-bottom: 21px;
 
+        
+            box-shadow: #151515 1px 1px 10px 0px;
+
             .option {
                 margin: 1px 2px;
                 cursor: pointer;
