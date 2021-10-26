@@ -83,6 +83,8 @@
             justify-content: center;
             align-items: center;
 
+            margin-bottom: 5px;
+
             .name {
                 height: 100%;
                 

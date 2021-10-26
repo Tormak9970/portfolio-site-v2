@@ -1,7 +1,10 @@
 <script lang="ts" type="module">
 	import ArtEntry from './_artEntry.svelte';
     import JumpList from "../_utils/JumpList.svelte";
+    import { orientation } from "../../Stores";
     import { art } from '../../linkConfig';
+    import MediaQuery from "../_utils/MediaQuery.svelte";
+    import CardEntry from "./_cardEntry.svelte";
 
     interface ArtEnt {
         key:string,
@@ -107,13 +110,29 @@
 
 <svelte:window on:wheel|stopPropagation="{interceptScroll}" />
 
-<div id="art">
-    <ArtEntry entryData={pieces[0].data} hidden={pieces[0].hidden} scrollType={pieces[0].scrollType} isLast={false}/>
+<div id="art" class="{$orientation == 0 ? 'fancy' : 'card'}">
+    <MediaQuery query="(orientation:landscape)" let:matches>
+        {#if matches && $orientation == 0}
+            <ArtEntry entryData={pieces[0].data} hidden={pieces[0].hidden} scrollType={pieces[0].scrollType} isLast={false}/>
+        {:else}
+            <CardEntry entryData={pieces[0].data}/>
+        {/if}
+    </MediaQuery>
 
     {#each Array.from(art).map(processEntries) as artEntr, idx}
-        <ArtEntry entryData={artEntr} hidden={pieces[idx+1].hidden} scrollType={pieces[idx+1].scrollType} isLast={pieces[idx+1].isLast}/>
+        <MediaQuery query="(orientation:landscape)" let:matches>
+            {#if matches && $orientation == 0}
+                <ArtEntry entryData={artEntr} hidden={pieces[idx+1].hidden} scrollType={pieces[idx+1].scrollType} isLast={pieces[idx+1].isLast}/>
+            {:else}
+                <CardEntry entryData={artEntr}/>
+            {/if}
+        </MediaQuery>
     {/each }
-    <JumpList len={art.size} tooltips={jumpNames} handler={jumpToHandler} scrollIdx={scrollIdx}/>
+    <MediaQuery query="(orientation:landscape)" let:matches>
+        {#if matches}
+        <JumpList len={art.size} tooltips={jumpNames} handler={jumpToHandler} scrollIdx={scrollIdx}/>
+        {/if}
+    </MediaQuery>
 </div>
 
 <style lang="scss">
@@ -124,12 +143,46 @@
     $dark-moss-green: #405d27ff;
     $army-green: #32481eff;
 
-    #art {
-		width: 100%;
-		height: 100%;
+    @media (orientation: landscape) {
+        #art {
+            width: 100%;
+            height: 100%;
 
-        position: relative;
+            position: relative;
+        }
 
-        overflow: hidden;
+        .fancy {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            position: relative;
+
+            overflow: hidden;
+        }
+
+        .card {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, 330px);
+            grid-auto-rows: max-content;
+            grid-row-gap: 1em;
+            grid-column-gap: 1em;
+            overflow: scroll;
+        }
+    }
+
+    @media (orientation: portrait) {
+        #art {
+            width: 100%;
+            height: 100%;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            position: relative;
+
+            overflow: scroll;
+        }
     }
 </style>
