@@ -171,7 +171,7 @@
     $bud-green__hover: rgb(138, 194, 78);
 
 	main {
-		width: 100%;
+		width: 100vw;
 		height: 100%;
 
 		display: flex;
@@ -179,6 +179,8 @@
 		align-items: center;
 
 		position: relative;
+
+		overflow: hidden;
 
 		.header {
 			width: 100%;
@@ -296,7 +298,7 @@
 			overflow-x: hidden;
 
 			height: calc(100% - 50px);
-			max-width: calc(100% + 150px);
+			width: calc(100% + 150px);
 
 			position: absolute;
 			left: -150px;
