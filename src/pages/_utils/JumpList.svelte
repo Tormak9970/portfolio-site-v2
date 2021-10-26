@@ -1,5 +1,5 @@
 <script lang="ts">
-import { orientation } from "../../Stores";
+    import { orientation } from "../../Stores";
 
 
 	export let len: number;
@@ -25,7 +25,7 @@ import { orientation } from "../../Stores";
         const newIdx = Array.from(wrapperDiv.parentNode.children).indexOf(<Element>wrapperDiv);
         const isSameIdx:boolean = newIdx == lastSelected;
 
-        if (!isSameIdx) { handler(e); }
+        if (!isSameIdx && $orientation == 0) { handler(e); }
     }
 
     function setOrientation(e: Event) {
@@ -53,20 +53,22 @@ import { orientation } from "../../Stores";
             </a>
         </div>
     </div>
-    <div class="jump-nav-container">
-        {#each Array(len) as _, i}
-            <div>
-                <a id="{i}-jumpNav" class="tooltip {i == scrollIdx ? setLast(i) : ''}" on:click="{wrapper}">
-                    {#if i == scrollIdx}
-                        <i class="fas fa-circle"></i>
-                    {:else}
-                        <i class="far fa-circle"></i>
-                    {/if}
-                    <span class="tooltip-text">{tooltips.get(i)}</span>
-                </a>
-            </div>
-        {/each}
-    </div>
+    {#if $orientation == 0}
+        <div class="jump-nav-container">
+            {#each Array(len) as _, i}
+                <div>
+                    <a id="{i}-jumpNav" class="tooltip {i == scrollIdx ? setLast(i) : ''}" on:click="{wrapper}">
+                        {#if i == scrollIdx}
+                            <i class="fas fa-circle"></i>
+                        {:else}
+                            <i class="far fa-circle"></i>
+                        {/if}
+                        <span class="tooltip-text">{tooltips.get(i)}</span>
+                    </a>
+                </div>
+            {/each}
+        </div>
+    {/if}
 </div>
 
 <!-- svelte-ignore unused-css-style-selector -->

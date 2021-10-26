@@ -5,7 +5,7 @@
 <script lang="ts">
     import { projects } from "../../linkConfig";
     import ProjectOverview from "./_projectOverview.svelte";
-    import { showProject, startProjIdx } from "../../Stores";
+    import { showProject, startProjIdx, orientation } from "../../Stores";
     import JumpList from "../_utils/JumpList.svelte";
     import MediaQuery from "../_utils/MediaQuery.svelte";
     import CardEntry from "./_cardEntry.svelte";
@@ -38,6 +38,7 @@
     }
 
     function interceptScroll(e: WheelEvent) {
+        if ($orientation == 0) e.stopPropagation();
         if (!isScrolling && !$showProject) {
             const direction:boolean = e.deltaY > 0; // true = down, false = up
             
@@ -133,19 +134,23 @@
         return entr; 
     }
 </script>
-<svelte:window on:wheel|stopPropagation="{interceptScroll}" />
+<svelte:window on:wheel="{interceptScroll}" />
 
-<div id="projects">
+<div id="projects" class="{$orientation == 0 ? 'fancy' : 'card'}">
     {#each Array.from(projects).map(processEntries) as projEntr, idx}
         <MediaQuery query="(orientation:landscape)" let:matches>
-            {#if matches}
+            {#if matches && $orientation == 0}
                 <ProjectOverview entryData={projEntr} hidden={pieces[idx].hidden} scrollType={pieces[idx].scrollType} isLast={pieces[idx].isLast}/>
             {:else}
-                <CardEntry entryData={projEntr} type={'project'}/>
+                <CardEntry entryData={projEntr}/>
             {/if}
         </MediaQuery>
     {/each}
-    <JumpList len={projects.size} tooltips={jumpNames} handler={jumpToHandler} scrollIdx={scrollIdx}/>
+    <MediaQuery query="(orientation:landscape)" let:matches>
+        {#if matches}
+            <JumpList len={projects.size} tooltips={jumpNames} handler={jumpToHandler} scrollIdx={scrollIdx}/>
+        {/if}
+    </MediaQuery>
 </div>
 
 <style lang="scss">
@@ -154,16 +159,44 @@
 	$bud-green: #82b74bff;
     $bud-green__hover: rgb(138, 194, 78);
 
-	#projects {
-		width: 100%;
-		height: 100%;
+	@media (orientation: landscape) {
+        #projects {
+            width: 100%;
+            height: 100%;
+        }
 
-		display: flex;
-		flex-direction: column;
-        align-items: center;
+        .fancy {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
 
-        position: relative;
+            position: relative;
 
-        overflow: hidden;
-	}
+            overflow: hidden;
+        }
+
+        .card {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, 330px);
+            grid-auto-rows: max-content;
+            grid-row-gap: 1em;
+            grid-column-gap: 1em;
+            overflow: scroll;
+        }
+    }
+
+    @media (orientation: portrait) {
+        #projects {
+            width: 100%;
+            height: 100%;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            position: relative;
+
+            overflow: scroll;
+        }
+    }
 </style>
