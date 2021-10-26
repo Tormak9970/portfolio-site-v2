@@ -39,7 +39,7 @@
         if (!isScrolling) {
             const direction:boolean = e.deltaY > 0; // true = down, false = up
             
-            const artElem = document.getElementById('art');
+            const artElem = document.getElementById('art').children[0];
             if (!(scrollIdx == 0 && !direction) && !(scrollIdx == artElem.children.length-1 && direction) && Math.abs(e.deltaY) != 0) {
                 isScrolling = true;
                 if (direction) {
@@ -110,27 +110,29 @@
 
 <svelte:window on:wheel|stopPropagation="{interceptScroll}" />
 
-<div id="art" class="{$orientation == 0 ? 'fancy' : 'card'}">
-    <MediaQuery query="(orientation:landscape)" let:matches>
-        {#if matches && $orientation == 0}
-            <ArtEntry entryData={pieces[0].data} hidden={pieces[0].hidden} scrollType={pieces[0].scrollType} isLast={false}/>
-        {:else}
-            <CardEntry entryData={pieces[0].data}/>
-        {/if}
-    </MediaQuery>
-
-    {#each Array.from(art).map(processEntries) as artEntr, idx}
+<div id="art">
+    <div class="content{$orientation == 0 ? ' fancy' : ' card'}">
         <MediaQuery query="(orientation:landscape)" let:matches>
             {#if matches && $orientation == 0}
-                <ArtEntry entryData={artEntr} hidden={pieces[idx+1].hidden} scrollType={pieces[idx+1].scrollType} isLast={pieces[idx+1].isLast}/>
+                <ArtEntry entryData={pieces[0].data} hidden={pieces[0].hidden} scrollType={pieces[0].scrollType} isLast={false}/>
             {:else}
-                <CardEntry entryData={artEntr}/>
+                <CardEntry entryData={pieces[0].data}/>
             {/if}
         </MediaQuery>
-    {/each }
+    
+        {#each Array.from(art).map(processEntries) as artEntr, idx}
+            <MediaQuery query="(orientation:landscape)" let:matches>
+                {#if matches && $orientation == 0}
+                    <ArtEntry entryData={artEntr} hidden={pieces[idx+1].hidden} scrollType={pieces[idx+1].scrollType} isLast={pieces[idx+1].isLast}/>
+                {:else}
+                    <CardEntry entryData={artEntr}/>
+                {/if}
+            </MediaQuery>
+        {/each }
+    </div>
     <MediaQuery query="(orientation:landscape)" let:matches>
         {#if matches}
-        <JumpList len={art.size} tooltips={jumpNames} handler={jumpToHandler} scrollIdx={scrollIdx}/>
+            <JumpList len={art.size} tooltips={jumpNames} handler={jumpToHandler} scrollIdx={scrollIdx}/>
         {/if}
     </MediaQuery>
 </div>
@@ -140,15 +142,23 @@
 	$grey-secondary: #383838;
 	$bud-green: #82b74bff;
     $bud-green__hover: rgb(138, 194, 78);
-    $dark-moss-green: #405d27ff;
-    $army-green: #32481eff;
+
+    #art {
+        width: 100%;
+        height: 100%;
+
+        position: relative;
+
+        overflow: hidden;
+    }
 
     @media (orientation: landscape) {
-        #art {
+        .content {
             width: 100%;
             height: 100%;
 
             position: relative;
+            overflow-x: hidden;
         }
 
         .fancy {
@@ -172,7 +182,7 @@
     }
 
     @media (orientation: portrait) {
-        #art {
+        .content {
             width: 100%;
             height: 100%;
 
@@ -183,6 +193,7 @@
             position: relative;
 
             overflow: scroll;
+            overflow-x: hidden;
         }
     }
 </style>

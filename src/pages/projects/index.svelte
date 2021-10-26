@@ -42,7 +42,7 @@
         if (!isScrolling && !$showProject) {
             const direction:boolean = e.deltaY > 0; // true = down, false = up
             
-            const projElem = document.getElementById('projects');
+            const projElem = document.getElementById('projects').children[0];
             if (!(scrollIdx == 0 && !direction) && !(scrollIdx == projElem.children.length-1 && direction) && Math.abs(e.deltaY) != 0) {
                 isScrolling = true;
                 if (direction) {
@@ -136,16 +136,18 @@
 </script>
 <svelte:window on:wheel="{interceptScroll}" />
 
-<div id="projects" class="{$orientation == 0 ? 'fancy' : 'card'}">
-    {#each Array.from(projects).map(processEntries) as projEntr, idx}
-        <MediaQuery query="(orientation:landscape)" let:matches>
-            {#if matches && $orientation == 0}
-                <ProjectOverview entryData={projEntr} hidden={pieces[idx].hidden} scrollType={pieces[idx].scrollType} isLast={pieces[idx].isLast}/>
-            {:else}
-                <CardEntry entryData={projEntr}/>
-            {/if}
-        </MediaQuery>
-    {/each}
+<div id="projects">
+    <div class="content{$orientation == 0 ? ' fancy' : ' card'}">
+        {#each Array.from(projects).map(processEntries) as projEntr, idx}
+            <MediaQuery query="(orientation:landscape)" let:matches>
+                {#if matches && $orientation == 0}
+                    <ProjectOverview entryData={projEntr} hidden={pieces[idx].hidden} scrollType={pieces[idx].scrollType} isLast={pieces[idx].isLast}/>
+                {:else}
+                    <CardEntry entryData={projEntr}/>
+                {/if}
+            </MediaQuery>
+        {/each}
+    </div>
     <MediaQuery query="(orientation:landscape)" let:matches>
         {#if matches}
             <JumpList len={projects.size} tooltips={jumpNames} handler={jumpToHandler} scrollIdx={scrollIdx}/>
@@ -159,10 +161,22 @@
 	$bud-green: #82b74bff;
     $bud-green__hover: rgb(138, 194, 78);
 
-	@media (orientation: landscape) {
-        #projects {
+	#projects {
+        width: 100%;
+        height: 100%;
+
+        position: relative;
+
+        overflow: hidden;
+    }
+
+    @media (orientation: landscape) {
+        .content {
             width: 100%;
             height: 100%;
+
+            position: relative;
+            overflow-x: hidden;
         }
 
         .fancy {
@@ -186,7 +200,7 @@
     }
 
     @media (orientation: portrait) {
-        #projects {
+        .content {
             width: 100%;
             height: 100%;
 
@@ -197,6 +211,7 @@
             position: relative;
 
             overflow: scroll;
+            overflow-x: hidden;
         }
     }
 </style>

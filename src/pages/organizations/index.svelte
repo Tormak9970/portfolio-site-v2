@@ -2,6 +2,9 @@
 	import OrgsEntry from "./_orgsEntry.svelte";
     import JumpList from "../_utils/JumpList.svelte";
     import { organizations } from "../../linkConfig";
+    import { orientation } from "../../Stores";
+    import MediaQuery from "../_utils/MediaQuery.svelte";
+    import CardEntry from "./_cardEntry.svelte";
 
     type OrganizationsEnt = {
         key:string,
@@ -20,8 +23,8 @@
         if (!isScrolling) {
             const direction:boolean = e.deltaY > 0; // true = down, false = up
             
-            const orgsElem = document.getElementById('orgs');
-            if (!(scrollIdx == 0 && !direction) && !(scrollIdx == orgsElem.children.length-2 && direction) && Math.abs(e.deltaY) != 0) {
+            const orgsElem = document.getElementById('orgs').children[0];
+            if (!(scrollIdx == 0 && !direction) && !(scrollIdx == orgsElem.children.length-1 && direction) && Math.abs(e.deltaY) != 0) {
                 isScrolling = true;
                 if (direction) {
                     pieces[scrollIdx+1].scrollType = 'down-in';
@@ -92,10 +95,23 @@
 <svelte:window on:wheel|stopPropagation="{interceptScroll}" />
 
 <div id="orgs">
-    {#each Array.from(organizations).map(processEntries) as orgEntr, idx}
-        <OrgsEntry entryData={orgEntr} hidden={pieces[idx].hidden} scrollType={pieces[idx].scrollType} isLast={pieces[idx].isLast}/>
-    {/each}
-    <JumpList len={organizations.size} tooltips={jumpNames} handler={jumpToHandler} scrollIdx={scrollIdx}/>
+    <div class="content{$orientation == 0 ? ' fancy' : ' card'}">
+        {#each Array.from(organizations).map(processEntries) as orgEntr, idx}
+            <MediaQuery query="(orientation:landscape)" let:matches>
+                {#if matches && $orientation == 0}
+                    <OrgsEntry entryData={orgEntr} hidden={pieces[idx].hidden} scrollType={pieces[idx].scrollType} isLast={pieces[idx].isLast}/>
+                {:else}
+                    <CardEntry entryData={orgEntr}/>
+                {/if}
+            </MediaQuery>
+        {/each}
+    </div>
+    
+    <MediaQuery query="(orientation:landscape)" let:matches>
+        {#if matches}
+            <JumpList len={organizations.size} tooltips={jumpNames} handler={jumpToHandler} scrollIdx={scrollIdx}/>
+        {/if}
+    </MediaQuery>
 </div>
 
 <style lang="scss">
@@ -103,15 +119,58 @@
 	$grey-secondary: #383838;
 	$bud-green: #82b74bff;
     $bud-green__hover: rgb(138, 194, 78);
-    $dark-moss-green: #405d27ff;
-    $army-green: #32481eff;
 
     #orgs {
-		width: 100%;
-		height: 100%;
+        width: 100%;
+        height: 100%;
 
         position: relative;
 
         overflow: hidden;
+    }
+
+    @media (orientation: landscape) {
+        .content {
+            width: 100%;
+            height: 100%;
+
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        .fancy {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            position: relative;
+
+            overflow: hidden;
+        }
+
+        .card {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, 330px);
+            grid-auto-rows: max-content;
+            grid-row-gap: 1em;
+            grid-column-gap: 1em;
+            overflow: scroll;
+        }
+    }
+
+    @media (orientation: portrait) {
+        .content {
+            width: 100%;
+            height: 100%;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            position: relative;
+
+            overflow: scroll;
+            overflow-x: hidden;
+        }
     }
 </style>
