@@ -296,7 +296,7 @@
 			overflow-x: hidden;
 
 			height: calc(100% - 50px);
-			width: calc(100% + 150px);
+			max-width: calc(100% + 150px);
 
 			position: absolute;
 			left: -150px;
@@ -314,7 +314,7 @@
 				position: relative;
 
 				height: 100%;
-				width: 100%;
+				width: 100vw;
 
 				display: flex;
 				flex-direction: column;
