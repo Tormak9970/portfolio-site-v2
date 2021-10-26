@@ -46,13 +46,21 @@
 		$navCheck = true;
 		setTimeout(() => { $navCheck = false; }, 300);
 		const elem = (<HTMLElement>e.currentTarget).parentElement;
-		
-		if (!elem.children[1].classList.contains('rendered')) {
-			document.querySelector('.rendered').classList.remove('rendered');
-			removeAllIndicators();
-			elem.children[1].classList.add('rendered');
-			if (elem.id == '4') {
-				$startProjIdx = 0;
+
+		if (elem.children.length == 2) {
+			if (!elem.children[1].classList.contains('rendered')) {
+				document.querySelector('.rendered').classList.remove('rendered');
+				removeAllIndicators();
+				elem.children[1].classList.add('rendered');
+				if (elem.id == '4') {
+					$startProjIdx = 0;
+				}
+			}
+		} else {
+			if (!elem.children[0].classList.contains('rendered')) {
+				if (elem.id == '4') {
+					$startProjIdx = 0;
+				}
 			}
 		}
 	}
