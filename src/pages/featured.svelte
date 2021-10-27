@@ -1,10 +1,18 @@
 <script lang="ts">
 	import { featured } from "../linkConfig";
     import ProjectOverview from "./projects/_projectOverview.svelte";
+    import MediaQuery from "./_utils/MediaQuery.svelte";
+    import CardEntry from "./projects/_cardEntry.svelte";
 </script>
 
 <div id="featured">
-	<ProjectOverview entryData={featured} hidden={false} scrollType="" isLast={true}/>
+    <MediaQuery query="(orientation:landscape)" let:matches>
+        {#if matches}
+            <ProjectOverview entryData={featured} hidden={false} scrollType="" isLast={true}/>
+        {:else}
+            <CardEntry entryData={featured}/>
+        {/if}
+    </MediaQuery>
 </div>
 
 <style lang="scss">
