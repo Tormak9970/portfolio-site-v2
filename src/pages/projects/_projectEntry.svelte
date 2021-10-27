@@ -80,7 +80,7 @@
 		</div>
 		<h2 class="proj-header">{entryData.name}</h2>
 		<div class="cit-cont {entryData.link != "" ? "" : " hidden"}">
-			<div class="cit-label">Check it out:</div>
+			<div class="cit-label">Visit:</div>
 			{#if isRelative}
 				<a class="proj-link" href="{$url(entryData.link)}">
 					<i class="fas fa-external-link-alt"></i>
@@ -93,16 +93,16 @@
 		</div>
 	</div>
     <div class="proj-layout-cont">
-        <div class="proj-main-img">
+        <div class="proj-main-img proj-img-cont">
 			<img src="{entryData.imgs[0]}" alt="">
 		</div>
-		<div class="data-container">
+		<div class="data-container entr-cont">
 			<div class="data-entr"><b>Name:</b> {entryData.name}</div>
 			<div class="data-entr"><b>Time:</b> {entryData.time}</div>
 			<div class="data-entr"><b>Status:</b> {entryData.status}</div>
 			<div class="data-entr"><b>Difficulty:</b> {entryData.difficulty}</div>
 		</div>
-        <div id="entrContent"></div>
+        <div id="entrContent" class="entr-cont"></div>
     </div>
 </div>
 
@@ -162,7 +162,9 @@
 			.proj-header {
 				font-size: 27px;
 				margin-bottom: 14px;
+    			margin-top: 14px;
 				padding-bottom: 0;
+				padding-top: 0;
 			}
 
 			.cit-cont {
@@ -215,7 +217,9 @@
 
 			.proj-main-img {
 				margin-top: 22px;
-				width: 400px;
+				margin-bottom: 0px;
+
+				max-width: 400px;
 				height: auto;
 
 				padding: 10px;
@@ -240,10 +244,14 @@
 				}
 			}
 
+			@media (orientation:landscape) { .proj-img-cont { width: calc(100% - 10px); } }
+			@media (orientation:portrait) { .proj-img-cont { width: calc(100% - 30px); margin: 10px; } }
+
 			.data-container {
 				margin-top: 20px;
-				width: 650px;
-				padding: 7px 50px;
+
+				max-width: 650px;
+
 				background-color:  $grey-secondary;
 
 				border-radius: 8px;
@@ -253,9 +261,7 @@
 				align-items: flex-start;
 				justify-content: space-around;
 
-				.data-entr {
-					margin: 2px 0px;
-				}
+				.data-entr { margin: 2px 0px; }
 
 				:first-child { margin-top: 4px; }
             	:last-child { margin-bottom: 4px; }
@@ -263,8 +269,9 @@
 
 			#entrContent {
 				margin-top: 20px;
-				width: 650px;
-				padding: 7px 50px;
+
+				max-width: 650px;
+
 				background-color:  $grey-secondary;
 
 				border-radius: 8px;
@@ -278,6 +285,9 @@
 					&:focus { color: $bud-green__hover; }
 				}
 			}
+
+			@media (orientation:landscape) { .entr-cont { width: calc(100% - 10px); padding: 7px 50px; } }
+			@media (orientation:portrait) { .entr-cont { width: calc(100% - 30px); padding: 7px 10px; } }
 		}
     }
 </style>
