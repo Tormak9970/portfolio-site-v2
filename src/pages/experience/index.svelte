@@ -1,37 +1,22 @@
 <script lang="ts" type="module">
-	import ArtEntry from './_artEntry.svelte';
+	import ExperienceEntry from './_experienceEntry.svelte';
     import JumpList from "../_utils/JumpList.svelte";
     import { orientation } from "../../Stores";
-    import { art } from '../../linkConfig';
+    import { experience } from '../../linkConfig';
     import MediaQuery from "../_utils/MediaQuery.svelte";
     import CardEntry from "./_cardEntry.svelte";
 
-    interface ArtEnt {
+    interface ExperienceEnt {
         key:string,
-        data:Art,
+        data:Experience,
         hidden:boolean,
         scrollType:string,
         isLast:boolean
     }
 
-    const jumpNames:Map<number, string> = new Map([[0, "Foreword"]]);
+    const jumpNames:Map<number, string> = new Map();
 
-    const pieces:ArtEnt[] = [
-        {
-            "key": "forword",
-            "data": {
-                "name": "Foreword",
-                "path": undefined,
-                "description": `I am by no means a professional artist, but I have always liked being creative and making different forms of art. 
-                    I enjoy practicing art, and it is a good to take a break from development every now and again. 
-                    Additionally, I find this practice invaluable when it comes to being a developer, 
-                    as being able to impliment creativity into your work can really set you apart, and greatly improve whatever product you are designing.`
-            },
-            "hidden": false,
-            "scrollType": 'down-in',
-            "isLast": false
-        }
-    ];
+    const pieces:ExperienceEnt[] = [];
 
     let scrollIdx:number = 0;
     let isScrolling:boolean = false;
@@ -39,7 +24,7 @@
         if (!isScrolling) {
             const direction:boolean = e.deltaY > 0; // true = down, false = up
             
-            const artElem = document.getElementById('art').children[0];
+            const artElem = document.getElementById('experience').children[0];
             if (!(scrollIdx == 0 && !direction) && !(scrollIdx == artElem.children.length-1 && direction) && Math.abs(e.deltaY) != 0) {
                 isScrolling = true;
                 if (direction) {
@@ -95,13 +80,13 @@
         interceptScrollFromIdx(curIdx < tarIdx, tarIdx);
     }
 
-    function processEntries([key, entr]:[string, Art], i:number) { 
+    function processEntries([key, entr]:[string, Experience], i:number) { 
         pieces.push({
             "key": key,
             "data": entr, 
-            "hidden": i+1 !== 0,
-            "scrollType": i+1 == 0 ? 'down-in' : 'up-out',
-            "isLast": i+1 == art.size
+            "hidden": i !== 0,
+            "scrollType": i == 0 ? 'down-in' : 'up-out',
+            "isLast": i+1 == experience.size
         });
         jumpNames.set(i, entr.name);
         return entr; 
@@ -110,29 +95,21 @@
 
 <svelte:window on:wheel|stopPropagation="{interceptScroll}" />
 
-<div id="art">
+<div id="experience">
     <div class="content{$orientation == 0 ? ' fancy' : ' card'}">
-        <MediaQuery query="(orientation:landscape)" let:matches>
-            {#if matches && $orientation == 0}
-                <ArtEntry entryData={pieces[0].data} hidden={pieces[0].hidden} scrollType={pieces[0].scrollType} isLast={false}/>
-            {:else}
-                <CardEntry entryData={pieces[0].data}/>
-            {/if}
-        </MediaQuery>
-    
-        {#each Array.from(art).map(processEntries) as artEntr, idx}
+        {#each Array.from(experience).map(processEntries) as expEntr, idx}
             <MediaQuery query="(orientation:landscape)" let:matches>
                 {#if matches && $orientation == 0}
-                    <ArtEntry entryData={artEntr} hidden={pieces[idx+1].hidden} scrollType={pieces[idx+1].scrollType} isLast={pieces[idx+1].isLast}/>
+                    <ExperienceEntry entryData={expEntr} hidden={pieces[idx].hidden} scrollType={pieces[idx].scrollType} isLast={pieces[idx].isLast}/>
                 {:else}
-                    <CardEntry entryData={artEntr}/>
+                    <CardEntry entryData={expEntr}/>
                 {/if}
             </MediaQuery>
         {/each }
     </div>
     <MediaQuery query="(orientation:landscape)" let:matches>
         {#if matches}
-            <JumpList len={art.size+1} tooltips={jumpNames} handler={jumpToHandler} scrollIdx={scrollIdx}/>
+            <JumpList len={experience.size} tooltips={jumpNames} handler={jumpToHandler} scrollIdx={scrollIdx}/>
         {/if}
     </MediaQuery>
 </div>
@@ -143,7 +120,7 @@
 	$bud-green: #82b74bff;
     $bud-green__hover: rgb(138, 194, 78);
 
-    #art {
+    #experience {
         width: 100%;
         height: 100%;
 

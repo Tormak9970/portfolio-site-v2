@@ -30,3 +30,10 @@
         name:string,
         linkId:string
     }
+
+    interface Experience {
+        name:string,
+        path:string,
+        position:string,
+        description:string
+    }

@@ -1346,39 +1346,14 @@
 			]
 		}
 	},
-	"experience": {
-		"work": {
-
-		},
-		"languages": {
-			"web-dev": {
-				"name": "Web Development",
-				"description": "",
-				"frameworks": {
-					"TypeScript": {
-						"description": "",
-						"experience": ""
-					},
-					"Svelte": {
-						"description": "",
-						"experience": ""
-					},
-					"SCSS": {
-						"description": "",
-						"experience": ""
-					},
-					"Routify": {
-						"description": "",
-						"experience": ""
-					},
-					"Three.js": {
-						"description": "",
-						"experience": ""
-					}
-				}
-			}
+	"experience": [
+		{
+			"name": "Synergy Animal Behavior",
+			"path": "./img/exp/synergy.png",
+			"position": "Behavior Assistant",
+			"description": "Created and managed client databases and resources for Synergy Animal Behavior as a summer job."
 		}
-	},
+	],
 	"art": [
 		{
 			"name": "SWTOR Neon Sign",
