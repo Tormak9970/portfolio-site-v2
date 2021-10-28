@@ -1,12 +1,17 @@
 <script lang="ts">
-import { afterPageLoad } from "@roxi/routify";
+    import { afterPageLoad, beforeUrlChange } from "@roxi/routify";
 
-import { onMount } from "svelte";
+    let showThank:boolean;
 
+    $: showThank = false;
+
+    let showCrumb:boolean;
+
+    $: showCrumb = false;
 
     function copyToClipboard(e: Event) { copyTextToClipboard('Tormak9970@gmail.com'); }
 
-    function fallbackCopyTextToClipboard(text) {
+    function fallbackCopyTextToClipboard(text: string) {
         let textArea = document.createElement("textarea");
         textArea.value = text;
         textArea.style.top = "0";
@@ -19,50 +24,76 @@ import { onMount } from "svelte";
 
         try {
             document.execCommand('copy');
-            showBreadcrumb();
+            showBreadcrumb("Copied to clipboard.");
         } catch (err) {
             console.error('Fallback: Oops, unable to copy', err);
         }
 
         document.body.removeChild(textArea);
     }
-    function copyTextToClipboard(text) {
+    function copyTextToClipboard(text: string) {
         if (!navigator.clipboard) {
             fallbackCopyTextToClipboard(text);
             return;
         }
         navigator.clipboard.writeText(text).then(function() {
-            showBreadcrumb();
+            showBreadcrumb("Copied to clipboard.");
         }, function(err) {
             console.error('Async: Could not copy text: ', err);
         });
     }
 
-    function showBreadcrumb() {
+    function showBreadcrumb(msg: string) { document.getElementById('breadCrumbCont').innerHTML = msg; showCrumb = true; setTimeout(() => { showCrumb = false; }, 3000); }
 
-    }
-
-    $afterPageLoad(() => {
-        grecaptcha.render('recaptchaCont', {
-            sitekey: "6Lem6_ocAAAAAJzNSej4eQTt-NrXSyNKPv_ezWWp",
-
-        })
-    });
+    $afterPageLoad(() => { grecaptcha.render('recaptchaCont', { sitekey: "6Lem6_ocAAAAAJzNSej4eQTt-NrXSyNKPv_ezWWp" }); });
+    $beforeUrlChange(() => { showThank = true; });
 
     function handleSubmit(e: Event) {
-        e as SubmitEvent;
-        const data = new FormData(<HTMLFormElement>e.currentTarget);
+        e.preventDefault();
+        const form = <HTMLFormElement>e.currentTarget;
+        const data = new FormData(form);
         const captcha = grecaptcha.getResponse();
 
         if (captcha != '') {
             // check other fields' validity
             grecaptcha.reset();
-            return true;
+
+            let numErrored = 0;
+
+            for (const [key, value] of data) {
+                if (value == '' && key != 'g-recaptcha-response') {
+                    numErrored++;
+                    const elem = document.getElementById(key);
+                    elem.style.outline = '1px solid #e24a4a';
+                }
+            }
+
+            if (numErrored > 0) {
+                showBreadcrumb("Please complete the highlighted fields.");
+            } else {
+                sendMimicPost(data);
+                form.reset();
+                showThank = true;
+            }
         } else {
             // display "fill out captcha" here
-            return false;
+            showBreadcrumb("Please complete the reCaptcha");
         }
     }
+
+    function sendMimicPost(data: FormData) {
+        const request = fetch('https://formsubmit.co/Tormak9970@gmail.com', {
+            method: 'POST',
+            headers: {
+                'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+                'content-type': 'application/x-www-form-urlencoded'
+            },
+            mode: 'cors',
+            body: `email=${data.get('email')}&_subject=${data.get('_subject')}&body=${data.get('body')}&_captcha=false`
+        })
+    }
+
+    function highlightHandler(e: Event) { (e.currentTarget as HTMLElement).style.outline = ''; }
 </script>
 
 <div id="infoSection">
@@ -72,25 +103,32 @@ import { onMount } from "svelte";
             <p>The best way to get in touch with me is via email. You can either use the form below or email me at <i class="email-link" on:click|stopPropagation="{copyToClipboard}">Tormak9970@gmail.com</i></p>
         </div>
 
-        <div class="form-wrapper">
-            <form action="https://formsubmit.co/Tormak9970@gmail.com" method="POST" id="contactForm" on:submit|stopPropagation="{handleSubmit}">
-                <label for="email">Email Adress</label>
-                <input type="email" name="email" placeholder="foo@bar.com">
+        {#if showThank}
+            <div class="thank-cont">
+                <h1>Thank you!</h1>
+                <p>Thanks for reaching out! I will try to get back to you as soon as possible!</p>
+            </div>
+        {:else}
+            <div class="form-wrapper">
+                <form action="https://formsubmit.co/Tormak9970@gmail.com" method="POST" id="contactForm" on:submit|stopPropagation="{handleSubmit}">
+                    <label for="email">Email Adress</label>
+                    <input id="email" type="email" name="email" placeholder="foo@bar.com" on:focus="{highlightHandler}">
 
-                <label for="_subject">Subject</label>
-                <input type="text" name="_subject" placeholder="What's on your mind?">
+                    <label for="_subject">Subject</label>
+                    <input id="_subject" type="text" name="_subject" placeholder="What's on your mind?" on:focus="{highlightHandler}">
 
-                <label for="body">Message</label>
-                <textarea name="body" id="formContent" cols="30" rows="10"></textarea>
+                    <label for="body">Message</label>
+                    <textarea id="body" name="body" cols="30" rows="10" on:focus="{highlightHandler}"></textarea>
 
-                <input type="hidden" name="_next" value="https://tormak.dev/contact">
-                <input type="hidden" name="_captcha" value="false">
+                    <div id="recaptchaCont"></div>
 
-                <div id="recaptchaCont"></div>
-
-                <button type="submit">Submit</button>
-            </form>
-        </div>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        {/if}
+    </div>
+    <div class="breadcrump-cont{showCrumb ? '' : ' hidden'}">
+        <div id="breadCrumbCont">Placeholder</div>
     </div>
 </div>
 
@@ -225,6 +263,47 @@ import { onMount } from "svelte";
                     }
                 }
             }
+
+            .thank-cont {
+                max-width: 400px;
+                width: calc(100% - 20px);
+
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                h1 {
+
+                }
+
+                p {
+                    font-size: 16px;
+                    text-align: center;
+                }
+            }
+        }
+
+        .breadcrump-cont {
+            position: absolute;
+
+            padding: 6px 10px;
+            border-radius: 4px;
+
+            background-color: $grey-secondary;
+
+            box-shadow: #151515 1px 1px 10px 0px;
+
+            bottom: 40px;
+
+            transition: bottom 0.4s;
+
+            #breadCrumbCont {
+                font-size: 14px;
+            }
+        }
+
+        .hidden {
+            bottom: -40px;
         }
 	}
 </style>
