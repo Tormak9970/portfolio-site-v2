@@ -46,7 +46,7 @@
     function showBreadcrumb(msg: string) { document.getElementById('breadCrumbCont').innerHTML = msg; showCrumb = true; setTimeout(() => { showCrumb = false; }, 3000); }
 
     $afterPageLoad(() => { grecaptcha.render('recaptchaCont', { sitekey: "6Lem6_ocAAAAAJzNSej4eQTt-NrXSyNKPv_ezWWp" }); });
-    $beforeUrlChange(() => { showThank = true; });
+    $beforeUrlChange(() => { showThank = false; return true; });
 
     function handleSubmit(e: Event) {
         e.preventDefault();
