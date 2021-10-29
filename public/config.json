@@ -463,7 +463,9 @@
 				"status": "Complete (continually updated)",
 				"difficulty": "Moderate",
 				"description": "",
-				"content": {},
+				"content": {
+
+				},
 				"link": "",
 				"isRelative": false,
 				"imgs": [
@@ -841,12 +843,14 @@
 				"status": "",
 				"difficulty": "",
 				"description": "",
-				"content": {},
+				"content": {
+
+				},
 				"link": "",
 				"isRelative": false,
 				"imgs": [
-					"",
-					""
+					"./img/projs/torc-npc-viewer.png",
+					"./img/orgs/torc-icon-2016.png"
 				]
 			}
 		},
@@ -857,7 +861,9 @@
 				"status": "In progress (Beta)",
 				"difficulty": "Complexed",
 				"description": "",
-				"content": {},
+				"content": {
+
+				},
 				"link": "https://github.com/SWTOR-Slicers/Slicers-GUI",
 				"isRelative": false,
 				"imgs": [
@@ -873,11 +879,13 @@
 				"status": "",
 				"difficulty": "",
 				"description": "",
-				"content": {},
+				"content": {
+
+				},
 				"link": "",
 				"isRelative": false,
 				"imgs": [
-					"",
+					"./img/projs/intro-to-web-dev-camp.png",
 					""
 				]
 			}
@@ -1278,11 +1286,11 @@
 				"content": {
 					
 				},
-				"link": "",
+				"link": "https://github.com/SWTOR-Slicers/WikiPedia/wiki",
 				"isRelative": false,
 				"imgs": [
-					"",
-					""
+					"./img/projs/slicers-wiki.png",
+					"./img/orgs/SwtorSlicers.png"
 				]
 			},
 			"slicers-blender-importer": {
@@ -1294,11 +1302,11 @@
 				"content": {
 					
 				},
-				"link": "",
+				"link": "https://github.com/SWTOR-Slicers/Granny2-Plug-In-Blender-2.8x",
 				"isRelative": false,
 				"imgs": [
-					"",
-					""
+					"./img/projs/slicers-blender-importer.png",
+					"./img/orgs/SwtorSlicers.png"
 				]
 			}
 		}
