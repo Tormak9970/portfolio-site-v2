@@ -537,7 +537,7 @@
 				"link": "",
 				"isRelative": false,
 				"imgs": [
-					"",
+					"./img/projs/portfolio-site-v2.png",
 					""
 				]
 			},
@@ -1681,7 +1681,7 @@
 				]
 			},
 			"slicers-blender-importer": {
-				"name": "SWTOR Slicers Blender Importer",
+				"name": "Slicers Blender Importer",
 				"time": "15 hours",
 				"status": "Ongoing",
 				"difficulty": "Moderate-Complexed",
