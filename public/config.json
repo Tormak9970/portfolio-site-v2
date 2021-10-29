@@ -462,9 +462,77 @@
 				"time": "",
 				"status": "Complete (continually updated)",
 				"difficulty": "Moderate",
-				"description": "",
+				"description": "This project is the website you are currently on. It is a replacement for my previous portfolio website, which I had not been keeping up to date. I decided to remake it from scratch using Svelte, TypeScript, and SASS, all of which are awesome frameworks I have wanted to learn for a while.",
 				"content": {
-
+					"time": 1635536684115,
+					"blocks": [
+						{
+							"id": "EHEWUSDdP5",
+							"type": "header",
+							"data": {
+								"text": "Description",
+								"level": 2
+							}
+						},
+						{
+							"id": "5NmJ0NTUar",
+							"type": "paragraph",
+							"data": {
+								"text": "This project is the website you are currently on. It is a replacement for my previous portfolio website, which I had not been keeping up to date. I decided to remake it from scratch using Svelte, TypeScript, and SASS, all of which are awesome frameworks I have wanted to learn for a while."
+							}
+						},
+						{
+							"id": "7NBr7k3fWI",
+							"type": "header",
+							"data": {
+								"text": "Reasons",
+								"level": 2
+							}
+						},
+						{
+							"id": "yaPSjIxAEs",
+							"type": "list",
+							"data": {
+								"style": "unordered",
+								"items": [
+									{
+										"content": "I wanted to make a portfolio site that was easier to keep up to date and looked professional",
+										"items": []
+									},
+									{
+										"content": "I wanted to learn some web technologies I had seen in the past but never got around to looking into",
+										"items": []
+									}
+								]
+							}
+						},
+						{
+							"id": "NmpQSXEmtS",
+							"type": "header",
+							"data": {
+								"text": "Takeaways",
+								"level": 2
+							}
+						},
+						{
+							"id": "n2iyN06a-3",
+							"type": "list",
+							"data": {
+								"style": "unordered",
+								"items": [
+									{
+										"content": "I have a portfolio website that looks professional, is easy to update, and that I can be proud of",
+										"items": []
+									},
+									{
+										"content": "I have experience using TypeScript, Svelte, and SASS",
+										"items": []
+									}
+								]
+							}
+						}
+					],
+					"version": "2.22.2"
 				},
 				"link": "",
 				"isRelative": false,
@@ -839,14 +907,94 @@
 			},
 			"torc-npc-viewers": {
 				"name": "TORC NPC 3D Viewers",
-				"time": "",
-				"status": "",
-				"difficulty": "",
-				"description": "",
+				"time": "10 hours",
+				"status": "Complete",
+				"difficulty": "Moderate",
+				"description": "This project came about as a natural continuation of the TORCommunity Character Designer. It is a 3D viewer for loading the models for different NPC (non player characters) from Star Wars: The Old Republic. It uses a very similar process to the character designer for loading the models, but this time has to take a dynamic input specified on page load.",
 				"content": {
-
+					"time": 1635537118240,
+					"blocks": [
+						{
+							"id": "Q2BIPEDC4a",
+							"type": "header",
+							"data": {
+								"text": "Description",
+								"level": 2
+							}
+						},
+						{
+							"id": "x5s66HjOkz",
+							"type": "paragraph",
+							"data": {
+								"text": "This project came about as a natural continuation of the TORCommunity Character Designer. It is a 3D viewer for loading the models for different NPC (non player characters) from Star Wars: The Old Republic. It uses a very similar process to the character designer for loading the models, but this time has to take a dynamic input specified on page load."
+							}
+						},
+						{
+							"id": "CWdJL0lesi",
+							"type": "header",
+							"data": {
+								"text": "Reasons",
+								"level": 2
+							}
+						},
+						{
+							"id": "gsTNO3IyDV",
+							"type": "list",
+							"data": {
+								"style": "unordered",
+								"items": [
+									{
+										"content": "Natural continuation of my previous project, the Character Designer",
+										"items": []
+									},
+									{
+										"content": "Was a request feature for the TORCommunity website",
+										"items": []
+									},
+									{
+										"content": "One of the other fan sites, JediPedia, had a similar feature that was never flushed out",
+										"items": []
+									},
+									{
+										"content": "Wanted to refine my methods for loading and rendering models",
+										"items": []
+									}
+								]
+							}
+						},
+						{
+							"id": "Pjs3r6ob5T",
+							"type": "header",
+							"data": {
+								"text": "Takeaways",
+								"level": 2
+							}
+						},
+						{
+							"id": "09fYNY-f6o",
+							"type": "list",
+							"data": {
+								"style": "unordered",
+								"items": [
+									{
+										"content": "I know how to load models more efficiently",
+										"items": []
+									},
+									{
+										"content": "The rendering process I use in a variety of projects is more refined",
+										"items": []
+									},
+									{
+										"content": "I was able to design a product that had been requested by people for a few years in a short amount of time",
+										"items": []
+									}
+								]
+							}
+						}
+					],
+					"version": "2.22.2"
 				},
-				"link": "",
+				"link": "https://torcommunity.com/database/search/npc",
 				"isRelative": false,
 				"imgs": [
 					"./img/projs/torc-npc-viewer.png",
@@ -860,9 +1008,108 @@
 				"time": "250+ hours",
 				"status": "In progress (Beta)",
 				"difficulty": "Complexed",
-				"description": "",
+				"description": "This is by far the project I am the most proud of. It is the culmination of a lot of work by both me and the SWTOR Slicers community, and the result is a truly unique piece of software that serves its purpose well. The idea behind making it was to optimize and improve all existing tools, and bundle them all into one cohesive, fully customizable application.",
 				"content": {
-
+					"time": 1635544729123,
+					"blocks": [
+						{
+							"id": "6rSLg_atGs",
+							"type": "header",
+							"data": {
+								"text": "Description",
+								"level": 2
+							}
+						},
+						{
+							"id": "Lx6r8GlO94",
+							"type": "paragraph",
+							"data": {
+								"text": "This is by far the project I am the most proud of. It is the culmination of a lot of work by both me and the SWTOR Slicers community, and the result is a truly unique piece of software that serves its purpose well. The idea behind making it was to optimize and improve all existing tools, and bundle them all into one cohesive, fully customizable application."
+							}
+						},
+						{
+							"id": "rCYqP-GvHT",
+							"type": "header",
+							"data": {
+								"text": "Reasons",
+								"level": 2
+							}
+						},
+						{
+							"id": "hPvtdTw4mr",
+							"type": "list",
+							"data": {
+								"style": "unordered",
+								"items": [
+									{
+										"content": "I wanted to make an application, because I had never done that before",
+										"items": []
+									},
+									{
+										"content": "I was sick of all the default C# UIs on the existing tools",
+										"items": []
+									},
+									{
+										"content": "I wanted to make improvements to a lot of the existing tools because they were not nearly as efficient as the could be",
+										"items": []
+									}
+								]
+							}
+						},
+						{
+							"id": "AYxAPU5RS0",
+							"type": "header",
+							"data": {
+								"text": "Takeaways",
+								"level": 2
+							}
+						},
+						{
+							"id": "16uDzqC2VL",
+							"type": "list",
+							"data": {
+								"style": "unordered",
+								"items": [
+									{
+										"content": "How to make apps using the Electron.js framework",
+										"items": []
+									},
+									{
+										"content": "The GO programming language",
+										"items": []
+									},
+									{
+										"content": "How to write native code and run it in process using Edge.js",
+										"items": []
+									},
+									{
+										"content": "How to take advantage of offloading tasks to web workers",
+										"items": []
+									},
+									{
+										"content": "How to effectively run a beta test and implement user feedback",
+										"items": []
+									},
+									{
+										"content": "How to create a good UX (user experience)",
+										"items": []
+									},
+									{
+										"content": "How to effectively pass data between different parts of an application, without compromising on performance",
+										"items": []
+									}
+								]
+							}
+						},
+						{
+							"id": "BIIC3nLKZ6",
+							"type": "paragraph",
+							"data": {
+								"text": "This is a long term project, so I am sure I will continue to learn from it"
+							}
+						}
+					],
+					"version": "2.22.2"
 				},
 				"link": "https://github.com/SWTOR-Slicers/Slicers-GUI",
 				"isRelative": false,
@@ -875,12 +1122,88 @@
 		"education": {
 			"web-dev-intro-camp": {
 				"name": "SGIS Intro to web dev camp",
-				"time": "",
-				"status": "",
-				"difficulty": "",
-				"description": "",
+				"time": "30 hours",
+				"status": "Complete",
+				"difficulty": "Moderate",
+				"description": "This project was a venture into an area I had absolutely no experience with, teaching. I had the idea to make the camp because my school gave me the opportunity to get into computer science, and I wanted to offer others that opportunity as well. I also saw the camp as a great way to solidify my understanding of web development.",
 				"content": {
-
+					"time": 1635537815307,
+					"blocks": [
+						{
+							"id": "Niwf8E7hGX",
+							"type": "header",
+							"data": {
+								"text": "Description",
+								"level": 2
+							}
+						},
+						{
+							"id": "sDg2kIdR_h",
+							"type": "paragraph",
+							"data": {
+								"text": "This project was a venture into an area I had absolutely no experience with, teaching. I had the idea to make the camp because my school gave me the opportunity to get into computer science, and I wanted to offer others that opportunity as well. I also saw the camp as a great way to solidify my understanding of web development."
+							}
+						},
+						{
+							"id": "MVneFqfcim",
+							"type": "header",
+							"data": {
+								"text": "Reasons",
+								"level": 2
+							}
+						},
+						{
+							"id": "zHTrKuxW3H",
+							"type": "list",
+							"data": {
+								"style": "unordered",
+								"items": [
+									{
+										"content": "I wanted to give back to my school for giving me the chance to get into computer science",
+										"items": []
+									},
+									{
+										"content": "I wanted to give others the same chance I had to discover a passion and talent they didn't know they had.",
+										"items": []
+									},
+									{
+										"content": "I wanted to make sure I understood the fundamentals of web development before moving on to more advanced concepts",
+										"items": []
+									}
+								]
+							}
+						},
+						{
+							"id": "aDmAwZu4Ag",
+							"type": "header",
+							"data": {
+								"text": "Takeaways",
+								"level": 2
+							}
+						},
+						{
+							"id": "f3QSRYGcbm",
+							"type": "list",
+							"data": {
+								"style": "unordered",
+								"items": [
+									{
+										"content": "I solidified my understanding of the fundamentals of web development",
+										"items": []
+									},
+									{
+										"content": "I had the opportunity to share my love of programming with others, and inspire them to continue learning",
+										"items": []
+									},
+									{
+										"content": "I learned how to efficiently summarize and present data in a way people can comprehend",
+										"items": []
+									}
+								]
+							}
+						}
+					],
+					"version": "2.22.2"
 				},
 				"link": "",
 				"isRelative": false,
@@ -1282,9 +1605,73 @@
 				"time": "5 hours",
 				"status": "Ongoing",
 				"difficulty": "Simple",
-				"description": "",
+				"description": "The SWTOR Slicers Wiki is a collection of guides that serve to help people through the various processes involved in data mining, extraction, and modding. It continues to grow as we add more and more tutorials, and serves as a one stop shop for all things SWTOR Slicers.",
 				"content": {
-					
+					"time": 1635543809859,
+					"blocks": [
+						{
+							"id": "E2HzszzOTH",
+							"type": "header",
+							"data": {
+								"text": "Description",
+								"level": 2
+							}
+						},
+						{
+							"id": "G6CVmJYP8w",
+							"type": "paragraph",
+							"data": {
+								"text": "The SWTOR Slicers Wiki is a collection of guides that serve to help people through the various processes involved in data mining, extraction, and modding. It continues to grow as we add more and more tutorials, and serves as a one stop shop for all things SWTOR Slicers."
+							}
+						},
+						{
+							"id": "rYJ1sS65S5",
+							"type": "header",
+							"data": {
+								"text": "Reasons",
+								"level": 2
+							}
+						},
+						{
+							"id": "yiDofGrzY_",
+							"type": "list",
+							"data": {
+								"style": "unordered",
+								"items": [
+									{
+										"content": "We wanted to have a better way to explain the ins and outs of our community (we previously just had pdfs)",
+										"items": []
+									},
+									{
+										"content": "I wanted to organize our guides into a more intuitive design, and provide a place to put documentation of our work.",
+										"items": []
+									}
+								]
+							}
+						},
+						{
+							"id": "YJWxdQ6Dih",
+							"type": "header",
+							"data": {
+								"text": "Takeaways",
+								"level": 2
+							}
+						},
+						{
+							"id": "62ldxcP3zW",
+							"type": "list",
+							"data": {
+								"style": "unordered",
+								"items": [
+									{
+										"content": "We have a more organized way to present our guides, and a nice place to direct new people",
+										"items": []
+									}
+								]
+							}
+						}
+					],
+					"version": "2.22.2"
 				},
 				"link": "https://github.com/SWTOR-Slicers/WikiPedia/wiki",
 				"isRelative": false,
@@ -1298,9 +1685,81 @@
 				"time": "15 hours",
 				"status": "Ongoing",
 				"difficulty": "Moderate-Complexed",
-				"description": "",
+				"description": "The blender importer was very different before I started making changes. I added multi file importing, as well as one click imports. The one click imports work with the TORC Character Designer and my Locator tool to import all models and materials for a given SWTOR character, allowing artists to get right to making art.",
 				"content": {
-					
+					"time": 1635544088588,
+					"blocks": [
+						{
+							"id": "k3nSWJlJ69",
+							"type": "header",
+							"data": {
+								"text": "Description",
+								"level": 2
+							}
+						},
+						{
+							"id": "qYiXnsE3Nw",
+							"type": "paragraph",
+							"data": {
+								"text": "The blender importer was very different before I started making changes. I added multi file importing, as well as one click imports. The one click imports work with the TORC Character Designer and my Locator tool to import all models and materials for a given SWTOR character, allowing artists to get right to making art."
+							}
+						},
+						{
+							"id": "Hfb11vexVb",
+							"type": "header",
+							"data": {
+								"text": "Reasons",
+								"level": 2
+							}
+						},
+						{
+							"id": "rWIKyKfauv",
+							"type": "list",
+							"data": {
+								"style": "unordered",
+								"items": [
+									{
+										"content": "Wanted to help contribute to the organization",
+										"items": []
+									},
+									{
+										"content": "People had been asking for multi model importing for a while",
+										"items": []
+									},
+									{
+										"content": "I wanted to automate the last piece of the process, as I had already done the first two",
+										"items": []
+									}
+								]
+							}
+						},
+						{
+							"id": "IyUtn1ErXZ",
+							"type": "header",
+							"data": {
+								"text": "Takeaways",
+								"level": 2
+							}
+						},
+						{
+							"id": "VJFplbo3Vx",
+							"type": "list",
+							"data": {
+								"style": "unordered",
+								"items": [
+									{
+										"content": "Was able to meet people's requests for multi file importing",
+										"items": []
+									},
+									{
+										"content": "I was able to fully automate the importing process, taking a nearly 2 hour process and making it take 20 seconds",
+										"items": []
+									}
+								]
+							}
+						}
+					],
+					"version": "2.22.2"
 				},
 				"link": "https://github.com/SWTOR-Slicers/Granny2-Plug-In-Blender-2.8x",
 				"isRelative": false,
