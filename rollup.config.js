@@ -6,6 +6,7 @@ import { terser } from 'rollup-plugin-terser';
 import sveltePreprocess from 'svelte-preprocess';
 import typescript from '@rollup/plugin-typescript';
 import css from 'rollup-plugin-css-only';
+import { generateSW } from 'rollup-plugin-workbox';
 
 const production = !process.env.ROLLUP_WATCH;
 
@@ -64,6 +65,43 @@ export default {
 		typescript({
 			sourceMap: !production,
 			inlineSources: !production
+		}),
+		generateSW({
+			swDest: './public/service-worker.js',
+			globDirectory: './public',
+			globPatterns: [
+				'**/*.{html,json,js,css}',
+			],
+			skipWaiting: true,
+			clientsClaim: true,
+			runtimeCaching: [{
+				urlPattern: /\.(?:png|jpg|jpeg|svg|webp)$/,
+				handler: 'NetworkFirst',
+				options: {
+					cacheName: 'images',
+					expiration: {
+						maxEntries: 10,
+					},
+				},
+			}, {
+				urlPattern: /\.(?:js|css)$/,
+				handler: 'NetworkFirst',
+				options: {
+					cacheName: 'assets',
+					expiration: {
+						maxEntries: 10,
+					},
+				},
+			}, {
+				urlPattern: /\.(?:html)$/,
+				handler: 'NetworkFirst',
+				options: {
+					cacheName: 'pages',
+					expiration: {
+						maxEntries: 10,
+					},
+				},
+			}],
 		}),
 
 		// In dev mode, call `npm run start` once

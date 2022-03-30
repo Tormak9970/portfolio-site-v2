@@ -9,7 +9,7 @@
             <div class="container">
                 <div class="img-container">
                     <!-- svelte-ignore a11y-img-redundant-alt -->
-                    <img src="img/profile pic temp.png" alt="temporary profile picture">
+                    <img src="img/logo.svg" width="384" height="384" alt="temporary profile picture">
                 </div>
             </div>
             <div class="container">
@@ -29,7 +29,7 @@
             <div class="container">
                 <div class="img-container">
                     <!-- svelte-ignore a11y-img-redundant-alt -->
-                    <img src="img/profile pic temp.png" alt="temporary profile picture">
+                    <img src="img/logo.svg" width="384" height="384" alt="temporary profile picture">
                 </div>
             </div>
             <div class="bio-cont">
@@ -81,7 +81,7 @@
             }
 
             img {
-                border-radius: 50%;
+                // border-radius: 50%; // will add back once I have a non placeholder img
             }
         }
 	}
@@ -107,7 +107,7 @@
             align-items: center;
 
             img {
-                border-radius: 50%;
+                // border-radius: 50%; // will add back once I have a non placeholder img
                 width: 100%;
             }
         }
