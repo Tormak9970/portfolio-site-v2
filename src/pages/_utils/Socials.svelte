@@ -4,7 +4,7 @@
 
 <div id="socials">
 	<div class="socials-entr">
-        <a href="https://github.com/Tormak9970" target="_blank" rel="noopener noreferrer" class="social-btn">
+        <a href="https://github.com/Tormak9970" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Github Profile Link">
             <i class="fa fa-github-square"></i>
         </a>
     </div>

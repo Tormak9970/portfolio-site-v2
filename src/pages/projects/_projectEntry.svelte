@@ -82,11 +82,11 @@
 		<div class="cit-cont {entryData.link != "" ? "" : " hidden"}">
 			<div class="cit-label">Visit:</div>
 			{#if isRelative}
-				<a class="proj-link" href="{$url(entryData.link)}">
+				<a class="proj-link" href="{$url(entryData.link)}" aria-label="View project link">
 					<i class="fas fa-external-link-alt"></i>
 				</a>
 			{:else}
-				<a class="proj-link" href="{entryData.link}" rel="noreferrer noopener" target="_blank">
+				<a class="proj-link" href="{entryData.link ? entryData.link : '#'}" rel="noreferrer noopener" target="_blank" aria-label="View project link">
 					<i class="fas fa-external-link-alt"></i>
 				</a>
 			{/if}
