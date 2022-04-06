@@ -7,6 +7,7 @@ import sveltePreprocess from 'svelte-preprocess';
 import typescript from '@rollup/plugin-typescript';
 import css from 'rollup-plugin-css-only';
 import { generateSW } from 'rollup-plugin-workbox';
+import SitemapPlugin from 'rollup-plugin-sitemap';
 
 const production = !process.env.ROLLUP_WATCH;
 
@@ -102,6 +103,19 @@ export default {
 					},
 				},
 			}],
+		}),
+		SitemapPlugin({
+			baseUrl: 'https://swtorslicers.org',
+			contentBase: 'dist',
+			routes: [
+				{ path: '/', name: 'Home' },
+				{ path: '/experience', name: 'Experience' },
+				{ path: '/featured', name: 'Featured' },
+				{ path: '/projects', name: 'Projects' },
+				{ path: '/organizations', name: 'Organizations' },
+				{ path: '/art', name: 'Art Gallery' },
+				{ path: '/contact', name: 'Contact' },
+			]
 		}),
 
 		// In dev mode, call `npm run start` once
