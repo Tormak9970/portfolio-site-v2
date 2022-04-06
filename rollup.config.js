@@ -106,7 +106,7 @@ export default {
 		}),
 		SitemapPlugin({
 			baseUrl: 'https://swtorslicers.org',
-			contentBase: 'dist',
+			contentBase: 'public',
 			routes: [
 				{ path: '/', name: 'Home' },
 				{ path: '/experience', name: 'Experience' },
