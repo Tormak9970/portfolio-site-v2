@@ -105,7 +105,7 @@ export default {
 			}],
 		}),
 		SitemapPlugin({
-			baseUrl: 'https://swtorslicers.org',
+			baseUrl: 'https://travislane.dev',
 			contentBase: 'public',
 			routes: [
 				{ path: '/', name: 'Home' },
