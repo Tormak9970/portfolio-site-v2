@@ -29,7 +29,7 @@
             <div class="container">
                 <div class="img-container">
                     <!-- svelte-ignore a11y-img-redundant-alt -->
-                    <img src="img/logo.svg" width="384" height="384" alt="temporary profile picture">
+                    <img src="img/icons/maskable_icon_x192.webp" width="192" height="192" alt="temporary profile picture">
                 </div>
             </div>
             <div class="bio-cont">

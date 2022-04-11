@@ -41,15 +41,13 @@
 <div id="jumpToCont">
     <div class="layout-toggle">
         <div class="option">
-            <!-- svelte-ignore a11y-invalid-attribute -->
-            <a id="fancy" class="tooltip{$orientation == 0 ? ' selected' : ''}" on:click="{setOrientation}" href="#">
+            <a id="fancy" class="tooltip{$orientation == 0 ? ' selected' : ''}" on:click="{setOrientation}">
                 <i class="fas fa-bars"></i>
                 <span class="tooltip-text">Fancy</span>
             </a>
         </div>
         <div class="option">
-            <!-- svelte-ignore a11y-invalid-attribute -->
-            <a id="card" class="tooltip{$orientation == 1 ? ' selected' : ''}" on:click="{setOrientation}" href="#">
+            <a id="card" class="tooltip{$orientation == 1 ? ' selected' : ''}" on:click="{setOrientation}">
                 <i class="fas fa-grip-horizontal"></i>
                 <span class="tooltip-text">Card</span>
             </a>
@@ -59,8 +57,7 @@
         <div class="jump-nav-container">
             {#each Array(len) as _, i}
                 <div>
-                    <!-- svelte-ignore a11y-invalid-attribute -->
-                    <a id="{i}-jumpNav" class="tooltip {i == scrollIdx ? setLast(i) : ''}" on:click="{wrapper}" href="#">
+                    <a id="{i}-jumpNav" class="tooltip {i == scrollIdx ? setLast(i) : ''}" on:click="{wrapper}">
                         {#if i == scrollIdx}
                             <i class="fas fa-circle"></i>
                         {:else}

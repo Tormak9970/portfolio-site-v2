@@ -7,7 +7,6 @@ import sveltePreprocess from 'svelte-preprocess';
 import typescript from '@rollup/plugin-typescript';
 import css from 'rollup-plugin-css-only';
 import { generateSW } from 'rollup-plugin-workbox';
-import SitemapPlugin from 'rollup-plugin-sitemap';
 
 const production = !process.env.ROLLUP_WATCH;
 
