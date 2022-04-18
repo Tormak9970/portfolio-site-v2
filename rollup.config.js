@@ -103,19 +103,19 @@ export default {
 				},
 			}],
 		}),
-		SitemapPlugin({
-			baseUrl: 'https://travislane.dev',
-			contentBase: 'public',
-			routes: [
-				{ path: '/', name: 'Home' },
-				{ path: '/experience', name: 'Experience' },
-				{ path: '/featured', name: 'Featured' },
-				{ path: '/projects', name: 'Projects' },
-				{ path: '/organizations', name: 'Organizations' },
-				{ path: '/art', name: 'Art Gallery' },
-				{ path: '/contact', name: 'Contact' },
-			]
-		}),
+		// SitemapPlugin({
+		// 	baseUrl: 'https://travislane.dev',
+		// 	contentBase: 'public',
+		// 	routes: [
+		// 		{ path: '/', name: 'Home' },
+		// 		{ path: '/experience', name: 'Experience' },
+		// 		{ path: '/featured', name: 'Featured' },
+		// 		{ path: '/projects', name: 'Projects' },
+		// 		{ path: '/organizations', name: 'Organizations' },
+		// 		{ path: '/art', name: 'Art Gallery' },
+		// 		{ path: '/contact', name: 'Contact' },
+		// 	]
+		// }),
 
 		// In dev mode, call `npm run start` once
 		// the bundle has been generated

@@ -76,6 +76,7 @@
 	$grey-primary: #252525;
 	$grey-secondary: #383838;
 	$bud-green: #82b74bff;
+	$font-color: rgb(231, 231, 231);
     $bud-green__hover: rgb(138, 194, 78);
     $tooltip-color: rgb(71, 71, 71);
 
@@ -113,7 +114,7 @@
                 margin: 1px 2px;
                 cursor: pointer;
 
-                .selected { color: $bud-green; }
+                .selected { color: $bud-green; fill: $bud-green; }
 
                 a {
                     width: 20px;
@@ -198,7 +199,7 @@
                 margin: 1px 2px;
                 cursor: pointer;
 
-                .selected { color: $bud-green; }
+                .selected { color: $bud-green; fill: $bud-green; }
 
                 a {
                     width: 20px;
