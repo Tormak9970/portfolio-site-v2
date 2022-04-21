@@ -6,6 +6,7 @@
 	import ProjectEntry from "./projects/_projectEntry.svelte";
 	import ImageModal from "./_utils/ImageModal.svelte";
 	import MediaQuery from "./_utils/MediaQuery.svelte";
+	import LoadingSpinner from "./_utils/LoadingSpinner.svelte"
 	import { isActive, url } from "@roxi/routify";
 
 	function removeAllIndicators() {
@@ -74,6 +75,8 @@
 
 <main>
 	{#await loadConfig() then _}
+		<LoadingSpinner />
+	<!-- {:then _}
 		<MediaQuery query="(orientation:landscape)" let:matches>
 			{#if matches}
 				<div class="header">
@@ -166,7 +169,7 @@
 				{/if}
 			</MediaQuery>
 		</div>
-		<ImageModal config={$imageModalData} />
+		<ImageModal config={$imageModalData} /> -->
     {/await}
 </main>
 
