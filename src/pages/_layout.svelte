@@ -1,13 +1,15 @@
 <script lang="ts">
-	import { startProjIdx, projectDisplay, showProject, imageModalData, navCheck } from "../Stores";
-	import Socials from "./_utils/Socials.svelte";
-	import { loadConfig } from "../linkConfig";
+	import { fade } from 'svelte/transition';
+	import { isActive, url } from "@roxi/routify";
 
 	import ProjectEntry from "./projects/_projectEntry.svelte";
 	import ImageModal from "./_utils/ImageModal.svelte";
 	import MediaQuery from "./_utils/MediaQuery.svelte";
-	import LoadingSpinner from "./_utils/LoadingSpinner.svelte"
-	import { isActive, url } from "@roxi/routify";
+	import Socials from "./_utils/Socials.svelte";
+	import LoadingSpinner from "./_utils/LoadingSpinner.svelte";
+	
+	import { startProjIdx, projectDisplay, showProject, imageModalData, navCheck } from "../Stores";
+	import { loadConfig } from "../linkConfig";
 
 	function removeAllIndicators() {
 		const intInds = document.querySelectorAll('.interaction-indicator');
@@ -74,9 +76,9 @@
 </script>
 
 <main>
-	{#await loadConfig() then _}
+	{#await loadConfig()}
 		<LoadingSpinner />
-	<!-- {:then _}
+	{:then _}
 		<MediaQuery query="(orientation:landscape)" let:matches>
 			{#if matches}
 				<div class="header">
@@ -169,7 +171,7 @@
 				{/if}
 			</MediaQuery>
 		</div>
-		<ImageModal config={$imageModalData} /> -->
+		<ImageModal config={$imageModalData} />
     {/await}
 </main>
 

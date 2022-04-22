@@ -1,9 +1,11 @@
 <script lang="ts">
- export let width=100;
- export let height=100;
+    import {fade} from 'svelte/transition';
+    
+    export let width=100;
+    export let height=100;
 </script>
 
-<div class="loading-spinner-cont">
+<div class="loading-spinner-cont" transition:fade>
     <div style="top: 48%;">Loading</div>
     <svg width="{width}" height="{height}" viewBox="0 0 100 100" >
         <g id="layer1">

@@ -1,6 +1,6 @@
 {
-  "name": "svelte-app",
-  "version": "1.0.0",
+  "name": "portfolio-site-v2",
+  "version": "1.6.0",
   "private": true,
   "scripts": {
     "dev": "run-p dev:*",
