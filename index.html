@@ -6,8 +6,6 @@
     <meta name="description" content="Travis Lane. Aspiring Software Engineer and Artist">
     <title>Travis Lane</title>
 
-    <link rel="stylesheet" href="/global.css">
-    <link rel="stylesheet" href="/build/bundle.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&amp;display=swap" rel="stylesheet">
@@ -15,22 +13,49 @@
     <script defer src="https://kit.fontawesome.com/3d360bd07a.js" crossorigin="anonymous"></script>
     <script defer src="https://www.google.com/recaptcha/api.js"></script>
 
-    <script defer="" type="module" src="/build/bundle.js"></script>
-
     <meta name="apple-mobile-web-app-capable" content="yes">
-
-	<meta name="theme-color" content="#82b74b" />
-
+	  <meta name="theme-color" content="#82b74b" />
     <link rel="apple-touch-icon" href="/img/icons/maskable_icon_x192.webp">
     
     <link rel="icon" href="/img/logo.svg" />
     <link rel="manifest" href="/manifest.json">
-    </head>
+
+    <style>
+      html, body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+
+        background-color: #252525;
+        color: rgb(231, 231, 231);
+        font-family: 'Source Sans Pro', sans-serif;
+      }
+
+      ::-webkit-scrollbar {
+          width: 8px;
+          height: 8px;
+      }
+      ::-webkit-scrollbar-track {
+          background: transparent;
+      }
+      ::-webkit-scrollbar-thumb {
+          background: #383838;
+          border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+          background: #82b74bff;
+      }
+      ::-webkit-scrollbar-corner { background: transparent; }
+    </style>
+  </head>
   <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
+    <script type="module">
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/service-worker.js');
+      }
+    </script>
   </body>
-  <script type="module">
-	if ('serviceWorker' in navigator) {
-	  navigator.serviceWorker.register('/service-worker.js');
-	}
-  </script>
 </html>

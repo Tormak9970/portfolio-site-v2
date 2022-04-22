@@ -9,7 +9,7 @@
 
     $: showCrumb = false;
 
-    function copyToClipboard(e: Event) { copyTextToClipboard('Tormak9970@gmail.com'); }
+    function copyToClipboard() { copyTextToClipboard('Tormak9970@gmail.com'); }
 
     function fallbackCopyTextToClipboard(text: string) {
         let textArea = document.createElement("textarea");
@@ -23,6 +23,7 @@
         textArea.select();
 
         try {
+            // @ts-ignore
             document.execCommand('copy');
             showBreadcrumb("Copied to clipboard.");
         } catch (err) {
@@ -45,6 +46,7 @@
 
     function showBreadcrumb(msg: string) { document.getElementById('breadCrumbCont').innerHTML = msg; showCrumb = true; setTimeout(() => { showCrumb = false; }, 3000); }
 
+    // @ts-ignore
     $afterPageLoad(() => { grecaptcha.render('recaptchaCont', { sitekey: "6Lem6_ocAAAAAJzNSej4eQTt-NrXSyNKPv_ezWWp" }); });
     $beforeUrlChange(() => { showThank = false; return true; });
 
@@ -52,10 +54,12 @@
         e.preventDefault();
         const form = <HTMLFormElement>e.currentTarget;
         const data = new FormData(form);
+        // @ts-ignore
         const captcha = grecaptcha.getResponse();
 
         if (captcha != '') {
             // check other fields' validity
+            // @ts-ignore
             grecaptcha.reset();
 
             let numErrored = 0;
@@ -82,7 +86,7 @@
     }
 
     function sendMimicPost(data: FormData) {
-        const request = fetch('https://formsubmit.co/Tormak9970@gmail.com', {
+        fetch('https://formsubmit.co/Tormak9970@gmail.com', {
             method: 'POST',
             headers: {
                 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
@@ -271,10 +275,6 @@
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-
-                h1 {
-
-                }
 
                 p {
                     font-size: 16px;

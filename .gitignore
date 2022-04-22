@@ -3,5 +3,6 @@
 /.vscode/
 /.routify/
 /src/firebase.js
+/dist
 
 .DS_Store

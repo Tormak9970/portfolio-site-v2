@@ -2,31 +2,30 @@
   "name": "portfolio-site-v2",
   "version": "1.6.0",
   "private": true,
+  "type": "module",
   "scripts": {
-    "dev": "run-p dev:*",
-    "dev:rollup": "rollup -c -w",
-    "dev:routify": "routify",
-    "build": "routify -b && rollup -c",
-    "start": "sirv public --no-clear --single",
-    "check": "svelte-check --tsconfig ./tsconfig.json"
+    "dev": "routify -c dev:vite ",
+    "build": "svelte-check && routify -b && vite build",
+    "dev:vite": "vite",
+    "serve": "vite preview",
+    "validate": "svelte-check"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^17.0.0",
     "@rollup/plugin-node-resolve": "^11.0.0",
     "@rollup/plugin-typescript": "^8.0.0",
     "@roxi/routify": "^2.18.3",
+    "@sveltejs/vite-plugin-svelte": "^1.0.0-next.30",
+    "@tormak/vite-plugin-sitemap": "^1.1.18",
     "@tsconfig/svelte": "^2.0.0",
     "npm-run-all": "^4.1.5",
-    "rollup": "^2.3.4",
-    "rollup-plugin-css-only": "^3.1.0",
-    "rollup-plugin-livereload": "^2.0.0",
-    "rollup-plugin-svelte": "^7.0.0",
-    "rollup-plugin-terser": "^7.0.0",
+    "sass": "^1.41.0",
     "svelte": "^3.42.5",
     "svelte-check": "^2.0.0",
     "svelte-preprocess": "^4.0.0",
     "tslib": "^2.0.0",
-    "typescript": "^4.4.3"
+    "typescript": "^4.4.3",
+    "vite": "^2.8.0"
   },
   "dependencies": {
     "@editorjs/code": "^2.7.0",
@@ -42,13 +41,6 @@
     "@fortawesome/fontawesome-free": "^5.15.4",
     "editorjs-html": "^3.4.2",
     "firebase": "^9.6.10",
-    "rollup-plugin-workbox": "^6.2.0",
-    "sass": "^1.41.0",
-    "sirv-cli": "^1.0.0",
-    "workbox-cacheable-response": "^6.4.2",
-    "workbox-expiration": "^6.4.2",
-    "workbox-routing": "^6.4.2",
-    "workbox-strategies": "^6.4.2",
-    "workbox-sw": "^6.4.2"
+    "rollup-plugin-workbox": "^6.2.0"
   }
 }

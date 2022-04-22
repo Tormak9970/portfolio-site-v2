@@ -26,8 +26,8 @@
     jumpTo = (id:string) => {
         const project:Project = projects.get(id);
         if (project) {
-            const curIdx = pieces.findIndex((val:ProjectEnt, i:number) => { return val.key == id; });
-            const curHIdx = pieces.findIndex((val:ProjectEnt, i:number) => { return !val.hidden; });
+            const curIdx = pieces.findIndex((val:ProjectEnt) => { return val.key == id; });
+            const curHIdx = pieces.findIndex((val:ProjectEnt) => { return !val.hidden; });
             pieces[curHIdx].hidden = true;
             
             scrollIdx = curIdx < curHIdx ? curIdx-1 : curIdx+1;
