@@ -6,7 +6,7 @@
     export let scrollType:string;
     export let isLast:boolean;
 
-    function showModal(e: MouseEvent) {
+    function showModal() {
         $imageModalData = { "id": "artPreviewModal", "data": { "path": entryData.path, "name": entryData.name } };
         setTimeout(() => { $showing = true; }, 30);
     }

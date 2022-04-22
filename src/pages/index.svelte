@@ -2,7 +2,6 @@
 	import MediaQuery from "./_utils/MediaQuery.svelte";
 </script>
 
-
 <MediaQuery query="(orientation:landscape)" let:matches>
     {#if matches}
         <div id="aboutSection" class="landscape">

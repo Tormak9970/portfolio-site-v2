@@ -20,7 +20,7 @@
     const setLoss = (stat:boolean) => { lossModal.show(stat); };
 
     $afterPageLoad(() => { $showProject = false; });
-    $beforeUrlChange((event, route) => {
+    $beforeUrlChange((_: any, route: { path: string|string[]; }) => {
         if (route.path.indexOf('/projects') > -1 && !$navCheck) $showProject = true;
         return true;
     });

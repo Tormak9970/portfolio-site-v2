@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { fade } from 'svelte/transition';
 	import { isActive, url } from "@roxi/routify";
 
 	import ProjectEntry from "./projects/_projectEntry.svelte";

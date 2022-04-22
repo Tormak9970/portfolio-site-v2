@@ -12,8 +12,4 @@
 	$font-color: rgb(231, 231, 231);
 	$bud-green: #82b74bff;
     $bud-green__hover: rgb(138, 194, 78);
-
-    main {
-
-    }
 </style>
