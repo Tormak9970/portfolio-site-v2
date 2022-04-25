@@ -1000,6 +1000,94 @@
 					"./img/projs/torc-npc-viewer.png",
 					"./img/orgs/torc-icon-2016.png"
 				]
+			},
+			"vite-plugin-sitemap": {
+				"name": "Vite-Plugin-Sitemap",
+				"time": "20 hours",
+				"status": "Complete",
+				"difficulty": "Simple",
+				"description": "I had the idea to make this little npm package because I was working on my portfolio, and came across a neat rollup plugin for generating sitemaps. Vite allows users to use most rollup plugins, so I just used that, but it caused some issues, so I decided to write my own with some added features.",
+				"content": {
+					"time": 1650923458531,
+					"blocks": [
+						{
+							"id": "MvdHNFFz4d",
+							"type": "header",
+							"data": {
+								"text": "Description",
+								"level": 2
+							}
+						},
+						{
+							"id": "gdxiqz3U_D",
+							"type": "paragraph",
+							"data": {
+								"text": "I had the idea to make this npm package because I was working on my portfolio, and came across a neat little rollup plugin for generating sitemaps. Vite allows users to use most rollup plugins, so I just used that, but it caused some issues, so I decided to write my own with some added features."
+							}
+						},
+						{
+							"id": "it04sm7mzL",
+							"type": "header",
+							"data": {
+								"text": "Reasons",
+								"level": 2
+							}
+						},
+						{
+							"id": "8vljNfeNgJ",
+							"type": "list",
+							"data": {
+								"style": "unordered",
+								"items": [
+									{
+										"content": "Found a similar Rollup plugin, which proved problematic when used with github actions",
+										"items": []
+									},
+									{
+										"content": "Needed to generate sitemaps for both this website and SWTORSlicers.org",
+										"items": []
+									},
+									{
+										"content": "Wanted to add a hook to allow dynamic sitemap generation to the plugin",
+										"items": []
+									}
+								]
+							}
+						},
+						{
+							"id": "fIYKc3fzce",
+							"type": "header",
+							"data": {
+								"text": "Takeaways",
+								"level": 2
+							}
+						},
+						{
+							"id": "oHFnUhy81i",
+							"type": "list",
+							"data": {
+								"style": "unordered",
+								"items": [
+									{
+										"content": "Learned how to create an npm package",
+										"items": []
+									},
+									{
+										"content": "Created a useful little package for others to use",
+										"items": []
+									}
+								]
+							}
+						}
+					],
+					"version": "2.22.2"
+				},
+				"link": "https://www.npmjs.com/package/@tormak/vite-plugin-sitemap",
+				"isRelative": false,
+				"imgs": [
+					"./img/projs/vite-plugin-sitemap.png",
+					"./img/orgs/vite-logo.png"
+				]
 			}
 		},
 		"software-engineering": {
