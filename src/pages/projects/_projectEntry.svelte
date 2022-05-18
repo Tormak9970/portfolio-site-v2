@@ -10,7 +10,7 @@
 	$: isRelative = false;
 
 	function imageParser({data}) {
-		return `<img class="image-tool__image-picture" src="${data.file.webUrl}">`;
+		return `<img class="image-tool__image-picture" src="${data.file.url}">`;
 	}
 
 	const edjsParser = edjsHTML({
