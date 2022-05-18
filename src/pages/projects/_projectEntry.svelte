@@ -1,72 +1,31 @@
 <script lang="ts">
-    import EditorJs from '@editorjs/editorjs';
-	import Header from '@editorjs/header';
-	import Code from '@editorjs/code';
-	import Image from '@editorjs/image';
-	import Link from '@editorjs/link';
-	import List from '@editorjs/nested-list';
-	import Delimiter from '@editorjs/delimiter';
-	import Paragraph from '@editorjs/paragraph';
-	import Embed from '@editorjs/embed';
-	import Raw from '@editorjs/raw';
-	
-	import { showProject } from '../../Stores';
-	import { afterPageLoad, url } from '@roxi/routify';
+    import { showProject } from '../../Stores';
+	import { url } from '@roxi/routify';
+
+	import edjsHTML from "editorjs-html";
 
     export let entryData:Project;
 
 	let isRelative:boolean;
 	$: isRelative = false;
 
-	let editor:EditorJs;
+	function imageParser({data}) {
+		return `<img class="image-tool__image-picture" src="${data.file.webUrl}">`;
+	}
 
-	$afterPageLoad(() => {
-		editor = editor||new EditorJs({
-			readOnly: true,
-			holder : 'entrContent',
-			tools: {
-				header: {
-					class: Header,
-					inlineToolbar : true
-				},
-				code: {
-					class: Code,
-					inlineToolbar : true
-				},
-				image: {
-					class: Image,
-					inlineToolbar : true
-				},
-				link: {
-					class: Link,
-					inlineToolbar : true
-				},
-				list: {
-					class: List,
-					inlineToolbar : true
-				},
-				delimiter: {
-					class: Delimiter,
-					inlineToolbar : true
-				},
-				paragraph: {
-					class: Paragraph,
-					inlineToolbar : true
-				},
-				embed: {
-					class: Embed,
-					inlineToolbar : true
-				},
-				raw: {
-					class: Raw,
-					inlineToolbar : true
-				},
-			}
-		});
+	const edjsParser = edjsHTML({
+		image: imageParser
 	});
 
+	let output: any[];
+
 	$: if ($showProject) {
-		if (editor) { editor.isReady.then(() => { editor.render(entryData.content); }); }
+		let data = entryData.content;
+		if (data.time && data.blocks?.length > 0 && data.version) {
+			output = edjsParser.parse(data).join("");
+		} else {
+			output = null;
+		}
 		isRelative = entryData.isRelative;
 	}
 
@@ -102,7 +61,9 @@
 			<div class="data-entr"><b>Status:</b> {entryData.status}</div>
 			<div class="data-entr"><b>Difficulty:</b> {entryData.difficulty}</div>
 		</div>
-        <div id="entrContent" class="entr-cont"></div>
+        <div id="entrContent" class="entr-cont">
+			{@html output ? output : ''}
+		</div>
     </div>
 </div>
 
