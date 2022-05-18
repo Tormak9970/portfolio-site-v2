@@ -14,7 +14,7 @@
             <div class="container">
                 <p class="bio">
                     Hi, my name is Travis<br/><br/>
-                    I am an aspiring software engineer and game developer. I enjoy learning new concepts through 
+                    I am an aspiring web developer and software engineer. I enjoy learning new concepts through 
                     self guided projects, and sharing my knowledge with others. Additionally, I am one of the SWTOR Slicers collaborators, 
                     develop new datamining and extraction tools for Star Wars The Old Republic, and do community development for 
                     TORCommunity.com. My interest in programming started in highschool, and I have continued to expand my knowledge 
@@ -34,7 +34,7 @@
             <div class="bio-cont">
                 <p class="bio">
                     Hi, my name is Travis<br/><br/>
-                    I am an aspiring software engineer and game developer. I enjoy learning new concepts through 
+                    I am an aspiring web developer and software engineer. I enjoy learning new concepts through 
                     self guided projects, and sharing my knowledge with others. Additionally, I am one of the SWTOR Slicers collaborators, 
                     develop new datamining and extraction tools for Star Wars The Old Republic, and do community development for 
                     TORCommunity.com. My interest in programming started in highschool, and I have continued to expand my knowledge 
