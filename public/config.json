@@ -5,7 +5,7 @@
 				"name": "Minesweeper",
 				"time": "15 hours",
 				"status": "Complete",
-				"difficulty": "Simple",
+				"difficulty": "Moderate",
 				"description": "Minesweeper is a classic logic based strategy game. As I was learning JavaScript, I thought it would be fun to make one of my favorite classic games using what I was learning. In the process, I learned about the html5 canvas, which is now used instead of flash for web based games and animations. After completing the normal minesweeper, I wanted to add something more advanced to the project. I decided to add animations (inspired by Google' Minesweeper), so I used the html5 canvas API to animate it.",
 				"content": {
 					"time": 1633959986929,
@@ -188,8 +188,8 @@
 			"tetris": {
 				"name": "Tetris",
 				"time": "30 hours",
-				"status": "Working (unfinished)",
-				"difficulty": "Moderate-Complexed",
+				"status": "Complete",
+				"difficulty": "Complexed",
 				"description": "For my last classic game project, I wanted to do something much more complexed. I decided to do Tetris, as it is one of my favorite games, and had a lot of complexed elements. It took much longer then the previous three projects, but was very satisfying to finish.",
 				"content": {
 					"time": 1633960233761,
@@ -282,8 +282,8 @@
 			"portfolio-v1": {
 				"name": "Portfolio V1",
 				"time": "25 hours",
-				"status": "Obsolete",
-				"difficulty": "Easy",
+				"status": "Not Live / Obsolete",
+				"difficulty": "Simple",
 				"description": "I wanted to create a professional and classy website that I could use to display all of the projects I create. I think this is a unique and relevant way to display my projects and works in a way that represents me and what I love doing. I continuously update this as I continue to come up with projects and complete them, as well as work on projects ether for school, or one of the organizations I am a part of.",
 				"content": {
 					"time": 1633880900126,
@@ -459,7 +459,7 @@
 			},
 			"portfolio-v2": {
 				"name": "Portfolio V2",
-				"time": "",
+				"time": "40 hours",
 				"status": "Complete (continually updated)",
 				"difficulty": "Moderate",
 				"description": "This project is the website you are currently on. It is a replacement for my previous portfolio website, which I had not been keeping up to date. I decided to remake it from scratch using Svelte, TypeScript, and SASS, all of which are awesome frameworks I have wanted to learn for a while.",
