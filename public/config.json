@@ -1093,7 +1093,7 @@
 		"software-engineering": {
 			"slicers-gui": {
 				"name": "Slicers GUI",
-				"time": "250+ hours",
+				"time": "400+ hours",
 				"status": "In progress (Beta)",
 				"difficulty": "Complexed",
 				"description": "This is by far the project I am the most proud of. It is the culmination of a lot of work by both me and the SWTOR Slicers community, and the result is a truly unique piece of software that serves its purpose well. The idea behind making it was to optimize and improve all existing tools, and bundle them all into one cohesive, fully customizable application.",
@@ -1879,8 +1879,8 @@
 					"linkId": "slicers-wiki"
 				},
 				{
-					"name": "Slicers Blender Plugin",
-					"linkId": "slicers-blender-import"
+					"name": "Slicers Blender Importer",
+					"linkId": "slicers-blender-importer"
 				}
 			]
 		},
