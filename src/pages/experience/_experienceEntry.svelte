@@ -5,7 +5,7 @@
     export let isLast:boolean;
 </script>
 
-<div id="{entryData.company.toLocaleLowerCase().concat("-").concat(entryData.position.toLocaleLowerCase())}" class="experienceEntry{` ${scrollType}`}{hidden ? " hidden" : ""}">
+<div id="{entryData.company.toLocaleLowerCase().concat("-").concat(entryData.position.toLocaleLowerCase()).replaceAll(" ", "-")}" class="experienceEntry{` ${scrollType}`}{hidden ? " hidden" : ""}">
     <div class="experience-header">
         <h2>{entryData.position}</h2>
     </div>
