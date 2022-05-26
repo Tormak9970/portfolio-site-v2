@@ -103,7 +103,7 @@
             "scrollType": i+1 == 0 ? 'down-in' : 'up-out',
             "isLast": i+1 == art.size
         });
-        jumpNames.set(i, entr.name);
+        jumpNames.set(i+1, entr.name);
         return entr; 
     }
 </script>

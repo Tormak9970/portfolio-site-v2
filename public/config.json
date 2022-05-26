@@ -1909,36 +1909,36 @@
 			"description": "Created and managed client databases and resources for Synergy Animal Behavior as a summer job."
 		}
 	],
-	"art": [
-		{
+	"art": {
+		"swtor-neon-sign": {
 			"name": "SWTOR Neon Sign",
 			"path": "./img/art pieces/SWTOR Neon Final Marked.png",
 			"description": "This piece is a 3D render of a neon sign inspired SWTOR (Star Wars The Old Republic) logo, made in blender. This was my first original piece."
 		},
-		{
+		"operative-neon-sign": {
 			"name": "Operative Neon Sign",
 			"path": "./img/art pieces/Operative Neon Marked.png",
 			"description": "This was my second attempt to make a neon sign using blender. It has a bit more detail then the previous one, and the pipes and corners are a bit cleaner."
 		},
-		{
+		"guardian-neon-sign": {
 			"name": "Guardian Neon Sign",
 			"path": "./img/art pieces/Guardian Neon Marked.png",
 			"description": "This piece was my third and most recent attemp at making a neon sign in blender. I was satisfied with how the previous sign turned out, however I wanted to add more detail. I settled on modeling a bracket, screws, and clips to 'hold' the sign to the brick wall behind, which turned out really nice."
 		},
-		{
+		"let-the-wookie-win": {
 			"name": "Let the Wookie Win",
 			"path": "./img/art pieces/Let the Wookie Win Final.png",
 			"description": "If you are a Star Wars fan you may recognize the name of this piece. It was inspired by a scene from Star Wars IV: A New Hope."
 		},
-		{
+		"the-gathering-storm": {
 			"name": "The Gathering Storm",
 			"path": "./img/art pieces/Eye of the Gathering Storm Final.png",
 			"description": "This is a piece inspired by artwork I saw online years ago. It is a sorcerer summoning a storm around himself."
 		},
-		{
-			"name": "Vaulthunter Neon",
+		"vault-hunter-neon": {
+			"name": "Vault Hunter Neon",
 			"path": "./img/art pieces/Vault finished v2.png",
-			"description": "This piece is based on the vaulthunter's icon from borderlands 2. I tried making a more realistic brick wall, but the realism took away from the sign itself, so I reverted it back to the older material."
+			"description": "This piece is based on the vault hunter's icon from borderlands 2. I tried making a more realistic brick wall, but the realism took away from the sign itself, so I reverted it back to the older material."
 		}
-	]
+	}
 }
