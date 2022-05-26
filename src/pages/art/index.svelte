@@ -21,7 +21,7 @@
             "key": "forword",
             "data": {
                 "name": "Foreword",
-                "path": undefined,
+                "img": undefined,
                 "description": `I am by no means a professional artist, but I have always liked being creative and making different forms of art. 
                     I enjoy practicing art, and it is a good to take a break from development every now and again. 
                     Additionally, I find this practice invaluable when it comes to being a developer, 
