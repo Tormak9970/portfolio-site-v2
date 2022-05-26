@@ -5,18 +5,18 @@
     export let isLast:boolean;
 </script>
 
-<div id="{entryData.name}" class="experienceEntry{` ${scrollType}`}{hidden ? " hidden" : ""}">
+<div id="{entryData.company.toLocaleLowerCase().concat("-").concat(entryData.position.toLocaleLowerCase())}" class="experienceEntry{` ${scrollType}`}{hidden ? " hidden" : ""}">
     <div class="experience-header">
-        <h2>{entryData.name}</h2>
+        <h2>{entryData.position}</h2>
     </div>
     {#if entryData.img}
         <div class="content-container">
             <div class="img-cont">
-                <img src="{entryData.img}" alt="{entryData.name}">
+                <img src="{entryData.img}" alt="{entryData.position}">
             </div>
             <div>
                 <div class="description">
-                    <div>Position: {entryData.position}</div>
+                    <div>Company: {entryData.company}</div>
                 </div>
                 <div class="description">
                     <p>{entryData.description}</p>

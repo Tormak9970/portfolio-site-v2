@@ -1874,8 +1874,8 @@
 		}
 	},
 	"experience": {
-		"synergy-animal-behavior": {
-			"name": "Synergy Animal Behavior",
+		"synergy-animal-behavior-behavior-assistant": {
+			"company": "Synergy Animal Behavior",
 			"img": "./img/exp/synergy.png",
 			"position": "Behavior Assistant",
 			"description": "Created and managed client databases and resources for Synergy Animal Behavior as a summer job."

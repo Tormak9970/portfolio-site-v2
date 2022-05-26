@@ -4,12 +4,12 @@
 
 <div class="card-entr">
     <div class="name-cont">
-        {entryData.name}
+        {entryData.position}
     </div>
     <div class="img-cont">
         <img src="{entryData.img}" alt="">
     </div>
-    <div class="desc-cont">Position: {entryData.position}</div>
+    <div class="desc-cont">Company: {entryData.company}</div>
     <div class="desc-cont">
         {@html entryData.description}
     </div>

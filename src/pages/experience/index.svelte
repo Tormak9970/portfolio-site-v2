@@ -88,7 +88,7 @@
             "scrollType": i == 0 ? 'down-in' : 'up-out',
             "isLast": i+1 == experience.size
         });
-        jumpNames.set(i, entr.name);
+        jumpNames.set(i, entr.position);
         return entr; 
     }
 </script>

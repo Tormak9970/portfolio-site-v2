@@ -33,7 +33,7 @@
     }
 
     interface Experience {
-        name:string,
+        company:string,
         img:string,
         position:string,
         description:string
