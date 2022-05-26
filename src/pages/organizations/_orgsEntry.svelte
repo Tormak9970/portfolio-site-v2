@@ -18,9 +18,9 @@
     <div class="org-header">
         <h2>{entryData.name}</h2>
     </div>
-    {#if entryData.path}
+    {#if entryData.img}
         <div class="content-container">
-            <img src="{entryData.path}" alt="{entryData.name}">
+            <img src="{entryData.img}" alt="{entryData.name}">
             <div class="description">
                 <div class="org-header-2">
                     <h2>About</h2>

@@ -9,10 +9,10 @@
     <div class="experience-header">
         <h2>{entryData.name}</h2>
     </div>
-    {#if entryData.path}
+    {#if entryData.img}
         <div class="content-container">
             <div class="img-cont">
-                <img src="{entryData.path}" alt="{entryData.name}">
+                <img src="{entryData.img}" alt="{entryData.name}">
             </div>
             <div>
                 <div class="description">

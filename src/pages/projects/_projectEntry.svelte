@@ -53,7 +53,7 @@
 	</div>
     <div class="proj-layout-cont">
         <div class="proj-main-img proj-img-cont">
-			<img src="{entryData.imgs[0]}" alt="">
+			<img src="{entryData.img}" alt="">
 		</div>
 		<div class="data-container entr-cont">
 			<div class="data-entr"><b>Name:</b> {entryData.name}</div>

@@ -11,7 +11,7 @@
         {entryData.name}
     </div>
     <div class="img-cont">
-        <img src="{entryData.imgs[0]}" alt="">
+        <img src="{entryData.img}" alt="">
     </div>
     <div class="desc-cont">
         {@html entryData.description}

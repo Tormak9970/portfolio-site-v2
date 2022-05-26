@@ -3,7 +3,7 @@
 
     interface ConfigPiece {
         name:string,
-        path:string
+        img:string
     }
 
     interface Config {
@@ -22,7 +22,7 @@
 <div id={config.id} class="modal-container{$showing ? ' show' : ''}" on:wheel|stopPropagation="{catchScroll}">
     <span class="close" on:click="{closeSelf}">&times;</span>
     <div class="modal show">
-        <img src="{config.data.path}" alt="{config.data.name}" style="max-height: auto; max-width: 100%;"/>
+        <img src="{config.data.img}" alt="{config.data.name}" style="max-height: auto; max-width: 100%;"/>
     </div>
 </div>
 

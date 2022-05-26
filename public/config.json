@@ -88,10 +88,8 @@
 				},
 				"link": "./minesweeper",
 				"isRelative": true,
-				"imgs": [
-					"./img/projs/Minesweeper.png",
-					""
-				]
+				"img": "./img/projs/Minesweeper.png",
+				"org": "none"
 			},
 			"pong": {
 				"name": "Pong",
@@ -180,10 +178,8 @@
 				},
 				"link": "./pong",
 				"isRelative": true,
-				"imgs": [
-					"./img/projs/Pong.png",
-					""
-				]
+				"img": "./img/projs/Pong.png",
+				"org": "none"
 			},
 			"tetris": {
 				"name": "Tetris",
@@ -272,10 +268,8 @@
 				},
 				"link": "./tetris",
 				"isRelative": true,
-				"imgs": [
-					"./img/projs/Tetris.png",
-					""
-				]
+				"img": "./img/projs/Tetris.png",
+				"org": "none"
 			}
 		},
 		"web-dev": {
@@ -452,10 +446,8 @@
 				},
 				"link": "",
 				"isRelative": false,
-				"imgs": [
-					"./img/projs/Portfolio site hompage.png",
-					""
-				]
+				"img": "./img/projs/Portfolio site homepage.png",
+				"org": "none"
 			},
 			"portfolio-v2": {
 				"name": "Portfolio V2",
@@ -536,10 +528,8 @@
 				},
 				"link": "",
 				"isRelative": false,
-				"imgs": [
-					"./img/projs/portfolio-site-v2.png",
-					""
-				]
+				"img": "./img/projs/portfolio-site-v2.png",
+				"org": "none"
 			},
 			"torc-character-designer": {
 				"name": "TORC Character Designer",
@@ -900,10 +890,8 @@
 				},
 				"link": "https://torcommunity.com/tools/character-designer",
 				"isRelative": false,
-				"imgs": [
-					"./img/projs/Release_one.png",
-					"./img/orgs/torc-icon-2016.png"
-				]
+				"img": "./img/projs/Release_one.png",
+				"org": "torcommunity"
 			},
 			"torc-npc-viewers": {
 				"name": "TORC NPC 3D Viewers",
@@ -996,10 +984,8 @@
 				},
 				"link": "https://torcommunity.com/database/search/npc",
 				"isRelative": false,
-				"imgs": [
-					"./img/projs/torc-npc-viewer.png",
-					"./img/orgs/torc-icon-2016.png"
-				]
+				"img": "./img/projs/torc-npc-viewer.png",
+				"org": "torcommunity"
 			},
 			"vite-plugin-sitemap": {
 				"name": "Vite-Plugin-Sitemap",
@@ -1084,10 +1070,8 @@
 				},
 				"link": "https://www.npmjs.com/package/@tormak/vite-plugin-sitemap",
 				"isRelative": false,
-				"imgs": [
-					"./img/projs/vite-plugin-sitemap.png",
-					"./img/orgs/vite-logo.png"
-				]
+				"img": "./img/projs/vite-plugin-sitemap.png",
+				"org": "none"
 			}
 		},
 		"software-engineering": {
@@ -1201,10 +1185,8 @@
 				},
 				"link": "https://github.com/SWTOR-Slicers/Slicers-GUI",
 				"isRelative": false,
-				"imgs": [
-					"./img/projs/Slicers GUI.png",
-					"./img/orgs/SwtorSlicers.png"
-				]
+				"img": "./img/projs/Slicers GUI.png",
+				"org": "swtor-slicers"
 			}
 		},
 		"education": {
@@ -1295,10 +1277,8 @@
 				},
 				"link": "",
 				"isRelative": false,
-				"imgs": [
-					"./img/projs/intro-to-web-dev-camp.png",
-					""
-				]
+				"img": "./img/projs/intro-to-web-dev-camp.png",
+				"org": "none"
 			}
 		},
 		"miscellaneous": {
@@ -1531,10 +1511,8 @@
 				},
 				"link": "",
 				"isRelative": false,
-				"imgs": [
-					"./img/projs/Dashboard.png",
-					""
-				]
+				"img": "./img/projs/Dashboard.png",
+				"org": "none"
 			},
 			"memedb": {
 				"name": "The MemeDB",
@@ -1683,10 +1661,8 @@
 				},
 				"link": "",
 				"isRelative": false,
-				"imgs": [
-					"./img/projs/MemeDB homepage.png",
-					""
-				]
+				"img": "./img/projs/MemeDB homepage.png",
+				"org": "none"
 			},
 			"slicers-wiki": {
 				"name": "SWTOR Slicers Wiki",
@@ -1763,10 +1739,8 @@
 				},
 				"link": "https://github.com/SWTOR-Slicers/WikiPedia/wiki",
 				"isRelative": false,
-				"imgs": [
-					"./img/projs/slicers-wiki.png",
-					"./img/orgs/SwtorSlicers.png"
-				]
+				"img": "./img/projs/slicers-wiki.png",
+				"org": "swtor-slicers"
 			},
 			"slicers-blender-importer": {
 				"name": "Slicers Blender Importer",
@@ -1851,10 +1825,8 @@
 				},
 				"link": "https://github.com/SWTOR-Slicers/Granny2-Plug-In-Blender-2.8x",
 				"isRelative": false,
-				"imgs": [
-					"./img/projs/slicers-blender-importer.png",
-					"./img/orgs/SwtorSlicers.png"
-				]
+				"img": "./img/projs/slicers-blender-importer.png",
+				"org": "swtor-slicers"
 			}
 		}
 	},
@@ -1862,7 +1834,7 @@
 	"organizations": {
 		"swtor-slicers": {
 			"name": "SWTOR Slicers",
-			"path": "./img/orgs/SwtorSlicers.png",
+			"img": "./img/orgs/SwtorSlicers.png",
 			"about": "The SWTOR Slicers Collaboration is a group who enjoys taking Star Wars The Old Republic beyond the game. Whether this be through using models for fan films, or creating tools for the community (such as my <i>Character and Outfit Designer</i>), the community enjoys finding new and unique was to utilize the game.",
 			"description": "I became a collaborator (essentially I work on new tools and techniques for the community, and help people whenever they have questions) because of my work on the <i>Character and Outfit Designer</i>. This was because I added a secondary feature to my tool, the ability to download a <i>.zip</i> file with all of the nessesary information to recreate the character in Blender. This, combined with a script I wrote to automatically  locates all the models and textures, takes a process that used to take over 1 hour, and makes it take under 20 minutes. Since finishing that, I continue to help people, as well as work to make the process even easier.",
 			"projects": [
@@ -1886,7 +1858,7 @@
 		},
 		"torcommunity": {
 			"name": "TORCommunity.com",
-			"path": "./img/orgs/torc-icon-2016.png",
+			"img": "./img/orgs/torc-icon-2016.png",
 			"about": "TORCommunity.com is a fan site for Star Wars The Old Republic. It was started in 2008, and has many neat features, such as guides, walkthroughs, tips, tools, and multiple databases. The sites goal is to provide great resources, and improve the experience players have while playing the game.",
 			"description": "I got involved with TORCommunity after the owner and head dev of the site reached out to me while I was working on the <i>Character and Outfit Designer</i> and asked if I would be willing to put it up on TORCommunity. He had been looking for a tool just like it for the site for a while, and I was hoping to get it up on one of the fan sites as well. After finishing the app, and putting it up live on the site, he offered me the opportunity to continue working on the site, which I gladly took him up on. Since then, I have continued to work on the <i>Character and Outfit Designer</i>, as well as other parts of the site.",
 			"projects": [
@@ -1904,7 +1876,7 @@
 	"experience": {
 		"synergy-animal-behavior": {
 			"name": "Synergy Animal Behavior",
-			"path": "./img/exp/synergy.png",
+			"img": "./img/exp/synergy.png",
 			"position": "Behavior Assistant",
 			"description": "Created and managed client databases and resources for Synergy Animal Behavior as a summer job."
 		}
@@ -1912,32 +1884,32 @@
 	"art": {
 		"swtor-neon-sign": {
 			"name": "SWTOR Neon Sign",
-			"path": "./img/art pieces/SWTOR Neon Final Marked.png",
+			"img": "./img/art pieces/SWTOR Neon Final Marked.png",
 			"description": "This piece is a 3D render of a neon sign inspired SWTOR (Star Wars The Old Republic) logo, made in blender. This was my first original piece."
 		},
 		"operative-neon-sign": {
 			"name": "Operative Neon Sign",
-			"path": "./img/art pieces/Operative Neon Marked.png",
+			"img": "./img/art pieces/Operative Neon Marked.png",
 			"description": "This was my second attempt to make a neon sign using blender. It has a bit more detail then the previous one, and the pipes and corners are a bit cleaner."
 		},
 		"guardian-neon-sign": {
 			"name": "Guardian Neon Sign",
-			"path": "./img/art pieces/Guardian Neon Marked.png",
+			"img": "./img/art pieces/Guardian Neon Marked.png",
 			"description": "This piece was my third and most recent attemp at making a neon sign in blender. I was satisfied with how the previous sign turned out, however I wanted to add more detail. I settled on modeling a bracket, screws, and clips to 'hold' the sign to the brick wall behind, which turned out really nice."
 		},
 		"let-the-wookie-win": {
 			"name": "Let the Wookie Win",
-			"path": "./img/art pieces/Let the Wookie Win Final.png",
+			"img": "./img/art pieces/Let the Wookie Win Final.png",
 			"description": "If you are a Star Wars fan you may recognize the name of this piece. It was inspired by a scene from Star Wars IV: A New Hope."
 		},
 		"the-gathering-storm": {
 			"name": "The Gathering Storm",
-			"path": "./img/art pieces/Eye of the Gathering Storm Final.png",
+			"img": "./img/art pieces/Eye of the Gathering Storm Final.png",
 			"description": "This is a piece inspired by artwork I saw online years ago. It is a sorcerer summoning a storm around himself."
 		},
 		"vault-hunter-neon": {
 			"name": "Vault Hunter Neon",
-			"path": "./img/art pieces/Vault finished v2.png",
+			"img": "./img/art pieces/Vault finished v2.png",
 			"description": "This piece is based on the vault hunter's icon from borderlands 2. I tried making a more realistic brick wall, but the realism took away from the sign itself, so I reverted it back to the older material."
 		}
 	}

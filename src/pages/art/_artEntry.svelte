@@ -7,7 +7,7 @@
     export let isLast:boolean;
 
     function showModal() {
-        $imageModalData = { "id": "artPreviewModal", "data": { "path": entryData.path, "name": entryData.name } };
+        $imageModalData = { "id": "artPreviewModal", "data": { "img": entryData.img, "name": entryData.name } };
         setTimeout(() => { $showing = true; }, 30);
     }
 </script>
@@ -16,9 +16,9 @@
     <div class="art-header">
         <h2>{entryData.name}</h2>
     </div>
-    {#if entryData.path}
+    {#if entryData.img}
         <div class="content-container">
-            <img src="{entryData.path}" alt="{entryData.name}" on:click="{showModal}">
+            <img src="{entryData.img}" alt="{entryData.name}" on:click="{showModal}">
             <div class="description">
                 <p>{entryData.description}</p>
             </div>

@@ -12,7 +12,7 @@
         {entryData.name}
     </div>
     <div class="img-cont">
-        <img src="{entryData.path}" alt="">
+        <img src="{entryData.img}" alt="">
     </div>
     <div class="header-cont">About</div>
     <div class="desc-cont">

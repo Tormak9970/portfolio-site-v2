@@ -1,4 +1,6 @@
 <script lang="ts">
+    import { organizations } from "../../linkConfig";
+
     import { projectDisplay, showProject } from "../../Stores";
 
     export let entryData:Project;
@@ -15,9 +17,9 @@
 <div class="projOview{` ${scrollType}`}{hidden ? " hidden" : ""}">
     <div class="content-container">
         <div class="imgs-cont">
-            <img src="{(entryData.imgs[1] != "") ? entryData.imgs[1] : "./img/orgs/Logo-black-round.png"}" class="{(entryData.imgs[1] != "") ? "" : "round"}" alt="">
+            <img src="{(entryData.org != "none") ? organizations.get(entryData.org).img : "./img/orgs/Logo-black-round.png"}" class="{(entryData.org != "none") ? "" : "round"}" alt="">
             <div class="proj-main-img">
-                <img src="{entryData.imgs[0]}" alt="">
+                <img src="{entryData.img}" alt="">
             </div>
         </div>
         <div class="proj-overview-cont">
