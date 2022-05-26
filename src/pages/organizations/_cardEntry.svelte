@@ -16,7 +16,7 @@
     </div>
     <div class="header-cont">About</div>
     <div class="desc-cont">
-        {@html entryData.description}
+        {@html entryData.about}
     </div>
     <div class="header-cont">Involvement</div>
     <div class="desc-cont">
