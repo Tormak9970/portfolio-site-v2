@@ -2339,6 +2339,14 @@
 				{
 					"name": "Slicers Blender Importer",
 					"linkId": "slicers-blender-importer"
+				},
+				{
+					"name": "swtorslicers.org",
+					"linkId": "swtorslicers.org"
+				},
+				{
+					"name": "Wiki Editor",
+					"linkId": "wiki-editor"
 				}
 			]
 		},
