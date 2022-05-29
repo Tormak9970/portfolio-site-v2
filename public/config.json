@@ -270,6 +270,100 @@
 				"isRelative": true,
 				"img": "./img/projs/Tetris.png",
 				"org": "none"
+			},
+			"simple-sudoku": {
+				"name": "Simple Sudoku",
+				"time": "35 hours",
+				"status": "Complete",
+				"difficulty": "Moderate",
+				"description": "I came across an article about different ways to approach generating sudoku puzzles and solving them, and it caught my interest. I thought it would be a fun way to work on my web development skills and create a fun end product I could actually put up online. It was very interesting to explore how to not just generate solvable puzzles, but puzzles that look good to the player.",
+				"content": {
+					"time": 1653781044269,
+					"blocks": [
+						{
+							"id": "Ak6PmaiUqJ",
+							"type": "header",
+							"data": {
+								"text": "Description",
+								"level": 2
+							}
+						},
+						{
+							"id": "ZAx1af6NrV",
+							"type": "paragraph",
+							"data": {
+								"text": "I came across an article about different ways to approach generating sudoku puzzles and solving them, and it caught my interest. I thought it would be a fun way to work on my web development skills and create a fun end product I could actually put up online. It was very interesting to explore how to not just generate solvable puzzles, but puzzles that look good to the player."
+							}
+						},
+						{
+							"id": "3V81lWYhL8",
+							"type": "header",
+							"data": {
+								"text": "Reasons",
+								"level": 2
+							}
+						},
+						{
+							"id": "rIs3bW3TDZ",
+							"type": "list",
+							"data": {
+								"style": "unordered",
+								"items": [
+									{
+										"content": "Wanted to practice implementing responsive design",
+										"items": []
+									},
+									{
+										"content": "Wanted to explore how to create different themes for a website using plain CSS",
+										"items": []
+									},
+									{
+										"content": "Was interested in exploring sudoku board generation and methods of solving",
+										"items": []
+									},
+									{
+										"content": "Wanted to create a polished Progressive Web App (PWA)",
+										"items": []
+									}
+								]
+							}
+						},
+						{
+							"id": "FJvN-7xpWZ",
+							"type": "header",
+							"data": {
+								"text": "Takeaways",
+								"level": 2
+							}
+						},
+						{
+							"id": "dDU_V6jNCL",
+							"type": "list",
+							"data": {
+								"style": "unordered",
+								"items": [
+									{
+										"content": "Came up with a simple strategy for implementing themes into websites",
+										"items": []
+									},
+									{
+										"content": "Got to learn about some of the more complicated features of the Svelte JavaScript library",
+										"items": []
+									},
+									{
+										"content": "Created a polished PWA that can be downloaded on any device or operating system",
+										"items": []
+									}
+								]
+							}
+						}
+					],
+					"version": "2.24.3"
+				},
+				"link": "https://sudoku.travislane.dev/",
+				"isRelative": false,
+				"img": "./img/projs/simple-sudoku.png",
+				"org": "none"
 			}
 		},
 		"web-dev": {
@@ -456,7 +550,7 @@
 				"difficulty": "Moderate",
 				"description": "This project is the website you are currently on. It is a replacement for my previous portfolio website, which I had not been keeping up to date. I decided to remake it from scratch using Svelte, TypeScript, and SASS, all of which are awesome frameworks I have wanted to learn for a while.",
 				"content": {
-					"time": 1635536684115,
+					"time": 1653786781791,
 					"blocks": [
 						{
 							"id": "EHEWUSDdP5",
@@ -524,9 +618,9 @@
 							}
 						}
 					],
-					"version": "2.22.2"
+					"version": "2.24.3"
 				},
-				"link": "",
+				"link": "https://travislane.dev",
 				"isRelative": false,
 				"img": "./img/projs/portfolio-site-v2.png",
 				"org": "none"
@@ -536,9 +630,9 @@
 				"time": "350+ hours",
 				"status": "In progress (stable)",
 				"difficulty": "Complexed",
-				"description": "This is one of my favorite projects. It is an external character creator and outfit designer for Star Wars The Old Republic. I really love this game and the community, and wanted to do something everyone could use and enjoy. It is very complexed, and I had to learn alot of new topics and skills while working on it. Im also very proud of it since it is the first tool of its kind made by anyone, ever, and that required me to solve alot of problems no one else has done  before.",
+				"description": "This is one of my favorite projects. It is an external character creator and outfit designer for Star Wars The Old Republic. I really love this game and the community, and wanted to do something everyone could use and enjoy. It is very complexed, and I had to learn a lot of new topics and skills while working on it. I'm also very proud of it since it is the first tool of its kind made by anyone, ever, and that required me to solve a lot of problems no one else has done  before.",
 				"content": {
-					"time": 1633549867543,
+					"time": 1653787269301,
 					"blocks": [
 						{
 							"id": "Hr1P2ZVs1P",
@@ -875,7 +969,7 @@
 										"items": []
 									},
 									{
-										"content": "Now have a randomize button, and it also randomizes the slider values on load.",
+										"content": "Now have a randomize button, and it also randomizes the slider values on load",
 										"items": []
 									},
 									{
@@ -884,9 +978,50 @@
 									}
 								]
 							}
+						},
+						{
+							"id": "7rIyp4Rdz7",
+							"type": "header",
+							"data": {
+								"text": "Release three",
+								"level": 2
+							}
+						},
+						{
+							"id": "NNFFVvkVLe",
+							"type": "paragraph",
+							"data": {
+								"text": "Date: May 6, 2022<br>Time: 350+ hours<br>Changes:&nbsp;&nbsp;"
+							}
+						},
+						{
+							"id": "Vvfc4n8kxD",
+							"type": "list",
+							"data": {
+								"style": "unordered",
+								"items": [
+									{
+										"content": "Changed the way loading the options work",
+										"items": [
+											{
+												"content": "It is now based of the head model's ID, which is how the game does it currently",
+												"items": []
+											}
+										]
+									},
+									{
+										"content": "Converted the entire project to TypeScript, which helped eliminate some cases where output data would be a string instead of a number",
+										"items": []
+									},
+									{
+										"content": "Project now uses Vite for bundling and minifying, which improves performance",
+										"items": []
+									}
+								]
+							}
 						}
 					],
-					"version": "2.22.2"
+					"version": "2.24.3"
 				},
 				"link": "https://torcommunity.com/tools/character-designer",
 				"isRelative": false,
@@ -1072,6 +1207,185 @@
 				"isRelative": false,
 				"img": "./img/projs/vite-plugin-sitemap.png",
 				"org": "none"
+			},
+			"swtorslicers.org": {
+				"name": "swtorslicers.org",
+				"time": "38 hours",
+				"status": "In Progress",
+				"difficulty": "Moderate",
+				"description": "Components",
+				"content": {
+					"time": 1653785687031,
+					"blocks": [
+						{
+							"id": "5yG04KIu_B",
+							"type": "header",
+							"data": {
+								"text": "Description",
+								"level": 2
+							}
+						},
+						{
+							"id": "yEN2XzRlhf",
+							"type": "header",
+							"data": {
+								"text": "Components",
+								"level": 3
+							}
+						},
+						{
+							"id": "TkOJXFsF5j",
+							"type": "header",
+							"data": {
+								"text": "Home Page",
+								"level": 4
+							}
+						},
+						{
+							"id": "40GEPTpZVB",
+							"type": "image",
+							"data": {
+								"file": {
+									"url": "./img/projs/slicers-org.png"
+								},
+								"caption": "",
+								"withBorder": false,
+								"stretched": false,
+								"withBackground": false
+							}
+						},
+						{
+							"id": "04sESMpuoO",
+							"type": "paragraph",
+							"data": {
+								"text": "This component of the website is a quick overview of the organization and our main tools."
+							}
+						},
+						{
+							"id": "-qKjqKx_Z6",
+							"type": "header",
+							"data": {
+								"text": "Frequently Asked Questions",
+								"level": 4
+							}
+						},
+						{
+							"id": "TcSsYut9HS",
+							"type": "image",
+							"data": {
+								"file": {
+									"url": "./img/projs/slicers-faq.png"
+								},
+								"caption": "",
+								"withBorder": false,
+								"stretched": false,
+								"withBackground": false
+							}
+						},
+						{
+							"id": "F_QSR1lrMF",
+							"type": "paragraph",
+							"data": {
+								"text": "The FAQ component covers the questions we get asked on a regularly."
+							}
+						},
+						{
+							"id": "aeoB3-o9Tq",
+							"type": "header",
+							"data": {
+								"text": "Wiki",
+								"level": 4
+							}
+						},
+						{
+							"id": "mxoFgWEgfI",
+							"type": "image",
+							"data": {
+								"file": {
+									"url": "./img/projs/slicers-wiki.png"
+								},
+								"caption": "",
+								"withBorder": false,
+								"stretched": false,
+								"withBackground": false
+							}
+						},
+						{
+							"id": "nkvVvnRjIH",
+							"type": "paragraph",
+							"data": {
+								"text": "The last component is the wiki. This will serve as a replacement for our GitHub wiki once we get everything migrated over."
+							}
+						},
+						{
+							"id": "qbMTucXH-t",
+							"type": "header",
+							"data": {
+								"text": "Reasons",
+								"level": 2
+							}
+						},
+						{
+							"id": "xmmgZmTMQf",
+							"type": "list",
+							"data": {
+								"style": "unordered",
+								"items": [
+									{
+										"content": "Wanted to create a place for all of the information about the organization to be easily accessible",
+										"items": []
+									},
+									{
+										"content": "Wanted to shift our organization's wiki off of GitHub",
+										"items": []
+									},
+									{
+										"content": "Wanted to make our wiki available offline",
+										"items": []
+									},
+									{
+										"content": "I wanted to look into how to make a Progressive Web App (PWA)",
+										"items": []
+									}
+								]
+							}
+						},
+						{
+							"id": "XbqJ1h3Mdb",
+							"type": "header",
+							"data": {
+								"text": "Takeaways",
+								"level": 2
+							}
+						},
+						{
+							"id": "PtY85p-Cl2",
+							"type": "list",
+							"data": {
+								"style": "unordered",
+								"items": [
+									{
+										"content": "Was able to create a website that represents the SWTOR Slicers, and provides all the information about us",
+										"items": []
+									},
+									{
+										"content": "Created a simple wiki system that covers all of our needs",
+										"items": []
+									},
+									{
+										"content": "Learned the basics of how to make a PWA",
+										"items": []
+									}
+								]
+							}
+						}
+					],
+					"version": "2.24.3"
+				},
+				"link": "https://swtorslicers.org",
+				"isRelative": false,
+				"img": "./img/projs/slicers-org.png",
+				"org": "swtor-slicers"
 			}
 		},
 		"software-engineering": {
@@ -1186,6 +1500,178 @@
 				"link": "https://github.com/SWTOR-Slicers/Slicers-GUI",
 				"isRelative": false,
 				"img": "./img/projs/Slicers GUI.png",
+				"org": "swtor-slicers"
+			},
+			"portfolio-updater": {
+				"name": "Portfolio Updater",
+				"time": "36 hours",
+				"status": "Complete",
+				"difficulty": "Moderate",
+				"description": "Initially, this project was going to be written using the Electron framework, but right around when I started it, I heard about Tauri. Tauri is great because it allows you to build more secure apps with smaller bundle sizes, and has a better developer experience then Electron. The app itself makes updating my portfolio easy and straightforward, allowing me to focus more on my projects.",
+				"content": {
+					"time": 1653781613579,
+					"blocks": [
+						{
+							"id": "mGX3WmsU_L",
+							"type": "header",
+							"data": {
+								"text": "Description",
+								"level": 2
+							}
+						},
+						{
+							"id": "Sw2-lnOmFJ",
+							"type": "paragraph",
+							"data": {
+								"text": "Initially, this project was going to be written using the Electron framework, but right around when I started it, I heard about Tauri. Tauri is great because it allows you to build more secure apps with smaller bundle sizes, and has a better developer experience then Electron. The app itself makes updating my portfolio easy and straightforward, allowing me to focus more on my projects."
+							}
+						},
+						{
+							"id": "uTV1I6vgqh",
+							"type": "header",
+							"data": {
+								"text": "Reasons",
+								"level": 2
+							}
+						},
+						{
+							"id": "VCn01A58rk",
+							"type": "list",
+							"data": {
+								"style": "unordered",
+								"items": [
+									{
+										"content": "Wanted to rework the structure of my portfolio",
+										"items": []
+									},
+									{
+										"content": "Wanted to streamline the process of updating my portfolio",
+										"items": []
+									},
+									{
+										"content": "Wanted to learn how to use the Tauri framework",
+										"items": []
+									}
+								]
+							}
+						},
+						{
+							"id": "RKQSFtpQz_",
+							"type": "header",
+							"data": {
+								"text": "Takeaways",
+								"level": 2
+							}
+						},
+						{
+							"id": "NlLvb9jqp4",
+							"type": "list",
+							"data": {
+								"style": "unordered",
+								"items": [
+									{
+										"content": "I now have a small tool that makes it very easy to keep my portfolio up to date",
+										"items": []
+									},
+									{
+										"content": "Was able to rework the structure of my portfolio into a more intuitive form",
+										"items": []
+									},
+									{
+										"content": "Got to learn the basics of the Tauri framework",
+										"items": []
+									}
+								]
+							}
+						}
+					],
+					"version": "2.24.3"
+				},
+				"link": "https://github.com/Tormak9970/portfolio-updater",
+				"isRelative": false,
+				"img": "./img/projs/portfolio-updater.png",
+				"org": "none"
+			},
+			"wiki-editor": {
+				"name": "Wiki Editor",
+				"time": "42 hours",
+				"status": "Complete",
+				"difficulty": "Moderate",
+				"description": "I had the idea for this project after I started working on a website for the SWTOR Slicers. We wanted to transition from using GitHub's wiki system to using our own on the new website, and so I had the idea to make an app for creating, editing, and deleting wiki articles. The app uses similar principles to my Portfolio Updater app, but is written using the Electron framework.",
+				"content": {
+					"time": 1653782211232,
+					"blocks": [
+						{
+							"id": "8pyZwk6oS7",
+							"type": "header",
+							"data": {
+								"text": "Description",
+								"level": 2
+							}
+						},
+						{
+							"id": "ADh_1Tm5wQ",
+							"type": "paragraph",
+							"data": {
+								"text": "I had the idea for this project after I started working on a website for the SWTOR Slicers. We wanted to transition from using GitHub's wiki system to using our own on the new website, and so I had the idea to make an app for creating, editing, and deleting wiki articles. The app uses similar principles to my Portfolio Updater app, but is written using the Electron framework."
+							}
+						},
+						{
+							"id": "3ZPku9LDei",
+							"type": "header",
+							"data": {
+								"text": "Reasons",
+								"level": 2
+							}
+						},
+						{
+							"id": "oM8XyPiqaC",
+							"type": "list",
+							"data": {
+								"style": "unordered",
+								"items": [
+									{
+										"content": "Needed a way to efficiently manage wiki articles for the SWTOR Slicers website.",
+										"items": []
+									},
+									{
+										"content": "Wanted to continue learning about the Svelte library",
+										"items": []
+									}
+								]
+							}
+						},
+						{
+							"id": "_2UutP1Sya",
+							"type": "header",
+							"data": {
+								"text": "Takeaways",
+								"level": 2
+							}
+						},
+						{
+							"id": "rRCzKan6OH",
+							"type": "list",
+							"data": {
+								"style": "unordered",
+								"items": [
+									{
+										"content": "Was able to create an intuitive app for managing the SWTOR Slicers Wiki",
+										"items": []
+									},
+									{
+										"content": "Got to experiment with more advanced svelte components",
+										"items": []
+									}
+								]
+							}
+						}
+					],
+					"version": "2.24.3"
+				},
+				"link": "https://github.com/SWTOR-Slicers/Wiki-Editor",
+				"isRelative": false,
+				"img": "./img/projs/wiki-editor.png",
 				"org": "swtor-slicers"
 			}
 		},
