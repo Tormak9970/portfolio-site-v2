@@ -6,7 +6,7 @@
 	import Socials from "./_utils/Socials.svelte";
 	import LoadingSpinner from "./_utils/LoadingSpinner.svelte";
 	
-	import { startProjIdx, imageModalData, navCheck } from "../Stores";
+	import { imageModalData, navCheck, projScrollIdx } from "../Stores";
 	import { loadConfig } from "../linkConfig";
 
 	function removeAllIndicators() {
@@ -53,13 +53,13 @@
 				removeAllIndicators();
 				elem.children[1].classList.add('rendered');
 				if (elem.id == '4') {
-					$startProjIdx = 0;
+					$projScrollIdx = 0;
 				}
 			}
 		} else {
 			if (!elem.children[0].classList.contains('rendered')) {
 				if (elem.id == '4') {
-					$startProjIdx = 0;
+					$projScrollIdx = 0;
 				}
 			}
 		}

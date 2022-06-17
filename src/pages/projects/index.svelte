@@ -5,10 +5,11 @@
 <script lang="ts">
     import { projects } from "../../linkConfig";
     import ProjectOverview from "./_projectOverview.svelte";
-    import { projScrollIdx, startProjIdx, orientation } from "../../Stores";
+    import { projScrollIdx, orientation } from "../../Stores";
     import JumpList from "../_utils/JumpList.svelte";
     import MediaQuery from "../_utils/MediaQuery.svelte";
     import CardEntry from "./_cardEntry.svelte";
+    import { afterPageLoad } from "@roxi/routify";
 
     interface ProjectEnt {
         key:string,
@@ -125,13 +126,20 @@
         pieces.push({
             "key": key,
             "data": entr, 
-            "hidden": i !== $startProjIdx, 
+            "hidden": i !== $projScrollIdx, 
             "scrollType": i == 0 ? 'down-in' : 'up-out',
             "isLast": i+1 == projects.size
         });
         jumpNames.set(i, entr.name);
         return entr; 
     }
+
+    $afterPageLoad(() => {
+        if ($projScrollIdx != 0) {
+            $projScrollIdx -= 1;
+            interceptScrollFromIdx(false, $projScrollIdx+1);
+        }
+    })
 </script>
 <svelte:window on:wheel="{interceptScroll}" />
 
