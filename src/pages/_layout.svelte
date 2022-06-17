@@ -1,13 +1,12 @@
 <script lang="ts">
 	import { isActive, url } from "@roxi/routify";
 
-	import ProjectEntry from "./projects/_projectEntry.svelte";
 	import ImageModal from "./_utils/ImageModal.svelte";
 	import MediaQuery from "./_utils/MediaQuery.svelte";
 	import Socials from "./_utils/Socials.svelte";
 	import LoadingSpinner from "./_utils/LoadingSpinner.svelte";
 	
-	import { startProjIdx, projectDisplay, showProject, imageModalData, navCheck } from "../Stores";
+	import { startProjIdx, imageModalData, navCheck } from "../Stores";
 	import { loadConfig } from "../linkConfig";
 
 	function removeAllIndicators() {
@@ -44,7 +43,6 @@
 		elem.click();
 	}
 	function handleNavClick(e: Event) {
-		$showProject = false;
 		$navCheck = true;
 		setTimeout(() => { $navCheck = false; }, 300);
 		const elem = (<HTMLElement>e.currentTarget).parentElement;
@@ -132,9 +130,6 @@
 			<div class="content-body">
 				<Socials />
 				<slot />
-				<div class="project-container{$showProject ? '' : ' hidden'}">
-					<ProjectEntry entryData={$projectDisplay}/>
-				</div>
 			</div>
 			<MediaQuery query="(orientation:landscape)" let:matches>
 				{#if !matches}

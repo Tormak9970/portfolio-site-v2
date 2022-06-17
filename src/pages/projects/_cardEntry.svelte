@@ -1,9 +1,11 @@
 <script lang="ts">
-    import { projectDisplay, showProject } from "../../Stores";
+    import { goto } from '@roxi/routify';
 
     export let entryData:Project;
 
-    function openProjectEntry() { $projectDisplay = entryData; $showProject = true; }
+    function openProjectEntry() {
+        $goto(`./:project`, {project: entryData.name.toLowerCase().replaceAll(" ", "-").replaceAll("'", "")});
+    }
 </script>
 
 <div class="card-entr">

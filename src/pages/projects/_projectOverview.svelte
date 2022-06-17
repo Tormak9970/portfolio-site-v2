@@ -1,7 +1,6 @@
 <script lang="ts">
+    import { goto } from '@roxi/routify';
     import { organizations } from "../../linkConfig";
-
-    import { projectDisplay, showProject } from "../../Stores";
 
     export let entryData:Project;
     export let hidden:boolean;
@@ -9,8 +8,7 @@
     export let isLast:boolean;
 
     function openProjectEntry() {
-        $projectDisplay = entryData;
-        $showProject = true;
+        $goto(`./:project`, {project: entryData.name.toLowerCase().replaceAll(" ", "-").replaceAll("'", "")});
     }
 </script>
 
