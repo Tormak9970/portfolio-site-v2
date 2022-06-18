@@ -86,8 +86,8 @@
 					],
 					"version": "2.22.2"
 				},
-				"link": "./minesweeper",
-				"isRelative": true,
+				"link": "https://minesweeper.travislane.dev",
+				"isRelative": false,
 				"img": "./img/projs/Minesweeper.png",
 				"org": "none"
 			},
@@ -176,8 +176,8 @@
 					],
 					"version": "2.22.2"
 				},
-				"link": "./pong",
-				"isRelative": true,
+				"link": "https://pong.travislane.dev",
+				"isRelative": false,
 				"img": "./img/projs/Pong.png",
 				"org": "none"
 			},
@@ -266,8 +266,8 @@
 					],
 					"version": "2.22.2"
 				},
-				"link": "./tetris",
-				"isRelative": true,
+				"link": "https://tetris.travislane.dev",
+				"isRelative": false,
 				"img": "./img/projs/Tetris.png",
 				"org": "none"
 			},
