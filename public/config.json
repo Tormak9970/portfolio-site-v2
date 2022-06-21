@@ -86,8 +86,8 @@
 					],
 					"version": "2.22.2"
 				},
-				"link": "./minesweeper",
-				"isRelative": true,
+				"link": "https://minesweeper.travislane.dev",
+				"isRelative": false,
 				"img": "./img/projs/Minesweeper.png",
 				"org": "none"
 			},
@@ -176,8 +176,8 @@
 					],
 					"version": "2.22.2"
 				},
-				"link": "./pong",
-				"isRelative": true,
+				"link": "https://pong.travislane.dev",
+				"isRelative": false,
 				"img": "./img/projs/Pong.png",
 				"org": "none"
 			},
@@ -266,8 +266,8 @@
 					],
 					"version": "2.22.2"
 				},
-				"link": "./tetris",
-				"isRelative": true,
+				"link": "https://tetris.travislane.dev",
+				"isRelative": false,
 				"img": "./img/projs/Tetris.png",
 				"org": "none"
 			},
@@ -1028,7 +1028,7 @@
 				"img": "./img/projs/Release_one.png",
 				"org": "torcommunity"
 			},
-			"torc-npc-viewers": {
+			"torc-npc-3d-viewers": {
 				"name": "TORC NPC 3D Viewers",
 				"time": "10 hours",
 				"status": "Complete",
@@ -1676,8 +1676,8 @@
 			}
 		},
 		"education": {
-			"web-dev-intro-camp": {
-				"name": "SGIS Intro to web dev camp",
+			"intro-to-web-dev-camp": {
+				"name": "Intro to web dev camp",
 				"time": "30 hours",
 				"status": "Complete",
 				"difficulty": "Moderate",
@@ -1768,7 +1768,7 @@
 			}
 		},
 		"miscellaneous": {
-			"modbot": {
+			"discord-modbot": {
 				"name": "Discord Modbot",
 				"time": "40 hours",
 				"status": "Complete (not hosted)",
@@ -2000,7 +2000,7 @@
 				"img": "./img/projs/Dashboard.png",
 				"org": "none"
 			},
-			"memedb": {
+			"the-memedb": {
 				"name": "The MemeDB",
 				"time": "30-40 hours",
 				"status": "Complete (not hosted)",
@@ -2150,7 +2150,7 @@
 				"img": "./img/projs/MemeDB homepage.png",
 				"org": "none"
 			},
-			"slicers-wiki": {
+			"swtor-slicers-wiki": {
 				"name": "SWTOR Slicers Wiki",
 				"time": "5 hours",
 				"status": "Ongoing",

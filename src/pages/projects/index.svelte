@@ -5,10 +5,11 @@
 <script lang="ts">
     import { projects } from "../../linkConfig";
     import ProjectOverview from "./_projectOverview.svelte";
-    import { showProject, startProjIdx, orientation } from "../../Stores";
+    import { projScrollIdx, orientation } from "../../Stores";
     import JumpList from "../_utils/JumpList.svelte";
     import MediaQuery from "../_utils/MediaQuery.svelte";
     import CardEntry from "./_cardEntry.svelte";
+    import { afterPageLoad } from "@roxi/routify";
 
     interface ProjectEnt {
         key:string,
@@ -19,7 +20,6 @@
     }
 
     const pieces:ProjectEnt[] = [];
-    let scrollIdx:number = 0;
     let isScrolling:boolean = false;
     const jumpNames:Map<number, string> = new Map();
 
@@ -30,7 +30,7 @@
             const curHIdx = pieces.findIndex((val:ProjectEnt) => { return !val.hidden; });
             pieces[curHIdx].hidden = true;
             
-            scrollIdx = curIdx < curHIdx ? curIdx-1 : curIdx+1;
+            $projScrollIdx = curIdx < curHIdx ? curIdx-1 : curIdx+1;
             interceptScrollFromJump(false);
         } else {
             throw Error(`Expected key ${id} to be in map but was not.`);
@@ -39,28 +39,28 @@
 
     function interceptScroll(e: WheelEvent) {
         if ($orientation == 0) e.stopPropagation();
-        if (!isScrolling && !$showProject) {
+        if (!isScrolling) {
             const direction:boolean = e.deltaY > 0; // true = down, false = up
             
             const projElem = document.getElementById('projects').children[0];
-            if (!(scrollIdx == 0 && !direction) && !(scrollIdx == projElem.children.length-1 && direction) && Math.abs(e.deltaY) != 0) {
+            if (!($projScrollIdx == 0 && !direction) && !($projScrollIdx == projElem.children.length-1 && direction) && Math.abs(e.deltaY) != 0) {
                 isScrolling = true;
                 if (direction) {
-                    pieces[scrollIdx+1].scrollType = 'down-in';
-                    pieces[scrollIdx+1].hidden = false;
-                    pieces[scrollIdx].scrollType = 'down-out';
+                    pieces[$projScrollIdx+1].scrollType = 'down-in';
+                    pieces[$projScrollIdx+1].hidden = false;
+                    pieces[$projScrollIdx].scrollType = 'down-out';
                     setTimeout(() => {
-                        pieces[scrollIdx].hidden = true;
-                        scrollIdx++;
+                        pieces[$projScrollIdx].hidden = true;
+                        $projScrollIdx++;
                         isScrolling = false;
                     }, 1500);
                 } else {
-                    pieces[scrollIdx-1].scrollType = 'up-in';
-                    pieces[scrollIdx-1].hidden = false;
-                    pieces[scrollIdx].scrollType = 'up-out';
+                    pieces[$projScrollIdx-1].scrollType = 'up-in';
+                    pieces[$projScrollIdx-1].hidden = false;
+                    pieces[$projScrollIdx].scrollType = 'up-out';
                     setTimeout(() => {
-                        pieces[scrollIdx].hidden = true;
-                        scrollIdx--;
+                        pieces[$projScrollIdx].hidden = true;
+                        $projScrollIdx--;
                         isScrolling = false;
                     },  1500);
                 }
@@ -73,19 +73,19 @@
             if (direction) {
                 pieces[tarIdx].scrollType = 'down-in';
                 pieces[tarIdx].hidden = false;
-                pieces[scrollIdx].scrollType = 'down-out';
+                pieces[$projScrollIdx].scrollType = 'down-out';
                 setTimeout(() => {
-                    pieces[scrollIdx].hidden = true;
-                    scrollIdx = tarIdx;
+                    pieces[$projScrollIdx].hidden = true;
+                    $projScrollIdx = tarIdx;
                     isScrolling = false;
                 }, 1500);
             } else {
                 pieces[tarIdx].scrollType = 'up-in';
                 pieces[tarIdx].hidden = false;
-                pieces[scrollIdx].scrollType = 'up-out';
+                pieces[$projScrollIdx].scrollType = 'up-out';
                 setTimeout(() => {
-                    pieces[scrollIdx].hidden = true;
-                    scrollIdx = tarIdx;
+                    pieces[$projScrollIdx].hidden = true;
+                    $projScrollIdx = tarIdx;
                     isScrolling = false;
                 },  1500);
             }
@@ -95,21 +95,21 @@
         if (!isScrolling) {
             isScrolling = true;
             if (direction) {
-                pieces[scrollIdx+1].scrollType = 'down-in';
-                pieces[scrollIdx+1].hidden = false;
-                pieces[scrollIdx].scrollType = 'down-out';
+                pieces[$projScrollIdx+1].scrollType = 'down-in';
+                pieces[$projScrollIdx+1].hidden = false;
+                pieces[$projScrollIdx].scrollType = 'down-out';
                 setTimeout(() => {
-                    pieces[scrollIdx].hidden = true;
-                    scrollIdx++;
+                    pieces[$projScrollIdx].hidden = true;
+                    $projScrollIdx++;
                     isScrolling = false;
                 }, 1500);
             } else {
-                pieces[scrollIdx-1].scrollType = 'up-in';
-                pieces[scrollIdx-1].hidden = false;
-                pieces[scrollIdx].scrollType = 'up-out';
+                pieces[$projScrollIdx-1].scrollType = 'up-in';
+                pieces[$projScrollIdx-1].hidden = false;
+                pieces[$projScrollIdx].scrollType = 'up-out';
                 setTimeout(() => {
-                    pieces[scrollIdx].hidden = true;
-                    scrollIdx--;
+                    pieces[$projScrollIdx].hidden = true;
+                    $projScrollIdx--;
                     isScrolling = false;
                 },  1500);
             }
@@ -117,7 +117,7 @@
     }
     function jumpToHandler(e: MouseEvent) {
         const target:HTMLElement = <HTMLElement>e.currentTarget;
-        const curIdx = scrollIdx;
+        const curIdx = $projScrollIdx;
         const tarIdx:number = parseInt(target.id.substr(0, target.id.indexOf('-')));
         interceptScrollFromIdx(curIdx < tarIdx, tarIdx);
     }
@@ -126,13 +126,20 @@
         pieces.push({
             "key": key,
             "data": entr, 
-            "hidden": i !== $startProjIdx, 
+            "hidden": i !== $projScrollIdx, 
             "scrollType": i == 0 ? 'down-in' : 'up-out',
             "isLast": i+1 == projects.size
         });
         jumpNames.set(i, entr.name);
         return entr; 
     }
+
+    $afterPageLoad(() => {
+        if ($projScrollIdx != 0) {
+            $projScrollIdx -= 1;
+            interceptScrollFromIdx(false, $projScrollIdx+1);
+        }
+    })
 </script>
 <svelte:window on:wheel="{interceptScroll}" />
 
@@ -150,7 +157,7 @@
     </div>
     <MediaQuery query="(orientation:landscape)" let:matches>
         {#if matches}
-            <JumpList len={projects.size} tooltips={jumpNames} handler={jumpToHandler} scrollIdx={scrollIdx}/>
+            <JumpList len={projects.size} tooltips={jumpNames} handler={jumpToHandler} scrollIdx={$projScrollIdx}/>
         {/if}
     </MediaQuery>
 </div>

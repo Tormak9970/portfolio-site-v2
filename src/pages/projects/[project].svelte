@@ -1,26 +1,30 @@
 <script lang="ts">
-    import { showProject } from '../../Stores';
 	import { url } from '@roxi/routify';
 
 	import edjsHTML from "editorjs-html";
 
-    export let entryData:Project;
+	import { projects } from '../../linkConfig';
+
+	export let project:string;
+
+	let entryData = projects.get(project)
 
 	let isRelative:boolean;
 	$: isRelative = false;
 
 	function imageParser({data}) {
-		return `<img class="image-tool__image-picture" src="${data.file.url}">`;
+		return `<img class="image-tool__image-picture" src=".${data.file.url}">`;
 	}
 
 	const edjsParser = edjsHTML({
 		image: imageParser
 	});
 
+	$: data = entryData.content;
+
 	let output: any[];
 
-	$: if ($showProject) {
-		let data = entryData.content;
+	$: {
 		if (data.time && data.blocks?.length > 0 && data.version) {
 			output = edjsParser.parse(data).join("");
 		} else {
@@ -28,15 +32,11 @@
 		}
 		isRelative = entryData.isRelative;
 	}
-
-	function goBack(): void { $showProject = false; }
 </script>
 
 <div class="projEntry">
     <div class="header-cont">
-		<div class="back-cont" on:click|stopPropagation="{goBack}">
-			<i class="fas fa-arrow-left"></i>
-		</div>
+		<div class="back-cont"></div>
 		<h2 class="proj-header">{entryData.name}</h2>
 		<div class="cit-cont {entryData.link != "" ? "" : " hidden"}">
 			<div class="cit-label">Visit:</div>
@@ -53,7 +53,7 @@
 	</div>
     <div class="proj-layout-cont">
         <div class="proj-main-img proj-img-cont">
-			<img src="{entryData.img}" alt="">
+			<img src=".{entryData.img}" alt="">
 		</div>
 		<div class="data-container entr-cont">
 			<div class="data-entr"><b>Name:</b> {entryData.name}</div>

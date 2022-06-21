@@ -2,9 +2,10 @@
 	import OrgsEntry from "./_orgsEntry.svelte";
     import JumpList from "../_utils/JumpList.svelte";
     import { organizations } from "../../linkConfig";
-    import { orientation } from "../../Stores";
+    import { orgScrollIdx, orientation } from "../../Stores";
     import MediaQuery from "../_utils/MediaQuery.svelte";
     import CardEntry from "./_cardEntry.svelte";
+import { afterPageLoad } from "@roxi/routify";
 
     type OrganizationsEnt = {
         key:string,
@@ -17,31 +18,30 @@
     const pieces:OrganizationsEnt[] = [];
     const jumpNames:Map<number, string> = new Map();
 
-    let scrollIdx:number = 0;
     let isScrolling:boolean = false;
     function interceptScroll(e: WheelEvent) {
         if (!isScrolling) {
             const direction:boolean = e.deltaY > 0; // true = down, false = up
             
             const orgsElem = document.getElementById('orgs').children[0];
-            if (!(scrollIdx == 0 && !direction) && !(scrollIdx == orgsElem.children.length-1 && direction) && Math.abs(e.deltaY) != 0) {
+            if (!($orgScrollIdx == 0 && !direction) && !($orgScrollIdx == orgsElem.children.length-1 && direction) && Math.abs(e.deltaY) != 0) {
                 isScrolling = true;
                 if (direction) {
-                    pieces[scrollIdx+1].scrollType = 'down-in';
-                    pieces[scrollIdx+1].hidden = false;
-                    pieces[scrollIdx].scrollType = 'down-out';
+                    pieces[$orgScrollIdx+1].scrollType = 'down-in';
+                    pieces[$orgScrollIdx+1].hidden = false;
+                    pieces[$orgScrollIdx].scrollType = 'down-out';
                     setTimeout(() => {
-                        pieces[scrollIdx].hidden = true;
-                        scrollIdx++;
+                        pieces[$orgScrollIdx].hidden = true;
+                        $orgScrollIdx++;
                         isScrolling = false;
                     }, 1500);
                 } else {
-                    pieces[scrollIdx-1].scrollType = 'up-in';
-                    pieces[scrollIdx-1].hidden = false;
-                    pieces[scrollIdx].scrollType = 'up-out';
+                    pieces[$orgScrollIdx-1].scrollType = 'up-in';
+                    pieces[$orgScrollIdx-1].hidden = false;
+                    pieces[$orgScrollIdx].scrollType = 'up-out';
                     setTimeout(() => {
-                        pieces[scrollIdx].hidden = true;
-                        scrollIdx--;
+                        pieces[$orgScrollIdx].hidden = true;
+                        $orgScrollIdx--;
                         isScrolling = false;
                     },  1500);
                 }
@@ -54,19 +54,19 @@
             if (direction) {
                 pieces[tarIdx].scrollType = 'down-in';
                 pieces[tarIdx].hidden = false;
-                pieces[scrollIdx].scrollType = 'down-out';
+                pieces[$orgScrollIdx].scrollType = 'down-out';
                 setTimeout(() => {
-                    pieces[scrollIdx].hidden = true;
-                    scrollIdx = tarIdx;
+                    pieces[$orgScrollIdx].hidden = true;
+                    $orgScrollIdx = tarIdx;
                     isScrolling = false;
                 }, 1500);
             } else {
                 pieces[tarIdx].scrollType = 'up-in';
                 pieces[tarIdx].hidden = false;
-                pieces[scrollIdx].scrollType = 'up-out';
+                pieces[$orgScrollIdx].scrollType = 'up-out';
                 setTimeout(() => {
-                    pieces[scrollIdx].hidden = true;
-                    scrollIdx = tarIdx;
+                    pieces[$orgScrollIdx].hidden = true;
+                    $orgScrollIdx = tarIdx;
                     isScrolling = false;
                 },  1500);
             }
@@ -74,7 +74,7 @@
     }
     function jumpToHandler(e: MouseEvent) {
         const target:HTMLElement = <HTMLElement>e.currentTarget;
-        const curIdx = scrollIdx;
+        const curIdx = $orgScrollIdx;
         const tarIdx:number = parseInt(target.id.substr(0, target.id.indexOf('-')));
         interceptScrollFromIdx(curIdx < tarIdx, tarIdx);
     }
@@ -83,13 +83,20 @@
         pieces.push({
             "key": key,
             "data": entr, 
-            "hidden": i !== 0, 
+            "hidden": i !== $orgScrollIdx, 
             "scrollType": i == 0 ? 'down-in' : 'up-out',
             "isLast": i+1 == organizations.size
         });
         jumpNames.set(i, entr.name);
         return entr; 
     }
+
+    $afterPageLoad(() => {
+        if ($orgScrollIdx != 0) {
+            $orgScrollIdx -= 1;
+            interceptScrollFromIdx(false, $orgScrollIdx+1);
+        }
+    });
 </script>
 
 <svelte:window on:wheel|stopPropagation="{interceptScroll}" />
@@ -109,7 +116,7 @@
     
     <MediaQuery query="(orientation:landscape)" let:matches>
         {#if matches}
-            <JumpList len={organizations.size} tooltips={jumpNames} handler={jumpToHandler} scrollIdx={scrollIdx}/>
+            <JumpList len={organizations.size} tooltips={jumpNames} handler={jumpToHandler} scrollIdx={$orgScrollIdx}/>
         {/if}
     </MediaQuery>
 </div>
