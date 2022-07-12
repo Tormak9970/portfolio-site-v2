@@ -1675,6 +1675,118 @@
 				"org": "swtor-slicers"
 			}
 		},
+		"blender": {
+			"hex-world-generator": {
+				"name": "Hex World Generator",
+				"time": "12 hours",
+				"status": "Complete",
+				"difficulty": "Moderate",
+				"description": "I started this project after coming across a video about how to make the base of the project (the hex shaped grid). Thought it looked interesting so I made it, and added decorations to the different areas.",
+				"content": {
+					"time": 1657584415874,
+					"blocks": [
+						{
+							"id": "188dV-mqHY",
+							"type": "header",
+							"data": {
+								"text": "Description",
+								"level": 2
+							}
+						},
+						{
+							"id": "5YqHZbPaez",
+							"type": "paragraph",
+							"data": {
+								"text": "I started this project after coming across a video about how to make the base of the project (the hex shaped grid). Thought it looked interesting so I made it, and added decorations to the different areas."
+							}
+						},
+						{
+							"id": "3W4r39t6v9",
+							"type": "header",
+							"data": {
+								"text": "More Info",
+								"level": 2
+							}
+						},
+						{
+							"id": "Jx-0bMiBkb",
+							"type": "paragraph",
+							"data": {
+								"text": "The way this project works is through using on of Blender's newer features, Geometry Nodes. These allow you to create 3D models almost 'programmatically'. They can be grouped together to create controller nodes as well, which is what I did for this project. This means someone could edit specific parameters to their liking without having to slog through hundreds of nodes."
+							}
+						},
+						{
+							"id": "OCvwhLsC32",
+							"type": "image",
+							"data": {
+								"file": {
+									"url": "./img/projs/Hex World Controls.png"
+								},
+								"caption": "",
+								"withBorder": false,
+								"stretched": false,
+								"withBackground": false
+							}
+						},
+						{
+							"id": "y814FaNexB",
+							"type": "header",
+							"data": {
+								"text": "Reasons",
+								"level": 2
+							}
+						},
+						{
+							"id": "8ExJmB_Ye2",
+							"type": "list",
+							"data": {
+								"style": "unordered",
+								"items": [
+									{
+										"content": "Wanted to learn more about how Geometry Nodes worked",
+										"items": []
+									},
+									{
+										"content": "Wanted to create a procedural mini world and model some low poly models",
+										"items": []
+									}
+								]
+							}
+						},
+						{
+							"id": "rI1_eUEx5E",
+							"type": "header",
+							"data": {
+								"text": "Takeaways",
+								"level": 2
+							}
+						},
+						{
+							"id": "TNsqVl2BGO",
+							"type": "list",
+							"data": {
+								"style": "unordered",
+								"items": [
+									{
+										"content": "Gained a better understanding of how Blender's Geometry Nodes work",
+										"items": []
+									},
+									{
+										"content": "Created a procedurally generated world with low poly decorations",
+										"items": []
+									}
+								]
+							}
+						}
+					],
+					"version": "2.24.3"
+				},
+				"link": "https://github.com/Tormak9970/hex-world-generator",
+				"isRelative": false,
+				"img": "./img/projs/Hex World.png",
+				"org": "none"
+			}
+		},
 		"education": {
 			"intro-to-web-dev-camp": {
 				"name": "Intro to web dev camp",
