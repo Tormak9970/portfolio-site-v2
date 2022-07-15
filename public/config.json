@@ -1829,7 +1829,9 @@
 							"id": "1L2CMoEKDp",
 							"type": "image",
 							"data": {
-								"file": {},
+								"file": {
+									"url": "./img/projs/Marching Squares inner.png"
+								},
 								"caption": "",
 								"withBorder": false,
 								"stretched": false,
