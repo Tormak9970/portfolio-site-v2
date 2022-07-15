@@ -251,4 +251,8 @@
 			@media (orientation:portrait) { .entr-cont { width: calc(100% - 30px); padding: 7px 10px; } }
 		}
     }
+
+	:global(.image-tool__image-picture) {
+		max-width: 100%;
+	}
 </style>
