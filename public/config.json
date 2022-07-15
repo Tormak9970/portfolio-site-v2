@@ -1683,7 +1683,7 @@
 				"difficulty": "Moderate",
 				"description": "I started this project after coming across a video about how to make the base of the project (the hex shaped grid). Thought it looked interesting so I made it, and added decorations to the different areas.",
 				"content": {
-					"time": 1657584415874,
+					"time": 1657913098487,
 					"blocks": [
 						{
 							"id": "188dV-mqHY",
@@ -1781,9 +1781,108 @@
 					],
 					"version": "2.24.3"
 				},
-				"link": "https://github.com/Tormak9970/hex-world-generator",
+				"link": "https://github.com/Tormak9970/blender-projects",
 				"isRelative": false,
 				"img": "./img/projs/Hex World.png",
+				"org": "none"
+			},
+			"marching-squares": {
+				"name": "Marching Squares",
+				"time": "14 hrs",
+				"status": "Complete",
+				"difficulty": "Moderate",
+				"description": "More Info",
+				"content": {
+					"time": 1657914220659,
+					"blocks": [
+						{
+							"id": "GFzO54o7BQ",
+							"type": "header",
+							"data": {
+								"text": "Description",
+								"level": 2
+							}
+						},
+						{
+							"id": "VbytCdOa6Q",
+							"type": "header",
+							"data": {
+								"text": "More Info",
+								"level": 2
+							}
+						},
+						{
+							"id": "oNGk8ZK9PK",
+							"type": "paragraph",
+							"data": {
+								"text": "While it may not be very complicated to create marching squares through programming, Blender's Geometry Nodes are another story entirely. Because of how geometry nodes work, there is no looping or re-using data in the typical programming sense. Data is, in most cases, computed based on where it is called from (more info can be found about that <a target=\"_blank\" rel=\"noreferrer noopener\" href=\"https://docs.blender.org/manual/en/latest/modeling/geometry_nodes/fields.html\">here</a>). This made recreating marching squares significantly more complicated. The image below is what the logic for this project looks like (normally I use node groups to make working on it possible, this is what it looks like without them):"
+							}
+						},
+						{
+							"id": "1L2CMoEKDp",
+							"type": "image",
+							"data": {
+								"file": {
+									"url": "./img/projs/Marching Squares inner.png"
+								},
+								"caption": "",
+								"withBorder": false,
+								"stretched": false,
+								"withBackground": false
+							}
+						},
+						{
+							"id": "qLwVgR_0xk",
+							"type": "header",
+							"data": {
+								"text": "Reasons",
+								"level": 2
+							}
+						},
+						{
+							"id": "EDSYKuORGB",
+							"type": "list",
+							"data": {
+								"style": "unordered",
+								"items": [
+									{
+										"content": "Wanted to create a geometry nodes implementation of marching squares",
+										"items": []
+									}
+								]
+							}
+						},
+						{
+							"id": "Ne9x4Lvo6L",
+							"type": "header",
+							"data": {
+								"text": "Takeaways",
+								"level": 2
+							}
+						},
+						{
+							"id": "0ug6cJpzz3",
+							"type": "list",
+							"data": {
+								"style": "unordered",
+								"items": [
+									{
+										"content": "Gained a better understanding of how to solve problems with geometry nodes",
+										"items": []
+									},
+									{
+										"content": "Have a better understanding of how geometry nodes work internally",
+										"items": []
+									}
+								]
+							}
+						}
+					],
+					"version": "2.24.3"
+				},
+				"link": "https://github.com/Tormak9970/blender-projects",
+				"isRelative": false,
+				"img": "./img/projs/Marching Squares in Blender.png",
 				"org": "none"
 			}
 		},
