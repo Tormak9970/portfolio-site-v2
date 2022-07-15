@@ -1791,9 +1791,9 @@
 				"time": "14 hrs",
 				"status": "Complete",
 				"difficulty": "Moderate",
-				"description": "More Info",
+				"description": "The goal of this project was to recreate the Marching Squares algorithm in blender. Marching Squares is a well known computer graphics algorithm used to generate procedural patterns for a multitude of uses, such as terrain in game design.",
 				"content": {
-					"time": 1657914220659,
+					"time": 1657914802466,
 					"blocks": [
 						{
 							"id": "GFzO54o7BQ",
@@ -1801,6 +1801,13 @@
 							"data": {
 								"text": "Description",
 								"level": 2
+							}
+						},
+						{
+							"id": "Ptw2MUCPEY",
+							"type": "paragraph",
+							"data": {
+								"text": "The goal of this project was to recreate the Marching Squares algorithm in blender. Marching Squares is a well known computer graphics algorithm used to generate procedural patterns for a multitude of uses, such as terrain in game design."
 							}
 						},
 						{
@@ -1822,9 +1829,7 @@
 							"id": "1L2CMoEKDp",
 							"type": "image",
 							"data": {
-								"file": {
-									"url": "./img/projs/Marching Squares inner.png"
-								},
+								"file": {},
 								"caption": "",
 								"withBorder": false,
 								"stretched": false,
