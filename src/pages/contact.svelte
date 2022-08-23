@@ -1,6 +1,6 @@
 <script lang="ts">
     import { fade } from "svelte/transition";
-    import { afterPageLoad, beforeUrlChange } from "@roxi/routify";
+    import { beforeUrlChange } from "@roxi/routify";
 
     let showThank:boolean;
 
@@ -48,7 +48,6 @@
     function showBreadcrumb(msg: string) { document.getElementById('breadCrumbCont').innerHTML = msg; showCrumb = true; setTimeout(() => { showCrumb = false; }, 3000); }
 
     // @ts-ignore
-    $afterPageLoad(() => { grecaptcha.render('recaptchaCont', { sitekey: "6Lem6_ocAAAAAJzNSej4eQTt-NrXSyNKPv_ezWWp" }); });
     $beforeUrlChange(() => { showThank = false; return true; });
 
     function handleSubmit(e: Event) {
@@ -56,33 +55,22 @@
         const form = <HTMLFormElement>e.currentTarget;
         const data = new FormData(form);
         // @ts-ignore
-        const captcha = grecaptcha.getResponse();
+        let numErrored = 0;
 
-        if (captcha != '') {
-            // check other fields' validity
-            // @ts-ignore
-            grecaptcha.reset();
-
-            let numErrored = 0;
-
-            for (const [key, value] of data) {
-                if (value == '' && key != 'g-recaptcha-response') {
-                    numErrored++;
-                    const elem = document.getElementById(key);
-                    elem.style.outline = '1px solid #e24a4a';
-                }
+        for (const [key, value] of data) {
+            if (value == '' && key != 'g-recaptcha-response') {
+                numErrored++;
+                const elem = document.getElementById(key);
+                elem.style.outline = '1px solid #e24a4a';
             }
+        }
 
-            if (numErrored > 0) {
-                showBreadcrumb("Please complete the highlighted fields.");
-            } else {
-                sendMimicPost(data);
-                form.reset();
-                showThank = true;
-            }
+        if (numErrored > 0) {
+            showBreadcrumb("Please complete the highlighted fields.");
         } else {
-            // display "fill out captcha" here
-            showBreadcrumb("Please complete the reCaptcha");
+            sendMimicPost(data);
+            form.reset();
+            showThank = true;
         }
     }
 
