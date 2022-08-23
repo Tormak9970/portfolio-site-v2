@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { isActive, url } from "@roxi/routify";
+	import { isActive, url, goto } from "@roxi/routify";
 
 	import ImageModal from "./_utils/ImageModal.svelte";
 	import MediaQuery from "./_utils/MediaQuery.svelte";
@@ -79,35 +79,39 @@
 		<MediaQuery query="(orientation:landscape)" let:matches>
 			{#if matches}
 				<div class="header">
-					<div class="home-container">
+					<div class="home-container" on:click="{() => { $goto('./index'); }}">
 						<img src="img/logo.svg" alt="logo" height="30" width="30">
 					</div>
 					<div class="navigation">
 						<div id='1' class="nav-btn-cont" on:mouseenter="{handleNavHover1}" on:mouseleave="{handleNavHover2}" on:click="{forwardClick}">
-							<a href="{$url('./index')}" class="nav-btn" on:click="{handleNavClick}">About</a>
+							<a href="{$url('./index')}" class="nav-btn" on:click="{handleNavClick}">Home</a>
 							<div class="{$isActive('./index') ? 'rendered ' : ''}interaction-indicator"></div>
 						</div>
 						<div id='2' class="nav-btn-cont" on:mouseenter="{handleNavHover1}" on:mouseleave="{handleNavHover2}" on:click="{forwardClick}">
+							<a href="{$url('./about')}" class="nav-btn" on:click="{handleNavClick}">About</a>
+							<div class="{$isActive('./about') ? 'rendered ' : ''}interaction-indicator"></div>
+						</div>
+						<div id='3' class="nav-btn-cont" on:mouseenter="{handleNavHover1}" on:mouseleave="{handleNavHover2}" on:click="{forwardClick}">
 							<a href="{$url('./experience')}" class="nav-btn" on:click="{handleNavClick}">Experience</a>
 							<div class="{$isActive('./experience') ? 'rendered ' : ''}interaction-indicator"></div>
 						</div>
-						<div id='3' class="nav-btn-cont" on:mouseenter="{handleNavHover1}" on:mouseleave="{handleNavHover2}" on:click="{forwardClick}">
+						<div id='4' class="nav-btn-cont" on:mouseenter="{handleNavHover1}" on:mouseleave="{handleNavHover2}" on:click="{forwardClick}">
 							<a href="{$url('./featured')}" class="nav-btn" on:click="{handleNavClick}">Featured</a>
 							<div class="{$isActive('./featured') ? 'rendered ' : ''}interaction-indicator"></div>
 						</div>
-						<div id='4' class="nav-btn-cont" on:mouseenter="{handleNavHover1}" on:mouseleave="{handleNavHover2}" on:click="{forwardClick}">
+						<div id='5' class="nav-btn-cont" on:mouseenter="{handleNavHover1}" on:mouseleave="{handleNavHover2}" on:click="{forwardClick}">
 							<a href="{$url('./projects')}" class="nav-btn" on:click="{handleNavClick}">Projects</a>
 							<div class="{$isActive('./projects') || $isActive('./minesweeper') || $isActive('./pong') || $isActive('./tetris') ? 'rendered ' : ''}interaction-indicator"></div>
 						</div>
-						<div id='5' class="nav-btn-cont" on:mouseenter="{handleNavHover1}" on:mouseleave="{handleNavHover2}" on:click="{forwardClick}">
+						<div id='6' class="nav-btn-cont" on:mouseenter="{handleNavHover1}" on:mouseleave="{handleNavHover2}" on:click="{forwardClick}">
 							<a href="{$url('./organizations')}" class="nav-btn" on:click="{handleNavClick}">Organizations</a>
 							<div class="{$isActive('./organizations') ? 'rendered ' : ''}interaction-indicator"></div>
 						</div>
-						<div id='6' class="nav-btn-cont" on:mouseenter="{handleNavHover1}" on:mouseleave="{handleNavHover2}" on:click="{forwardClick}">
+						<div id='7' class="nav-btn-cont" on:mouseenter="{handleNavHover1}" on:mouseleave="{handleNavHover2}" on:click="{forwardClick}">
 							<a href="{$url('./art')}" class="nav-btn" on:click="{handleNavClick}">Art Gallery</a>
 							<div class="{$isActive('./art') ? 'rendered ' : ''}interaction-indicator"></div>
 						</div>
-						<div id='7' class="nav-btn-cont" on:mouseenter="{handleNavHover1}" on:mouseleave="{handleNavHover2}" on:click="{forwardClick}">
+						<div id='8' class="nav-btn-cont" on:mouseenter="{handleNavHover1}" on:mouseleave="{handleNavHover2}" on:click="{forwardClick}">
 							<a href="{$url('./contact')}" class="nav-btn" on:click="{handleNavClick}">Contact</a>
 							<div class="{$isActive('./contact') ? 'rendered ' : ''}interaction-indicator"></div>
 						</div>
@@ -135,30 +139,33 @@
 				{#if !matches}
 					<div class="navigation">
 						<div id='1' class="nav-btn-cont{$isActive('./index') ? ' rendered' : ''}" on:click="{forwardClick}">
-							<a href="{$url('./index')}" class="nav-btn" on:click="{handleNavClick}">About</a>
+							<a href="{$url('./index')}" class="nav-btn" on:click="{handleNavClick}">Home</a>
+						</div>
+						<div id='2' class="nav-btn-cont{$isActive('./about') ? ' rendered' : ''}" on:click="{forwardClick}">
+							<a href="{$url('./about')}" class="nav-btn" on:click="{handleNavClick}">About</a>
 						</div>
 						<div class="spacer"></div>
-						<div id='2' class="nav-btn-cont{$isActive('./experience') ? ' rendered' : ''}" on:click="{forwardClick}">
+						<div id='3' class="nav-btn-cont{$isActive('./experience') ? ' rendered' : ''}" on:click="{forwardClick}">
 							<a href="{$url('./experience')}" class="nav-btn" on:click="{handleNavClick}">Experience</a>
 						</div>
 						<div class="spacer"></div>
-						<div id='3' class="nav-btn-cont{$isActive('./featured') ? ' rendered' : ''}" on:click="{forwardClick}">
+						<div id='4' class="nav-btn-cont{$isActive('./featured') ? ' rendered' : ''}" on:click="{forwardClick}">
 							<a href="{$url('./featured')}" class="nav-btn" on:click="{handleNavClick}">Featured</a>
 						</div>
 						<div class="spacer"></div>
-						<div id='4' class="nav-btn-cont{$isActive('./projects') || $isActive('./minesweeper') || $isActive('./pong') || $isActive('./tetris') ? ' rendered' : ''}" on:click="{forwardClick}">
+						<div id='5' class="nav-btn-cont{$isActive('./projects') || $isActive('./minesweeper') || $isActive('./pong') || $isActive('./tetris') ? ' rendered' : ''}" on:click="{forwardClick}">
 							<a href="{$url('./projects')}" class="nav-btn" on:click="{handleNavClick}">Projects</a>
 						</div>
 						<div class="spacer"></div>
-						<div id='5' class="nav-btn-cont{$isActive('./organizations') ? ' rendered' : ''}" on:click="{forwardClick}">
+						<div id='6' class="nav-btn-cont{$isActive('./organizations') ? ' rendered' : ''}" on:click="{forwardClick}">
 							<a href="{$url('./organizations')}" class="nav-btn" on:click="{handleNavClick}">Organizations</a>
 						</div>
 						<div class="spacer"></div>
-						<div id='6' class="nav-btn-cont{$isActive('./art') ? ' rendered' : ''}" on:click="{forwardClick}">
+						<div id='7' class="nav-btn-cont{$isActive('./art') ? ' rendered' : ''}" on:click="{forwardClick}">
 							<a href="{$url('./art')}" class="nav-btn" on:click="{handleNavClick}">Art Gallery</a>
 						</div>
 						<div class="spacer"></div>
-						<div id='7' class="nav-btn-cont{$isActive('./contact') ? ' rendered' : ''}" on:click="{forwardClick}">
+						<div id='8' class="nav-btn-cont{$isActive('./contact') ? ' rendered' : ''}" on:click="{forwardClick}">
 							<a href="{$url('./contact')}" class="nav-btn" on:click="{handleNavClick}">Contact</a>
 						</div>
 					</div>
@@ -209,6 +216,8 @@
 				flex-direction: column;
 				justify-content: center;
 				align-items: center;
+
+				cursor: pointer;
 			}
 
 			.navigation {
@@ -277,6 +286,8 @@
 				justify-content: space-between;
 				align-items: center;
 
+				cursor: pointer;
+
 				.nav-toggle {
 					margin-right: 7px;
 					display: inline-block;
@@ -288,12 +299,13 @@
 						background-color: $font-color;
 						margin: 6px 0;
 						transition: 0.4s;
+						border-radius: 8px;
 					}
 				}
 				.change {
-					.bar1 { -webkit-transform: rotate(-45deg) translate(-9px, 6px); transform: rotate(-45deg) translate(-9px, 6px); }
+					.bar1 { -webkit-transform: rotate(-45deg) translate(-9px, 6px); transform: rotate(-45deg) translate(-9px, 6px); border-radius: 8px; }
 					.bar2 { opacity: 0; }
-					.bar3 { -webkit-transform: rotate(45deg) translate(-8px, -8px); transform: rotate(45deg) translate(-8px, -8px); }
+					.bar3 { -webkit-transform: rotate(45deg) translate(-8px, -8px); transform: rotate(45deg) translate(-9px, -7px); border-radius: 8px; }
 				}
 
 				img { margin-left: 7px; }
@@ -305,13 +317,7 @@
 			overflow-x: hidden;
 
 			height: calc(100% - 50px);
-			width: calc(100% + 150px);
-
-			position: absolute;
-			left: -150px;
-			top: 50px;
-
-			transition: left 0.4s;
+			width: 100%;
 			
 			display: flex;
 			flex-direction: row;
@@ -353,6 +359,13 @@
 			}
 
 			.navigation {
+				z-index: 100;
+				position: absolute;
+				left: calc(100% - 150px);
+				top: 50px;
+
+				transition: left 0.4s;
+
 				height: 100%;
 
 				display: flex;
@@ -395,6 +408,6 @@
 			}
 		}
 
-		.menu-hidden { left: 0; }
+		.menu-hidden > .navigation { left: 100%; }
 	}
 </style>

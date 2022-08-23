@@ -3,6 +3,7 @@
     export let jumpTo = (id:string) => {}
 </script>
 <script lang="ts">
+    import { fade } from "svelte/transition";
     import { projects } from "../../linkConfig";
     import ProjectOverview from "./_projectOverview.svelte";
     import { projScrollIdx, orientation } from "../../Stores";
@@ -143,7 +144,7 @@
 </script>
 <svelte:window on:wheel="{interceptScroll}" />
 
-<div id="projects">
+<div id="projects" in:fade>
     <div class="content{$orientation == 0 ? ' fancy' : ' card'}">
         {#each Array.from(projects).map(processEntries) as projEntr, idx}
             <MediaQuery query="(orientation:landscape)" let:matches>

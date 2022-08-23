@@ -1,0 +1,10 @@
+:root {
+    --background: #252525;
+	--foreground: #383838;
+	--highlight: #82b74bff;
+    --highlight-hover: rgb(138, 194, 78);
+
+    --font-color: rgb(231, 231, 231);
+    --link-color: rgb(0, 187, 255);
+    --link-color_clicked: rgb(0, 94, 255);
+}

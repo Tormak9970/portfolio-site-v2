@@ -1,4 +1,5 @@
 <script lang="ts">
+    import { fade } from "svelte/transition";
     import { afterPageLoad, beforeUrlChange } from "@roxi/routify";
 
     let showThank:boolean;
@@ -100,7 +101,7 @@
     function highlightHandler(e: Event) { (e.currentTarget as HTMLElement).style.outline = ''; }
 </script>
 
-<div id="infoSection">
+<div id="infoSection" in:fade>
 	<h2 class="info-header">Get in touch</h2>
     <div class="info-container">
         <div class="blurb">
@@ -108,12 +109,12 @@
         </div>
 
         {#if showThank}
-            <div class="thank-cont">
+            <div class="thank-cont" in:fade>
                 <h1>Thank you!</h1>
                 <p>Thanks for reaching out! I will try to get back to you as soon as possible!</p>
             </div>
         {:else}
-            <div class="form-wrapper">
+            <div class="form-wrapper" in:fade>
                 <form action="https://formsubmit.co/Tormak9970@gmail.com" method="POST" id="contactForm" on:submit|stopPropagation="{handleSubmit}">
                     <label for="email">Email Adress</label>
                     <input id="email" type="email" name="email" placeholder="foo@bar.com" on:focus="{highlightHandler}">

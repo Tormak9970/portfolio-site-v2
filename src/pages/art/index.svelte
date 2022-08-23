@@ -1,11 +1,12 @@
 <script lang="ts" type="module">
+    import { fade } from "svelte/transition";
 	import ArtEntry from './_artEntry.svelte';
     import JumpList from "../_utils/JumpList.svelte";
     import { artScrollIdx, orientation } from "../../Stores";
     import { art } from '../../linkConfig';
     import MediaQuery from "../_utils/MediaQuery.svelte";
     import CardEntry from "./_cardEntry.svelte";
-import { afterPageLoad } from '@roxi/routify';
+    import { afterPageLoad } from '@roxi/routify';
 
     interface ArtEnt {
         key:string,
@@ -117,7 +118,7 @@ import { afterPageLoad } from '@roxi/routify';
 
 <svelte:window on:wheel|stopPropagation="{interceptScroll}" />
 
-<div id="art">
+<div id="art" in:fade>
     <div class="content{$orientation == 0 ? ' fancy' : ' card'}">
         <MediaQuery query="(orientation:landscape)" let:matches>
             {#if matches && $orientation == 0}

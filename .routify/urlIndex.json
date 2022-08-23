@@ -1,12 +1,10 @@
 [
+  "/about",
   "/art/index",
   "/contact",
   "/experience/index",
   "/featured",
   "/index",
-  "/minesweeper",
   "/organizations/index",
-  "/pong",
-  "/projects/index",
-  "/tetris"
+  "/projects/index"
 ]

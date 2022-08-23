@@ -1,11 +1,12 @@
 <script lang="ts">
+    import { fade } from "svelte/transition";
 	import { featured } from "../linkConfig";
     import ProjectOverview from "./projects/_projectOverview.svelte";
     import MediaQuery from "./_utils/MediaQuery.svelte";
     import CardEntry from "./projects/_cardEntry.svelte";
 </script>
 
-<div id="featured">
+<div id="featured" in:fade>
     <MediaQuery query="(orientation:landscape)" let:matches>
         {#if matches}
             <ProjectOverview entryData={featured} hidden={false} scrollType="" isLast={true}/>
@@ -34,14 +35,5 @@
         position: relative;
 
         overflow: hidden;
-
-        animation-name: fade-in;
-        animation-fill-mode: both;
-        animation-duration: 1.5s;
 	}
-
-    @keyframes fade-in {
-        0% { opacity: 0; }
-        100% { opacity: 1; }
-    }
 </style>

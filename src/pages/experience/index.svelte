@@ -1,11 +1,12 @@
 <script lang="ts" type="module">
+    import { fade } from "svelte/transition";
 	import ExperienceEntry from './_experienceEntry.svelte';
     import JumpList from "../_utils/JumpList.svelte";
     import { expScrollIdx, orientation } from "../../Stores";
     import { experience } from '../../linkConfig';
     import MediaQuery from "../_utils/MediaQuery.svelte";
     import CardEntry from "./_cardEntry.svelte";
-import { afterPageLoad } from '@roxi/routify';
+    import { afterPageLoad } from '@roxi/routify';
 
     interface ExperienceEnt {
         key:string,
@@ -102,7 +103,7 @@ import { afterPageLoad } from '@roxi/routify';
 
 <svelte:window on:wheel|stopPropagation="{interceptScroll}" />
 
-<div id="experience">
+<div id="experience" in:fade>
     <div class="content{$orientation == 0 ? ' fancy' : ' card'}">
         {#each Array.from(experience).map(processEntries) as expEntr, idx}
             <MediaQuery query="(orientation:landscape)" let:matches>

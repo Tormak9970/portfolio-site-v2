@@ -1,11 +1,12 @@
 <script lang="ts" type="module">
+    import { fade } from "svelte/transition";
 	import OrgsEntry from "./_orgsEntry.svelte";
     import JumpList from "../_utils/JumpList.svelte";
     import { organizations } from "../../linkConfig";
     import { orgScrollIdx, orientation } from "../../Stores";
     import MediaQuery from "../_utils/MediaQuery.svelte";
     import CardEntry from "./_cardEntry.svelte";
-import { afterPageLoad } from "@roxi/routify";
+    import { afterPageLoad } from "@roxi/routify";
 
     type OrganizationsEnt = {
         key:string,
@@ -101,7 +102,7 @@ import { afterPageLoad } from "@roxi/routify";
 
 <svelte:window on:wheel|stopPropagation="{interceptScroll}" />
 
-<div id="orgs">
+<div id="orgs" in:fade>
     <div class="content{$orientation == 0 ? ' fancy' : ' card'}">
         {#each Array.from(organizations).map(processEntries) as orgEntr, idx}
             <MediaQuery query="(orientation:landscape)" let:matches>
