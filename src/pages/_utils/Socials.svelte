@@ -1,12 +1,14 @@
 <script lang="ts">
-	
+	function navigateToUrl(url:string) {
+        window.open(url, '_blank', 'noopener noreferrer');
+    }
 </script>
 
 <div id="socials">
 	<div class="socials-entr">
-        <a href="https://github.com/Tormak9970" target="_blank" rel="noopener noreferrer" class="social-btn">
+        <div on:click="{() => { navigateToUrl("https://github.com/Tormak9970"); }}" class="social-btn">
             <i class="fa fa-github-square"></i>
-        </a>
+        </div>
     </div>
 </div>
 
@@ -57,6 +59,7 @@
             }
         }
         .socials-entr:hover {
+            cursor: pointer;
             .fa-github-square {
                 color: $bud-green__hover;
             }

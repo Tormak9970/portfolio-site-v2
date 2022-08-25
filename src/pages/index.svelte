@@ -145,6 +145,10 @@
         display: flex;
         flex-direction: row;
         align-items: center;
+        justify-content: center;
+
+        height: 55.2px;
+        width: 218.8px;
     }
     .desc-cont > .caret {
         background-color: var(--desc-color);

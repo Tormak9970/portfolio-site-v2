@@ -174,6 +174,7 @@
 		</div>
 		<ImageModal config={$imageModalData} />
     {/await}
+	<div class="rights">© Travis Lane 2022</div>
 </main>
 
 <style lang="scss">
@@ -409,5 +410,15 @@
 		}
 
 		.menu-hidden > .navigation { left: 100%; }
+	}
+
+	.rights {
+		position: absolute;
+		right: 7px;
+		bottom: 7px;
+
+		font-size: 10px;
+
+		opacity: 0.4;
 	}
 </style>

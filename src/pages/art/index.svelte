@@ -116,7 +116,7 @@
     });
 </script>
 
-<svelte:window on:wheel|stopPropagation="{interceptScroll}" />
+<svelte:window on:wheel|stopPropagation|preventDefault="{interceptScroll}" />
 
 <div id="art" in:fade>
     <div class="content{$orientation == 0 ? ' fancy' : ' card'}">
