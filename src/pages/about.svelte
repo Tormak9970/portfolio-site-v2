@@ -57,99 +57,68 @@
     {/if}
 </MediaQuery>
 
-<style lang="scss">
-	$grey-primary: #252525;
-	$grey-secondary: #383838;
-	$bud-green: #82b74bff;
-    $bud-green__hover: rgb(138, 194, 78);
-    $dark-moss-green: #405d27ff;
-    $army-green: #32481eff;
-
+<style>
 	.landscape {
-		width: 80%;
-		height: 80%;
-
-		display: flex;
-		flex-direction: row;
+        width: 80%;
+        height: 80%;
+        display: flex;
+        flex-direction: row;
         align-items: center;
-
-        .container {
-            width: 50%;
-            height: 100%;
-
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-
-            .bio {
-                font-size: 24px;
-
-                a {
-                    color: rgb(0, 187, 255);
-
-                    text-decoration: none;
-
-                    &:focus {
-                        color: rgb(0, 94, 255);
-
-                        text-decoration: none;
-                    }
-                }
-            }
-
-            img {
-                // border-radius: 50%; // will add back once I have a non placeholder img
-            }
-        }
-	}
-
+    }
+    .landscape .container {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .landscape .container .bio {
+        font-size: 24px;
+    }
+    .landscape .container .bio a {
+        color: var(--link-color);
+        text-decoration: none;
+    }
+    .landscape .container .bio a:focus {
+        color: var(--link-color_clicked);
+        text-decoration: none;
+    }
     .mobile {
         width: 100%;
-		height: 80%;
-
-		display: flex;
-		flex-direction: column;
+        height: 80%;
+        display: flex;
+        flex-direction: column;
         align-items: center;
-
-        .container {
-            width: 50%;
-
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-
-            img {
-                // border-radius: 50%; // will add back once I have a non placeholder img
-                width: 100%;
-            }
-        }
-
-        .bio-cont {
-            width: 80%;
-            text-align: center;
-
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-
-            .bio {
-                font-size: 18px;
-
-                a {
-                    color: rgb(0, 187, 255);
-
-                    text-decoration: none;
-
-                    &:focus {
-                        color: rgb(0, 94, 255);
-
-                        text-decoration: none;
-                    }
-                }
-            }
-        }
     }
+    .mobile .container {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .mobile .container img {
+        width: 100%;
+    }
+    .mobile .bio-cont {
+        width: 80%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .mobile .bio-cont .bio {
+        font-size: 18px;
+    }
+    .mobile .bio-cont .bio a {
+        color: var(--link-color);
+        text-decoration: none;
+    }
+    .mobile .bio-cont .bio a:focus {
+        color: var(--link-color_clicked);
+        text-decoration: none;
+    }
+
 </style>

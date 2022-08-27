@@ -15,11 +15,8 @@
     </div>
 </div>
 
-<style lang="scss">
-    $grey-primary: #252525;
-    $grey-secondary: #383838;
-    $bud-green: #82b74bff;
-    $bud-green__hover: rgb(138, 194, 78);
+<style>
+    @import "/theme.css";
 
     .card-entr {
         display: flex;
@@ -31,38 +28,36 @@
         max-width: 330px;
         height: fit-content;
 
-        background-color: $grey-secondary;
+        background-color: var(--foreground);
 
         margin: 14px;
+    }
 
-        .name-cont {
-            width: 90%;
+    .name-cont {
+        width: 90%;
 
-            text-align: center;
+        text-align: center;
 
-            font-size: 20px;
+        font-size: 20px;
 
-            margin-bottom: 7px;
-        }
+        margin-bottom: 7px;
+    }
 
-        .img-cont {
-            width: 90%;
+    .img-cont {
+        width: 90%;
 
-            margin-bottom: 7px;
+        margin-bottom: 7px;
+    }
 
-            img {
-                width: 100%;
-            }
-        }
-        
-        .desc-cont {
-            width: 90%;
+    .img-cont > img { width: 100%; }
+    
+    .desc-cont {
+        width: 90%;
 
-            text-align: center;
+        text-align: center;
 
-            font-size: 16px;
+        font-size: 16px;
 
-            margin-bottom: 5px;
-        }
+        margin-bottom: 5px;
     }
 </style>

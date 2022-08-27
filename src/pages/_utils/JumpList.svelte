@@ -72,196 +72,175 @@
 </div>
 
 <!-- svelte-ignore unused-css-style-selector -->
-<style lang="scss">
-	$grey-primary: #252525;
-	$grey-secondary: #383838;
-	$bud-green: #82b74bff;
-	$font-color: rgb(231, 231, 231);
-    $bud-green__hover: rgb(138, 194, 78);
-    $tooltip-color: rgb(71, 71, 71);
-
+<style>
+    @import "/theme.css";
+    
     #jumpToCont {
         z-index: 2;
-
         position: absolute;
-
         display: flex;
         flex-direction: column;
         align-items: center;
-
         left: 0;
         top: 8%;
-
-        .layout-toggle {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-
-            background-color: $grey-secondary;
-            border-top-right-radius: 8px;
-            border-bottom-right-radius: 8px;
-
-            background-color: $grey-secondary;
-            border-top-right-radius: 8px;
-            border-bottom-right-radius: 8px;
-
-            margin-bottom: 21px;
-
-        
-            box-shadow: #151515 1px 1px 10px 0px;
-
-            .option {
-                margin: 1px 2px;
-                cursor: pointer;
-
-                .selected { color: $bud-green; fill: $bud-green; }
-
-                a {
-                    width: 20px;
-                    height: 20px;
-
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    align-items: center;
-
-                    text-decoration: none;
-
-                    font-size: 16px;
-
-                    i {
-                        width: 16px;
-                        height: 16px;
-                    }
-
-                    &:hover { color: $bud-green__hover; }
-                }
-                .tooltip {
-                    position: relative;
-
-                    .tooltip-text {
-                        white-space: nowrap;
-                        visibility: hidden;
-                        background-color: $tooltip-color;
-                        color: #fff;
-                        text-align: center;
-                        padding: 2px 6px;
-                        border-radius: 6px;
-
-                        /* Position the tooltip text */
-                        position: absolute;
-                        z-index: 1;
-                        top: -2px;
-                        left: 105%;
-                        margin-left: 5px;
-
-                        /* Fade in tooltip */
-                        opacity: 0;
-                        transition: opacity 0.3s;
-                        
-                        &::after {
-                            content: " ";
-                            position: absolute;
-                            top: 50%;
-                            right: 100%; /* To the left of the tooltip */
-                            margin-top: -5px;
-                            border-width: 5px;
-                            border-style: solid;
-                            border-color: transparent $tooltip-color transparent transparent;
-                        }
-                    }
-
-                    &:hover { .tooltip-text { visibility: visible; opacity: 1; } }
-                }
-            }
-
-            :first-child { margin-top: 2px; }
-            :last-child { margin-bottom: 2px; }
-        }
-
-        .jump-nav-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-
-            background-color: $grey-secondary;
-            border-top-right-radius: 8px;
-            border-bottom-right-radius: 8px;
-
-            background-color: $grey-secondary;
-            border-top-right-radius: 8px;
-            border-bottom-right-radius: 8px;
-
-        
-            box-shadow: #151515 1px 1px 10px 0px;
-
-            div {
-                margin: 1px 2px;
-                cursor: pointer;
-
-                .selected { color: $bud-green; fill: $bud-green; }
-
-                a {
-                    width: 20px;
-                    height: 20px;
-
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    align-items: center;
-
-                    text-decoration: none;
-
-                    font-size: 16px;
-
-                    i {
-                        width: 16px;
-                        height: 16px;
-                    }
-
-                    &:hover { color: $bud-green__hover; }
-                }
-                .tooltip {
-                    position: relative;
-
-                    .tooltip-text {
-                        white-space: nowrap;
-                        visibility: hidden;
-                        background-color: $tooltip-color;
-                        color: #fff;
-                        text-align: center;
-                        padding: 2px 6px;
-                        border-radius: 6px;
-
-                        /* Position the tooltip text */
-                        position: absolute;
-                        z-index: 1;
-                        top: -2px;
-                        left: 105%;
-                        margin-left: 5px;
-
-                        /* Fade in tooltip */
-                        opacity: 0;
-                        transition: opacity 0.3s;
-                        
-                        &::after {
-                            content: " ";
-                            position: absolute;
-                            top: 50%;
-                            right: 100%; /* To the left of the tooltip */
-                            margin-top: -5px;
-                            border-width: 5px;
-                            border-style: solid;
-                            border-color: transparent $tooltip-color transparent transparent;
-                        }
-                    }
-
-                    &:hover { .tooltip-text { visibility: visible; opacity: 1; } }
-                }
-            }
-
-            :first-child { margin-top: 2px; }
-            :last-child { margin-bottom: 2px; }
-        }
+    }
+    #jumpToCont .layout-toggle {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: var(--foreground);
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
+        background-color: var(--foreground);
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
+        margin-bottom: 21px;
+        box-shadow: #151515 1px 1px 10px 0px;
+    }
+    #jumpToCont .layout-toggle .option {
+        margin: 1px 2px;
+        cursor: pointer;
+    }
+    #jumpToCont .layout-toggle .option .selected {
+        color: var(--highlight);
+        fill: var(--highlight);
+    }
+    #jumpToCont .layout-toggle .option a {
+        width: 20px;
+        height: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        font-size: 16px;
+    }
+    #jumpToCont .layout-toggle .option a i {
+        width: 16px;
+        height: 16px;
+    }
+    #jumpToCont .layout-toggle .option a:hover {
+        color: var(--highlight-hover);
+    }
+    #jumpToCont .layout-toggle .option .tooltip {
+        position: relative;
+    }
+    #jumpToCont .layout-toggle .option .tooltip .tooltip-text {
+        white-space: nowrap;
+        visibility: hidden;
+        background-color: var(--foreground-hover);
+        color: #fff;
+        text-align: center;
+        padding: 2px 6px;
+        border-radius: 6px;
+        /* Position the tooltip text */
+        position: absolute;
+        z-index: 1;
+        top: -2px;
+        left: 105%;
+        margin-left: 5px;
+        /* Fade in tooltip */
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+    #jumpToCont .layout-toggle .option .tooltip .tooltip-text::after {
+        content: " ";
+        position: absolute;
+        top: 50%;
+        right: 100%;
+        /* To the left of the tooltip */
+        margin-top: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: transparent var(--foreground-hover) transparent transparent;
+    }
+    #jumpToCont .layout-toggle .option .tooltip:hover .tooltip-text {
+        visibility: visible;
+        opacity: 1;
+    }
+    #jumpToCont .layout-toggle :first-child {
+        margin-top: 2px;
+    }
+    #jumpToCont .layout-toggle :last-child {
+        margin-bottom: 2px;
+    }
+    #jumpToCont .jump-nav-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: var(--foreground);
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
+        background-color: var(--foreground);
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
+        box-shadow: #151515 1px 1px 10px 0px;
+    }
+    #jumpToCont .jump-nav-container div {
+        margin: 1px 2px;
+        cursor: pointer;
+    }
+    #jumpToCont .jump-nav-container div .selected {
+        color: var(--highlight);
+        fill: var(--highlight);
+    }
+    #jumpToCont .jump-nav-container div a {
+        width: 20px;
+        height: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        font-size: 16px;
+    }
+    #jumpToCont .jump-nav-container div a i {
+        width: 16px;
+        height: 16px;
+    }
+    #jumpToCont .jump-nav-container div a:hover {
+        color: var(--highlight-hover);
+    }
+    #jumpToCont .jump-nav-container div .tooltip {
+        position: relative;
+    }
+    #jumpToCont .jump-nav-container div .tooltip .tooltip-text {
+        white-space: nowrap;
+        visibility: hidden;
+        background-color: var(--foreground-hover);
+        color: #fff;
+        text-align: center;
+        padding: 2px 6px;
+        border-radius: 6px;
+        /* Position the tooltip text */
+        position: absolute;
+        z-index: 1;
+        top: -2px;
+        left: 105%;
+        margin-left: 5px;
+        /* Fade in tooltip */
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+    #jumpToCont .jump-nav-container div .tooltip .tooltip-text::after {
+    content: " ";
+        position: absolute;
+        top: 50%;
+        right: 100%;
+        /* To the left of the tooltip */
+        margin-top: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: transparent var(--foreground-hover) transparent transparent;
+    }
+    #jumpToCont .jump-nav-container div .tooltip:hover .tooltip-text {
+        visibility: visible;
+        opacity: 1;
+    }
+    #jumpToCont .jump-nav-container :first-child {
+        margin-top: 2px;
+    }
+    #jumpToCont .jump-nav-container :last-child {
+        margin-bottom: 2px;
     }
 </style>

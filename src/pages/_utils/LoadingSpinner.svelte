@@ -24,20 +24,18 @@
     </svg>
 </div>
 
-<style lang="scss">
+<style>
     .loading-spinner-cont {
-        & > * {
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-        }
-
         position: relative;
         height: 100px;
-
-        .path { animation: dash 3s linear infinite; }
     }
+    .loading-spinner-cont > * {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .loading-spinner-cont > .path { animation: dash 3s linear infinite; }
 
     @keyframes dash {
         0% { stroke-dashoffset: 0%; stroke-dasharray: 0% 100%; }

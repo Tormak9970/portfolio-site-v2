@@ -37,12 +37,7 @@
     <div class="msg">{isLast ? "To be continued..." : "Scroll to continue..."}</div>
 </div>
 
-<style lang="scss">
-	$grey-primary: #252525;
-	$grey-secondary: #383838;
-	$bud-green: #82b74bff;
-    $bud-green__hover: rgb(138, 194, 78);
-
+<style>
     .experienceEntry {
         width: 64%;
 
@@ -59,25 +54,24 @@
         animation-fill-mode: both;
         animation-direction: alternate;
         animation-duration: 1.5s;
-
-        .experience-header { font-size: 27px; }
-        .description { width: 100%; margin-top: 14px; font-size: 24px; text-align: center; }
-        .content-container {
-            width: 100%;
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-            column-gap: 14px;
-            
-            .img-cont {
-                width: 100%;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                img { max-width: 100%; height: auto; margin-top: 14px; }
-            }
-        }
-        .msg { margin-top: 56px; font-size: 24px; }
     }
+
+    .experienceEntry > .experience-header { font-size: 27px; }
+    .experienceEntry > .description { width: 100%; margin-top: 14px; font-size: 24px; text-align: center; }
+    .experienceEntry > .content-container {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+        column-gap: 14px;
+    }
+    .experienceEntry > .content-container > .img-cont {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .experienceEntry > .content-container > .img-cont > img { max-width: 100%; height: auto; margin-top: 14px; }
+    .experienceEntry > .msg { margin-top: 56px; font-size: 24px; }
 
     .down-in { animation-name: down-fade-in; }
     .up-in { animation-name: up-fade-in; }

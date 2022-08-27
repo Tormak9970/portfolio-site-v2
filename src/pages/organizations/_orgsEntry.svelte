@@ -58,12 +58,7 @@
     <div class="msg">{isLast ? "" : "Scroll to continue..."}</div>
 </div>
 
-<style lang="scss">
-	$grey-primary: #252525;
-	$grey-secondary: #383838;
-	$bud-green: #82b74bff;
-    $bud-green__hover: rgb(138, 194, 78);
-
+<style>
     .orgEntry {
         width: 100%;
 
@@ -80,65 +75,57 @@
         animation-fill-mode: both;
         animation-direction: alternate;
         animation-duration: 1.5s;
-
-        .org-header { font-size: 27px; }
-        .org-header-2 { text-align: center; }
-        .content-container {
-            width: 100%;
-            display: grid;
-            grid-template-columns: minmax(400px, 1fr) minmax(400px, 2fr) minmax(200px, 1fr);
-            column-gap: 14px;
-            justify-items: center;
-            align-items: center;
-            
-            img { width: 80%; height: auto; margin-top: 14px; }
-        }
-        .description { width: 100%; margin-top: 14px; font-size: 20px; text-align: center; }
-        .msg { margin-top: 56px; font-size: 24px; }
-        .projects {
-            margin-top: 14px;
-            width: 100%;
-            height: 100%;
-            font-size: 20px;
-
-            ul {
-                width: 100%;
-
-                li {
-                    width: 100%;
-
-                    .proj-entr {
-                        height: 100%;
-
-                        display: flex;
-                        flex-direction: row;
-                        align-items: center;
-
-                        .name {
-                            margin-right: 7px;
-                        }
-
-                        .proj-link {
-                            height: 100%;
-                        
-                            display: flex;
-                            flex-direction: row;
-                            align-items: center;
-
-                            color: $bud-green;
-
-                            cursor: pointer;
-                            font-size: 14px;
-
-                            &:hover {
-                                color: $bud-green__hover;
-                            }
-                        }
-                    }
-                }
-            }
-        }
     }
+    .orgEntry .org-header { font-size: 27px; }
+    .orgEntry .org-header-2 { text-align: center; }
+        
+    .orgEntry .content-container {
+        width: 100%;
+        display: grid;
+        grid-template-columns: minmax(400px, 1fr) minmax(400px, 2fr) minmax(200px, 1fr);
+        column-gap: 14px;
+        justify-items: center;
+        align-items: center;
+    }
+    .orgEntry .content-container img { width: 80%; height: auto; margin-top: 14px; }
+        
+    .orgEntry .description { width: 100%; margin-top: 14px; font-size: 20px; text-align: center; }
+    .orgEntry .msg { margin-top: 56px; font-size: 24px; }
+    .projects {
+        margin-top: 14px;
+        width: 100%;
+        height: 100%;
+        font-size: 20px;
+    }
+    .projects ul {
+        width: 100%;
+
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+    .projects ul li { width: 100%; }
+    .projects ul li .proj-entr {
+        height: 100%;
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    .projects ul li .proj-entr .name { margin-right: 7px; }
+
+    .projects ul li .proj-entr .proj-link {
+        height: 100%;
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        color: var(--highlight);
+
+        cursor: pointer;
+        font-size: 14px;
+    }
+    .projects ul li .proj-entr .proj-link :hover { color: var(--highlight-hover); }
 
     .down-in { animation-name: down-fade-in; }
     .up-in { animation-name: up-fade-in; }

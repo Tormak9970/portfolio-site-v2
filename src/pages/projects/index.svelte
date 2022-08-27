@@ -163,40 +163,27 @@
     </MediaQuery>
 </div>
 
-<style lang="scss">
-	$grey-primary: #252525;
-	$grey-secondary: #383838;
-	$bud-green: #82b74bff;
-    $bud-green__hover: rgb(138, 194, 78);
-
+<style>
 	#projects {
         width: 100%;
         height: 100%;
-
         position: relative;
-
         overflow: hidden;
     }
-
     @media (orientation: landscape) {
         .content {
             width: 100%;
             height: 100%;
-
             position: relative;
             overflow-x: hidden;
         }
-
         .fancy {
             display: flex;
             flex-direction: column;
             align-items: center;
-
             position: relative;
-
             overflow: hidden;
         }
-
         .card {
             display: grid;
             grid-template-columns: repeat(auto-fill, 330px);
@@ -206,18 +193,14 @@
             overflow: scroll;
         }
     }
-
     @media (orientation: portrait) {
         .content {
             width: 100%;
             height: 100%;
-
             display: flex;
             flex-direction: column;
             align-items: center;
-
             position: relative;
-
             overflow: scroll;
             overflow-x: hidden;
         }

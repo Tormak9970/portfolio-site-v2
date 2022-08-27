@@ -15,12 +15,7 @@
     </slot>
 </div>
 
-<style lang="scss">
-	$grey-primary: #252525;
-	$grey-secondary: #383838;
-	$bud-green: #82b74bff;
-    $bud-green__hover: rgb(138, 194, 78);
-
+<style>
     .modal-container {
         z-index: 100;
         width: 100%;

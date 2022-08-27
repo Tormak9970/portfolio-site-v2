@@ -4,15 +4,16 @@ module.exports = {
   "routifyDir": ".routify",
   "ignore": "",
   "dynamicImports": true,
-  "singleBuild": true,
+  "singleBuild": false,
   "noHashScroll": false,
   "distDir": "dist",
   "hashScroll": true,
+  "childProcess": "dev:vite",
   "extensions": [
     "html",
     "svelte",
     "md",
     "svx"
   ],
-  "started": "2022-08-25T13:55:58.618Z"
+  "started": "2022-08-26T20:26:38.622Z"
 }

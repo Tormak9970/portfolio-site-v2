@@ -26,11 +26,8 @@
     </div>
 </div>
 
-<style lang="scss">
-    $grey-primary: #252525;
-    $grey-secondary: #383838;
-    $bud-green: #82b74bff;
-    $bud-green__hover: rgb(138, 194, 78);
+<style>
+    @import "/theme.css";
 
     .card-entr {
         display: flex;
@@ -42,74 +39,70 @@
         max-width: 330px;
         height: fit-content;
 
-        background-color: $grey-secondary;
+        background-color: var(--foreground);
 
         margin: 14px;
+    }
 
-        .name-cont {
-            width: 90%;
+    .name-cont {
+        width: 90%;
 
-            text-align: center;
+        text-align: center;
 
-            font-size: 20px;
+        font-size: 20px;
 
-            margin-bottom: 7px;
-        }
+        margin-bottom: 7px;
+    }
 
-        .img-cont {
-            width: 90%;
+    .img-cont {
+        width: 90%;
 
-            margin-bottom: 7px;
+        margin-bottom: 7px;
+    }
 
-            img {
-                width: 100%;
-            }
-        }
+    .img-cont > img { width: 100%; }
+    
+    .desc-cont {
+        width: 90%;
+
+        text-align: center;
+
+        font-size: 16px;
+
+        margin-bottom: 5px;
+    }
+
+    .link-cont {
+        height: 100%;
+        width: 100%;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        margin-bottom: 5px;
+    }
+    .link-cont > .name {
+        height: 100%;
         
-        .desc-cont {
-            width: 90%;
+        margin-right: 7px;
+        font-size: 20px;
+    }
 
-            margin-bottom: 7px;
+    .link-cont > .proj-link {
+        padding-top: 3px;
+    
+        display: flex;
+        flex-direction: row;
+        align-items: center;
 
-            text-align: center;
+        color: var(--highlight);
 
-            font-size: 16px;
-        }
-        
-        .link-cont {
-            height: 100%;
-            width: 100%;
-
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-
-            margin-bottom: 5px;
-
-            .name {
-                height: 100%;
-                
-                margin-right: 7px;
-                font-size: 20px;
-            }
-
-            .proj-link {
-                padding-top: 3px;
-            
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-
-                color: $bud-green;
-
-                cursor: pointer;
-                font-size: 14px;
-
-                &:hover {
-                    color: $bud-green__hover;
-                }
-            }
-        }
+        cursor: pointer;
+        font-size: 14px;
+    }
+    .link-cont:hover {
+        color: var(--highlight-hover);
     }
 </style>

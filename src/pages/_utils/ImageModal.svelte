@@ -26,12 +26,7 @@
     </div>
 </div>
 
-<style lang="scss">
-    $grey-primary: #252525;
-    $grey-secondary: #383838;
-    $bud-green: #82b74bff;
-    $bud-green__hover: rgb(138, 194, 78);
-
+<style>
     .modal-container {
         z-index: 100;
         width: 100%;
@@ -45,39 +40,33 @@
         overflow: hidden; 
         background-color: rgb(0, 0, 0);
         background-color: rgba(0, 0, 0, 0.9); 
+    }
+    .modal-container > .modal {
+        width: 80%;
+        max-width: 700px;
+        animation-name: zoom;
+        animation-duration: 0.6s;
 
-        .modal {
-            width: 80%;
-            max-width: 700px;
-            animation-name: zoom;
-            animation-duration: 0.6s;
+        margin: auto;
 
-            margin: auto;
+        @keyframes zoom { from { transform: scale(0); } to { transform: scale(1); } }
 
-            @keyframes zoom { from { transform: scale(0); } to { transform: scale(1); } }
-
-            @media only screen and (max-width: 700px) { .modal { width: 100%; } }
-        }
-
-        .close {
-            position: absolute;
-            top: 15px;
-            right: 35px;
-            color: #f1f1f1;
-            font-size: 40px;
-            font-weight: bold;
-            transition: 0.3s;
-        }
-
-        .close:hover,
-        .close:focus {
-            color: #bbb;
-            text-decoration: none;
-            cursor: pointer;
-        }
+        @media only screen and (max-width: 700px) { .modal { width: 100%; } }
+    }
+    .modal-container > .close {
+        position: absolute;
+        top: 15px;
+        right: 35px;
+        color: #f1f1f1;
+        font-size: 40px;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+    .modal-container > .close:hover, .modal-container > .close:focus {
+        color: #bbb;
+        text-decoration: none;
+        cursor: pointer;
     }
 
-    .show {
-        display: flex;
-    }
+    .show { display: flex; }
 </style>

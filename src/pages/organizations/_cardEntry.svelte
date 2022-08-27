@@ -39,11 +39,8 @@
     </div>
 </div>
 
-<style lang="scss">
-    $grey-primary: #252525;
-    $grey-secondary: #383838;
-    $bud-green: #82b74bff;
-    $bud-green__hover: rgb(138, 194, 78);
+<style>
+    @import "/theme.css";
 
     .card-entr {
         display: flex;
@@ -55,88 +52,69 @@
         max-width: 330px;
         height: fit-content;
 
-        background-color: $grey-secondary;
+        background-color: var(--foreground);
 
         margin: 14px;
-
-        .name-cont {
-            width: 90%;
-
-            text-align: center;
-
-            font-size: 20px;
-
-            margin-bottom: 7px;
-        }
-
-        .img-cont {
-            width: 90%;
-
-            margin-bottom: 7px;
-
-            img {
-                width: 100%;
-            }
-        }
-
-        .header-cont {
-            width: 90%;
-
-            text-align: center;
-
-            font-size: 18px;
-
-            margin-top: 7px;
-            margin-bottom: 7px;
-        }
-        
-        .desc-cont {
-            width: 90%;
-
-            text-align: center;
-
-            font-size: 16px;
-
-            margin-bottom: 7px;
-        }
-
-        .projects {
-            width: 90%;
-            font-size: 16px;
-            
-            margin-bottom: 5px;
-
-            ul {
-                width: 100%;
-
-                margin-top: 0px;
-                margin-bottom: 0px;
-
-                li {
-                    .proj-entr {
-                        display: flex;
-                        flex-direction: row;
-                        align-items: center;
-
-                        .name { margin-right: 7px; }
-
-                        .proj-link {
-                            height: 100%;
-                        
-                            display: flex;
-                            flex-direction: row;
-                            align-items: center;
-
-                            color: $bud-green;
-
-                            cursor: pointer;
-                            font-size: 14px;
-
-                            &:hover { color: $bud-green__hover; }
-                        }
-                    }
-                }
-            }
-        }
     }
+
+    .name-cont {
+        width: 90%;
+
+        text-align: center;
+
+        font-size: 20px;
+
+        margin-bottom: 7px;
+    }
+
+    .img-cont {
+        width: 90%;
+
+        margin-bottom: 7px;
+    }
+
+    .img-cont > img { width: 100%; }
+
+    .desc-cont {
+        width: 90%;
+
+        text-align: center;
+
+        font-size: 16px;
+
+        margin-bottom: 5px;
+    }
+
+    .projects {
+        width: 90%;
+        font-size: 16px;
+        
+        margin-bottom: 5px;
+    }
+    .projects ul {
+        width: 100%;
+
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+    .projects ul li .proj-entr {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    .projects ul li .proj-entr .name { margin-right: 7px; }
+
+    .projects ul li .proj-entr .proj-link {
+        height: 100%;
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        color: var(--highlight);
+
+        cursor: pointer;
+        font-size: 14px;
+    }
+    .projects ul li .proj-entr .proj-link :hover { color: var(--highlight-hover); }
 </style>

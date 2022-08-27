@@ -54,20 +54,19 @@
         animation-fill-mode: both;
         animation-direction: alternate;
         animation-duration: 1.5s;
-
-        .art-header { font-size: 27px; }
-        .content-container {
-            width: 100%;
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-            column-gap: 14px;
-            
-            img { width: 100%; height: auto; margin-top: 14px; border-radius: 5px; cursor: pointer; }
-            img:hover { opacity: 0.7; }
-        }
-        .description { width: 100%; margin-top: 14px; font-size: 24px; text-align: center; }
-        .msg { margin-top: 56px; font-size: 24px; }
     }
+
+    .artEntry > .art-header { font-size: 27px; }
+    .artEntry > .content-container {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+        column-gap: 14px;
+    }
+    .artEntry > .content-container > img { width: 100%; height: auto; margin-top: 14px; border-radius: 5px; cursor: pointer; }
+    .artEntry > .content-container > img:hover { opacity: 0.7; }
+    .artEntry > .description { width: 100%; margin-top: 14px; font-size: 24px; text-align: center; }
+    .artEntry > .msg { margin-top: 56px; font-size: 24px; }
 
     .down-in { animation-name: down-fade-in; }
     .up-in { animation-name: up-fade-in; }

@@ -12,18 +12,12 @@
     </div>
 </div>
 
-<style lang="scss">
-	$grey-primary: #252525;
-	$grey-secondary: #383838;
-	$bud-green: #82b74bff;
-    $bud-green__hover: rgb(138, 194, 78);
-    $dark-moss-green: #405d27ff;
-    $army-green: #32481eff;
-
+<style>
+    @import "/theme.css";
 	#socials {
         z-index: 10;
 
-        background-color: $grey-secondary;
+        background-color: var(--foreground);
 
 		display: flex;
 		flex-direction: column;
@@ -37,32 +31,24 @@
         top: 24%;
 
         box-shadow: #151515 1px 1px 10px 0px;
-
-        .socials-entr {
-            margin: 4px;
-
-            .social-btn {
-                width: 40px;
-                height: 40px;
-
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-
-                text-decoration: none;
-            }
-
-            .fa-github-square {
-                color: $bud-green;
-                font-size: 40px;
-            }
-        }
-        .socials-entr:hover {
-            cursor: pointer;
-            .fa-github-square {
-                color: $bud-green__hover;
-            }
-        }
 	}
+
+    #socials > .socials-entr { margin: 4px; }
+    #socials > .socials-entr > .social-btn {
+        width: 40px;
+        height: 40px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        text-decoration: none;
+    }
+    #socials > .socials-entr > .social-btn > .fa-github-square {
+        color: var(--highlight);
+        font-size: 40px;
+    }
+    #socials > .socials-entr:hover { cursor: pointer; }
+    #socials > .socials-entr:hover > .social-btn > .fa-github-square { color: var(--highlight-hover);  }
 </style>
