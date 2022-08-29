@@ -56,11 +56,13 @@
     {#if $orientation == 0}
         <div class="jump-nav-container">
             <svg xmlns="http://www.w3.org/2000/svg">
-                <rect class="track" x="9px" y="2%" width="6px" rx="3px" height="96%" />
-                {#each Array(len) as _, i}
-                    <circle  />
-                {/each}
+                <rect class="track" x="10px" y="2%" width="4px" rx="3px" height="96%" />
             </svg>
+            {#each Array(len) as _, i}
+                <svg class="stop-wrapper" style="top:{((96/len+96/len/len)*i+2)}%;">
+                    <circle class="track-stop" cx="4" cy="4" r="4"/>
+                </svg>
+            {/each}
             <!-- {#each Array(len) as _, i}
                 <div>
                     <a id="{i}-jumpNav" class="tooltip {i == scrollIdx ? setLast(i) : ''}" on:click="{wrapper}">
@@ -161,9 +163,13 @@
         border-bottom-right-radius: 8px;
         box-shadow: #151515 1px 1px 10px 0px;
 
+        position: relative;
         height: calc(100% - 54px);
     }
 
     #jumpToCont .jump-nav-container svg { height: 100%; width: 24px; }
-    #jumpToCont .jump-nav-container svg .track { fill: var(--foreground-hover); }
+    #jumpToCont .jump-nav-container .stop-wrapper { position: absolute; height: 16px; width: 16px; left:8px; cursor:pointer; }
+    #jumpToCont .jump-nav-container svg .track { fill: var(--fore-accent); }
+    #jumpToCont .jump-nav-container svg .track-stop { fill: var(--fore-accent-hover); }
+    #jumpToCont .jump-nav-container svg:hover .track-stop { fill: var(--fore-accent-selected); }
 </style>
