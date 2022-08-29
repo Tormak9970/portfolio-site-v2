@@ -97,14 +97,8 @@
         margin-bottom: 21px;
         box-shadow: #151515 1px 1px 10px 0px;
     }
-    #jumpToCont .layout-toggle .option {
-        margin: 1px 2px;
-        cursor: pointer;
-    }
-    #jumpToCont .layout-toggle .option .selected {
-        color: var(--highlight);
-        fill: var(--highlight);
-    }
+    #jumpToCont .layout-toggle .option { margin: 1px 2px; cursor: pointer; }
+    #jumpToCont .layout-toggle .option .selected { color: var(--highlight); fill: var(--highlight); }
     #jumpToCont .layout-toggle .option a {
         width: 20px;
         height: 20px;
@@ -115,16 +109,9 @@
         text-decoration: none;
         font-size: 16px;
     }
-    #jumpToCont .layout-toggle .option a i {
-        width: 16px;
-        height: 16px;
-    }
-    #jumpToCont .layout-toggle .option a:hover {
-        color: var(--highlight-hover);
-    }
-    #jumpToCont .layout-toggle .option .tooltip {
-        position: relative;
-    }
+    #jumpToCont .layout-toggle .option a i { width: 16px; height: 16px; }
+    #jumpToCont .layout-toggle .option a:hover { color: var(--highlight-hover); }
+    #jumpToCont .layout-toggle .option .tooltip { position: relative; }
     #jumpToCont .layout-toggle .option .tooltip .tooltip-text {
         white-space: nowrap;
         visibility: hidden;
@@ -154,16 +141,9 @@
         border-style: solid;
         border-color: transparent var(--foreground-hover) transparent transparent;
     }
-    #jumpToCont .layout-toggle .option .tooltip:hover .tooltip-text {
-        visibility: visible;
-        opacity: 1;
-    }
-    #jumpToCont .layout-toggle :first-child {
-        margin-top: 2px;
-    }
-    #jumpToCont .layout-toggle :last-child {
-        margin-bottom: 2px;
-    }
+    #jumpToCont .layout-toggle .option .tooltip:hover .tooltip-text { visibility: visible; opacity: 1; }
+    #jumpToCont .layout-toggle :first-child { margin-top: 2px; }
+    #jumpToCont .layout-toggle :last-child { margin-bottom: 2px; }
     #jumpToCont .jump-nav-container {
         display: flex;
         flex-direction: column;
@@ -176,14 +156,8 @@
         border-bottom-right-radius: 8px;
         box-shadow: #151515 1px 1px 10px 0px;
     }
-    #jumpToCont .jump-nav-container div {
-        margin: 1px 2px;
-        cursor: pointer;
-    }
-    #jumpToCont .jump-nav-container div .selected {
-        color: var(--highlight);
-        fill: var(--highlight);
-    }
+    #jumpToCont .jump-nav-container div { margin: 1px 2px; cursor: pointer; }
+    #jumpToCont .jump-nav-container div .selected { color: var(--highlight); fill: var(--highlight); }
     #jumpToCont .jump-nav-container div a {
         width: 20px;
         height: 20px;
@@ -194,16 +168,9 @@
         text-decoration: none;
         font-size: 16px;
     }
-    #jumpToCont .jump-nav-container div a i {
-        width: 16px;
-        height: 16px;
-    }
-    #jumpToCont .jump-nav-container div a:hover {
-        color: var(--highlight-hover);
-    }
-    #jumpToCont .jump-nav-container div .tooltip {
-        position: relative;
-    }
+    #jumpToCont .jump-nav-container div a i { width: 16px; height: 16px; }
+    #jumpToCont .jump-nav-container div a:hover { color: var(--highlight-hover); }
+    #jumpToCont .jump-nav-container div .tooltip { position: relative; }
     #jumpToCont .jump-nav-container div .tooltip .tooltip-text {
         white-space: nowrap;
         visibility: hidden;
@@ -223,7 +190,7 @@
         transition: opacity 0.3s;
     }
     #jumpToCont .jump-nav-container div .tooltip .tooltip-text::after {
-    content: " ";
+        content: " ";
         position: absolute;
         top: 50%;
         right: 100%;
@@ -233,14 +200,7 @@
         border-style: solid;
         border-color: transparent var(--foreground-hover) transparent transparent;
     }
-    #jumpToCont .jump-nav-container div .tooltip:hover .tooltip-text {
-        visibility: visible;
-        opacity: 1;
-    }
-    #jumpToCont .jump-nav-container :first-child {
-        margin-top: 2px;
-    }
-    #jumpToCont .jump-nav-container :last-child {
-        margin-bottom: 2px;
-    }
+    #jumpToCont .jump-nav-container div .tooltip:hover .tooltip-text { visibility: visible; opacity: 1; }
+    #jumpToCont .jump-nav-container :first-child { margin-top: 2px; }
+    #jumpToCont .jump-nav-container :last-child { margin-bottom: 2px; }
 </style>
