@@ -1,31 +1,27 @@
 <script lang="ts">
     import { orientation } from "../../Stores";
 
-
 	export let len: number;
     export let tooltips: Map<number, string>;
     export let handler:Function;
     export let scrollIdx:number;
 
-    let lastSelected:number = -1;
     let lastOrientSelected = 0;
 
-    function setLast(i:number) {
-        if (lastSelected != i) {
-            lastSelected = i;
-            return 'selected';
-        } else {
-            return '';
-        }
-    };
+    let selInd:SVGElement;
 
     function wrapper(e:MouseEvent) {
         const wrapperDiv:ParentNode = (<HTMLElement>e.currentTarget).parentNode;
+        const topPos = window.getComputedStyle(wrapperDiv as HTMLElement).top;
+        const compPos = `${parseFloat(topPos.substring(0, topPos.length-2))+4}px`;
 
-        const newIdx = Array.from(wrapperDiv.parentNode.children).indexOf(<Element>wrapperDiv);
-        const isSameIdx:boolean = newIdx == lastSelected;
-
-        if (!isSameIdx && $orientation == 0) { handler(e); }
+        const isSameElem:boolean = compPos == window.getComputedStyle(selInd).top;
+        console.log(window.getComputedStyle(wrapperDiv as HTMLElement).top, window.getComputedStyle(selInd).top);
+        
+        if (!isSameElem && $orientation == 0) {
+            selInd.style.top = compPos;
+            handler(e);
+        }
     }
 
     function setOrientation(e: Event) {
@@ -55,18 +51,24 @@
     </div>
     {#if $orientation == 0}
         <div class="jump-nav-container">
-            {#each Array(len) as _, i}
-                <div>
-                    <a id="{i}-jumpNav" class="tooltip {i == scrollIdx ? setLast(i) : ''}" on:click="{wrapper}">
-                        {#if i == scrollIdx}
-                            <i class="fas fa-circle"></i>
-                        {:else}
-                            <i class="far fa-circle"></i>
-                        {/if}
-                        <span class="tooltip-text">{tooltips.get(i)}</span>
-                    </a>
-                </div>
-            {/each}
+            <svg xmlns="http://www.w3.org/2000/svg">
+                <rect class="track" x="10px" y="2%" width="4px" rx="3px" height="96%" />
+            </svg>
+            <div class="calc-wrap">
+                {#each Array(len) as _, i}
+                    <div class="stop-wrapper" style="--init-top:{96/(len-1)*i+2}%;">
+                        <a id="{i}-jumpNav" class="tooltip" on:click="{wrapper}">
+                            <svg>
+                                <circle class="track-stop" cx="4" cy="4" r="4"/>
+                            </svg>
+                            <span class="tooltip-text">{tooltips.get(i)}</span>
+                        </a>
+                    </div>
+                {/each}
+            </div>
+            <svg class="sel-svg" bind:this="{selInd}">
+                <circle class="sel-indicator" cx="4" cy="4" r="4"/>
+            </svg>
         </div>
     {/if}
 </div>
@@ -83,6 +85,7 @@
         align-items: center;
         left: 0;
         top: 8%;
+        bottom: 8%;
     }
     #jumpToCont .layout-toggle {
         display: flex;
@@ -148,19 +151,39 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        background-color: var(--foreground);
-        border-top-right-radius: 8px;
-        border-bottom-right-radius: 8px;
+
         background-color: var(--foreground);
         border-top-right-radius: 8px;
         border-bottom-right-radius: 8px;
         box-shadow: #151515 1px 1px 10px 0px;
+
+        position: relative;
+        height: calc(100% - 54px);
     }
-    #jumpToCont .jump-nav-container div { margin: 1px 2px; cursor: pointer; }
-    #jumpToCont .jump-nav-container div .selected { color: var(--highlight); fill: var(--highlight); }
+
+    #jumpToCont .jump-nav-container svg { height: 100%; width: 24px; }
+    #jumpToCont .jump-nav-container .stop-wrapper { position: absolute; height: 16px; width: 16px; left:4px; top: calc(var(--init-top) - 8px); cursor:pointer; }
+    #jumpToCont .jump-nav-container .stop-wrapper svg { height: 8px; width: 8px; }
+
+    #jumpToCont .jump-nav-container svg .track { fill: var(--fore-accent); }
+    #jumpToCont .jump-nav-container svg .track-stop { fill: var(--fore-accent-hover); }
+    #jumpToCont .jump-nav-container .stop-wrapper:hover .track-stop { fill: var(--fore-accent-selected); }
+    
+    #jumpToCont .jump-nav-container .sel-svg {
+        position: absolute;
+        left: 8px;
+        top: calc(2% - 4px);
+        width: 8px;
+        height: 8px;
+        pointer-events: none;
+
+        transition: top 0.7s ease-in-out;
+    }
+    #jumpToCont .jump-nav-container svg .sel-indicator { fill: var(--highlight); }
+
     #jumpToCont .jump-nav-container div a {
-        width: 20px;
-        height: 20px;
+        width: 16px;
+        height: 16px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -168,8 +191,6 @@
         text-decoration: none;
         font-size: 16px;
     }
-    #jumpToCont .jump-nav-container div a i { width: 16px; height: 16px; }
-    #jumpToCont .jump-nav-container div a:hover { color: var(--highlight-hover); }
     #jumpToCont .jump-nav-container div .tooltip { position: relative; }
     #jumpToCont .jump-nav-container div .tooltip .tooltip-text {
         white-space: nowrap;
@@ -201,6 +222,4 @@
         border-color: transparent var(--foreground-hover) transparent transparent;
     }
     #jumpToCont .jump-nav-container div .tooltip:hover .tooltip-text { visibility: visible; opacity: 1; }
-    #jumpToCont .jump-nav-container :first-child { margin-top: 2px; }
-    #jumpToCont .jump-nav-container :last-child { margin-bottom: 2px; }
 </style>

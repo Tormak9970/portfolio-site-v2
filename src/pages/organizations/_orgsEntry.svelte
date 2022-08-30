@@ -74,7 +74,7 @@
 
         animation-fill-mode: both;
         animation-direction: alternate;
-        animation-duration: 1.5s;
+        animation-duration: 1s;
     }
     .orgEntry .org-header { font-size: 27px; }
     .orgEntry .org-header-2 { text-align: center; }
