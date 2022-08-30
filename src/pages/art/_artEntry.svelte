@@ -53,7 +53,7 @@
 
         animation-fill-mode: both;
         animation-direction: alternate;
-        animation-duration: 1.5s;
+        animation-duration: 1s;
     }
 
     .artEntry > .art-header { font-size: 27px; }

@@ -52,7 +52,7 @@
         align-items: center;
         animation-fill-mode: both;
         animation-direction: alternate;
-        animation-duration: 1.5s;
+        animation-duration: 1s;
     }
     .projOview .proj-header {
         font-size: 27px;

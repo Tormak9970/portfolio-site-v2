@@ -53,12 +53,12 @@
 
         animation-fill-mode: both;
         animation-direction: alternate;
-        animation-duration: 1.5s;
+        animation-duration: 1s;
     }
 
-    .experienceEntry > .experience-header { font-size: 27px; }
-    .experienceEntry > .description { width: 100%; margin-top: 14px; font-size: 24px; text-align: center; }
-    .experienceEntry > .content-container {
+    .experienceEntry .experience-header { font-size: 27px; }
+    .experienceEntry .description { width: 100%; margin-top: 14px; font-size: 24px; text-align: center; }
+    .experienceEntry .content-container {
         width: 100%;
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
