@@ -12,6 +12,8 @@
     import CardEntry from "./_cardEntry.svelte";
     import { afterPageLoad } from "@roxi/routify";
 
+    let preIdx = $projScrollIdx;
+
     interface ProjectEnt {
         key:string,
         data:Project,
@@ -47,6 +49,7 @@
             if (!($projScrollIdx == 0 && !direction) && !($projScrollIdx == projElem.children.length-1 && direction) && Math.abs(e.deltaY) != 0) {
                 isScrolling = true;
                 if (direction) {
+                    preIdx++;
                     pieces[$projScrollIdx+1].scrollType = 'down-in';
                     pieces[$projScrollIdx+1].hidden = false;
                     pieces[$projScrollIdx].scrollType = 'down-out';
@@ -56,6 +59,7 @@
                         isScrolling = false;
                     }, 1500);
                 } else {
+                    preIdx--;
                     pieces[$projScrollIdx-1].scrollType = 'up-in';
                     pieces[$projScrollIdx-1].hidden = false;
                     pieces[$projScrollIdx].scrollType = 'up-out';
@@ -71,6 +75,7 @@
     function interceptScrollFromIdx(direction:boolean, tarIdx:number) {
         if (!isScrolling) {
             isScrolling = true;
+            preIdx = tarIdx;
             if (direction) {
                 pieces[tarIdx].scrollType = 'down-in';
                 pieces[tarIdx].hidden = false;
@@ -96,6 +101,7 @@
         if (!isScrolling) {
             isScrolling = true;
             if (direction) {
+                preIdx++;
                 pieces[$projScrollIdx+1].scrollType = 'down-in';
                 pieces[$projScrollIdx+1].hidden = false;
                 pieces[$projScrollIdx].scrollType = 'down-out';
@@ -105,6 +111,7 @@
                     isScrolling = false;
                 }, 1500);
             } else {
+                preIdx--;
                 pieces[$projScrollIdx-1].scrollType = 'up-in';
                 pieces[$projScrollIdx-1].hidden = false;
                 pieces[$projScrollIdx].scrollType = 'up-out';
@@ -119,7 +126,7 @@
     function jumpToHandler(e: MouseEvent) {
         const target:HTMLElement = <HTMLElement>e.currentTarget;
         const curIdx = $projScrollIdx;
-        const tarIdx:number = parseInt(target.id.substr(0, target.id.indexOf('-')));
+        const tarIdx:number = parseInt(target.id.substring(0, target.id.indexOf('-')));
         interceptScrollFromIdx(curIdx < tarIdx, tarIdx);
     }
 
@@ -158,7 +165,7 @@
     </div>
     <MediaQuery query="(orientation:landscape)" let:matches>
         {#if matches}
-            <JumpList len={projects.size} tooltips={jumpNames} handler={jumpToHandler} scrollIdx={$projScrollIdx}/>
+            <JumpList len={projects.size} tooltips={jumpNames} handler={jumpToHandler} scrollIdx={preIdx}/>
         {/if}
     </MediaQuery>
 </div>

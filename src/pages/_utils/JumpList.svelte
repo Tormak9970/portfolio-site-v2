@@ -10,6 +10,23 @@
 
     let selInd:SVGElement;
 
+    $: {
+        const elem = document.getElementById(`${scrollIdx}-jumpNav`);
+        
+        if (elem) {
+            const wrapperDiv = elem.parentNode;
+            const topPos = window.getComputedStyle(wrapperDiv as HTMLElement).top;
+            const compPos = `${parseFloat(topPos.substring(0, topPos.length-2))+4}px`;
+
+            const isSameElem:boolean = compPos == window.getComputedStyle(selInd).top;
+            console.log(window.getComputedStyle(wrapperDiv as HTMLElement).top, window.getComputedStyle(selInd).top);
+            
+            if (!isSameElem && $orientation == 0) {
+                selInd.style.top = compPos;
+            }
+        }
+    }
+
     function wrapper(e:MouseEvent) {
         const wrapperDiv:ParentNode = (<HTMLElement>e.currentTarget).parentNode;
         const topPos = window.getComputedStyle(wrapperDiv as HTMLElement).top;

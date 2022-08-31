@@ -8,6 +8,8 @@
     import CardEntry from "./_cardEntry.svelte";
     import { afterPageLoad } from "@roxi/routify";
 
+    let preIdx = $orgScrollIdx;
+
     type OrganizationsEnt = {
         key:string,
         data:Organization,
@@ -28,6 +30,7 @@
             if (!($orgScrollIdx == 0 && !direction) && !($orgScrollIdx == orgsElem.children.length-1 && direction) && Math.abs(e.deltaY) != 0) {
                 isScrolling = true;
                 if (direction) {
+                    preIdx++;
                     pieces[$orgScrollIdx+1].scrollType = 'down-in';
                     pieces[$orgScrollIdx+1].hidden = false;
                     pieces[$orgScrollIdx].scrollType = 'down-out';
@@ -37,6 +40,7 @@
                         isScrolling = false;
                     }, 1500);
                 } else {
+                    preIdx--;
                     pieces[$orgScrollIdx-1].scrollType = 'up-in';
                     pieces[$orgScrollIdx-1].hidden = false;
                     pieces[$orgScrollIdx].scrollType = 'up-out';
@@ -52,6 +56,7 @@
     function interceptScrollFromIdx(direction:boolean, tarIdx:number) {
         if (!isScrolling) {
             isScrolling = true;
+            preIdx = tarIdx;
             if (direction) {
                 pieces[tarIdx].scrollType = 'down-in';
                 pieces[tarIdx].hidden = false;
@@ -76,7 +81,7 @@
     function jumpToHandler(e: MouseEvent) {
         const target:HTMLElement = <HTMLElement>e.currentTarget;
         const curIdx = $orgScrollIdx;
-        const tarIdx:number = parseInt(target.id.substr(0, target.id.indexOf('-')));
+        const tarIdx:number = parseInt(target.id.substring(0, target.id.indexOf('-')));
         interceptScrollFromIdx(curIdx < tarIdx, tarIdx);
     }
 
@@ -117,7 +122,7 @@
     
     <MediaQuery query="(orientation:landscape)" let:matches>
         {#if matches}
-            <JumpList len={organizations.size} tooltips={jumpNames} handler={jumpToHandler} scrollIdx={$orgScrollIdx}/>
+            <JumpList len={organizations.size} tooltips={jumpNames} handler={jumpToHandler} scrollIdx={preIdx}/>
         {/if}
     </MediaQuery>
 </div>
