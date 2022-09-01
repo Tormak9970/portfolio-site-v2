@@ -32,12 +32,7 @@
     <div class="msg">{isLast ? "To be continued..." : "Scroll to continue..."}</div>
 </div>
 
-<style lang="scss">
-	$grey-primary: #252525;
-	$grey-secondary: #383838;
-	$bud-green: #82b74bff;
-    $bud-green__hover: rgb(138, 194, 78);
-
+<style>
     .artEntry {
         width: 64%;
 
