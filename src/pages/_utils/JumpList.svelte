@@ -19,7 +19,6 @@
             const compPos = `${parseFloat(topPos.substring(0, topPos.length-2))+4}px`;
 
             const isSameElem:boolean = compPos == window.getComputedStyle(selInd).top;
-            console.log(window.getComputedStyle(wrapperDiv as HTMLElement).top, window.getComputedStyle(selInd).top);
             
             if (!isSameElem && $orientation == 0) {
                 selInd.style.top = compPos;
@@ -33,7 +32,6 @@
         const compPos = `${parseFloat(topPos.substring(0, topPos.length-2))+4}px`;
 
         const isSameElem:boolean = compPos == window.getComputedStyle(selInd).top;
-        console.log(window.getComputedStyle(wrapperDiv as HTMLElement).top, window.getComputedStyle(selInd).top);
         
         if (!isSameElem && $orientation == 0) {
             selInd.style.top = compPos;

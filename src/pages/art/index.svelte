@@ -33,6 +33,7 @@
             "isLast": false
         }
     ];
+    const imgsMap:Map<number, HTMLImageElement> = new Map();
 
     function interceptScroll(e: WheelEvent) {
         const direction:boolean = e.deltaY > 0; // true = down, false = up
@@ -67,6 +68,15 @@
             "isLast": i+1 == art.size
         });
         jumpNames.set(i+1, entr.name);
+
+        if (entr.img) {
+            const img = new Image();
+            img.onload = () => {
+                imgsMap.set(i+1, img);
+            }
+            img.src = entr.img;
+        }
+
         return entr; 
     }
 
@@ -89,15 +99,15 @@
     })
 </script>
 
-<svelte:window on:wheel|stopPropagation|passive="{manageScroll}" />
+<svelte:window on:wheel|stopPropagation="{manageScroll}" />
 
 <div id="art" in:fade>
     <div class="content{$orientation == 0 ? ' fancy' : ' card'}">
         <MediaQuery query="(orientation:landscape)" let:matches>
             {#if matches && $orientation == 0}
-                {#each [pieces[$artScrollIdx]] as artEntr, idx ($artScrollIdx)}
-                    <ArtEntry entryData={artEntr.data} isLast={pieces[idx].isLast}/>
-                {/each }
+                {#key $artScrollIdx}
+                    <ArtEntry entryData={pieces[$artScrollIdx].data} image={imgsMap.get($artScrollIdx)} isLast={pieces[$artScrollIdx].isLast}/>
+                {/key}
             {:else}
                 {#each pieces as artEntr, idx}
                     <CardEntry entryData={artEntr.data}/>
@@ -135,6 +145,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            justify-content: center;
 
             position: relative;
 

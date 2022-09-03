@@ -1,20 +1,28 @@
 <script lang="ts">
     import { beforeUpdate, onMount } from "svelte";
-    import { fade, fly } from "svelte/transition";
+    import { fly, FlyParams } from "svelte/transition";
 
     import { imageModalData, scrollDir, showing, allowScroll } from "../../Stores";
     
     import { getTransitions } from "../../utils";
 
     export let entryData:Art;
+    export let image:HTMLImageElement;
     export let isLast:boolean;
 
-    let inParams;
-    let outParams;
+    let contentCont:HTMLDivElement;
+
+    let inParams: FlyParams;
+    let outParams: FlyParams;
 
     function showModal() {
         $imageModalData = { "id": "artPreviewModal", "data": { "img": entryData.img, "name": entryData.name } };
         setTimeout(() => { $showing = true; }, 30);
+    }
+
+    function handleTransEnd(): void {
+        console.log("scroll end");
+        $allowScroll = true;
     }
 
     beforeUpdate(() => {
@@ -27,16 +35,22 @@
         const transition = getTransitions($scrollDir);
         inParams = transition.in;
         outParams = transition.out;
+
+        if (image) {
+            image.alt = entryData.name;
+            image.onclick = showModal;
+            contentCont.insertBefore(image, contentCont.children[0]);
+        }
     });
 </script>
 
-<div id="{entryData.name}" class="artEntry" in:fly={inParams} out:fly={outParams} on:introend="{() => { $allowScroll = true; }}">
+<div id="{entryData.name}" class="artEntry" in:fly={inParams} out:fly={outParams} on:introend="{handleTransEnd}">
     <div class="art-header">
         <h2>{entryData.name}</h2>
     </div>
     {#if entryData.img}
-        <div class="content-container">
-            <img src="{entryData.img}" alt="{entryData.name}" on:click="{showModal}">
+        <div class="content-container" bind:this="{contentCont}">
+            <!-- <img src="{entryData.img}" alt="{entryData.name}" on:click="{showModal}"> -->
             <div class="description">
                 <p>{entryData.description}</p>
             </div>
@@ -55,9 +69,6 @@
         width: 64%;
 
         position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
 
         display: flex;
         flex-direction: column;
@@ -72,8 +83,8 @@
         grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
         column-gap: 14px;
     }
-    .artEntry > .content-container > img { width: 100%; height: auto; margin-top: 14px; border-radius: 5px; cursor: pointer; }
-    .artEntry > .content-container > img:hover { opacity: 0.7; }
+    .artEntry > .content-container > :global(img) { width: auto; max-width: 100%; height: auto; max-height: 100%; margin-top: 14px; border-radius: 5px; cursor: pointer; }
+    .artEntry > .content-container > :global(img:hover) { opacity: 0.7; }
     .artEntry > .description { width: 100%; margin-top: 14px; font-size: 24px; text-align: center; }
     .artEntry > .msg { margin-top: 56px; font-size: 24px; }
 </style>
