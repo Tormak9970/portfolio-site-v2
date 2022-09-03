@@ -8,6 +8,7 @@
     import CardEntry from "./_cardEntry.svelte";
     import { afterPageLoad } from '@roxi/routify';
     import { onMount } from "svelte";
+    import { throttle } from "../../utils";
     
     let preIdx = $artScrollIdx;
 
@@ -47,6 +48,8 @@
                 $artScrollIdx--;
             }
             $scrollDir = direction;
+        } else {
+            $allowScroll = true;
         }
     }
     function interceptScrollFromIdx(direction:boolean, tarIdx:number) {
@@ -99,7 +102,7 @@
     })
 </script>
 
-<svelte:window on:wheel|stopPropagation="{manageScroll}" />
+<svelte:window on:wheel|stopPropagation="{throttle(manageScroll, 1000)}" />
 
 <div id="art" in:fade>
     <div class="content{$orientation == 0 ? ' fancy' : ' card'}">

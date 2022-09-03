@@ -20,10 +20,7 @@
         setTimeout(() => { $showing = true; }, 30);
     }
 
-    function handleTransEnd(): void {
-        console.log("scroll end");
-        $allowScroll = true;
-    }
+    function handleTransEnd(): void { $allowScroll = true; }
 
     beforeUpdate(() => {
         const transition = getTransitions($scrollDir);
