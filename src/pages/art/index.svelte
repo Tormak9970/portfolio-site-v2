@@ -2,19 +2,18 @@
     import { fade } from "svelte/transition";
 	import ArtEntry from './_artEntry.svelte';
     import JumpList from "../_utils/JumpList.svelte";
-    import { artScrollIdx, orientation } from "../../Stores";
+    import { allowScroll, artScrollIdx, orientation, scrollDir } from "../../Stores";
     import { art } from '../../linkConfig';
     import MediaQuery from "../_utils/MediaQuery.svelte";
     import CardEntry from "./_cardEntry.svelte";
     import { afterPageLoad } from '@roxi/routify';
+    import { onMount } from "svelte";
     
     let preIdx = $artScrollIdx;
 
     interface ArtEnt {
         key:string,
         data:Art,
-        hidden:boolean,
-        scrollType:string,
         isLast:boolean
     }
 
@@ -31,68 +30,28 @@
                     Additionally, I find this practice invaluable when it comes to being a developer, 
                     as being able to impliment creativity into your work can really set you apart, and greatly improve whatever product you are designing.`
             },
-            "hidden": false,
-            "scrollType": 'down-in',
             "isLast": false
         }
     ];
 
-    let isScrolling:boolean = false;
     function interceptScroll(e: WheelEvent) {
-        if (!isScrolling) {
-            const direction:boolean = e.deltaY > 0; // true = down, false = up
-            
-            const artElem = document.getElementById('art').children[0];
-            if (!($artScrollIdx == 0 && !direction) && !($artScrollIdx == artElem.children.length-1 && direction) && Math.abs(e.deltaY) != 0) {
-                isScrolling = true;
-                if (direction) {
-                    preIdx++;
-                    pieces[$artScrollIdx+1].scrollType = 'down-in';
-                    pieces[$artScrollIdx+1].hidden = false;
-                    pieces[$artScrollIdx].scrollType = 'down-out';
-                    setTimeout(() => {
-                        pieces[$artScrollIdx].hidden = true;
-                        $artScrollIdx++;
-                        isScrolling = false;
-                    }, 1500);
-                } else {
-                    preIdx--;
-                    pieces[$artScrollIdx-1].scrollType = 'up-in';
-                    pieces[$artScrollIdx-1].hidden = false;
-                    pieces[$artScrollIdx].scrollType = 'up-out';
-                    setTimeout(() => {
-                        pieces[$artScrollIdx].hidden = true;
-                        $artScrollIdx--;
-                        isScrolling = false;
-                    },  1500);
-                }
+        const direction:boolean = e.deltaY > 0; // true = down, false = up
+        
+        if (!($artScrollIdx == 0 && !direction) && !($artScrollIdx == pieces.length-1 && direction) && Math.abs(e.deltaY) != 0) {
+            if (direction) {
+                preIdx++;
+                $artScrollIdx++;
+            } else {
+                preIdx--;
+                $artScrollIdx--;
             }
+            $scrollDir = direction;
         }
     }
     function interceptScrollFromIdx(direction:boolean, tarIdx:number) {
-        if (!isScrolling) {
-            isScrolling = true;
-            preIdx = tarIdx;
-            if (direction) {
-                pieces[tarIdx].scrollType = 'down-in';
-                pieces[tarIdx].hidden = false;
-                pieces[$artScrollIdx].scrollType = 'down-out';
-                setTimeout(() => {
-                    pieces[$artScrollIdx].hidden = true;
-                    $artScrollIdx = tarIdx;
-                    isScrolling = false;
-                }, 1500);
-            } else {
-                pieces[tarIdx].scrollType = 'up-in';
-                pieces[tarIdx].hidden = false;
-                pieces[$artScrollIdx].scrollType = 'up-out';
-                setTimeout(() => {
-                    pieces[$artScrollIdx].hidden = true;
-                    $artScrollIdx = tarIdx;
-                    isScrolling = false;
-                },  1500);
-            }
-        }
+        preIdx = tarIdx;
+        $artScrollIdx = tarIdx;
+        $scrollDir = direction;
     }
     function jumpToHandler(e: MouseEvent) {
         const target:HTMLElement = <HTMLElement>e.currentTarget;
@@ -104,13 +63,18 @@
     function processEntries([key, entr]:[string, Art], i:number) { 
         pieces.push({
             "key": key,
-            "data": entr, 
-            "hidden": i+1 !== $artScrollIdx,
-            "scrollType": i+1 == $artScrollIdx ? 'down-in' : 'up-out',
+            "data": entr,
             "isLast": i+1 == art.size
         });
         jumpNames.set(i+1, entr.name);
         return entr; 
+    }
+
+    function manageScroll(e: WheelEvent) {
+        if ($allowScroll) {
+            $allowScroll = false;
+            interceptScroll(e);
+        }
     }
 
     $afterPageLoad(() => {
@@ -119,29 +83,27 @@
             interceptScrollFromIdx(false, $artScrollIdx+1);
         }
     });
+
+    onMount(() => {
+        Array.from(art).map(processEntries);
+    })
 </script>
 
-<svelte:window on:wheel|stopPropagation|preventDefault="{interceptScroll}" />
+<svelte:window on:wheel|stopPropagation|passive="{manageScroll}" />
 
 <div id="art" in:fade>
     <div class="content{$orientation == 0 ? ' fancy' : ' card'}">
         <MediaQuery query="(orientation:landscape)" let:matches>
             {#if matches && $orientation == 0}
-                <ArtEntry entryData={pieces[0].data} hidden={pieces[0].hidden} scrollType={pieces[0].scrollType} isLast={false}/>
+                {#each [pieces[$artScrollIdx]] as artEntr, idx ($artScrollIdx)}
+                    <ArtEntry entryData={artEntr.data} isLast={pieces[idx].isLast}/>
+                {/each }
             {:else}
-                <CardEntry entryData={pieces[0].data}/>
+                {#each pieces as artEntr, idx}
+                    <CardEntry entryData={artEntr.data}/>
+                {/each }
             {/if}
         </MediaQuery>
-    
-        {#each Array.from(art).map(processEntries) as artEntr, idx}
-            <MediaQuery query="(orientation:landscape)" let:matches>
-                {#if matches && $orientation == 0}
-                    <ArtEntry entryData={artEntr} hidden={pieces[idx+1].hidden} scrollType={pieces[idx+1].scrollType} isLast={pieces[idx+1].isLast}/>
-                {:else}
-                    <CardEntry entryData={artEntr}/>
-                {/if}
-            </MediaQuery>
-        {/each }
     </div>
     <MediaQuery query="(orientation:landscape)" let:matches>
         {#if matches}

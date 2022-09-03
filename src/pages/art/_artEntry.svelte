@@ -1,18 +1,36 @@
 <script lang="ts">
-    import { imageModalData, showing } from "../../Stores";
+    import { beforeUpdate, onMount } from "svelte";
+    import { fade, fly } from "svelte/transition";
+
+    import { imageModalData, scrollDir, showing, allowScroll } from "../../Stores";
+    
+    import { getTransitions } from "../../utils";
 
     export let entryData:Art;
-    export let hidden:boolean;
-    export let scrollType:string;
     export let isLast:boolean;
+
+    let inParams;
+    let outParams;
 
     function showModal() {
         $imageModalData = { "id": "artPreviewModal", "data": { "img": entryData.img, "name": entryData.name } };
         setTimeout(() => { $showing = true; }, 30);
     }
+
+    beforeUpdate(() => {
+        const transition = getTransitions($scrollDir);
+        inParams = transition.in;
+        outParams = transition.out;
+    });
+
+    onMount(() => {
+        const transition = getTransitions($scrollDir);
+        inParams = transition.in;
+        outParams = transition.out;
+    });
 </script>
 
-<div id="{entryData.name}" class="artEntry{` ${scrollType}`}{hidden ? " hidden" : ""}">
+<div id="{entryData.name}" class="artEntry" in:fly={inParams} out:fly={outParams} on:introend="{() => { $allowScroll = true; }}">
     <div class="art-header">
         <h2>{entryData.name}</h2>
     </div>
@@ -45,10 +63,6 @@
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
-
-        animation-fill-mode: both;
-        animation-direction: alternate;
-        animation-duration: 1s;
     }
 
     .artEntry > .art-header { font-size: 27px; }
@@ -62,17 +76,4 @@
     .artEntry > .content-container > img:hover { opacity: 0.7; }
     .artEntry > .description { width: 100%; margin-top: 14px; font-size: 24px; text-align: center; }
     .artEntry > .msg { margin-top: 56px; font-size: 24px; }
-
-    .down-in { animation-name: down-fade-in; }
-    .up-in { animation-name: up-fade-in; }
-    .down-out { animation-name: down-fade-out; }
-    .up-out { animation-name: up-fade-out; }
-
-    .hidden { display: none; }
-
-    @keyframes down-fade-in { 0% { opacity: 0; transform: translate(-50%, 50%); } 100% { opacity: 1; transform: translate(-50%, -50%); } }
-    @keyframes down-fade-out { 0% { opacity: 1; transform: translate(-50%, -50%); } 100% { opacity: 0; transform: translate(-50%, -150%); } }
-
-    @keyframes up-fade-in { 0% { opacity: 0; transform: translate(-50%, -150%); } 100% { opacity: 1; transform: translate(-50%, -50%); } }
-    @keyframes up-fade-out { 0% { opacity: 1; transform: translate(-50%, -50%); } 100% { opacity: 0; transform: translate(-50%, 50%); } }
 </style>
