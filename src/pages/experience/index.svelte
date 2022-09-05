@@ -2,19 +2,18 @@
     import { fade } from "svelte/transition";
 	import ExperienceEntry from './_experienceEntry.svelte';
     import JumpList from "../_utils/JumpList.svelte";
-    import { expScrollIdx, orientation } from "../../Stores";
+    import { allowScroll, expScrollIdx, orientation, scrollDir } from "../../Stores";
     import { experience } from '../../linkConfig';
     import MediaQuery from "../_utils/MediaQuery.svelte";
     import CardEntry from "./_cardEntry.svelte";
     import { afterPageLoad } from '@roxi/routify';
+    import { onMount } from "svelte";
 
     let preIdx = $expScrollIdx;
 
     interface ExperienceEnt {
         key:string,
         data:Experience,
-        hidden:boolean,
-        scrollType:string,
         isLast:boolean
     }
 
@@ -22,62 +21,26 @@
 
     const pieces:ExperienceEnt[] = [];
 
-    let isScrolling:boolean = false;
     function interceptScroll(e: WheelEvent) {
-        if (!isScrolling) {
-            const direction:boolean = e.deltaY > 0; // true = down, false = up
-            
-            const artElem = document.getElementById('experience').children[0];
-            if (!($expScrollIdx == 0 && !direction) && !($expScrollIdx == artElem.children.length-1 && direction) && Math.abs(e.deltaY) != 0) {
-                isScrolling = true;
-                if (direction) {
-                    preIdx++;
-                    pieces[$expScrollIdx+1].scrollType = 'down-in';
-                    pieces[$expScrollIdx+1].hidden = false;
-                    pieces[$expScrollIdx].scrollType = 'down-out';
-                    setTimeout(() => {
-                        pieces[$expScrollIdx].hidden = true;
-                        $expScrollIdx++;
-                        isScrolling = false;
-                    }, 1500);
-                } else {
-                    preIdx--;
-                    pieces[$expScrollIdx-1].scrollType = 'up-in';
-                    pieces[$expScrollIdx-1].hidden = false;
-                    pieces[$expScrollIdx].scrollType = 'up-out';
-                    setTimeout(() => {
-                        pieces[$expScrollIdx].hidden = true;
-                        $expScrollIdx--;
-                        isScrolling = false;
-                    },  1500);
-                }
+        const direction:boolean = e.deltaY > 0; // true = down, false = up
+        
+        if (!($expScrollIdx == 0 && !direction) && !($expScrollIdx == pieces.length-1 && direction) && Math.abs(e.deltaY) != 0) {
+            if (direction) {
+                preIdx++;
+                $expScrollIdx++;
+            } else {
+                preIdx--;
+                $expScrollIdx--;
             }
+            $scrollDir = direction;
+        } else {
+            $allowScroll = true;
         }
     }
     function interceptScrollFromIdx(direction:boolean, tarIdx:number) {
-        if (!isScrolling) {
-            isScrolling = true;
-            preIdx = tarIdx;
-            if (direction) {
-                pieces[tarIdx].scrollType = 'down-in';
-                pieces[tarIdx].hidden = false;
-                pieces[$expScrollIdx].scrollType = 'down-out';
-                setTimeout(() => {
-                    pieces[$expScrollIdx].hidden = true;
-                    $expScrollIdx = tarIdx;
-                    isScrolling = false;
-                }, 1500);
-            } else {
-                pieces[tarIdx].scrollType = 'up-in';
-                pieces[tarIdx].hidden = false;
-                pieces[$expScrollIdx].scrollType = 'up-out';
-                setTimeout(() => {
-                    pieces[$expScrollIdx].hidden = true;
-                    $expScrollIdx = tarIdx;
-                    isScrolling = false;
-                },  1500);
-            }
-        }
+        preIdx = tarIdx;
+        $expScrollIdx = tarIdx;
+        $scrollDir = direction;
     }
     function jumpToHandler(e: MouseEvent) {
         const target:HTMLElement = <HTMLElement>e.currentTarget;
@@ -86,12 +49,17 @@
         interceptScrollFromIdx(curIdx < tarIdx, tarIdx);
     }
 
+    function manageScroll(e: WheelEvent) {
+        if ($allowScroll) {
+            $allowScroll = false;
+            interceptScroll(e);
+        }
+    }
+
     function processEntries([key, entr]:[string, Experience], i:number) { 
         pieces.push({
             "key": key,
-            "data": entr, 
-            "hidden": i !== $expScrollIdx,
-            "scrollType": i == 0 ? 'down-in' : 'up-out',
+            "data": entr,
             "isLast": i+1 == experience.size
         });
         jumpNames.set(i, entr.position);
@@ -104,21 +72,27 @@
             interceptScrollFromIdx(false, $expScrollIdx+1);
         }
     });
+
+    onMount(() => {
+        Array.from(experience).map(processEntries);
+    });
 </script>
 
-<svelte:window on:wheel|stopPropagation|preventDefault="{interceptScroll}" />
+<svelte:window on:wheel|stopPropagation|preventDefault="{manageScroll}" />
 
 <div id="experience" in:fade>
     <div class="content{$orientation == 0 ? ' fancy' : ' card'}">
-        {#each Array.from(experience).map(processEntries) as expEntr, idx}
-            <MediaQuery query="(orientation:landscape)" let:matches>
-                {#if matches && $orientation == 0}
-                    <ExperienceEntry entryData={expEntr} hidden={pieces[idx].hidden} scrollType={pieces[idx].scrollType} isLast={pieces[idx].isLast}/>
-                {:else}
-                    <CardEntry entryData={expEntr}/>
-                {/if}
-            </MediaQuery>
-        {/each }
+        <MediaQuery query="(orientation:landscape)" let:matches>
+            {#if matches && $orientation == 0}
+                {#key $expScrollIdx}
+                    <ExperienceEntry entryData={pieces[$expScrollIdx].data} isLast={pieces[$expScrollIdx].isLast}/>
+                {/key}
+            {:else}
+                {#each pieces as expEntr, idx}
+                    <CardEntry entryData={expEntr.data}/>
+                {/each }
+            {/if}
+        </MediaQuery>
     </div>
     <MediaQuery query="(orientation:landscape)" let:matches>
         {#if matches}
@@ -150,6 +124,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            justify-content: center;
 
             position: relative;
 
