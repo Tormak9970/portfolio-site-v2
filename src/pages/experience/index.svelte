@@ -106,6 +106,7 @@
     });
 </script>
 
+<<<<<<< Updated upstream
 <svelte:window on:wheel|stopPropagation|preventDefault="{interceptScroll}" />
 
 <div id="experience" in:fade>
@@ -119,6 +120,23 @@
                 {/if}
             </MediaQuery>
         {/each }
+=======
+<svelte:window on:wheel|stopPropagation|preventDefault="{throttle(manageScroll, 1000)}" />
+
+<div id="experience">
+    <div class="content{$orientation == 0 ? ' fancy' : ' card'}" in:fade>
+        <MediaQuery query="(orientation:landscape)" let:matches>
+            {#if matches && $orientation == 0}
+                {#key $expScrollIdx}
+                    <ExperienceEntry entryData={pieces[$expScrollIdx].data} isLast={pieces[$expScrollIdx].isLast}/>
+                {/key}
+            {:else}
+                {#each pieces as expEntr, _}
+                    <CardEntry entryData={expEntr.data}/>
+                {/each }
+            {/if}
+        </MediaQuery>
+>>>>>>> Stashed changes
     </div>
     <MediaQuery query="(orientation:landscape)" let:matches>
         {#if matches}

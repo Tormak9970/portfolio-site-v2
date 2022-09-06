@@ -151,6 +151,7 @@
 </script>
 <svelte:window on:wheel|stopPropagation|preventDefault="{interceptScroll}" />
 
+<<<<<<< Updated upstream
 <div id="projects" in:fade>
     <div class="content{$orientation == 0 ? ' fancy' : ' card'}">
         {#each Array.from(projects).map(processEntries) as projEntr, idx}
@@ -162,6 +163,21 @@
                 {/if}
             </MediaQuery>
         {/each}
+=======
+<div id="projects">
+    <div class="content{$orientation == 0 ? ' fancy' : ' card'}" in:fade>
+        <MediaQuery query="(orientation:landscape)" let:matches>
+            {#if matches && $orientation == 0}
+                {#key $projScrollIdx}
+                    <ProjEntry entryData={pieces[$projScrollIdx].data} image={imgsMap.get($projScrollIdx)} isLast={pieces[$projScrollIdx].isLast}/>
+                {/key}
+            {:else}
+                {#each pieces as projEntr, _}
+                    <CardEntry entryData={projEntr.data}/>
+                {/each }
+            {/if}
+        </MediaQuery>
+>>>>>>> Stashed changes
     </div>
     <MediaQuery query="(orientation:landscape)" let:matches>
         {#if matches}

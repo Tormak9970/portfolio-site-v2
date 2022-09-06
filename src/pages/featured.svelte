@@ -9,7 +9,11 @@
 <div id="featured" in:fade>
     <MediaQuery query="(orientation:landscape)" let:matches>
         {#if matches}
+<<<<<<< Updated upstream
             <ProjectOverview entryData={featured} hidden={false} scrollType="" isLast={true}/>
+=======
+            <ProjEntry entryData={featured} image={null} isLast={true}/>
+>>>>>>> Stashed changes
         {:else}
             <CardEntry entryData={featured}/>
         {/if}

@@ -278,118 +278,35 @@
 			<MediaQuery query="(orientation:landscape)" let:matches>
 				{#if !matches}
 					<div class="navigation">
-						<div
-							id="1"
-							class="nav-btn-cont{$isActive('./index')
-								? ' rendered'
-								: ''}"
-							on:click={forwardClick}
-						>
-							<a
-								href={$url("./index")}
-								class="nav-btn"
-								on:click={handleNavClick}>Home</a
-							>
+						<div id="1" class="nav-btn-cont{$isActive('./index') ? ' rendered' : ''}" on:click={forwardClick}>
+							<a href={$url("./index")} class="nav-btn" on:click={handleNavClick}>Home</a>
 						</div>
-						<div
-							id="2"
-							class="nav-btn-cont{$isActive('./about')
-								? ' rendered'
-								: ''}"
-							on:click={forwardClick}
-						>
-							<a
-								href={$url("./about")}
-								class="nav-btn"
-								on:click={handleNavClick}>About</a
-							>
+						<div id="2" class="nav-btn-cont{$isActive('./about') ? ' rendered' : ''}" on:click={forwardClick}>
+							<a href={$url("./about")} class="nav-btn" on:click={handleNavClick}>About</a>
 						</div>
 						<div class="spacer" />
-						<div
-							id="3"
-							class="nav-btn-cont{$isActive('./experience')
-								? ' rendered'
-								: ''}"
-							on:click={forwardClick}
-						>
-							<a
-								href={$url("./experience")}
-								class="nav-btn"
-								on:click={handleNavClick}>Experience</a
-							>
+						<div id="3" class="nav-btn-cont{$isActive('./experience') ? ' rendered' : ''}" on:click={forwardClick}>
+							<a href={$url("./experience")} class="nav-btn" on:click={handleNavClick}>Experience</a>
 						</div>
 						<div class="spacer" />
-						<div
-							id="4"
-							class="nav-btn-cont{$isActive('./featured')
-								? ' rendered'
-								: ''}"
-							on:click={forwardClick}
-						>
-							<a
-								href={$url("./featured")}
-								class="nav-btn"
-								on:click={handleNavClick}>Featured</a
-							>
+						<div id="4" class="nav-btn-cont{$isActive('./featured') ? ' rendered' : ''}" on:click={forwardClick} >
+							<a href={$url("./featured")} class="nav-btn" on:click={handleNavClick}>Featured</a>
 						</div>
 						<div class="spacer" />
-						<div
-							id="5"
-							class="nav-btn-cont{$isActive('./projects') ||
-							$isActive('./minesweeper') ||
-							$isActive('./pong') ||
-							$isActive('./tetris')
-								? ' rendered'
-								: ''}"
-							on:click={forwardClick}
-						>
-							<a
-								href={$url("./projects")}
-								class="nav-btn"
-								on:click={handleNavClick}>Projects</a
-							>
+						<div id="5" class="nav-btn-cont{$isActive('./projects') || $isActive('./minesweeper') || $isActive('./pong') || $isActive('./tetris') ? ' rendered' : ''}" on:click={forwardClick} >
+							<a href={$url("./projects")} class="nav-btn" on:click={handleNavClick}>Projects</a>
 						</div>
 						<div class="spacer" />
-						<div
-							id="6"
-							class="nav-btn-cont{$isActive('./organizations')
-								? ' rendered'
-								: ''}"
-							on:click={forwardClick}
-						>
-							<a
-								href={$url("./organizations")}
-								class="nav-btn"
-								on:click={handleNavClick}>Organizations</a
-							>
+						<div id="6" class="nav-btn-cont{$isActive('./organizations') ? ' rendered' : ''}" on:click={forwardClick}>
+							<a href={$url("./organizations")} class="nav-btn" on:click={handleNavClick}>Organizations</a>
 						</div>
 						<div class="spacer" />
-						<div
-							id="7"
-							class="nav-btn-cont{$isActive('./art')
-								? ' rendered'
-								: ''}"
-							on:click={forwardClick}
-						>
-							<a
-								href={$url("./art")}
-								class="nav-btn"
-								on:click={handleNavClick}>Art Gallery</a
-							>
+						<div id="7" class="nav-btn-cont{$isActive('./art') ? ' rendered' : ''}" on:click={forwardClick}>
+							<a href={$url("./art")} class="nav-btn" on:click={handleNavClick}>Art Gallery</a>
 						</div>
 						<div class="spacer" />
-						<div
-							id="8"
-							class="nav-btn-cont{$isActive('./contact')
-								? ' rendered'
-								: ''}"
-							on:click={forwardClick}
-						>
-							<a
-								href={$url("./contact")}
-								class="nav-btn"
-								on:click={handleNavClick}>Contact</a
-							>
+						<div id="8" class="nav-btn-cont{$isActive('./contact') ? ' rendered' : ''}" on:click={forwardClick}>
+							<a href={$url("./contact")} class="nav-btn" on:click={handleNavClick}>Contact</a>
 						</div>
 					</div>
 				{/if}
@@ -532,21 +449,6 @@
 		justify-content: center;
 		align-items: center;
 		overflow: hidden;
-	}
-	main .content-wrapper .content-body .project-container {
-		z-index: 2;
-		height: 100%;
-		width: 100%;
-		position: absolute;
-		top: 0;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		background-color: var(--background);
-		transition: top 0.5s ease-in-out;
-	}
-	main .content-wrapper .content-body .hidden {
-		top: 100%;
 	}
 	main .content-wrapper .navigation {
 		z-index: 100;
@@ -727,21 +629,6 @@
 		justify-content: center;
 		align-items: center;
 		overflow: hidden;
-	}
-	main .content-wrapper .content-body .project-container {
-		z-index: 2;
-		height: 100%;
-		width: 100%;
-		position: absolute;
-		top: 0;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		background-color: var(--background);
-		transition: top 0.5s ease-in-out;
-	}
-	main .content-wrapper .content-body .hidden {
-		top: 100%;
 	}
 	main .content-wrapper .navigation {
 		z-index: 100;

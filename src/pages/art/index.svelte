@@ -129,7 +129,13 @@
             {#if matches && $orientation == 0}
                 <ArtEntry entryData={pieces[0].data} hidden={pieces[0].hidden} scrollType={pieces[0].scrollType} isLast={false}/>
             {:else}
+<<<<<<< Updated upstream
                 <CardEntry entryData={pieces[0].data}/>
+=======
+                {#each pieces as artEntr, _}
+                    <CardEntry entryData={artEntr.data}/>
+                {/each }
+>>>>>>> Stashed changes
             {/if}
         </MediaQuery>
     
