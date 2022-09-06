@@ -12,6 +12,7 @@
     import MediaQuery from "../_utils/MediaQuery.svelte";
     import CardEntry from "./_cardEntry.svelte";
     import { afterPageLoad } from "@roxi/routify";
+    import { throttle } from "../../utils";
 
     interface ProjectEnt {
         key:string,
@@ -99,7 +100,7 @@
         Array.from(projects).map(processEntries);
     });
 </script>
-<svelte:window on:wheel|stopPropagation|preventDefault="{manageScroll}" />
+<svelte:window on:wheel|stopPropagation|preventDefault="{throttle(manageScroll, 1000)}" />
 
 <div id="projects">
     <div class="content{$orientation == 0 ? ' fancy' : ' card'}" in:fade>

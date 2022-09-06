@@ -8,6 +8,7 @@
     import MediaQuery from "../_utils/MediaQuery.svelte";
     import CardEntry from "./_cardEntry.svelte";
     import { afterPageLoad } from "@roxi/routify";
+    import { throttle } from "../../utils";
 
     type OrganizationsEnt = {
         key:string,
@@ -82,7 +83,7 @@
     });
 </script>
 
-<svelte:window on:wheel|stopPropagationon|preventDefault="{manageScroll}" />
+<svelte:window on:wheel|stopPropagationon|preventDefault="{throttle(manageScroll, 1000)}" />
 
 <div id="orgs">
     <div class="content{$orientation == 0 ? ' fancy' : ' card'}" in:fade>

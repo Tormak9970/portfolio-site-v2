@@ -8,6 +8,7 @@
     import CardEntry from "./_cardEntry.svelte";
     import { afterPageLoad } from '@roxi/routify';
     import { onMount } from "svelte";
+    import { throttle } from "../../utils";
 
     interface ExperienceEnt {
         key:string,
@@ -73,7 +74,7 @@
     });
 </script>
 
-<svelte:window on:wheel|stopPropagation|preventDefault="{manageScroll}" />
+<svelte:window on:wheel|stopPropagation|preventDefault="{throttle(manageScroll, 1000)}" />
 
 <div id="experience">
     <div class="content{$orientation == 0 ? ' fancy' : ' card'}" in:fade>
