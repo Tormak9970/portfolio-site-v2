@@ -9,7 +9,7 @@
 <div id="featured" in:fade>
     <MediaQuery query="(orientation:landscape)" let:matches>
         {#if matches}
-            <ProjEntry entryData={featured} hidden={false} scrollType="" isLast={true}/>
+            <ProjEntry entryData={featured} image={null} isLast={true}/>
         {:else}
             <CardEntry entryData={featured}/>
         {/if}

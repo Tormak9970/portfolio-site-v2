@@ -95,7 +95,6 @@
             interceptScrollFromIdx(false, $projScrollIdx+1);
         }
     });
-
     onMount(() => {
         Array.from(projects).map(processEntries);
     });

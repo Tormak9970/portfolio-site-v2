@@ -533,21 +533,6 @@
 		align-items: center;
 		overflow: hidden;
 	}
-	main .content-wrapper .content-body .project-container {
-		z-index: 2;
-		height: 100%;
-		width: 100%;
-		position: absolute;
-		top: 0;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		background-color: var(--background);
-		transition: top 0.5s ease-in-out;
-	}
-	main .content-wrapper .content-body .hidden {
-		top: 100%;
-	}
 	main .content-wrapper .navigation {
 		z-index: 100;
 		position: absolute;
@@ -727,21 +712,6 @@
 		justify-content: center;
 		align-items: center;
 		overflow: hidden;
-	}
-	main .content-wrapper .content-body .project-container {
-		z-index: 2;
-		height: 100%;
-		width: 100%;
-		position: absolute;
-		top: 0;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		background-color: var(--background);
-		transition: top 0.5s ease-in-out;
-	}
-	main .content-wrapper .content-body .hidden {
-		top: 100%;
 	}
 	main .content-wrapper .navigation {
 		z-index: 100;
