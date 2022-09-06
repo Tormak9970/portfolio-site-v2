@@ -4,19 +4,16 @@ module.exports = {
   "routifyDir": ".routify",
   "ignore": "",
   "dynamicImports": true,
-  "singleBuild": true,
+  "singleBuild": false,
   "noHashScroll": false,
   "distDir": "dist",
   "hashScroll": true,
+  "childProcess": "dev:vite",
   "extensions": [
     "html",
     "svelte",
     "md",
     "svx"
   ],
-<<<<<<< Updated upstream
-  "started": "2022-09-01T21:22:39.510Z"
-=======
-  "started": "2022-09-06T13:20:54.382Z"
->>>>>>> Stashed changes
+  "started": "2022-09-05T14:53:29.841Z"
 }

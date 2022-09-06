@@ -8,3 +8,7 @@ export const artScrollIdx = writable(0);
 export const expScrollIdx = writable(0);
 export const imageModalData = writable({ "id": "artPreviewModal", "data": { "img": "", "name": "" } });
 export const orientation = writable(0);
+
+// scroll stores
+export const scrollDir = writable(false);
+export const allowScroll = writable(true);

@@ -1,24 +1,53 @@
 <script lang="ts">
-    import { imageModalData, showing } from "../../Stores";
+    import { beforeUpdate, onMount } from "svelte";
+    import { fly, FlyParams } from "svelte/transition";
+
+    import { imageModalData, scrollDir, showing, allowScroll } from "../../Stores";
+    
+    import { getTransitions } from "../../utils";
 
     export let entryData:Art;
-    export let hidden:boolean;
-    export let scrollType:string;
+    export let image:HTMLImageElement;
     export let isLast:boolean;
+
+    let contentCont:HTMLDivElement;
+
+    let inParams: FlyParams;
+    let outParams: FlyParams;
 
     function showModal() {
         $imageModalData = { "id": "artPreviewModal", "data": { "img": entryData.img, "name": entryData.name } };
         setTimeout(() => { $showing = true; }, 30);
     }
+
+    function handleTransEnd(): void { $allowScroll = true; }
+
+    beforeUpdate(() => {
+        const transition = getTransitions($scrollDir);
+        inParams = transition.in;
+        outParams = transition.out;
+    });
+
+    onMount(() => {
+        const transition = getTransitions($scrollDir);
+        inParams = transition.in;
+        outParams = transition.out;
+
+        if (image) {
+            image.alt = entryData.name;
+            image.onclick = showModal;
+            contentCont.insertBefore(image, contentCont.children[0]);
+        }
+    });
 </script>
 
-<div id="{entryData.name}" class="artEntry{` ${scrollType}`}{hidden ? " hidden" : ""}">
+<div id="{entryData.name}" class="artEntry" in:fly|local={inParams} out:fly|local={outParams} on:introend="{handleTransEnd}">
     <div class="art-header">
         <h2>{entryData.name}</h2>
     </div>
     {#if entryData.img}
-        <div class="content-container">
-            <img src="{entryData.img}" alt="{entryData.name}" on:click="{showModal}">
+        <div class="content-container" bind:this="{contentCont}">
+            <!-- <img src="{entryData.img}" alt="{entryData.name}" on:click="{showModal}"> -->
             <div class="description">
                 <p>{entryData.description}</p>
             </div>
@@ -37,18 +66,11 @@
         width: 64%;
 
         position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
 
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
-
-        animation-fill-mode: both;
-        animation-direction: alternate;
-        animation-duration: 1s;
     }
 
     .artEntry > .art-header { font-size: 27px; }
@@ -58,21 +80,8 @@
         grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
         column-gap: 14px;
     }
-    .artEntry > .content-container > img { width: 100%; height: auto; margin-top: 14px; border-radius: 5px; cursor: pointer; }
-    .artEntry > .content-container > img:hover { opacity: 0.7; }
+    .artEntry > .content-container > :global(img) { width: auto; max-width: 100%; height: auto; max-height: 100%; margin-top: 14px; border-radius: 5px; cursor: pointer; }
+    .artEntry > .content-container > :global(img:hover) { opacity: 0.7; }
     .artEntry > .description { width: 100%; margin-top: 14px; font-size: 24px; text-align: center; }
     .artEntry > .msg { margin-top: 56px; font-size: 24px; }
-
-    .down-in { animation-name: down-fade-in; }
-    .up-in { animation-name: up-fade-in; }
-    .down-out { animation-name: down-fade-out; }
-    .up-out { animation-name: up-fade-out; }
-
-    .hidden { display: none; }
-
-    @keyframes down-fade-in { 0% { opacity: 0; transform: translate(-50%, 50%); } 100% { opacity: 1; transform: translate(-50%, -50%); } }
-    @keyframes down-fade-out { 0% { opacity: 1; transform: translate(-50%, -50%); } 100% { opacity: 0; transform: translate(-50%, -150%); } }
-
-    @keyframes up-fade-in { 0% { opacity: 0; transform: translate(-50%, -150%); } 100% { opacity: 1; transform: translate(-50%, -50%); } }
-    @keyframes up-fade-out { 0% { opacity: 1; transform: translate(-50%, -50%); } 100% { opacity: 0; transform: translate(-50%, 50%); } }
 </style>

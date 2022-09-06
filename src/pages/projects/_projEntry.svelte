@@ -1,23 +1,54 @@
 <script lang="ts">
+    import { beforeUpdate, onMount } from "svelte";
+    import { fly, FlyParams } from "svelte/transition";
     import { goto } from '@roxi/routify';
+
+    import { scrollDir, allowScroll } from "../../Stores";
+
     import { organizations } from "../../linkConfig";
+    import { getTransitions } from "../../utils";
 
     export let entryData:Project;
-    export let hidden:boolean;
-    export let scrollType:string;
+    export let image:HTMLImageElement;
     export let isLast:boolean;
+
+    let contentCont:HTMLDivElement;
+
+    let inParams: FlyParams;
+    let outParams: FlyParams;
 
     function openProjectEntry() {
         $goto(`./:project`, {project: entryData.name.toLowerCase().replaceAll(" ", "-").replaceAll("'", "")});
     }
+
+    function handleTransEnd(): void { $allowScroll = true; }
+
+    beforeUpdate(() => {
+        const transition = getTransitions($scrollDir);
+        inParams = transition.in;
+        outParams = transition.out;
+    });
+
+    onMount(() => {
+        const transition = getTransitions($scrollDir);
+        inParams = transition.in;
+        outParams = transition.out;
+
+        if (image) {
+            image.alt = entryData.name;
+            contentCont.appendChild(image);
+        }
+    });
 </script>
 
-<div class="projOview{` ${scrollType}`}{hidden ? " hidden" : ""}">
+<div class="projEntry" in:fly|local={inParams} out:fly|local={outParams} on:introend="{handleTransEnd}">
     <div class="content-container">
         <div class="imgs-cont">
             <img src="{(entryData.org != "none") ? organizations.get(entryData.org).img : "./img/orgs/Logo-black-round.png"}" class="{(entryData.org != "none") ? "" : "round"}" alt="">
-            <div class="proj-main-img">
-                <img src="{entryData.img}" alt="">
+            <div class="proj-main-img" bind:this="{contentCont}">
+                {#if !image}
+                    <img src="{entryData.img}" alt="{entryData.name}">
+                {/if}
             </div>
         </div>
         <div class="proj-overview-cont">
@@ -39,25 +70,20 @@
 </div>
 
 <style>
-    .projOview {
+    .projEntry {
         height: 81%;
         width: 80%;
         position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
+        justify-content: center;
         align-items: center;
-        animation-fill-mode: both;
-        animation-direction: alternate;
-        animation-duration: 1s;
     }
-    .projOview .proj-header {
+    .projEntry .proj-header {
         font-size: 27px;
     }
-    .projOview .content-container {
+    .projEntry .content-container {
         width: 100%;
         height: calc(100% - 87px);
         display: grid;
@@ -66,19 +92,19 @@
         justify-items: center;
         align-items: center;
     }
-    .projOview .content-container .imgs-cont {
+    .projEntry .content-container .imgs-cont {
         width: 100%;
         height: 100%;
         position: relative;
     }
-    .projOview .content-container .imgs-cont :nth-child(1) {
+    .projEntry .content-container .imgs-cont :nth-child(1) {
         position: absolute;
         top: 0;
         left: 0;
         width: 200px;
         height: auto;
     }
-    .projOview .content-container .imgs-cont .proj-main-img {
+    .projEntry .content-container .imgs-cont .proj-main-img {
         position: absolute;
         top: 100px;
         left: 120px;
@@ -93,28 +119,28 @@
         border-radius: 8px;
         box-shadow: black -6px -6px 16px 2px;
     }
-    .projOview .content-container .imgs-cont .proj-main-img img {
+    .projEntry .content-container .imgs-cont .proj-main-img :global(img) {
         position: static;
         width: 100%;
         height: auto;
         border-radius: 8px;
     }
-    .projOview .content-container .imgs-cont .round {
+    .projEntry .content-container .imgs-cont .round {
         border-radius: 50%;
     }
-    .projOview .content-container .proj-overview-cont {
+    .projEntry .content-container .proj-overview-cont {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
     }
-    .projOview .content-container .proj-overview-cont .overview {
+    .projEntry .content-container .proj-overview-cont .overview {
         width: 100%;
         margin-top: 14px;
         font-size: 20px;
         text-align: center;
     }
-    .projOview .content-container .proj-overview-cont .proj-link-cont {
+    .projEntry .content-container .proj-overview-cont .proj-link-cont {
         height: 100%;
         width: 100%;
         display: flex;
@@ -122,12 +148,12 @@
         justify-content: center;
         align-items: center;
     }
-    .projOview .content-container .proj-overview-cont .proj-link-cont .name {
+    .projEntry .content-container .proj-overview-cont .proj-link-cont .name {
         height: 100%;
         margin-right: 7px;
         font-size: 20px;
     }
-    .projOview .content-container .proj-overview-cont .proj-link-cont .proj-link {
+    .projEntry .content-container .proj-overview-cont .proj-link-cont .proj-link {
         padding-top: 3px;
         display: flex;
         flex-direction: row;
@@ -136,25 +162,11 @@
         cursor: pointer;
         font-size: 14px;
     }
-    .projOview .content-container .proj-overview-cont .proj-link-cont .proj-link:hover {
+    .projEntry .content-container .proj-overview-cont .proj-link-cont .proj-link:hover {
         color: var(--highlight-hover);
     }
-    .projOview .msg {
+    .projEntry .msg {
         margin-top: 56px;
         font-size: 24px;
     }
-
-
-    .down-in { animation-name: down-fade-in; }
-    .up-in { animation-name: up-fade-in; }
-    .down-out { animation-name: down-fade-out; }
-    .up-out { animation-name: up-fade-out; }
-
-    .hidden { display: none; }
-
-    @keyframes down-fade-in { 0% { opacity: 0; transform: translate(-50%, 50%); } 100% { opacity: 1; transform: translate(-50%, -50%); } }
-    @keyframes down-fade-out { 0% { opacity: 1; transform: translate(-50%, -50%); } 100% { opacity: 0; transform: translate(-50%, -150%); } }
-
-    @keyframes up-fade-in { 0% { opacity: 0; transform: translate(-50%, -150%); } 100% { opacity: 1; transform: translate(-50%, -50%); } }
-    @keyframes up-fade-out { 0% { opacity: 1; transform: translate(-50%, -50%); } 100% { opacity: 0; transform: translate(-50%, 50%); } }
 </style>
