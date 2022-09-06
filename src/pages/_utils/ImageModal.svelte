@@ -56,10 +56,18 @@
         animation-duration: 0.6s;
 
         margin: auto;
+    }
 
-        @keyframes zoom { from { transform: scale(0); } to { transform: scale(1); } }
+    @keyframes zoom {
+        from {
+            transform: scale(0);
+        } to {
+            transform: scale(1);
+        }
+    }
 
-        @media only screen and (max-width: 700px) { .modal { width: 100%; } }
+    @media only screen and (max-width: 700px) {
+        .modal-container > .modal { width: 100%; }
     }
     .modal-container > .close {
         position: absolute;
