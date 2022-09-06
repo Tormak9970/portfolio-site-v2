@@ -2540,7 +2540,7 @@
 			"name": "SWTOR Slicers",
 			"img": "./img/orgs/SwtorSlicers.png",
 			"about": "The SWTOR Slicers Collaboration is a group who enjoys taking Star Wars The Old Republic beyond the game. Whether this be through using models for fan films, or creating tools for the community (such as my <i>Character and Outfit Designer</i>), the community enjoys finding new and unique was to utilize the game.",
-			"description": "I became a collaborator (essentially I work on new tools and techniques for the community, and help people whenever they have questions) because of my work on the <i>Character and Outfit Designer</i>. This was because I added a secondary feature to my tool, the ability to download a <i>.zip</i> file with all of the nessesary information to recreate the character in Blender. This, combined with a script I wrote to automatically  locates all the models and textures, takes a process that used to take over 1 hour, and makes it take under 20 minutes. Since finishing that, I continue to help people, as well as work to make the process even easier.",
+			"description": "I got involved with the community because of my work on the <i>Character and Outfit Designer</i>. This was because I added a secondary feature to my tool, the ability to download a <i>.zip</i> file with all of the nessesary information to recreate the character in Blender. This in tandem with other tools I have made expedites the extraction process. Since finishing the <i>Character Designer</i>, I continue to help people, as well as work to make the process even easier.",
 			"projects": [
 				{
 					"name": "Slicers GUI",
