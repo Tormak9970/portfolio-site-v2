@@ -1,26 +1,56 @@
 <script lang="ts">
+    import { beforeUpdate, onMount } from "svelte";
+    import { fly, FlyParams } from "svelte/transition";
     import { goto } from "@roxi/routify";
 
+    import { scrollDir, allowScroll } from "../../Stores";
+
     import { jumpTo } from "../projects/index.svelte";
+    import { getTransitions } from "../../utils";
 
     export let entryData:Organization;
-    export let hidden:boolean;
-    export let scrollType:string;
+    export let image:HTMLImageElement;
     export let isLast:boolean;
+
+    let contentCont:HTMLDivElement;
+
+    let inParams: FlyParams;
+    let outParams: FlyParams;
 
     function linkToProj(id:string) {
         $goto('../projects');
         setTimeout(() => { jumpTo(id); }, 10);
     }
+
+    function handleTransEnd(): void { $allowScroll = true; }
+
+    beforeUpdate(() => {
+        const transition = getTransitions($scrollDir);
+        inParams = transition.in;
+        outParams = transition.out;
+    });
+
+    onMount(() => {
+        const transition = getTransitions($scrollDir);
+        inParams = transition.in;
+        outParams = transition.out;
+
+        if (image) {
+            image.alt = entryData.name;
+            contentCont.insertBefore(image, contentCont.children[0]);
+        }
+    });
 </script>
 
-<div id="{entryData.name}" class="orgEntry{` ${scrollType}`}{hidden ? " hidden" : ""}">
+<div id="{entryData.name}" class="orgEntry" in:fly|local={inParams} out:fly|local={outParams} on:introend="{handleTransEnd}">
     <div class="org-header">
         <h2>{entryData.name}</h2>
     </div>
     {#if entryData.img}
-        <div class="content-container">
-            <img src="{entryData.img}" alt="{entryData.name}">
+        <div class="content-container" bind:this="{contentCont}">
+            {#if !image}
+                <img src="{entryData.img}" alt="{entryData.name}">
+            {/if}
             <div class="description">
                 <div class="org-header-2">
                     <h2>About</h2>
@@ -63,18 +93,11 @@
         width: 100%;
 
         position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
 
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
+        justify-content: center;
         align-items: center;
-
-        animation-fill-mode: both;
-        animation-direction: alternate;
-        animation-duration: 1s;
     }
     .orgEntry .org-header { font-size: 27px; }
     .orgEntry .org-header-2 { text-align: center; }
@@ -87,7 +110,7 @@
         justify-items: center;
         align-items: center;
     }
-    .orgEntry .content-container img { width: 80%; height: auto; margin-top: 14px; }
+    .orgEntry .content-container :global(img) { width: 80%; height: auto; margin-top: 14px; }
         
     .orgEntry .description { width: 100%; margin-top: 14px; font-size: 20px; text-align: center; }
     .orgEntry .msg { margin-top: 56px; font-size: 24px; }
@@ -126,17 +149,4 @@
         font-size: 14px;
     }
     .projects ul li .proj-entr .proj-link :hover { color: var(--highlight-hover); }
-
-    .down-in { animation-name: down-fade-in; }
-    .up-in { animation-name: up-fade-in; }
-    .down-out { animation-name: down-fade-out; }
-    .up-out { animation-name: up-fade-out; }
-
-    .hidden { display: none; }
-
-    @keyframes down-fade-in { 0% { opacity: 0; transform: translate(-50%, 50%); } 100% { opacity: 1; transform: translate(-50%, -50%); } }
-    @keyframes down-fade-out { 0% { opacity: 1; transform: translate(-50%, -50%); } 100% { opacity: 0; transform: translate(-50%, -150%); } }
-
-    @keyframes up-fade-in { 0% { opacity: 0; transform: translate(-50%, -150%); } 100% { opacity: 1; transform: translate(-50%, -50%); } }
-    @keyframes up-fade-out { 0% { opacity: 1; transform: translate(-50%, -50%); } 100% { opacity: 0; transform: translate(-50%, 50%); } }
 </style>

@@ -9,8 +9,6 @@
     import { afterPageLoad } from '@roxi/routify';
     import { onMount } from "svelte";
     import { throttle } from "../../utils";
-    
-    let preIdx = $artScrollIdx;
 
     interface ArtEnt {
         key:string,
@@ -41,10 +39,8 @@
         
         if (!($artScrollIdx == 0 && !direction) && !($artScrollIdx == pieces.length-1 && direction) && Math.abs(e.deltaY) != 0) {
             if (direction) {
-                preIdx++;
                 $artScrollIdx++;
             } else {
-                preIdx--;
                 $artScrollIdx--;
             }
             $scrollDir = direction;
@@ -53,7 +49,6 @@
         }
     }
     function interceptScrollFromIdx(direction:boolean, tarIdx:number) {
-        preIdx = tarIdx;
         $artScrollIdx = tarIdx;
         $scrollDir = direction;
     }
@@ -99,13 +94,13 @@
 
     onMount(() => {
         Array.from(art).map(processEntries);
-    })
+    });
 </script>
 
 <svelte:window on:wheel|stopPropagation="{throttle(manageScroll, 1000)}" />
 
-<div id="art" in:fade>
-    <div class="content{$orientation == 0 ? ' fancy' : ' card'}">
+<div id="art">
+    <div class="content{$orientation == 0 ? ' fancy' : ' card'}" in:fade>
         <MediaQuery query="(orientation:landscape)" let:matches>
             {#if matches && $orientation == 0}
                 {#key $artScrollIdx}
@@ -120,7 +115,7 @@
     </div>
     <MediaQuery query="(orientation:landscape)" let:matches>
         {#if matches}
-            <JumpList len={art.size+1} tooltips={jumpNames} handler={jumpToHandler} scrollIdx={preIdx}/>
+            <JumpList len={art.size+1} tooltips={jumpNames} handler={jumpToHandler} scrollIdx={$artScrollIdx}/>
         {/if}
     </MediaQuery>
 </div>

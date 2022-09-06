@@ -9,8 +9,6 @@
     import { afterPageLoad } from '@roxi/routify';
     import { onMount } from "svelte";
 
-    let preIdx = $expScrollIdx;
-
     interface ExperienceEnt {
         key:string,
         data:Experience,
@@ -26,10 +24,8 @@
         
         if (!($expScrollIdx == 0 && !direction) && !($expScrollIdx == pieces.length-1 && direction) && Math.abs(e.deltaY) != 0) {
             if (direction) {
-                preIdx++;
                 $expScrollIdx++;
             } else {
-                preIdx--;
                 $expScrollIdx--;
             }
             $scrollDir = direction;
@@ -38,7 +34,6 @@
         }
     }
     function interceptScrollFromIdx(direction:boolean, tarIdx:number) {
-        preIdx = tarIdx;
         $expScrollIdx = tarIdx;
         $scrollDir = direction;
     }
@@ -80,8 +75,8 @@
 
 <svelte:window on:wheel|stopPropagation|preventDefault="{manageScroll}" />
 
-<div id="experience" in:fade>
-    <div class="content{$orientation == 0 ? ' fancy' : ' card'}">
+<div id="experience">
+    <div class="content{$orientation == 0 ? ' fancy' : ' card'}" in:fade>
         <MediaQuery query="(orientation:landscape)" let:matches>
             {#if matches && $orientation == 0}
                 {#key $expScrollIdx}
@@ -96,7 +91,7 @@
     </div>
     <MediaQuery query="(orientation:landscape)" let:matches>
         {#if matches}
-            <JumpList len={experience.size} tooltips={jumpNames} handler={jumpToHandler} scrollIdx={preIdx}/>
+            <JumpList len={experience.size} tooltips={jumpNames} handler={jumpToHandler} scrollIdx={$expScrollIdx}/>
         {/if}
     </MediaQuery>
 </div>

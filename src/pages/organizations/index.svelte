@@ -1,82 +1,41 @@
 <script lang="ts" type="module">
+    import { onMount } from "svelte";
     import { fade } from "svelte/transition";
 	import OrgsEntry from "./_orgsEntry.svelte";
     import JumpList from "../_utils/JumpList.svelte";
     import { organizations } from "../../linkConfig";
-    import { orgScrollIdx, orientation } from "../../Stores";
+    import { allowScroll, orgScrollIdx, orientation, scrollDir } from "../../Stores";
     import MediaQuery from "../_utils/MediaQuery.svelte";
     import CardEntry from "./_cardEntry.svelte";
     import { afterPageLoad } from "@roxi/routify";
 
-    let preIdx = $orgScrollIdx;
-
     type OrganizationsEnt = {
         key:string,
         data:Organization,
-        hidden:boolean,
-        scrollType:string,
         isLast:boolean
     }
 
     const pieces:OrganizationsEnt[] = [];
     const jumpNames:Map<number, string> = new Map();
+    const imgsMap:Map<number, HTMLImageElement> = new Map();
 
-    let isScrolling:boolean = false;
     function interceptScroll(e: WheelEvent) {
-        if (!isScrolling) {
-            const direction:boolean = e.deltaY > 0; // true = down, false = up
-            
-            const orgsElem = document.getElementById('orgs').children[0];
-            if (!($orgScrollIdx == 0 && !direction) && !($orgScrollIdx == orgsElem.children.length-1 && direction) && Math.abs(e.deltaY) != 0) {
-                isScrolling = true;
-                if (direction) {
-                    preIdx++;
-                    pieces[$orgScrollIdx+1].scrollType = 'down-in';
-                    pieces[$orgScrollIdx+1].hidden = false;
-                    pieces[$orgScrollIdx].scrollType = 'down-out';
-                    setTimeout(() => {
-                        pieces[$orgScrollIdx].hidden = true;
-                        $orgScrollIdx++;
-                        isScrolling = false;
-                    }, 1500);
-                } else {
-                    preIdx--;
-                    pieces[$orgScrollIdx-1].scrollType = 'up-in';
-                    pieces[$orgScrollIdx-1].hidden = false;
-                    pieces[$orgScrollIdx].scrollType = 'up-out';
-                    setTimeout(() => {
-                        pieces[$orgScrollIdx].hidden = true;
-                        $orgScrollIdx--;
-                        isScrolling = false;
-                    },  1500);
-                }
+        const direction:boolean = e.deltaY > 0; // true = down, false = up
+        
+        if (!($orgScrollIdx == 0 && !direction) && !($orgScrollIdx == pieces.length-1 && direction) && Math.abs(e.deltaY) != 0) {
+            if (direction) {
+                $orgScrollIdx++;
+            } else {
+                $orgScrollIdx--;
             }
+            $scrollDir = direction;
+        } else {
+            $allowScroll = true;
         }
     }
     function interceptScrollFromIdx(direction:boolean, tarIdx:number) {
-        if (!isScrolling) {
-            isScrolling = true;
-            preIdx = tarIdx;
-            if (direction) {
-                pieces[tarIdx].scrollType = 'down-in';
-                pieces[tarIdx].hidden = false;
-                pieces[$orgScrollIdx].scrollType = 'down-out';
-                setTimeout(() => {
-                    pieces[$orgScrollIdx].hidden = true;
-                    $orgScrollIdx = tarIdx;
-                    isScrolling = false;
-                }, 1500);
-            } else {
-                pieces[tarIdx].scrollType = 'up-in';
-                pieces[tarIdx].hidden = false;
-                pieces[$orgScrollIdx].scrollType = 'up-out';
-                setTimeout(() => {
-                    pieces[$orgScrollIdx].hidden = true;
-                    $orgScrollIdx = tarIdx;
-                    isScrolling = false;
-                },  1500);
-            }
-        }
+        $orgScrollIdx = tarIdx;
+        $scrollDir = direction;
     }
     function jumpToHandler(e: MouseEvent) {
         const target:HTMLElement = <HTMLElement>e.currentTarget;
@@ -88,13 +47,27 @@
     function processEntries([key, entr]:[string, Organization], i:number) { 
         pieces.push({
             "key": key,
-            "data": entr, 
-            "hidden": i !== $orgScrollIdx, 
-            "scrollType": i == 0 ? 'down-in' : 'up-out',
+            "data": entr,
             "isLast": i+1 == organizations.size
         });
         jumpNames.set(i, entr.name);
+        
+        if (entr.img) {
+            const img = new Image();
+            img.onload = () => {
+                imgsMap.set(i, img);
+            }
+            img.src = entr.img;
+        }
+
         return entr; 
+    }
+    
+    function manageScroll(e: WheelEvent) {
+        if ($allowScroll) {
+            $allowScroll = false;
+            interceptScroll(e);
+        }
     }
 
     $afterPageLoad(() => {
@@ -103,26 +76,32 @@
             interceptScrollFromIdx(false, $orgScrollIdx+1);
         }
     });
+
+    onMount(() => {
+        Array.from(organizations).map(processEntries);
+    });
 </script>
 
-<svelte:window on:wheel|stopPropagationon|preventDefault="{interceptScroll}" />
+<svelte:window on:wheel|stopPropagationon|preventDefault="{manageScroll}" />
 
-<div id="orgs" in:fade>
-    <div class="content{$orientation == 0 ? ' fancy' : ' card'}">
-        {#each Array.from(organizations).map(processEntries) as orgEntr, idx}
-            <MediaQuery query="(orientation:landscape)" let:matches>
-                {#if matches && $orientation == 0}
-                    <OrgsEntry entryData={orgEntr} hidden={pieces[idx].hidden} scrollType={pieces[idx].scrollType} isLast={pieces[idx].isLast}/>
-                {:else}
-                    <CardEntry entryData={orgEntr}/>
-                {/if}
-            </MediaQuery>
-        {/each}
+<div id="orgs">
+    <div class="content{$orientation == 0 ? ' fancy' : ' card'}" in:fade>
+        <MediaQuery query="(orientation:landscape)" let:matches>
+            {#if matches && $orientation == 0}
+                {#key $orgScrollIdx}
+                    <OrgsEntry entryData={pieces[$orgScrollIdx].data} image={imgsMap.get($orgScrollIdx)} isLast={pieces[$orgScrollIdx].isLast}/>
+                {/key}
+            {:else}
+                {#each pieces as orgEntr, idx}
+                    <CardEntry entryData={orgEntr.data}/>
+                {/each }
+            {/if}
+        </MediaQuery>
     </div>
     
     <MediaQuery query="(orientation:landscape)" let:matches>
         {#if matches}
-            <JumpList len={organizations.size} tooltips={jumpNames} handler={jumpToHandler} scrollIdx={preIdx}/>
+            <JumpList len={organizations.size} tooltips={jumpNames} handler={jumpToHandler} scrollIdx={$orgScrollIdx}/>
         {/if}
     </MediaQuery>
 </div>
@@ -150,6 +129,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            justify-content: center;
 
             position: relative;
 

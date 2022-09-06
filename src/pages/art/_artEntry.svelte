@@ -41,7 +41,7 @@
     });
 </script>
 
-<div id="{entryData.name}" class="artEntry" in:fly={inParams} out:fly={outParams} on:introend="{handleTransEnd}">
+<div id="{entryData.name}" class="artEntry" in:fly|local={inParams} out:fly|local={outParams} on:introend="{handleTransEnd}">
     <div class="art-header">
         <h2>{entryData.name}</h2>
     </div>

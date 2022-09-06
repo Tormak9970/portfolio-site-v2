@@ -3,125 +3,43 @@
     export let jumpTo = (id:string) => {}
 </script>
 <script lang="ts">
+    import { onMount } from "svelte";
     import { fade } from "svelte/transition";
     import { projects } from "../../linkConfig";
-    import ProjectOverview from "./_projectOverview.svelte";
-    import { projScrollIdx, orientation } from "../../Stores";
+    import ProjEntry from "./_projEntry.svelte";
+    import { projScrollIdx, orientation, scrollDir, allowScroll } from "../../Stores";
     import JumpList from "../_utils/JumpList.svelte";
     import MediaQuery from "../_utils/MediaQuery.svelte";
     import CardEntry from "./_cardEntry.svelte";
     import { afterPageLoad } from "@roxi/routify";
 
-    let preIdx = $projScrollIdx;
-
     interface ProjectEnt {
         key:string,
         data:Project,
-        hidden:boolean,
-        scrollType:string,
         isLast:boolean
     }
 
     const pieces:ProjectEnt[] = [];
-    let isScrolling:boolean = false;
     const jumpNames:Map<number, string> = new Map();
-
-    jumpTo = (id:string) => {
-        const project:Project = projects.get(id);
-        if (project) {
-            const curIdx = pieces.findIndex((val:ProjectEnt) => { return val.key == id; });
-            const curHIdx = pieces.findIndex((val:ProjectEnt) => { return !val.hidden; });
-            pieces[curHIdx].hidden = true;
-            
-            $projScrollIdx = curIdx < curHIdx ? curIdx-1 : curIdx+1;
-            interceptScrollFromJump(false);
-        } else {
-            throw Error(`Expected key ${id} to be in map but was not.`);
-        }
-    }
+    const imgsMap:Map<number, HTMLImageElement> = new Map();
 
     function interceptScroll(e: WheelEvent) {
-        if ($orientation == 0) e.stopPropagation();
-        if (!isScrolling) {
-            const direction:boolean = e.deltaY > 0; // true = down, false = up
-            
-            const projElem = document.getElementById('projects').children[0];
-            if (!($projScrollIdx == 0 && !direction) && !($projScrollIdx == projElem.children.length-1 && direction) && Math.abs(e.deltaY) != 0) {
-                isScrolling = true;
-                if (direction) {
-                    preIdx++;
-                    pieces[$projScrollIdx+1].scrollType = 'down-in';
-                    pieces[$projScrollIdx+1].hidden = false;
-                    pieces[$projScrollIdx].scrollType = 'down-out';
-                    setTimeout(() => {
-                        pieces[$projScrollIdx].hidden = true;
-                        $projScrollIdx++;
-                        isScrolling = false;
-                    }, 1500);
-                } else {
-                    preIdx--;
-                    pieces[$projScrollIdx-1].scrollType = 'up-in';
-                    pieces[$projScrollIdx-1].hidden = false;
-                    pieces[$projScrollIdx].scrollType = 'up-out';
-                    setTimeout(() => {
-                        pieces[$projScrollIdx].hidden = true;
-                        $projScrollIdx--;
-                        isScrolling = false;
-                    },  1500);
-                }
+        const direction:boolean = e.deltaY > 0; // true = down, false = up
+        
+        if (!($projScrollIdx == 0 && !direction) && !($projScrollIdx == pieces.length-1 && direction) && Math.abs(e.deltaY) != 0) {
+            if (direction) {
+                $projScrollIdx++;
+            } else {
+                $projScrollIdx--;
             }
+            $scrollDir = direction;
+        } else {
+            $allowScroll = true;
         }
     }
     function interceptScrollFromIdx(direction:boolean, tarIdx:number) {
-        if (!isScrolling) {
-            isScrolling = true;
-            preIdx = tarIdx;
-            if (direction) {
-                pieces[tarIdx].scrollType = 'down-in';
-                pieces[tarIdx].hidden = false;
-                pieces[$projScrollIdx].scrollType = 'down-out';
-                setTimeout(() => {
-                    pieces[$projScrollIdx].hidden = true;
-                    $projScrollIdx = tarIdx;
-                    isScrolling = false;
-                }, 1500);
-            } else {
-                pieces[tarIdx].scrollType = 'up-in';
-                pieces[tarIdx].hidden = false;
-                pieces[$projScrollIdx].scrollType = 'up-out';
-                setTimeout(() => {
-                    pieces[$projScrollIdx].hidden = true;
-                    $projScrollIdx = tarIdx;
-                    isScrolling = false;
-                },  1500);
-            }
-        }
-    }
-    function interceptScrollFromJump(direction:boolean) {
-        if (!isScrolling) {
-            isScrolling = true;
-            if (direction) {
-                preIdx++;
-                pieces[$projScrollIdx+1].scrollType = 'down-in';
-                pieces[$projScrollIdx+1].hidden = false;
-                pieces[$projScrollIdx].scrollType = 'down-out';
-                setTimeout(() => {
-                    pieces[$projScrollIdx].hidden = true;
-                    $projScrollIdx++;
-                    isScrolling = false;
-                }, 1500);
-            } else {
-                preIdx--;
-                pieces[$projScrollIdx-1].scrollType = 'up-in';
-                pieces[$projScrollIdx-1].hidden = false;
-                pieces[$projScrollIdx].scrollType = 'up-out';
-                setTimeout(() => {
-                    pieces[$projScrollIdx].hidden = true;
-                    $projScrollIdx--;
-                    isScrolling = false;
-                },  1500);
-            }
-        }
+        $projScrollIdx = tarIdx;
+        $scrollDir = direction;
     }
     function jumpToHandler(e: MouseEvent) {
         const target:HTMLElement = <HTMLElement>e.currentTarget;
@@ -130,16 +48,44 @@
         interceptScrollFromIdx(curIdx < tarIdx, tarIdx);
     }
 
+    jumpTo = (id:string) => {
+        const project:Project = projects.get(id);
+        if (project) {
+            const curIdx = pieces.findIndex((val:ProjectEnt) => { return val.key == id; });
+            const curHIdx = $projScrollIdx;
+            
+            $projScrollIdx = curIdx < curHIdx ? curIdx-1 : curIdx+1;
+            $projScrollIdx--;
+            $scrollDir = false;
+        } else {
+            throw Error(`Expected key ${id} to be in map but was not.`);
+        }
+    }
+
     function processEntries([key, entr]:[string, Project], i:number) { 
         pieces.push({
             "key": key,
-            "data": entr, 
-            "hidden": i !== $projScrollIdx, 
-            "scrollType": i == 0 ? 'down-in' : 'up-out',
+            "data": entr,
             "isLast": i+1 == projects.size
         });
         jumpNames.set(i, entr.name);
+
+        if (entr.img) {
+            const img = new Image();
+            img.onload = () => {
+                imgsMap.set(i, img);
+            }
+            img.src = entr.img;
+        }
+
         return entr; 
+    }
+
+    function manageScroll(e: WheelEvent) {
+        if ($allowScroll) {
+            $allowScroll = false;
+            interceptScroll(e);
+        }
     }
 
     $afterPageLoad(() => {
@@ -147,25 +93,31 @@
             $projScrollIdx -= 1;
             interceptScrollFromIdx(false, $projScrollIdx+1);
         }
-    })
-</script>
-<svelte:window on:wheel|stopPropagation|preventDefault="{interceptScroll}" />
+    });
 
-<div id="projects" in:fade>
-    <div class="content{$orientation == 0 ? ' fancy' : ' card'}">
-        {#each Array.from(projects).map(processEntries) as projEntr, idx}
-            <MediaQuery query="(orientation:landscape)" let:matches>
-                {#if matches && $orientation == 0}
-                    <ProjectOverview entryData={projEntr} hidden={pieces[idx].hidden} scrollType={pieces[idx].scrollType} isLast={pieces[idx].isLast}/>
-                {:else}
-                    <CardEntry entryData={projEntr}/>
-                {/if}
-            </MediaQuery>
-        {/each}
+    onMount(() => {
+        Array.from(projects).map(processEntries);
+    });
+</script>
+<svelte:window on:wheel|stopPropagation|preventDefault="{manageScroll}" />
+
+<div id="projects">
+    <div class="content{$orientation == 0 ? ' fancy' : ' card'}" in:fade>
+        <MediaQuery query="(orientation:landscape)" let:matches>
+            {#if matches && $orientation == 0}
+                {#key $projScrollIdx}
+                    <ProjEntry entryData={pieces[$projScrollIdx].data} image={imgsMap.get($projScrollIdx)} isLast={pieces[$projScrollIdx].isLast}/>
+                {/key}
+            {:else}
+                {#each pieces as projEntr, idx}
+                    <CardEntry entryData={projEntr.data}/>
+                {/each }
+            {/if}
+        </MediaQuery>
     </div>
     <MediaQuery query="(orientation:landscape)" let:matches>
         {#if matches}
-            <JumpList len={projects.size} tooltips={jumpNames} handler={jumpToHandler} scrollIdx={preIdx}/>
+            <JumpList len={projects.size} tooltips={jumpNames} handler={jumpToHandler} scrollIdx={$projScrollIdx}/>
         {/if}
     </MediaQuery>
 </div>
@@ -188,6 +140,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            justify-content: center;
             position: relative;
             overflow: hidden;
         }

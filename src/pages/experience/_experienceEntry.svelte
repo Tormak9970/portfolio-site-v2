@@ -20,7 +20,7 @@
     });
 </script>
 
-<div id="{entryData.company.toLocaleLowerCase().concat("-").concat(entryData.position.toLocaleLowerCase()).replaceAll(" ", "-")}" class="experienceEntry" in:fly={inParams} out:fly={outParams} on:introend="{handleTransEnd}">
+<div id="{entryData.company.toLocaleLowerCase().concat("-").concat(entryData.position.toLocaleLowerCase()).replaceAll(" ", "-")}" class="experienceEntry" in:fly|local={inParams} out:fly|local={outParams} on:introend="{handleTransEnd}">
     <div class="experience-header">
         <h2>{entryData.position}</h2>
     </div>
