@@ -545,12 +545,12 @@
 			},
 			"portfolio-v2": {
 				"name": "Portfolio V2",
-				"time": "40 hours",
+				"time": "50 hours",
 				"status": "Complete (continually updated)",
 				"difficulty": "Moderate",
-				"description": "This project is the website you are currently on. It is a replacement for my previous portfolio website, which I had not been keeping up to date. I decided to remake it from scratch using Svelte, TypeScript, and SASS, all of which are awesome frameworks I have wanted to learn for a while.",
+				"description": "This project is the website you are currently on. It is a replacement for my previous portfolio website, which I had not been keeping up to date. I decided to remake it from scratch using Svelte, TypeScript, and SASS (later removed), all of which are awesome frameworks I have wanted to learn for a while.",
 				"content": {
-					"time": 1653786781791,
+					"time": 1662555872662,
 					"blocks": [
 						{
 							"id": "EHEWUSDdP5",
@@ -564,7 +564,76 @@
 							"id": "5NmJ0NTUar",
 							"type": "paragraph",
 							"data": {
-								"text": "This project is the website you are currently on. It is a replacement for my previous portfolio website, which I had not been keeping up to date. I decided to remake it from scratch using Svelte, TypeScript, and SASS, all of which are awesome frameworks I have wanted to learn for a while."
+								"text": "This project is the website you are currently on. It is a replacement for my previous portfolio website, which I had not been keeping up to date. I decided to remake it from scratch using Svelte, TypeScript, and SASS (later removed), all of which are awesome frameworks I have wanted to learn for a while."
+							}
+						},
+						{
+							"id": "S0i4_y-_iq",
+							"type": "header",
+							"data": {
+								"text": "Update 2.0",
+								"level": 2
+							}
+						},
+						{
+							"id": "aRs6sJ9plG",
+							"type": "list",
+							"data": {
+								"style": "unordered",
+								"items": [
+									{
+										"content": "Removed all SASS",
+										"items": [
+											{
+												"content": "While SASS is a great tool, it is becoming obsolete with the improvements to vanilla CSS, and adds unnecessary compiling steps to the project",
+												"items": []
+											}
+										]
+									},
+									{
+										"content": "Updated the scroll indicator",
+										"items": [
+											{
+												"content": "it is now a fixed height (which is based on screen height), which will work better as I add more entries to each page",
+												"items": []
+											}
+										]
+									},
+									{
+										"content": "Changed how the scroll transitions are implimented",
+										"items": [
+											{
+												"content": "They are now modified svelte transitions which significantly simplifies their implementation",
+												"items": []
+											}
+										]
+									},
+									{
+										"content": "Optimized image sizes to improve loading times",
+										"items": []
+									},
+									{
+										"content": "Changed the mobile menu to slide over the page",
+										"items": [
+											{
+												"content": "provides a cleaner experience",
+												"items": []
+											}
+										]
+									},
+									{
+										"content": "Added a copyright label to all pages",
+										"items": []
+									},
+									{
+										"content": "Added a more interesting landing page",
+										"items": []
+									},
+									{
+										"content": "Reduced Cross Origin requests to improve loading times",
+										"items": []
+									}
+								]
 							}
 						},
 						{
