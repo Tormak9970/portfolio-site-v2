@@ -89,31 +89,66 @@
     })
 </script>
 
-<MediaQuery query="(orientation:landscape)" let:matches>
-    {#if matches}
-        <div id="aboutSection" class="landscape" in:fade>
-            <div id="name">Travis Lane</div>
-            <div class="desc-cont" style="--desc-color: {descs[descIdx]?.color ? descs[descIdx].color : '#0f87d1'}">
-                <div id="desc" bind:this="{descCont}"></div>
-                <div class="caret" class:animate="{blink}"></div>
+<div class="bg-cont">
+    <div class="iframe-cont">
+        <iframe src="https://dots.travislane.dev/" title="noisy-dots" frameBorder="0"/>
+    </div>
+    <MediaQuery query="(orientation:landscape)" let:matches>
+        {#if matches}
+            <div id="aboutSection" class="landscape" in:fade>
+                <div id="name">Travis Lane</div>
+                <div class="desc-cont" style="--desc-color: {descs[descIdx]?.color ? descs[descIdx].color : '#0f87d1'}">
+                    <div id="desc" bind:this="{descCont}"></div>
+                    <div class="caret" class:animate="{blink}"></div>
+                </div>
             </div>
-        </div>
-    {:else}
-        <div id="aboutSection" class="mobile" in:fade>
-            <div id="name">Travis Lane</div>
-            <div class="desc-cont" style="--desc-color: {descs[descIdx]?.color ? descs[descIdx].color : '#0f87d1'}">
-                <div id="desc" bind:this="{descCont}"></div>
-                <div class="caret" class:animate="{blink}"></div>
+        {:else}
+            <div id="aboutSection" class="mobile" in:fade>
+                <div id="name">Travis Lane</div>
+                <div class="desc-cont" style="--desc-color: {descs[descIdx]?.color ? descs[descIdx].color : '#0f87d1'}">
+                    <div id="desc" bind:this="{descCont}"></div>
+                    <div class="caret" class:animate="{blink}"></div>
+                </div>
             </div>
-        </div>
-    {/if}
-</MediaQuery>
+        {/if}
+    </MediaQuery>
+</div>
 
 <style>
 	@import "/theme.css";
 
     :root {
         --desc-color: "";
+    }
+
+    .bg-cont {
+        width: 100%;
+        height: 100%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        position: relative;
+    }
+
+    .iframe-cont {
+        width: 100%;
+        height: 100%;
+
+        position: absolute;
+        top: 0;
+        z-index: 1;
+    }
+
+    .iframe-cont > iframe {
+        width: 100%;
+        height: 100%;
+    }
+
+    #aboutSection {
+        z-index: 2;
     }
 
 	.landscape {
