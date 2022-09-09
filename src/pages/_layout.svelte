@@ -499,5 +499,7 @@
 		bottom: 7px;
 		font-size: 10px;
 		opacity: 0.4;
+
+		z-index: 1000;
 	}
 </style>
