@@ -18,7 +18,7 @@
 
     const jumpNames:Map<number, string> = new Map([[0, "Foreword"]]);
 
-    const pieces:ArtEnt[] = [
+    let pieces:ArtEnt[] = [
         {
             "key": "forword",
             "data": {
@@ -96,6 +96,7 @@
 
     onMount(() => {
         Array.from(art).map(processEntries);
+        pieces = [...pieces];
     });
 </script>
 
@@ -109,7 +110,7 @@
                     <ArtEntry entryData={pieces[$artScrollIdx].data} image={imgsMap.get($artScrollIdx)} isLast={pieces[$artScrollIdx].isLast}/>
                 {/key}
             {:else}
-                {#each pieces as artEntr, idx}
+                {#each pieces as artEntr}
                     <CardEntry entryData={artEntr.data}/>
                 {/each }
             {/if}

@@ -20,7 +20,7 @@
         isLast:boolean
     }
 
-    const pieces:ProjectEnt[] = [];
+    let pieces:ProjectEnt[] = [];
     const jumpNames:Map<number, string> = new Map();
     const imgsMap:Map<number, HTMLImageElement> = new Map();
 
@@ -99,6 +99,7 @@
     });
     onMount(() => {
         Array.from(projects).map(processEntries);
+        pieces = [...pieces];
     });
 </script>
 <svelte:window on:wheel|stopPropagation|preventDefault="{throttle(manageScroll, 1000)}" />

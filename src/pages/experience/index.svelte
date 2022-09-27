@@ -18,7 +18,7 @@
 
     const jumpNames:Map<number, string> = new Map();
 
-    const pieces:ExperienceEnt[] = [];
+    let pieces:ExperienceEnt[] = [];
 
     function interceptScroll(e: WheelEvent) {
         const direction:boolean = e.deltaY > 0; // true = down, false = up
@@ -73,6 +73,7 @@
 
     onMount(() => {
         Array.from(experience).map(processEntries);
+        pieces = [...pieces];
     });
 </script>
 

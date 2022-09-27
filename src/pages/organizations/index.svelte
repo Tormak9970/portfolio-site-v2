@@ -16,7 +16,7 @@
         isLast:boolean
     }
 
-    const pieces:OrganizationsEnt[] = [];
+    let pieces:OrganizationsEnt[] = [];
     const jumpNames:Map<number, string> = new Map();
     const imgsMap:Map<number, HTMLImageElement> = new Map();
 
@@ -82,6 +82,7 @@
 
     onMount(() => {
         Array.from(organizations).map(processEntries);
+        pieces = [...pieces];
     });
 </script>
 

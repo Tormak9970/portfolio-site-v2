@@ -1,12 +1,10 @@
 <script lang="ts">
-    import { orientation } from "../../Stores";
+    import { orientation, lastOrientSelected } from "../../Stores";
 
 	export let len: number;
     export let tooltips: Map<number, string>;
     export let handler:Function;
     export let scrollIdx:number;
-
-    let lastOrientSelected = 0;
 
     let selInd:SVGElement;
 
@@ -43,9 +41,12 @@
         const wrapperDiv:ParentNode = (<HTMLElement>e.currentTarget).parentNode;
 
         const newIdx = Array.from(wrapperDiv.parentNode.children).indexOf(<Element>wrapperDiv);
-        const isSameIdx:boolean = newIdx == lastOrientSelected;
+        const isSameIdx:boolean = newIdx == $lastOrientSelected;
 
-        if (!isSameIdx) { lastOrientSelected = newIdx; $orientation = newIdx; }
+        if (!isSameIdx) {
+            $lastOrientSelected = newIdx;
+            $orientation = newIdx;
+        }
     }
 </script>
 

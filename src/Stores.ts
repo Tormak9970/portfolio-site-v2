@@ -7,6 +7,7 @@ export const orgScrollIdx = writable(0);
 export const artScrollIdx = writable(0);
 export const expScrollIdx = writable(0);
 export const imageModalData = writable({ "id": "artPreviewModal", "data": { "img": "", "name": "" } });
+export const lastOrientSelected = writable(0);
 export const orientation = writable(0);
 
 // scroll stores
