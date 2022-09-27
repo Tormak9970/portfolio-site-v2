@@ -29,7 +29,7 @@
 
     async function typeDescs(): Promise<void> {
         if (descRuns < descs[descIdx].desc.length) {
-            descCont.innerText = descs[descIdx].desc.substring(0, descRuns+1);
+            if (descCont) descCont.innerText = descs[descIdx].desc.substring(0, descRuns+1);
             descRuns++;
             
             await wait(speed);
@@ -39,14 +39,14 @@
 
     async function delDescs(): Promise<void> {
         if (descRuns > 0) {
-            descCont.innerText = descCont.innerText.substring(0, descCont.innerText.length - 1);
+            if (descCont) descCont.innerText = descCont.innerText.substring(0, descCont.innerText.length - 1);
             descRuns--;
             
             await wait(speed);
             await delDescs();
         } else {
             await wait(speed);
-            descCont.innerText = "";
+            if (descCont) descCont.innerText = "";
             descIdx++;
         }
     }
