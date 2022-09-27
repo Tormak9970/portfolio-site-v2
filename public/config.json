@@ -1460,12 +1460,12 @@
 		"software-engineering": {
 			"slicers-gui": {
 				"name": "Slicers GUI",
-				"time": "400+ hours",
+				"time": "420+ hours",
 				"status": "In progress (Beta)",
 				"difficulty": "Complexed",
 				"description": "This is by far the project I am the most proud of. It is the culmination of a lot of work by both me and the SWTOR Slicers community, and the result is a truly unique piece of software that serves its purpose well. The idea behind making it was to optimize and improve all existing tools, and bundle them all into one cohesive, fully customizable application.",
 				"content": {
-					"time": 1635544729123,
+					"time": 1664306704970,
 					"blocks": [
 						{
 							"id": "6rSLg_atGs",
@@ -1480,6 +1480,31 @@
 							"type": "paragraph",
 							"data": {
 								"text": "This is by far the project I am the most proud of. It is the culmination of a lot of work by both me and the SWTOR Slicers community, and the result is a truly unique piece of software that serves its purpose well. The idea behind making it was to optimize and improve all existing tools, and bundle them all into one cohesive, fully customizable application."
+							}
+						},
+						{
+							"id": "5rNtDDFBGz",
+							"type": "header",
+							"data": {
+								"text": "Updates",
+								"level": 2
+							}
+						},
+						{
+							"id": "RseKw1a0eq",
+							"type": "list",
+							"data": {
+								"style": "unordered",
+								"items": [
+									{
+										"content": "Switched locator to NPM package",
+										"items": []
+									},
+									{
+										"content": "Added support for all SWTOR NPC types",
+										"items": []
+									}
+								]
 							}
 						},
 						{
@@ -1564,7 +1589,7 @@
 							}
 						}
 					],
-					"version": "2.22.2"
+					"version": "2.24.3"
 				},
 				"link": "https://github.com/SWTOR-Slicers/Slicers-GUI",
 				"isRelative": false,
@@ -1742,6 +1767,84 @@
 				"isRelative": false,
 				"img": "./img/projs/wiki-editor.png",
 				"org": "swtor-slicers"
+			},
+			"tor-model-locator": {
+				"name": "Tor Model Locator",
+				"time": "23 hours",
+				"status": "Complete",
+				"difficulty": "Simple",
+				"description": "This is a little NPM package that assists the Slicers GUI in locating SWTOR model files from an extraction. Under the hood it is relatively simple, consisting of parsing a JSON file, gathering the needed files, and copying them into a predictable folder structure. This program has gone through 3 different major versions. As a proof of concept I wrote it in python (really easy to iterate with, but not reliable enough for me to choose for production), then I wrote it in GO as an executable bundled with the Slicers GUI. There were no issues with that version, however I would like to migrate the Slicers GUI to an all TS/Rust Tauri app, so I rewrote the program again as an NPM package.",
+				"content": {
+					"time": 1664308810356,
+					"blocks": [
+						{
+							"id": "abOBSF-Y-V",
+							"type": "header",
+							"data": {
+								"text": "Description",
+								"level": 2
+							}
+						},
+						{
+							"id": "JlFAZonFGs",
+							"type": "paragraph",
+							"data": {
+								"text": "This is a little NPM package that assists the Slicers GUI in locating SWTOR model files from an extraction. Under the hood it is relatively simple, consisting of parsing a JSON file, gathering the needed files, and copying them into a predictable folder structure. This program has gone through 3 different major versions. As a proof of concept I wrote it in python (really easy to iterate with, but not reliable enough for me to choose for production), then I wrote it in GO as an executable bundled with the Slicers GUI. There were no issues with that version, however I would like to migrate the Slicers GUI to an all TS/Rust Tauri app, so I rewrote the program again as an NPM package."
+							}
+						},
+						{
+							"id": "dSTF53UYx_",
+							"type": "header",
+							"data": {
+								"text": "Reasons",
+								"level": 2
+							}
+						},
+						{
+							"id": "WC4TjvMS64",
+							"type": "list",
+							"data": {
+								"style": "unordered",
+								"items": [
+									{
+										"content": "Wanted to keep the program modular (as it can be used on its own)",
+										"items": []
+									},
+									{
+										"content": "Wanted to transition to an all TS solution",
+										"items": []
+									}
+								]
+							}
+						},
+						{
+							"id": "t2bdyd-tj0",
+							"type": "header",
+							"data": {
+								"text": "Takeaways",
+								"level": 2
+							}
+						},
+						{
+							"id": "_hhvhseABb",
+							"type": "list",
+							"data": {
+								"style": "unordered",
+								"items": [
+									{
+										"content": "Learned a bit about writing a good ReadMe file",
+										"items": []
+									}
+								]
+							}
+						}
+					],
+					"version": "2.24.3"
+				},
+				"link": "https://github.com/Tormak9970/tor-model-locator",
+				"isRelative": false,
+				"img": "./img/projs/tor-model-locator.png",
+				"org": "none"
 			}
 		},
 		"blender": {
@@ -2522,7 +2625,7 @@
 				"difficulty": "Moderate-Complexed",
 				"description": "The blender importer was very different before I started making changes. I added multi file importing, as well as one click imports. The one click imports work with the TORC Character Designer and my Locator tool to import all models and materials for a given SWTOR character, allowing artists to get right to making art.",
 				"content": {
-					"time": 1635544088588,
+					"time": 1664306979171,
 					"blocks": [
 						{
 							"id": "k3nSWJlJ69",
@@ -2537,6 +2640,27 @@
 							"type": "paragraph",
 							"data": {
 								"text": "The blender importer was very different before I started making changes. I added multi file importing, as well as one click imports. The one click imports work with the TORC Character Designer and my Locator tool to import all models and materials for a given SWTOR character, allowing artists to get right to making art."
+							}
+						},
+						{
+							"id": "2FvZcjWoOA",
+							"type": "header",
+							"data": {
+								"text": "Updates",
+								"level": 2
+							}
+						},
+						{
+							"id": "TqYufwokBg",
+							"type": "list",
+							"data": {
+								"style": "unordered",
+								"items": [
+									{
+										"content": "Added support for all SWTOR NPC types",
+										"items": []
+									}
+								]
 							}
 						},
 						{
@@ -2594,7 +2718,7 @@
 							}
 						}
 					],
-					"version": "2.22.2"
+					"version": "2.24.3"
 				},
 				"link": "https://github.com/SWTOR-Slicers/Granny2-Plug-In-Blender-2.8x",
 				"isRelative": false,
