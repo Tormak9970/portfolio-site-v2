@@ -24,7 +24,7 @@
                     and skills since. I believe that CS is both a powerful tool for solving problems, as well as an inspiring 
                     outlet for creative expression. After all, the best solutions to any problem are inspiring.
                     <br/>
-                        Along side being a developer, I also like to make art in my free time. I enjoy mixing my two 
+                        Alongside being a developer, I also like to make art in my free time. I enjoy mixing my two 
                     passions in a fusion of technology and art.
                 </p>
             </div>
@@ -49,7 +49,7 @@
                     and skills since. I believe that CS is both a powerful tool for solving problems, as well as an inspiring 
                     outlet for creative expression. After all, the best solutions to any problem are inspiring.
                     <br/>
-                        Along side being a developer, I also like to make art in my free time. I enjoy mixing my two 
+                        Alongside being a developer, I also like to make art in my free time. I enjoy mixing my two 
                     passions in a fusion of technology and art.
                 </p>
             </div>
