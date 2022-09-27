@@ -79,16 +79,18 @@
     }
 
     function manageScroll(e: WheelEvent) {
-        if ($allowScroll) {
-            $allowScroll = false;
-            interceptScroll(e);
+        if ($orientation == 0) {
+            if ($allowScroll) {
+                $allowScroll = false;
+                interceptScroll(e);
+            }
         }
     }
 
     $afterPageLoad(() => {
         if ($artScrollIdx != 0) {
             $artScrollIdx -= 1;
-            interceptScrollFromIdx(false, $artScrollIdx+1);
+            if ($orientation == 0) interceptScrollFromIdx(false, $artScrollIdx+1);
         }
     });
 
