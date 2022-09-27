@@ -47,7 +47,9 @@
     </div>
     {#if entryData.img}
         <div class="content-container" bind:this="{contentCont}">
-            <!-- <img src="{entryData.img}" alt="{entryData.name}" on:click="{showModal}"> -->
+            {#if !image}
+                <img src="{entryData.img}" alt="{entryData.name}" on:click="{showModal}">
+            {/if}
             <div class="description">
                 <p>{entryData.description}</p>
             </div>
