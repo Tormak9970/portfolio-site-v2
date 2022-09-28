@@ -2403,6 +2403,7 @@
 				"org": "none"
 			}
 		},
+		"steam-deck": {},
 		"miscellaneous": {
 			"discord-modbot": {
 				"name": "Discord Modbot",
@@ -2973,6 +2974,7 @@
 			}
 		}
 	},
+	"archive": {},
 	"featured": "slicers-gui",
 	"organizations": {
 		"swtor-slicers": {
