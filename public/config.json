@@ -1455,6 +1455,252 @@
 				"isRelative": false,
 				"img": "./img/projs/slicers-org.png",
 				"org": "swtor-slicers"
+			},
+			"noisy-dots": {
+				"name": "Noisy Dots",
+				"time": "4 hours",
+				"status": "Complete",
+				"difficulty": "Simple",
+				"description": "This small project is a simple animation made using the HTML5 canvas and simplex-noise. I came up with this idea because I wanted to add something to my portfolio landing page to make it more unique, and I love procedural generation so I thought a noise based animation would be perfect! It works by sampling a noise texture and scaling circles based on the value (noise ranges from 0.0 - 1.0), which creates the mesmerizing pattern.",
+				"content": {
+					"time": 1664375512223,
+					"blocks": [
+						{
+							"id": "R8n2_PIDX_",
+							"type": "header",
+							"data": {
+								"text": "Description",
+								"level": 2
+							}
+						},
+						{
+							"id": "vvXPG-9bzc",
+							"type": "paragraph",
+							"data": {
+								"text": "This small project is a simple animation made using the HTML5 canvas and simplex-noise. I came up with this idea because I wanted to add something to my portfolio landing page to make it more unique, and I love procedural generation so I thought a noise based animation would be perfect! It works by sampling a noise texture and scaling circles based on the value (noise ranges from 0.0 - 1.0), which creates the mesmerizing pattern."
+							}
+						},
+						{
+							"id": "s1PgdSrKpS",
+							"type": "header",
+							"data": {
+								"text": "Reasons",
+								"level": 2
+							}
+						},
+						{
+							"id": "QLdP_i0Xs8",
+							"type": "list",
+							"data": {
+								"style": "unordered",
+								"items": [
+									{
+										"content": "I wanted to add something unique to my portfolio landing page",
+										"items": []
+									},
+									{
+										"content": "Was interested in exploring the use of procedural noise in web design",
+										"items": []
+									}
+								]
+							}
+						},
+						{
+							"id": "N_8415duvG",
+							"type": "header",
+							"data": {
+								"text": "Takeaways",
+								"level": 2
+							}
+						},
+						{
+							"id": "934yia4AmU",
+							"type": "list",
+							"data": {
+								"style": "unordered",
+								"items": [
+									{
+										"content": "Created something unique that helps my portfolio make an impact on viewers",
+										"items": []
+									},
+									{
+										"content": "Discovered useful libraries for procedural generation in JavaScript",
+										"items": []
+									}
+								]
+							}
+						}
+					],
+					"version": "2.24.3"
+				},
+				"link": "https://dots.travislane.dev/",
+				"isRelative": false,
+				"img": "./img/projs/noisy-dots-anim.png",
+				"org": "none"
+			},
+			"three.js-marching-cubes": {
+				"name": "Three.js Marching Cubes",
+				"time": "11 hours",
+				"status": "Complete",
+				"difficulty": "Moderate",
+				"description": "The Marching Cubes is a well known algorithm often used in games for terrain generation. The premise is it generates polygons based on weights applied to each vertex of the bounding cube. I have always found this algorithm interesting, so I decided to recreate it using TypeScript and one of my favorite libraries, Three.js.",
+				"content": {
+					"time": 1664377269981,
+					"blocks": [
+						{
+							"id": "GUU5idVR6z",
+							"type": "header",
+							"data": {
+								"text": "Description",
+								"level": 2
+							}
+						},
+						{
+							"id": "wlomAPoJbT",
+							"type": "paragraph",
+							"data": {
+								"text": "The Marching Cubes is a well known algorithm often used in games for terrain generation. The premise is it generates polygons based on weights applied to each vertex of the bounding cube. I have always found this algorithm interesting, so I decided to recreate it using TypeScript and one of my favorite libraries, Three.js."
+							}
+						},
+						{
+							"id": "cPdy9Ap83z",
+							"type": "header",
+							"data": {
+								"text": "Reasons",
+								"level": 2
+							}
+						},
+						{
+							"id": "xMyEqCE1rv",
+							"type": "list",
+							"data": {
+								"style": "unordered",
+								"items": [
+									{
+										"content": "I wanted to recreate the Marching Cubes algorithm using Three.js and Typescript",
+										"items": []
+									},
+									{
+										"content": "I wanted to refamiliarize myself with Three.js",
+										"items": []
+									}
+								]
+							}
+						},
+						{
+							"id": "V_Xx5nYkSh",
+							"type": "header",
+							"data": {
+								"text": "Takeaways",
+								"level": 2
+							}
+						},
+						{
+							"id": "l2G2fYd8ak",
+							"type": "list",
+							"data": {
+								"style": "unordered",
+								"items": [
+									{
+										"content": "I learned useful strategies for optimizing Three.js applications",
+										"items": []
+									},
+									{
+										"content": "I was able to recreate the algorithm",
+										"items": []
+									},
+									{
+										"content": "I was able to refresh my memory on Three.js",
+										"items": []
+									}
+								]
+							}
+						}
+					],
+					"version": "2.24.3"
+				},
+				"link": "https://marching-cubes.travislane.dev/",
+				"isRelative": false,
+				"img": "./img/projs/threejs-marching-cubes.png",
+				"org": "none"
+			},
+			"tweakpane-gradient-plugin": {
+				"name": "Tweakpane Gradient Plugin",
+				"time": "6 hours",
+				"status": "Complete",
+				"difficulty": "Moderate",
+				"description": "I started this project because I had been using the Tweakpane library for editable parameters in another project, and needed a gradient texture input. The layout and controls are based on Blender's color ramp node, which node, which does something similar. The plugin allows the user to edit the stop position and color for the gradient, and then outputs an ImageData object with the consequent texture.",
+				"content": {
+					"time": 1664389789596,
+					"blocks": [
+						{
+							"id": "QExxjEfEMq",
+							"type": "header",
+							"data": {
+								"text": "Description",
+								"level": 2
+							}
+						},
+						{
+							"id": "CKN0Yktxl4",
+							"type": "paragraph",
+							"data": {
+								"text": "I started this project because I had been using the Tweakpane library for editable parameters in another project, and needed a gradient texture input. The layout and controls are based on Blender's color ramp node, which node, which does something similar. The plugin allows the user to edit the stop position and color for the gradient, and then outputs an ImageData object with the consequent texture."
+							}
+						},
+						{
+							"id": "QaV7pBHTdv",
+							"type": "header",
+							"data": {
+								"text": "Reasons",
+								"level": 2
+							}
+						},
+						{
+							"id": "1FRJ0qdqnz",
+							"type": "list",
+							"data": {
+								"style": "unordered",
+								"items": [
+									{
+										"content": "Needed a Tweakpane compatible gradient generator",
+										"items": []
+									}
+								]
+							}
+						},
+						{
+							"id": "nW0C8tES70",
+							"type": "header",
+							"data": {
+								"text": "Takeaways",
+								"level": 2
+							}
+						},
+						{
+							"id": "BhGZAGTjU8",
+							"type": "list",
+							"data": {
+								"style": "unordered",
+								"items": [
+									{
+										"content": "Created a plugin that allows the user to customize gradient textures",
+										"items": []
+									},
+									{
+										"content": "First introduction to the MVC design pattern",
+										"items": []
+									}
+								]
+							}
+						}
+					],
+					"version": "2.24.3"
+				},
+				"link": "https://github.com/Tormak9970/tweakpane-plugin-gradient",
+				"isRelative": false,
+				"img": "./img/projs/tweakpane-plugin-gradient.png",
+				"org": "none"
 			}
 		},
 		"software-engineering": {
