@@ -2403,7 +2403,94 @@
 				"org": "none"
 			}
 		},
-		"steam-deck": {},
+		"steam-deck": {
+			"steamdeck-u": {
+				"name": "SteamDeck U",
+				"time": "3 hours",
+				"status": "Complete",
+				"difficulty": "Simple",
+				"description": "This project is a custom theme for Valve's Steam Deck. It uses a plugin for injecting CSS to provide users with options to customize each part of their keyboard. The reason I started this project is because Valve offers keyboard themes, but the selection is limited and they only work online.",
+				"content": {
+					"time": 1664458128356,
+					"blocks": [
+						{
+							"id": "nZjfcxUvB2",
+							"type": "header",
+							"data": {
+								"text": "Description",
+								"level": 2
+							}
+						},
+						{
+							"id": "xPDAeM17W0",
+							"type": "paragraph",
+							"data": {
+								"text": "This project is a custom theme for Valve's Steam Deck. It uses a plugin for injecting CSS to provide users with options to customize each part of their keyboard. The reason I started this project is because Valve offers keyboard themes, but the selection is limited and they only work online."
+							}
+						},
+						{
+							"id": "mXmVM7rad_",
+							"type": "header",
+							"data": {
+								"text": "Reasons",
+								"level": 2
+							}
+						},
+						{
+							"id": "xevYl-aYqV",
+							"type": "list",
+							"data": {
+								"style": "unordered",
+								"items": [
+									{
+										"content": "Wanted to contribute to the homebrew Steam Deck community",
+										"items": []
+									},
+									{
+										"content": "Wanted a more customizable alternative to the existing keyboards",
+										"items": []
+									},
+									{
+										"content": "Wanted customizable keyboards that worked offline",
+										"items": []
+									}
+								]
+							}
+						},
+						{
+							"id": "KgQPukLNZY",
+							"type": "header",
+							"data": {
+								"text": "Takeaways",
+								"level": 2
+							}
+						},
+						{
+							"id": "qXVdi9yViM",
+							"type": "list",
+							"data": {
+								"style": "unordered",
+								"items": [
+									{
+										"content": "Came up with a unique idea for the homebrew community",
+										"items": []
+									},
+									{
+										"content": "Created a highly customizable keyboard that also works offline",
+										"items": []
+									}
+								]
+							}
+						}
+					],
+					"version": "2.24.3"
+				},
+				"link": "https://github.com/Tormak9970/SteamDeckThemes",
+				"isRelative": false,
+				"img": "./img/projs/SteamDeckU.png",
+				"org": "none"
+			}
+		},
 		"miscellaneous": {
 			"discord-modbot": {
 				"name": "Discord Modbot",
