@@ -2419,9 +2419,9 @@
 			"time": "3 hours",
 			"status": "Complete",
 			"difficulty": "Simple",
-			"description": "This project is a custom theme for Valve's Steam Deck. It uses a plugin for injecting CSS to provide users with options to customize each part of their keyboard. The reason I started this project is because Valve offers keyboard themes, but the selection is limited and they only work online.",
+			"description": "This project is a custom theme for Valve's Steam Deck. It uses a homebrew plugin for injecting CSS to provide users with options to customize each part of their keyboard. The reason I started this project is because Valve offers keyboard themes, but the selection is limited and they only work online.",
 			"content": {
-				"time": 1664458128356,
+				"time": 1664544959411,
 				"blocks": [
 					{
 						"id": "nZjfcxUvB2",
@@ -2435,7 +2435,7 @@
 						"id": "xPDAeM17W0",
 						"type": "paragraph",
 						"data": {
-							"text": "This project is a custom theme for Valve's Steam Deck. It uses a plugin for injecting CSS to provide users with options to customize each part of their keyboard. The reason I started this project is because Valve offers keyboard themes, but the selection is limited and they only work online."
+							"text": "This project is a custom theme for Valve's Steam Deck. It uses a homebrew plugin for injecting CSS to provide users with options to customize each part of their keyboard. The reason I started this project is because Valve offers keyboard themes, but the selection is limited and they only work online."
 						}
 					},
 					{
