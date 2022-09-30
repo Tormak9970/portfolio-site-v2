@@ -11,9 +11,7 @@ async function loadConfig() {
         const config = await fetch('./config.json').then(response => { return response.json(); });
 
         for (const entr of Object.entries(config['projects'])) {
-            for (const proj of Object.entries(entr[1])) {
-                projects.set(proj[0], proj[1] as Project);
-            }
+            projects.set(entr[0], entr[1] as Project);
         }
 
         for (const entr of Object.entries(config['organizations'])) {
