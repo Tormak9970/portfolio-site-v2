@@ -1,199 +1,17 @@
 {
 	"projects": {
-		"minesweeper": {
-			"category": "web-games",
-			"name": "Minesweeper",
-			"time": "15 hours",
-			"status": "Complete",
-			"difficulty": "Moderate",
-			"description": "Minesweeper is a classic logic based strategy game. As I was learning JavaScript, I thought it would be fun to make one of my favorite classic games using what I was learning. In the process, I learned about the html5 canvas, which is now used instead of flash for web based games and animations. After completing the normal minesweeper, I wanted to add something more advanced to the project. I decided to add animations (inspired by Google' Minesweeper), so I used the html5 canvas API to animate it.",
-			"content": {
-				"time": 1633959986929,
-				"blocks": [
-					{
-						"id": "fDaKuK9e17",
-						"type": "header",
-						"data": {
-							"text": "Description",
-							"level": 2
-						}
-					},
-					{
-						"id": "SCY6AOLVoo",
-						"type": "paragraph",
-						"data": {
-							"text": "Minesweeper is a classic logic based strategy game. As I was learning JavaScript, I thought it would be fun to make one of my favorite classic games using what I was learning. In the process, I learned about the html5 canvas, which is now used instead of flash for web based games and animations. After completing the normal minesweeper, I wanted to add something more advanced to the project. I decided to add animations (inspired by Google' Minesweeper), so I used the html5 canvas API to animate it."
-						}
-					},
-					{
-						"id": "JppKuXin_o",
-						"type": "header",
-						"data": {
-							"text": "Reasons",
-							"level": 2
-						}
-					},
-					{
-						"id": "YEHt9cZRD6",
-						"type": "list",
-						"data": {
-							"style": "unordered",
-							"items": [
-								{
-									"content": "Wanted to learn how to use the HTML5 canvas",
-									"items": []
-								},
-								{
-									"content": "Love Minesweeper, so wanted to make my own version",
-									"items": []
-								},
-								{
-									"content": "Wanted to learn more javascript and do some more web development",
-									"items": []
-								}
-							]
-						}
-					},
-					{
-						"id": "bJjpWp73MG",
-						"type": "header",
-						"data": {
-							"text": "Takeaways",
-							"level": 2
-						}
-					},
-					{
-						"id": "qO6rJLop7Q",
-						"type": "list",
-						"data": {
-							"style": "unordered",
-							"items": [
-								{
-									"content": "I was comfortable and familiar with html, css, javascript, and the Canvas API",
-									"items": []
-								},
-								{
-									"content": "How to approach a problem from different angles (realized that I would need to use the html5 canvas api if I wanted to make animations)",
-									"items": []
-								},
-								{
-									"content": "Learned about recursion",
-									"items": []
-								}
-							]
-						}
-					}
-				],
-				"version": "2.22.2"
-			},
-			"link": "https://minesweeper.travislane.dev",
-			"isRelative": false,
-			"img": "./img/projs/Minesweeper.png",
-			"org": "none"
-		},
-		"pong": {
-			"category": "web-games",
-			"name": "Pong",
-			"time": "10 hours",
-			"status": "Complete",
-			"difficulty": "Simple",
-			"description": "Keeping with the theme of the previous projects I had just finished, I decided to make a 2 player pong game. This was much more complexed then minesweeper as I needed to update the canvas on key press, as well as slowly increase the ball speed and have collision detection.",
-			"content": {
-				"time": 1633960355613,
-				"blocks": [
-					{
-						"id": "4APXidhcEF",
-						"type": "header",
-						"data": {
-							"text": "Description",
-							"level": 2
-						}
-					},
-					{
-						"id": "zbG47D4jM7",
-						"type": "paragraph",
-						"data": {
-							"text": "Keeping with the theme of the previous projects I had just finished, I decided to make a 2 player pong game. This was much more complexed then minesweeper as I needed to update the canvas on key press, as well as slowly increase the ball speed and have collision detection."
-						}
-					},
-					{
-						"id": "Wc5vaX4R5y",
-						"type": "header",
-						"data": {
-							"text": "Reasons",
-							"level": 2
-						}
-					},
-					{
-						"id": "APS_pwr7Dk",
-						"type": "list",
-						"data": {
-							"style": "unordered",
-							"items": [
-								{
-									"content": "Wanted to expand my javascript knowledge",
-									"items": []
-								},
-								{
-									"content": "Always thought it would be fun to make pong",
-									"items": []
-								},
-								{
-									"content": "Wanted to learn more about the HTML5 canvas API",
-									"items": []
-								}
-							]
-						}
-					},
-					{
-						"id": "E5c5fBID_B",
-						"type": "header",
-						"data": {
-							"text": "Takeaways",
-							"level": 2
-						}
-					},
-					{
-						"id": "vpp5a3jCJx",
-						"type": "list",
-						"data": {
-							"style": "unordered",
-							"items": [
-								{
-									"content": "How to animate multiple objects at a time using canvas",
-									"items": []
-								},
-								{
-									"content": "I learned more advanced javascript",
-									"items": []
-								},
-								{
-									"content": "How to make a simple UI users could use, and save their options",
-									"items": []
-								}
-							]
-						}
-					}
-				],
-				"version": "2.22.2"
-			},
-			"link": "https://pong.travislane.dev",
-			"isRelative": false,
-			"img": "./img/projs/Pong.png",
-			"org": "none"
-		},
-		"tetris": {
-			"category": "web-games",
-			"name": "Tetris",
-			"time": "30 hours",
-			"status": "Complete",
+		"slicers-gui": {
+			"category": "software-engineering",
+			"name": "Slicers GUI",
+			"time": "420+ hours",
+			"status": "In progress (Beta)",
 			"difficulty": "Complexed",
-			"description": "For my last classic game project, I wanted to do something much more complexed. I decided to do Tetris, as it is one of my favorite games, and had a lot of complexed elements. It took much longer then the previous three projects, but was very satisfying to finish.",
+			"description": "This is by far the project I am the most proud of. It is the culmination of a lot of work by both me and the SWTOR Slicers community, and the result is a truly unique piece of software that serves its purpose well. The idea behind making it was to optimize and improve all existing tools, and bundle them all into one cohesive, fully customizable application.",
 			"content": {
-				"time": 1633960233761,
+				"time": 1664306704970,
 				"blocks": [
 					{
-						"id": "w2NLjrsOZr",
+						"id": "6rSLg_atGs",
 						"type": "header",
 						"data": {
 							"text": "Description",
@@ -201,14 +19,39 @@
 						}
 					},
 					{
-						"id": "eRDQjgQL3e",
+						"id": "Lx6r8GlO94",
 						"type": "paragraph",
 						"data": {
-							"text": "For my last classic game project, I wanted to do something much more complexed. I decided to do Tetris, as it is one of my favorite games, and had a lot of complexed elements. It took much longer then the previous three projects, but was very satisfying to finish."
+							"text": "This is by far the project I am the most proud of. It is the culmination of a lot of work by both me and the SWTOR Slicers community, and the result is a truly unique piece of software that serves its purpose well. The idea behind making it was to optimize and improve all existing tools, and bundle them all into one cohesive, fully customizable application."
 						}
 					},
 					{
-						"id": "9BD101MWmx",
+						"id": "5rNtDDFBGz",
+						"type": "header",
+						"data": {
+							"text": "Updates",
+							"level": 2
+						}
+					},
+					{
+						"id": "RseKw1a0eq",
+						"type": "list",
+						"data": {
+							"style": "unordered",
+							"items": [
+								{
+									"content": "Switched locator to NPM package",
+									"items": []
+								},
+								{
+									"content": "Added support for all SWTOR NPC types",
+									"items": []
+								}
+							]
+						}
+					},
+					{
+						"id": "rCYqP-GvHT",
 						"type": "header",
 						"data": {
 							"text": "Reasons",
@@ -216,28 +59,28 @@
 						}
 					},
 					{
-						"id": "3GNMw55XkZ",
+						"id": "hPvtdTw4mr",
 						"type": "list",
 						"data": {
 							"style": "unordered",
 							"items": [
 								{
-									"content": "Wanted to finish of my web game projects with something that was more complicated",
+									"content": "I wanted to make an application, because I had never done that before",
 									"items": []
 								},
 								{
-									"content": "Wanted to practice and advance my javascript knowledge",
+									"content": "I was sick of all the default C# UIs on the existing tools",
 									"items": []
 								},
 								{
-									"content": "Tetris has <a href=\"https://tetris.fandom.com/wiki/Tetris_Guideline\" target=\"_blank\" rel=\"noreferrer noopener\" class=\"embed-project-link\">guidelines</a> you need to follow if you are going to publish it under the Tetris name, and I thought it would be good practice to make a project with specifications I also needed to meet",
+									"content": "I wanted to make improvements to a lot of the existing tools because they were not nearly as efficient as the could be",
 									"items": []
 								}
 							]
 						}
 					},
 					{
-						"id": "pwFfpS8MIr",
+						"id": "AYxAPU5RS0",
 						"type": "header",
 						"data": {
 							"text": "Takeaways",
@@ -245,457 +88,56 @@
 						}
 					},
 					{
-						"id": "q8SU_ZaDaO",
+						"id": "16uDzqC2VL",
 						"type": "list",
 						"data": {
 							"style": "unordered",
 							"items": [
 								{
-									"content": "Learned how to better mitigate methods and functions to the most relevant class object",
+									"content": "How to make apps using the Electron.js framework",
 									"items": []
 								},
 								{
-									"content": "I became comfortable and very familiar with javascript",
+									"content": "The GO programming language",
 									"items": []
 								},
 								{
-									"content": "I met most the required guidelines. (Some were too advanced for me at the time, but I plan to come back and update it to meet them)",
+									"content": "How to write native code and run it in process using Edge.js",
+									"items": []
+								},
+								{
+									"content": "How to take advantage of offloading tasks to web workers",
+									"items": []
+								},
+								{
+									"content": "How to effectively run a beta test and implement user feedback",
+									"items": []
+								},
+								{
+									"content": "How to create a good UX (user experience)",
+									"items": []
+								},
+								{
+									"content": "How to effectively pass data between different parts of an application, without compromising on performance",
 									"items": []
 								}
 							]
 						}
-					}
-				],
-				"version": "2.22.2"
-			},
-			"link": "https://tetris.travislane.dev",
-			"isRelative": false,
-			"img": "./img/projs/Tetris.png",
-			"org": "none"
-		},
-		"simple-sudoku": {
-			"category": "web-games",
-			"name": "Simple Sudoku",
-			"time": "35 hours",
-			"status": "Complete",
-			"difficulty": "Moderate",
-			"description": "I came across an article about different ways to approach generating sudoku puzzles and solving them, and it caught my interest. I thought it would be a fun way to work on my web development skills and create a fun end product I could actually put up online. It was very interesting to explore how to not just generate solvable puzzles, but puzzles that look good to the player.",
-			"content": {
-				"time": 1653781044269,
-				"blocks": [
-					{
-						"id": "Ak6PmaiUqJ",
-						"type": "header",
-						"data": {
-							"text": "Description",
-							"level": 2
-						}
 					},
 					{
-						"id": "ZAx1af6NrV",
+						"id": "BIIC3nLKZ6",
 						"type": "paragraph",
 						"data": {
-							"text": "I came across an article about different ways to approach generating sudoku puzzles and solving them, and it caught my interest. I thought it would be a fun way to work on my web development skills and create a fun end product I could actually put up online. It was very interesting to explore how to not just generate solvable puzzles, but puzzles that look good to the player."
-						}
-					},
-					{
-						"id": "3V81lWYhL8",
-						"type": "header",
-						"data": {
-							"text": "Reasons",
-							"level": 2
-						}
-					},
-					{
-						"id": "rIs3bW3TDZ",
-						"type": "list",
-						"data": {
-							"style": "unordered",
-							"items": [
-								{
-									"content": "Wanted to practice implementing responsive design",
-									"items": []
-								},
-								{
-									"content": "Wanted to explore how to create different themes for a website using plain CSS",
-									"items": []
-								},
-								{
-									"content": "Was interested in exploring sudoku board generation and methods of solving",
-									"items": []
-								},
-								{
-									"content": "Wanted to create a polished Progressive Web App (PWA)",
-									"items": []
-								}
-							]
-						}
-					},
-					{
-						"id": "FJvN-7xpWZ",
-						"type": "header",
-						"data": {
-							"text": "Takeaways",
-							"level": 2
-						}
-					},
-					{
-						"id": "dDU_V6jNCL",
-						"type": "list",
-						"data": {
-							"style": "unordered",
-							"items": [
-								{
-									"content": "Came up with a simple strategy for implementing themes into websites",
-									"items": []
-								},
-								{
-									"content": "Got to learn about some of the more complicated features of the Svelte JavaScript library",
-									"items": []
-								},
-								{
-									"content": "Created a polished PWA that can be downloaded on any device or operating system",
-									"items": []
-								}
-							]
+							"text": "This is a long term project, so I am sure I will continue to learn from it"
 						}
 					}
 				],
 				"version": "2.24.3"
 			},
-			"link": "https://sudoku.travislane.dev/",
+			"link": "https://github.com/SWTOR-Slicers/Slicers-GUI",
 			"isRelative": false,
-			"img": "./img/projs/simple-sudoku.png",
-			"org": "none"
-		},
-		"portfolio-v1": {
-			"category": "web-dev",
-			"name": "Portfolio V1",
-			"time": "25 hours",
-			"status": "Not Live / Obsolete",
-			"difficulty": "Simple",
-			"description": "I wanted to create a professional and classy website that I could use to display all of the projects I create. I think this is a unique and relevant way to display my projects and works in a way that represents me and what I love doing. I continuously update this as I continue to come up with projects and complete them, as well as work on projects ether for school, or one of the organizations I am a part of.",
-			"content": {
-				"time": 1633880900126,
-				"blocks": [
-					{
-						"id": "W_xuzsjFBt",
-						"type": "header",
-						"data": {
-							"text": "Description",
-							"level": 2
-						}
-					},
-					{
-						"id": "A-p92rIsaH",
-						"type": "paragraph",
-						"data": {
-							"text": "I wanted to create a professional and classy website that I could use to display all of the projects I create. I think this is a unique and relevant way to display my projects and works in a way that represents me and what I love doing. I continuously update this as I continue to come up with projects and complete them, as well as work on projects ether for school, or one of the organizations I am a part of."
-						}
-					},
-					{
-						"id": "K9_vhMevvu",
-						"type": "header",
-						"data": {
-							"text": "Reasons",
-							"level": 2
-						}
-					},
-					{
-						"id": "NGd6jV0Oa6",
-						"type": "list",
-						"data": {
-							"style": "unordered",
-							"items": [
-								{
-									"content": "I wanted to have a unique way to display all of my projects.",
-									"items": []
-								},
-								{
-									"content": "I wanted to display this in a relevant manner to my interests and passions.",
-									"items": []
-								},
-								{
-									"content": "I wanted to reflect on what I have learned, and what my takeaways have been.",
-									"items": []
-								}
-							]
-						}
-					},
-					{
-						"id": "X4R6J6w249",
-						"type": "header",
-						"data": {
-							"text": "Takeaways",
-							"level": 2
-						}
-					},
-					{
-						"id": "lEwIT0sE2T",
-						"type": "list",
-						"data": {
-							"style": "unordered",
-							"items": [
-								{
-									"content": "I was able to create a classy, informative website that is simple yet effective.",
-									"items": []
-								},
-								{
-									"content": "I now have a nice way to display and represent my projects in a manner I am proud of.",
-									"items": []
-								},
-								{
-									"content": "I learned some really interesting tricks you can do with CSS and HTML5 (such as the flip cards I use for project previews).",
-									"items": []
-								}
-							]
-						}
-					},
-					{
-						"id": "W6ECctwqi0",
-						"type": "header",
-						"data": {
-							"text": "Components",
-							"level": 2
-						}
-					},
-					{
-						"id": "-wlFnFy-ew",
-						"type": "list",
-						"data": {
-							"style": "unordered",
-							"items": [
-								{
-									"content": "The home page/landing page. This has some information about me, and a list of some of my skills.",
-									"items": []
-								}
-							]
-						}
-					},
-					{
-						"id": "hEzD74sdou",
-						"type": "image",
-						"data": {
-							"file": {
-								"url": "./img/projs/Portfolio site homepage.png"
-							},
-							"caption": "",
-							"withBorder": false,
-							"stretched": false,
-							"withBackground": false
-						}
-					},
-					{
-						"id": "IjsBX05Yah",
-						"type": "list",
-						"data": {
-							"style": "unordered",
-							"items": [
-								{
-									"content": "The project category and organization tabs. These contain previews of my projects, based on what category of computer science they fall under.",
-									"items": []
-								}
-							]
-						}
-					},
-					{
-						"id": "ND3HRNtExk",
-						"type": "image",
-						"data": {
-							"file": {
-								"url": "./img/projs/Portfolio site category tab.png"
-							},
-							"caption": "",
-							"withBorder": false,
-							"stretched": false,
-							"withBackground": false
-						}
-					},
-					{
-						"id": "2LsV8tktKJ",
-						"type": "list",
-						"data": {
-							"style": "unordered",
-							"items": [
-								{
-									"content": "The third and final component of the website is the project pages themselves. These pages have information about each project, including: an overview, reasons for and purpose of the project, and the outcome of the project.",
-									"items": []
-								}
-							]
-						}
-					},
-					{
-						"id": "-JYdHcMe6c",
-						"type": "image",
-						"data": {
-							"file": {
-								"url": "./img/projs/Portfolio site project tab.png"
-							},
-							"caption": "",
-							"withBorder": false,
-							"stretched": false,
-							"withBackground": false
-						}
-					}
-				],
-				"version": "2.22.2"
-			},
-			"link": "web-dev",
-			"isRelative": false,
-			"img": "./img/projs/Portfolio site homepage.png",
-			"org": "none"
-		},
-		"portfolio-v2": {
-			"category": "web-dev",
-			"name": "Portfolio V2",
-			"time": "50 hours",
-			"status": "Complete (continually updated)",
-			"difficulty": "Moderate",
-			"description": "This project is the website you are currently on. It is a replacement for my previous portfolio website, which I had not been keeping up to date. I decided to remake it from scratch using Svelte, TypeScript, and SASS (later removed), all of which are awesome frameworks I have wanted to learn for a while.",
-			"content": {
-				"time": 1662555872662,
-				"blocks": [
-					{
-						"id": "EHEWUSDdP5",
-						"type": "header",
-						"data": {
-							"text": "Description",
-							"level": 2
-						}
-					},
-					{
-						"id": "5NmJ0NTUar",
-						"type": "paragraph",
-						"data": {
-							"text": "This project is the website you are currently on. It is a replacement for my previous portfolio website, which I had not been keeping up to date. I decided to remake it from scratch using Svelte, TypeScript, and SASS (later removed), all of which are awesome frameworks I have wanted to learn for a while."
-						}
-					},
-					{
-						"id": "S0i4_y-_iq",
-						"type": "header",
-						"data": {
-							"text": "Update 2.0",
-							"level": 2
-						}
-					},
-					{
-						"id": "aRs6sJ9plG",
-						"type": "list",
-						"data": {
-							"style": "unordered",
-							"items": [
-								{
-									"content": "Removed all SASS",
-									"items": [
-										{
-											"content": "While SASS is a great tool, it is becoming obsolete with the improvements to vanilla CSS, and adds unnecessary compiling steps to the project",
-											"items": []
-										}
-									]
-								},
-								{
-									"content": "Updated the scroll indicator",
-									"items": [
-										{
-											"content": "it is now a fixed height (which is based on screen height), which will work better as I add more entries to each page",
-											"items": []
-										}
-									]
-								},
-								{
-									"content": "Changed how the scroll transitions are implimented",
-									"items": [
-										{
-											"content": "They are now modified svelte transitions which significantly simplifies their implementation",
-											"items": []
-										}
-									]
-								},
-								{
-									"content": "Optimized image sizes to improve loading times",
-									"items": []
-								},
-								{
-									"content": "Changed the mobile menu to slide over the page",
-									"items": [
-										{
-											"content": "provides a cleaner experience",
-											"items": []
-										}
-									]
-								},
-								{
-									"content": "Added a copyright label to all pages",
-									"items": []
-								},
-								{
-									"content": "Added a more interesting landing page",
-									"items": []
-								},
-								{
-									"content": "Reduced Cross Origin requests to improve loading times",
-									"items": []
-								}
-							]
-						}
-					},
-					{
-						"id": "7NBr7k3fWI",
-						"type": "header",
-						"data": {
-							"text": "Reasons",
-							"level": 2
-						}
-					},
-					{
-						"id": "yaPSjIxAEs",
-						"type": "list",
-						"data": {
-							"style": "unordered",
-							"items": [
-								{
-									"content": "I wanted to make a portfolio site that was easier to keep up to date and looked professional",
-									"items": []
-								},
-								{
-									"content": "I wanted to learn some web technologies I had seen in the past but never got around to looking into",
-									"items": []
-								}
-							]
-						}
-					},
-					{
-						"id": "NmpQSXEmtS",
-						"type": "header",
-						"data": {
-							"text": "Takeaways",
-							"level": 2
-						}
-					},
-					{
-						"id": "n2iyN06a-3",
-						"type": "list",
-						"data": {
-							"style": "unordered",
-							"items": [
-								{
-									"content": "I have a portfolio website that looks professional, is easy to update, and that I can be proud of",
-									"items": []
-								},
-								{
-									"content": "I have experience using TypeScript, Svelte, and SASS",
-									"items": []
-								}
-							]
-						}
-					}
-				],
-				"version": "2.24.3"
-			},
-			"link": "https://travislane.dev",
-			"isRelative": false,
-			"img": "./img/projs/portfolio-site-v2.png",
-			"org": "none"
+			"img": "./img/projs/Slicers GUI.png",
+			"org": "swtor-slicers"
 		},
 		"torc-character-designer": {
 			"category": "web-dev",
@@ -1101,18 +543,18 @@
 			"img": "./img/projs/Release_one.png",
 			"org": "torcommunity"
 		},
-		"torc-npc-3d-viewers": {
-			"category": "web-dev",
-			"name": "TORC NPC 3D Viewers",
-			"time": "10 hours",
+		"simple-sudoku": {
+			"category": "web-games",
+			"name": "Simple Sudoku",
+			"time": "35 hours",
 			"status": "Complete",
 			"difficulty": "Moderate",
-			"description": "This project came about as a natural continuation of the TORCommunity Character Designer. It is a 3D viewer for loading the models for different NPC (non player characters) from Star Wars: The Old Republic. It uses a very similar process to the character designer for loading the models, but this time has to take a dynamic input specified on page load.",
+			"description": "I came across an article about different ways to approach generating sudoku puzzles and solving them, and it caught my interest. I thought it would be a fun way to work on my web development skills and create a fun end product I could actually put up online. It was very interesting to explore how to not just generate solvable puzzles, but puzzles that look good to the player.",
 			"content": {
-				"time": 1635537118240,
+				"time": 1653781044269,
 				"blocks": [
 					{
-						"id": "Q2BIPEDC4a",
+						"id": "Ak6PmaiUqJ",
 						"type": "header",
 						"data": {
 							"text": "Description",
@@ -1120,14 +562,14 @@
 						}
 					},
 					{
-						"id": "x5s66HjOkz",
+						"id": "ZAx1af6NrV",
 						"type": "paragraph",
 						"data": {
-							"text": "This project came about as a natural continuation of the TORCommunity Character Designer. It is a 3D viewer for loading the models for different NPC (non player characters) from Star Wars: The Old Republic. It uses a very similar process to the character designer for loading the models, but this time has to take a dynamic input specified on page load."
+							"text": "I came across an article about different ways to approach generating sudoku puzzles and solving them, and it caught my interest. I thought it would be a fun way to work on my web development skills and create a fun end product I could actually put up online. It was very interesting to explore how to not just generate solvable puzzles, but puzzles that look good to the player."
 						}
 					},
 					{
-						"id": "CWdJL0lesi",
+						"id": "3V81lWYhL8",
 						"type": "header",
 						"data": {
 							"text": "Reasons",
@@ -1135,32 +577,32 @@
 						}
 					},
 					{
-						"id": "gsTNO3IyDV",
+						"id": "rIs3bW3TDZ",
 						"type": "list",
 						"data": {
 							"style": "unordered",
 							"items": [
 								{
-									"content": "Natural continuation of my previous project, the Character Designer",
+									"content": "Wanted to practice implementing responsive design",
 									"items": []
 								},
 								{
-									"content": "Was a request feature for the TORCommunity website",
+									"content": "Wanted to explore how to create different themes for a website using plain CSS",
 									"items": []
 								},
 								{
-									"content": "One of the other fan sites, JediPedia, had a similar feature that was never flushed out",
+									"content": "Was interested in exploring sudoku board generation and methods of solving",
 									"items": []
 								},
 								{
-									"content": "Wanted to refine my methods for loading and rendering models",
+									"content": "Wanted to create a polished Progressive Web App (PWA)",
 									"items": []
 								}
 							]
 						}
 					},
 					{
-						"id": "Pjs3r6ob5T",
+						"id": "FJvN-7xpWZ",
 						"type": "header",
 						"data": {
 							"text": "Takeaways",
@@ -1168,33 +610,185 @@
 						}
 					},
 					{
-						"id": "09fYNY-f6o",
+						"id": "dDU_V6jNCL",
 						"type": "list",
 						"data": {
 							"style": "unordered",
 							"items": [
 								{
-									"content": "I know how to load models more efficiently",
+									"content": "Came up with a simple strategy for implementing themes into websites",
 									"items": []
 								},
 								{
-									"content": "The rendering process I use in a variety of projects is more refined",
+									"content": "Got to learn about some of the more complicated features of the Svelte JavaScript library",
 									"items": []
 								},
 								{
-									"content": "I was able to design a product that had been requested by people for a few years in a short amount of time",
+									"content": "Created a polished PWA that can be downloaded on any device or operating system",
 									"items": []
 								}
 							]
 						}
 					}
 				],
-				"version": "2.22.2"
+				"version": "2.24.3"
 			},
-			"link": "https://torcommunity.com/database/search/npc",
+			"link": "https://sudoku.travislane.dev/",
 			"isRelative": false,
-			"img": "./img/projs/torc-npc-viewer.png",
-			"org": "torcommunity"
+			"img": "./img/projs/simple-sudoku.png",
+			"org": "none"
+		},
+		"portfolio-v2": {
+			"category": "web-dev",
+			"name": "Portfolio V2",
+			"time": "50 hours",
+			"status": "Complete (continually updated)",
+			"difficulty": "Moderate",
+			"description": "This project is the website you are currently on. It is a replacement for my previous portfolio website, which I had not been keeping up to date. I decided to remake it from scratch using Svelte, TypeScript, and SASS (later removed), all of which are awesome frameworks I have wanted to learn for a while.",
+			"content": {
+				"time": 1662555872662,
+				"blocks": [
+					{
+						"id": "EHEWUSDdP5",
+						"type": "header",
+						"data": {
+							"text": "Description",
+							"level": 2
+						}
+					},
+					{
+						"id": "5NmJ0NTUar",
+						"type": "paragraph",
+						"data": {
+							"text": "This project is the website you are currently on. It is a replacement for my previous portfolio website, which I had not been keeping up to date. I decided to remake it from scratch using Svelte, TypeScript, and SASS (later removed), all of which are awesome frameworks I have wanted to learn for a while."
+						}
+					},
+					{
+						"id": "S0i4_y-_iq",
+						"type": "header",
+						"data": {
+							"text": "Update 2.0",
+							"level": 2
+						}
+					},
+					{
+						"id": "aRs6sJ9plG",
+						"type": "list",
+						"data": {
+							"style": "unordered",
+							"items": [
+								{
+									"content": "Removed all SASS",
+									"items": [
+										{
+											"content": "While SASS is a great tool, it is becoming obsolete with the improvements to vanilla CSS, and adds unnecessary compiling steps to the project",
+											"items": []
+										}
+									]
+								},
+								{
+									"content": "Updated the scroll indicator",
+									"items": [
+										{
+											"content": "it is now a fixed height (which is based on screen height), which will work better as I add more entries to each page",
+											"items": []
+										}
+									]
+								},
+								{
+									"content": "Changed how the scroll transitions are implimented",
+									"items": [
+										{
+											"content": "They are now modified svelte transitions which significantly simplifies their implementation",
+											"items": []
+										}
+									]
+								},
+								{
+									"content": "Optimized image sizes to improve loading times",
+									"items": []
+								},
+								{
+									"content": "Changed the mobile menu to slide over the page",
+									"items": [
+										{
+											"content": "provides a cleaner experience",
+											"items": []
+										}
+									]
+								},
+								{
+									"content": "Added a copyright label to all pages",
+									"items": []
+								},
+								{
+									"content": "Added a more interesting landing page",
+									"items": []
+								},
+								{
+									"content": "Reduced Cross Origin requests to improve loading times",
+									"items": []
+								}
+							]
+						}
+					},
+					{
+						"id": "7NBr7k3fWI",
+						"type": "header",
+						"data": {
+							"text": "Reasons",
+							"level": 2
+						}
+					},
+					{
+						"id": "yaPSjIxAEs",
+						"type": "list",
+						"data": {
+							"style": "unordered",
+							"items": [
+								{
+									"content": "I wanted to make a portfolio site that was easier to keep up to date and looked professional",
+									"items": []
+								},
+								{
+									"content": "I wanted to learn some web technologies I had seen in the past but never got around to looking into",
+									"items": []
+								}
+							]
+						}
+					},
+					{
+						"id": "NmpQSXEmtS",
+						"type": "header",
+						"data": {
+							"text": "Takeaways",
+							"level": 2
+						}
+					},
+					{
+						"id": "n2iyN06a-3",
+						"type": "list",
+						"data": {
+							"style": "unordered",
+							"items": [
+								{
+									"content": "I have a portfolio website that looks professional, is easy to update, and that I can be proud of",
+									"items": []
+								},
+								{
+									"content": "I have experience using TypeScript, Svelte, and SASS",
+									"items": []
+								}
+							]
+						}
+					}
+				],
+				"version": "2.24.3"
+			},
+			"link": "https://travislane.dev",
+			"isRelative": false,
+			"img": "./img/projs/portfolio-site-v2.png",
+			"org": "none"
 		},
 		"vite-plugin-sitemap": {
 			"category": "web-dev",
@@ -1712,145 +1306,6 @@
 			"img": "./img/projs/tweakpane-plugin-gradient.png",
 			"org": "none"
 		},
-		"slicers-gui": {
-			"category": "software-engineering",
-			"name": "Slicers GUI",
-			"time": "420+ hours",
-			"status": "In progress (Beta)",
-			"difficulty": "Complexed",
-			"description": "This is by far the project I am the most proud of. It is the culmination of a lot of work by both me and the SWTOR Slicers community, and the result is a truly unique piece of software that serves its purpose well. The idea behind making it was to optimize and improve all existing tools, and bundle them all into one cohesive, fully customizable application.",
-			"content": {
-				"time": 1664306704970,
-				"blocks": [
-					{
-						"id": "6rSLg_atGs",
-						"type": "header",
-						"data": {
-							"text": "Description",
-							"level": 2
-						}
-					},
-					{
-						"id": "Lx6r8GlO94",
-						"type": "paragraph",
-						"data": {
-							"text": "This is by far the project I am the most proud of. It is the culmination of a lot of work by both me and the SWTOR Slicers community, and the result is a truly unique piece of software that serves its purpose well. The idea behind making it was to optimize and improve all existing tools, and bundle them all into one cohesive, fully customizable application."
-						}
-					},
-					{
-						"id": "5rNtDDFBGz",
-						"type": "header",
-						"data": {
-							"text": "Updates",
-							"level": 2
-						}
-					},
-					{
-						"id": "RseKw1a0eq",
-						"type": "list",
-						"data": {
-							"style": "unordered",
-							"items": [
-								{
-									"content": "Switched locator to NPM package",
-									"items": []
-								},
-								{
-									"content": "Added support for all SWTOR NPC types",
-									"items": []
-								}
-							]
-						}
-					},
-					{
-						"id": "rCYqP-GvHT",
-						"type": "header",
-						"data": {
-							"text": "Reasons",
-							"level": 2
-						}
-					},
-					{
-						"id": "hPvtdTw4mr",
-						"type": "list",
-						"data": {
-							"style": "unordered",
-							"items": [
-								{
-									"content": "I wanted to make an application, because I had never done that before",
-									"items": []
-								},
-								{
-									"content": "I was sick of all the default C# UIs on the existing tools",
-									"items": []
-								},
-								{
-									"content": "I wanted to make improvements to a lot of the existing tools because they were not nearly as efficient as the could be",
-									"items": []
-								}
-							]
-						}
-					},
-					{
-						"id": "AYxAPU5RS0",
-						"type": "header",
-						"data": {
-							"text": "Takeaways",
-							"level": 2
-						}
-					},
-					{
-						"id": "16uDzqC2VL",
-						"type": "list",
-						"data": {
-							"style": "unordered",
-							"items": [
-								{
-									"content": "How to make apps using the Electron.js framework",
-									"items": []
-								},
-								{
-									"content": "The GO programming language",
-									"items": []
-								},
-								{
-									"content": "How to write native code and run it in process using Edge.js",
-									"items": []
-								},
-								{
-									"content": "How to take advantage of offloading tasks to web workers",
-									"items": []
-								},
-								{
-									"content": "How to effectively run a beta test and implement user feedback",
-									"items": []
-								},
-								{
-									"content": "How to create a good UX (user experience)",
-									"items": []
-								},
-								{
-									"content": "How to effectively pass data between different parts of an application, without compromising on performance",
-									"items": []
-								}
-							]
-						}
-					},
-					{
-						"id": "BIIC3nLKZ6",
-						"type": "paragraph",
-						"data": {
-							"text": "This is a long term project, so I am sure I will continue to learn from it"
-						}
-					}
-				],
-				"version": "2.24.3"
-			},
-			"link": "https://github.com/SWTOR-Slicers/Slicers-GUI",
-			"isRelative": false,
-			"img": "./img/projs/Slicers GUI.png",
-			"org": "swtor-slicers"
-		},
 		"portfolio-updater": {
 			"category": "software-engineering",
 			"name": "Portfolio Updater",
@@ -1940,168 +1395,6 @@
 			"link": "https://github.com/Tormak9970/portfolio-updater",
 			"isRelative": false,
 			"img": "./img/projs/portfolio-updater.png",
-			"org": "none"
-		},
-		"wiki-editor": {
-			"category": "software-engineering",
-			"name": "Wiki Editor",
-			"time": "42 hours",
-			"status": "Complete",
-			"difficulty": "Moderate",
-			"description": "I had the idea for this project after I started working on a website for the SWTOR Slicers. We wanted to transition from using GitHub's wiki system to using our own on the new website, and so I had the idea to make an app for creating, editing, and deleting wiki articles. The app uses similar principles to my Portfolio Updater app, but is written using the Electron framework.",
-			"content": {
-				"time": 1653782211232,
-				"blocks": [
-					{
-						"id": "8pyZwk6oS7",
-						"type": "header",
-						"data": {
-							"text": "Description",
-							"level": 2
-						}
-					},
-					{
-						"id": "ADh_1Tm5wQ",
-						"type": "paragraph",
-						"data": {
-							"text": "I had the idea for this project after I started working on a website for the SWTOR Slicers. We wanted to transition from using GitHub's wiki system to using our own on the new website, and so I had the idea to make an app for creating, editing, and deleting wiki articles. The app uses similar principles to my Portfolio Updater app, but is written using the Electron framework."
-						}
-					},
-					{
-						"id": "3ZPku9LDei",
-						"type": "header",
-						"data": {
-							"text": "Reasons",
-							"level": 2
-						}
-					},
-					{
-						"id": "oM8XyPiqaC",
-						"type": "list",
-						"data": {
-							"style": "unordered",
-							"items": [
-								{
-									"content": "Needed a way to efficiently manage wiki articles for the SWTOR Slicers website.",
-									"items": []
-								},
-								{
-									"content": "Wanted to continue learning about the Svelte library",
-									"items": []
-								}
-							]
-						}
-					},
-					{
-						"id": "_2UutP1Sya",
-						"type": "header",
-						"data": {
-							"text": "Takeaways",
-							"level": 2
-						}
-					},
-					{
-						"id": "rRCzKan6OH",
-						"type": "list",
-						"data": {
-							"style": "unordered",
-							"items": [
-								{
-									"content": "Was able to create an intuitive app for managing the SWTOR Slicers Wiki",
-									"items": []
-								},
-								{
-									"content": "Got to experiment with more advanced svelte components",
-									"items": []
-								}
-							]
-						}
-					}
-				],
-				"version": "2.24.3"
-			},
-			"link": "https://github.com/SWTOR-Slicers/Wiki-Editor",
-			"isRelative": false,
-			"img": "./img/projs/wiki-editor.png",
-			"org": "swtor-slicers"
-		},
-		"tor-model-locator": {
-			"category": "software-engineering",
-			"name": "Tor Model Locator",
-			"time": "23 hours",
-			"status": "Complete",
-			"difficulty": "Simple",
-			"description": "This is a little NPM package that assists the Slicers GUI in locating SWTOR model files from an extraction. Under the hood it is relatively simple, consisting of parsing a JSON file, gathering the needed files, and copying them into a predictable folder structure. This program has gone through 3 different major versions. As a proof of concept I wrote it in python (really easy to iterate with, but not reliable enough for me to choose for production), then I wrote it in GO as an executable bundled with the Slicers GUI. There were no issues with that version, however I would like to migrate the Slicers GUI to an all TS/Rust Tauri app, so I rewrote the program again as an NPM package.",
-			"content": {
-				"time": 1664308810356,
-				"blocks": [
-					{
-						"id": "abOBSF-Y-V",
-						"type": "header",
-						"data": {
-							"text": "Description",
-							"level": 2
-						}
-					},
-					{
-						"id": "JlFAZonFGs",
-						"type": "paragraph",
-						"data": {
-							"text": "This is a little NPM package that assists the Slicers GUI in locating SWTOR model files from an extraction. Under the hood it is relatively simple, consisting of parsing a JSON file, gathering the needed files, and copying them into a predictable folder structure. This program has gone through 3 different major versions. As a proof of concept I wrote it in python (really easy to iterate with, but not reliable enough for me to choose for production), then I wrote it in GO as an executable bundled with the Slicers GUI. There were no issues with that version, however I would like to migrate the Slicers GUI to an all TS/Rust Tauri app, so I rewrote the program again as an NPM package."
-						}
-					},
-					{
-						"id": "dSTF53UYx_",
-						"type": "header",
-						"data": {
-							"text": "Reasons",
-							"level": 2
-						}
-					},
-					{
-						"id": "WC4TjvMS64",
-						"type": "list",
-						"data": {
-							"style": "unordered",
-							"items": [
-								{
-									"content": "Wanted to keep the program modular (as it can be used on its own)",
-									"items": []
-								},
-								{
-									"content": "Wanted to transition to an all TS solution",
-									"items": []
-								}
-							]
-						}
-					},
-					{
-						"id": "t2bdyd-tj0",
-						"type": "header",
-						"data": {
-							"text": "Takeaways",
-							"level": 2
-						}
-					},
-					{
-						"id": "_hhvhseABb",
-						"type": "list",
-						"data": {
-							"style": "unordered",
-							"items": [
-								{
-									"content": "Learned a bit about writing a good ReadMe file",
-									"items": []
-								}
-							]
-						}
-					}
-				],
-				"version": "2.24.3"
-			},
-			"link": "https://github.com/Tormak9970/tor-model-locator",
-			"isRelative": false,
-			"img": "./img/projs/tor-model-locator.png",
 			"org": "none"
 		},
 		"hex-world-generator": {
@@ -2322,6 +1615,881 @@
 			"img": "./img/projs/Marching Squares in Blender.png",
 			"org": "none"
 		},
+		"steamdeck-u": {
+			"category": "steam-deck",
+			"name": "SteamDeck U",
+			"time": "3 hours",
+			"status": "Complete",
+			"difficulty": "Simple",
+			"description": "This project is a custom theme for Valve's Steam Deck. It uses a homebrew plugin for injecting CSS to provide users with options to customize each part of their keyboard. The reason I started this project is because Valve offers keyboard themes, but the selection is limited and they only work online.",
+			"content": {
+				"time": 1664544959411,
+				"blocks": [
+					{
+						"id": "nZjfcxUvB2",
+						"type": "header",
+						"data": {
+							"text": "Description",
+							"level": 2
+						}
+					},
+					{
+						"id": "xPDAeM17W0",
+						"type": "paragraph",
+						"data": {
+							"text": "This project is a custom theme for Valve's Steam Deck. It uses a homebrew plugin for injecting CSS to provide users with options to customize each part of their keyboard. The reason I started this project is because Valve offers keyboard themes, but the selection is limited and they only work online."
+						}
+					},
+					{
+						"id": "mXmVM7rad_",
+						"type": "header",
+						"data": {
+							"text": "Reasons",
+							"level": 2
+						}
+					},
+					{
+						"id": "xevYl-aYqV",
+						"type": "list",
+						"data": {
+							"style": "unordered",
+							"items": [
+								{
+									"content": "Wanted to contribute to the homebrew Steam Deck community",
+									"items": []
+								},
+								{
+									"content": "Wanted a more customizable alternative to the existing keyboards",
+									"items": []
+								},
+								{
+									"content": "Wanted customizable keyboards that worked offline",
+									"items": []
+								}
+							]
+						}
+					},
+					{
+						"id": "KgQPukLNZY",
+						"type": "header",
+						"data": {
+							"text": "Takeaways",
+							"level": 2
+						}
+					},
+					{
+						"id": "qXVdi9yViM",
+						"type": "list",
+						"data": {
+							"style": "unordered",
+							"items": [
+								{
+									"content": "Came up with a unique idea for the homebrew community",
+									"items": []
+								},
+								{
+									"content": "Created a highly customizable keyboard that also works offline",
+									"items": []
+								}
+							]
+						}
+					}
+				],
+				"version": "2.24.3"
+			},
+			"link": "https://github.com/Tormak9970/SteamDeckThemes",
+			"isRelative": false,
+			"img": "./img/projs/SteamDeckU.png",
+			"org": "none"
+		}
+	},
+	"archive": {
+		"torc-npc-3d-viewers": {
+			"category": "web-dev",
+			"name": "TORC NPC 3D Viewers",
+			"time": "10 hours",
+			"status": "Complete",
+			"difficulty": "Moderate",
+			"description": "This project came about as a natural continuation of the TORCommunity Character Designer. It is a 3D viewer for loading the models for different NPC (non player characters) from Star Wars: The Old Republic. It uses a very similar process to the character designer for loading the models, but this time has to take a dynamic input specified on page load.",
+			"content": {
+				"time": 1635537118240,
+				"blocks": [
+					{
+						"id": "Q2BIPEDC4a",
+						"type": "header",
+						"data": {
+							"text": "Description",
+							"level": 2
+						}
+					},
+					{
+						"id": "x5s66HjOkz",
+						"type": "paragraph",
+						"data": {
+							"text": "This project came about as a natural continuation of the TORCommunity Character Designer. It is a 3D viewer for loading the models for different NPC (non player characters) from Star Wars: The Old Republic. It uses a very similar process to the character designer for loading the models, but this time has to take a dynamic input specified on page load."
+						}
+					},
+					{
+						"id": "CWdJL0lesi",
+						"type": "header",
+						"data": {
+							"text": "Reasons",
+							"level": 2
+						}
+					},
+					{
+						"id": "gsTNO3IyDV",
+						"type": "list",
+						"data": {
+							"style": "unordered",
+							"items": [
+								{
+									"content": "Natural continuation of my previous project, the Character Designer",
+									"items": []
+								},
+								{
+									"content": "Was a request feature for the TORCommunity website",
+									"items": []
+								},
+								{
+									"content": "One of the other fan sites, JediPedia, had a similar feature that was never flushed out",
+									"items": []
+								},
+								{
+									"content": "Wanted to refine my methods for loading and rendering models",
+									"items": []
+								}
+							]
+						}
+					},
+					{
+						"id": "Pjs3r6ob5T",
+						"type": "header",
+						"data": {
+							"text": "Takeaways",
+							"level": 2
+						}
+					},
+					{
+						"id": "09fYNY-f6o",
+						"type": "list",
+						"data": {
+							"style": "unordered",
+							"items": [
+								{
+									"content": "I know how to load models more efficiently",
+									"items": []
+								},
+								{
+									"content": "The rendering process I use in a variety of projects is more refined",
+									"items": []
+								},
+								{
+									"content": "I was able to design a product that had been requested by people for a few years in a short amount of time",
+									"items": []
+								}
+							]
+						}
+					}
+				],
+				"version": "2.22.2"
+			},
+			"link": "https://torcommunity.com/database/search/npc",
+			"isRelative": false,
+			"img": "./img/projs/torc-npc-viewer.png",
+			"org": "torcommunity"
+		},
+		"wiki-editor": {
+			"category": "software-engineering",
+			"name": "Wiki Editor",
+			"time": "42 hours",
+			"status": "Complete",
+			"difficulty": "Moderate",
+			"description": "I had the idea for this project after I started working on a website for the SWTOR Slicers. We wanted to transition from using GitHub's wiki system to using our own on the new website, and so I had the idea to make an app for creating, editing, and deleting wiki articles. The app uses similar principles to my Portfolio Updater app, but is written using the Electron framework.",
+			"content": {
+				"time": 1653782211232,
+				"blocks": [
+					{
+						"id": "8pyZwk6oS7",
+						"type": "header",
+						"data": {
+							"text": "Description",
+							"level": 2
+						}
+					},
+					{
+						"id": "ADh_1Tm5wQ",
+						"type": "paragraph",
+						"data": {
+							"text": "I had the idea for this project after I started working on a website for the SWTOR Slicers. We wanted to transition from using GitHub's wiki system to using our own on the new website, and so I had the idea to make an app for creating, editing, and deleting wiki articles. The app uses similar principles to my Portfolio Updater app, but is written using the Electron framework."
+						}
+					},
+					{
+						"id": "3ZPku9LDei",
+						"type": "header",
+						"data": {
+							"text": "Reasons",
+							"level": 2
+						}
+					},
+					{
+						"id": "oM8XyPiqaC",
+						"type": "list",
+						"data": {
+							"style": "unordered",
+							"items": [
+								{
+									"content": "Needed a way to efficiently manage wiki articles for the SWTOR Slicers website.",
+									"items": []
+								},
+								{
+									"content": "Wanted to continue learning about the Svelte library",
+									"items": []
+								}
+							]
+						}
+					},
+					{
+						"id": "_2UutP1Sya",
+						"type": "header",
+						"data": {
+							"text": "Takeaways",
+							"level": 2
+						}
+					},
+					{
+						"id": "rRCzKan6OH",
+						"type": "list",
+						"data": {
+							"style": "unordered",
+							"items": [
+								{
+									"content": "Was able to create an intuitive app for managing the SWTOR Slicers Wiki",
+									"items": []
+								},
+								{
+									"content": "Got to experiment with more advanced svelte components",
+									"items": []
+								}
+							]
+						}
+					}
+				],
+				"version": "2.24.3"
+			},
+			"link": "https://github.com/SWTOR-Slicers/Wiki-Editor",
+			"isRelative": false,
+			"img": "./img/projs/wiki-editor.png",
+			"org": "swtor-slicers"
+		},
+		"tor-model-locator": {
+			"category": "software-engineering",
+			"name": "Tor Model Locator",
+			"time": "23 hours",
+			"status": "Complete",
+			"difficulty": "Simple",
+			"description": "This is a little NPM package that assists the Slicers GUI in locating SWTOR model files from an extraction. Under the hood it is relatively simple, consisting of parsing a JSON file, gathering the needed files, and copying them into a predictable folder structure. This program has gone through 3 different major versions. As a proof of concept I wrote it in python (really easy to iterate with, but not reliable enough for me to choose for production), then I wrote it in GO as an executable bundled with the Slicers GUI. There were no issues with that version, however I would like to migrate the Slicers GUI to an all TS/Rust Tauri app, so I rewrote the program again as an NPM package.",
+			"content": {
+				"time": 1664308810356,
+				"blocks": [
+					{
+						"id": "abOBSF-Y-V",
+						"type": "header",
+						"data": {
+							"text": "Description",
+							"level": 2
+						}
+					},
+					{
+						"id": "JlFAZonFGs",
+						"type": "paragraph",
+						"data": {
+							"text": "This is a little NPM package that assists the Slicers GUI in locating SWTOR model files from an extraction. Under the hood it is relatively simple, consisting of parsing a JSON file, gathering the needed files, and copying them into a predictable folder structure. This program has gone through 3 different major versions. As a proof of concept I wrote it in python (really easy to iterate with, but not reliable enough for me to choose for production), then I wrote it in GO as an executable bundled with the Slicers GUI. There were no issues with that version, however I would like to migrate the Slicers GUI to an all TS/Rust Tauri app, so I rewrote the program again as an NPM package."
+						}
+					},
+					{
+						"id": "dSTF53UYx_",
+						"type": "header",
+						"data": {
+							"text": "Reasons",
+							"level": 2
+						}
+					},
+					{
+						"id": "WC4TjvMS64",
+						"type": "list",
+						"data": {
+							"style": "unordered",
+							"items": [
+								{
+									"content": "Wanted to keep the program modular (as it can be used on its own)",
+									"items": []
+								},
+								{
+									"content": "Wanted to transition to an all TS solution",
+									"items": []
+								}
+							]
+						}
+					},
+					{
+						"id": "t2bdyd-tj0",
+						"type": "header",
+						"data": {
+							"text": "Takeaways",
+							"level": 2
+						}
+					},
+					{
+						"id": "_hhvhseABb",
+						"type": "list",
+						"data": {
+							"style": "unordered",
+							"items": [
+								{
+									"content": "Learned a bit about writing a good ReadMe file",
+									"items": []
+								}
+							]
+						}
+					}
+				],
+				"version": "2.24.3"
+			},
+			"link": "https://github.com/Tormak9970/tor-model-locator",
+			"isRelative": false,
+			"img": "./img/projs/tor-model-locator.png",
+			"org": "none"
+		},
+		"swtor-slicers-wiki": {
+			"category": "miscellaneous",
+			"name": "SWTOR Slicers Wiki",
+			"time": "5 hours",
+			"status": "Ongoing",
+			"difficulty": "Simple",
+			"description": "The SWTOR Slicers Wiki is a collection of guides that serve to help people through the various processes involved in data mining, extraction, and modding. It continues to grow as we add more and more tutorials, and serves as a one stop shop for all things SWTOR Slicers.",
+			"content": {
+				"time": 1635543809859,
+				"blocks": [
+					{
+						"id": "E2HzszzOTH",
+						"type": "header",
+						"data": {
+							"text": "Description",
+							"level": 2
+						}
+					},
+					{
+						"id": "G6CVmJYP8w",
+						"type": "paragraph",
+						"data": {
+							"text": "The SWTOR Slicers Wiki is a collection of guides that serve to help people through the various processes involved in data mining, extraction, and modding. It continues to grow as we add more and more tutorials, and serves as a one stop shop for all things SWTOR Slicers."
+						}
+					},
+					{
+						"id": "rYJ1sS65S5",
+						"type": "header",
+						"data": {
+							"text": "Reasons",
+							"level": 2
+						}
+					},
+					{
+						"id": "yiDofGrzY_",
+						"type": "list",
+						"data": {
+							"style": "unordered",
+							"items": [
+								{
+									"content": "We wanted to have a better way to explain the ins and outs of our community (we previously just had pdfs)",
+									"items": []
+								},
+								{
+									"content": "I wanted to organize our guides into a more intuitive design, and provide a place to put documentation of our work.",
+									"items": []
+								}
+							]
+						}
+					},
+					{
+						"id": "YJWxdQ6Dih",
+						"type": "header",
+						"data": {
+							"text": "Takeaways",
+							"level": 2
+						}
+					},
+					{
+						"id": "62ldxcP3zW",
+						"type": "list",
+						"data": {
+							"style": "unordered",
+							"items": [
+								{
+									"content": "We have a more organized way to present our guides, and a nice place to direct new people",
+									"items": []
+								}
+							]
+						}
+					}
+				],
+				"version": "2.22.2"
+			},
+			"link": "https://github.com/SWTOR-Slicers/WikiPedia/wiki",
+			"isRelative": false,
+			"img": "./img/projs/slicers-wiki.png",
+			"org": "swtor-slicers"
+		},
+		"tetris": {
+			"category": "web-games",
+			"name": "Tetris",
+			"time": "30 hours",
+			"status": "Complete",
+			"difficulty": "Complexed",
+			"description": "For my last classic game project, I wanted to do something much more complexed. I decided to do Tetris, as it is one of my favorite games, and had a lot of complexed elements. It took much longer then the previous three projects, but was very satisfying to finish.",
+			"content": {
+				"time": 1633960233761,
+				"blocks": [
+					{
+						"id": "w2NLjrsOZr",
+						"type": "header",
+						"data": {
+							"text": "Description",
+							"level": 2
+						}
+					},
+					{
+						"id": "eRDQjgQL3e",
+						"type": "paragraph",
+						"data": {
+							"text": "For my last classic game project, I wanted to do something much more complexed. I decided to do Tetris, as it is one of my favorite games, and had a lot of complexed elements. It took much longer then the previous three projects, but was very satisfying to finish."
+						}
+					},
+					{
+						"id": "9BD101MWmx",
+						"type": "header",
+						"data": {
+							"text": "Reasons",
+							"level": 2
+						}
+					},
+					{
+						"id": "3GNMw55XkZ",
+						"type": "list",
+						"data": {
+							"style": "unordered",
+							"items": [
+								{
+									"content": "Wanted to finish of my web game projects with something that was more complicated",
+									"items": []
+								},
+								{
+									"content": "Wanted to practice and advance my javascript knowledge",
+									"items": []
+								},
+								{
+									"content": "Tetris has <a href=\"https://tetris.fandom.com/wiki/Tetris_Guideline\" target=\"_blank\" rel=\"noreferrer noopener\" class=\"embed-project-link\">guidelines</a> you need to follow if you are going to publish it under the Tetris name, and I thought it would be good practice to make a project with specifications I also needed to meet",
+									"items": []
+								}
+							]
+						}
+					},
+					{
+						"id": "pwFfpS8MIr",
+						"type": "header",
+						"data": {
+							"text": "Takeaways",
+							"level": 2
+						}
+					},
+					{
+						"id": "q8SU_ZaDaO",
+						"type": "list",
+						"data": {
+							"style": "unordered",
+							"items": [
+								{
+									"content": "Learned how to better mitigate methods and functions to the most relevant class object",
+									"items": []
+								},
+								{
+									"content": "I became comfortable and very familiar with javascript",
+									"items": []
+								},
+								{
+									"content": "I met most the required guidelines. (Some were too advanced for me at the time, but I plan to come back and update it to meet them)",
+									"items": []
+								}
+							]
+						}
+					}
+				],
+				"version": "2.22.2"
+			},
+			"link": "https://tetris.travislane.dev",
+			"isRelative": false,
+			"img": "./img/projs/Tetris.png",
+			"org": "none"
+		},
+		"minesweeper": {
+			"category": "web-games",
+			"name": "Minesweeper",
+			"time": "15 hours",
+			"status": "Complete",
+			"difficulty": "Moderate",
+			"description": "Minesweeper is a classic logic based strategy game. As I was learning JavaScript, I thought it would be fun to make one of my favorite classic games using what I was learning. In the process, I learned about the html5 canvas, which is now used instead of flash for web based games and animations. After completing the normal minesweeper, I wanted to add something more advanced to the project. I decided to add animations (inspired by Google' Minesweeper), so I used the html5 canvas API to animate it.",
+			"content": {
+				"time": 1633959986929,
+				"blocks": [
+					{
+						"id": "fDaKuK9e17",
+						"type": "header",
+						"data": {
+							"text": "Description",
+							"level": 2
+						}
+					},
+					{
+						"id": "SCY6AOLVoo",
+						"type": "paragraph",
+						"data": {
+							"text": "Minesweeper is a classic logic based strategy game. As I was learning JavaScript, I thought it would be fun to make one of my favorite classic games using what I was learning. In the process, I learned about the html5 canvas, which is now used instead of flash for web based games and animations. After completing the normal minesweeper, I wanted to add something more advanced to the project. I decided to add animations (inspired by Google' Minesweeper), so I used the html5 canvas API to animate it."
+						}
+					},
+					{
+						"id": "JppKuXin_o",
+						"type": "header",
+						"data": {
+							"text": "Reasons",
+							"level": 2
+						}
+					},
+					{
+						"id": "YEHt9cZRD6",
+						"type": "list",
+						"data": {
+							"style": "unordered",
+							"items": [
+								{
+									"content": "Wanted to learn how to use the HTML5 canvas",
+									"items": []
+								},
+								{
+									"content": "Love Minesweeper, so wanted to make my own version",
+									"items": []
+								},
+								{
+									"content": "Wanted to learn more javascript and do some more web development",
+									"items": []
+								}
+							]
+						}
+					},
+					{
+						"id": "bJjpWp73MG",
+						"type": "header",
+						"data": {
+							"text": "Takeaways",
+							"level": 2
+						}
+					},
+					{
+						"id": "qO6rJLop7Q",
+						"type": "list",
+						"data": {
+							"style": "unordered",
+							"items": [
+								{
+									"content": "I was comfortable and familiar with html, css, javascript, and the Canvas API",
+									"items": []
+								},
+								{
+									"content": "How to approach a problem from different angles (realized that I would need to use the html5 canvas api if I wanted to make animations)",
+									"items": []
+								},
+								{
+									"content": "Learned about recursion",
+									"items": []
+								}
+							]
+						}
+					}
+				],
+				"version": "2.22.2"
+			},
+			"link": "https://minesweeper.travislane.dev",
+			"isRelative": false,
+			"img": "./img/projs/Minesweeper.png",
+			"org": "none"
+		},
+		"pong": {
+			"category": "web-games",
+			"name": "Pong",
+			"time": "10 hours",
+			"status": "Complete",
+			"difficulty": "Simple",
+			"description": "Keeping with the theme of the previous projects I had just finished, I decided to make a 2 player pong game. This was much more complexed then minesweeper as I needed to update the canvas on key press, as well as slowly increase the ball speed and have collision detection.",
+			"content": {
+				"time": 1633960355613,
+				"blocks": [
+					{
+						"id": "4APXidhcEF",
+						"type": "header",
+						"data": {
+							"text": "Description",
+							"level": 2
+						}
+					},
+					{
+						"id": "zbG47D4jM7",
+						"type": "paragraph",
+						"data": {
+							"text": "Keeping with the theme of the previous projects I had just finished, I decided to make a 2 player pong game. This was much more complexed then minesweeper as I needed to update the canvas on key press, as well as slowly increase the ball speed and have collision detection."
+						}
+					},
+					{
+						"id": "Wc5vaX4R5y",
+						"type": "header",
+						"data": {
+							"text": "Reasons",
+							"level": 2
+						}
+					},
+					{
+						"id": "APS_pwr7Dk",
+						"type": "list",
+						"data": {
+							"style": "unordered",
+							"items": [
+								{
+									"content": "Wanted to expand my javascript knowledge",
+									"items": []
+								},
+								{
+									"content": "Always thought it would be fun to make pong",
+									"items": []
+								},
+								{
+									"content": "Wanted to learn more about the HTML5 canvas API",
+									"items": []
+								}
+							]
+						}
+					},
+					{
+						"id": "E5c5fBID_B",
+						"type": "header",
+						"data": {
+							"text": "Takeaways",
+							"level": 2
+						}
+					},
+					{
+						"id": "vpp5a3jCJx",
+						"type": "list",
+						"data": {
+							"style": "unordered",
+							"items": [
+								{
+									"content": "How to animate multiple objects at a time using canvas",
+									"items": []
+								},
+								{
+									"content": "I learned more advanced javascript",
+									"items": []
+								},
+								{
+									"content": "How to make a simple UI users could use, and save their options",
+									"items": []
+								}
+							]
+						}
+					}
+				],
+				"version": "2.22.2"
+			},
+			"link": "https://pong.travislane.dev",
+			"isRelative": false,
+			"img": "./img/projs/Pong.png",
+			"org": "none"
+		},
+		"portfolio-v1": {
+			"category": "web-dev",
+			"name": "Portfolio V1",
+			"time": "25 hours",
+			"status": "Not Live / Obsolete",
+			"difficulty": "Simple",
+			"description": "I wanted to create a professional and classy website that I could use to display all of the projects I create. I think this is a unique and relevant way to display my projects and works in a way that represents me and what I love doing. I continuously update this as I continue to come up with projects and complete them, as well as work on projects ether for school, or one of the organizations I am a part of.",
+			"content": {
+				"time": 1633880900126,
+				"blocks": [
+					{
+						"id": "W_xuzsjFBt",
+						"type": "header",
+						"data": {
+							"text": "Description",
+							"level": 2
+						}
+					},
+					{
+						"id": "A-p92rIsaH",
+						"type": "paragraph",
+						"data": {
+							"text": "I wanted to create a professional and classy website that I could use to display all of the projects I create. I think this is a unique and relevant way to display my projects and works in a way that represents me and what I love doing. I continuously update this as I continue to come up with projects and complete them, as well as work on projects ether for school, or one of the organizations I am a part of."
+						}
+					},
+					{
+						"id": "K9_vhMevvu",
+						"type": "header",
+						"data": {
+							"text": "Reasons",
+							"level": 2
+						}
+					},
+					{
+						"id": "NGd6jV0Oa6",
+						"type": "list",
+						"data": {
+							"style": "unordered",
+							"items": [
+								{
+									"content": "I wanted to have a unique way to display all of my projects.",
+									"items": []
+								},
+								{
+									"content": "I wanted to display this in a relevant manner to my interests and passions.",
+									"items": []
+								},
+								{
+									"content": "I wanted to reflect on what I have learned, and what my takeaways have been.",
+									"items": []
+								}
+							]
+						}
+					},
+					{
+						"id": "X4R6J6w249",
+						"type": "header",
+						"data": {
+							"text": "Takeaways",
+							"level": 2
+						}
+					},
+					{
+						"id": "lEwIT0sE2T",
+						"type": "list",
+						"data": {
+							"style": "unordered",
+							"items": [
+								{
+									"content": "I was able to create a classy, informative website that is simple yet effective.",
+									"items": []
+								},
+								{
+									"content": "I now have a nice way to display and represent my projects in a manner I am proud of.",
+									"items": []
+								},
+								{
+									"content": "I learned some really interesting tricks you can do with CSS and HTML5 (such as the flip cards I use for project previews).",
+									"items": []
+								}
+							]
+						}
+					},
+					{
+						"id": "W6ECctwqi0",
+						"type": "header",
+						"data": {
+							"text": "Components",
+							"level": 2
+						}
+					},
+					{
+						"id": "-wlFnFy-ew",
+						"type": "list",
+						"data": {
+							"style": "unordered",
+							"items": [
+								{
+									"content": "The home page/landing page. This has some information about me, and a list of some of my skills.",
+									"items": []
+								}
+							]
+						}
+					},
+					{
+						"id": "hEzD74sdou",
+						"type": "image",
+						"data": {
+							"file": {
+								"url": "./img/projs/Portfolio site homepage.png"
+							},
+							"caption": "",
+							"withBorder": false,
+							"stretched": false,
+							"withBackground": false
+						}
+					},
+					{
+						"id": "IjsBX05Yah",
+						"type": "list",
+						"data": {
+							"style": "unordered",
+							"items": [
+								{
+									"content": "The project category and organization tabs. These contain previews of my projects, based on what category of computer science they fall under.",
+									"items": []
+								}
+							]
+						}
+					},
+					{
+						"id": "ND3HRNtExk",
+						"type": "image",
+						"data": {
+							"file": {
+								"url": "./img/projs/Portfolio site category tab.png"
+							},
+							"caption": "",
+							"withBorder": false,
+							"stretched": false,
+							"withBackground": false
+						}
+					},
+					{
+						"id": "2LsV8tktKJ",
+						"type": "list",
+						"data": {
+							"style": "unordered",
+							"items": [
+								{
+									"content": "The third and final component of the website is the project pages themselves. These pages have information about each project, including: an overview, reasons for and purpose of the project, and the outcome of the project.",
+									"items": []
+								}
+							]
+						}
+					},
+					{
+						"id": "-JYdHcMe6c",
+						"type": "image",
+						"data": {
+							"file": {
+								"url": "./img/projs/Portfolio site project tab.png"
+							},
+							"caption": "",
+							"withBorder": false,
+							"stretched": false,
+							"withBackground": false
+						}
+					}
+				],
+				"version": "2.22.2"
+			},
+			"link": "web-dev",
+			"isRelative": false,
+			"img": "./img/projs/Portfolio site homepage.png",
+			"org": "none"
+		},
 		"intro-to-web-dev-camp": {
 			"category": "education",
 			"name": "Intro to web dev camp",
@@ -2411,93 +2579,6 @@
 			"link": "",
 			"isRelative": false,
 			"img": "./img/projs/intro-to-web-dev-camp.png",
-			"org": "none"
-		},
-		"steamdeck-u": {
-			"category": "steam-deck",
-			"name": "SteamDeck U",
-			"time": "3 hours",
-			"status": "Complete",
-			"difficulty": "Simple",
-			"description": "This project is a custom theme for Valve's Steam Deck. It uses a homebrew plugin for injecting CSS to provide users with options to customize each part of their keyboard. The reason I started this project is because Valve offers keyboard themes, but the selection is limited and they only work online.",
-			"content": {
-				"time": 1664544959411,
-				"blocks": [
-					{
-						"id": "nZjfcxUvB2",
-						"type": "header",
-						"data": {
-							"text": "Description",
-							"level": 2
-						}
-					},
-					{
-						"id": "xPDAeM17W0",
-						"type": "paragraph",
-						"data": {
-							"text": "This project is a custom theme for Valve's Steam Deck. It uses a homebrew plugin for injecting CSS to provide users with options to customize each part of their keyboard. The reason I started this project is because Valve offers keyboard themes, but the selection is limited and they only work online."
-						}
-					},
-					{
-						"id": "mXmVM7rad_",
-						"type": "header",
-						"data": {
-							"text": "Reasons",
-							"level": 2
-						}
-					},
-					{
-						"id": "xevYl-aYqV",
-						"type": "list",
-						"data": {
-							"style": "unordered",
-							"items": [
-								{
-									"content": "Wanted to contribute to the homebrew Steam Deck community",
-									"items": []
-								},
-								{
-									"content": "Wanted a more customizable alternative to the existing keyboards",
-									"items": []
-								},
-								{
-									"content": "Wanted customizable keyboards that worked offline",
-									"items": []
-								}
-							]
-						}
-					},
-					{
-						"id": "KgQPukLNZY",
-						"type": "header",
-						"data": {
-							"text": "Takeaways",
-							"level": 2
-						}
-					},
-					{
-						"id": "qXVdi9yViM",
-						"type": "list",
-						"data": {
-							"style": "unordered",
-							"items": [
-								{
-									"content": "Came up with a unique idea for the homebrew community",
-									"items": []
-								},
-								{
-									"content": "Created a highly customizable keyboard that also works offline",
-									"items": []
-								}
-							]
-						}
-					}
-				],
-				"version": "2.24.3"
-			},
-			"link": "https://github.com/Tormak9970/SteamDeckThemes",
-			"isRelative": false,
-			"img": "./img/projs/SteamDeckU.png",
 			"org": "none"
 		},
 		"discord-modbot": {
@@ -2884,85 +2965,6 @@
 			"img": "./img/projs/MemeDB homepage.png",
 			"org": "none"
 		},
-		"swtor-slicers-wiki": {
-			"category": "miscellaneous",
-			"name": "SWTOR Slicers Wiki",
-			"time": "5 hours",
-			"status": "Ongoing",
-			"difficulty": "Simple",
-			"description": "The SWTOR Slicers Wiki is a collection of guides that serve to help people through the various processes involved in data mining, extraction, and modding. It continues to grow as we add more and more tutorials, and serves as a one stop shop for all things SWTOR Slicers.",
-			"content": {
-				"time": 1635543809859,
-				"blocks": [
-					{
-						"id": "E2HzszzOTH",
-						"type": "header",
-						"data": {
-							"text": "Description",
-							"level": 2
-						}
-					},
-					{
-						"id": "G6CVmJYP8w",
-						"type": "paragraph",
-						"data": {
-							"text": "The SWTOR Slicers Wiki is a collection of guides that serve to help people through the various processes involved in data mining, extraction, and modding. It continues to grow as we add more and more tutorials, and serves as a one stop shop for all things SWTOR Slicers."
-						}
-					},
-					{
-						"id": "rYJ1sS65S5",
-						"type": "header",
-						"data": {
-							"text": "Reasons",
-							"level": 2
-						}
-					},
-					{
-						"id": "yiDofGrzY_",
-						"type": "list",
-						"data": {
-							"style": "unordered",
-							"items": [
-								{
-									"content": "We wanted to have a better way to explain the ins and outs of our community (we previously just had pdfs)",
-									"items": []
-								},
-								{
-									"content": "I wanted to organize our guides into a more intuitive design, and provide a place to put documentation of our work.",
-									"items": []
-								}
-							]
-						}
-					},
-					{
-						"id": "YJWxdQ6Dih",
-						"type": "header",
-						"data": {
-							"text": "Takeaways",
-							"level": 2
-						}
-					},
-					{
-						"id": "62ldxcP3zW",
-						"type": "list",
-						"data": {
-							"style": "unordered",
-							"items": [
-								{
-									"content": "We have a more organized way to present our guides, and a nice place to direct new people",
-									"items": []
-								}
-							]
-						}
-					}
-				],
-				"version": "2.22.2"
-			},
-			"link": "https://github.com/SWTOR-Slicers/WikiPedia/wiki",
-			"isRelative": false,
-			"img": "./img/projs/slicers-wiki.png",
-			"org": "swtor-slicers"
-		},
 		"slicers-blender-importer": {
 			"category": "miscellaneous",
 			"name": "Slicers Blender Importer",
@@ -3072,7 +3074,6 @@
 			"org": "swtor-slicers"
 		}
 	},
-	"archive": {},
 	"featured": "slicers-gui",
 	"organizations": {
 		"swtor-slicers": {

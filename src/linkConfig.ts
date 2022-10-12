@@ -1,4 +1,5 @@
 const projects:Map<string, Project> = new Map();
+const archive:Map<string, Project> = new Map();
 const organizations:Map<string, Organization> = new Map();
 const art:Map<string, Art> = new Map();
 const experience:Map<string, Experience> = new Map();
@@ -12,6 +13,10 @@ async function loadConfig() {
 
         for (const entr of Object.entries(config['projects'])) {
             projects.set(entr[0], entr[1] as Project);
+        }
+
+        for (const entr of Object.entries(config['archive'])) {
+            archive.set(entr[0], entr[1] as Project);
         }
 
         for (const entr of Object.entries(config['organizations'])) {
@@ -32,4 +37,4 @@ async function loadConfig() {
     }
 }
 
-export { loadConfig, projects, organizations, art, experience, featured };
+export { loadConfig, projects, organizations, art, experience, featured, archive };

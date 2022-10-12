@@ -1,11 +1,11 @@
 
 /**
  * @roxi/routify 2.18.3
- * File generated Sat Oct 01 2022 14:06:21 GMT-0400 (Eastern Daylight Time)
+ * File generated Wed Oct 12 2022 15:10:03 GMT-0400 (Eastern Daylight Time)
  */
 
 export const __version = "2.18.3"
-export const __timestamp = "2022-10-01T18:06:21.781Z"
+export const __timestamp = "2022-10-12T19:10:03.935Z"
 
 //buildRoutes
 import { buildClientTree } from "@roxi/routify/runtime/buildRoutes"
@@ -73,6 +73,80 @@ export const _tree = {
       "path": "/about",
       "id": "_about",
       "component": () => import('../src/pages/about.svelte').then(m => m.default)
+    },
+    {
+      "isFile": false,
+      "isDir": true,
+      "file": "archive",
+      "filepath": "/archive",
+      "name": "archive",
+      "ext": "",
+      "badExt": false,
+      "absolutePath": "C:/Users/Tormak/Documents/GitHub/portfolio-site-v2/src/pages/archive",
+      "children": [
+        {
+          "isFile": true,
+          "isDir": false,
+          "file": "[project].svelte",
+          "filepath": "/archive/[project].svelte",
+          "name": "[project]",
+          "ext": "svelte",
+          "badExt": false,
+          "absolutePath": "C:/Users/Tormak/Documents/GitHub/portfolio-site-v2/src/pages/archive/[project].svelte",
+          "importPath": "../src/pages/archive/[project].svelte",
+          "isLayout": false,
+          "isReset": false,
+          "isIndex": false,
+          "isFallback": false,
+          "isPage": true,
+          "ownMeta": {},
+          "meta": {
+            "recursive": true,
+            "preload": false,
+            "prerender": true
+          },
+          "path": "/archive/:project",
+          "id": "_archive__project",
+          "component": () => import('../src/pages/archive/[project].svelte').then(m => m.default)
+        },
+        {
+          "isFile": true,
+          "isDir": false,
+          "file": "index.svelte",
+          "filepath": "/archive/index.svelte",
+          "name": "index",
+          "ext": "svelte",
+          "badExt": false,
+          "absolutePath": "C:/Users/Tormak/Documents/GitHub/portfolio-site-v2/src/pages/archive/index.svelte",
+          "importPath": "../src/pages/archive/index.svelte",
+          "isLayout": false,
+          "isReset": false,
+          "isIndex": true,
+          "isFallback": false,
+          "isPage": true,
+          "ownMeta": {},
+          "meta": {
+            "recursive": true,
+            "preload": false,
+            "prerender": true
+          },
+          "path": "/archive/index",
+          "id": "_archive_index",
+          "component": () => import('../src/pages/archive/index.svelte').then(m => m.default)
+        }
+      ],
+      "isLayout": false,
+      "isReset": false,
+      "isIndex": false,
+      "isFallback": false,
+      "isPage": false,
+      "ownMeta": {},
+      "meta": {
+        "recursive": true,
+        "preload": false,
+        "prerender": true
+      },
+      "path": "/archive"
     },
     {
       "isFile": false,
