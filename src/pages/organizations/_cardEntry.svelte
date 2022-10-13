@@ -1,10 +1,11 @@
 <script lang="ts">
     import { goto } from "@roxi/routify";
-    import { jumpTo } from "../projects/index.svelte";
 
     export let entryData:Organization;
 
-    function linkToProj(id:string) { $goto('../projects'); setTimeout(() => { jumpTo(id); }, 10); }
+    function openOrgEntry() {
+        $goto(`./:organization`, {organization: entryData.name.toLowerCase().replaceAll(" ", "-").replaceAll("'", "")});
+    }
 </script>
 
 <div class="card-entr">
@@ -14,28 +15,14 @@
     <div class="img-cont">
         <img src="{entryData.img}" alt="">
     </div>
-    <div class="header-cont">About</div>
     <div class="desc-cont">
         {@html entryData.about}
     </div>
-    <div class="header-cont">Involvement</div>
-    <div class="desc-cont">
-        {@html entryData.description}
-    </div>
-    <div class="header-cont">Projects</div>
-    <div class="projects">
-        <ul>
-            {#each entryData.projects as proj}
-                <li>
-                    <div class="proj-entr">
-                        <div class="name">{proj.name}</div>
-                        <div class="proj-link" on:click|stopPropagation="{() => { linkToProj(proj.linkId); }}">
-                            <i class="fas fa-link"></i>
-                        </div>
-                    </div>
-                </li>
-            {/each }
-        </ul>
+    <div class="link-cont">
+        <div class="name">Learn more:</div>
+        <div class="proj-link" on:click|stopPropagation="{openOrgEntry}">
+            <i class="fas fa-external-link-alt"></i>
+        </div>
     </div>
 </div>
 
@@ -84,29 +71,28 @@
 
         margin-bottom: 5px;
     }
-
-    .projects {
-        width: 90%;
-        font-size: 16px;
-        
-        margin-bottom: 5px;
-    }
-    .projects ul {
+    
+    .link-cont {
+        height: 100%;
         width: 100%;
 
-        margin-top: 0px;
-        margin-bottom: 0px;
-    }
-    .projects ul li .proj-entr {
         display: flex;
         flex-direction: row;
+        justify-content: center;
         align-items: center;
+
+        margin-bottom: 5px;
     }
-    .projects ul li .proj-entr .name { margin-right: 7px; }
-
-    .projects ul li .proj-entr .proj-link {
+    .link-cont > .name {
         height: 100%;
+        
+        margin-right: 7px;
+        font-size: 20px;
+    }
 
+    .link-cont > .proj-link {
+        padding-top: 3px;
+    
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -116,5 +102,7 @@
         cursor: pointer;
         font-size: 14px;
     }
-    .projects ul li .proj-entr .proj-link :hover { color: var(--highlight-hover); }
+    .link-cont:hover {
+        color: var(--highlight-hover);
+    }
 </style>

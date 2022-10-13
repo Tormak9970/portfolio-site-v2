@@ -22,6 +22,10 @@
         setTimeout(() => { jumpTo(id); }, 10);
     }
 
+    function openOrgEntry() {
+        $goto(`./:organization`, {organization: entryData.name.toLowerCase().replaceAll(" ", "-").replaceAll("'", "")});
+    }
+
     function handleTransEnd(): void { $allowScroll = true; }
 
     beforeUpdate(() => {
@@ -43,55 +47,35 @@
 </script>
 
 <div id="{entryData.name}" class="orgEntry" in:fly|local={inParams} out:fly|local={outParams} on:introend="{handleTransEnd}">
-    <div class="org-header">
-        <h2>{entryData.name}</h2>
-    </div>
-    {#if entryData.img}
-        <div class="content-container" bind:this="{contentCont}">
+    <div class="content-container">
+        <div class="imgs-cont" bind:this="{contentCont}">
             {#if !image}
                 <img src="{entryData.img}" alt="{entryData.name}">
             {/if}
-            <div class="description">
-                <div class="org-header-2">
-                    <h2>About</h2>
-                </div>
-                <p>{@html entryData.about}</p>
-                <div class="org-header-2">
-                    <h2>Involvement</h2>
-                </div>
-                <p>{@html entryData.description}</p>
+        </div>
+        <div class="org-overview-cont">
+            <div class="org-header">
+                <h2>{entryData.name}</h2>
             </div>
-            <div class="projects">
-                <div class="org-header-2">
-                    <h2>Projects</h2>
+            <p class="overview">
+                {@html entryData.about}
+            </p>
+            <div class="org-link-cont">
+                <div class="name">Learn more:</div>
+                <div class="org-link" on:click|stopPropagation="{openOrgEntry}">
+                    <i class="fas fa-external-link-alt"></i>
                 </div>
-                <ul>
-                    {#each entryData.projects as proj}
-                        <li>
-                            <div class="proj-entr">
-                                <div class="name">{proj.name}</div>
-                                <div class="proj-link" on:click|stopPropagation="{() => { linkToProj(proj.linkId); }}">
-                                    <i class="fas fa-link"></i>
-                                </div>
-                            </div>
-                        </li>
-                    {/each }
-                </ul>
             </div>
         </div>
-    {:else}
-        <div class="description">
-            <p>{@html entryData.description}</p>
-        </div>
-    {/if}
+    </div>
 
     <div class="msg">{isLast ? "" : "Scroll to continue..."}</div>
 </div>
 
 <style>
     .orgEntry {
-        width: 100%;
-
+        height: 81%;
+        width: 80%;
         position: absolute;
 
         display: flex;
@@ -99,54 +83,71 @@
         justify-content: center;
         align-items: center;
     }
-    .orgEntry .org-header { font-size: 27px; }
-    .orgEntry .org-header-2 { text-align: center; }
-        
+    .orgEntry .org-header {
+        font-size: 27px;
+    }
     .orgEntry .content-container {
         width: 100%;
+        height: calc(100% - 87px);
         display: grid;
-        grid-template-columns: minmax(400px, 1fr) minmax(400px, 2fr) minmax(200px, 1fr);
+        grid-template-columns: minmax(600px, 3fr) minmax(400px, 2fr);
         column-gap: 14px;
         justify-items: center;
         align-items: center;
     }
-    .orgEntry .content-container :global(img) { width: 80%; height: auto; margin-top: 14px; }
-        
-    .orgEntry .description { width: 100%; margin-top: 14px; font-size: 20px; text-align: center; }
-    .orgEntry .msg { margin-top: 56px; font-size: 24px; }
-    .projects {
-        margin-top: 14px;
+    .orgEntry .content-container .imgs-cont {
         width: 100%;
         height: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+    .orgEntry .content-container .imgs-cont :global(img) {
+        width: 100%;
+        height: 70%;
+        width: auto;
+    }
+    .orgEntry .content-container .org-overview-cont {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+
+        height: 80%;
+    }
+    .orgEntry .content-container .org-overview-cont .overview {
+        width: 100%;
+        margin-top: 14px;
+        font-size: 20px;
+        text-align: center;
+    }
+    .orgEntry .content-container .org-overview-cont .org-link-cont {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    .orgEntry .content-container .org-overview-cont .org-link-cont .name {
+        height: 100%;
+        margin-right: 7px;
         font-size: 20px;
     }
-    .projects ul {
-        width: 100%;
-
-        margin-top: 0px;
-        margin-bottom: 0px;
-    }
-    .projects ul li { width: 100%; }
-    .projects ul li .proj-entr {
-        height: 100%;
-
+    .orgEntry .content-container .org-overview-cont .org-link-cont .org-link {
+        padding-top: 3px;
         display: flex;
         flex-direction: row;
         align-items: center;
-    }
-    .projects ul li .proj-entr .name { margin-right: 7px; }
-
-    .projects ul li .proj-entr .proj-link {
-        height: 100%;
-
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-
         color: var(--highlight);
-
         cursor: pointer;
         font-size: 14px;
     }
-    .projects ul li .proj-entr .proj-link :hover { color: var(--highlight-hover); }
+    .orgEntry .content-container .org-overview-cont .org-link-cont .org-link:hover {
+        color: var(--highlight-hover);
+    }
+    .orgEntry .msg {
+        margin-top: 56px;
+        font-size: 24px;
+    }
 </style>

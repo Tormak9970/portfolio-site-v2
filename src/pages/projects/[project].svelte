@@ -118,17 +118,17 @@
 	}
 	.projEntry .header-cont .cit-cont .cit-label {
 		margin-right: 7px;
-		font-size: 20px;
+		font-size: 16px;
 	}
 	.projEntry .header-cont .cit-cont .proj-link {
 		text-decoration: none;
-		padding-top: 3px;
+		padding-top: 0px;
 		display: flex;
 		flex-direction: row;
 		align-items: center;
 		color: var(--highlight);
 		cursor: pointer;
-		font-size: 14px;
+		font-size: 12px;
 	}
 	.projEntry .header-cont .cit-cont .proj-link:hover { color: var(--highlight-hover); }
 	.projEntry .header-cont .cit-cont .proj-link:focus { color: var(--highlight-hover); }

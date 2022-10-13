@@ -1,11 +1,11 @@
 
 /**
  * @roxi/routify 2.18.3
- * File generated Wed Oct 12 2022 15:10:03 GMT-0400 (Eastern Daylight Time)
+ * File generated Thu Oct 13 2022 09:46:45 GMT-0400 (Eastern Daylight Time)
  */
 
 export const __version = "2.18.3"
-export const __timestamp = "2022-10-12T19:10:03.935Z"
+export const __timestamp = "2022-10-13T13:46:45.495Z"
 
 //buildRoutes
 import { buildClientTree } from "@roxi/routify/runtime/buildRoutes"
@@ -331,6 +331,31 @@ export const _tree = {
       "badExt": false,
       "absolutePath": "C:/Users/Tormak/Documents/GitHub/portfolio-site-v2/src/pages/organizations",
       "children": [
+        {
+          "isFile": true,
+          "isDir": false,
+          "file": "[organization].svelte",
+          "filepath": "/organizations/[organization].svelte",
+          "name": "[organization]",
+          "ext": "svelte",
+          "badExt": false,
+          "absolutePath": "C:/Users/Tormak/Documents/GitHub/portfolio-site-v2/src/pages/organizations/[organization].svelte",
+          "importPath": "../src/pages/organizations/[organization].svelte",
+          "isLayout": false,
+          "isReset": false,
+          "isIndex": false,
+          "isFallback": false,
+          "isPage": true,
+          "ownMeta": {},
+          "meta": {
+            "recursive": true,
+            "preload": false,
+            "prerender": true
+          },
+          "path": "/organizations/:organization",
+          "id": "_organizations__organization",
+          "component": () => import('../src/pages/organizations/[organization].svelte').then(m => m.default)
+        },
         {
           "isFile": true,
           "isDir": false,

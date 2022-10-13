@@ -25,7 +25,8 @@ interface Organization {
     img:string,
     about:string,
     description:string,
-    projects:OrganizationProj[]
+    projects:OrganizationProj[],
+    link:string
 }
 
 interface OrganizationProj {

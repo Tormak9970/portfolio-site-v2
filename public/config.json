@@ -3106,7 +3106,8 @@
 					"name": "Wiki Editor",
 					"linkId": "wiki-editor"
 				}
-			]
+			],
+			"link": "https://swtorslicers.org"
 		},
 		"torcommunity": {
 			"name": "TORCommunity.com",
@@ -3122,7 +3123,8 @@
 					"name": "TORC NPC Viewers",
 					"linkId": "torc-npc-viewers"
 				}
-			]
+			],
+			"link": "https://torcommunity.com"
 		}
 	},
 	"experience": {
