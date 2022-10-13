@@ -48,7 +48,23 @@
             $orientation = newIdx;
         }
     }
+
+    function updateOnResize(e:Event) {
+        const elem = document.getElementById(`${scrollIdx}-jumpNav`);
+        const wrapperDiv = elem?.parentNode;
+        
+        if (wrapperDiv && selInd) {
+            const topPos = window.getComputedStyle(wrapperDiv as HTMLElement).top;
+            const compPos = `${parseFloat(topPos.substring(0, topPos.length-2))+4}px`;
+            
+            if ($orientation == 0) {
+                selInd.style.top = compPos;
+            }
+        }
+    }
 </script>
+
+<svelte:window on:resize="{updateOnResize}" />
 
 <div id="jumpToCont">
     <div class="layout-toggle">
