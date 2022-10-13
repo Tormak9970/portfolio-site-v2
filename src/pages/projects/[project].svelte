@@ -1,13 +1,12 @@
 <script lang="ts">
 	import { url } from '@roxi/routify';
-
 	import edjsHTML from "editorjs-html";
 
 	import { projects } from '../../linkConfig';
 
 	export let project:string;
 
-	let entryData = projects.get(project)
+	let entryData = projects.get(project);
 
 	let isRelative:boolean;
 	$: isRelative = false;
