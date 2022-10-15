@@ -65,14 +65,6 @@
             position: relative;
             overflow-x: hidden;
         }
-        .fancy {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            overflow: hidden;
-        }
         .card {
             display: grid;
             grid-template-columns: repeat(auto-fill, 330px);
