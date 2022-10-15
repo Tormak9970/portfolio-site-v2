@@ -1,11 +1,11 @@
 
 /**
  * @roxi/routify 2.18.3
- * File generated Thu Oct 13 2022 10:19:34 GMT-0400 (Eastern Daylight Time)
+ * File generated Sat Oct 15 2022 15:43:12 GMT-0500 (Central Daylight Time)
  */
 
 export const __version = "2.18.3"
-export const __timestamp = "2022-10-13T14:19:34.793Z"
+export const __timestamp = "2022-10-15T20:43:12.274Z"
 
 //buildRoutes
 import { buildClientTree } from "@roxi/routify/runtime/buildRoutes"
@@ -22,7 +22,7 @@ export const _tree = {
   "filepath": "/_layout.svelte",
   "root": true,
   "ownMeta": {},
-  "absolutePath": "C:/Users/Tormak/Documents/GitHub/portfolio-site-v2/src/pages/_layout.svelte",
+  "absolutePath": "C:/Users/Tormak/Documents/Github/portfolio-site-v2/src/pages/_layout.svelte",
   "children": [
     {
       "isFile": true,
@@ -32,7 +32,7 @@ export const _tree = {
       "name": "_fallback",
       "ext": "svelte",
       "badExt": false,
-      "absolutePath": "C:/Users/Tormak/Documents/GitHub/portfolio-site-v2/src/pages/_fallback.svelte",
+      "absolutePath": "C:/Users/Tormak/Documents/Github/portfolio-site-v2/src/pages/_fallback.svelte",
       "importPath": "../src/pages/_fallback.svelte",
       "isLayout": false,
       "isReset": false,
@@ -57,7 +57,7 @@ export const _tree = {
       "name": "about",
       "ext": "svelte",
       "badExt": false,
-      "absolutePath": "C:/Users/Tormak/Documents/GitHub/portfolio-site-v2/src/pages/about.svelte",
+      "absolutePath": "C:/Users/Tormak/Documents/Github/portfolio-site-v2/src/pages/about.svelte",
       "importPath": "../src/pages/about.svelte",
       "isLayout": false,
       "isReset": false,
@@ -82,7 +82,7 @@ export const _tree = {
       "name": "archive",
       "ext": "",
       "badExt": false,
-      "absolutePath": "C:/Users/Tormak/Documents/GitHub/portfolio-site-v2/src/pages/archive",
+      "absolutePath": "C:/Users/Tormak/Documents/Github/portfolio-site-v2/src/pages/archive",
       "children": [
         {
           "isFile": true,
@@ -92,7 +92,7 @@ export const _tree = {
           "name": "[project]",
           "ext": "svelte",
           "badExt": false,
-          "absolutePath": "C:/Users/Tormak/Documents/GitHub/portfolio-site-v2/src/pages/archive/[project].svelte",
+          "absolutePath": "C:/Users/Tormak/Documents/Github/portfolio-site-v2/src/pages/archive/[project].svelte",
           "importPath": "../src/pages/archive/[project].svelte",
           "isLayout": false,
           "isReset": false,
@@ -117,7 +117,7 @@ export const _tree = {
           "name": "index",
           "ext": "svelte",
           "badExt": false,
-          "absolutePath": "C:/Users/Tormak/Documents/GitHub/portfolio-site-v2/src/pages/archive/index.svelte",
+          "absolutePath": "C:/Users/Tormak/Documents/Github/portfolio-site-v2/src/pages/archive/index.svelte",
           "importPath": "../src/pages/archive/index.svelte",
           "isLayout": false,
           "isReset": false,
@@ -156,7 +156,7 @@ export const _tree = {
       "name": "art",
       "ext": "",
       "badExt": false,
-      "absolutePath": "C:/Users/Tormak/Documents/GitHub/portfolio-site-v2/src/pages/art",
+      "absolutePath": "C:/Users/Tormak/Documents/Github/portfolio-site-v2/src/pages/art",
       "children": [
         {
           "isFile": true,
@@ -166,7 +166,7 @@ export const _tree = {
           "name": "index",
           "ext": "svelte",
           "badExt": false,
-          "absolutePath": "C:/Users/Tormak/Documents/GitHub/portfolio-site-v2/src/pages/art/index.svelte",
+          "absolutePath": "C:/Users/Tormak/Documents/Github/portfolio-site-v2/src/pages/art/index.svelte",
           "importPath": "../src/pages/art/index.svelte",
           "isLayout": false,
           "isReset": false,
@@ -205,7 +205,7 @@ export const _tree = {
       "name": "contact",
       "ext": "svelte",
       "badExt": false,
-      "absolutePath": "C:/Users/Tormak/Documents/GitHub/portfolio-site-v2/src/pages/contact.svelte",
+      "absolutePath": "C:/Users/Tormak/Documents/Github/portfolio-site-v2/src/pages/contact.svelte",
       "importPath": "../src/pages/contact.svelte",
       "isLayout": false,
       "isReset": false,
@@ -230,7 +230,7 @@ export const _tree = {
       "name": "experience",
       "ext": "",
       "badExt": false,
-      "absolutePath": "C:/Users/Tormak/Documents/GitHub/portfolio-site-v2/src/pages/experience",
+      "absolutePath": "C:/Users/Tormak/Documents/Github/portfolio-site-v2/src/pages/experience",
       "children": [
         {
           "isFile": true,
@@ -240,7 +240,7 @@ export const _tree = {
           "name": "index",
           "ext": "svelte",
           "badExt": false,
-          "absolutePath": "C:/Users/Tormak/Documents/GitHub/portfolio-site-v2/src/pages/experience/index.svelte",
+          "absolutePath": "C:/Users/Tormak/Documents/Github/portfolio-site-v2/src/pages/experience/index.svelte",
           "importPath": "../src/pages/experience/index.svelte",
           "isLayout": false,
           "isReset": false,
@@ -279,7 +279,7 @@ export const _tree = {
       "name": "featured",
       "ext": "svelte",
       "badExt": false,
-      "absolutePath": "C:/Users/Tormak/Documents/GitHub/portfolio-site-v2/src/pages/featured.svelte",
+      "absolutePath": "C:/Users/Tormak/Documents/Github/portfolio-site-v2/src/pages/featured.svelte",
       "importPath": "../src/pages/featured.svelte",
       "isLayout": false,
       "isReset": false,
@@ -304,7 +304,7 @@ export const _tree = {
       "name": "index",
       "ext": "svelte",
       "badExt": false,
-      "absolutePath": "C:/Users/Tormak/Documents/GitHub/portfolio-site-v2/src/pages/index.svelte",
+      "absolutePath": "C:/Users/Tormak/Documents/Github/portfolio-site-v2/src/pages/index.svelte",
       "importPath": "../src/pages/index.svelte",
       "isLayout": false,
       "isReset": false,
@@ -329,7 +329,7 @@ export const _tree = {
       "name": "organizations",
       "ext": "",
       "badExt": false,
-      "absolutePath": "C:/Users/Tormak/Documents/GitHub/portfolio-site-v2/src/pages/organizations",
+      "absolutePath": "C:/Users/Tormak/Documents/Github/portfolio-site-v2/src/pages/organizations",
       "children": [
         {
           "isFile": true,
@@ -339,7 +339,7 @@ export const _tree = {
           "name": "[organization]",
           "ext": "svelte",
           "badExt": false,
-          "absolutePath": "C:/Users/Tormak/Documents/GitHub/portfolio-site-v2/src/pages/organizations/[organization].svelte",
+          "absolutePath": "C:/Users/Tormak/Documents/Github/portfolio-site-v2/src/pages/organizations/[organization].svelte",
           "importPath": "../src/pages/organizations/[organization].svelte",
           "isLayout": false,
           "isReset": false,
@@ -364,7 +364,7 @@ export const _tree = {
           "name": "index",
           "ext": "svelte",
           "badExt": false,
-          "absolutePath": "C:/Users/Tormak/Documents/GitHub/portfolio-site-v2/src/pages/organizations/index.svelte",
+          "absolutePath": "C:/Users/Tormak/Documents/Github/portfolio-site-v2/src/pages/organizations/index.svelte",
           "importPath": "../src/pages/organizations/index.svelte",
           "isLayout": false,
           "isReset": false,
@@ -403,7 +403,7 @@ export const _tree = {
       "name": "projects",
       "ext": "",
       "badExt": false,
-      "absolutePath": "C:/Users/Tormak/Documents/GitHub/portfolio-site-v2/src/pages/projects",
+      "absolutePath": "C:/Users/Tormak/Documents/Github/portfolio-site-v2/src/pages/projects",
       "children": [
         {
           "isFile": true,
@@ -413,7 +413,7 @@ export const _tree = {
           "name": "[project]",
           "ext": "svelte",
           "badExt": false,
-          "absolutePath": "C:/Users/Tormak/Documents/GitHub/portfolio-site-v2/src/pages/projects/[project].svelte",
+          "absolutePath": "C:/Users/Tormak/Documents/Github/portfolio-site-v2/src/pages/projects/[project].svelte",
           "importPath": "../src/pages/projects/[project].svelte",
           "isLayout": false,
           "isReset": false,
@@ -438,7 +438,7 @@ export const _tree = {
           "name": "index",
           "ext": "svelte",
           "badExt": false,
-          "absolutePath": "C:/Users/Tormak/Documents/GitHub/portfolio-site-v2/src/pages/projects/index.svelte",
+          "absolutePath": "C:/Users/Tormak/Documents/Github/portfolio-site-v2/src/pages/projects/index.svelte",
           "importPath": "../src/pages/projects/index.svelte",
           "isLayout": false,
           "isReset": false,

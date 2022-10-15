@@ -15,7 +15,6 @@
             setTimeout(() => { jumpToProj(id); }, 10);
         } else {
             $goto('../archive');
-            setTimeout(() => { jumpToArch(id); }, 10);
         }
     }
 </script>
