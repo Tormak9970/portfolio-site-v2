@@ -1,6 +1,6 @@
 <script lang="ts" context="module">
     // svelte-ignore unused-export-let
-    export let jumpTo = (id:string) => {}
+    export let jumpTo = (id:string) => {};
 </script>
 <script lang="ts">
     import { onMount } from "svelte";
