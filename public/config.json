@@ -1,5 +1,183 @@
 {
 	"projects": {
+		"bash-shortcuts": {
+			"category": "steam-deck",
+			"name": "Bash Shortcuts",
+			"time": "16 hours",
+			"status": "In Progress",
+			"difficulty": "Moderate",
+			"description": "Bash Shortcuts is a homebrew plugin for valve's Steam Deck. The main purpose is to make running applications outside of steam games easier by providing a simple way to make your own shortcuts. These are run using Bash and a hidden Steam shortcut.",
+			"content": {
+				"time": 1666360162951,
+				"blocks": [
+					{
+						"id": "TjpRAUaUm6",
+						"type": "header",
+						"data": {
+							"text": "Description",
+							"level": 2
+						}
+					},
+					{
+						"id": "9cS9B0xky_",
+						"type": "paragraph",
+						"data": {
+							"text": "Bash Shortcuts is a homebrew plugin for valve's Steam Deck. The main purpose is to make running applications outside of steam games easier by providing a simple way to make your own shortcuts. These are run using Bash and a hidden Steam shortcut."
+						}
+					},
+					{
+						"id": "jmPLE_6QHX",
+						"type": "paragraph",
+						"data": {
+							"text": "Part of my motivation for purchasing a Steam Deck was that I knew there would be a community development scene around it, so I was happy to contribute to that. It was also a great learning experience as well. I had to use SSH to access my Steam Deck in order to deploy and test the plugin, as well as learn the basics of React."
+						}
+					},
+					{
+						"id": "sxvDf8l7r4",
+						"type": "header",
+						"data": {
+							"text": "Plugin Components",
+							"level": 2
+						}
+					},
+					{
+						"id": "EZX0MFPkqh",
+						"type": "image",
+						"data": {
+							"file": {
+								"url": "./img/projs/Bash Shortcuts -  Main View.png"
+							},
+							"caption": "",
+							"withBorder": false,
+							"stretched": false,
+							"withBackground": false
+						}
+					},
+					{
+						"id": "n2V6u2K0zd",
+						"type": "paragraph",
+						"data": {
+							"text": "The main plugin view allows the user to run their shortcuts as well as manage and manually reload them."
+						}
+					},
+					{
+						"id": "agLNNNB-8h",
+						"type": "image",
+						"data": {
+							"file": {
+								"url": "./img/projs/Bash Shortcuts - Add View.png"
+							},
+							"caption": "",
+							"withBorder": false,
+							"stretched": false,
+							"withBackground": false
+						}
+					},
+					{
+						"id": "YZ0IpTBGPO",
+						"type": "paragraph",
+						"data": {
+							"text": "The add menu allows the user to add their own shortcuts by providing a name and a bash command."
+						}
+					},
+					{
+						"id": "T3FAe5N4H_",
+						"type": "image",
+						"data": {
+							"file": {
+								"url": "./img/projs/Bash Shortcuts - Manage View.png"
+							},
+							"caption": "",
+							"withBorder": false,
+							"stretched": false,
+							"withBackground": false
+						}
+					},
+					{
+						"id": "UCZJMRQBxH",
+						"type": "paragraph",
+						"data": {
+							"text": "The manage view allows users to edit existing shortcuts as well as reorder them. This order will be reflected both here as well as in the main view, allowing users to put their most used shortcuts towards the top."
+						}
+					},
+					{
+						"id": "AH83CWBI2r",
+						"type": "image",
+						"data": {
+							"file": {
+								"url": "./img/projs/Bash Shortcuts Running Shortcut.png"
+							},
+							"caption": "",
+							"withBorder": false,
+							"stretched": false,
+							"withBackground": false
+						}
+					},
+					{
+						"id": "cakBWHEbRm",
+						"type": "paragraph",
+						"data": {
+							"text": "Once the user runs a shortcut, it will be launched full screen. When they decide they are done they can either quit using Steam's menu, or using the custom 'Close Shortcut' button in the plugin."
+						}
+					},
+					{
+						"id": "pMslBBxQuQ",
+						"type": "header",
+						"data": {
+							"text": "Reasons",
+							"level": 2
+						}
+					},
+					{
+						"id": "ARKbZcY66x",
+						"type": "list",
+						"data": {
+							"style": "unordered",
+							"items": [
+								{
+									"content": "Wanted to contribute to the Steam Deck homebrew community",
+									"items": []
+								},
+								{
+									"content": "Wanted an easier way to launch applications from SteamOS",
+									"items": []
+								}
+							]
+						}
+					},
+					{
+						"id": "2MadWlCVyn",
+						"type": "header",
+						"data": {
+							"text": "Takeaways",
+							"level": 2
+						}
+					},
+					{
+						"id": "j9sfDP4lZr",
+						"type": "list",
+						"data": {
+							"style": "unordered",
+							"items": [
+								{
+									"content": "Learned how to use SSH",
+									"items": []
+								},
+								{
+									"content": "Familiarized myself with the basics of React",
+									"items": []
+								}
+							]
+						}
+					}
+				],
+				"version": "2.24.3"
+			},
+			"link": "https://github.com/Tormak9970/bash-shortcuts",
+			"isRelative": false,
+			"img": "./img/projs/Bash Shortcuts -  Main View.png",
+			"org": "none"
+		},
 		"slicers-gui": {
 			"category": "software-engineering",
 			"name": "Slicers GUI",
