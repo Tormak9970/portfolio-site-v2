@@ -1535,7 +1535,7 @@
 			"difficulty": "Moderate",
 			"description": "This project is the website you are currently on. It is a replacement for my previous portfolio website, which I had not been keeping up to date. I decided to remake it from scratch using Svelte, TypeScript, and SASS (later removed), all of which are awesome frameworks I have wanted to learn for a while.",
 			"content": {
-				"time": 1666463718664,
+				"time": 1666465565621,
 				"blocks": [
 					{
 						"id": "EHEWUSDdP5",
@@ -1550,6 +1550,47 @@
 						"type": "paragraph",
 						"data": {
 							"text": "This project is the website you are currently on. It is a replacement for my previous portfolio website, which I had not been keeping up to date. I decided to remake it from scratch using Svelte, TypeScript, and SASS (later removed), all of which are awesome frameworks I have wanted to learn for a while."
+						}
+					},
+					{
+						"id": "ot3gQL5aAL",
+						"type": "header",
+						"data": {
+							"text": "Update 3.0",
+							"level": 2
+						}
+					},
+					{
+						"id": "apgMEblnTs",
+						"type": "list",
+						"data": {
+							"style": "unordered",
+							"items": [
+								{
+									"content": "Changed Organizations to have a smaller preview and their own page with more details. This helps improve the layout, especially on smaller devices phones.",
+									"items": []
+								},
+								{
+									"content": "Split projects into \"Projects\" and \"Archive\". This allows the projects page to show of my newest/most noteworthy projects, while still allowing me to share my less impressive projects.",
+									"items": []
+								},
+								{
+									"content": "Fixed position of the jump nav stop getting messed up on window resize",
+									"items": []
+								},
+								{
+									"content": "Fixed relative paths for images breaking pages when navigating to a sub URL",
+									"items": []
+								},
+								{
+									"content": "Added a custom 404 fallback page",
+									"items": []
+								},
+								{
+									"content": "Changed all sections to be sorted by most recent entry",
+									"items": []
+								}
+							]
 						}
 					},
 					{
