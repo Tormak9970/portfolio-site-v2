@@ -902,12 +902,12 @@
 		"portfolio-v2": {
 			"category": "web-dev",
 			"name": "Portfolio V2",
-			"time": "50 hours",
+			"time": "60 hours",
 			"status": "Complete (continually updated)",
 			"difficulty": "Moderate",
 			"description": "This project is the website you are currently on. It is a replacement for my previous portfolio website, which I had not been keeping up to date. I decided to remake it from scratch using Svelte, TypeScript, and SASS (later removed), all of which are awesome frameworks I have wanted to learn for a while.",
 			"content": {
-				"time": 1662555872662,
+				"time": 1666463718664,
 				"blocks": [
 					{
 						"id": "EHEWUSDdP5",
@@ -1570,12 +1570,12 @@
 		"portfolio-updater": {
 			"category": "software-engineering",
 			"name": "Portfolio Updater",
-			"time": "36 hours",
+			"time": "50 hours",
 			"status": "Complete",
 			"difficulty": "Moderate",
 			"description": "Initially, this project was going to be written using the Electron framework, but right around when I started it, I heard about Tauri. Tauri is great because it allows you to build more secure apps with smaller bundle sizes, and has a better developer experience then Electron. The app itself makes updating my portfolio easy and straightforward, allowing me to focus more on my projects.",
 			"content": {
-				"time": 1653781613579,
+				"time": 1666463685353,
 				"blocks": [
 					{
 						"id": "mGX3WmsU_L",
@@ -1590,6 +1590,39 @@
 						"type": "paragraph",
 						"data": {
 							"text": "Initially, this project was going to be written using the Electron framework, but right around when I started it, I heard about Tauri. Tauri is great because it allows you to build more secure apps with smaller bundle sizes, and has a better developer experience then Electron. The app itself makes updating my portfolio easy and straightforward, allowing me to focus more on my projects."
+						}
+					},
+					{
+						"id": "GgPP4taLLc",
+						"type": "header",
+						"data": {
+							"text": "Version 1.2.2",
+							"level": 2
+						}
+					},
+					{
+						"id": "E-oQ4QDwfj",
+						"type": "list",
+						"data": {
+							"style": "unordered",
+							"items": [
+								{
+									"content": "Added support for new portfolio data structure",
+									"items": []
+								},
+								{
+									"content": "Added buttons for archive management",
+									"items": []
+								},
+								{
+									"content": "Fixed old issue with org keys not being lower case",
+									"items": []
+								},
+								{
+									"content": "Fixed issue with project's org prop not being updated when added to an Organization's projects list",
+									"items": []
+								}
+							]
 						}
 					},
 					{
