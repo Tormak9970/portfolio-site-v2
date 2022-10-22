@@ -317,6 +317,89 @@
 			"img": "./img/projs/Slicers GUI.png",
 			"org": "swtor-slicers"
 		},
+		"decky-frontend-lib": {
+			"category": "steam-deck",
+			"name": "Decky Frontend Lib",
+			"time": "6 hours",
+			"status": "In Progress",
+			"difficulty": "Simple",
+			"description": "The Decky Frontend Lib is a library with reversed engineered UI components, custom components and utility classes. The library helps plugin developers integrate their plugins seamlessly with Valve's react UI, and modify css styles without affecting the regular UI.",
+			"content": {
+				"time": 1666461559799,
+				"blocks": [
+					{
+						"id": "lAVCthO1td",
+						"type": "header",
+						"data": {
+							"text": "Description",
+							"level": 2
+						}
+					},
+					{
+						"id": "vc4JYLLrvS",
+						"type": "paragraph",
+						"data": {
+							"text": "The Decky Frontend Lib is a library with reversed engineered UI components, custom components and utility classes. The library helps plugin developers integrate their plugins seamlessly with Valve's react UI, and modify css styles without affecting the regular UI."
+						}
+					},
+					{
+						"id": "AMb_eC9-kr",
+						"type": "header",
+						"data": {
+							"text": "Reasons",
+							"level": 2
+						}
+					},
+					{
+						"id": "UMY1MXQSOi",
+						"type": "list",
+						"data": {
+							"style": "unordered",
+							"items": [
+								{
+									"content": "Wanted to fix bugs I encountered",
+									"items": []
+								},
+								{
+									"content": "Wanted to add features I had discovered",
+									"items": []
+								},
+								{
+									"content": "Wanted to contribute to SDH",
+									"items": []
+								}
+							]
+						}
+					},
+					{
+						"id": "gG-wf_ZTmW",
+						"type": "header",
+						"data": {
+							"text": "Takeaways",
+							"level": 2
+						}
+					},
+					{
+						"id": "sdDs1ClfLh",
+						"type": "list",
+						"data": {
+							"style": "unordered",
+							"items": [
+								{
+									"content": "Learned how to use the Remote React Debugger",
+									"items": []
+								}
+							]
+						}
+					}
+				],
+				"version": "2.24.3"
+			},
+			"link": "https://github.com/SteamDeckHomebrew/decky-frontend-lib",
+			"isRelative": false,
+			"img": "./img/projs/Decky-frontend-lib.png",
+			"org": "steam-deck-homebrew"
+		},
 		"torc-character-designer": {
 			"category": "web-dev",
 			"name": "TORC Character Designer",
@@ -1878,89 +1961,6 @@
 			"link": "https://github.com/Tormak9970/SteamDeckThemes",
 			"isRelative": false,
 			"img": "./img/projs/SteamDeckU.png",
-			"org": "steam-deck-homebrew"
-		},
-		"decky-frontend-lib": {
-			"category": "steam-deck",
-			"name": "Decky Frontend Lib",
-			"time": "6 hours",
-			"status": "In Progress",
-			"difficulty": "Simple",
-			"description": "The Decky Frontend Lib is a library with reversed engineered UI components, custom components and utility classes. The library helps plugin developers integrate their plugins seamlessly with Valve's react UI, and modify css styles without affecting the regular UI.",
-			"content": {
-				"time": 1666461559799,
-				"blocks": [
-					{
-						"id": "lAVCthO1td",
-						"type": "header",
-						"data": {
-							"text": "Description",
-							"level": 2
-						}
-					},
-					{
-						"id": "vc4JYLLrvS",
-						"type": "paragraph",
-						"data": {
-							"text": "The Decky Frontend Lib is a library with reversed engineered UI components, custom components and utility classes. The library helps plugin developers integrate their plugins seamlessly with Valve's react UI, and modify css styles without affecting the regular UI."
-						}
-					},
-					{
-						"id": "AMb_eC9-kr",
-						"type": "header",
-						"data": {
-							"text": "Reasons",
-							"level": 2
-						}
-					},
-					{
-						"id": "UMY1MXQSOi",
-						"type": "list",
-						"data": {
-							"style": "unordered",
-							"items": [
-								{
-									"content": "Wanted to fix bugs I encountered",
-									"items": []
-								},
-								{
-									"content": "Wanted to add features I had discovered",
-									"items": []
-								},
-								{
-									"content": "Wanted to contribute to SDH",
-									"items": []
-								}
-							]
-						}
-					},
-					{
-						"id": "gG-wf_ZTmW",
-						"type": "header",
-						"data": {
-							"text": "Takeaways",
-							"level": 2
-						}
-					},
-					{
-						"id": "sdDs1ClfLh",
-						"type": "list",
-						"data": {
-							"style": "unordered",
-							"items": [
-								{
-									"content": "Learned how to use the Remote React Debugger",
-									"items": []
-								}
-							]
-						}
-					}
-				],
-				"version": "2.24.3"
-			},
-			"link": "https://github.com/SteamDeckHomebrew/decky-frontend-lib",
-			"isRelative": false,
-			"img": "./img/projs/Decky-frontend-lib.png",
 			"org": "steam-deck-homebrew"
 		}
 	},
