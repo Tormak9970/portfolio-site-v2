@@ -176,7 +176,7 @@
 			"link": "https://github.com/Tormak9970/bash-shortcuts",
 			"isRelative": false,
 			"img": "./img/projs/Bash Shortcuts -  Main View.png",
-			"org": "none"
+			"org": "steam-deck-homebrew"
 		},
 		"slicers-gui": {
 			"category": "software-engineering",
@@ -1878,7 +1878,90 @@
 			"link": "https://github.com/Tormak9970/SteamDeckThemes",
 			"isRelative": false,
 			"img": "./img/projs/SteamDeckU.png",
-			"org": "none"
+			"org": "steam-deck-homebrew"
+		},
+		"decky-frontend-lib": {
+			"category": "steam-deck",
+			"name": "Decky Frontend Lib",
+			"time": "6 hours",
+			"status": "In Progress",
+			"difficulty": "Simple",
+			"description": "The Decky Frontend Lib is a library with reversed engineered UI components, custom components and utility classes. The library helps plugin developers integrate their plugins seamlessly with Valve's react UI, and modify css styles without affecting the regular UI.",
+			"content": {
+				"time": 1666461559799,
+				"blocks": [
+					{
+						"id": "lAVCthO1td",
+						"type": "header",
+						"data": {
+							"text": "Description",
+							"level": 2
+						}
+					},
+					{
+						"id": "vc4JYLLrvS",
+						"type": "paragraph",
+						"data": {
+							"text": "The Decky Frontend Lib is a library with reversed engineered UI components, custom components and utility classes. The library helps plugin developers integrate their plugins seamlessly with Valve's react UI, and modify css styles without affecting the regular UI."
+						}
+					},
+					{
+						"id": "AMb_eC9-kr",
+						"type": "header",
+						"data": {
+							"text": "Reasons",
+							"level": 2
+						}
+					},
+					{
+						"id": "UMY1MXQSOi",
+						"type": "list",
+						"data": {
+							"style": "unordered",
+							"items": [
+								{
+									"content": "Wanted to fix bugs I encountered",
+									"items": []
+								},
+								{
+									"content": "Wanted to add features I had discovered",
+									"items": []
+								},
+								{
+									"content": "Wanted to contribute to SDH",
+									"items": []
+								}
+							]
+						}
+					},
+					{
+						"id": "gG-wf_ZTmW",
+						"type": "header",
+						"data": {
+							"text": "Takeaways",
+							"level": 2
+						}
+					},
+					{
+						"id": "sdDs1ClfLh",
+						"type": "list",
+						"data": {
+							"style": "unordered",
+							"items": [
+								{
+									"content": "Learned how to use the Remote React Debugger",
+									"items": []
+								}
+							]
+						}
+					}
+				],
+				"version": "2.24.3"
+			},
+			"link": "https://github.com/SteamDeckHomebrew/decky-frontend-lib",
+			"isRelative": false,
+			"img": "./img/projs/Decky-frontend-lib.png",
+			"org": "steam-deck-homebrew"
 		}
 	},
 	"archive": {
@@ -3303,6 +3386,27 @@
 				}
 			],
 			"link": "https://torcommunity.com"
+		},
+		"steam-deck-homebrew": {
+			"name": "Steam Deck Homebrew",
+			"img": "./img/projs/logo.png",
+			"about": "Steam Deck Homebrew (SDH) is a group of programmers, designers and more whose goal is to bring awesome new functionality to the Steam Deck.",
+			"description": "My involvement with SDH started when I came across the Decky Plugin Loader. Since then I have published my own plugin and contributed to the reverse engineered UI components the organization uses",
+			"projects": [
+				{
+					"name": "Decky Frontend Lib",
+					"linkId": "decky-frontend-lib"
+				},
+				{
+					"name": "Bash Shortcuts",
+					"linkId": "bash-shortcuts"
+				},
+				{
+					"name": "SteamDeck U",
+					"linkId": "steamdeck-u"
+				}
+			],
+			"link": "https://github.com/SteamDeckHomebrew"
 		}
 	},
 	"experience": {
@@ -3339,11 +3443,6 @@
 			"name": "Let the Wookie Win",
 			"img": "./img/art pieces/Let the Wookie Win Final.png",
 			"description": "If you are a Star Wars fan you may recognize the name of this piece. It was inspired by a scene from Star Wars IV: A New Hope."
-		},
-		"the-gathering-storm": {
-			"name": "The Gathering Storm",
-			"img": "./img/art pieces/Eye of the Gathering Storm Final.png",
-			"description": "This is a piece inspired by artwork I saw online years ago. It is a sorcerer summoning a storm around himself."
 		},
 		"vault-hunter-neon": {
 			"name": "Vault Hunter Neon",
