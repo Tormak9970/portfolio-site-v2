@@ -95,8 +95,8 @@
     });
 
     onMount(() => {
-        Array.from(art).map(processEntries);
-        pieces = [...pieces].reverse();
+        Array.from(art).reverse().map(processEntries);
+        pieces = [...pieces];
     });
 </script>
 

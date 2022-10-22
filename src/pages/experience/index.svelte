@@ -72,8 +72,8 @@
     });
 
     onMount(() => {
-        Array.from(experience).map(processEntries);
-        pieces = [...pieces].reverse();
+        Array.from(experience).reverse().map(processEntries);
+        pieces = [...pieces];
     });
 </script>
 
