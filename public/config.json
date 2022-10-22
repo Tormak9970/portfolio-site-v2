@@ -1,17 +1,17 @@
 {
 	"projects": {
-		"bash-shortcuts": {
+		"steamdeck-u": {
 			"category": "steam-deck",
-			"name": "Bash Shortcuts",
-			"time": "16 hours",
-			"status": "In Progress",
-			"difficulty": "Moderate",
-			"description": "Bash Shortcuts is a homebrew plugin for valve's Steam Deck. The main purpose is to make running applications outside of steam games easier by providing a simple way to make your own shortcuts. These are run using Bash and a hidden Steam shortcut.",
+			"name": "SteamDeck U",
+			"time": "3 hours",
+			"status": "Complete",
+			"difficulty": "Simple",
+			"description": "This project is a custom theme for Valve's Steam Deck. It uses a homebrew plugin for injecting CSS to provide users with options to customize each part of their keyboard. The reason I started this project is because Valve offers keyboard themes, but the selection is limited and they only work online.",
 			"content": {
-				"time": 1666360162951,
+				"time": 1664544959411,
 				"blocks": [
 					{
-						"id": "TjpRAUaUm6",
+						"id": "nZjfcxUvB2",
 						"type": "header",
 						"data": {
 							"text": "Description",
@@ -19,109 +19,14 @@
 						}
 					},
 					{
-						"id": "9cS9B0xky_",
+						"id": "xPDAeM17W0",
 						"type": "paragraph",
 						"data": {
-							"text": "Bash Shortcuts is a homebrew plugin for valve's Steam Deck. The main purpose is to make running applications outside of steam games easier by providing a simple way to make your own shortcuts. These are run using Bash and a hidden Steam shortcut."
+							"text": "This project is a custom theme for Valve's Steam Deck. It uses a homebrew plugin for injecting CSS to provide users with options to customize each part of their keyboard. The reason I started this project is because Valve offers keyboard themes, but the selection is limited and they only work online."
 						}
 					},
 					{
-						"id": "jmPLE_6QHX",
-						"type": "paragraph",
-						"data": {
-							"text": "Part of my motivation for purchasing a Steam Deck was that I knew there would be a community development scene around it, so I was happy to contribute to that. It was also a great learning experience as well. I had to use SSH to access my Steam Deck in order to deploy and test the plugin, as well as learn the basics of React."
-						}
-					},
-					{
-						"id": "sxvDf8l7r4",
-						"type": "header",
-						"data": {
-							"text": "Plugin Components",
-							"level": 2
-						}
-					},
-					{
-						"id": "EZX0MFPkqh",
-						"type": "image",
-						"data": {
-							"file": {
-								"url": "./img/projs/Bash Shortcuts -  Main View.png"
-							},
-							"caption": "",
-							"withBorder": false,
-							"stretched": false,
-							"withBackground": false
-						}
-					},
-					{
-						"id": "n2V6u2K0zd",
-						"type": "paragraph",
-						"data": {
-							"text": "The main plugin view allows the user to run their shortcuts as well as manage and manually reload them."
-						}
-					},
-					{
-						"id": "agLNNNB-8h",
-						"type": "image",
-						"data": {
-							"file": {
-								"url": "./img/projs/Bash Shortcuts - Add View.png"
-							},
-							"caption": "",
-							"withBorder": false,
-							"stretched": false,
-							"withBackground": false
-						}
-					},
-					{
-						"id": "YZ0IpTBGPO",
-						"type": "paragraph",
-						"data": {
-							"text": "The add menu allows the user to add their own shortcuts by providing a name and a bash command."
-						}
-					},
-					{
-						"id": "T3FAe5N4H_",
-						"type": "image",
-						"data": {
-							"file": {
-								"url": "./img/projs/Bash Shortcuts - Manage View.png"
-							},
-							"caption": "",
-							"withBorder": false,
-							"stretched": false,
-							"withBackground": false
-						}
-					},
-					{
-						"id": "UCZJMRQBxH",
-						"type": "paragraph",
-						"data": {
-							"text": "The manage view allows users to edit existing shortcuts as well as reorder them. This order will be reflected both here as well as in the main view, allowing users to put their most used shortcuts towards the top."
-						}
-					},
-					{
-						"id": "AH83CWBI2r",
-						"type": "image",
-						"data": {
-							"file": {
-								"url": "./img/projs/Bash Shortcuts Running Shortcut.png"
-							},
-							"caption": "",
-							"withBorder": false,
-							"stretched": false,
-							"withBackground": false
-						}
-					},
-					{
-						"id": "cakBWHEbRm",
-						"type": "paragraph",
-						"data": {
-							"text": "Once the user runs a shortcut, it will be launched full screen. When they decide they are done they can either quit using Steam's menu, or using the custom 'Close Shortcut' button in the plugin."
-						}
-					},
-					{
-						"id": "pMslBBxQuQ",
+						"id": "mXmVM7rad_",
 						"type": "header",
 						"data": {
 							"text": "Reasons",
@@ -129,24 +34,28 @@
 						}
 					},
 					{
-						"id": "ARKbZcY66x",
+						"id": "xevYl-aYqV",
 						"type": "list",
 						"data": {
 							"style": "unordered",
 							"items": [
 								{
-									"content": "Wanted to contribute to the Steam Deck homebrew community",
+									"content": "Wanted to contribute to the homebrew Steam Deck community",
 									"items": []
 								},
 								{
-									"content": "Wanted an easier way to launch applications from SteamOS",
+									"content": "Wanted a more customizable alternative to the existing keyboards",
+									"items": []
+								},
+								{
+									"content": "Wanted customizable keyboards that worked offline",
 									"items": []
 								}
 							]
 						}
 					},
 					{
-						"id": "2MadWlCVyn",
+						"id": "KgQPukLNZY",
 						"type": "header",
 						"data": {
 							"text": "Takeaways",
@@ -154,17 +63,17 @@
 						}
 					},
 					{
-						"id": "j9sfDP4lZr",
+						"id": "qXVdi9yViM",
 						"type": "list",
 						"data": {
 							"style": "unordered",
 							"items": [
 								{
-									"content": "Learned how to use SSH",
+									"content": "Came up with a unique idea for the homebrew community",
 									"items": []
 								},
 								{
-									"content": "Familiarized myself with the basics of React",
+									"content": "Created a highly customizable keyboard that also works offline",
 									"items": []
 								}
 							]
@@ -173,23 +82,130 @@
 				],
 				"version": "2.24.3"
 			},
-			"link": "https://github.com/Tormak9970/bash-shortcuts",
+			"link": "https://github.com/Tormak9970/SteamDeckThemes",
 			"isRelative": false,
-			"img": "./img/projs/Bash Shortcuts -  Main View.png",
+			"img": "./img/projs/SteamDeckU.png",
 			"org": "steam-deck-homebrew"
 		},
-		"slicers-gui": {
+		"marching-squares": {
+			"category": "blender",
+			"name": "Marching Squares",
+			"time": "14 hrs",
+			"status": "Complete",
+			"difficulty": "Moderate",
+			"description": "The goal of this project was to recreate the Marching Squares algorithm in blender. Marching Squares is a well known computer graphics algorithm used to generate procedural patterns for a multitude of uses, such as terrain in game design.",
+			"content": {
+				"time": 1657914802466,
+				"blocks": [
+					{
+						"id": "GFzO54o7BQ",
+						"type": "header",
+						"data": {
+							"text": "Description",
+							"level": 2
+						}
+					},
+					{
+						"id": "Ptw2MUCPEY",
+						"type": "paragraph",
+						"data": {
+							"text": "The goal of this project was to recreate the Marching Squares algorithm in blender. Marching Squares is a well known computer graphics algorithm used to generate procedural patterns for a multitude of uses, such as terrain in game design."
+						}
+					},
+					{
+						"id": "VbytCdOa6Q",
+						"type": "header",
+						"data": {
+							"text": "More Info",
+							"level": 2
+						}
+					},
+					{
+						"id": "oNGk8ZK9PK",
+						"type": "paragraph",
+						"data": {
+							"text": "While it may not be very complicated to create marching squares through programming, Blender's Geometry Nodes are another story entirely. Because of how geometry nodes work, there is no looping or re-using data in the typical programming sense. Data is, in most cases, computed based on where it is called from (more info can be found about that <a target=\"_blank\" rel=\"noreferrer noopener\" href=\"https://docs.blender.org/manual/en/latest/modeling/geometry_nodes/fields.html\">here</a>). This made recreating marching squares significantly more complicated. The image below is what the logic for this project looks like (normally I use node groups to make working on it possible, this is what it looks like without them):"
+						}
+					},
+					{
+						"id": "1L2CMoEKDp",
+						"type": "image",
+						"data": {
+							"file": {
+								"url": "./img/projs/Marching Squares inner.png"
+							},
+							"caption": "",
+							"withBorder": false,
+							"stretched": false,
+							"withBackground": false
+						}
+					},
+					{
+						"id": "qLwVgR_0xk",
+						"type": "header",
+						"data": {
+							"text": "Reasons",
+							"level": 2
+						}
+					},
+					{
+						"id": "EDSYKuORGB",
+						"type": "list",
+						"data": {
+							"style": "unordered",
+							"items": [
+								{
+									"content": "Wanted to create a geometry nodes implementation of marching squares",
+									"items": []
+								}
+							]
+						}
+					},
+					{
+						"id": "Ne9x4Lvo6L",
+						"type": "header",
+						"data": {
+							"text": "Takeaways",
+							"level": 2
+						}
+					},
+					{
+						"id": "0ug6cJpzz3",
+						"type": "list",
+						"data": {
+							"style": "unordered",
+							"items": [
+								{
+									"content": "Gained a better understanding of how to solve problems with geometry nodes",
+									"items": []
+								},
+								{
+									"content": "Have a better understanding of how geometry nodes work internally",
+									"items": []
+								}
+							]
+						}
+					}
+				],
+				"version": "2.24.3"
+			},
+			"link": "https://github.com/Tormak9970/blender-projects",
+			"isRelative": false,
+			"img": "./img/projs/Marching Squares in Blender.png",
+			"org": "none"
+		},
+		"portfolio-updater": {
 			"category": "software-engineering",
-			"name": "Slicers GUI",
-			"time": "420+ hours",
-			"status": "In progress (Beta)",
-			"difficulty": "Complexed",
-			"description": "This is by far the project I am the most proud of. It is the culmination of a lot of work by both me and the SWTOR Slicers community, and the result is a truly unique piece of software that serves its purpose well. The idea behind making it was to optimize and improve all existing tools, and bundle them all into one cohesive, fully customizable application.",
+			"name": "Portfolio Updater",
+			"time": "50 hours",
+			"status": "Complete",
+			"difficulty": "Moderate",
+			"description": "Initially, this project was going to be written using the Electron framework, but right around when I started it, I heard about Tauri. Tauri is great because it allows you to build more secure apps with smaller bundle sizes, and has a better developer experience then Electron. The app itself makes updating my portfolio easy and straightforward, allowing me to focus more on my projects.",
 			"content": {
-				"time": 1664306704970,
+				"time": 1666463685353,
 				"blocks": [
 					{
-						"id": "6rSLg_atGs",
+						"id": "mGX3WmsU_L",
 						"type": "header",
 						"data": {
 							"text": "Description",
@@ -197,39 +213,47 @@
 						}
 					},
 					{
-						"id": "Lx6r8GlO94",
+						"id": "Sw2-lnOmFJ",
 						"type": "paragraph",
 						"data": {
-							"text": "This is by far the project I am the most proud of. It is the culmination of a lot of work by both me and the SWTOR Slicers community, and the result is a truly unique piece of software that serves its purpose well. The idea behind making it was to optimize and improve all existing tools, and bundle them all into one cohesive, fully customizable application."
+							"text": "Initially, this project was going to be written using the Electron framework, but right around when I started it, I heard about Tauri. Tauri is great because it allows you to build more secure apps with smaller bundle sizes, and has a better developer experience then Electron. The app itself makes updating my portfolio easy and straightforward, allowing me to focus more on my projects."
 						}
 					},
 					{
-						"id": "5rNtDDFBGz",
+						"id": "GgPP4taLLc",
 						"type": "header",
 						"data": {
-							"text": "Updates",
+							"text": "Version 1.2.2",
 							"level": 2
 						}
 					},
 					{
-						"id": "RseKw1a0eq",
+						"id": "E-oQ4QDwfj",
 						"type": "list",
 						"data": {
 							"style": "unordered",
 							"items": [
 								{
-									"content": "Switched locator to NPM package",
+									"content": "Added support for new portfolio data structure",
 									"items": []
 								},
 								{
-									"content": "Added support for all SWTOR NPC types",
+									"content": "Added buttons for archive management",
+									"items": []
+								},
+								{
+									"content": "Fixed old issue with org keys not being lower case",
+									"items": []
+								},
+								{
+									"content": "Fixed issue with project's org prop not being updated when added to an Organization's projects list",
 									"items": []
 								}
 							]
 						}
 					},
 					{
-						"id": "rCYqP-GvHT",
+						"id": "uTV1I6vgqh",
 						"type": "header",
 						"data": {
 							"text": "Reasons",
@@ -237,28 +261,28 @@
 						}
 					},
 					{
-						"id": "hPvtdTw4mr",
+						"id": "VCn01A58rk",
 						"type": "list",
 						"data": {
 							"style": "unordered",
 							"items": [
 								{
-									"content": "I wanted to make an application, because I had never done that before",
+									"content": "Wanted to rework the structure of my portfolio",
 									"items": []
 								},
 								{
-									"content": "I was sick of all the default C# UIs on the existing tools",
+									"content": "Wanted to streamline the process of updating my portfolio",
 									"items": []
 								},
 								{
-									"content": "I wanted to make improvements to a lot of the existing tools because they were not nearly as efficient as the could be",
+									"content": "Wanted to learn how to use the Tauri framework",
 									"items": []
 								}
 							]
 						}
 					},
 					{
-						"id": "AYxAPU5RS0",
+						"id": "RKQSFtpQz_",
 						"type": "header",
 						"data": {
 							"text": "Takeaways",
@@ -266,556 +290,46 @@
 						}
 					},
 					{
-						"id": "16uDzqC2VL",
+						"id": "NlLvb9jqp4",
 						"type": "list",
 						"data": {
 							"style": "unordered",
 							"items": [
 								{
-									"content": "How to make apps using the Electron.js framework",
+									"content": "I now have a small tool that makes it very easy to keep my portfolio up to date",
 									"items": []
 								},
 								{
-									"content": "The GO programming language",
+									"content": "Was able to rework the structure of my portfolio into a more intuitive form",
 									"items": []
 								},
 								{
-									"content": "How to write native code and run it in process using Edge.js",
-									"items": []
-								},
-								{
-									"content": "How to take advantage of offloading tasks to web workers",
-									"items": []
-								},
-								{
-									"content": "How to effectively run a beta test and implement user feedback",
-									"items": []
-								},
-								{
-									"content": "How to create a good UX (user experience)",
-									"items": []
-								},
-								{
-									"content": "How to effectively pass data between different parts of an application, without compromising on performance",
+									"content": "Got to learn the basics of the Tauri framework",
 									"items": []
 								}
 							]
-						}
-					},
-					{
-						"id": "BIIC3nLKZ6",
-						"type": "paragraph",
-						"data": {
-							"text": "This is a long term project, so I am sure I will continue to learn from it"
 						}
 					}
 				],
 				"version": "2.24.3"
 			},
-			"link": "https://github.com/SWTOR-Slicers/Slicers-GUI",
+			"link": "https://github.com/Tormak9970/portfolio-updater",
 			"isRelative": false,
-			"img": "./img/projs/Slicers GUI.png",
-			"org": "swtor-slicers"
+			"img": "./img/projs/portfolio-updater.png",
+			"org": "none"
 		},
-		"decky-frontend-lib": {
-			"category": "steam-deck",
-			"name": "Decky Frontend Lib",
+		"tweakpane-gradient-plugin": {
+			"category": "web-dev",
+			"name": "Tweakpane Gradient Plugin",
 			"time": "6 hours",
-			"status": "In Progress",
-			"difficulty": "Simple",
-			"description": "The Decky Frontend Lib is a library with reversed engineered UI components, custom components and utility classes. The library helps plugin developers integrate their plugins seamlessly with Valve's react UI, and modify css styles without affecting the regular UI.",
-			"content": {
-				"time": 1666461559799,
-				"blocks": [
-					{
-						"id": "lAVCthO1td",
-						"type": "header",
-						"data": {
-							"text": "Description",
-							"level": 2
-						}
-					},
-					{
-						"id": "vc4JYLLrvS",
-						"type": "paragraph",
-						"data": {
-							"text": "The Decky Frontend Lib is a library with reversed engineered UI components, custom components and utility classes. The library helps plugin developers integrate their plugins seamlessly with Valve's react UI, and modify css styles without affecting the regular UI."
-						}
-					},
-					{
-						"id": "AMb_eC9-kr",
-						"type": "header",
-						"data": {
-							"text": "Reasons",
-							"level": 2
-						}
-					},
-					{
-						"id": "UMY1MXQSOi",
-						"type": "list",
-						"data": {
-							"style": "unordered",
-							"items": [
-								{
-									"content": "Wanted to fix bugs I encountered",
-									"items": []
-								},
-								{
-									"content": "Wanted to add features I had discovered",
-									"items": []
-								},
-								{
-									"content": "Wanted to contribute to SDH",
-									"items": []
-								}
-							]
-						}
-					},
-					{
-						"id": "gG-wf_ZTmW",
-						"type": "header",
-						"data": {
-							"text": "Takeaways",
-							"level": 2
-						}
-					},
-					{
-						"id": "sdDs1ClfLh",
-						"type": "list",
-						"data": {
-							"style": "unordered",
-							"items": [
-								{
-									"content": "Learned how to use the Remote React Debugger",
-									"items": []
-								}
-							]
-						}
-					}
-				],
-				"version": "2.24.3"
-			},
-			"link": "https://github.com/SteamDeckHomebrew/decky-frontend-lib",
-			"isRelative": false,
-			"img": "./img/projs/Decky-frontend-lib.png",
-			"org": "steam-deck-homebrew"
-		},
-		"torc-character-designer": {
-			"category": "web-dev",
-			"name": "TORC Character Designer",
-			"time": "350+ hours",
-			"status": "In progress (stable)",
-			"difficulty": "Complexed",
-			"description": "This is one of my favorite projects. It is an external character creator and outfit designer for Star Wars The Old Republic. I really love this game and the community, and wanted to do something everyone could use and enjoy. It is very complexed, and I had to learn a lot of new topics and skills while working on it. I'm also very proud of it since it is the first tool of its kind made by anyone, ever, and that required me to solve a lot of problems no one else has done  before.",
-			"content": {
-				"time": 1653787269301,
-				"blocks": [
-					{
-						"id": "Hr1P2ZVs1P",
-						"type": "header",
-						"data": {
-							"text": "Description",
-							"level": 2
-						}
-					},
-					{
-						"id": "Z_ibVmilFC",
-						"type": "paragraph",
-						"data": {
-							"text": "This is one of my favorite projects. It is an external character creator and outfit designer for Star Wars The Old Republic. I really love this game and the community, and wanted to do something everyone could use and enjoy. It is very complexed, and I had to learn a lot of new topics and skills while working on it. I'm also very proud of it since it is the first tool of its kind made by anyone, ever, and that required me to solve a lot of problems no one else has done  before."
-						}
-					},
-					{
-						"id": "7wGwqDv3JP",
-						"type": "header",
-						"data": {
-							"text": "Reasons",
-							"level": 2
-						}
-					},
-					{
-						"id": "GIJaPDViYn",
-						"type": "list",
-						"data": {
-							"style": "unordered",
-							"items": [
-								{
-									"content": "I wanted to make something truly unique that had not been done before.",
-									"items": [
-										{
-											"content": "This is the only Star Wars The Old Republic external character designer",
-											"items": []
-										}
-									]
-								},
-								{
-									"content": "I also wanted to make something people would not only want to use, but also something that would inspire people, and help them realize what they can do.",
-									"items": []
-								},
-								{
-									"content": "I had read comments and posts on a variety of platforms from people requesting/asking about a character viewer/creator, the earliest dating back to around 2014.",
-									"items": []
-								},
-								{
-									"content": "I also wanted to expedite the process from re-creating your character outside of the game (for 3D modeling, printing, or just for fun).",
-									"items": [
-										{
-											"content": "The process could take upwards of one to two hour for one character.",
-											"items": []
-										},
-										{
-											"content": "With my program, it takes ~20 minutes.",
-											"items": []
-										}
-									]
-								}
-							]
-						}
-					},
-					{
-						"id": "GjKDJqUFzQ",
-						"type": "header",
-						"data": {
-							"text": "Takeaways",
-							"level": 2
-						}
-					},
-					{
-						"id": "J4pkgn-Eko",
-						"type": "list",
-						"data": {
-							"style": "unordered",
-							"items": [
-								{
-									"content": "How to read hexadecimal headers",
-									"items": []
-								},
-								{
-									"content": "How to read custom file formats",
-									"items": []
-								},
-								{
-									"content": "Basics of PHP",
-									"items": []
-								},
-								{
-									"content": "Advanced JavaScript",
-									"items": []
-								},
-								{
-									"content": "Better code organization",
-									"items": []
-								},
-								{
-									"content": "Better planning strategies",
-									"items": []
-								},
-								{
-									"content": "How to break down problems into achievable sections",
-									"items": []
-								},
-								{
-									"content": "How to effectively troubleshoot issues and debug",
-									"items": []
-								},
-								{
-									"content": "Sometimes the best solution is to take a break and work on different part/something else for a while",
-									"items": []
-								},
-								{
-									"content": "How to use the THREE.js library",
-									"items": []
-								},
-								{
-									"content": "Basics of 3D design/modeling",
-									"items": [
-										{
-											"content": "HLSL",
-											"items": []
-										},
-										{
-											"content": "GLSL",
-											"items": []
-										},
-										{
-											"content": "The graphics pipeline (how 3D models are shaded and rendered)",
-											"items": []
-										},
-										{
-											"content": "How models, textures, lighting and shadows work",
-											"items": []
-										}
-									]
-								}
-							]
-						}
-					},
-					{
-						"id": "phWf751nHJ",
-						"type": "header",
-						"data": {
-							"text": "Release one",
-							"level": 2
-						}
-					},
-					{
-						"id": "UnOPXgDHGc",
-						"type": "paragraph",
-						"data": {
-							"text": "Date: March 14, 2021<br>Time: 270+ hours<br>Changes:"
-						}
-					},
-					{
-						"id": "UtAn8loNXU",
-						"type": "list",
-						"data": {
-							"style": "unordered",
-							"items": [
-								{
-									"content": "Users can download a <i>.zip</i> with all the necessary info to re-create their character in blender",
-									"items": []
-								},
-								{
-									"content": "Has all character creator options that the game has",
-									"items": [
-										{
-											"content": "Customization sliders",
-											"items": []
-										},
-										{
-											"content": "Gender",
-											"items": []
-										},
-										{
-											"content": "Classes",
-											"items": []
-										},
-										{
-											"content": "Species",
-											"items": []
-										}
-									]
-								},
-								{
-									"content": "Allows changing of light-color gradient",
-									"items": []
-								},
-								{
-									"content": "Users can search by keywords to get a list of every related item, which they can then select from to display one",
-									"items": []
-								},
-								{
-									"content": "Users can add a global dye to their outfit",
-									"items": []
-								},
-								{
-									"content": "Users can share their creations using the sharing url button at the bottom",
-									"items": []
-								}
-							]
-						}
-					},
-					{
-						"id": "LX4pxBmLp1",
-						"type": "header",
-						"data": {
-							"text": "Release two",
-							"level": 2
-						}
-					},
-					{
-						"id": "PRoxoiGs_k",
-						"type": "paragraph",
-						"data": {
-							"text": "Date: March 25, 2021<br>Time: 300+ hours<br>Bug Fixes:"
-						}
-					},
-					{
-						"id": "0KDYqJ2WAc",
-						"type": "list",
-						"data": {
-							"style": "unordered",
-							"items": [
-								{
-									"content": "Fixed many broken items (only a few left still needing to be fixed)",
-									"items": []
-								},
-								{
-									"content": "Fixed a few edge cases where things like hoods would render on Togrutas and Twi'leks",
-									"items": []
-								},
-								{
-									"content": "Fixed an issue where exporting the zip had no file extension on Firefox",
-									"items": []
-								},
-								{
-									"content": "Fixed long loading times",
-									"items": []
-								}
-							]
-						}
-					},
-					{
-						"id": "UE1PWmPCZO",
-						"type": "paragraph",
-						"data": {
-							"text": "Changes:"
-						}
-					},
-					{
-						"id": "xjjLeJudXG",
-						"type": "list",
-						"data": {
-							"style": "unordered",
-							"items": [
-								{
-									"content": "Now has dark side corruption",
-									"items": []
-								}
-							]
-						}
-					},
-					{
-						"id": "rXcChFl3ch",
-						"type": "image",
-						"data": {
-							"file": {
-								"url": "./img/projs/Release2__corruption.png"
-							},
-							"caption": "",
-							"withBorder": false,
-							"stretched": false,
-							"withBackground": false
-						}
-					},
-					{
-						"id": "CzLhCiUG21",
-						"type": "list",
-						"data": {
-							"style": "unordered",
-							"items": [
-								{
-									"content": "Added Eye Cube Maps (the glossy reflection on the character's eyes)",
-									"items": []
-								}
-							]
-						}
-					},
-					{
-						"id": "L6fWJJIRH3",
-						"type": "image",
-						"data": {
-							"file": {
-								"url": "./img/projs/EyeCubeMap.png"
-							},
-							"caption": "",
-							"withBorder": false,
-							"stretched": false,
-							"withBackground": false
-						}
-					},
-					{
-						"id": "L8A6Ifg9Be",
-						"type": "list",
-						"data": {
-							"style": "unordered",
-							"items": [
-								{
-									"content": "Changed the lighting to be closer to the preview window",
-									"items": []
-								},
-								{
-									"content": "Added a Unify Colors option for each armor slot (this makes the slot in question become the same color as the chest slot)",
-									"items": []
-								},
-								{
-									"content": "Added ability to apply dyes for each slot",
-									"items": []
-								},
-								{
-									"content": "Added tick marks to make it easier to tell where to click to move the slider to a specific value",
-									"items": []
-								},
-								{
-									"content": "Re-arranged the order of a few customizations to match in-game numbering",
-									"items": []
-								},
-								{
-									"content": "Updated many of the UI images to make them clearer",
-									"items": []
-								},
-								{
-									"content": "Now have a randomize button, and it also randomizes the slider values on load",
-									"items": []
-								},
-								{
-									"content": "Tweaked a bunch of the rendering settings (camera position, lighting angle, lighting intensity, etc.)",
-									"items": []
-								}
-							]
-						}
-					},
-					{
-						"id": "7rIyp4Rdz7",
-						"type": "header",
-						"data": {
-							"text": "Release three",
-							"level": 2
-						}
-					},
-					{
-						"id": "NNFFVvkVLe",
-						"type": "paragraph",
-						"data": {
-							"text": "Date: May 6, 2022<br>Time: 350+ hours<br>Changes:&nbsp;&nbsp;"
-						}
-					},
-					{
-						"id": "Vvfc4n8kxD",
-						"type": "list",
-						"data": {
-							"style": "unordered",
-							"items": [
-								{
-									"content": "Changed the way loading the options work",
-									"items": [
-										{
-											"content": "It is now based of the head model's ID, which is how the game does it currently",
-											"items": []
-										}
-									]
-								},
-								{
-									"content": "Converted the entire project to TypeScript, which helped eliminate some cases where output data would be a string instead of a number",
-									"items": []
-								},
-								{
-									"content": "Project now uses Vite for bundling and minifying, which improves performance",
-									"items": []
-								}
-							]
-						}
-					}
-				],
-				"version": "2.24.3"
-			},
-			"link": "https://torcommunity.com/tools/character-designer",
-			"isRelative": false,
-			"img": "./img/projs/Release_one.png",
-			"org": "torcommunity"
-		},
-		"simple-sudoku": {
-			"category": "web-games",
-			"name": "Simple Sudoku",
-			"time": "35 hours",
 			"status": "Complete",
 			"difficulty": "Moderate",
-			"description": "I came across an article about different ways to approach generating sudoku puzzles and solving them, and it caught my interest. I thought it would be a fun way to work on my web development skills and create a fun end product I could actually put up online. It was very interesting to explore how to not just generate solvable puzzles, but puzzles that look good to the player.",
+			"description": "I started this project because I had been using the Tweakpane library for editable parameters in another project, and needed a gradient texture input. The layout and controls are based on Blender's color ramp node, which node, which does something similar. The plugin allows the user to edit the stop position and color for the gradient, and then outputs an ImageData object with the consequent texture.",
 			"content": {
-				"time": 1653781044269,
+				"time": 1664389789596,
 				"blocks": [
 					{
-						"id": "Ak6PmaiUqJ",
+						"id": "QExxjEfEMq",
 						"type": "header",
 						"data": {
 							"text": "Description",
@@ -823,14 +337,14 @@
 						}
 					},
 					{
-						"id": "ZAx1af6NrV",
+						"id": "CKN0Yktxl4",
 						"type": "paragraph",
 						"data": {
-							"text": "I came across an article about different ways to approach generating sudoku puzzles and solving them, and it caught my interest. I thought it would be a fun way to work on my web development skills and create a fun end product I could actually put up online. It was very interesting to explore how to not just generate solvable puzzles, but puzzles that look good to the player."
+							"text": "I started this project because I had been using the Tweakpane library for editable parameters in another project, and needed a gradient texture input. The layout and controls are based on Blender's color ramp node, which node, which does something similar. The plugin allows the user to edit the stop position and color for the gradient, and then outputs an ImageData object with the consequent texture."
 						}
 					},
 					{
-						"id": "3V81lWYhL8",
+						"id": "QaV7pBHTdv",
 						"type": "header",
 						"data": {
 							"text": "Reasons",
@@ -838,32 +352,20 @@
 						}
 					},
 					{
-						"id": "rIs3bW3TDZ",
+						"id": "1FRJ0qdqnz",
 						"type": "list",
 						"data": {
 							"style": "unordered",
 							"items": [
 								{
-									"content": "Wanted to practice implementing responsive design",
-									"items": []
-								},
-								{
-									"content": "Wanted to explore how to create different themes for a website using plain CSS",
-									"items": []
-								},
-								{
-									"content": "Was interested in exploring sudoku board generation and methods of solving",
-									"items": []
-								},
-								{
-									"content": "Wanted to create a polished Progressive Web App (PWA)",
+									"content": "Needed a Tweakpane compatible gradient generator",
 									"items": []
 								}
 							]
 						}
 					},
 					{
-						"id": "FJvN-7xpWZ",
+						"id": "nW0C8tES70",
 						"type": "header",
 						"data": {
 							"text": "Takeaways",
@@ -871,21 +373,17 @@
 						}
 					},
 					{
-						"id": "dDU_V6jNCL",
+						"id": "BhGZAGTjU8",
 						"type": "list",
 						"data": {
 							"style": "unordered",
 							"items": [
 								{
-									"content": "Came up with a simple strategy for implementing themes into websites",
+									"content": "Created a plugin that allows the user to customize gradient textures",
 									"items": []
 								},
 								{
-									"content": "Got to learn about some of the more complicated features of the Svelte JavaScript library",
-									"items": []
-								},
-								{
-									"content": "Created a polished PWA that can be downloaded on any device or operating system",
+									"content": "First introduction to the MVC design pattern",
 									"items": []
 								}
 							]
@@ -894,23 +392,23 @@
 				],
 				"version": "2.24.3"
 			},
-			"link": "https://sudoku.travislane.dev/",
+			"link": "https://github.com/Tormak9970/tweakpane-plugin-gradient",
 			"isRelative": false,
-			"img": "./img/projs/simple-sudoku.png",
+			"img": "./img/projs/tweakpane-plugin-gradient.png",
 			"org": "none"
 		},
-		"portfolio-v2": {
+		"three.js-marching-cubes": {
 			"category": "web-dev",
-			"name": "Portfolio V2",
-			"time": "60 hours",
-			"status": "Complete (continually updated)",
+			"name": "Three.js Marching Cubes",
+			"time": "11 hours",
+			"status": "Complete",
 			"difficulty": "Moderate",
-			"description": "This project is the website you are currently on. It is a replacement for my previous portfolio website, which I had not been keeping up to date. I decided to remake it from scratch using Svelte, TypeScript, and SASS (later removed), all of which are awesome frameworks I have wanted to learn for a while.",
+			"description": "The Marching Cubes is a well known algorithm often used in games for terrain generation. The premise is it generates polygons based on weights applied to each vertex of the bounding cube. I have always found this algorithm interesting, so I decided to recreate it using TypeScript and one of my favorite libraries, Three.js.",
 			"content": {
-				"time": 1666463718664,
+				"time": 1664377269981,
 				"blocks": [
 					{
-						"id": "EHEWUSDdP5",
+						"id": "GUU5idVR6z",
 						"type": "header",
 						"data": {
 							"text": "Description",
@@ -918,83 +416,14 @@
 						}
 					},
 					{
-						"id": "5NmJ0NTUar",
+						"id": "wlomAPoJbT",
 						"type": "paragraph",
 						"data": {
-							"text": "This project is the website you are currently on. It is a replacement for my previous portfolio website, which I had not been keeping up to date. I decided to remake it from scratch using Svelte, TypeScript, and SASS (later removed), all of which are awesome frameworks I have wanted to learn for a while."
+							"text": "The Marching Cubes is a well known algorithm often used in games for terrain generation. The premise is it generates polygons based on weights applied to each vertex of the bounding cube. I have always found this algorithm interesting, so I decided to recreate it using TypeScript and one of my favorite libraries, Three.js."
 						}
 					},
 					{
-						"id": "S0i4_y-_iq",
-						"type": "header",
-						"data": {
-							"text": "Update 2.0",
-							"level": 2
-						}
-					},
-					{
-						"id": "aRs6sJ9plG",
-						"type": "list",
-						"data": {
-							"style": "unordered",
-							"items": [
-								{
-									"content": "Removed all SASS",
-									"items": [
-										{
-											"content": "While SASS is a great tool, it is becoming obsolete with the improvements to vanilla CSS, and adds unnecessary compiling steps to the project",
-											"items": []
-										}
-									]
-								},
-								{
-									"content": "Updated the scroll indicator",
-									"items": [
-										{
-											"content": "it is now a fixed height (which is based on screen height), which will work better as I add more entries to each page",
-											"items": []
-										}
-									]
-								},
-								{
-									"content": "Changed how the scroll transitions are implimented",
-									"items": [
-										{
-											"content": "They are now modified svelte transitions which significantly simplifies their implementation",
-											"items": []
-										}
-									]
-								},
-								{
-									"content": "Optimized image sizes to improve loading times",
-									"items": []
-								},
-								{
-									"content": "Changed the mobile menu to slide over the page",
-									"items": [
-										{
-											"content": "provides a cleaner experience",
-											"items": []
-										}
-									]
-								},
-								{
-									"content": "Added a copyright label to all pages",
-									"items": []
-								},
-								{
-									"content": "Added a more interesting landing page",
-									"items": []
-								},
-								{
-									"content": "Reduced Cross Origin requests to improve loading times",
-									"items": []
-								}
-							]
-						}
-					},
-					{
-						"id": "7NBr7k3fWI",
+						"id": "cPdy9Ap83z",
 						"type": "header",
 						"data": {
 							"text": "Reasons",
@@ -1002,24 +431,24 @@
 						}
 					},
 					{
-						"id": "yaPSjIxAEs",
+						"id": "xMyEqCE1rv",
 						"type": "list",
 						"data": {
 							"style": "unordered",
 							"items": [
 								{
-									"content": "I wanted to make a portfolio site that was easier to keep up to date and looked professional",
+									"content": "I wanted to recreate the Marching Cubes algorithm using Three.js and Typescript",
 									"items": []
 								},
 								{
-									"content": "I wanted to learn some web technologies I had seen in the past but never got around to looking into",
+									"content": "I wanted to refamiliarize myself with Three.js",
 									"items": []
 								}
 							]
 						}
 					},
 					{
-						"id": "NmpQSXEmtS",
+						"id": "V_Xx5nYkSh",
 						"type": "header",
 						"data": {
 							"text": "Takeaways",
@@ -1027,17 +456,21 @@
 						}
 					},
 					{
-						"id": "n2iyN06a-3",
+						"id": "l2G2fYd8ak",
 						"type": "list",
 						"data": {
 							"style": "unordered",
 							"items": [
 								{
-									"content": "I have a portfolio website that looks professional, is easy to update, and that I can be proud of",
+									"content": "I learned useful strategies for optimizing Three.js applications",
 									"items": []
 								},
 								{
-									"content": "I have experience using TypeScript, Svelte, and SASS",
+									"content": "I was able to recreate the algorithm",
+									"items": []
+								},
+								{
+									"content": "I was able to refresh my memory on Three.js",
 									"items": []
 								}
 							]
@@ -1046,23 +479,23 @@
 				],
 				"version": "2.24.3"
 			},
-			"link": "https://travislane.dev",
+			"link": "https://marching-cubes.travislane.dev/",
 			"isRelative": false,
-			"img": "./img/projs/portfolio-site-v2.png",
+			"img": "./img/projs/threejs-marching-cubes.png",
 			"org": "none"
 		},
-		"vite-plugin-sitemap": {
+		"noisy-dots": {
 			"category": "web-dev",
-			"name": "Vite-Plugin-Sitemap",
-			"time": "20 hours",
+			"name": "Noisy Dots",
+			"time": "4 hours",
 			"status": "Complete",
 			"difficulty": "Simple",
-			"description": "I had the idea to make this little npm package because I was working on my portfolio, and came across a neat rollup plugin for generating sitemaps. Vite allows users to use most rollup plugins, so I just used that, but it caused some issues, so I decided to write my own with some added features.",
+			"description": "This small project is a simple animation made using the HTML5 canvas and simplex-noise. I came up with this idea because I wanted to add something to my portfolio landing page to make it more unique, and I love procedural generation so I thought a noise based animation would be perfect! It works by sampling a noise texture and scaling circles based on the value (noise ranges from 0.0 - 1.0), which creates the mesmerizing pattern.",
 			"content": {
-				"time": 1650923458531,
+				"time": 1664375512223,
 				"blocks": [
 					{
-						"id": "MvdHNFFz4d",
+						"id": "R8n2_PIDX_",
 						"type": "header",
 						"data": {
 							"text": "Description",
@@ -1070,14 +503,14 @@
 						}
 					},
 					{
-						"id": "gdxiqz3U_D",
+						"id": "vvXPG-9bzc",
 						"type": "paragraph",
 						"data": {
-							"text": "I had the idea to make this npm package because I was working on my portfolio, and came across a neat little rollup plugin for generating sitemaps. Vite allows users to use most rollup plugins, so I just used that, but it caused some issues, so I decided to write my own with some added features."
+							"text": "This small project is a simple animation made using the HTML5 canvas and simplex-noise. I came up with this idea because I wanted to add something to my portfolio landing page to make it more unique, and I love procedural generation so I thought a noise based animation would be perfect! It works by sampling a noise texture and scaling circles based on the value (noise ranges from 0.0 - 1.0), which creates the mesmerizing pattern."
 						}
 					},
 					{
-						"id": "it04sm7mzL",
+						"id": "s1PgdSrKpS",
 						"type": "header",
 						"data": {
 							"text": "Reasons",
@@ -1085,28 +518,24 @@
 						}
 					},
 					{
-						"id": "8vljNfeNgJ",
+						"id": "QLdP_i0Xs8",
 						"type": "list",
 						"data": {
 							"style": "unordered",
 							"items": [
 								{
-									"content": "Found a similar Rollup plugin, which proved problematic when used with github actions",
+									"content": "I wanted to add something unique to my portfolio landing page",
 									"items": []
 								},
 								{
-									"content": "Needed to generate sitemaps for both this website and SWTORSlicers.org",
-									"items": []
-								},
-								{
-									"content": "Wanted to add a hook to allow dynamic sitemap generation to the plugin",
+									"content": "Was interested in exploring the use of procedural noise in web design",
 									"items": []
 								}
 							]
 						}
 					},
 					{
-						"id": "fIYKc3fzce",
+						"id": "N_8415duvG",
 						"type": "header",
 						"data": {
 							"text": "Takeaways",
@@ -1114,28 +543,28 @@
 						}
 					},
 					{
-						"id": "oHFnUhy81i",
+						"id": "934yia4AmU",
 						"type": "list",
 						"data": {
 							"style": "unordered",
 							"items": [
 								{
-									"content": "Learned how to create an npm package",
+									"content": "Created something unique that helps my portfolio make an impact on viewers",
 									"items": []
 								},
 								{
-									"content": "Created a useful little package for others to use",
+									"content": "Discovered useful libraries for procedural generation in JavaScript",
 									"items": []
 								}
 							]
 						}
 					}
 				],
-				"version": "2.22.2"
+				"version": "2.24.3"
 			},
-			"link": "https://www.npmjs.com/package/@tormak/vite-plugin-sitemap",
+			"link": "https://dots.travislane.dev/",
 			"isRelative": false,
-			"img": "./img/projs/vite-plugin-sitemap.png",
+			"img": "./img/projs/noisy-dots-anim.png",
 			"org": "none"
 		},
 		"swtorslicers.org": {
@@ -1318,18 +747,18 @@
 			"img": "./img/projs/slicers-org.png",
 			"org": "swtor-slicers"
 		},
-		"noisy-dots": {
+		"vite-plugin-sitemap": {
 			"category": "web-dev",
-			"name": "Noisy Dots",
-			"time": "4 hours",
+			"name": "Vite-Plugin-Sitemap",
+			"time": "20 hours",
 			"status": "Complete",
 			"difficulty": "Simple",
-			"description": "This small project is a simple animation made using the HTML5 canvas and simplex-noise. I came up with this idea because I wanted to add something to my portfolio landing page to make it more unique, and I love procedural generation so I thought a noise based animation would be perfect! It works by sampling a noise texture and scaling circles based on the value (noise ranges from 0.0 - 1.0), which creates the mesmerizing pattern.",
+			"description": "I had the idea to make this little npm package because I was working on my portfolio, and came across a neat rollup plugin for generating sitemaps. Vite allows users to use most rollup plugins, so I just used that, but it caused some issues, so I decided to write my own with some added features.",
 			"content": {
-				"time": 1664375512223,
+				"time": 1650923458531,
 				"blocks": [
 					{
-						"id": "R8n2_PIDX_",
+						"id": "MvdHNFFz4d",
 						"type": "header",
 						"data": {
 							"text": "Description",
@@ -1337,14 +766,14 @@
 						}
 					},
 					{
-						"id": "vvXPG-9bzc",
+						"id": "gdxiqz3U_D",
 						"type": "paragraph",
 						"data": {
-							"text": "This small project is a simple animation made using the HTML5 canvas and simplex-noise. I came up with this idea because I wanted to add something to my portfolio landing page to make it more unique, and I love procedural generation so I thought a noise based animation would be perfect! It works by sampling a noise texture and scaling circles based on the value (noise ranges from 0.0 - 1.0), which creates the mesmerizing pattern."
+							"text": "I had the idea to make this npm package because I was working on my portfolio, and came across a neat little rollup plugin for generating sitemaps. Vite allows users to use most rollup plugins, so I just used that, but it caused some issues, so I decided to write my own with some added features."
 						}
 					},
 					{
-						"id": "s1PgdSrKpS",
+						"id": "it04sm7mzL",
 						"type": "header",
 						"data": {
 							"text": "Reasons",
@@ -1352,24 +781,28 @@
 						}
 					},
 					{
-						"id": "QLdP_i0Xs8",
+						"id": "8vljNfeNgJ",
 						"type": "list",
 						"data": {
 							"style": "unordered",
 							"items": [
 								{
-									"content": "I wanted to add something unique to my portfolio landing page",
+									"content": "Found a similar Rollup plugin, which proved problematic when used with github actions",
 									"items": []
 								},
 								{
-									"content": "Was interested in exploring the use of procedural noise in web design",
+									"content": "Needed to generate sitemaps for both this website and SWTORSlicers.org",
+									"items": []
+								},
+								{
+									"content": "Wanted to add a hook to allow dynamic sitemap generation to the plugin",
 									"items": []
 								}
 							]
 						}
 					},
 					{
-						"id": "N_8415duvG",
+						"id": "fIYKc3fzce",
 						"type": "header",
 						"data": {
 							"text": "Takeaways",
@@ -1377,318 +810,28 @@
 						}
 					},
 					{
-						"id": "934yia4AmU",
+						"id": "oHFnUhy81i",
 						"type": "list",
 						"data": {
 							"style": "unordered",
 							"items": [
 								{
-									"content": "Created something unique that helps my portfolio make an impact on viewers",
+									"content": "Learned how to create an npm package",
 									"items": []
 								},
 								{
-									"content": "Discovered useful libraries for procedural generation in JavaScript",
+									"content": "Created a useful little package for others to use",
 									"items": []
 								}
 							]
 						}
 					}
 				],
-				"version": "2.24.3"
+				"version": "2.22.2"
 			},
-			"link": "https://dots.travislane.dev/",
+			"link": "https://www.npmjs.com/package/@tormak/vite-plugin-sitemap",
 			"isRelative": false,
-			"img": "./img/projs/noisy-dots-anim.png",
-			"org": "none"
-		},
-		"three.js-marching-cubes": {
-			"category": "web-dev",
-			"name": "Three.js Marching Cubes",
-			"time": "11 hours",
-			"status": "Complete",
-			"difficulty": "Moderate",
-			"description": "The Marching Cubes is a well known algorithm often used in games for terrain generation. The premise is it generates polygons based on weights applied to each vertex of the bounding cube. I have always found this algorithm interesting, so I decided to recreate it using TypeScript and one of my favorite libraries, Three.js.",
-			"content": {
-				"time": 1664377269981,
-				"blocks": [
-					{
-						"id": "GUU5idVR6z",
-						"type": "header",
-						"data": {
-							"text": "Description",
-							"level": 2
-						}
-					},
-					{
-						"id": "wlomAPoJbT",
-						"type": "paragraph",
-						"data": {
-							"text": "The Marching Cubes is a well known algorithm often used in games for terrain generation. The premise is it generates polygons based on weights applied to each vertex of the bounding cube. I have always found this algorithm interesting, so I decided to recreate it using TypeScript and one of my favorite libraries, Three.js."
-						}
-					},
-					{
-						"id": "cPdy9Ap83z",
-						"type": "header",
-						"data": {
-							"text": "Reasons",
-							"level": 2
-						}
-					},
-					{
-						"id": "xMyEqCE1rv",
-						"type": "list",
-						"data": {
-							"style": "unordered",
-							"items": [
-								{
-									"content": "I wanted to recreate the Marching Cubes algorithm using Three.js and Typescript",
-									"items": []
-								},
-								{
-									"content": "I wanted to refamiliarize myself with Three.js",
-									"items": []
-								}
-							]
-						}
-					},
-					{
-						"id": "V_Xx5nYkSh",
-						"type": "header",
-						"data": {
-							"text": "Takeaways",
-							"level": 2
-						}
-					},
-					{
-						"id": "l2G2fYd8ak",
-						"type": "list",
-						"data": {
-							"style": "unordered",
-							"items": [
-								{
-									"content": "I learned useful strategies for optimizing Three.js applications",
-									"items": []
-								},
-								{
-									"content": "I was able to recreate the algorithm",
-									"items": []
-								},
-								{
-									"content": "I was able to refresh my memory on Three.js",
-									"items": []
-								}
-							]
-						}
-					}
-				],
-				"version": "2.24.3"
-			},
-			"link": "https://marching-cubes.travislane.dev/",
-			"isRelative": false,
-			"img": "./img/projs/threejs-marching-cubes.png",
-			"org": "none"
-		},
-		"tweakpane-gradient-plugin": {
-			"category": "web-dev",
-			"name": "Tweakpane Gradient Plugin",
-			"time": "6 hours",
-			"status": "Complete",
-			"difficulty": "Moderate",
-			"description": "I started this project because I had been using the Tweakpane library for editable parameters in another project, and needed a gradient texture input. The layout and controls are based on Blender's color ramp node, which node, which does something similar. The plugin allows the user to edit the stop position and color for the gradient, and then outputs an ImageData object with the consequent texture.",
-			"content": {
-				"time": 1664389789596,
-				"blocks": [
-					{
-						"id": "QExxjEfEMq",
-						"type": "header",
-						"data": {
-							"text": "Description",
-							"level": 2
-						}
-					},
-					{
-						"id": "CKN0Yktxl4",
-						"type": "paragraph",
-						"data": {
-							"text": "I started this project because I had been using the Tweakpane library for editable parameters in another project, and needed a gradient texture input. The layout and controls are based on Blender's color ramp node, which node, which does something similar. The plugin allows the user to edit the stop position and color for the gradient, and then outputs an ImageData object with the consequent texture."
-						}
-					},
-					{
-						"id": "QaV7pBHTdv",
-						"type": "header",
-						"data": {
-							"text": "Reasons",
-							"level": 2
-						}
-					},
-					{
-						"id": "1FRJ0qdqnz",
-						"type": "list",
-						"data": {
-							"style": "unordered",
-							"items": [
-								{
-									"content": "Needed a Tweakpane compatible gradient generator",
-									"items": []
-								}
-							]
-						}
-					},
-					{
-						"id": "nW0C8tES70",
-						"type": "header",
-						"data": {
-							"text": "Takeaways",
-							"level": 2
-						}
-					},
-					{
-						"id": "BhGZAGTjU8",
-						"type": "list",
-						"data": {
-							"style": "unordered",
-							"items": [
-								{
-									"content": "Created a plugin that allows the user to customize gradient textures",
-									"items": []
-								},
-								{
-									"content": "First introduction to the MVC design pattern",
-									"items": []
-								}
-							]
-						}
-					}
-				],
-				"version": "2.24.3"
-			},
-			"link": "https://github.com/Tormak9970/tweakpane-plugin-gradient",
-			"isRelative": false,
-			"img": "./img/projs/tweakpane-plugin-gradient.png",
-			"org": "none"
-		},
-		"portfolio-updater": {
-			"category": "software-engineering",
-			"name": "Portfolio Updater",
-			"time": "50 hours",
-			"status": "Complete",
-			"difficulty": "Moderate",
-			"description": "Initially, this project was going to be written using the Electron framework, but right around when I started it, I heard about Tauri. Tauri is great because it allows you to build more secure apps with smaller bundle sizes, and has a better developer experience then Electron. The app itself makes updating my portfolio easy and straightforward, allowing me to focus more on my projects.",
-			"content": {
-				"time": 1666463685353,
-				"blocks": [
-					{
-						"id": "mGX3WmsU_L",
-						"type": "header",
-						"data": {
-							"text": "Description",
-							"level": 2
-						}
-					},
-					{
-						"id": "Sw2-lnOmFJ",
-						"type": "paragraph",
-						"data": {
-							"text": "Initially, this project was going to be written using the Electron framework, but right around when I started it, I heard about Tauri. Tauri is great because it allows you to build more secure apps with smaller bundle sizes, and has a better developer experience then Electron. The app itself makes updating my portfolio easy and straightforward, allowing me to focus more on my projects."
-						}
-					},
-					{
-						"id": "GgPP4taLLc",
-						"type": "header",
-						"data": {
-							"text": "Version 1.2.2",
-							"level": 2
-						}
-					},
-					{
-						"id": "E-oQ4QDwfj",
-						"type": "list",
-						"data": {
-							"style": "unordered",
-							"items": [
-								{
-									"content": "Added support for new portfolio data structure",
-									"items": []
-								},
-								{
-									"content": "Added buttons for archive management",
-									"items": []
-								},
-								{
-									"content": "Fixed old issue with org keys not being lower case",
-									"items": []
-								},
-								{
-									"content": "Fixed issue with project's org prop not being updated when added to an Organization's projects list",
-									"items": []
-								}
-							]
-						}
-					},
-					{
-						"id": "uTV1I6vgqh",
-						"type": "header",
-						"data": {
-							"text": "Reasons",
-							"level": 2
-						}
-					},
-					{
-						"id": "VCn01A58rk",
-						"type": "list",
-						"data": {
-							"style": "unordered",
-							"items": [
-								{
-									"content": "Wanted to rework the structure of my portfolio",
-									"items": []
-								},
-								{
-									"content": "Wanted to streamline the process of updating my portfolio",
-									"items": []
-								},
-								{
-									"content": "Wanted to learn how to use the Tauri framework",
-									"items": []
-								}
-							]
-						}
-					},
-					{
-						"id": "RKQSFtpQz_",
-						"type": "header",
-						"data": {
-							"text": "Takeaways",
-							"level": 2
-						}
-					},
-					{
-						"id": "NlLvb9jqp4",
-						"type": "list",
-						"data": {
-							"style": "unordered",
-							"items": [
-								{
-									"content": "I now have a small tool that makes it very easy to keep my portfolio up to date",
-									"items": []
-								},
-								{
-									"content": "Was able to rework the structure of my portfolio into a more intuitive form",
-									"items": []
-								},
-								{
-									"content": "Got to learn the basics of the Tauri framework",
-									"items": []
-								}
-							]
-						}
-					}
-				],
-				"version": "2.24.3"
-			},
-			"link": "https://github.com/Tormak9970/portfolio-updater",
-			"isRelative": false,
-			"img": "./img/projs/portfolio-updater.png",
+			"img": "./img/projs/vite-plugin-sitemap.png",
 			"org": "none"
 		},
 		"hex-world-generator": {
@@ -1802,18 +945,18 @@
 			"img": "./img/projs/Hex World.png",
 			"org": "none"
 		},
-		"marching-squares": {
-			"category": "blender",
-			"name": "Marching Squares",
-			"time": "14 hrs",
+		"simple-sudoku": {
+			"category": "web-games",
+			"name": "Simple Sudoku",
+			"time": "35 hours",
 			"status": "Complete",
 			"difficulty": "Moderate",
-			"description": "The goal of this project was to recreate the Marching Squares algorithm in blender. Marching Squares is a well known computer graphics algorithm used to generate procedural patterns for a multitude of uses, such as terrain in game design.",
+			"description": "I came across an article about different ways to approach generating sudoku puzzles and solving them, and it caught my interest. I thought it would be a fun way to work on my web development skills and create a fun end product I could actually put up online. It was very interesting to explore how to not just generate solvable puzzles, but puzzles that look good to the player.",
 			"content": {
-				"time": 1657914802466,
+				"time": 1653781044269,
 				"blocks": [
 					{
-						"id": "GFzO54o7BQ",
+						"id": "Ak6PmaiUqJ",
 						"type": "header",
 						"data": {
 							"text": "Description",
@@ -1821,33 +964,339 @@
 						}
 					},
 					{
-						"id": "Ptw2MUCPEY",
+						"id": "ZAx1af6NrV",
 						"type": "paragraph",
 						"data": {
-							"text": "The goal of this project was to recreate the Marching Squares algorithm in blender. Marching Squares is a well known computer graphics algorithm used to generate procedural patterns for a multitude of uses, such as terrain in game design."
+							"text": "I came across an article about different ways to approach generating sudoku puzzles and solving them, and it caught my interest. I thought it would be a fun way to work on my web development skills and create a fun end product I could actually put up online. It was very interesting to explore how to not just generate solvable puzzles, but puzzles that look good to the player."
 						}
 					},
 					{
-						"id": "VbytCdOa6Q",
+						"id": "3V81lWYhL8",
 						"type": "header",
 						"data": {
-							"text": "More Info",
+							"text": "Reasons",
 							"level": 2
 						}
 					},
 					{
-						"id": "oNGk8ZK9PK",
-						"type": "paragraph",
+						"id": "rIs3bW3TDZ",
+						"type": "list",
 						"data": {
-							"text": "While it may not be very complicated to create marching squares through programming, Blender's Geometry Nodes are another story entirely. Because of how geometry nodes work, there is no looping or re-using data in the typical programming sense. Data is, in most cases, computed based on where it is called from (more info can be found about that <a target=\"_blank\" rel=\"noreferrer noopener\" href=\"https://docs.blender.org/manual/en/latest/modeling/geometry_nodes/fields.html\">here</a>). This made recreating marching squares significantly more complicated. The image below is what the logic for this project looks like (normally I use node groups to make working on it possible, this is what it looks like without them):"
+							"style": "unordered",
+							"items": [
+								{
+									"content": "Wanted to practice implementing responsive design",
+									"items": []
+								},
+								{
+									"content": "Wanted to explore how to create different themes for a website using plain CSS",
+									"items": []
+								},
+								{
+									"content": "Was interested in exploring sudoku board generation and methods of solving",
+									"items": []
+								},
+								{
+									"content": "Wanted to create a polished Progressive Web App (PWA)",
+									"items": []
+								}
+							]
 						}
 					},
 					{
-						"id": "1L2CMoEKDp",
+						"id": "FJvN-7xpWZ",
+						"type": "header",
+						"data": {
+							"text": "Takeaways",
+							"level": 2
+						}
+					},
+					{
+						"id": "dDU_V6jNCL",
+						"type": "list",
+						"data": {
+							"style": "unordered",
+							"items": [
+								{
+									"content": "Came up with a simple strategy for implementing themes into websites",
+									"items": []
+								},
+								{
+									"content": "Got to learn about some of the more complicated features of the Svelte JavaScript library",
+									"items": []
+								},
+								{
+									"content": "Created a polished PWA that can be downloaded on any device or operating system",
+									"items": []
+								}
+							]
+						}
+					}
+				],
+				"version": "2.24.3"
+			},
+			"link": "https://sudoku.travislane.dev/",
+			"isRelative": false,
+			"img": "./img/projs/simple-sudoku.png",
+			"org": "none"
+		},
+		"torc-character-designer": {
+			"category": "web-dev",
+			"name": "TORC Character Designer",
+			"time": "350+ hours",
+			"status": "In progress (stable)",
+			"difficulty": "Complexed",
+			"description": "This is one of my favorite projects. It is an external character creator and outfit designer for Star Wars The Old Republic. I really love this game and the community, and wanted to do something everyone could use and enjoy. It is very complexed, and I had to learn a lot of new topics and skills while working on it. I'm also very proud of it since it is the first tool of its kind made by anyone, ever, and that required me to solve a lot of problems no one else has done  before.",
+			"content": {
+				"time": 1666464360439,
+				"blocks": [
+					{
+						"id": "Hr1P2ZVs1P",
+						"type": "header",
+						"data": {
+							"text": "Description",
+							"level": 2
+						}
+					},
+					{
+						"id": "Z_ibVmilFC",
+						"type": "paragraph",
+						"data": {
+							"text": "This is one of my favorite projects. It is an external character creator and outfit designer for Star Wars The Old Republic. I really love this game and the community, and wanted to do something everyone could use and enjoy. It is very complexed, and I had to learn a lot of new topics and skills while working on it. I'm also very proud of it since it is the first tool of its kind made by anyone, ever, and that required me to solve a lot of problems no one else has done  before."
+						}
+					},
+					{
+						"id": "7wGwqDv3JP",
+						"type": "header",
+						"data": {
+							"text": "Reasons",
+							"level": 2
+						}
+					},
+					{
+						"id": "GIJaPDViYn",
+						"type": "list",
+						"data": {
+							"style": "unordered",
+							"items": [
+								{
+									"content": "I wanted to make something truly unique that had not been done before.",
+									"items": [
+										{
+											"content": "This is the only Star Wars The Old Republic external character designer",
+											"items": []
+										}
+									]
+								},
+								{
+									"content": "I also wanted to make something people would not only want to use, but also something that would inspire people, and help them realize what they can do.",
+									"items": []
+								},
+								{
+									"content": "I had read comments and posts on a variety of platforms from people requesting/asking about a character viewer/creator, the earliest dating back to around 2014.",
+									"items": []
+								},
+								{
+									"content": "I also wanted to expedite the process from re-creating your character outside of the game (for 3D modeling, printing, or just for fun).",
+									"items": [
+										{
+											"content": "The process could take upwards of one to two hour for one character.",
+											"items": []
+										},
+										{
+											"content": "With my program, it takes ~20 minutes.",
+											"items": []
+										}
+									]
+								}
+							]
+						}
+					},
+					{
+						"id": "GjKDJqUFzQ",
+						"type": "header",
+						"data": {
+							"text": "Takeaways",
+							"level": 2
+						}
+					},
+					{
+						"id": "J4pkgn-Eko",
+						"type": "list",
+						"data": {
+							"style": "unordered",
+							"items": [
+								{
+									"content": "How to read hexadecimal headers",
+									"items": []
+								},
+								{
+									"content": "How to read custom file formats",
+									"items": []
+								},
+								{
+									"content": "Basics of PHP",
+									"items": []
+								},
+								{
+									"content": "Advanced JavaScript",
+									"items": []
+								},
+								{
+									"content": "Better code organization",
+									"items": []
+								},
+								{
+									"content": "Better planning strategies",
+									"items": []
+								},
+								{
+									"content": "How to break down problems into achievable sections",
+									"items": []
+								},
+								{
+									"content": "How to effectively troubleshoot issues and debug",
+									"items": []
+								},
+								{
+									"content": "Sometimes the best solution is to take a break and work on different part/something else for a while",
+									"items": []
+								},
+								{
+									"content": "How to use the THREE.js library",
+									"items": []
+								},
+								{
+									"content": "Basics of 3D design/modeling",
+									"items": [
+										{
+											"content": "HLSL",
+											"items": []
+										},
+										{
+											"content": "GLSL",
+											"items": []
+										},
+										{
+											"content": "The graphics pipeline (how 3D models are shaded and rendered)",
+											"items": []
+										},
+										{
+											"content": "How models, textures, lighting and shadows work",
+											"items": []
+										}
+									]
+								}
+							]
+						}
+					},
+					{
+						"id": "7rIyp4Rdz7",
+						"type": "header",
+						"data": {
+							"text": "3.0.0",
+							"level": 2
+						}
+					},
+					{
+						"id": "NNFFVvkVLe",
+						"type": "paragraph",
+						"data": {
+							"text": "Features:"
+						}
+					},
+					{
+						"id": "Vvfc4n8kxD",
+						"type": "list",
+						"data": {
+							"style": "unordered",
+							"items": [
+								{
+									"content": "Changed the way loading the options work",
+									"items": [
+										{
+											"content": "It is now based of the head model's ID, which is how the game does it currently",
+											"items": []
+										}
+									]
+								},
+								{
+									"content": "Converted the entire project to TypeScript, which helped eliminate some cases where output data would be a string instead of a number",
+									"items": []
+								},
+								{
+									"content": "Project now uses Vite for bundling and minifying, which improves performance",
+									"items": []
+								}
+							]
+						}
+					},
+					{
+						"id": "LX4pxBmLp1",
+						"type": "header",
+						"data": {
+							"text": "2.0.0",
+							"level": 2
+						}
+					},
+					{
+						"id": "PRoxoiGs_k",
+						"type": "paragraph",
+						"data": {
+							"text": "Bug Fixes:"
+						}
+					},
+					{
+						"id": "0KDYqJ2WAc",
+						"type": "list",
+						"data": {
+							"style": "unordered",
+							"items": [
+								{
+									"content": "Fixed many broken items (only a few left still needing to be fixed)",
+									"items": []
+								},
+								{
+									"content": "Fixed a few edge cases where things like hoods would render on Togrutas and Twi'leks",
+									"items": []
+								},
+								{
+									"content": "Fixed an issue where exporting the zip had no file extension on Firefox",
+									"items": []
+								},
+								{
+									"content": "Fixed long loading times",
+									"items": []
+								}
+							]
+						}
+					},
+					{
+						"id": "UE1PWmPCZO",
+						"type": "paragraph",
+						"data": {
+							"text": "Changes:"
+						}
+					},
+					{
+						"id": "xjjLeJudXG",
+						"type": "list",
+						"data": {
+							"style": "unordered",
+							"items": [
+								{
+									"content": "Now has dark side corruption",
+									"items": []
+								}
+							]
+						}
+					},
+					{
+						"id": "rXcChFl3ch",
 						"type": "image",
 						"data": {
 							"file": {
-								"url": "./img/projs/Marching Squares inner.png"
+								"url": "./img/projs/Release2__corruption.png"
 							},
 							"caption": "",
 							"withBorder": false,
@@ -1856,46 +1305,132 @@
 						}
 					},
 					{
-						"id": "qLwVgR_0xk",
-						"type": "header",
-						"data": {
-							"text": "Reasons",
-							"level": 2
-						}
-					},
-					{
-						"id": "EDSYKuORGB",
+						"id": "CzLhCiUG21",
 						"type": "list",
 						"data": {
 							"style": "unordered",
 							"items": [
 								{
-									"content": "Wanted to create a geometry nodes implementation of marching squares",
+									"content": "Added Eye Cube Maps (the glossy reflection on the character's eyes)",
 									"items": []
 								}
 							]
 						}
 					},
 					{
-						"id": "Ne9x4Lvo6L",
-						"type": "header",
+						"id": "L6fWJJIRH3",
+						"type": "image",
 						"data": {
-							"text": "Takeaways",
-							"level": 2
+							"file": {
+								"url": "./img/projs/EyeCubeMap.png"
+							},
+							"caption": "",
+							"withBorder": false,
+							"stretched": false,
+							"withBackground": false
 						}
 					},
 					{
-						"id": "0ug6cJpzz3",
+						"id": "L8A6Ifg9Be",
 						"type": "list",
 						"data": {
 							"style": "unordered",
 							"items": [
 								{
-									"content": "Gained a better understanding of how to solve problems with geometry nodes",
+									"content": "Changed the lighting to be closer to the preview window",
 									"items": []
 								},
 								{
-									"content": "Have a better understanding of how geometry nodes work internally",
+									"content": "Added a Unify Colors option for each armor slot (this makes the slot in question become the same color as the chest slot)",
+									"items": []
+								},
+								{
+									"content": "Added ability to apply dyes for each slot",
+									"items": []
+								},
+								{
+									"content": "Added tick marks to make it easier to tell where to click to move the slider to a specific value",
+									"items": []
+								},
+								{
+									"content": "Re-arranged the order of a few customizations to match in-game numbering",
+									"items": []
+								},
+								{
+									"content": "Updated many of the UI images to make them clearer",
+									"items": []
+								},
+								{
+									"content": "Now have a randomize button, and it also randomizes the slider values on load",
+									"items": []
+								},
+								{
+									"content": "Tweaked a bunch of the rendering settings (camera position, lighting angle, lighting intensity, etc.)",
+									"items": []
+								}
+							]
+						}
+					},
+					{
+						"id": "phWf751nHJ",
+						"type": "header",
+						"data": {
+							"text": "1.0.0",
+							"level": 2
+						}
+					},
+					{
+						"id": "UnOPXgDHGc",
+						"type": "paragraph",
+						"data": {
+							"text": "Features:"
+						}
+					},
+					{
+						"id": "UtAn8loNXU",
+						"type": "list",
+						"data": {
+							"style": "unordered",
+							"items": [
+								{
+									"content": "Users can download a <i>.zip</i> with all the necessary info to re-create their character in blender",
+									"items": []
+								},
+								{
+									"content": "Has all character creator options that the game has",
+									"items": [
+										{
+											"content": "Customization sliders",
+											"items": []
+										},
+										{
+											"content": "Gender",
+											"items": []
+										},
+										{
+											"content": "Classes",
+											"items": []
+										},
+										{
+											"content": "Species",
+											"items": []
+										}
+									]
+								},
+								{
+									"content": "Allows changing of light-color gradient",
+									"items": []
+								},
+								{
+									"content": "Users can search by keywords to get a list of every related item, which they can then select from to display one",
+									"items": []
+								},
+								{
+									"content": "Users can add a global dye to their outfit",
+									"items": []
+								},
+								{
+									"content": "Users can share their creations using the sharing url button at the bottom",
 									"items": []
 								}
 							]
@@ -1904,23 +1439,23 @@
 				],
 				"version": "2.24.3"
 			},
-			"link": "https://github.com/Tormak9970/blender-projects",
+			"link": "https://torcommunity.com/tools/character-designer",
 			"isRelative": false,
-			"img": "./img/projs/Marching Squares in Blender.png",
-			"org": "none"
+			"img": "./img/projs/Release_one.png",
+			"org": "torcommunity"
 		},
-		"steamdeck-u": {
+		"decky-frontend-lib": {
 			"category": "steam-deck",
-			"name": "SteamDeck U",
-			"time": "3 hours",
-			"status": "Complete",
+			"name": "Decky Frontend Lib",
+			"time": "6 hours",
+			"status": "In Progress",
 			"difficulty": "Simple",
-			"description": "This project is a custom theme for Valve's Steam Deck. It uses a homebrew plugin for injecting CSS to provide users with options to customize each part of their keyboard. The reason I started this project is because Valve offers keyboard themes, but the selection is limited and they only work online.",
+			"description": "The Decky Frontend Lib is a library with reversed engineered UI components, custom components and utility classes. The library helps plugin developers integrate their plugins seamlessly with Valve's react UI, and modify css styles without affecting the regular UI.",
 			"content": {
-				"time": 1664544959411,
+				"time": 1666461559799,
 				"blocks": [
 					{
-						"id": "nZjfcxUvB2",
+						"id": "lAVCthO1td",
 						"type": "header",
 						"data": {
 							"text": "Description",
@@ -1928,14 +1463,14 @@
 						}
 					},
 					{
-						"id": "xPDAeM17W0",
+						"id": "vc4JYLLrvS",
 						"type": "paragraph",
 						"data": {
-							"text": "This project is a custom theme for Valve's Steam Deck. It uses a homebrew plugin for injecting CSS to provide users with options to customize each part of their keyboard. The reason I started this project is because Valve offers keyboard themes, but the selection is limited and they only work online."
+							"text": "The Decky Frontend Lib is a library with reversed engineered UI components, custom components and utility classes. The library helps plugin developers integrate their plugins seamlessly with Valve's react UI, and modify css styles without affecting the regular UI."
 						}
 					},
 					{
-						"id": "mXmVM7rad_",
+						"id": "AMb_eC9-kr",
 						"type": "header",
 						"data": {
 							"text": "Reasons",
@@ -1943,28 +1478,28 @@
 						}
 					},
 					{
-						"id": "xevYl-aYqV",
+						"id": "UMY1MXQSOi",
 						"type": "list",
 						"data": {
 							"style": "unordered",
 							"items": [
 								{
-									"content": "Wanted to contribute to the homebrew Steam Deck community",
+									"content": "Wanted to fix bugs I encountered",
 									"items": []
 								},
 								{
-									"content": "Wanted a more customizable alternative to the existing keyboards",
+									"content": "Wanted to add features I had discovered",
 									"items": []
 								},
 								{
-									"content": "Wanted customizable keyboards that worked offline",
+									"content": "Wanted to contribute to SDH",
 									"items": []
 								}
 							]
 						}
 					},
 					{
-						"id": "KgQPukLNZY",
+						"id": "gG-wf_ZTmW",
 						"type": "header",
 						"data": {
 							"text": "Takeaways",
@@ -1972,17 +1507,13 @@
 						}
 					},
 					{
-						"id": "qXVdi9yViM",
+						"id": "sdDs1ClfLh",
 						"type": "list",
 						"data": {
 							"style": "unordered",
 							"items": [
 								{
-									"content": "Came up with a unique idea for the homebrew community",
-									"items": []
-								},
-								{
-									"content": "Created a highly customizable keyboard that also works offline",
+									"content": "Learned how to use the Remote React Debugger",
 									"items": []
 								}
 							]
@@ -1991,9 +1522,478 @@
 				],
 				"version": "2.24.3"
 			},
-			"link": "https://github.com/Tormak9970/SteamDeckThemes",
+			"link": "https://github.com/SteamDeckHomebrew/decky-frontend-lib",
 			"isRelative": false,
-			"img": "./img/projs/SteamDeckU.png",
+			"img": "./img/projs/Decky-frontend-lib.png",
+			"org": "steam-deck-homebrew"
+		},
+		"portfolio-v2": {
+			"category": "web-dev",
+			"name": "Portfolio V2",
+			"time": "60 hours",
+			"status": "Complete (continually updated)",
+			"difficulty": "Moderate",
+			"description": "This project is the website you are currently on. It is a replacement for my previous portfolio website, which I had not been keeping up to date. I decided to remake it from scratch using Svelte, TypeScript, and SASS (later removed), all of which are awesome frameworks I have wanted to learn for a while.",
+			"content": {
+				"time": 1666463718664,
+				"blocks": [
+					{
+						"id": "EHEWUSDdP5",
+						"type": "header",
+						"data": {
+							"text": "Description",
+							"level": 2
+						}
+					},
+					{
+						"id": "5NmJ0NTUar",
+						"type": "paragraph",
+						"data": {
+							"text": "This project is the website you are currently on. It is a replacement for my previous portfolio website, which I had not been keeping up to date. I decided to remake it from scratch using Svelte, TypeScript, and SASS (later removed), all of which are awesome frameworks I have wanted to learn for a while."
+						}
+					},
+					{
+						"id": "S0i4_y-_iq",
+						"type": "header",
+						"data": {
+							"text": "Update 2.0",
+							"level": 2
+						}
+					},
+					{
+						"id": "aRs6sJ9plG",
+						"type": "list",
+						"data": {
+							"style": "unordered",
+							"items": [
+								{
+									"content": "Removed all SASS",
+									"items": [
+										{
+											"content": "While SASS is a great tool, it is becoming obsolete with the improvements to vanilla CSS, and adds unnecessary compiling steps to the project",
+											"items": []
+										}
+									]
+								},
+								{
+									"content": "Updated the scroll indicator",
+									"items": [
+										{
+											"content": "it is now a fixed height (which is based on screen height), which will work better as I add more entries to each page",
+											"items": []
+										}
+									]
+								},
+								{
+									"content": "Changed how the scroll transitions are implimented",
+									"items": [
+										{
+											"content": "They are now modified svelte transitions which significantly simplifies their implementation",
+											"items": []
+										}
+									]
+								},
+								{
+									"content": "Optimized image sizes to improve loading times",
+									"items": []
+								},
+								{
+									"content": "Changed the mobile menu to slide over the page",
+									"items": [
+										{
+											"content": "provides a cleaner experience",
+											"items": []
+										}
+									]
+								},
+								{
+									"content": "Added a copyright label to all pages",
+									"items": []
+								},
+								{
+									"content": "Added a more interesting landing page",
+									"items": []
+								},
+								{
+									"content": "Reduced Cross Origin requests to improve loading times",
+									"items": []
+								}
+							]
+						}
+					},
+					{
+						"id": "7NBr7k3fWI",
+						"type": "header",
+						"data": {
+							"text": "Reasons",
+							"level": 2
+						}
+					},
+					{
+						"id": "yaPSjIxAEs",
+						"type": "list",
+						"data": {
+							"style": "unordered",
+							"items": [
+								{
+									"content": "I wanted to make a portfolio site that was easier to keep up to date and looked professional",
+									"items": []
+								},
+								{
+									"content": "I wanted to learn some web technologies I had seen in the past but never got around to looking into",
+									"items": []
+								}
+							]
+						}
+					},
+					{
+						"id": "NmpQSXEmtS",
+						"type": "header",
+						"data": {
+							"text": "Takeaways",
+							"level": 2
+						}
+					},
+					{
+						"id": "n2iyN06a-3",
+						"type": "list",
+						"data": {
+							"style": "unordered",
+							"items": [
+								{
+									"content": "I have a portfolio website that looks professional, is easy to update, and that I can be proud of",
+									"items": []
+								},
+								{
+									"content": "I have experience using TypeScript, Svelte, and SASS",
+									"items": []
+								}
+							]
+						}
+					}
+				],
+				"version": "2.24.3"
+			},
+			"link": "https://travislane.dev",
+			"isRelative": false,
+			"img": "./img/projs/portfolio-site-v2.png",
+			"org": "none"
+		},
+		"slicers-gui": {
+			"category": "software-engineering",
+			"name": "Slicers GUI",
+			"time": "420+ hours",
+			"status": "In progress (Beta)",
+			"difficulty": "Complexed",
+			"description": "This is by far the project I am the most proud of. It is the culmination of a lot of work by both me and the SWTOR Slicers community, and the result is a truly unique piece of software that serves its purpose well. The idea behind making it was to optimize and improve all existing tools, and bundle them all into one cohesive, fully customizable application.",
+			"content": {
+				"time": 1664306704970,
+				"blocks": [
+					{
+						"id": "6rSLg_atGs",
+						"type": "header",
+						"data": {
+							"text": "Description",
+							"level": 2
+						}
+					},
+					{
+						"id": "Lx6r8GlO94",
+						"type": "paragraph",
+						"data": {
+							"text": "This is by far the project I am the most proud of. It is the culmination of a lot of work by both me and the SWTOR Slicers community, and the result is a truly unique piece of software that serves its purpose well. The idea behind making it was to optimize and improve all existing tools, and bundle them all into one cohesive, fully customizable application."
+						}
+					},
+					{
+						"id": "5rNtDDFBGz",
+						"type": "header",
+						"data": {
+							"text": "Updates",
+							"level": 2
+						}
+					},
+					{
+						"id": "RseKw1a0eq",
+						"type": "list",
+						"data": {
+							"style": "unordered",
+							"items": [
+								{
+									"content": "Switched locator to NPM package",
+									"items": []
+								},
+								{
+									"content": "Added support for all SWTOR NPC types",
+									"items": []
+								}
+							]
+						}
+					},
+					{
+						"id": "rCYqP-GvHT",
+						"type": "header",
+						"data": {
+							"text": "Reasons",
+							"level": 2
+						}
+					},
+					{
+						"id": "hPvtdTw4mr",
+						"type": "list",
+						"data": {
+							"style": "unordered",
+							"items": [
+								{
+									"content": "I wanted to make an application, because I had never done that before",
+									"items": []
+								},
+								{
+									"content": "I was sick of all the default C# UIs on the existing tools",
+									"items": []
+								},
+								{
+									"content": "I wanted to make improvements to a lot of the existing tools because they were not nearly as efficient as the could be",
+									"items": []
+								}
+							]
+						}
+					},
+					{
+						"id": "AYxAPU5RS0",
+						"type": "header",
+						"data": {
+							"text": "Takeaways",
+							"level": 2
+						}
+					},
+					{
+						"id": "16uDzqC2VL",
+						"type": "list",
+						"data": {
+							"style": "unordered",
+							"items": [
+								{
+									"content": "How to make apps using the Electron.js framework",
+									"items": []
+								},
+								{
+									"content": "The GO programming language",
+									"items": []
+								},
+								{
+									"content": "How to write native code and run it in process using Edge.js",
+									"items": []
+								},
+								{
+									"content": "How to take advantage of offloading tasks to web workers",
+									"items": []
+								},
+								{
+									"content": "How to effectively run a beta test and implement user feedback",
+									"items": []
+								},
+								{
+									"content": "How to create a good UX (user experience)",
+									"items": []
+								},
+								{
+									"content": "How to effectively pass data between different parts of an application, without compromising on performance",
+									"items": []
+								}
+							]
+						}
+					},
+					{
+						"id": "BIIC3nLKZ6",
+						"type": "paragraph",
+						"data": {
+							"text": "This is a long term project, so I am sure I will continue to learn from it"
+						}
+					}
+				],
+				"version": "2.24.3"
+			},
+			"link": "https://github.com/SWTOR-Slicers/Slicers-GUI",
+			"isRelative": false,
+			"img": "./img/projs/Slicers GUI.png",
+			"org": "swtor-slicers"
+		},
+		"bash-shortcuts": {
+			"category": "steam-deck",
+			"name": "Bash Shortcuts",
+			"time": "16 hours",
+			"status": "In Progress",
+			"difficulty": "Moderate",
+			"description": "Bash Shortcuts is a homebrew plugin for valve's Steam Deck. The main purpose is to make running applications outside of steam games easier by providing a simple way to make your own shortcuts. These are run using Bash and a hidden Steam shortcut.",
+			"content": {
+				"time": 1666360162951,
+				"blocks": [
+					{
+						"id": "TjpRAUaUm6",
+						"type": "header",
+						"data": {
+							"text": "Description",
+							"level": 2
+						}
+					},
+					{
+						"id": "9cS9B0xky_",
+						"type": "paragraph",
+						"data": {
+							"text": "Bash Shortcuts is a homebrew plugin for valve's Steam Deck. The main purpose is to make running applications outside of steam games easier by providing a simple way to make your own shortcuts. These are run using Bash and a hidden Steam shortcut."
+						}
+					},
+					{
+						"id": "jmPLE_6QHX",
+						"type": "paragraph",
+						"data": {
+							"text": "Part of my motivation for purchasing a Steam Deck was that I knew there would be a community development scene around it, so I was happy to contribute to that. It was also a great learning experience as well. I had to use SSH to access my Steam Deck in order to deploy and test the plugin, as well as learn the basics of React."
+						}
+					},
+					{
+						"id": "sxvDf8l7r4",
+						"type": "header",
+						"data": {
+							"text": "Plugin Components",
+							"level": 2
+						}
+					},
+					{
+						"id": "EZX0MFPkqh",
+						"type": "image",
+						"data": {
+							"file": {
+								"url": "./img/projs/Bash Shortcuts -  Main View.png"
+							},
+							"caption": "",
+							"withBorder": false,
+							"stretched": false,
+							"withBackground": false
+						}
+					},
+					{
+						"id": "n2V6u2K0zd",
+						"type": "paragraph",
+						"data": {
+							"text": "The main plugin view allows the user to run their shortcuts as well as manage and manually reload them."
+						}
+					},
+					{
+						"id": "agLNNNB-8h",
+						"type": "image",
+						"data": {
+							"file": {
+								"url": "./img/projs/Bash Shortcuts - Add View.png"
+							},
+							"caption": "",
+							"withBorder": false,
+							"stretched": false,
+							"withBackground": false
+						}
+					},
+					{
+						"id": "YZ0IpTBGPO",
+						"type": "paragraph",
+						"data": {
+							"text": "The add menu allows the user to add their own shortcuts by providing a name and a bash command."
+						}
+					},
+					{
+						"id": "T3FAe5N4H_",
+						"type": "image",
+						"data": {
+							"file": {
+								"url": "./img/projs/Bash Shortcuts - Manage View.png"
+							},
+							"caption": "",
+							"withBorder": false,
+							"stretched": false,
+							"withBackground": false
+						}
+					},
+					{
+						"id": "UCZJMRQBxH",
+						"type": "paragraph",
+						"data": {
+							"text": "The manage view allows users to edit existing shortcuts as well as reorder them. This order will be reflected both here as well as in the main view, allowing users to put their most used shortcuts towards the top."
+						}
+					},
+					{
+						"id": "AH83CWBI2r",
+						"type": "image",
+						"data": {
+							"file": {
+								"url": "./img/projs/Bash Shortcuts Running Shortcut.png"
+							},
+							"caption": "",
+							"withBorder": false,
+							"stretched": false,
+							"withBackground": false
+						}
+					},
+					{
+						"id": "cakBWHEbRm",
+						"type": "paragraph",
+						"data": {
+							"text": "Once the user runs a shortcut, it will be launched full screen. When they decide they are done they can either quit using Steam's menu, or using the custom 'Close Shortcut' button in the plugin."
+						}
+					},
+					{
+						"id": "pMslBBxQuQ",
+						"type": "header",
+						"data": {
+							"text": "Reasons",
+							"level": 2
+						}
+					},
+					{
+						"id": "ARKbZcY66x",
+						"type": "list",
+						"data": {
+							"style": "unordered",
+							"items": [
+								{
+									"content": "Wanted to contribute to the Steam Deck homebrew community",
+									"items": []
+								},
+								{
+									"content": "Wanted an easier way to launch applications from SteamOS",
+									"items": []
+								}
+							]
+						}
+					},
+					{
+						"id": "2MadWlCVyn",
+						"type": "header",
+						"data": {
+							"text": "Takeaways",
+							"level": 2
+						}
+					},
+					{
+						"id": "j9sfDP4lZr",
+						"type": "list",
+						"data": {
+							"style": "unordered",
+							"items": [
+								{
+									"content": "Learned how to use SSH",
+									"items": []
+								},
+								{
+									"content": "Familiarized myself with the basics of React",
+									"items": []
+								}
+							]
+						}
+					}
+				],
+				"version": "2.24.3"
+			},
+			"link": "https://github.com/Tormak9970/bash-shortcuts",
+			"isRelative": false,
+			"img": "./img/projs/Bash Shortcuts -  Main View.png",
 			"org": "steam-deck-homebrew"
 		}
 	},
@@ -3457,6 +3457,11 @@
 		}
 	},
 	"art": {
+		"let-the-wookie-win": {
+			"name": "Let the Wookie Win",
+			"img": "./img/art pieces/Let the Wookie Win Final.png",
+			"description": "If you are a Star Wars fan you may recognize the name of this piece. It was inspired by a scene from Star Wars IV: A New Hope."
+		},
 		"swtor-neon-sign": {
 			"name": "SWTOR Neon Sign",
 			"img": "./img/art pieces/SWTOR Neon Final Marked.png",
@@ -3472,11 +3477,6 @@
 			"img": "./img/art pieces/Guardian Neon Marked.png",
 			"description": "This piece was my third and most recent attemp at making a neon sign in blender. I was satisfied with how the previous sign turned out, however I wanted to add more detail. I settled on modeling a bracket, screws, and clips to 'hold' the sign to the brick wall behind, which turned out really nice."
 		},
-		"let-the-wookie-win": {
-			"name": "Let the Wookie Win",
-			"img": "./img/art pieces/Let the Wookie Win Final.png",
-			"description": "If you are a Star Wars fan you may recognize the name of this piece. It was inspired by a scene from Star Wars IV: A New Hope."
-		},
 		"vault-hunter-neon": {
 			"name": "Vault Hunter Neon",
 			"img": "./img/art pieces/Vault finished v2.png",
@@ -3487,15 +3487,15 @@
 			"img": "./img/projs/Apex Logo Desktop.png",
 			"description": "When I started on this piece I had been having a blast playing Apex Legends, so it was a no-brainer. I decided to try some new techniques, such as the wooden background."
 		},
-		"alloy-oil-effect": {
-			"name": "Alloy Oil Effect",
-			"img": "./img/projs/Alloy_before_after.png",
-			"description": "This piece is a stylized version of one of the concept art images for Horizon Zero Dawn. I made this as I was learning how to modify images with Gimp. As the name implies, the goal was to create an oil painting effect."
-		},
 		"cyberpunk-city-(ai)": {
 			"name": "Cyberpunk City (AI)",
 			"img": "./img/projs/Cyberpunk_cityscape.png",
 			"description": "AI art has been a hot topic as of late. I decided to try them out and see how easy it was to tell that an AI made the art (this piece is the best result I got). Pieces from the same AI have clear similarities, which is amusing as it shows that it's just an algorithm."
+		},
+		"alloy-oil-effect": {
+			"name": "Alloy Oil Effect",
+			"img": "./img/projs/Alloy_before_after.png",
+			"description": "This piece is a stylized version of one of the concept art images for Horizon Zero Dawn. I made this as I was learning how to modify images with Gimp. As the name implies, the goal was to create an oil painting effect."
 		}
 	}
 }

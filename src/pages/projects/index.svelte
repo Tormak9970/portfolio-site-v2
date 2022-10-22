@@ -99,7 +99,7 @@
     });
     onMount(() => {
         Array.from(projects).map(processEntries);
-        pieces = [...pieces];
+        pieces = [...pieces].reverse();
     });
 </script>
 <svelte:window on:wheel|stopPropagation|preventDefault="{throttle(manageScroll, 1000)}" />
