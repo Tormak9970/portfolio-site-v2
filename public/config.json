@@ -1866,12 +1866,12 @@
 		"bash-shortcuts": {
 			"category": "steam-deck",
 			"name": "Bash Shortcuts",
-			"time": "16 hours",
+			"time": "23 hours",
 			"status": "In Progress",
 			"difficulty": "Moderate",
 			"description": "Bash Shortcuts is a homebrew plugin for valve's Steam Deck. The main purpose is to make running applications outside of steam games easier by providing a simple way to make your own shortcuts. These are run using Bash and a hidden Steam shortcut.",
 			"content": {
-				"time": 1666360162951,
+				"time": 1668636933483,
 				"blocks": [
 					{
 						"id": "TjpRAUaUm6",
@@ -1896,6 +1896,35 @@
 						}
 					},
 					{
+						"id": "xWxMoXQQ6z",
+						"type": "header",
+						"data": {
+							"text": "Updates",
+							"level": 2
+						}
+					},
+					{
+						"id": "8ydlWi7YlP",
+						"type": "list",
+						"data": {
+							"style": "unordered",
+							"items": [
+								{
+									"content": "Added support for running shell scripts as shortcuts",
+									"items": []
+								},
+								{
+									"content": "Added UI for toggling a shortcut between app and script mode",
+									"items": []
+								},
+								{
+									"content": "Switched the method used to hide the shortcut runner",
+									"items": []
+								}
+							]
+						}
+					},
+					{
 						"id": "sxvDf8l7r4",
 						"type": "header",
 						"data": {
@@ -1907,9 +1936,7 @@
 						"id": "EZX0MFPkqh",
 						"type": "image",
 						"data": {
-							"file": {
-								"url": "./img/projs/Bash Shortcuts -  Main View.png"
-							},
+							"file": {},
 							"caption": "",
 							"withBorder": false,
 							"stretched": false,
@@ -1927,9 +1954,7 @@
 						"id": "agLNNNB-8h",
 						"type": "image",
 						"data": {
-							"file": {
-								"url": "./img/projs/Bash Shortcuts - Add View.png"
-							},
+							"file": {},
 							"caption": "",
 							"withBorder": false,
 							"stretched": false,
@@ -1947,9 +1972,7 @@
 						"id": "T3FAe5N4H_",
 						"type": "image",
 						"data": {
-							"file": {
-								"url": "./img/projs/Bash Shortcuts - Manage View.png"
-							},
+							"file": {},
 							"caption": "",
 							"withBorder": false,
 							"stretched": false,
@@ -1967,9 +1990,7 @@
 						"id": "AH83CWBI2r",
 						"type": "image",
 						"data": {
-							"file": {
-								"url": "./img/projs/Bash Shortcuts Running Shortcut.png"
-							},
+							"file": {},
 							"caption": "",
 							"withBorder": false,
 							"stretched": false,
