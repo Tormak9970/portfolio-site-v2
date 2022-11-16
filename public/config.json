@@ -1723,12 +1723,12 @@
 		"slicers-gui": {
 			"category": "software-engineering",
 			"name": "Slicers GUI",
-			"time": "420+ hours",
+			"time": "430+ hours",
 			"status": "In progress (Beta)",
 			"difficulty": "Complexed",
 			"description": "This is by far the project I am the most proud of. It is the culmination of a lot of work by both me and the SWTOR Slicers community, and the result is a truly unique piece of software that serves its purpose well. The idea behind making it was to optimize and improve all existing tools, and bundle them all into one cohesive, fully customizable application.",
 			"content": {
-				"time": 1664306704970,
+				"time": 1668636688779,
 				"blocks": [
 					{
 						"id": "6rSLg_atGs",
@@ -1765,6 +1765,10 @@
 								},
 								{
 									"content": "Added support for all SWTOR NPC types",
+									"items": []
+								},
+								{
+									"content": "Updated the extraction presets to be more dynamic",
 									"items": []
 								}
 							]
