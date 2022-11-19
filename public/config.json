@@ -2061,6 +2061,225 @@
 			"isRelative": false,
 			"img": "./img/projs/Bash Shortcuts -  Main View.png",
 			"org": "steam-deck-homebrew"
+		},
+		"darkest-dungeon-save-editor": {
+			"category": "software-engineering",
+			"name": "Darkest Dungeon Save Editor",
+			"time": "28 hours",
+			"status": "Complete",
+			"difficulty": "Moderate",
+			"description": "This project is a save editor for the Indie Rogue-lite game, Darkest Dungeon. The app includes a robust backup system, de-hashing feature, save decoding to valid JSON, save file encoding from JSON, and offers all features through the command line as well. The app is made using Tauri, Svelte, and TypeScript.",
+			"content": {
+				"time": 1668884602490,
+				"blocks": [
+					{
+						"id": "5y1Zw-VRKn",
+						"type": "header",
+						"data": {
+							"text": "Description",
+							"level": 2
+						}
+					},
+					{
+						"id": "baa741tD8i",
+						"type": "paragraph",
+						"data": {
+							"text": "This project is a save editor for the Indie Rogue-lite game, Darkest Dungeon. The app includes a robust backup system, de-hashing feature, save decoding to valid JSON, save file encoding from JSON, and offers all features through the command line as well. The app is made using Tauri, Svelte, and TypeScript."
+						}
+					},
+					{
+						"id": "2BWvYLNnC2",
+						"type": "paragraph",
+						"data": {
+							"text": " The game stores save data in files with the <b>.json</b> extension, however the format is not actually JSON, but rather a very similar format. There are just enough differences to require reading the files from scratch. In order to figure out how to parse the save format I referenced an older <a target=\"_blank\" rel=\"noreferrer noopener\" href=\"https://github.com/robojumper/DarkestDungeonSaveEditor\">save editor</a>."
+						}
+					},
+					{
+						"id": "RDt-8PMnEw",
+						"type": "header",
+						"data": {
+							"text": "Features",
+							"level": 2
+						}
+					},
+					{
+						"id": "OK3KE8Ikwt",
+						"type": "header",
+						"data": {
+							"text": "App",
+							"level": 3
+						}
+					},
+					{
+						"id": "2uk79oTt_6",
+						"type": "paragraph",
+						"data": {
+							"text": "The app has four main features, Property Name Generation, Save File Decoding, Save File Encoding, and a robust Backup System."
+						}
+					},
+					{
+						"id": "JfXpE3N6EZ",
+						"type": "image",
+						"data": {
+							"file": {
+								"url": "./img/projs/DDSEditor-main-ui.png"
+							},
+							"caption": "",
+							"withBorder": false,
+							"stretched": false,
+							"withBackground": false
+						}
+					},
+					{
+						"id": "hL9RdJm4RS",
+						"type": "paragraph",
+						"data": {
+							"text": "The property name generation is necessary because some properties in the save files are hashed, and in order to figure out the property names the app must scan the game data directory and generate a cache of all found property names. This allows the save editor to correctly label all of the properties when it decodes a save, making it easier for users to find the fields they wish to edit."
+						}
+					},
+					{
+						"id": "jAJuPQl_3P",
+						"type": "paragraph",
+						"data": {
+							"text": "One of the two most main features is the save file decoding. This is how the program converts the binary <b>.json</b>&nbsp;files to actual, editable JSON data. This makes it much easier for users to edit their saves, and simplifies the process of backing up saves in a readable format. In order to support editing the JSON data in a nice way, I used the CodeMirror library with custom styling to match the theme of the UI."
+						}
+					},
+					{
+						"id": "eZrT6FK1N1",
+						"type": "image",
+						"data": {
+							"file": {
+								"url": "./img/projs/json-editor.png"
+							},
+							"caption": "",
+							"withBorder": false,
+							"stretched": false,
+							"withBackground": false
+						}
+					},
+					{
+						"id": "jAGsI-zXbO",
+						"type": "paragraph",
+						"data": {
+							"text": "The second main feature is the save file encoding, the necessary counterpart to decoding. This feature allows users to save their changes and convert the editable JSON data back into the binary <b>.json</b>&nbsp;data, enabling their edits to be reflected in the actual game. This works be essentially reversing the process done for decoding, and writing the resulting binary data to a file with the&nbsp;<b>.json</b>&nbsp;extension."
+						}
+					},
+					{
+						"id": "e1HIf7YPS3",
+						"type": "paragraph",
+						"data": {
+							"text": "The final feature is the backup system. When messing with important data such as game saves, it is always important to offer a backup system to cover cases where the user (or the app during testing) makes a mistake that corrupts the save files. The system saves a zip of all save files with a name containing the time and the profile slot saved. This allows the user to keep multiple backups, and easily figure out when they were created. By having a backup system (and prompting users to use it), any issues related to the app corrupting game saves can be eliminated, limiting the only possible problem to the user not making backups."
+						}
+					},
+					{
+						"id": "yaXh8FYqU0",
+						"type": "image",
+						"data": {
+							"file": {
+								"url": "./img/projs/Backup-manager.png"
+							},
+							"caption": "",
+							"withBorder": false,
+							"stretched": false,
+							"withBackground": false
+						}
+					},
+					{
+						"id": "YJv4LZzRec",
+						"type": "header",
+						"data": {
+							"text": "CLI",
+							"level": 3
+						}
+					},
+					{
+						"id": "74B1t95R53",
+						"type": "paragraph",
+						"data": {
+							"text": "The reason for including a Command Line Interface (CLI) with the program was mainly to ensure that none of the features of the older save editor were missing from my version, as that would defeat the purpose of having a newer, better version. Additionally, having the ability to run logic from the command line makes automating tasks such as decoding and then backing up saves much easier, as it can all be done through a single script."
+						}
+					},
+					{
+						"id": "rHtePk4Va7",
+						"type": "header",
+						"data": {
+							"text": "Design Philosophy",
+							"level": 2
+						}
+					},
+					{
+						"id": "1KNDwtoEXr",
+						"type": "paragraph",
+						"data": {
+							"text": "During the development of this program, I learned about the Model View Controller (MVC) design pattern in school and thought what better way to reinforce what I was learning then to implement it myself. Consequently, this program was made with the MVC pattern in mind, isolating all UI interaction to a set of controller classes (namely the <b>AppController</b>, <b>ToastController</b>, and <b>CliController </b>classes) this allows for better separation between the UI and the logic of the program."
+						}
+					},
+					{
+						"id": "Gn9PMkuZUb",
+						"type": "paragraph",
+						"data": {
+							"text": "Another heavy consideration when developing this tool was that I wanted to focus on proper component-based design. In the past I often have not done a great job of making components flexible and reusable, and sometimes not making parts of the UI separate components when I should. For this project I focused on making all components flexible and reusable and paid close attention to what should and should not be its own component."
+						}
+					},
+					{
+						"id": "NVgusPwjkq",
+						"type": "paragraph",
+						"data": {
+							"text": "One of the pitfalls of JavaScript/TypeScript is the binary reading/writing support. It can be frustrating and tedious to work with, especially when compared to other languages such as C# or Java. In the past I had written my own <b>Reader</b>&nbsp;class which greatly improves the quality of life when working with binary data, however for this project I also needed a <b>Writer</b>&nbsp;class which was measurably more difficult to make then the <b>Reader</b>&nbsp;class. To start, I used the <b>Reader</b>&nbsp;class as a reference, which helped to get me started, and I was able to implement almost all the features I wanted. Eventually I ran into an issue with TypeScript's lack of expandable <b>ArrayBuffers</b>. This was a necessary feature, so I added the classic solution of using an <b>expandCapacity</b>&nbsp;method to the <b>Writer</b>&nbsp;class. This allowed the writer to write bytes for an effectively infinite length but had one pitfall. Due to how <b>expandCapacity</b>&nbsp;doubles the length of the <b>Writer's</b>&nbsp;underlying <b>ArrayBuffer</b>, often I would be left with a large amount of 00 bytes at the end of the <b>Writer</b>. In order to fix this, I added a <b>trim</b>&nbsp;method to cut all trailing 00 bytes from the underlying <b>ArrayBuffer</b>."
+						}
+					},
+					{
+						"id": "ec9N1UbSbG",
+						"type": "header",
+						"data": {
+							"text": "Licensing",
+							"level": 2
+						}
+					},
+					{
+						"id": "MEdi0dmRKH",
+						"type": "paragraph",
+						"data": {
+							"text": "For this project I chose to use the GPL 3.0 license because it provides freedom for modifications people may wish to make, but also ensures that I will be credited appropriately and that my work can't be used by a company to make proprietary software. Implementing the license took a bit of effort but was worth it. Since the application has both a UI and a CLI, the recommendation was to include a short notice in both, as well at the top of each file in the program. For the UI the short notice is included in the about window, and for the CLI there are two commands, <b>show w</b>&nbsp;for the warranty information, and <b>show c</b>&nbsp;for the conditions information."
+						}
+					},
+					{
+						"id": "Ylyrr8l9V6",
+						"type": "header",
+						"data": {
+							"text": "Purpose",
+							"level": 2
+						}
+					},
+					{
+						"id": "AnXhqyfZls",
+						"type": "paragraph",
+						"data": {
+							"text": "The reasons I decided to tackle this project were primarily my interest in the game, wanting to make a project using the MVC pattern (which I had just learned in school), and being unsatisfied with the older save editor. I was also interested in exploring the changes that had been made to the CodeMirror library (what I used for the JSON editor in the main UI of the app."
+						}
+					},
+					{
+						"id": "chebiUxN8p",
+						"type": "header",
+						"data": {
+							"text": "Conclusion",
+							"level": 2
+						}
+					},
+					{
+						"id": "jjllveJ9KV",
+						"type": "paragraph",
+						"data": {
+							"text": "Implementing the MVC design pattern in a project of my own helped me understand the real-world usage and application of the pattern. Completing this project also helped me understand why it is important to choose the right License for my projects, as well as how to properly implement them. Finally, in making this app I was able to gain a better understanding of how to design UI components to improve UI design efficiency and create a tool that is useful to not just me but other as well."
+						}
+					}
+				],
+				"version": "2.24.3"
+			},
+			"link": "https://github.com/Tormak9970/Darkest-Dungeon-Save-Editor",
+			"isRelative": false,
+			"img": "./img/projs/DDSEditor-main-ui.png",
+			"org": "none"
 		}
 	},
 	"archive": {
