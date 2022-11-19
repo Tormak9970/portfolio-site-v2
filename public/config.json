@@ -3781,6 +3781,11 @@
 			"name": "Alloy Oil Effect",
 			"img": "./img/projs/Alloy_before_after.png",
 			"description": "This piece is a stylized version of one of the concept art images for Horizon Zero Dawn. I made this as I was learning how to modify images with Gimp. As the name implies, the goal was to create an oil painting effect."
+		},
+		"outer-worlds-logo": {
+			"name": "Outer Worlds Logo",
+			"img": "./img/projs/Outer Worlds Final.png",
+			"description": "This was my first time using reference images in one of my pieces. I wanted to capture the feel of the Outer Worlds, so I used a few images of the in-game environment to help achieve a similar aesthetic with the border of the logo."
 		}
 	}
 }
