@@ -1863,6 +1863,76 @@
 			"img": "./img/projs/Slicers GUI.png",
 			"org": "swtor-slicers"
 		},
+		"tiled-wave-function-collapse": {
+			"category": "web-dev",
+			"name": "Tiled Wave Function Collapse",
+			"time": "8 hours",
+			"status": "Complete",
+			"difficulty": "Moderate",
+			"description": "The wave function collapse algorithm is an algorithm used to generate images and 3D models using either a sample input or a set of tiles with rules determining how they connect. I love procedural generation, and when I stumbled across the GitHub <a target=\"_blank\" rel=\"noreferrer noopener\" href=\"https://github.com/mxgmn/WaveFunctionCollapse\">repository</a>&nbsp;for the original implementation, I knew I needed to try it myself. I focused on the tiled version, since it was more intuitive to start.",
+			"content": {
+				"time": 1668886721798,
+				"blocks": [
+					{
+						"id": "aQTC3zqwqP",
+						"type": "header",
+						"data": {
+							"text": "Description",
+							"level": 2
+						}
+					},
+					{
+						"id": "7Qeyl4YpTz",
+						"type": "paragraph",
+						"data": {
+							"text": "The wave function collapse algorithm is an algorithm used to generate images and 3D models using either a sample input or a set of tiles with rules determining how they connect. I love procedural generation, and when I stumbled across the GitHub <a target=\"_blank\" rel=\"noreferrer noopener\" href=\"https://github.com/mxgmn/WaveFunctionCollapse\">repository</a>&nbsp;for the original implementation, I knew I needed to try it myself. I focused on the tiled version, since it was more intuitive to start."
+						}
+					},
+					{
+						"id": "L0HrQjJxVY",
+						"type": "paragraph",
+						"data": {
+							"text": "My initial implementation worked, but would often fail because it would randomly pick a tile and if it didn't work it would restart, instead of trying another. I fixed this by adding a check to make sure that the random value would work, and if it wouldn't try another. This resulted in almost 100% successful attempts."
+						}
+					},
+					{
+						"id": "2GvGanFezN",
+						"type": "header",
+						"data": {
+							"text": "Purpose",
+							"level": 2
+						}
+					},
+					{
+						"id": "aTINhgk4au",
+						"type": "paragraph",
+						"data": {
+							"text": "The main reason for this project was simply my interest in procedural generation."
+						}
+					},
+					{
+						"id": "dhWhMG5vhV",
+						"type": "header",
+						"data": {
+							"text": "Conculsion",
+							"level": 2
+						}
+					},
+					{
+						"id": "3dU09rpjNZ",
+						"type": "paragraph",
+						"data": {
+							"text": "I gained some experience with taking the conceptual description of an algorithm and creating an actual implementation."
+						}
+					}
+				],
+				"version": "2.24.3"
+			},
+			"link": "https://wave-function-collapse.travislane.dev",
+			"isRelative": false,
+			"img": "./img/projs/wave-function-collapse.png",
+			"org": "none"
+		},
 		"bash-shortcuts": {
 			"category": "steam-deck",
 			"name": "Bash Shortcuts",
@@ -2122,7 +2192,8 @@
 						"type": "image",
 						"data": {
 							"file": {
-								"url": "./img/projs/DDSEditor-main-ui.png"
+								"url": "https://asset.localhost/C%3A%5CUsers%5CTormak%5CDocuments%5CGitHub%5Cportfolio-site-v2%5Cpublic%5Cimg%5Cprojs%5CDDSEditor-main-ui.png",
+								"webUrl": "./img/projs/DDSEditor-main-ui.png"
 							},
 							"caption": "",
 							"withBorder": false,
@@ -2149,7 +2220,8 @@
 						"type": "image",
 						"data": {
 							"file": {
-								"url": "./img/projs/json-editor.png"
+								"url": "https://asset.localhost/C%3A%5CUsers%5CTormak%5CDocuments%5CGitHub%5Cportfolio-site-v2%5Cpublic%5Cimg%5Cprojs%5Cjson-editor.png",
+								"webUrl": "./img/projs/json-editor.png"
 							},
 							"caption": "",
 							"withBorder": false,
@@ -2176,7 +2248,8 @@
 						"type": "image",
 						"data": {
 							"file": {
-								"url": "./img/projs/Backup-manager.png"
+								"url": "https://asset.localhost/C%3A%5CUsers%5CTormak%5CDocuments%5CGitHub%5Cportfolio-site-v2%5Cpublic%5Cimg%5Cprojs%5CBackup-manager.png",
+								"webUrl": "./img/projs/Backup-manager.png"
 							},
 							"caption": "",
 							"withBorder": false,
