@@ -44,11 +44,13 @@
 <div class="projEntry" in:fly|local={inParams} out:fly|local={outParams} on:introend="{handleTransEnd}">
     <div class="content-container">
         <div class="imgs-cont">
-            <img src="{(entryData.org != "none") ? organizations.get(entryData.org).img : "/img/orgs/Logo-black-round.png"}" class="{(entryData.org != "none") ? "" : "round"}" alt="">
-            <div class="proj-main-img" bind:this="{contentCont}">
-                {#if !image}
-                    <img src="{entryData.img}" alt="{entryData.name}">
-                {/if}
+            <div class="positioner">
+                <img src="{(entryData.org != "none") ? organizations.get(entryData.org).img : "/img/orgs/Logo-black-round.png"}" class="{(entryData.org != "none") ? "" : "round"}" alt="">
+                <div class="proj-main-img" bind:this="{contentCont}">
+                    {#if !image}
+                        <img src="{entryData.img}" alt="{entryData.name}">
+                    {/if}
+                </div>
             </div>
         </div>
         <div class="proj-overview-cont">
@@ -95,19 +97,28 @@
     .projEntry .content-container .imgs-cont {
         width: 100%;
         height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .projEntry .content-container .imgs-cont .positioner {
+        width: 100%;
+        height: auto;
         position: relative;
     }
-    .projEntry .content-container .imgs-cont :nth-child(1) {
+    .projEntry .content-container .imgs-cont .positioner :nth-child(1) {
         position: absolute;
         top: 0;
         left: 0;
         width: 200px;
         height: auto;
+        z-index: 1;
     }
-    .projEntry .content-container .imgs-cont .proj-main-img {
-        position: absolute;
-        top: 100px;
-        left: 120px;
+    .projEntry .content-container .imgs-cont .positioner .proj-main-img {
+        position: relative;
+        float: left;
+        margin-top: 100px;
+        margin-left: 120px;
         width: 400px;
         height: auto;
         padding: 10px;
@@ -118,14 +129,15 @@
         background-color: var(--foreground);
         border-radius: 8px;
         box-shadow: black -6px -6px 16px 2px;
+        z-index: 2;
     }
-    .projEntry .content-container .imgs-cont .proj-main-img :global(img) {
+    .projEntry .content-container .imgs-cont .positioner .proj-main-img :global(img) {
         position: static;
         width: 100%;
         height: auto;
         border-radius: 8px;
     }
-    .projEntry .content-container .imgs-cont .round {
+    .projEntry .content-container .imgs-cont .positioner .round {
         border-radius: 50%;
     }
     .projEntry .content-container .proj-overview-cont {

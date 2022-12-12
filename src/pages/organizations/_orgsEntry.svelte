@@ -17,11 +17,6 @@
     let inParams: FlyParams;
     let outParams: FlyParams;
 
-    function linkToProj(id:string) {
-        $goto('../projects');
-        setTimeout(() => { jumpTo(id); }, 10);
-    }
-
     function openOrgEntry() {
         $goto(`./:organization`, {organization: entryData.name.toLowerCase().replaceAll(" ", "-").replaceAll("'", "")});
     }
@@ -55,7 +50,7 @@
         </div>
         <div class="org-overview-cont">
             <div class="org-header">
-                <h2>{entryData.name}</h2>
+                <h2 style="margin-top: 0px;">{entryData.name}</h2>
             </div>
             <p class="overview">
                 {@html entryData.about}
@@ -104,17 +99,18 @@
         justify-content: center;
     }
     .orgEntry .content-container .imgs-cont :global(img) {
+        max-width: 400px;
         width: 100%;
-        height: 70%;
+        max-height: 70%;
         width: auto;
     }
     .orgEntry .content-container .org-overview-cont {
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
+        justify-content: center;
         align-items: center;
 
-        height: 80%;
+        height: 100%;
     }
     .orgEntry .content-container .org-overview-cont .overview {
         width: 100%;

@@ -79,11 +79,11 @@
     .artEntry > .content-container {
         width: 100%;
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+        grid-template-columns: repeat(2, minmax(400px, 1fr));
         column-gap: 14px;
     }
     .artEntry > .content-container > :global(img) { width: auto; max-width: 100%; height: auto; max-height: 100%; margin-top: 14px; border-radius: 5px; cursor: pointer; }
     .artEntry > .content-container > :global(img:hover) { opacity: 0.7; }
-    .artEntry > .description { width: 100%; margin-top: 14px; font-size: 24px; text-align: center; }
-    .artEntry > .msg { margin-top: 56px; font-size: 24px; }
+    .artEntry .description { width: 100%; margin-top: 14px; font-size: 24px; text-align: center; }
+    .artEntry .msg { margin-top: 56px; font-size: 24px; }
 </style>

@@ -41,7 +41,7 @@
     {:else}
         <div>
             <div class="description">
-                <div>Position: {entryData.position}</div>
+                <div>Company: {entryData.company}</div>
             </div>
             <div class="description">
                 <p>{entryData.description}</p>
@@ -69,7 +69,7 @@
     .experienceEntry .content-container {
         width: 100%;
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+        grid-template-columns: repeat(2, minmax(400px, 1fr));
         column-gap: 14px;
     }
     .experienceEntry > .content-container > .img-cont {
