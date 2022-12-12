@@ -1,4 +1,4 @@
-<script lang="ts" type="module">
+<script lang="ts">
     import { fade } from "svelte/transition";
 	import ArtEntry from './_artEntry.svelte';
     import JumpList from "../_utils/JumpList.svelte";
@@ -8,7 +8,7 @@
     import CardEntry from "./_cardEntry.svelte";
     import { afterPageLoad } from '@roxi/routify';
     import { onMount } from "svelte";
-    import { orientationQuery, throttle } from "../../utils";
+    import { orientationQuery } from "../../utils";
 
     interface ArtEnt {
         key:string,

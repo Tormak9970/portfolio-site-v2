@@ -5,7 +5,6 @@
 
     import { scrollDir, allowScroll } from "../../Stores";
 
-    import { jumpTo } from "../projects/index.svelte";
     import { getTransitions } from "../../utils";
 
     export let entryData:Organization;

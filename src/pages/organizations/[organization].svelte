@@ -3,7 +3,6 @@
 
 	import { organizations, projects } from '../../linkConfig';
     import { jumpTo as jumpToProj } from "../projects/index.svelte";
-    import { jumpTo as jumpToArch } from "../archive/index.svelte";
 
 	export let organization:string;
 

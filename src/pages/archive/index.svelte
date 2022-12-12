@@ -1,7 +1,3 @@
-<script lang="ts" context="module">
-    // svelte-ignore unused-export-let
-    export let jumpTo = (id:string) => {};
-</script>
 <script lang="ts">
     import { onMount } from "svelte";
     import { fade } from "svelte/transition";
@@ -45,7 +41,7 @@
 
 <div id="archive">
     <div class="content card" in:fade>
-        {#each pieces as projEntr, idx}
+        {#each pieces as projEntr}
             <CardEntry entryData={projEntr.data}/>
         {/each }
     </div>

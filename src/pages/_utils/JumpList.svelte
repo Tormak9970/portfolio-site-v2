@@ -49,7 +49,7 @@
         }
     }
 
-    function updateOnResize(e:Event) {
+    function updateOnResize(_:Event) {
         const elem = document.getElementById(`${scrollIdx}-jumpNav`);
         const wrapperDiv = elem?.parentNode;
         

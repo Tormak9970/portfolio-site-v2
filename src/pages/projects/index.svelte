@@ -1,6 +1,6 @@
 <script lang="ts" context="module">
     // svelte-ignore unused-export-let
-    export let jumpTo = (id:string) => {}
+    export let jumpTo = (_id:string) => {}
 </script>
 <script lang="ts">
     import { onMount } from "svelte";
@@ -113,7 +113,7 @@
                     <ProjEntry entryData={pieces[$projScrollIdx].data} image={imgsMap.get($projScrollIdx)} isLast={pieces[$projScrollIdx].isLast}/>
                 {/key}
             {:else}
-                {#each pieces as projEntr, idx}
+                {#each pieces as projEntr}
                     <CardEntry entryData={projEntr.data}/>
                 {/each }
             {/if}

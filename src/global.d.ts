@@ -40,3 +40,5 @@ interface Experience {
     position:string,
     description:string
 }
+
+declare module 'editorjs-html';

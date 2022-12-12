@@ -13,10 +13,10 @@
 
     export let config: Config;
 
-    function closeSelf(e: MouseEvent) {
+    function closeSelf(_: MouseEvent) {
         $showing = false;
     }
-    function catchScroll(e: WheelEvent) {}
+    function catchScroll(_: WheelEvent) {}
 
     function keyCheck(e: KeyboardEvent) {
         if ($showing && e.key === "Escape") {

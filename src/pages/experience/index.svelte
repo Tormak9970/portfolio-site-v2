@@ -1,4 +1,4 @@
-<script lang="ts" type="module">
+<script lang="ts">
     import { fade } from "svelte/transition";
 	import ExperienceEntry from './_experienceEntry.svelte';
     import JumpList from "../_utils/JumpList.svelte";
@@ -8,7 +8,7 @@
     import CardEntry from "./_cardEntry.svelte";
     import { afterPageLoad } from '@roxi/routify';
     import { onMount } from "svelte";
-    import { orientationQuery, throttle } from "../../utils";
+    import { orientationQuery } from "../../utils";
 
     interface ExperienceEnt {
         key:string,
@@ -88,7 +88,7 @@
                     <ExperienceEntry entryData={pieces[$expScrollIdx].data} isLast={pieces[$expScrollIdx].isLast}/>
                 {/key}
             {:else}
-                {#each pieces as expEntr, idx}
+                {#each pieces as expEntr}
                     <CardEntry entryData={expEntr.data}/>
                 {/each }
             {/if}

@@ -1,4 +1,4 @@
-<script lang="ts" type="module">
+<script lang="ts">
     import { onMount } from "svelte";
     import { fade } from "svelte/transition";
 	import OrgsEntry from "./_orgsEntry.svelte";
@@ -8,7 +8,7 @@
     import MediaQuery from "../_utils/MediaQuery.svelte";
     import CardEntry from "./_cardEntry.svelte";
     import { afterPageLoad } from "@roxi/routify";
-    import { orientationQuery, throttle } from "../../utils";
+    import { orientationQuery } from "../../utils";
 
     type OrganizationsEnt = {
         key:string,
@@ -97,7 +97,7 @@
                     <OrgsEntry entryData={pieces[$orgScrollIdx].data} image={imgsMap.get($orgScrollIdx)} isLast={pieces[$orgScrollIdx].isLast}/>
                 {/key}
             {:else}
-                {#each pieces as orgEntr, idx}
+                {#each pieces as orgEntr}
                     <CardEntry entryData={orgEntr.data}/>
                 {/each }
             {/if}

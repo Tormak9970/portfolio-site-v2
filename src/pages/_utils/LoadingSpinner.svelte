@@ -35,7 +35,7 @@
         top: 50%;
         transform: translate(-50%, -50%);
     }
-    .loading-spinner-cont > .path { animation: dash 3s linear infinite; }
+    .loading-spinner-cont .path { animation: dash 3s linear infinite; }
 
     @keyframes dash {
         0% { stroke-dashoffset: 0%; stroke-dasharray: 0% 100%; }

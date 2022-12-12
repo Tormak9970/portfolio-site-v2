@@ -12,30 +12,9 @@
 
     function copyToClipboard() { copyTextToClipboard('Tormak9970@gmail.com'); }
 
-    function fallbackCopyTextToClipboard(text: string) {
-        let textArea = document.createElement("textarea");
-        textArea.value = text;
-        textArea.style.top = "0";
-        textArea.style.left = "0";
-        textArea.style.position = "fixed";
-
-        document.body.appendChild(textArea);
-        textArea.focus();
-        textArea.select();
-
-        try {
-            // @ts-ignore
-            document.execCommand('copy');
-            showBreadcrumb("Copied to clipboard.");
-        } catch (err) {
-            console.error('Fallback: Oops, unable to copy', err);
-        }
-
-        document.body.removeChild(textArea);
-    }
     function copyTextToClipboard(text: string) {
         if (!navigator.clipboard) {
-            fallbackCopyTextToClipboard(text);
+            showBreadcrumb("Your browser does not support the clipboard api :(");
             return;
         }
         navigator.clipboard.writeText(text).then(function() {
