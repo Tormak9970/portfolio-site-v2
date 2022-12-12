@@ -8,7 +8,7 @@
     import CardEntry from "./_cardEntry.svelte";
     import { afterPageLoad } from '@roxi/routify';
     import { onMount } from "svelte";
-    import { throttle } from "../../utils";
+    import { orientationQuery, throttle } from "../../utils";
 
     interface ArtEnt {
         key:string,
@@ -82,6 +82,7 @@
         if ($orientation == 0) {
             if ($allowScroll) {
                 $allowScroll = false;
+                setTimeout(() => $allowScroll = true, 300);
                 interceptScroll(e);
             }
         }
@@ -100,11 +101,11 @@
     });
 </script>
 
-<svelte:window on:wheel|stopPropagation="{throttle(manageScroll, 1000)}" />
+<svelte:window on:wheel|stopPropagation="{manageScroll}" />
 
 <div id="art">
     <div class="content{$orientation == 0 ? ' fancy' : ' card'}" in:fade>
-        <MediaQuery query="(orientation:landscape)" let:matches>
+        <MediaQuery query="{orientationQuery}" let:matches>
             {#if matches && $orientation == 0}
                 {#key $artScrollIdx}
                     <ArtEntry entryData={pieces[$artScrollIdx].data} image={imgsMap.get($artScrollIdx)} isLast={pieces[$artScrollIdx].isLast}/>
@@ -116,7 +117,7 @@
             {/if}
         </MediaQuery>
     </div>
-    <MediaQuery query="(orientation:landscape)" let:matches>
+    <MediaQuery query="{orientationQuery}" let:matches>
         {#if matches}
             <JumpList len={art.size+1} tooltips={jumpNames} handler={jumpToHandler} scrollIdx={$artScrollIdx}/>
         {/if}
@@ -133,7 +134,7 @@
         overflow: hidden;
     }
 
-    @media (orientation: landscape) {
+    @media (orientation: landscape) and (min-width:1200px) {
         .content {
             width: 100%;
             height: 100%;
@@ -163,7 +164,7 @@
         }
     }
 
-    @media (orientation: portrait) {
+    @media (orientation: portrait) or (max-width: 1199px) {
         .content {
             width: 100%;
             height: 100%;

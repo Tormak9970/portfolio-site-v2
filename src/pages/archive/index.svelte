@@ -58,7 +58,7 @@
         position: relative;
         overflow: hidden;
     }
-    @media (orientation: landscape) {
+    @media (orientation: landscape) and (min-width:1200px) {
         .content {
             width: 100%;
             height: 100%;
@@ -74,7 +74,7 @@
             overflow: scroll;
         }
     }
-    @media (orientation: portrait) {
+    @media (orientation: portrait) or (max-width: 1199px) {
         .content {
             width: 100%;
             height: 100%;

@@ -12,7 +12,7 @@
     import MediaQuery from "../_utils/MediaQuery.svelte";
     import CardEntry from "./_cardEntry.svelte";
     import { afterPageLoad } from "@roxi/routify";
-    import { throttle } from "../../utils";
+    import { orientationQuery } from "../../utils";
 
     interface ProjectEnt {
         key:string,
@@ -86,6 +86,7 @@
         if ($orientation == 0) {
             if ($allowScroll) {
                 $allowScroll = false;
+                setTimeout(() => $allowScroll = true, 300);
                 interceptScroll(e);
             }
         }
@@ -102,11 +103,11 @@
         pieces = [...pieces];
     });
 </script>
-<svelte:window on:wheel|stopPropagation|preventDefault="{throttle(manageScroll, 1000)}" />
+<svelte:window on:wheel|stopPropagation|preventDefault="{manageScroll}" />
 
 <div id="projects">
     <div class="content{$orientation == 0 ? ' fancy' : ' card'}" in:fade>
-        <MediaQuery query="(orientation:landscape)" let:matches>
+        <MediaQuery query="{orientationQuery}" let:matches>
             {#if matches && $orientation == 0}
                 {#key $projScrollIdx}
                     <ProjEntry entryData={pieces[$projScrollIdx].data} image={imgsMap.get($projScrollIdx)} isLast={pieces[$projScrollIdx].isLast}/>
@@ -118,7 +119,7 @@
             {/if}
         </MediaQuery>
     </div>
-    <MediaQuery query="(orientation:landscape)" let:matches>
+    <MediaQuery query="{orientationQuery}" let:matches>
         {#if matches}
             <JumpList len={projects.size} tooltips={jumpNames} handler={jumpToHandler} scrollIdx={$projScrollIdx}/>
         {/if}
@@ -132,7 +133,7 @@
         position: relative;
         overflow: hidden;
     }
-    @media (orientation: landscape) {
+    @media (orientation: landscape) and (min-width:1200px) {
         .content {
             width: 100%;
             height: 100%;
@@ -156,7 +157,7 @@
             overflow: scroll;
         }
     }
-    @media (orientation: portrait) {
+    @media (orientation: portrait) or (max-width: 1199px) {
         .content {
             width: 100%;
             height: 100%;

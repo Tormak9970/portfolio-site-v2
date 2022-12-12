@@ -2,6 +2,7 @@
     import { onMount } from "svelte";
 
     import { fade } from "svelte/transition";
+    import { orientationQuery } from "../utils";
 
 	import MediaQuery from "./_utils/MediaQuery.svelte";
 
@@ -93,7 +94,7 @@
     <div class="iframe-cont">
         <iframe src="https://dots.travislane.dev/" title="noisy-dots" frameBorder="0"/>
     </div>
-    <MediaQuery query="(orientation:landscape)" let:matches>
+    <MediaQuery query="{orientationQuery}" let:matches>
         {#if matches}
             <div id="aboutSection" class="landscape" in:fade>
                 <div id="name">Travis Lane</div>

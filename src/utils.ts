@@ -1,4 +1,3 @@
-import { circInOut } from "svelte/easing";
 import type { FlyParams } from "svelte/transition";
 
 export function getTransitions(dir:boolean): {[key:string]:FlyParams} {
@@ -26,17 +25,19 @@ export function getTransitions(dir:boolean): {[key:string]:FlyParams} {
 }
 
 export function throttle(func:any, wait:number) {
-    let waiting = false;
-    return function () {
-      if (waiting) {
-        return;
-      } else {
-        func.apply(this, arguments);
-      }
-  
-      waiting = true;
-      setTimeout(() => {
-        waiting = false;
-      }, wait);
-    };
-  }
+  let waiting = false;
+  return function () {
+    if (waiting) {
+      return;
+    } else {
+      func.apply(this, arguments);
+    }
+
+    waiting = true;
+    setTimeout(() => {
+      waiting = false;
+    }, wait);
+  };
+}
+
+export const orientationQuery = "(orientation:landscape) and (min-width: 1200px)";

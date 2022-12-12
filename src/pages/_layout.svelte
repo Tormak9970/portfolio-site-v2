@@ -131,7 +131,7 @@
 			{:else}
 				<div class="mobile-header">
 					<div class="home-container">
-						<img src="img/logo.svg" alt="logo" height="30" width="30" />
+						<img src="/img/logo.svg" alt="logo" height="30" width="30" />
 						<div class="nav-toggle" on:click|stopPropagation={handleMobileClick} >
 							<div class="bar1" />
 							<div class="bar2" />

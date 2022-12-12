@@ -8,7 +8,7 @@
     import MediaQuery from "../_utils/MediaQuery.svelte";
     import CardEntry from "./_cardEntry.svelte";
     import { afterPageLoad } from "@roxi/routify";
-    import { throttle } from "../../utils";
+    import { orientationQuery, throttle } from "../../utils";
 
     type OrganizationsEnt = {
         key:string,
@@ -68,6 +68,7 @@
         if ($orientation == 0) {
             if ($allowScroll) {
                 $allowScroll = false;
+                setTimeout(() => $allowScroll = true, 300);
                 interceptScroll(e);
             }
         }
@@ -86,11 +87,11 @@
     });
 </script>
 
-<svelte:window on:wheel|stopPropagationon|preventDefault="{throttle(manageScroll, 1000)}" />
+<svelte:window on:wheel|stopPropagationon|preventDefault="{manageScroll}" />
 
 <div id="orgs">
     <div class="content{$orientation == 0 ? ' fancy' : ' card'}" in:fade>
-        <MediaQuery query="(orientation:landscape)" let:matches>
+        <MediaQuery query="{orientationQuery}" let:matches>
             {#if matches && $orientation == 0}
                 {#key $orgScrollIdx}
                     <OrgsEntry entryData={pieces[$orgScrollIdx].data} image={imgsMap.get($orgScrollIdx)} isLast={pieces[$orgScrollIdx].isLast}/>
@@ -103,7 +104,7 @@
         </MediaQuery>
     </div>
     
-    <MediaQuery query="(orientation:landscape)" let:matches>
+    <MediaQuery query="{orientationQuery}" let:matches>
         {#if matches}
             <JumpList len={organizations.size} tooltips={jumpNames} handler={jumpToHandler} scrollIdx={$orgScrollIdx}/>
         {/if}
@@ -120,7 +121,7 @@
         overflow: hidden;
     }
 
-    @media (orientation: landscape) {
+    @media (orientation: landscape) and (min-width:1200px) {
         .content {
             width: 100%;
             height: 100%;
@@ -150,7 +151,7 @@
         }
     }
 
-    @media (orientation: portrait) {
+    @media (orientation: portrait) or (max-width: 1199px) {
         .content {
             width: 100%;
             height: 100%;
