@@ -189,7 +189,7 @@
 		</div>
 		<ImageModal config={$imageModalData} />
 	{/await}
-	<div class="rights">© Travis Lane 2022</div>
+	<div class="rights">© Travis Lane {new Date().getFullYear()}</div>
 </main>
 
 <style>
