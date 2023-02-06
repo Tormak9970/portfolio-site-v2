@@ -2,13 +2,13 @@
 	"projects": {
 		"steamdeck-u": {
 			"category": "steam-deck",
-			"name": "SteamDeck U",
-			"time": "3 hours",
+			"name": "SteamDeck Themes",
+			"time": "5 hours",
 			"status": "Complete",
 			"difficulty": "Simple",
-			"description": "This project is a custom theme for Valve's Steam Deck. It uses a homebrew plugin for injecting CSS to provide users with options to customize each part of their keyboard. The reason I started this project is because Valve offers keyboard themes, but the selection is limited and they only work online.",
+			"description": "This project is a collection of CSS themes for the Steamdeck gaming handheld. Generally, my approach is to style things as dynamically as possible and provide inputs for all the colors. The themes are applied using a homebrew plugin for injecting CSS into the Steamdeck UI.",
 			"content": {
-				"time": 1664544959411,
+				"time": 1675721120562,
 				"blocks": [
 					{
 						"id": "nZjfcxUvB2",
@@ -19,17 +19,65 @@
 						}
 					},
 					{
+						"id": "nR_Ke-hHDh",
+						"type": "paragraph",
+						"data": {
+							"text": "This project is a collection of CSS themes for the Steamdeck gaming handheld. Generally, my approach is to style things as dynamically as possible and provide inputs for all the colors. The themes are applied using a homebrew plugin for injecting CSS into the Steamdeck UI."
+						}
+					},
+					{
+						"id": "RS_k1qv86T",
+						"type": "header",
+						"data": {
+							"text": "Stylish Footer",
+							"level": 2
+						}
+					},
+					{
+						"id": "2UkiyOKWI9",
+						"type": "paragraph",
+						"data": {
+							"text": "//need image"
+						}
+					},
+					{
+						"id": "XnZr_97qns",
+						"type": "paragraph",
+						"data": {
+							"text": "This theme makes the header and footer elements transparent while giving call to action descriptions a black background to maintain visibility."
+						}
+					},
+					{
+						"id": "CAIN-YCX9-",
+						"type": "header",
+						"data": {
+							"text": "SteamDeck U",
+							"level": 2
+						}
+					},
+					{
+						"id": "1CiorPrng7",
+						"type": "image",
+						"data": {
+							"file": {},
+							"caption": "",
+							"withBorder": false,
+							"stretched": false,
+							"withBackground": false
+						}
+					},
+					{
 						"id": "xPDAeM17W0",
 						"type": "paragraph",
 						"data": {
-							"text": "This project is a custom theme for Valve's Steam Deck. It uses a homebrew plugin for injecting CSS to provide users with options to customize each part of their keyboard. The reason I started this project is because Valve offers keyboard themes, but the selection is limited and they only work online."
+							"text": "This theme provides users with options to customize each part of their keyboard. Valve offers first party keyboard themes, but they are eyesores and only work online."
 						}
 					},
 					{
 						"id": "mXmVM7rad_",
 						"type": "header",
 						"data": {
-							"text": "Reasons",
+							"text": "Purpose",
 							"level": 2
 						}
 					},
@@ -41,39 +89,6 @@
 							"items": [
 								{
 									"content": "Wanted to contribute to the homebrew Steam Deck community",
-									"items": []
-								},
-								{
-									"content": "Wanted a more customizable alternative to the existing keyboards",
-									"items": []
-								},
-								{
-									"content": "Wanted customizable keyboards that worked offline",
-									"items": []
-								}
-							]
-						}
-					},
-					{
-						"id": "KgQPukLNZY",
-						"type": "header",
-						"data": {
-							"text": "Takeaways",
-							"level": 2
-						}
-					},
-					{
-						"id": "qXVdi9yViM",
-						"type": "list",
-						"data": {
-							"style": "unordered",
-							"items": [
-								{
-									"content": "Came up with a unique idea for the homebrew community",
-									"items": []
-								},
-								{
-									"content": "Created a highly customizable keyboard that also works offline",
 									"items": []
 								}
 							]
@@ -87,113 +102,6 @@
 			"img": "./img/projs/SteamDeckU.png",
 			"org": "steam-deck-homebrew"
 		},
-		"marching-squares": {
-			"category": "blender",
-			"name": "Marching Squares",
-			"time": "14 hrs",
-			"status": "Complete",
-			"difficulty": "Moderate",
-			"description": "The goal of this project was to recreate the Marching Squares algorithm in blender. Marching Squares is a well known computer graphics algorithm used to generate procedural patterns for a multitude of uses, such as terrain in game design.",
-			"content": {
-				"time": 1657914802466,
-				"blocks": [
-					{
-						"id": "GFzO54o7BQ",
-						"type": "header",
-						"data": {
-							"text": "Description",
-							"level": 2
-						}
-					},
-					{
-						"id": "Ptw2MUCPEY",
-						"type": "paragraph",
-						"data": {
-							"text": "The goal of this project was to recreate the Marching Squares algorithm in blender. Marching Squares is a well known computer graphics algorithm used to generate procedural patterns for a multitude of uses, such as terrain in game design."
-						}
-					},
-					{
-						"id": "VbytCdOa6Q",
-						"type": "header",
-						"data": {
-							"text": "More Info",
-							"level": 2
-						}
-					},
-					{
-						"id": "oNGk8ZK9PK",
-						"type": "paragraph",
-						"data": {
-							"text": "While it may not be very complicated to create marching squares through programming, Blender's Geometry Nodes are another story entirely. Because of how geometry nodes work, there is no looping or re-using data in the typical programming sense. Data is, in most cases, computed based on where it is called from (more info can be found about that <a target=\"_blank\" rel=\"noreferrer noopener\" href=\"https://docs.blender.org/manual/en/latest/modeling/geometry_nodes/fields.html\">here</a>). This made recreating marching squares significantly more complicated. The image below is what the logic for this project looks like (normally I use node groups to make working on it possible, this is what it looks like without them):"
-						}
-					},
-					{
-						"id": "1L2CMoEKDp",
-						"type": "image",
-						"data": {
-							"file": {
-								"url": "./img/projs/Marching Squares inner.png"
-							},
-							"caption": "",
-							"withBorder": false,
-							"stretched": false,
-							"withBackground": false
-						}
-					},
-					{
-						"id": "qLwVgR_0xk",
-						"type": "header",
-						"data": {
-							"text": "Reasons",
-							"level": 2
-						}
-					},
-					{
-						"id": "EDSYKuORGB",
-						"type": "list",
-						"data": {
-							"style": "unordered",
-							"items": [
-								{
-									"content": "Wanted to create a geometry nodes implementation of marching squares",
-									"items": []
-								}
-							]
-						}
-					},
-					{
-						"id": "Ne9x4Lvo6L",
-						"type": "header",
-						"data": {
-							"text": "Takeaways",
-							"level": 2
-						}
-					},
-					{
-						"id": "0ug6cJpzz3",
-						"type": "list",
-						"data": {
-							"style": "unordered",
-							"items": [
-								{
-									"content": "Gained a better understanding of how to solve problems with geometry nodes",
-									"items": []
-								},
-								{
-									"content": "Have a better understanding of how geometry nodes work internally",
-									"items": []
-								}
-							]
-						}
-					}
-				],
-				"version": "2.24.3"
-			},
-			"link": "https://github.com/Tormak9970/blender-projects",
-			"isRelative": false,
-			"img": "./img/projs/Marching Squares in Blender.png",
-			"org": "none"
-		},
 		"portfolio-updater": {
 			"category": "software-engineering",
 			"name": "Portfolio Updater",
@@ -202,7 +110,7 @@
 			"difficulty": "Moderate",
 			"description": "Initially, this project was going to be written using the Electron framework, but right around when I started it, I heard about Tauri. Tauri is great because it allows you to build more secure apps with smaller bundle sizes, and has a better developer experience then Electron. The app itself makes updating my portfolio easy and straightforward, allowing me to focus more on my projects.",
 			"content": {
-				"time": 1666463685353,
+				"time": 1675718358173,
 				"blocks": [
 					{
 						"id": "mGX3WmsU_L",
@@ -256,7 +164,7 @@
 						"id": "uTV1I6vgqh",
 						"type": "header",
 						"data": {
-							"text": "Reasons",
+							"text": "Purpose",
 							"level": 2
 						}
 					},
@@ -285,7 +193,7 @@
 						"id": "RKQSFtpQz_",
 						"type": "header",
 						"data": {
-							"text": "Takeaways",
+							"text": "Conclusion",
 							"level": 2
 						}
 					},
@@ -326,7 +234,7 @@
 			"difficulty": "Moderate",
 			"description": "I started this project because I had been using the Tweakpane library for editable parameters in another project, and needed a gradient texture input. The layout and controls are based on Blender's color ramp node, which node, which does something similar. The plugin allows the user to edit the stop position and color for the gradient, and then outputs an ImageData object with the consequent texture.",
 			"content": {
-				"time": 1664389789596,
+				"time": 1675718368657,
 				"blocks": [
 					{
 						"id": "QExxjEfEMq",
@@ -347,7 +255,7 @@
 						"id": "QaV7pBHTdv",
 						"type": "header",
 						"data": {
-							"text": "Reasons",
+							"text": "Purpose",
 							"level": 2
 						}
 					},
@@ -368,7 +276,7 @@
 						"id": "nW0C8tES70",
 						"type": "header",
 						"data": {
-							"text": "Takeaways",
+							"text": "Conclusion",
 							"level": 2
 						}
 					},
@@ -397,176 +305,6 @@
 			"img": "./img/projs/tweakpane-plugin-gradient.png",
 			"org": "none"
 		},
-		"three.js-marching-cubes": {
-			"category": "web-dev",
-			"name": "Three.js Marching Cubes",
-			"time": "11 hours",
-			"status": "Complete",
-			"difficulty": "Moderate",
-			"description": "The Marching Cubes is a well known algorithm often used in games for terrain generation. The premise is it generates polygons based on weights applied to each vertex of the bounding cube. I have always found this algorithm interesting, so I decided to recreate it using TypeScript and one of my favorite libraries, Three.js.",
-			"content": {
-				"time": 1664377269981,
-				"blocks": [
-					{
-						"id": "GUU5idVR6z",
-						"type": "header",
-						"data": {
-							"text": "Description",
-							"level": 2
-						}
-					},
-					{
-						"id": "wlomAPoJbT",
-						"type": "paragraph",
-						"data": {
-							"text": "The Marching Cubes is a well known algorithm often used in games for terrain generation. The premise is it generates polygons based on weights applied to each vertex of the bounding cube. I have always found this algorithm interesting, so I decided to recreate it using TypeScript and one of my favorite libraries, Three.js."
-						}
-					},
-					{
-						"id": "cPdy9Ap83z",
-						"type": "header",
-						"data": {
-							"text": "Reasons",
-							"level": 2
-						}
-					},
-					{
-						"id": "xMyEqCE1rv",
-						"type": "list",
-						"data": {
-							"style": "unordered",
-							"items": [
-								{
-									"content": "I wanted to recreate the Marching Cubes algorithm using Three.js and Typescript",
-									"items": []
-								},
-								{
-									"content": "I wanted to refamiliarize myself with Three.js",
-									"items": []
-								}
-							]
-						}
-					},
-					{
-						"id": "V_Xx5nYkSh",
-						"type": "header",
-						"data": {
-							"text": "Takeaways",
-							"level": 2
-						}
-					},
-					{
-						"id": "l2G2fYd8ak",
-						"type": "list",
-						"data": {
-							"style": "unordered",
-							"items": [
-								{
-									"content": "I learned useful strategies for optimizing Three.js applications",
-									"items": []
-								},
-								{
-									"content": "I was able to recreate the algorithm",
-									"items": []
-								},
-								{
-									"content": "I was able to refresh my memory on Three.js",
-									"items": []
-								}
-							]
-						}
-					}
-				],
-				"version": "2.24.3"
-			},
-			"link": "https://marching-cubes.travislane.dev/",
-			"isRelative": false,
-			"img": "./img/projs/threejs-marching-cubes.png",
-			"org": "none"
-		},
-		"noisy-dots": {
-			"category": "web-dev",
-			"name": "Noisy Dots",
-			"time": "4 hours",
-			"status": "Complete",
-			"difficulty": "Simple",
-			"description": "This small project is a simple animation made using the HTML5 canvas and simplex-noise. I came up with this idea because I wanted to add something to my portfolio landing page to make it more unique, and I love procedural generation so I thought a noise based animation would be perfect! It works by sampling a noise texture and scaling circles based on the value (noise ranges from 0.0 - 1.0), which creates the mesmerizing pattern.",
-			"content": {
-				"time": 1664375512223,
-				"blocks": [
-					{
-						"id": "R8n2_PIDX_",
-						"type": "header",
-						"data": {
-							"text": "Description",
-							"level": 2
-						}
-					},
-					{
-						"id": "vvXPG-9bzc",
-						"type": "paragraph",
-						"data": {
-							"text": "This small project is a simple animation made using the HTML5 canvas and simplex-noise. I came up with this idea because I wanted to add something to my portfolio landing page to make it more unique, and I love procedural generation so I thought a noise based animation would be perfect! It works by sampling a noise texture and scaling circles based on the value (noise ranges from 0.0 - 1.0), which creates the mesmerizing pattern."
-						}
-					},
-					{
-						"id": "s1PgdSrKpS",
-						"type": "header",
-						"data": {
-							"text": "Reasons",
-							"level": 2
-						}
-					},
-					{
-						"id": "QLdP_i0Xs8",
-						"type": "list",
-						"data": {
-							"style": "unordered",
-							"items": [
-								{
-									"content": "I wanted to add something unique to my portfolio landing page",
-									"items": []
-								},
-								{
-									"content": "Was interested in exploring the use of procedural noise in web design",
-									"items": []
-								}
-							]
-						}
-					},
-					{
-						"id": "N_8415duvG",
-						"type": "header",
-						"data": {
-							"text": "Takeaways",
-							"level": 2
-						}
-					},
-					{
-						"id": "934yia4AmU",
-						"type": "list",
-						"data": {
-							"style": "unordered",
-							"items": [
-								{
-									"content": "Created something unique that helps my portfolio make an impact on viewers",
-									"items": []
-								},
-								{
-									"content": "Discovered useful libraries for procedural generation in JavaScript",
-									"items": []
-								}
-							]
-						}
-					}
-				],
-				"version": "2.24.3"
-			},
-			"link": "https://dots.travislane.dev/",
-			"isRelative": false,
-			"img": "./img/projs/noisy-dots-anim.png",
-			"org": "none"
-		},
 		"swtorslicers.org": {
 			"category": "web-dev",
 			"name": "swtorslicers.org",
@@ -575,7 +313,7 @@
 			"difficulty": "Moderate",
 			"description": "Components",
 			"content": {
-				"time": 1653785687031,
+				"time": 1675718420130,
 				"blocks": [
 					{
 						"id": "5yG04KIu_B",
@@ -681,7 +419,7 @@
 						"id": "qbMTucXH-t",
 						"type": "header",
 						"data": {
-							"text": "Reasons",
+							"text": "Purpose",
 							"level": 2
 						}
 					},
@@ -714,7 +452,7 @@
 						"id": "XbqJ1h3Mdb",
 						"type": "header",
 						"data": {
-							"text": "Takeaways",
+							"text": "Conclusion",
 							"level": 2
 						}
 					},
@@ -753,9 +491,9 @@
 			"time": "20 hours",
 			"status": "Complete",
 			"difficulty": "Simple",
-			"description": "I had the idea to make this little npm package because I was working on my portfolio, and came across a neat rollup plugin for generating sitemaps. Vite allows users to use most rollup plugins, so I just used that, but it caused some issues, so I decided to write my own with some added features.",
+			"description": "I had the idea to make this npm package because I was working on my portfolio, and came across a neat little rollup plugin for generating sitemaps. Vite allows users to use most rollup plugins, so I just used that, but it caused some issues, so I decided to write my own with some added features.",
 			"content": {
-				"time": 1650923458531,
+				"time": 1675718444292,
 				"blocks": [
 					{
 						"id": "MvdHNFFz4d",
@@ -776,7 +514,7 @@
 						"id": "it04sm7mzL",
 						"type": "header",
 						"data": {
-							"text": "Reasons",
+							"text": "Purpose",
 							"level": 2
 						}
 					},
@@ -805,7 +543,7 @@
 						"id": "fIYKc3fzce",
 						"type": "header",
 						"data": {
-							"text": "Takeaways",
+							"text": "Conclusion",
 							"level": 2
 						}
 					},
@@ -827,122 +565,11 @@
 						}
 					}
 				],
-				"version": "2.22.2"
+				"version": "2.24.3"
 			},
 			"link": "https://www.npmjs.com/package/@tormak/vite-plugin-sitemap",
 			"isRelative": false,
 			"img": "./img/projs/vite-plugin-sitemap.png",
-			"org": "none"
-		},
-		"hex-world-generator": {
-			"category": "blender",
-			"name": "Hex World Generator",
-			"time": "12 hours",
-			"status": "Complete",
-			"difficulty": "Moderate",
-			"description": "I started this project after coming across a video about how to make the base of the project (the hex shaped grid). Thought it looked interesting so I made it, and added decorations to the different areas.",
-			"content": {
-				"time": 1657913098487,
-				"blocks": [
-					{
-						"id": "188dV-mqHY",
-						"type": "header",
-						"data": {
-							"text": "Description",
-							"level": 2
-						}
-					},
-					{
-						"id": "5YqHZbPaez",
-						"type": "paragraph",
-						"data": {
-							"text": "I started this project after coming across a video about how to make the base of the project (the hex shaped grid). Thought it looked interesting so I made it, and added decorations to the different areas."
-						}
-					},
-					{
-						"id": "3W4r39t6v9",
-						"type": "header",
-						"data": {
-							"text": "More Info",
-							"level": 2
-						}
-					},
-					{
-						"id": "Jx-0bMiBkb",
-						"type": "paragraph",
-						"data": {
-							"text": "The way this project works is through using on of Blender's newer features, Geometry Nodes. These allow you to create 3D models almost 'programmatically'. They can be grouped together to create controller nodes as well, which is what I did for this project. This means someone could edit specific parameters to their liking without having to slog through hundreds of nodes."
-						}
-					},
-					{
-						"id": "OCvwhLsC32",
-						"type": "image",
-						"data": {
-							"file": {
-								"url": "./img/projs/Hex World Controls.png"
-							},
-							"caption": "",
-							"withBorder": false,
-							"stretched": false,
-							"withBackground": false
-						}
-					},
-					{
-						"id": "y814FaNexB",
-						"type": "header",
-						"data": {
-							"text": "Reasons",
-							"level": 2
-						}
-					},
-					{
-						"id": "8ExJmB_Ye2",
-						"type": "list",
-						"data": {
-							"style": "unordered",
-							"items": [
-								{
-									"content": "Wanted to learn more about how Geometry Nodes worked",
-									"items": []
-								},
-								{
-									"content": "Wanted to create a procedural mini world and model some low poly models",
-									"items": []
-								}
-							]
-						}
-					},
-					{
-						"id": "rI1_eUEx5E",
-						"type": "header",
-						"data": {
-							"text": "Takeaways",
-							"level": 2
-						}
-					},
-					{
-						"id": "TNsqVl2BGO",
-						"type": "list",
-						"data": {
-							"style": "unordered",
-							"items": [
-								{
-									"content": "Gained a better understanding of how Blender's Geometry Nodes work",
-									"items": []
-								},
-								{
-									"content": "Created a procedurally generated world with low poly decorations",
-									"items": []
-								}
-							]
-						}
-					}
-				],
-				"version": "2.24.3"
-			},
-			"link": "https://github.com/Tormak9970/blender-projects",
-			"isRelative": false,
-			"img": "./img/projs/Hex World.png",
 			"org": "none"
 		},
 		"simple-sudoku": {
@@ -953,7 +580,7 @@
 			"difficulty": "Moderate",
 			"description": "I came across an article about different ways to approach generating sudoku puzzles and solving them, and it caught my interest. I thought it would be a fun way to work on my web development skills and create a fun end product I could actually put up online. It was very interesting to explore how to not just generate solvable puzzles, but puzzles that look good to the player.",
 			"content": {
-				"time": 1653781044269,
+				"time": 1675718489728,
 				"blocks": [
 					{
 						"id": "Ak6PmaiUqJ",
@@ -974,7 +601,7 @@
 						"id": "3V81lWYhL8",
 						"type": "header",
 						"data": {
-							"text": "Reasons",
+							"text": "Purpose",
 							"level": 2
 						}
 					},
@@ -1007,7 +634,7 @@
 						"id": "FJvN-7xpWZ",
 						"type": "header",
 						"data": {
-							"text": "Takeaways",
+							"text": "Conclusion",
 							"level": 2
 						}
 					},
@@ -1048,7 +675,7 @@
 			"difficulty": "Complexed",
 			"description": "This is one of my favorite projects. It is an external character creator and outfit designer for Star Wars The Old Republic. I really love this game and the community, and wanted to do something everyone could use and enjoy. It is very complexed, and I had to learn a lot of new topics and skills while working on it. I'm also very proud of it since it is the first tool of its kind made by anyone, ever, and that required me to solve a lot of problems no one else has done  before.",
 			"content": {
-				"time": 1666464360439,
+				"time": 1675718503345,
 				"blocks": [
 					{
 						"id": "Hr1P2ZVs1P",
@@ -1069,7 +696,7 @@
 						"id": "7wGwqDv3JP",
 						"type": "header",
 						"data": {
-							"text": "Reasons",
+							"text": "Purpose",
 							"level": 2
 						}
 					},
@@ -1116,7 +743,7 @@
 						"id": "GjKDJqUFzQ",
 						"type": "header",
 						"data": {
-							"text": "Takeaways",
+							"text": "Conclusion",
 							"level": 2
 						}
 					},
@@ -1452,7 +1079,7 @@
 			"difficulty": "Simple",
 			"description": "The Decky Frontend Lib is a library with reversed engineered UI components, custom components and utility classes. The library helps plugin developers integrate their plugins seamlessly with Valve's react UI, and modify css styles without affecting the regular UI.",
 			"content": {
-				"time": 1666461559799,
+				"time": 1675718637746,
 				"blocks": [
 					{
 						"id": "lAVCthO1td",
@@ -1470,10 +1097,35 @@
 						}
 					},
 					{
+						"id": "flN2mXc-or",
+						"type": "header",
+						"data": {
+							"text": "Contributions",
+							"level": 2
+						}
+					},
+					{
+						"id": "tT3t6l_RiR",
+						"type": "list",
+						"data": {
+							"style": "unordered",
+							"items": [
+								{
+									"content": "Refactoring of static classes to use a more dynamic approach",
+									"items": []
+								},
+								{
+									"content": "ReorderableList component - gamepad interactable reorderable list",
+									"items": []
+								}
+							]
+						}
+					},
+					{
 						"id": "AMb_eC9-kr",
 						"type": "header",
 						"data": {
-							"text": "Reasons",
+							"text": "Purpose",
 							"level": 2
 						}
 					},
@@ -1502,7 +1154,7 @@
 						"id": "gG-wf_ZTmW",
 						"type": "header",
 						"data": {
-							"text": "Takeaways",
+							"text": "Conclusion",
 							"level": 2
 						}
 					},
@@ -1530,12 +1182,12 @@
 		"portfolio-v2": {
 			"category": "web-dev",
 			"name": "Portfolio V2",
-			"time": "60 hours",
+			"time": "63 hours",
 			"status": "Complete (continually updated)",
 			"difficulty": "Moderate",
 			"description": "This project is the website you are currently on. It is a replacement for my previous portfolio website, which I had not been keeping up to date. I decided to remake it from scratch using Svelte, TypeScript, and SASS (later removed), all of which are awesome frameworks I have wanted to learn for a while.",
 			"content": {
-				"time": 1666465565621,
+				"time": 1675720096913,
 				"blocks": [
 					{
 						"id": "EHEWUSDdP5",
@@ -1553,10 +1205,51 @@
 						}
 					},
 					{
+						"id": "Pcag4cH_PI",
+						"type": "header",
+						"data": {
+							"text": "Update v3.1.0",
+							"level": 2
+						}
+					},
+					{
+						"id": "j1kUxlOTAT",
+						"type": "list",
+						"data": {
+							"style": "unordered",
+							"items": [
+								{
+									"content": "Fixed styling edge case causing entry descriptions to go off screen",
+									"items": []
+								},
+								{
+									"content": "Fixed delay when scrolling entries",
+									"items": []
+								},
+								{
+									"content": "Fixed bug with experience layout",
+									"items": []
+								},
+								{
+									"content": "Fixed bug with art layout",
+									"items": []
+								},
+								{
+									"content": "Centered entry images",
+									"items": []
+								},
+								{
+									"content": "Fixed org image sizing",
+									"items": []
+								}
+							]
+						}
+					},
+					{
 						"id": "ot3gQL5aAL",
 						"type": "header",
 						"data": {
-							"text": "Update 3.0",
+							"text": "Update v3.0.0",
 							"level": 2
 						}
 					},
@@ -1597,7 +1290,7 @@
 						"id": "S0i4_y-_iq",
 						"type": "header",
 						"data": {
-							"text": "Update 2.0",
+							"text": "Update v2.0.0",
 							"level": 2
 						}
 					},
@@ -1666,7 +1359,7 @@
 						"id": "7NBr7k3fWI",
 						"type": "header",
 						"data": {
-							"text": "Reasons",
+							"text": "Purpose",
 							"level": 2
 						}
 					},
@@ -1691,7 +1384,7 @@
 						"id": "NmpQSXEmtS",
 						"type": "header",
 						"data": {
-							"text": "Takeaways",
+							"text": "Conclusion",
 							"level": 2
 						}
 					},
@@ -1728,7 +1421,7 @@
 			"difficulty": "Complexed",
 			"description": "This is by far the project I am the most proud of. It is the culmination of a lot of work by both me and the SWTOR Slicers community, and the result is a truly unique piece of software that serves its purpose well. The idea behind making it was to optimize and improve all existing tools, and bundle them all into one cohesive, fully customizable application.",
 			"content": {
-				"time": 1668636688779,
+				"time": 1675718683291,
 				"blocks": [
 					{
 						"id": "6rSLg_atGs",
@@ -1778,7 +1471,7 @@
 						"id": "rCYqP-GvHT",
 						"type": "header",
 						"data": {
-							"text": "Reasons",
+							"text": "Purpose",
 							"level": 2
 						}
 					},
@@ -1807,7 +1500,7 @@
 						"id": "AYxAPU5RS0",
 						"type": "header",
 						"data": {
-							"text": "Takeaways",
+							"text": "Conclusion",
 							"level": 2
 						}
 					},
@@ -1822,7 +1515,7 @@
 									"items": []
 								},
 								{
-									"content": "The GO programming language",
+									"content": "Learned the GO programming language",
 									"items": []
 								},
 								{
@@ -1936,15 +1629,15 @@
 		"bash-shortcuts": {
 			"category": "steam-deck",
 			"name": "Bash Shortcuts",
-			"time": "23 hours",
+			"time": "46 hours",
 			"status": "In Progress",
 			"difficulty": "Moderate",
-			"description": "Bash Shortcuts is a homebrew plugin for valve's Steam Deck. The main purpose is to make running applications outside of steam games easier by providing a simple way to make your own shortcuts. These are run using Bash and a hidden Steam shortcut.",
+			"description": "This project is a custom theme for Valve's Steam Deck. It uses a homebrew plugin for injecting CSS to provide users with options to customize each part of their keyboard. The reason I started this project is because Valve offers keyboard themes, but the selection is limited and they only work online.",
 			"content": {
-				"time": 1668636933483,
+				"time": 1675719962935,
 				"blocks": [
 					{
-						"id": "TjpRAUaUm6",
+						"id": "nZjfcxUvB2",
 						"type": "header",
 						"data": {
 							"text": "Description",
@@ -1952,173 +1645,111 @@
 						}
 					},
 					{
-						"id": "9cS9B0xky_",
+						"id": "xPDAeM17W0",
 						"type": "paragraph",
 						"data": {
-							"text": "Bash Shortcuts is a homebrew plugin for valve's Steam Deck. The main purpose is to make running applications outside of steam games easier by providing a simple way to make your own shortcuts. These are run using Bash and a hidden Steam shortcut."
+							"text": "This project is a custom theme for Valve's Steam Deck. It uses a homebrew plugin for injecting CSS to provide users with options to customize each part of their keyboard. The reason I started this project is because Valve offers keyboard themes, but the selection is limited and they only work online."
 						}
 					},
 					{
-						"id": "jmPLE_6QHX",
-						"type": "paragraph",
-						"data": {
-							"text": "Part of my motivation for purchasing a Steam Deck was that I knew there would be a community development scene around it, so I was happy to contribute to that. It was also a great learning experience as well. I had to use SSH to access my Steam Deck in order to deploy and test the plugin, as well as learn the basics of React."
-						}
-					},
-					{
-						"id": "xWxMoXQQ6z",
+						"id": "Z4BivgwJkR",
 						"type": "header",
 						"data": {
-							"text": "Updates",
+							"text": "Update v1.2.0",
 							"level": 2
 						}
 					},
 					{
-						"id": "8ydlWi7YlP",
+						"id": "1MnkECsl_4",
 						"type": "list",
 						"data": {
 							"style": "unordered",
 							"items": [
 								{
-									"content": "Added support for running shell scripts as shortcuts",
+									"content": "Fixed issue where the plugin deleted other shortcuts",
 									"items": []
 								},
 								{
-									"content": "Added UI for toggling a shortcut between app and script mode",
+									"content": "Fixed multiple shortcuts getting created",
 									"items": []
 								},
 								{
-									"content": "Switched the method used to hide the shortcut runner",
+									"content": "Fixed issues on non-stable SteamOS channels",
+									"items": []
+								},
+								{
+									"content": "Steam was not running shortcutsRunner.sh",
+									"items": [
+										{
+											"content": "Issue with line endings, fixed with dos2unix",
+											"items": []
+										}
+									]
+								},
+								{
+									"content": "Added support for non-default user names and devices other than steamdecks",
+									"items": []
+								},
+								{
+									"content": "Fixed bug where plugin would lag UI from infinite refreshes when there were 0 shortcuts",
+									"items": []
+								},
+								{
+									"content": "Added a lot of logging to help with error tracking",
 									"items": []
 								}
 							]
 						}
 					},
 					{
-						"id": "sxvDf8l7r4",
+						"id": "mXmVM7rad_",
 						"type": "header",
 						"data": {
-							"text": "Plugin Components",
+							"text": "Purpose",
 							"level": 2
 						}
 					},
 					{
-						"id": "EZX0MFPkqh",
-						"type": "image",
-						"data": {
-							"file": {},
-							"caption": "",
-							"withBorder": false,
-							"stretched": false,
-							"withBackground": false
-						}
-					},
-					{
-						"id": "n2V6u2K0zd",
-						"type": "paragraph",
-						"data": {
-							"text": "The main plugin view allows the user to run their shortcuts as well as manage and manually reload them."
-						}
-					},
-					{
-						"id": "agLNNNB-8h",
-						"type": "image",
-						"data": {
-							"file": {},
-							"caption": "",
-							"withBorder": false,
-							"stretched": false,
-							"withBackground": false
-						}
-					},
-					{
-						"id": "YZ0IpTBGPO",
-						"type": "paragraph",
-						"data": {
-							"text": "The add menu allows the user to add their own shortcuts by providing a name and a bash command."
-						}
-					},
-					{
-						"id": "T3FAe5N4H_",
-						"type": "image",
-						"data": {
-							"file": {},
-							"caption": "",
-							"withBorder": false,
-							"stretched": false,
-							"withBackground": false
-						}
-					},
-					{
-						"id": "UCZJMRQBxH",
-						"type": "paragraph",
-						"data": {
-							"text": "The manage view allows users to edit existing shortcuts as well as reorder them. This order will be reflected both here as well as in the main view, allowing users to put their most used shortcuts towards the top."
-						}
-					},
-					{
-						"id": "AH83CWBI2r",
-						"type": "image",
-						"data": {
-							"file": {},
-							"caption": "",
-							"withBorder": false,
-							"stretched": false,
-							"withBackground": false
-						}
-					},
-					{
-						"id": "cakBWHEbRm",
-						"type": "paragraph",
-						"data": {
-							"text": "Once the user runs a shortcut, it will be launched full screen. When they decide they are done they can either quit using Steam's menu, or using the custom 'Close Shortcut' button in the plugin."
-						}
-					},
-					{
-						"id": "pMslBBxQuQ",
-						"type": "header",
-						"data": {
-							"text": "Reasons",
-							"level": 2
-						}
-					},
-					{
-						"id": "ARKbZcY66x",
+						"id": "xevYl-aYqV",
 						"type": "list",
 						"data": {
 							"style": "unordered",
 							"items": [
 								{
-									"content": "Wanted to contribute to the Steam Deck homebrew community",
+									"content": "Wanted to contribute to the homebrew Steam Deck community",
 									"items": []
 								},
 								{
-									"content": "Wanted an easier way to launch applications from SteamOS",
+									"content": "Wanted a more customizable alternative to the existing keyboards",
+									"items": []
+								},
+								{
+									"content": "Wanted customizable keyboards that worked offline",
 									"items": []
 								}
 							]
 						}
 					},
 					{
-						"id": "2MadWlCVyn",
+						"id": "KgQPukLNZY",
 						"type": "header",
 						"data": {
-							"text": "Takeaways",
+							"text": "Conclusion",
 							"level": 2
 						}
 					},
 					{
-						"id": "j9sfDP4lZr",
+						"id": "qXVdi9yViM",
 						"type": "list",
 						"data": {
 							"style": "unordered",
 							"items": [
 								{
-									"content": "Learned how to use SSH",
+									"content": "Came up with a unique idea for the homebrew community",
 									"items": []
 								},
 								{
-									"content": "Familiarized myself with the basics of React",
+									"content": "Created a highly customizable keyboard that also works offline",
 									"items": []
 								}
 							]
@@ -2356,6 +1987,176 @@
 		}
 	},
 	"archive": {
+		"noisy-dots": {
+			"category": "web-dev",
+			"name": "Noisy Dots",
+			"time": "4 hours",
+			"status": "Complete",
+			"difficulty": "Simple",
+			"description": "This small project is a simple animation made using the HTML5 canvas and simplex-noise. I came up with this idea because I wanted to add something to my portfolio landing page to make it more unique, and I love procedural generation so I thought a noise based animation would be perfect! It works by sampling a noise texture and scaling circles based on the value (noise ranges from 0.0 - 1.0), which creates the mesmerizing pattern.",
+			"content": {
+				"time": 1675718401669,
+				"blocks": [
+					{
+						"id": "R8n2_PIDX_",
+						"type": "header",
+						"data": {
+							"text": "Description",
+							"level": 2
+						}
+					},
+					{
+						"id": "vvXPG-9bzc",
+						"type": "paragraph",
+						"data": {
+							"text": "This small project is a simple animation made using the HTML5 canvas and simplex-noise. I came up with this idea because I wanted to add something to my portfolio landing page to make it more unique, and I love procedural generation so I thought a noise based animation would be perfect! It works by sampling a noise texture and scaling circles based on the value (noise ranges from 0.0 - 1.0), which creates the mesmerizing pattern."
+						}
+					},
+					{
+						"id": "s1PgdSrKpS",
+						"type": "header",
+						"data": {
+							"text": "Purpose",
+							"level": 2
+						}
+					},
+					{
+						"id": "QLdP_i0Xs8",
+						"type": "list",
+						"data": {
+							"style": "unordered",
+							"items": [
+								{
+									"content": "I wanted to add something unique to my portfolio landing page",
+									"items": []
+								},
+								{
+									"content": "Was interested in exploring the use of procedural noise in web design",
+									"items": []
+								}
+							]
+						}
+					},
+					{
+						"id": "N_8415duvG",
+						"type": "header",
+						"data": {
+							"text": "Conclusion",
+							"level": 2
+						}
+					},
+					{
+						"id": "934yia4AmU",
+						"type": "list",
+						"data": {
+							"style": "unordered",
+							"items": [
+								{
+									"content": "Created something unique that helps my portfolio make an impact on viewers",
+									"items": []
+								},
+								{
+									"content": "Discovered useful libraries for procedural generation in JavaScript",
+									"items": []
+								}
+							]
+						}
+					}
+				],
+				"version": "2.24.3"
+			},
+			"link": "https://dots.travislane.dev/",
+			"isRelative": false,
+			"img": "./img/projs/noisy-dots-anim.png",
+			"org": "none"
+		},
+		"three.js-marching-cubes": {
+			"category": "web-dev",
+			"name": "Three.js Marching Cubes",
+			"time": "11 hours",
+			"status": "Complete",
+			"difficulty": "Moderate",
+			"description": "The Marching Cubes is a well known algorithm often used in games for terrain generation. The premise is it generates polygons based on weights applied to each vertex of the bounding cube. I have always found this algorithm interesting, so I decided to recreate it using TypeScript and one of my favorite libraries, Three.js.",
+			"content": {
+				"time": 1675718380122,
+				"blocks": [
+					{
+						"id": "GUU5idVR6z",
+						"type": "header",
+						"data": {
+							"text": "Description",
+							"level": 2
+						}
+					},
+					{
+						"id": "wlomAPoJbT",
+						"type": "paragraph",
+						"data": {
+							"text": "The Marching Cubes is a well known algorithm often used in games for terrain generation. The premise is it generates polygons based on weights applied to each vertex of the bounding cube. I have always found this algorithm interesting, so I decided to recreate it using TypeScript and one of my favorite libraries, Three.js."
+						}
+					},
+					{
+						"id": "cPdy9Ap83z",
+						"type": "header",
+						"data": {
+							"text": "Purpose",
+							"level": 2
+						}
+					},
+					{
+						"id": "xMyEqCE1rv",
+						"type": "list",
+						"data": {
+							"style": "unordered",
+							"items": [
+								{
+									"content": "I wanted to recreate the Marching Cubes algorithm using Three.js and Typescript",
+									"items": []
+								},
+								{
+									"content": "I wanted to refamiliarize myself with Three.js",
+									"items": []
+								}
+							]
+						}
+					},
+					{
+						"id": "V_Xx5nYkSh",
+						"type": "header",
+						"data": {
+							"text": "Conclusion",
+							"level": 2
+						}
+					},
+					{
+						"id": "l2G2fYd8ak",
+						"type": "list",
+						"data": {
+							"style": "unordered",
+							"items": [
+								{
+									"content": "I learned useful strategies for optimizing Three.js applications",
+									"items": []
+								},
+								{
+									"content": "I was able to recreate the algorithm",
+									"items": []
+								},
+								{
+									"content": "I was able to refresh my memory on Three.js",
+									"items": []
+								}
+							]
+						}
+					}
+				],
+				"version": "2.24.3"
+			},
+			"link": "https://marching-cubes.travislane.dev/",
+			"isRelative": false,
+			"img": "./img/projs/threejs-marching-cubes.png",
+			"org": "none"
+		},
 		"torc-npc-3d-viewers": {
 			"category": "web-dev",
 			"name": "TORC NPC 3D Viewers",
@@ -2364,7 +2165,7 @@
 			"difficulty": "Moderate",
 			"description": "This project came about as a natural continuation of the TORCommunity Character Designer. It is a 3D viewer for loading the models for different NPC (non player characters) from Star Wars: The Old Republic. It uses a very similar process to the character designer for loading the models, but this time has to take a dynamic input specified on page load.",
 			"content": {
-				"time": 1635537118240,
+				"time": 1675718713922,
 				"blocks": [
 					{
 						"id": "Q2BIPEDC4a",
@@ -2385,7 +2186,7 @@
 						"id": "CWdJL0lesi",
 						"type": "header",
 						"data": {
-							"text": "Reasons",
+							"text": "Purpose",
 							"level": 2
 						}
 					},
@@ -2418,7 +2219,7 @@
 						"id": "Pjs3r6ob5T",
 						"type": "header",
 						"data": {
-							"text": "Takeaways",
+							"text": "Conclusion",
 							"level": 2
 						}
 					},
@@ -2444,7 +2245,7 @@
 						}
 					}
 				],
-				"version": "2.22.2"
+				"version": "2.24.3"
 			},
 			"link": "https://torcommunity.com/database/search/npc",
 			"isRelative": false,
@@ -2459,7 +2260,7 @@
 			"difficulty": "Moderate",
 			"description": "I had the idea for this project after I started working on a website for the SWTOR Slicers. We wanted to transition from using GitHub's wiki system to using our own on the new website, and so I had the idea to make an app for creating, editing, and deleting wiki articles. The app uses similar principles to my Portfolio Updater app, but is written using the Electron framework.",
 			"content": {
-				"time": 1653782211232,
+				"time": 1675718726363,
 				"blocks": [
 					{
 						"id": "8pyZwk6oS7",
@@ -2480,7 +2281,7 @@
 						"id": "3ZPku9LDei",
 						"type": "header",
 						"data": {
-							"text": "Reasons",
+							"text": "Purpose",
 							"level": 2
 						}
 					},
@@ -2505,7 +2306,7 @@
 						"id": "_2UutP1Sya",
 						"type": "header",
 						"data": {
-							"text": "Takeaways",
+							"text": "Conclusion",
 							"level": 2
 						}
 					},
@@ -2542,7 +2343,7 @@
 			"difficulty": "Simple",
 			"description": "This is a little NPM package that assists the Slicers GUI in locating SWTOR model files from an extraction. Under the hood it is relatively simple, consisting of parsing a JSON file, gathering the needed files, and copying them into a predictable folder structure. This program has gone through 3 different major versions. As a proof of concept I wrote it in python (really easy to iterate with, but not reliable enough for me to choose for production), then I wrote it in GO as an executable bundled with the Slicers GUI. There were no issues with that version, however I would like to migrate the Slicers GUI to an all TS/Rust Tauri app, so I rewrote the program again as an NPM package.",
 			"content": {
-				"time": 1664308810356,
+				"time": 1675718736996,
 				"blocks": [
 					{
 						"id": "abOBSF-Y-V",
@@ -2563,7 +2364,7 @@
 						"id": "dSTF53UYx_",
 						"type": "header",
 						"data": {
-							"text": "Reasons",
+							"text": "Purpose",
 							"level": 2
 						}
 					},
@@ -2588,7 +2389,7 @@
 						"id": "t2bdyd-tj0",
 						"type": "header",
 						"data": {
-							"text": "Takeaways",
+							"text": "Conclusion",
 							"level": 2
 						}
 					},
@@ -2621,7 +2422,7 @@
 			"difficulty": "Simple",
 			"description": "The SWTOR Slicers Wiki is a collection of guides that serve to help people through the various processes involved in data mining, extraction, and modding. It continues to grow as we add more and more tutorials, and serves as a one stop shop for all things SWTOR Slicers.",
 			"content": {
-				"time": 1635543809859,
+				"time": 1675718752587,
 				"blocks": [
 					{
 						"id": "E2HzszzOTH",
@@ -2642,7 +2443,7 @@
 						"id": "rYJ1sS65S5",
 						"type": "header",
 						"data": {
-							"text": "Reasons",
+							"text": "Purpose",
 							"level": 2
 						}
 					},
@@ -2667,7 +2468,7 @@
 						"id": "YJWxdQ6Dih",
 						"type": "header",
 						"data": {
-							"text": "Takeaways",
+							"text": "Conclusion",
 							"level": 2
 						}
 					},
@@ -2685,7 +2486,7 @@
 						}
 					}
 				],
-				"version": "2.22.2"
+				"version": "2.24.3"
 			},
 			"link": "https://github.com/SWTOR-Slicers/WikiPedia/wiki",
 			"isRelative": false,
@@ -2700,7 +2501,7 @@
 			"difficulty": "Complexed",
 			"description": "For my last classic game project, I wanted to do something much more complexed. I decided to do Tetris, as it is one of my favorite games, and had a lot of complexed elements. It took much longer then the previous three projects, but was very satisfying to finish.",
 			"content": {
-				"time": 1633960233761,
+				"time": 1675718765177,
 				"blocks": [
 					{
 						"id": "w2NLjrsOZr",
@@ -2721,7 +2522,7 @@
 						"id": "9BD101MWmx",
 						"type": "header",
 						"data": {
-							"text": "Reasons",
+							"text": "Purpose",
 							"level": 2
 						}
 					},
@@ -2740,7 +2541,7 @@
 									"items": []
 								},
 								{
-									"content": "Tetris has <a href=\"https://tetris.fandom.com/wiki/Tetris_Guideline\" target=\"_blank\" rel=\"noreferrer noopener\" class=\"embed-project-link\">guidelines</a> you need to follow if you are going to publish it under the Tetris name, and I thought it would be good practice to make a project with specifications I also needed to meet",
+									"content": "Tetris has <a target=\"_blank\" rel=\"noreferrer noopener\" href=\"https://tetris.fandom.com/wiki/Tetris_Guideline\" target=\"_blank\">guidelines</a> you need to follow if you are going to publish it under the Tetris name, and I thought it would be good practice to make a project with specifications I also needed to meet",
 									"items": []
 								}
 							]
@@ -2750,7 +2551,7 @@
 						"id": "pwFfpS8MIr",
 						"type": "header",
 						"data": {
-							"text": "Takeaways",
+							"text": "Conclusion",
 							"level": 2
 						}
 					},
@@ -2776,7 +2577,7 @@
 						}
 					}
 				],
-				"version": "2.22.2"
+				"version": "2.24.3"
 			},
 			"link": "https://tetris.travislane.dev",
 			"isRelative": false,
@@ -2791,7 +2592,7 @@
 			"difficulty": "Moderate",
 			"description": "Minesweeper is a classic logic based strategy game. As I was learning JavaScript, I thought it would be fun to make one of my favorite classic games using what I was learning. In the process, I learned about the html5 canvas, which is now used instead of flash for web based games and animations. After completing the normal minesweeper, I wanted to add something more advanced to the project. I decided to add animations (inspired by Google' Minesweeper), so I used the html5 canvas API to animate it.",
 			"content": {
-				"time": 1633959986929,
+				"time": 1675718778973,
 				"blocks": [
 					{
 						"id": "fDaKuK9e17",
@@ -2812,7 +2613,7 @@
 						"id": "JppKuXin_o",
 						"type": "header",
 						"data": {
-							"text": "Reasons",
+							"text": "Purpose",
 							"level": 2
 						}
 					},
@@ -2841,7 +2642,7 @@
 						"id": "bJjpWp73MG",
 						"type": "header",
 						"data": {
-							"text": "Takeaways",
+							"text": "Conclusion",
 							"level": 2
 						}
 					},
@@ -2867,7 +2668,7 @@
 						}
 					}
 				],
-				"version": "2.22.2"
+				"version": "2.24.3"
 			},
 			"link": "https://minesweeper.travislane.dev",
 			"isRelative": false,
@@ -2882,7 +2683,7 @@
 			"difficulty": "Simple",
 			"description": "Keeping with the theme of the previous projects I had just finished, I decided to make a 2 player pong game. This was much more complexed then minesweeper as I needed to update the canvas on key press, as well as slowly increase the ball speed and have collision detection.",
 			"content": {
-				"time": 1633960355613,
+				"time": 1675718787979,
 				"blocks": [
 					{
 						"id": "4APXidhcEF",
@@ -2903,7 +2704,7 @@
 						"id": "Wc5vaX4R5y",
 						"type": "header",
 						"data": {
-							"text": "Reasons",
+							"text": "Purpose",
 							"level": 2
 						}
 					},
@@ -2932,7 +2733,7 @@
 						"id": "E5c5fBID_B",
 						"type": "header",
 						"data": {
-							"text": "Takeaways",
+							"text": "Conclusion",
 							"level": 2
 						}
 					},
@@ -2958,7 +2759,7 @@
 						}
 					}
 				],
-				"version": "2.22.2"
+				"version": "2.24.3"
 			},
 			"link": "https://pong.travislane.dev",
 			"isRelative": false,
@@ -2973,7 +2774,7 @@
 			"difficulty": "Simple",
 			"description": "I wanted to create a professional and classy website that I could use to display all of the projects I create. I think this is a unique and relevant way to display my projects and works in a way that represents me and what I love doing. I continuously update this as I continue to come up with projects and complete them, as well as work on projects ether for school, or one of the organizations I am a part of.",
 			"content": {
-				"time": 1633880900126,
+				"time": 1675718811905,
 				"blocks": [
 					{
 						"id": "W_xuzsjFBt",
@@ -2994,7 +2795,7 @@
 						"id": "K9_vhMevvu",
 						"type": "header",
 						"data": {
-							"text": "Reasons",
+							"text": "Purpose",
 							"level": 2
 						}
 					},
@@ -3023,7 +2824,7 @@
 						"id": "X4R6J6w249",
 						"type": "header",
 						"data": {
-							"text": "Takeaways",
+							"text": "Conclusion",
 							"level": 2
 						}
 					},
@@ -3135,7 +2936,7 @@
 						}
 					}
 				],
-				"version": "2.22.2"
+				"version": "2.24.3"
 			},
 			"link": "web-dev",
 			"isRelative": false,
@@ -3150,7 +2951,7 @@
 			"difficulty": "Moderate",
 			"description": "This project was a venture into an area I had absolutely no experience with, teaching. I had the idea to make the camp because my school gave me the opportunity to get into computer science, and I wanted to offer others that opportunity as well. I also saw the camp as a great way to solidify my understanding of web development.",
 			"content": {
-				"time": 1635537815307,
+				"time": 1675718827978,
 				"blocks": [
 					{
 						"id": "Niwf8E7hGX",
@@ -3171,7 +2972,7 @@
 						"id": "MVneFqfcim",
 						"type": "header",
 						"data": {
-							"text": "Reasons",
+							"text": "Purpose",
 							"level": 2
 						}
 					},
@@ -3200,7 +3001,7 @@
 						"id": "aDmAwZu4Ag",
 						"type": "header",
 						"data": {
-							"text": "Takeaways",
+							"text": "Conclusion",
 							"level": 2
 						}
 					},
@@ -3226,395 +3027,11 @@
 						}
 					}
 				],
-				"version": "2.22.2"
+				"version": "2.24.3"
 			},
 			"link": "",
 			"isRelative": false,
 			"img": "./img/projs/intro-to-web-dev-camp.png",
-			"org": "none"
-		},
-		"discord-modbot": {
-			"category": "miscellaneous",
-			"name": "Discord Modbot",
-			"time": "40 hours",
-			"status": "Complete (not hosted)",
-			"difficulty": "Complexed",
-			"description": "Modbot was a project I started after I had finished learning Java and was familiar with JavaScript and <i>SpringBoot</i>. This allowed me to make a more advanced project, as I already knew the foundations. For this project, I decided to split the Database from the Discord Bot. This meant that I needed to learn how to send Java to Java JSON data. I also made a frontend for users to interact with, which was my second web development project.",
-			"content": {
-				"time": 1633887998155,
-				"blocks": [
-					{
-						"id": "hG_H125HKW",
-						"type": "header",
-						"data": {
-							"text": "Description",
-							"level": 2
-						}
-					},
-					{
-						"id": "LpOMpl1b63",
-						"type": "paragraph",
-						"data": {
-							"text": "Modbot was a project I started after I had finished learning Java and was familiar with JavaScript and <i>SpringBoot</i>. This allowed me to make a more advanced project, as I already knew the foundations. For this project, I decided to split the Database from the Discord Bot. This meant that I needed to learn how to send Java to Java JSON data. I also made a frontend for users to interact with, which was my second web development project."
-						}
-					},
-					{
-						"id": "iLfUYhV3i3",
-						"type": "header",
-						"data": {
-							"text": "Reasons",
-							"level": 2
-						}
-					},
-					{
-						"id": "33odrV_pAC",
-						"type": "list",
-						"data": {
-							"style": "unordered",
-							"items": [
-								{
-									"content": "I wanted to make a very versatile and complexed discord bot, with oAuth, custom commands, and able to be tailored to a user's preferences",
-									"items": []
-								},
-								{
-									"content": "I wanted to practice more with <i>SpringBoot</i>, and learn some of its more advanced features",
-									"items": []
-								},
-								{
-									"content": "I wanted to practice web development",
-									"items": []
-								}
-							]
-						}
-					},
-					{
-						"id": "iDz_r0DsH6",
-						"type": "header",
-						"data": {
-							"text": "Takeaways",
-							"level": 2
-						}
-					},
-					{
-						"id": "hxLEo0A7pt",
-						"type": "list",
-						"data": {
-							"style": "unordered",
-							"items": [
-								{
-									"content": "Learned the more advanced parts of <i>SpringBoot</i>",
-									"items": []
-								},
-								{
-									"content": "Learned how to structure HTTP requests in java, and decode JSONs in java using GSON",
-									"items": []
-								},
-								{
-									"content": "Was able to make a very advanced discord bot, that works reliably",
-									"items": []
-								},
-								{
-									"content": "Learned the basics of oAuth and good conventions to use when implementing it",
-									"items": []
-								}
-							]
-						}
-					},
-					{
-						"id": "k5qX1dMu1x",
-						"type": "header",
-						"data": {
-							"text": "Components",
-							"level": 2
-						}
-					},
-					{
-						"id": "TzHw4OafPO",
-						"type": "list",
-						"data": {
-							"style": "unordered",
-							"items": [
-								{
-									"content": "The API (Application Programming Interface)",
-									"items": []
-								}
-							]
-						}
-					},
-					{
-						"id": "h392ZyhiY2",
-						"type": "image",
-						"data": {
-							"file": {
-								"url": "./img/projs/Modbot API.png"
-							},
-							"caption": "",
-							"withBorder": false,
-							"stretched": false,
-							"withBackground": false
-						}
-					},
-					{
-						"id": "-r9hghIbW3",
-						"type": "list",
-						"data": {
-							"style": "unordered",
-							"items": [
-								{
-									"content": "The Discord Bot (The actual bot itself)",
-									"items": []
-								}
-							]
-						}
-					},
-					{
-						"id": "FkHVX17DHb",
-						"type": "image",
-						"data": {
-							"file": {
-								"url": "./img/projs/Modbot discord bot.png"
-							},
-							"caption": "",
-							"withBorder": false,
-							"stretched": false,
-							"withBackground": false
-						}
-					},
-					{
-						"id": "PWGkR5TG1m",
-						"type": "list",
-						"data": {
-							"style": "unordered",
-							"items": [
-								{
-									"content": "The Front End UI (Allows users to tailor the bot to their specific needs)",
-									"items": []
-								}
-							]
-						}
-					},
-					{
-						"id": "4ioAbGGPqW",
-						"type": "image",
-						"data": {
-							"file": {
-								"url": "./img/projs/Dashboard.png"
-							},
-							"caption": "",
-							"withBorder": false,
-							"stretched": false,
-							"withBackground": false
-						}
-					},
-					{
-						"id": "_O39tuAqks",
-						"type": "image",
-						"data": {
-							"file": {
-								"url": "./img/projs/Docs.png"
-							},
-							"caption": "",
-							"withBorder": false,
-							"stretched": false,
-							"withBackground": false
-						}
-					},
-					{
-						"id": "cLFmfu9u7Z",
-						"type": "image",
-						"data": {
-							"file": {
-								"url": "./img/projs/Commands.png"
-							},
-							"caption": "",
-							"withBorder": false,
-							"stretched": false,
-							"withBackground": false
-						}
-					},
-					{
-						"id": "9KSjyGxbVW",
-						"type": "image",
-						"data": {
-							"file": {
-								"url": "./img/projs/CustomCommands.png"
-							},
-							"caption": "",
-							"withBorder": false,
-							"stretched": false,
-							"withBackground": false
-						}
-					},
-					{
-						"id": "wm2Pw5pSzZ",
-						"type": "image",
-						"data": {
-							"file": {
-								"url": "./img/projs/WorkingNewCC.png"
-							},
-							"caption": "",
-							"withBorder": false,
-							"stretched": false,
-							"withBackground": false
-						}
-					}
-				],
-				"version": "2.22.2"
-			},
-			"link": "",
-			"isRelative": false,
-			"img": "./img/projs/Dashboard.png",
-			"org": "none"
-		},
-		"the-memedb": {
-			"category": "miscellaneous",
-			"name": "The MemeDB",
-			"time": "30-40 hours",
-			"status": "Complete (not hosted)",
-			"difficulty": "Simple",
-			"description": "The memeDB was one of my first projects. I had finished AP Java a few months earlier, so I was still relatively new to programming. I read about <i>SpringBoot</i> (an API framework for Java), and immediately wanted to make my own. I decided that a fun and interesting idea would be to make a meme database, so I went with that. First I made an API with <i>SpringBoot</i>, and then a <i>React.js</i> front end. I later realized that React was not suited for my needs, as I wanted to make a multipage website, so I switched to normal JavaScript, HTML, and CSS. This was my first attempt at web development, and I enjoyed it a lot.",
-			"content": {
-				"time": 1633888617151,
-				"blocks": [
-					{
-						"id": "csFXX4zuCe",
-						"type": "header",
-						"data": {
-							"text": "Description",
-							"level": 2
-						}
-					},
-					{
-						"id": "ehYTh986bH",
-						"type": "paragraph",
-						"data": {
-							"text": "The memeDB was one of my first projects. I had finished AP Java a few months earlier, so I was                   still relatively new to programming. I read about <i>SpringBoot </i>(an API framework for Java), and                   immediately wanted to make my own. I decided that a fun and interesting idea would be to                   make a meme database, so I went with that. First I made an API with <i>SpringBoot</i>, and then a                   <i>React.js</i> front end. I later realized that React was not suited for my needs, as I wanted to make a                   multipage website, so I switched to normal JavaScript, HTML, and CSS. This was my                   first attempt at web development, and I enjoyed it a lot."
-						}
-					},
-					{
-						"id": "u0t0ZO0Pgz",
-						"type": "header",
-						"data": {
-							"text": "Reasons",
-							"level": 2
-						}
-					},
-					{
-						"id": "ejf0w3RY-n",
-						"type": "list",
-						"data": {
-							"style": "unordered",
-							"items": [
-								{
-									"content": "Wanted to try something new",
-									"items": []
-								},
-								{
-									"content": "Had just learned about <i>SpringBoot</i>, and wanted to learn the basics",
-									"items": []
-								},
-								{
-									"content": "Wanted to learn web development",
-									"items": []
-								}
-							]
-						}
-					},
-					{
-						"id": "ul9AWNzG-i",
-						"type": "header",
-						"data": {
-							"text": "Takeaways",
-							"level": 2
-						}
-					},
-					{
-						"id": "4bAyfzSHWJ",
-						"type": "list",
-						"data": {
-							"style": "unordered",
-							"items": [
-								{
-									"content": "Learned the basics of <i>SpringBoot</i>",
-									"items": []
-								},
-								{
-									"content": "Learned SQL",
-									"items": []
-								},
-								{
-									"content": "Finished my first web UI",
-									"items": []
-								}
-							]
-						}
-					},
-					{
-						"id": "S3FmNMtPx_",
-						"type": "header",
-						"data": {
-							"text": "Components",
-							"level": 2
-						}
-					},
-					{
-						"id": "RcY5aeN5Yw",
-						"type": "list",
-						"data": {
-							"style": "unordered",
-							"items": [
-								{
-									"content": "The UI. It was a very simple UI as I was still learning, but I was satisfied with it.",
-									"items": []
-								}
-							]
-						}
-					},
-					{
-						"id": "_KgZtieVWe",
-						"type": "image",
-						"data": {
-							"file": {
-								"url": "./img/projs/MemeDB homepage.png"
-							},
-							"caption": "",
-							"withBorder": false,
-							"stretched": false,
-							"withBackground": false
-						}
-					},
-					{
-						"id": "WEXJ6SnDoS",
-						"type": "list",
-						"data": {
-							"style": "unordered",
-							"items": [
-								{
-									"content": "The API (Application Programming Interface). This was the server hosting the database and API the UI communicated with and pulled from.",
-									"items": []
-								}
-							]
-						}
-					},
-					{
-						"id": "gCBMUuvOhO",
-						"type": "image",
-						"data": {
-							"file": {
-								"url": "./img/projs/MemeDB API.png"
-							},
-							"caption": "",
-							"withBorder": false,
-							"stretched": false,
-							"withBackground": false
-						}
-					}
-				],
-				"version": "2.22.2"
-			},
-			"link": "",
-			"isRelative": false,
-			"img": "./img/projs/MemeDB homepage.png",
 			"org": "none"
 		},
 		"slicers-blender-importer": {
@@ -3625,7 +3042,7 @@
 			"difficulty": "Moderate-Complexed",
 			"description": "The blender importer was very different before I started making changes. I added multi file importing, as well as one click imports. The one click imports work with the TORC Character Designer and my Locator tool to import all models and materials for a given SWTOR character, allowing artists to get right to making art.",
 			"content": {
-				"time": 1664306979171,
+				"time": 1675718965273,
 				"blocks": [
 					{
 						"id": "k3nSWJlJ69",
@@ -3667,7 +3084,7 @@
 						"id": "Hfb11vexVb",
 						"type": "header",
 						"data": {
-							"text": "Reasons",
+							"text": "Purpose",
 							"level": 2
 						}
 					},
@@ -3696,7 +3113,7 @@
 						"id": "IyUtn1ErXZ",
 						"type": "header",
 						"data": {
-							"text": "Takeaways",
+							"text": "Conclusion",
 							"level": 2
 						}
 					},
@@ -3724,9 +3141,228 @@
 			"isRelative": false,
 			"img": "./img/projs/slicers-blender-importer.png",
 			"org": "swtor-slicers"
+		},
+		"hex-world-generator": {
+			"category": "blender",
+			"name": "Hex World Generator",
+			"time": "12 hours",
+			"status": "Complete",
+			"difficulty": "Moderate",
+			"description": "I started this project after coming across a video about how to make the base of the project (the hex shaped grid). Thought it looked interesting so I made it, and added decorations to the different areas.",
+			"content": {
+				"time": 1675718475541,
+				"blocks": [
+					{
+						"id": "188dV-mqHY",
+						"type": "header",
+						"data": {
+							"text": "Description",
+							"level": 2
+						}
+					},
+					{
+						"id": "5YqHZbPaez",
+						"type": "paragraph",
+						"data": {
+							"text": "I started this project after coming across a video about how to make the base of the project (the hex shaped grid). Thought it looked interesting so I made it, and added decorations to the different areas."
+						}
+					},
+					{
+						"id": "3W4r39t6v9",
+						"type": "header",
+						"data": {
+							"text": "More Info",
+							"level": 2
+						}
+					},
+					{
+						"id": "Jx-0bMiBkb",
+						"type": "paragraph",
+						"data": {
+							"text": "The way this project works is through using on of Blender's newer features, Geometry Nodes. These allow you to create 3D models almost 'programmatically'. They can be grouped together to create controller nodes as well, which is what I did for this project. This means someone could edit specific parameters to their liking without having to slog through hundreds of nodes."
+						}
+					},
+					{
+						"id": "OCvwhLsC32",
+						"type": "image",
+						"data": {
+							"file": {
+								"url": "https://asset.localhost/C%3A%5CUsers%5CTormak%5CDocuments%5CGitHub%5Cportfolio-site-v2%5Cpublic%5Cimg%5Cprojs%5CHex%20World%20Controls.png",
+								"webUrl": "./img/projs/Hex World Controls.png"
+							},
+							"caption": "",
+							"withBorder": false,
+							"stretched": false,
+							"withBackground": false
+						}
+					},
+					{
+						"id": "y814FaNexB",
+						"type": "header",
+						"data": {
+							"text": "Purpose",
+							"level": 2
+						}
+					},
+					{
+						"id": "8ExJmB_Ye2",
+						"type": "list",
+						"data": {
+							"style": "unordered",
+							"items": [
+								{
+									"content": "Wanted to learn more about how Geometry Nodes worked",
+									"items": []
+								},
+								{
+									"content": "Wanted to create a procedural mini world and model some low poly models",
+									"items": []
+								}
+							]
+						}
+					},
+					{
+						"id": "rI1_eUEx5E",
+						"type": "header",
+						"data": {
+							"text": "Conclusion",
+							"level": 2
+						}
+					},
+					{
+						"id": "TNsqVl2BGO",
+						"type": "list",
+						"data": {
+							"style": "unordered",
+							"items": [
+								{
+									"content": "Gained a better understanding of how Blender's Geometry Nodes work",
+									"items": []
+								},
+								{
+									"content": "Created a procedurally generated world with low poly decorations",
+									"items": []
+								}
+							]
+						}
+					}
+				],
+				"version": "2.24.3"
+			},
+			"link": "https://github.com/Tormak9970/blender-projects",
+			"isRelative": false,
+			"img": "./img/projs/Hex World.png",
+			"org": "none"
+		},
+		"marching-squares": {
+			"category": "blender",
+			"name": "Marching Squares",
+			"time": "14 hrs",
+			"status": "Complete",
+			"difficulty": "Moderate",
+			"description": "The goal of this project was to recreate the Marching Squares algorithm in blender. Marching Squares is a well known computer graphics algorithm used to generate procedural patterns for a multitude of uses, such as terrain in game design.",
+			"content": {
+				"time": 1675718344285,
+				"blocks": [
+					{
+						"id": "GFzO54o7BQ",
+						"type": "header",
+						"data": {
+							"text": "Description",
+							"level": 2
+						}
+					},
+					{
+						"id": "Ptw2MUCPEY",
+						"type": "paragraph",
+						"data": {
+							"text": "The goal of this project was to recreate the Marching Squares algorithm in blender. Marching Squares is a well known computer graphics algorithm used to generate procedural patterns for a multitude of uses, such as terrain in game design."
+						}
+					},
+					{
+						"id": "VbytCdOa6Q",
+						"type": "header",
+						"data": {
+							"text": "More Info",
+							"level": 2
+						}
+					},
+					{
+						"id": "oNGk8ZK9PK",
+						"type": "paragraph",
+						"data": {
+							"text": "While it may not be very complicated to create marching squares through programming, Blender's Geometry Nodes are another story entirely. Because of how geometry nodes work, there is no looping or re-using data in the typical programming sense. Data is, in most cases, computed based on where it is called from (more info can be found about that <a target=\"_blank\" href=\"https://docs.blender.org/manual/en/latest/modeling/geometry_nodes/fields.html\">here</a>). This made recreating marching squares significantly more complicated. The image below is what the logic for this project looks like (normally I use node groups to make working on it possible, this is what it looks like without them):"
+						}
+					},
+					{
+						"id": "1L2CMoEKDp",
+						"type": "image",
+						"data": {
+							"file": {
+								"url": "./img/projs/Marching Squares inner.png"
+							},
+							"caption": "",
+							"withBorder": false,
+							"stretched": false,
+							"withBackground": false
+						}
+					},
+					{
+						"id": "qLwVgR_0xk",
+						"type": "header",
+						"data": {
+							"text": "Purpose",
+							"level": 2
+						}
+					},
+					{
+						"id": "EDSYKuORGB",
+						"type": "list",
+						"data": {
+							"style": "unordered",
+							"items": [
+								{
+									"content": "Wanted to create a geometry nodes implementation of marching squares",
+									"items": []
+								}
+							]
+						}
+					},
+					{
+						"id": "Ne9x4Lvo6L",
+						"type": "header",
+						"data": {
+							"text": "Conclusion",
+							"level": 2
+						}
+					},
+					{
+						"id": "0ug6cJpzz3",
+						"type": "list",
+						"data": {
+							"style": "unordered",
+							"items": [
+								{
+									"content": "Gained a better understanding of how to solve problems with geometry nodes",
+									"items": []
+								},
+								{
+									"content": "Have a better understanding of how geometry nodes work internally",
+									"items": []
+								}
+							]
+						}
+					}
+				],
+				"version": "2.24.3"
+			},
+			"link": "https://github.com/Tormak9970/blender-projects",
+			"isRelative": false,
+			"img": "./img/projs/Marching Squares in Blender.png",
+			"org": "none"
 		}
 	},
-	"featured": "slicers-gui",
+	"featured": "darkest-dungeon-save-editor",
 	"organizations": {
 		"swtor-slicers": {
 			"name": "SWTOR Slicers",
