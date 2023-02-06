@@ -35,9 +35,15 @@
 					},
 					{
 						"id": "2UkiyOKWI9",
-						"type": "paragraph",
+						"type": "image",
 						"data": {
-							"text": "//need image"
+							"file": {
+								"url": "./img/projs/Stylish-Footer.png"
+							},
+							"caption": "",
+							"withBorder": false,
+							"stretched": false,
+							"withBackground": false
 						}
 					},
 					{
@@ -59,7 +65,9 @@
 						"id": "1CiorPrng7",
 						"type": "image",
 						"data": {
-							"file": {},
+							"file": {
+								"url": "./img/projs/SteamDeckU.png"
+							},
 							"caption": "",
 							"withBorder": false,
 							"stretched": false,
