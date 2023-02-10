@@ -3,12 +3,12 @@
 		"steamdeck-u": {
 			"category": "steam-deck",
 			"name": "SteamDeck Themes",
-			"time": "5 hours",
+			"time": "8 hours",
 			"status": "Complete",
 			"difficulty": "Simple",
 			"description": "This project is a collection of CSS themes for the Steamdeck gaming handheld. Generally, my approach is to style things as dynamically as possible and provide inputs for all the colors. The themes are applied using a homebrew plugin for injecting CSS into the Steamdeck UI.",
 			"content": {
-				"time": 1675721120562,
+				"time": 1676035678026,
 				"blocks": [
 					{
 						"id": "nZjfcxUvB2",
@@ -26,6 +26,49 @@
 						}
 					},
 					{
+						"id": "DBzRAX8_JJ",
+						"type": "header",
+						"data": {
+							"text": "Show Download Status",
+							"level": 2
+						}
+					},
+					{
+						"id": "lsb98Vtar7",
+						"type": "image",
+						"data": {
+							"file": {
+								"url": "https://asset.localhost/C%3A%5CUsers%5CTormak%5CDocuments%5CGithub%5Cportfolio-site-v2%5Cpublic%5Cimg%5Cprojs%5CShow-Download-Status.png",
+								"webUrl": "./img/projs/Show-Download-Status.png"
+							},
+							"caption": "",
+							"withBorder": false,
+							"stretched": false,
+							"withBackground": false
+						}
+					},
+					{
+						"id": "OodBgXLK5M",
+						"type": "image",
+						"data": {
+							"file": {
+								"url": "https://asset.localhost/C%3A%5CUsers%5CTormak%5CDocuments%5CGithub%5Cportfolio-site-v2%5Cpublic%5Cimg%5Cprojs%5CShow-Download-Status_uninstalled.png",
+								"webUrl": "./img/projs/Show-Download-Status_uninstalled.png"
+							},
+							"caption": "",
+							"withBorder": false,
+							"stretched": false,
+							"withBackground": false
+						}
+					},
+					{
+						"id": "pYPNn855aB",
+						"type": "paragraph",
+						"data": {
+							"text": "This theme adds an icon to the library and homepage view indicating if a game is installed or not."
+						}
+					},
+					{
 						"id": "RS_k1qv86T",
 						"type": "header",
 						"data": {
@@ -38,7 +81,8 @@
 						"type": "image",
 						"data": {
 							"file": {
-								"url": "./img/projs/Stylish-Footer.png"
+								"url": "https://asset.localhost/C%3A%5CUsers%5CTormak%5CDocuments%5CGithub%5Cportfolio-site-v2%5Cpublic%5Cimg%5Cprojs%5CStylish-Footer.png",
+								"webUrl": "./img/projs/Stylish-Footer.png"
 							},
 							"caption": "",
 							"withBorder": false,
@@ -66,7 +110,8 @@
 						"type": "image",
 						"data": {
 							"file": {
-								"url": "./img/projs/SteamDeckU.png"
+								"url": "https://asset.localhost/C%3A%5CUsers%5CTormak%5CDocuments%5CGithub%5Cportfolio-site-v2%5Cpublic%5Cimg%5Cprojs%5CSteamDeckU.png",
+								"webUrl": "./img/projs/SteamDeckU.png"
 							},
 							"caption": "",
 							"withBorder": false,
