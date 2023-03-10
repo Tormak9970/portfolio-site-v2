@@ -102,10 +102,6 @@
 							<a href={$url("./experience")} class="nav-btn" on:click={handleNavClick}>Experience</a>
 							<div class="{$isActive('./experience') ? 'rendered ' : ''}interaction-indicator" />
 						</div>
-						<!-- <div id="4" class="nav-btn-cont" on:mouseenter={handleNavHover1} on:mouseleave={handleNavHover2} on:click={forwardClick} >
-							<a href={$url("./featured")} class="nav-btn" on:click={handleNavClick}>Featured</a>
-							<div class="{$isActive('./featured') ? 'rendered ' : ''}interaction-indicator" />
-						</div> -->
 						<div id="5" class="nav-btn-cont" on:mouseenter={handleNavHover1} on:mouseleave={handleNavHover2} on:click={forwardClick} >
 							<a href={$url("./projects")} class="nav-btn" on:click={handleNavClick}>Projects</a>
 							<div class="{$isActive('./projects') ? 'rendered ' : ''}interaction-indicator" />
@@ -160,10 +156,6 @@
 							<a href={$url("./experience")} class="nav-btn" on:click={handleNavClick}>Experience</a>
 						</div>
 						<div class="spacer" />
-						<!-- <div id="4" class="nav-btn-cont{$isActive('./featured') ? ' rendered' : ''}" on:click={forwardClick} >
-							<a href={$url("./featured")} class="nav-btn" on:click={handleNavClick}>Featured</a>
-						</div> -->
-						<!-- <div class="spacer" /> -->
 						<div id="5" class="nav-btn-cont{$isActive('./projects') ? ' rendered' : ''}" on:click={forwardClick} >
 							<a href={$url("./projects")} class="nav-btn" on:click={handleNavClick}>Projects</a>
 						</div>
