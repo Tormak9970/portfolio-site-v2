@@ -2,6 +2,7 @@
 /public/build/
 /.vscode/
 /.routify/
+/.firebase/
 /src/firebase.js
 /dist
 
