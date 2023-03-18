@@ -81,7 +81,7 @@
 
 <main>
 	{#await loadConfig()}
-		<LoadingSpinner />
+		<!-- <LoadingSpinner /> -->
 	{:then _}
 		<MediaQuery query="(orientation:landscape)" let:matches>
 			{#if matches}

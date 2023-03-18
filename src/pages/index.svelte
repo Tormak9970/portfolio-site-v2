@@ -92,7 +92,7 @@
 </script>
 
 <div class="bg-cont">
-    <div class="iframe-cont">
+    <div class="dots-cont">
         <NoisyDots />
     </div>
     <MediaQuery query="{orientationQuery}" let:matches>
@@ -135,11 +135,12 @@
         position: relative;
     }
 
-    .iframe-cont {
+    .dots-cont {
         width: 100%;
         height: 100%;
 
         position: absolute;
+        opacity: 0.1;
         top: 0;
         z-index: 1;
     }
@@ -161,6 +162,7 @@
 	}
     #name {
         --height: 64px;
+        font-weight: bold;
         font-size: var(--height);
 
         position: absolute;

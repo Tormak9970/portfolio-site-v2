@@ -44,15 +44,15 @@
   const frequencyY = 3;
 
   function clear(): void {
-      ctx.fillStyle = "black";
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
+    ctx.fillStyle = "black";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
   }
 
   function drawScaledCircle(x:number, y:number, noise:number) {
-      ctx.fillStyle = "#252525"; // also try #2c2c2c, #303030, #383838
-      ctx.beginPath();
-      ctx.arc(x, y, mapRange(noise, -1, 1, minCircleRad, maxCircleRad, false), 0, 2 * Math.PI);
-      ctx.fill();
+    ctx.fillStyle = "#252525"; // also try #2c2c2c, #303030, #383838
+    ctx.beginPath();
+    ctx.arc(x, y, mapRange(noise, -1, 1, minCircleRad, maxCircleRad, false), 0, 2 * Math.PI);
+    ctx.fill();
   }
 
   function drawPoints(time: number) {
@@ -72,10 +72,12 @@
   }
 
   function animate(currentTime:number): void {
-    clear();
-    currentTime *= 0.001;
-    previousTime = currentTime;
-    drawPoints(currentTime);
+    if (canvas) {
+      clear();
+      currentTime *= 0.001;
+      previousTime = currentTime;
+      drawPoints(currentTime);
+    }
 
     requestAnimationFrame(animate.bind(this));
   }
