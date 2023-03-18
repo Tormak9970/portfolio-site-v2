@@ -109,10 +109,12 @@
   }
   .mobile {
     width: 100%;
-    height: 80%;
+    height: 100%;
+    padding: 10% 0;
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow: scroll;
   }
   .mobile .container {
     width: 50%;
@@ -123,6 +125,7 @@
   }
   .mobile .container img {
     width: 100%;
+    height: 100%;
   }
   .mobile .bio-cont {
     width: 80%;
