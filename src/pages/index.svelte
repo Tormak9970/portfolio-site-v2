@@ -5,6 +5,7 @@
     import { orientationQuery } from "../utils";
 
 	import MediaQuery from "./_utils/MediaQuery.svelte";
+    import NoisyDots from "./_utils/NoisyDots.svelte";
 
     let descIdx = 0;
     const descs = [
@@ -92,7 +93,7 @@
 
 <div class="bg-cont">
     <div class="iframe-cont">
-        <iframe src="https://dots.travislane.dev/" title="noisy-dots" frameBorder="0"/>
+        <NoisyDots />
     </div>
     <MediaQuery query="{orientationQuery}" let:matches>
         {#if matches}
@@ -141,11 +142,6 @@
         position: absolute;
         top: 0;
         z-index: 1;
-    }
-
-    .iframe-cont > iframe {
-        width: 100%;
-        height: 100%;
     }
 
     #aboutSection {
