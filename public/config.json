@@ -1682,12 +1682,12 @@
 		"bash-shortcuts": {
 			"category": "steam-deck",
 			"name": "Bash Shortcuts",
-			"time": "46 hours",
-			"status": "In Progress",
-			"difficulty": "Moderate",
-			"description": "This project is a custom theme for Valve's Steam Deck. It uses a homebrew plugin for injecting CSS to provide users with options to customize each part of their keyboard. The reason I started this project is because Valve offers keyboard themes, but the selection is limited and they only work online.",
+			"time": "67 hours",
+			"status": "Complete",
+			"difficulty": "Complex",
+			"description": "This project is a plugin for Valve's Steamdeck handheld game console that allows users to run scripts and apps from game mode. It supports passing flags to scripts with a variety of values, and hooks for notable events that can occur while using the device. The name comes from the plugin using bash to run other scripts in order to trick Steam into thinking they are games.",
 			"content": {
-				"time": 1675719962935,
+				"time": 1679186680862,
 				"blocks": [
 					{
 						"id": "nZjfcxUvB2",
@@ -1701,7 +1701,176 @@
 						"id": "xPDAeM17W0",
 						"type": "paragraph",
 						"data": {
-							"text": "This project is a custom theme for Valve's Steam Deck. It uses a homebrew plugin for injecting CSS to provide users with options to customize each part of their keyboard. The reason I started this project is because Valve offers keyboard themes, but the selection is limited and they only work online."
+							"text": "This project is a plugin for Valve's Steamdeck handheld game console that allows users to run scripts and apps from game mode. It supports passing flags to scripts with a variety of values, and hooks for notable events that can occur while using the device. The name comes from the plugin using bash to run other scripts in order to trick Steam into thinking they are games."
+						}
+					},
+					{
+						"id": "gGJoITC9hm",
+						"type": "header",
+						"data": {
+							"text": "Update v2.0.0",
+							"level": 2
+						}
+					},
+					{
+						"id": "Lp5gN5R84O",
+						"type": "paragraph",
+						"data": {
+							"text": "Bash Shortcuts is now feature complete."
+						}
+					},
+					{
+						"id": "8tNnFLMuyb",
+						"type": "list",
+						"data": {
+							"style": "unordered",
+							"items": [
+								{
+									"content": "Switched to the new reorderable list",
+									"items": []
+								},
+								{
+									"content": "Added support for running multiple shortcuts at once",
+									"items": []
+								},
+								{
+									"content": "Switched over to instance model",
+									"items": []
+								},
+								{
+									"content": "Plugin now deletes any leftover instances on boot",
+									"items": []
+								},
+								{
+									"content": "Added support for killing long running shortcuts",
+									"items": []
+								},
+								{
+									"content": "Plugin now uses the new Decky log directory",
+									"items": []
+								},
+								{
+									"content": "Plugin now uses the new Decky settings manager",
+									"items": []
+								},
+								{
+									"content": "UI now updates properly when the shortcut is exited from outside the plugin",
+									"items": []
+								},
+								{
+									"content": "Added custom deployment scripts",
+									"items": []
+								},
+								{
+									"content": "Implemented WebSocket to allow for backend -&gt; frontend communication",
+									"items": [
+										{
+											"content": "<a target=\"_blank\" rel=\"noreferrer noopener\" href=\"https://github.com/pikhovkin/simple-websocket-server\">Docs for websocket server I used</a>",
+											"items": []
+										},
+										{
+											"content": "<a target=\"_blank\" rel=\"noreferrer noopener\" href=\"https://github.com/websocket-client/websocket-client\">Docs for the websocket client I used</a>",
+											"items": []
+										}
+									]
+								},
+								{
+									"content": "Non app shortcuts now show a toast when the finish",
+									"items": []
+								},
+								{
+									"content": "Switched the manager window to be called config and added icons to better align with Steam’s settings window",
+									"items": []
+								},
+								{
+									"content": "Plugin now has a setting for WebSocket Port",
+									"items": []
+								},
+								{
+									"content": "Fixed apps not opening fullscreen",
+									"items": [
+										{
+											"content": "Switched from using wmctrl (which Valve no longer installs automatically) to Xdotool",
+											"items": []
+										}
+									]
+								},
+								{
+									"content": "Fixed the error that was showing up in konsole when launched",
+									"items": []
+								},
+								{
+									"content": "Added setting to enable/disable flags",
+									"items": []
+								},
+								{
+									"content": "All non app shortcuts are now given 5 flags",
+									"items": [
+										{
+											"content": "Date",
+											"items": []
+										},
+										{
+											"content": "Time",
+											"items": []
+										},
+										{
+											"content": "Current user's username",
+											"items": []
+										},
+										{
+											"content": "Current gameId",
+											"items": []
+										},
+										{
+											"content": "Current game name",
+											"items": []
+										}
+									]
+								},
+								{
+									"content": "Added guides to config window",
+									"items": [
+										{
+											"content": "Using <a target=\"_blank\" rel=\"noreferrer noopener\" href=\"https://github.com/markdown-it/markdown-it\">Markdown-it</a> for parsing the markdown",
+											"items": []
+										}
+									]
+								},
+								{
+									"content": "Added hooks for:",
+									"items": [
+										{
+											"content": "Log In and Out",
+											"items": []
+										},
+										{
+											"content": "Game Start and End",
+											"items": []
+										},
+										{
+											"content": "Game Install, Update, and Uninstall",
+											"items": []
+										},
+										{
+											"content": "Achievement Unlocked",
+											"items": []
+										},
+										{
+											"content": "Screenshot Taken",
+											"items": []
+										},
+										{
+											"content": "Deck Sleep and Shutdown",
+											"items": []
+										}
+									]
+								},
+								{
+									"content": "Plugin now checks if shortcut is running when edited/deleted and kill it<a target=\"_blank\" rel=\"noreferrer noopener\" href=\"https://github.com/pikhovkin/simple-websocket-server\"></a>",
+									"items": []
+								}
+							]
 						}
 					},
 					{
@@ -1813,7 +1982,7 @@
 			},
 			"link": "https://github.com/Tormak9970/bash-shortcuts",
 			"isRelative": false,
-			"img": "./img/projs/Bash Shortcuts -  Main View.png",
+			"img": "./img/projs/thumbnail.png",
 			"org": "steam-deck-homebrew"
 		},
 		"darkest-dungeon-save-editor": {
