@@ -38,8 +38,7 @@
 						"type": "image",
 						"data": {
 							"file": {
-								"url": "https://asset.localhost/C%3A%5CUsers%5CTormak%5CDocuments%5CGithub%5Cportfolio-site-v2%5Cpublic%5Cimg%5Cprojs%5CShow-Download-Status.png",
-								"webUrl": "./img/projs/Show-Download-Status.png"
+								"url": "./img/projs/Show-Download-Status.png"
 							},
 							"caption": "",
 							"withBorder": false,
@@ -52,8 +51,7 @@
 						"type": "image",
 						"data": {
 							"file": {
-								"url": "https://asset.localhost/C%3A%5CUsers%5CTormak%5CDocuments%5CGithub%5Cportfolio-site-v2%5Cpublic%5Cimg%5Cprojs%5CShow-Download-Status_uninstalled.png",
-								"webUrl": "./img/projs/Show-Download-Status_uninstalled.png"
+								"url": "./img/projs/Show-Download-Status_uninstalled.png"
 							},
 							"caption": "",
 							"withBorder": false,
@@ -81,8 +79,7 @@
 						"type": "image",
 						"data": {
 							"file": {
-								"url": "https://asset.localhost/C%3A%5CUsers%5CTormak%5CDocuments%5CGithub%5Cportfolio-site-v2%5Cpublic%5Cimg%5Cprojs%5CStylish-Footer.png",
-								"webUrl": "./img/projs/Stylish-Footer.png"
+								"url": "./img/projs/Stylish-Footer.png"
 							},
 							"caption": "",
 							"withBorder": false,
@@ -110,8 +107,7 @@
 						"type": "image",
 						"data": {
 							"file": {
-								"url": "https://asset.localhost/C%3A%5CUsers%5CTormak%5CDocuments%5CGithub%5Cportfolio-site-v2%5Cpublic%5Cimg%5Cprojs%5CSteamDeckU.png",
-								"webUrl": "./img/projs/SteamDeckU.png"
+								"url": "./img/projs/SteamDeckU.png"
 							},
 							"caption": "",
 							"withBorder": false,
@@ -158,12 +154,12 @@
 		"portfolio-updater": {
 			"category": "software-engineering",
 			"name": "Portfolio Updater",
-			"time": "50 hours",
+			"time": "55 hours",
 			"status": "Complete",
 			"difficulty": "Moderate",
 			"description": "Initially, this project was going to be written using the Electron framework, but right around when I started it, I heard about Tauri. Tauri is great because it allows you to build more secure apps with smaller bundle sizes, and has a better developer experience then Electron. The app itself makes updating my portfolio easy and straightforward, allowing me to focus more on my projects.",
 			"content": {
-				"time": 1675718358173,
+				"time": 1679187370092,
 				"blocks": [
 					{
 						"id": "mGX3WmsU_L",
@@ -178,6 +174,35 @@
 						"type": "paragraph",
 						"data": {
 							"text": "Initially, this project was going to be written using the Electron framework, but right around when I started it, I heard about Tauri. Tauri is great because it allows you to build more secure apps with smaller bundle sizes, and has a better developer experience then Electron. The app itself makes updating my portfolio easy and straightforward, allowing me to focus more on my projects."
+						}
+					},
+					{
+						"id": "zaDlOd6pQA",
+						"type": "header",
+						"data": {
+							"text": "Version 1.2.3",
+							"level": 2
+						}
+					},
+					{
+						"id": "ItRCOkv4TI",
+						"type": "list",
+						"data": {
+							"style": "unordered",
+							"items": [
+								{
+									"content": "Updated to use new my new logo",
+									"items": []
+								},
+								{
+									"content": "Fixed issues with double saving images",
+									"items": []
+								},
+								{
+									"content": "Fixed issues with deleting entries",
+									"items": []
+								}
+							]
 						}
 					},
 					{
@@ -1240,7 +1265,7 @@
 			"difficulty": "Moderate",
 			"description": "This project is the website you are currently on. It is a replacement for my previous portfolio website, which I had not been keeping up to date. I decided to remake it from scratch using Svelte, TypeScript, and SASS (later removed), all of which are awesome frameworks I have wanted to learn for a while.",
 			"content": {
-				"time": 1675720096913,
+				"time": 1679187485479,
 				"blocks": [
 					{
 						"id": "EHEWUSDdP5",
@@ -1255,6 +1280,35 @@
 						"type": "paragraph",
 						"data": {
 							"text": "This project is the website you are currently on. It is a replacement for my previous portfolio website, which I had not been keeping up to date. I decided to remake it from scratch using Svelte, TypeScript, and SASS (later removed), all of which are awesome frameworks I have wanted to learn for a while."
+						}
+					},
+					{
+						"id": "YUb2kWw8H1",
+						"type": "header",
+						"data": {
+							"text": "Update v3.1.1",
+							"level": 2
+						}
+					},
+					{
+						"id": "Srxpm2Eomq",
+						"type": "list",
+						"data": {
+							"style": "unordered",
+							"items": [
+								{
+									"content": "Moved dots to be directly on the portfolio site",
+									"items": []
+								},
+								{
+									"content": "Mobile about page was not scrolling",
+									"items": []
+								},
+								{
+									"content": "Fixed link coloring",
+									"items": []
+								}
+							]
 						}
 					},
 					{
@@ -2045,8 +2099,7 @@
 						"type": "image",
 						"data": {
 							"file": {
-								"url": "https://asset.localhost/C%3A%5CUsers%5CTormak%5CDocuments%5CGitHub%5Cportfolio-site-v2%5Cpublic%5Cimg%5Cprojs%5CDDSEditor-main-ui.png",
-								"webUrl": "./img/projs/DDSEditor-main-ui.png"
+								"url": "./img/projs/DDSEditor-main-ui.png"
 							},
 							"caption": "",
 							"withBorder": false,
@@ -2073,8 +2126,7 @@
 						"type": "image",
 						"data": {
 							"file": {
-								"url": "https://asset.localhost/C%3A%5CUsers%5CTormak%5CDocuments%5CGitHub%5Cportfolio-site-v2%5Cpublic%5Cimg%5Cprojs%5Cjson-editor.png",
-								"webUrl": "./img/projs/json-editor.png"
+								"url": "./img/projs/json-editor.png"
 							},
 							"caption": "",
 							"withBorder": false,
@@ -2101,8 +2153,7 @@
 						"type": "image",
 						"data": {
 							"file": {
-								"url": "https://asset.localhost/C%3A%5CUsers%5CTormak%5CDocuments%5CGitHub%5Cportfolio-site-v2%5Cpublic%5Cimg%5Cprojs%5CBackup-manager.png",
-								"webUrl": "./img/projs/Backup-manager.png"
+								"url": "./img/projs/Backup-manager.png"
 							},
 							"caption": "",
 							"withBorder": false,
@@ -2206,21 +2257,19 @@
 			"isRelative": false,
 			"img": "./img/projs/DDSEditor-main-ui.png",
 			"org": "none"
-		}
-	},
-	"archive": {
-		"noisy-dots": {
-			"category": "web-dev",
-			"name": "Noisy Dots",
-			"time": "4 hours",
+		},
+		"untitled-card-game": {
+			"category": "web-games",
+			"name": "Untitled Card Game",
+			"time": "35 hours",
 			"status": "Complete",
-			"difficulty": "Simple",
-			"description": "This small project is a simple animation made using the HTML5 canvas and simplex-noise. I came up with this idea because I wanted to add something to my portfolio landing page to make it more unique, and I love procedural generation so I thought a noise based animation would be perfect! It works by sampling a noise texture and scaling circles based on the value (noise ranges from 0.0 - 1.0), which creates the mesmerizing pattern.",
+			"difficulty": "Moderate",
+			"description": "This is a TypeScript and Svelte implementation of the classic card game Solitaire, based on the Klondike rules. The UI has a pixel art theme, and the face cards are animated using classic frame by frame sprites. It has a full undo/redo system, difficulty settings, score keeping, and animations for flipping over cards, undos, and redos. These were especially difficult considering a side effect of the Drag-n-Drop library I settled on is that Svelte's built in animation system doesn't work, so these had to be done by hand.",
 			"content": {
-				"time": 1675718401669,
+				"time": 1679188413134,
 				"blocks": [
 					{
-						"id": "R8n2_PIDX_",
+						"id": "KmqwGgYXxy",
 						"type": "header",
 						"data": {
 							"text": "Description",
@@ -2228,39 +2277,66 @@
 						}
 					},
 					{
-						"id": "vvXPG-9bzc",
+						"id": "XG0W_wQ5Jr",
 						"type": "paragraph",
 						"data": {
-							"text": "This small project is a simple animation made using the HTML5 canvas and simplex-noise. I came up with this idea because I wanted to add something to my portfolio landing page to make it more unique, and I love procedural generation so I thought a noise based animation would be perfect! It works by sampling a noise texture and scaling circles based on the value (noise ranges from 0.0 - 1.0), which creates the mesmerizing pattern."
+							"text": "This is a TypeScript and Svelte implementation of the classic card game Solitaire, based on the Klondike rules. The UI has a pixel art theme, and the face cards are animated using classic frame by frame sprites. It has a full undo/redo system, difficulty settings, score keeping, and animations for flipping over cards, undos, and redos. These were especially difficult considering a side effect of the Drag-n-Drop library I settled on is that Svelte's built in animation system doesn't work, so these had to be done by hand."
 						}
 					},
 					{
-						"id": "s1PgdSrKpS",
+						"id": "25TRtnv23G",
 						"type": "header",
 						"data": {
-							"text": "Purpose",
+							"text": "Features",
 							"level": 2
 						}
 					},
 					{
-						"id": "QLdP_i0Xs8",
+						"id": "yP-slOzEcg",
 						"type": "list",
 						"data": {
 							"style": "unordered",
 							"items": [
 								{
-									"content": "I wanted to add something unique to my portfolio landing page",
+									"content": "Multiple difficulties",
+									"items": [
+										{
+											"content": "Different difficulties change the number of cards flipped over at a time, penalty for undos/redos, penalty for recycling the deck, and overall bonus to your score at the end.",
+											"items": []
+										}
+									]
+								},
+								{
+									"content": "Undo and Redo system",
+									"items": [
+										{
+											"content": "Any move can be undone and redone, and the cards will transition smoothly from one position to the other",
+											"items": []
+										}
+									]
+								},
+								{
+									"content": "Seeded deals",
+									"items": [
+										{
+											"content": "When dealing, the card deck is shuffled with a seed, making deals replicateable",
+											"items": []
+										}
+									]
+								},
+								{
+									"content": "Browser and File based saving",
 									"items": []
 								},
 								{
-									"content": "Was interested in exploring the use of procedural noise in web design",
+									"content": "Pixel art inspired cards and UI",
 									"items": []
 								}
 							]
 						}
 					},
 					{
-						"id": "N_8415duvG",
+						"id": "zFo_A58yiz",
 						"type": "header",
 						"data": {
 							"text": "Conclusion",
@@ -2268,17 +2344,17 @@
 						}
 					},
 					{
-						"id": "934yia4AmU",
+						"id": "yLOZV8wLJa",
 						"type": "list",
 						"data": {
 							"style": "unordered",
 							"items": [
 								{
-									"content": "Created something unique that helps my portfolio make an impact on viewers",
+									"content": "I was able to recreate one of my favorite games with a fun asthetic",
 									"items": []
 								},
 								{
-									"content": "Discovered useful libraries for procedural generation in JavaScript",
+									"content": "I was able to familiarize myself with a robust Svelte Drag-n-Drop library",
 									"items": []
 								}
 							]
@@ -2287,11 +2363,13 @@
 				],
 				"version": "2.24.3"
 			},
-			"link": "https://dots.travislane.dev/",
+			"link": "https://solitaire.travislane.dev/",
 			"isRelative": false,
-			"img": "./img/projs/noisy-dots-anim.png",
+			"img": "./img/projs/untitled-card-game.png",
 			"org": "none"
-		},
+		}
+	},
+	"archive": {
 		"three.js-marching-cubes": {
 			"category": "web-dev",
 			"name": "Three.js Marching Cubes",
@@ -3409,8 +3487,7 @@
 						"type": "image",
 						"data": {
 							"file": {
-								"url": "https://asset.localhost/C%3A%5CUsers%5CTormak%5CDocuments%5CGitHub%5Cportfolio-site-v2%5Cpublic%5Cimg%5Cprojs%5CHex%20World%20Controls.png",
-								"webUrl": "./img/projs/Hex World Controls.png"
+								"url": "./img/projs/Hex World Controls.png"
 							},
 							"caption": "",
 							"withBorder": false,
