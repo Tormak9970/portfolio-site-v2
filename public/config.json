@@ -2367,6 +2367,366 @@
 			"isRelative": false,
 			"img": "./img/projs/untitled-card-game.png",
 			"org": "none"
+		},
+		"steam-art-manager": {
+			"category": "software-engineering",
+			"name": "Steam Art Manager",
+			"time": "37 hours",
+			"status": "In Progress",
+			"difficulty": "Complex",
+			"description": "Steam Art Manager is a tool for managing the art for your Steam game library. It allows users to view their library and upload images either from their computer, or they can browse images from SteamGridDB. The tool also allows users to export their custom art to and from .zip files for easy transfers between computers. The app manages to do all this while avoiding needless usage of the Steam Web API.",
+			"content": {
+				"time": 1680881048334,
+				"blocks": [
+					{
+						"id": "h5k8NLOocY",
+						"type": "header",
+						"data": {
+							"text": "Description",
+							"level": 2
+						}
+					},
+					{
+						"id": "kyLiPdq-5h",
+						"type": "paragraph",
+						"data": {
+							"text": "Steam Art Manager is a tool for managing the art for your Steam game library. It allows users to view their library and upload images either from their computer, or they can browse images from SteamGridDB. The tool also allows users to export their custom art to and from .zip files for easy transfers between computers. The app manages to do all this while avoiding needless usage of the Steam Web API."
+						}
+					},
+					{
+						"id": "Gwh4HGP-l_",
+						"type": "header",
+						"data": {
+							"text": "Overview of how Steam's Custom Art System Works",
+							"level": 2
+						}
+					},
+					{
+						"id": "3KFcUXDEG8",
+						"type": "paragraph",
+						"data": {
+							"text": "Steam provides a system for users to set custom art for any of the images associated with one of their games. This works by adding an image with a specific name to&nbsp;<i>steam/userdata/USER_ID/config/grid</i>, at which point Steam will automatically detect it when it loads. The Steam Art Manager takes advantage of this by adding images the user selects to this directory with the required names."
+						}
+					},
+					{
+						"id": "LwUboVFLg3",
+						"type": "header",
+						"data": {
+							"text": "Features",
+							"level": 2
+						}
+					},
+					{
+						"id": "jeXDXi1V62",
+						"type": "paragraph",
+						"data": {
+							"text": "The tool has a variety of features, most of which are listed previously, but are described in more detail here. Below is an image of the Steam Art Manager running on windows. Any descriptions of the UI will use this image as a reference."
+						}
+					},
+					{
+						"id": "vg53nr8Qhd",
+						"type": "image",
+						"data": {
+							"file": {
+								"url": "./img/projs/final-sarm-ui.png"
+							},
+							"caption": "",
+							"withBorder": false,
+							"stretched": false,
+							"withBackground": false
+						}
+					},
+					{
+						"id": "PAgWhT6igp",
+						"type": "header",
+						"data": {
+							"text": "Filters",
+							"level": 3
+						}
+					},
+					{
+						"id": "NKrGcvmQiX",
+						"type": "paragraph",
+						"data": {
+							"text": "This is the section on the left. These options are used to filter the results from SteamGridDB. Styles filter the stylistic type of the images, dimensions are self explanatory, mimes are the image format, types determine whether gifs or just images are used, and tags filter by noteworthy warnings on the images. The defaults are the same as the website."
+						}
+					},
+					{
+						"id": "LzDixJb5cv",
+						"type": "header",
+						"data": {
+							"text": "Games",
+							"level": 3
+						}
+					},
+					{
+						"id": "unR2u8KSnX",
+						"type": "paragraph",
+						"data": {
+							"text": "The games section is in the middle. It loads all of your owned steam games, filtered alphabetically. A search bar is provided for users who have sizeable Steam libraries, or simply wish to find things faster. Unfortunately, the tool occasionally finds games the user has never played, has hidden, or no longer owns, so there is a \"hide game\" option. These selections are saved across sessions, and can be viewed by toggling the \"show hidden\" option."
+						}
+					},
+					{
+						"id": "8fMxnzJ5K-",
+						"type": "header",
+						"data": {
+							"text": "Grids",
+							"level": 3
+						}
+					},
+					{
+						"id": "xHfeMeH4C7",
+						"type": "paragraph",
+						"data": {
+							"text": "The final section is on the right. This will only be populated if the user provides a SteamGridDB API key (which a dialog for can be opened by clicking the \"Add SteamGrid Key\" button). It allows the user to select which type of game image they wish to set, and browse SteamGridDB's collection of images for that game."
+						}
+					},
+					{
+						"id": "6trFbx2AgR",
+						"type": "header",
+						"data": {
+							"text": "Custom Upload",
+							"level": 3
+						}
+					},
+					{
+						"id": "1jz_a6V5VQ",
+						"type": "paragraph",
+						"data": {
+							"text": "Users can also upload art from their own computer, allowing them to not have to rely on SteamGridDB."
+						}
+					},
+					{
+						"id": "8YN_8FLy34",
+						"type": "header",
+						"data": {
+							"text": "Import/Export",
+							"level": 3
+						}
+					},
+					{
+						"id": "YaSit5QCpZ",
+						"type": "paragraph",
+						"data": {
+							"text": "The final major feature of this project is importing and exporting custom art. This works by reading all the files in the current user's <i>grids</i>&nbsp;directory, and generating a zip containing them. Alternatively, the app reads the provided zip, and copies the images inside to the user's <i>grids</i>&nbsp;directory, overriding existing images if they exist."
+						}
+					},
+					{
+						"id": "N3tM3OGBat",
+						"type": "header",
+						"data": {
+							"text": "Caching",
+							"level": 3
+						}
+					},
+					{
+						"id": "uxvbuy4XKj",
+						"type": "paragraph",
+						"data": {
+							"text": "Because I am using the SteamGridDB API, I had to be cautious about how and when I made requests to the api. To address this, the app will save requests made during the same session, and it downloads images the user selects, so it will only download each image up to once per session. This helps reduce traffic to the API."
+						}
+					},
+					{
+						"id": "2_HFanNSUs",
+						"type": "header",
+						"data": {
+							"text": "Lazy Loading Images",
+							"level": 3
+						}
+					},
+					{
+						"id": "PZZZRcyy0A",
+						"type": "paragraph",
+						"data": {
+							"text": "One issue I ran into while building this project is because I needed to load so many images for both games and the SteamGridDB results, it was causing huge performance issues. I was able to remedy this by using lazy loading combined with smaller images. It can occasionally stutter when the user scrolls to fast, but its far within the acceptable range."
+						}
+					},
+					{
+						"id": "vRkIK_fBwy",
+						"type": "header",
+						"data": {
+							"text": "Workflow Updates",
+							"level": 2
+						}
+					},
+					{
+						"id": "ysb_b7Wcss",
+						"type": "paragraph",
+						"data": {
+							"text": "In the process of working on the Steam Art Manager, I ended up making many improvements to my workflow, my personal favorites being CommitLint and the new app Logging System."
+						}
+					},
+					{
+						"id": "SphZajfOFw",
+						"type": "header",
+						"data": {
+							"text": "CommitLint",
+							"level": 3
+						}
+					},
+					{
+						"id": "NcdhwXiLZY",
+						"type": "paragraph",
+						"data": {
+							"text": "<a target=\"_blank\" href=\"https://commitlint.js.org/#/\">CommitLint</a> is a library that enforces strict rules on your commits, ensuring that they all adhere to your specified conventions (my choice being the Angular commit conventions). Not only does this make commit logs more useful, but it makes automatically bumping app versions and generating changelogs much easier."
+						}
+					},
+					{
+						"id": "y8uWUeiDij",
+						"type": "header",
+						"data": {
+							"text": "New Logging System",
+							"level": 3
+						}
+					},
+					{
+						"id": "fMw5MAP9rc",
+						"type": "paragraph",
+						"data": {
+							"text": "Recently I finished a different project, <a target=\"_blank\" href=\"https://github.com/Tormak9970/bash-shortcuts\">Bash Shortcuts</a>, and in the process of working on it I made a rather robust logging system for both the frontend and backend. This was invaluable on many occasions, so I decided to implemented a similar system into the Steam Art Manager. However, it has been designed in such a way that it should be easily integrated into any future Tauri app I create. The system allows logging at various levels (info, warning, and error), passing parameters, and denotes if a log came from the frontend or backend."
+						}
+					},
+					{
+						"id": "ZaHPZ5ACPc",
+						"type": "header",
+						"data": {
+							"text": "Rust Centric Mindset",
+							"level": 3
+						}
+					},
+					{
+						"id": "bBmvxf5bC0",
+						"type": "paragraph",
+						"data": {
+							"text": "In the past I have always avoided having logic written in Rust in my Tauri projects. I didn't feel comfortable enough with the language, and never found the time to remedy that. However, when I made the logging system for this project I knew I needed to learn Rust, so I did. This came in handy a few times, as there are a couple of operations the app does that take at least 5 seconds in TypeScript, but in Rust can be done in under 1 second. This is such a huge difference for users, and is a lesson I will remember when working on future projects."
+						}
+					},
+					{
+						"id": "c2yqvtpA8j",
+						"type": "header",
+						"data": {
+							"text": "Component Updates",
+							"level": 3
+						}
+					},
+					{
+						"id": "I9L0HdJFKL",
+						"type": "paragraph",
+						"data": {
+							"text": "When making this project, I realized that, while the UI style I typically use is nice, it can be a bit clunky when more complex UI designs are needed. Because of this, I decided to modernize the look, and make it more flexible. I also standardized the parameters for all of my UI components, and added two new ones: a search bar and a tab view."
+						}
+					},
+					{
+						"id": "HrGf3MSNfI",
+						"type": "header",
+						"data": {
+							"text": "Auto Updates for Projects",
+							"level": 3
+						}
+					},
+					{
+						"id": "14Wa9F2uoD",
+						"type": "paragraph",
+						"data": {
+							"text": "As this is the first project of mine that I feel has the potential to garner a decent userbase, I finally decided to look into how to set up automatic updates for Tauri apps. It boiled down to either having a server or a static .json file hosted somewhere that indicates the most recent release and where to download it. I choose the static json file as I was able to integrate it into my build pipeline, so no hosting fees are required."
+						}
+					},
+					{
+						"id": "zXSl2ZnKgn",
+						"type": "header",
+						"data": {
+							"text": "GitHub Actions",
+							"level": 3
+						}
+					},
+					{
+						"id": "06RegVZGyM",
+						"type": "paragraph",
+						"data": {
+							"text": "On the topic of build pipelines, I fell into the infuriating rabbit-hole that is GitHub Actions. These workflows allow you to automate nearly anything, but are a massive pain to test and debug. My goal was to set up a build pipeline that would do the following:"
+						}
+					},
+					{
+						"id": "yHnFXBXUzd",
+						"type": "list",
+						"data": {
+							"style": "ordered",
+							"items": [
+								{
+									"content": "Generate a changelog from commits since the last release",
+									"items": []
+								},
+								{
+									"content": "If there are new features, bump the feature version (1.x.0), otherwise bump the bug fix version (1.0.x).",
+									"items": []
+								},
+								{
+									"content": "Create a release draft with the changelog and new version",
+									"items": []
+								},
+								{
+									"content": "Build the application for both Windows and Linux",
+									"items": []
+								},
+								{
+									"content": "Add the installers to the release",
+									"items": []
+								},
+								{
+									"content": "Generate a new .json file for the updater to check",
+									"items": []
+								},
+								{
+									"content": "Publish the new release",
+									"items": []
+								}
+							]
+						}
+					},
+					{
+						"id": "gumhsI-zbP",
+						"type": "paragraph",
+						"data": {
+							"text": "I did finally manage to get the pipeline working, but it took almost 80 workflow runs to get to that point. Definitely worth it, but a struggle nonetheless."
+						}
+					},
+					{
+						"id": "MVS4ipoKoC",
+						"type": "header",
+						"data": {
+							"text": "Purpose",
+							"level": 2
+						}
+					},
+					{
+						"id": "4bcu4fcigk",
+						"type": "paragraph",
+						"data": {
+							"text": "The main reason I decided to make this project was I discovered the <a target=\"_blank\" href=\"https://github.com/SteamGridDB/steam-rom-manager\">Steam Rom Manager</a>, and wanted a tool that was similar but for my Steam library. I thought this would also be a great opportunity to finally start learning the Rust language (as is used as the backend for Tauri apps). Additionally, I wanted to build my first project that was cross platform (in this case, just Windows and Linux)."
+						}
+					},
+					{
+						"id": "nj8SZDo68x",
+						"type": "header",
+						"data": {
+							"text": "Conclusion",
+							"level": 2
+						}
+					},
+					{
+						"id": "wmuBW-sU7M",
+						"type": "paragraph",
+						"data": {
+							"text": "Looking back, I was able to create exactly what I set out to do and more. The tool allows users to browse their Steam games and set the various types of art for each game, either with their own images or images from <a target=\"_blank\" href=\"https://steamgriddb.com\">https://steamgriddb.com</a>. I also learned a lot about Rust, and I have been blown away by its performance and ease of use. Lastly, I got the chance to familiarize myself with GitHub Actions. They were a huge pain to get up and running, but now that they are, I can automatically generate changelogs and releases for Steam Art Manager when I make changes."
+						}
+					}
+				],
+				"version": "2.24.3"
+			},
+			"link": "https://github.com/Tormak9970/Steam-Art-Manager",
+			"isRelative": false,
+			"img": "./img/projs/final-sarm-ui.png",
+			"org": "none"
 		}
 	},
 	"archive": {
