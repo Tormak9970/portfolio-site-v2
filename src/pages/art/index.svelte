@@ -93,6 +93,7 @@
             $artScrollIdx -= 1;
             if ($orientation == 0) interceptScrollFromIdx(false, $artScrollIdx+1);
         }
+        return true;
     });
 
     onMount(() => {

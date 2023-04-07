@@ -37,8 +37,6 @@
   const minCircleRad = 2;
   const maxCircleRad = 20;
 
-  let previousTime = 0;
-
   const amplitude = 0.8;
   const frequencyX = 3;
   const frequencyY = 3;
@@ -75,7 +73,6 @@
     if (canvas) {
       clear();
       currentTime *= 0.001;
-      previousTime = currentTime;
       drawPoints(currentTime);
     }
 

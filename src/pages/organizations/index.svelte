@@ -79,6 +79,7 @@
             $orgScrollIdx -= 1;
             if ($orientation == 0) interceptScrollFromIdx(false, $orgScrollIdx+1);
         }
+        return true;
     });
 
     onMount(() => {

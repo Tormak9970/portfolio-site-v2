@@ -4,7 +4,6 @@
 	import ImageModal from "./_utils/ImageModal.svelte";
 	import MediaQuery from "./_utils/MediaQuery.svelte";
 	import Socials from "./_utils/Socials.svelte";
-	import LoadingSpinner from "./_utils/LoadingSpinner.svelte";
 
 	import { imageModalData, navCheck, projScrollIdx } from "../Stores";
 	import { loadConfig } from "../linkConfig";

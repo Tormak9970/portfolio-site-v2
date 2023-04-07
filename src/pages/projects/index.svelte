@@ -97,6 +97,7 @@
             $projScrollIdx -= 1;
             if ($orientation == 0) interceptScrollFromIdx(false, $projScrollIdx+1);
         }
+        return true;
     });
     onMount(() => {
         Array.from(projects).reverse().map(processEntries);

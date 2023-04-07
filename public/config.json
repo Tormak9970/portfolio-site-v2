@@ -4023,6 +4023,27 @@
 	},
 	"featured": "darkest-dungeon-save-editor",
 	"organizations": {
+		"steam-deck-homebrew": {
+			"name": "Steam Deck Homebrew",
+			"img": "./img/projs/logo.png",
+			"about": "Steam Deck Homebrew (SDH) is a group of programmers, designers and more whose goal is to bring awesome new functionality to the Steam Deck.",
+			"description": "My involvement with SDH started when I came across the Decky Plugin Loader. Since then I have published my own plugin and contributed to the reverse engineered UI components the organization uses",
+			"projects": [
+				{
+					"name": "Decky Frontend Lib",
+					"linkId": "decky-frontend-lib"
+				},
+				{
+					"name": "Bash Shortcuts",
+					"linkId": "bash-shortcuts"
+				},
+				{
+					"name": "SteamDeck U",
+					"linkId": "steamdeck-u"
+				}
+			],
+			"link": "https://github.com/SteamDeckHomebrew"
+		},
 		"swtor-slicers": {
 			"name": "SWTOR Slicers",
 			"img": "./img/orgs/SwtorSlicers.png",
@@ -4072,27 +4093,6 @@
 				}
 			],
 			"link": "https://torcommunity.com"
-		},
-		"steam-deck-homebrew": {
-			"name": "Steam Deck Homebrew",
-			"img": "./img/projs/logo.png",
-			"about": "Steam Deck Homebrew (SDH) is a group of programmers, designers and more whose goal is to bring awesome new functionality to the Steam Deck.",
-			"description": "My involvement with SDH started when I came across the Decky Plugin Loader. Since then I have published my own plugin and contributed to the reverse engineered UI components the organization uses",
-			"projects": [
-				{
-					"name": "Decky Frontend Lib",
-					"linkId": "decky-frontend-lib"
-				},
-				{
-					"name": "Bash Shortcuts",
-					"linkId": "bash-shortcuts"
-				},
-				{
-					"name": "SteamDeck U",
-					"linkId": "steamdeck-u"
-				}
-			],
-			"link": "https://github.com/SteamDeckHomebrew"
 		}
 	},
 	"experience": {
