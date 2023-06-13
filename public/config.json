@@ -1,14 +1,14 @@
 {
 	"projects": {
-		"steamdeck-u": {
+		"steam-deck-themes": {
 			"category": "steam-deck",
-			"name": "SteamDeck Themes",
+			"name": "Steam Deck Themes",
 			"time": "8 hours",
 			"status": "Complete",
 			"difficulty": "Simple",
 			"description": "This project is a collection of CSS themes for the Steamdeck gaming handheld. Generally, my approach is to style things as dynamically as possible and provide inputs for all the colors. The themes are applied using a homebrew plugin for injecting CSS into the Steamdeck UI.",
 			"content": {
-				"time": 1676035678026,
+				"time": 1686665407413,
 				"blocks": [
 					{
 						"id": "nZjfcxUvB2",
@@ -22,7 +22,35 @@
 						"id": "nR_Ke-hHDh",
 						"type": "paragraph",
 						"data": {
-							"text": "This project is a collection of CSS themes for the Steamdeck gaming handheld. Generally, my approach is to style things as dynamically as possible and provide inputs for all the colors. The themes are applied using a homebrew plugin for injecting CSS into the Steamdeck UI."
+							"text": "This project is a collection of CSS themes for the Steam Deck gaming handheld. Generally, my approach is to style things as dynamically as possible and provide inputs for all the colors. The themes are applied using a homebrew plugin for injecting CSS into the Steamdeck UI."
+						}
+					},
+					{
+						"id": "BAZdeMai7h",
+						"type": "header",
+						"data": {
+							"text": "Colored Toggles Desktop",
+							"level": 2
+						}
+					},
+					{
+						"id": "Ba3o_97Ag5",
+						"type": "image",
+						"data": {
+							"file": {
+								"url": "./img/projs/colored-toggles-desktop.png"
+							},
+							"caption": "",
+							"withBorder": false,
+							"stretched": false,
+							"withBackground": false
+						}
+					},
+					{
+						"id": "34b7S89qS_",
+						"type": "paragraph",
+						"data": {
+							"text": "A port of the colored toggles theme that works with Steam's desktop mode"
 						}
 					},
 					{
@@ -144,7 +172,7 @@
 						}
 					}
 				],
-				"version": "2.24.3"
+				"version": "2.27.0"
 			},
 			"link": "https://github.com/Tormak9970/SteamDeckThemes",
 			"isRelative": false,
@@ -302,85 +330,6 @@
 			"link": "https://github.com/Tormak9970/portfolio-updater",
 			"isRelative": false,
 			"img": "./img/projs/portfolio-updater.png",
-			"org": "none"
-		},
-		"tweakpane-gradient-plugin": {
-			"category": "web-dev",
-			"name": "Tweakpane Gradient Plugin",
-			"time": "6 hours",
-			"status": "Complete",
-			"difficulty": "Moderate",
-			"description": "I started this project because I had been using the Tweakpane library for editable parameters in another project, and needed a gradient texture input. The layout and controls are based on Blender's color ramp node, which node, which does something similar. The plugin allows the user to edit the stop position and color for the gradient, and then outputs an ImageData object with the consequent texture.",
-			"content": {
-				"time": 1675718368657,
-				"blocks": [
-					{
-						"id": "QExxjEfEMq",
-						"type": "header",
-						"data": {
-							"text": "Description",
-							"level": 2
-						}
-					},
-					{
-						"id": "CKN0Yktxl4",
-						"type": "paragraph",
-						"data": {
-							"text": "I started this project because I had been using the Tweakpane library for editable parameters in another project, and needed a gradient texture input. The layout and controls are based on Blender's color ramp node, which node, which does something similar. The plugin allows the user to edit the stop position and color for the gradient, and then outputs an ImageData object with the consequent texture."
-						}
-					},
-					{
-						"id": "QaV7pBHTdv",
-						"type": "header",
-						"data": {
-							"text": "Purpose",
-							"level": 2
-						}
-					},
-					{
-						"id": "1FRJ0qdqnz",
-						"type": "list",
-						"data": {
-							"style": "unordered",
-							"items": [
-								{
-									"content": "Needed a Tweakpane compatible gradient generator",
-									"items": []
-								}
-							]
-						}
-					},
-					{
-						"id": "nW0C8tES70",
-						"type": "header",
-						"data": {
-							"text": "Conclusion",
-							"level": 2
-						}
-					},
-					{
-						"id": "BhGZAGTjU8",
-						"type": "list",
-						"data": {
-							"style": "unordered",
-							"items": [
-								{
-									"content": "Created a plugin that allows the user to customize gradient textures",
-									"items": []
-								},
-								{
-									"content": "First introduction to the MVC design pattern",
-									"items": []
-								}
-							]
-						}
-					}
-				],
-				"version": "2.24.3"
-			},
-			"link": "https://github.com/Tormak9970/tweakpane-plugin-gradient",
-			"isRelative": false,
-			"img": "./img/projs/tweakpane-plugin-gradient.png",
 			"org": "none"
 		},
 		"swtorslicers.org": {
@@ -648,101 +597,6 @@
 			"link": "https://www.npmjs.com/package/@tormak/vite-plugin-sitemap",
 			"isRelative": false,
 			"img": "./img/projs/vite-plugin-sitemap.png",
-			"org": "none"
-		},
-		"simple-sudoku": {
-			"category": "web-games",
-			"name": "Simple Sudoku",
-			"time": "35 hours",
-			"status": "Complete",
-			"difficulty": "Moderate",
-			"description": "I came across an article about different ways to approach generating sudoku puzzles and solving them, and it caught my interest. I thought it would be a fun way to work on my web development skills and create a fun end product I could actually put up online. It was very interesting to explore how to not just generate solvable puzzles, but puzzles that look good to the player.",
-			"content": {
-				"time": 1675718489728,
-				"blocks": [
-					{
-						"id": "Ak6PmaiUqJ",
-						"type": "header",
-						"data": {
-							"text": "Description",
-							"level": 2
-						}
-					},
-					{
-						"id": "ZAx1af6NrV",
-						"type": "paragraph",
-						"data": {
-							"text": "I came across an article about different ways to approach generating sudoku puzzles and solving them, and it caught my interest. I thought it would be a fun way to work on my web development skills and create a fun end product I could actually put up online. It was very interesting to explore how to not just generate solvable puzzles, but puzzles that look good to the player."
-						}
-					},
-					{
-						"id": "3V81lWYhL8",
-						"type": "header",
-						"data": {
-							"text": "Purpose",
-							"level": 2
-						}
-					},
-					{
-						"id": "rIs3bW3TDZ",
-						"type": "list",
-						"data": {
-							"style": "unordered",
-							"items": [
-								{
-									"content": "Wanted to practice implementing responsive design",
-									"items": []
-								},
-								{
-									"content": "Wanted to explore how to create different themes for a website using plain CSS",
-									"items": []
-								},
-								{
-									"content": "Was interested in exploring sudoku board generation and methods of solving",
-									"items": []
-								},
-								{
-									"content": "Wanted to create a polished Progressive Web App (PWA)",
-									"items": []
-								}
-							]
-						}
-					},
-					{
-						"id": "FJvN-7xpWZ",
-						"type": "header",
-						"data": {
-							"text": "Conclusion",
-							"level": 2
-						}
-					},
-					{
-						"id": "dDU_V6jNCL",
-						"type": "list",
-						"data": {
-							"style": "unordered",
-							"items": [
-								{
-									"content": "Came up with a simple strategy for implementing themes into websites",
-									"items": []
-								},
-								{
-									"content": "Got to learn about some of the more complicated features of the Svelte JavaScript library",
-									"items": []
-								},
-								{
-									"content": "Created a polished PWA that can be downloaded on any device or operating system",
-									"items": []
-								}
-							]
-						}
-					}
-				],
-				"version": "2.24.3"
-			},
-			"link": "https://sudoku.travislane.dev/",
-			"isRelative": false,
-			"img": "./img/projs/simple-sudoku.png",
 			"org": "none"
 		},
 		"torc-character-designer": {
@@ -1663,382 +1517,6 @@
 			"img": "./img/projs/Slicers GUI.png",
 			"org": "swtor-slicers"
 		},
-		"tiled-wave-function-collapse": {
-			"category": "web-dev",
-			"name": "Tiled Wave Function Collapse",
-			"time": "8 hours",
-			"status": "Complete",
-			"difficulty": "Moderate",
-			"description": "The wave function collapse algorithm is an algorithm used to generate images and 3D models using either a sample input or a set of tiles with rules determining how they connect. I love procedural generation, and when I stumbled across the GitHub <a target=\"_blank\" rel=\"noreferrer noopener\" href=\"https://github.com/mxgmn/WaveFunctionCollapse\">repository</a>&nbsp;for the original implementation, I knew I needed to try it myself. I focused on the tiled version, since it was more intuitive to start.",
-			"content": {
-				"time": 1668886721798,
-				"blocks": [
-					{
-						"id": "aQTC3zqwqP",
-						"type": "header",
-						"data": {
-							"text": "Description",
-							"level": 2
-						}
-					},
-					{
-						"id": "7Qeyl4YpTz",
-						"type": "paragraph",
-						"data": {
-							"text": "The wave function collapse algorithm is an algorithm used to generate images and 3D models using either a sample input or a set of tiles with rules determining how they connect. I love procedural generation, and when I stumbled across the GitHub <a target=\"_blank\" rel=\"noreferrer noopener\" href=\"https://github.com/mxgmn/WaveFunctionCollapse\">repository</a>&nbsp;for the original implementation, I knew I needed to try it myself. I focused on the tiled version, since it was more intuitive to start."
-						}
-					},
-					{
-						"id": "L0HrQjJxVY",
-						"type": "paragraph",
-						"data": {
-							"text": "My initial implementation worked, but would often fail because it would randomly pick a tile and if it didn't work it would restart, instead of trying another. I fixed this by adding a check to make sure that the random value would work, and if it wouldn't try another. This resulted in almost 100% successful attempts."
-						}
-					},
-					{
-						"id": "2GvGanFezN",
-						"type": "header",
-						"data": {
-							"text": "Purpose",
-							"level": 2
-						}
-					},
-					{
-						"id": "aTINhgk4au",
-						"type": "paragraph",
-						"data": {
-							"text": "The main reason for this project was simply my interest in procedural generation."
-						}
-					},
-					{
-						"id": "dhWhMG5vhV",
-						"type": "header",
-						"data": {
-							"text": "Conculsion",
-							"level": 2
-						}
-					},
-					{
-						"id": "3dU09rpjNZ",
-						"type": "paragraph",
-						"data": {
-							"text": "I gained some experience with taking the conceptual description of an algorithm and creating an actual implementation."
-						}
-					}
-				],
-				"version": "2.24.3"
-			},
-			"link": "https://wave-function-collapse.travislane.dev",
-			"isRelative": false,
-			"img": "./img/projs/wave-function-collapse.png",
-			"org": "none"
-		},
-		"bash-shortcuts": {
-			"category": "steam-deck",
-			"name": "Bash Shortcuts",
-			"time": "67 hours",
-			"status": "Complete",
-			"difficulty": "Complex",
-			"description": "This project is a plugin for Valve's Steamdeck handheld game console that allows users to run scripts and apps from game mode. It supports passing flags to scripts with a variety of values, and hooks for notable events that can occur while using the device. The name comes from the plugin using bash to run other scripts in order to trick Steam into thinking they are games.",
-			"content": {
-				"time": 1679186680862,
-				"blocks": [
-					{
-						"id": "nZjfcxUvB2",
-						"type": "header",
-						"data": {
-							"text": "Description",
-							"level": 2
-						}
-					},
-					{
-						"id": "xPDAeM17W0",
-						"type": "paragraph",
-						"data": {
-							"text": "This project is a plugin for Valve's Steamdeck handheld game console that allows users to run scripts and apps from game mode. It supports passing flags to scripts with a variety of values, and hooks for notable events that can occur while using the device. The name comes from the plugin using bash to run other scripts in order to trick Steam into thinking they are games."
-						}
-					},
-					{
-						"id": "gGJoITC9hm",
-						"type": "header",
-						"data": {
-							"text": "Update v2.0.0",
-							"level": 2
-						}
-					},
-					{
-						"id": "Lp5gN5R84O",
-						"type": "paragraph",
-						"data": {
-							"text": "Bash Shortcuts is now feature complete."
-						}
-					},
-					{
-						"id": "8tNnFLMuyb",
-						"type": "list",
-						"data": {
-							"style": "unordered",
-							"items": [
-								{
-									"content": "Switched to the new reorderable list",
-									"items": []
-								},
-								{
-									"content": "Added support for running multiple shortcuts at once",
-									"items": []
-								},
-								{
-									"content": "Switched over to instance model",
-									"items": []
-								},
-								{
-									"content": "Plugin now deletes any leftover instances on boot",
-									"items": []
-								},
-								{
-									"content": "Added support for killing long running shortcuts",
-									"items": []
-								},
-								{
-									"content": "Plugin now uses the new Decky log directory",
-									"items": []
-								},
-								{
-									"content": "Plugin now uses the new Decky settings manager",
-									"items": []
-								},
-								{
-									"content": "UI now updates properly when the shortcut is exited from outside the plugin",
-									"items": []
-								},
-								{
-									"content": "Added custom deployment scripts",
-									"items": []
-								},
-								{
-									"content": "Implemented WebSocket to allow for backend -&gt; frontend communication",
-									"items": [
-										{
-											"content": "<a target=\"_blank\" rel=\"noreferrer noopener\" href=\"https://github.com/pikhovkin/simple-websocket-server\">Docs for websocket server I used</a>",
-											"items": []
-										},
-										{
-											"content": "<a target=\"_blank\" rel=\"noreferrer noopener\" href=\"https://github.com/websocket-client/websocket-client\">Docs for the websocket client I used</a>",
-											"items": []
-										}
-									]
-								},
-								{
-									"content": "Non app shortcuts now show a toast when the finish",
-									"items": []
-								},
-								{
-									"content": "Switched the manager window to be called config and added icons to better align with Steam’s settings window",
-									"items": []
-								},
-								{
-									"content": "Plugin now has a setting for WebSocket Port",
-									"items": []
-								},
-								{
-									"content": "Fixed apps not opening fullscreen",
-									"items": [
-										{
-											"content": "Switched from using wmctrl (which Valve no longer installs automatically) to Xdotool",
-											"items": []
-										}
-									]
-								},
-								{
-									"content": "Fixed the error that was showing up in konsole when launched",
-									"items": []
-								},
-								{
-									"content": "Added setting to enable/disable flags",
-									"items": []
-								},
-								{
-									"content": "All non app shortcuts are now given 5 flags",
-									"items": [
-										{
-											"content": "Date",
-											"items": []
-										},
-										{
-											"content": "Time",
-											"items": []
-										},
-										{
-											"content": "Current user's username",
-											"items": []
-										},
-										{
-											"content": "Current gameId",
-											"items": []
-										},
-										{
-											"content": "Current game name",
-											"items": []
-										}
-									]
-								},
-								{
-									"content": "Added guides to config window",
-									"items": [
-										{
-											"content": "Using <a target=\"_blank\" rel=\"noreferrer noopener\" href=\"https://github.com/markdown-it/markdown-it\">Markdown-it</a> for parsing the markdown",
-											"items": []
-										}
-									]
-								},
-								{
-									"content": "Added hooks for:",
-									"items": [
-										{
-											"content": "Log In and Out",
-											"items": []
-										},
-										{
-											"content": "Game Start and End",
-											"items": []
-										},
-										{
-											"content": "Game Install, Update, and Uninstall",
-											"items": []
-										},
-										{
-											"content": "Achievement Unlocked",
-											"items": []
-										},
-										{
-											"content": "Screenshot Taken",
-											"items": []
-										},
-										{
-											"content": "Deck Sleep and Shutdown",
-											"items": []
-										}
-									]
-								},
-								{
-									"content": "Plugin now checks if shortcut is running when edited/deleted and kill it<a target=\"_blank\" rel=\"noreferrer noopener\" href=\"https://github.com/pikhovkin/simple-websocket-server\"></a>",
-									"items": []
-								}
-							]
-						}
-					},
-					{
-						"id": "Z4BivgwJkR",
-						"type": "header",
-						"data": {
-							"text": "Update v1.2.0",
-							"level": 2
-						}
-					},
-					{
-						"id": "1MnkECsl_4",
-						"type": "list",
-						"data": {
-							"style": "unordered",
-							"items": [
-								{
-									"content": "Fixed issue where the plugin deleted other shortcuts",
-									"items": []
-								},
-								{
-									"content": "Fixed multiple shortcuts getting created",
-									"items": []
-								},
-								{
-									"content": "Fixed issues on non-stable SteamOS channels",
-									"items": []
-								},
-								{
-									"content": "Steam was not running shortcutsRunner.sh",
-									"items": [
-										{
-											"content": "Issue with line endings, fixed with dos2unix",
-											"items": []
-										}
-									]
-								},
-								{
-									"content": "Added support for non-default user names and devices other than steamdecks",
-									"items": []
-								},
-								{
-									"content": "Fixed bug where plugin would lag UI from infinite refreshes when there were 0 shortcuts",
-									"items": []
-								},
-								{
-									"content": "Added a lot of logging to help with error tracking",
-									"items": []
-								}
-							]
-						}
-					},
-					{
-						"id": "mXmVM7rad_",
-						"type": "header",
-						"data": {
-							"text": "Purpose",
-							"level": 2
-						}
-					},
-					{
-						"id": "xevYl-aYqV",
-						"type": "list",
-						"data": {
-							"style": "unordered",
-							"items": [
-								{
-									"content": "Wanted to contribute to the homebrew Steam Deck community",
-									"items": []
-								},
-								{
-									"content": "Wanted a more customizable alternative to the existing keyboards",
-									"items": []
-								},
-								{
-									"content": "Wanted customizable keyboards that worked offline",
-									"items": []
-								}
-							]
-						}
-					},
-					{
-						"id": "KgQPukLNZY",
-						"type": "header",
-						"data": {
-							"text": "Conclusion",
-							"level": 2
-						}
-					},
-					{
-						"id": "qXVdi9yViM",
-						"type": "list",
-						"data": {
-							"style": "unordered",
-							"items": [
-								{
-									"content": "Came up with a unique idea for the homebrew community",
-									"items": []
-								},
-								{
-									"content": "Created a highly customizable keyboard that also works offline",
-									"items": []
-								}
-							]
-						}
-					}
-				],
-				"version": "2.24.3"
-			},
-			"link": "https://github.com/Tormak9970/bash-shortcuts",
-			"isRelative": false,
-			"img": "./img/projs/thumbnail.png",
-			"org": "steam-deck-homebrew"
-		},
 		"darkest-dungeon-save-editor": {
 			"category": "software-engineering",
 			"name": "Darkest Dungeon Save Editor",
@@ -2368,15 +1846,350 @@
 			"img": "./img/projs/untitled-card-game.png",
 			"org": "none"
 		},
+		"bash-shortcuts": {
+			"category": "steam-deck",
+			"name": "Bash Shortcuts",
+			"time": "70 hours",
+			"status": "Complete",
+			"difficulty": "Complex",
+			"description": "This project is a plugin for Valve's Steam Deck handheld game console that allows users to run scripts and apps from game mode. It supports passing flags to scripts with a variety of values, and hooks for notable events that can occur while using the device. The name comes from the plugin using bash to run other scripts in order to trick Steam into thinking they are games.",
+			"content": {
+				"time": 1686665149067,
+				"blocks": [
+					{
+						"id": "nZjfcxUvB2",
+						"type": "header",
+						"data": {
+							"text": "Description",
+							"level": 2
+						}
+					},
+					{
+						"id": "xPDAeM17W0",
+						"type": "paragraph",
+						"data": {
+							"text": "This project is a plugin for Valve's Steam Deck handheld game console that allows users to run scripts and apps from game mode. It supports passing flags to scripts with a variety of values, and hooks for notable events that can occur while using the device. The name comes from the plugin using bash to run other scripts in order to trick Steam into thinking they are games."
+						}
+					},
+					{
+						"id": "ZcPh5ZImZc",
+						"type": "header",
+						"data": {
+							"text": "Update v2.0.3",
+							"level": 2
+						}
+					},
+					{
+						"id": "LlkMa_AAqK",
+						"type": "list",
+						"data": {
+							"style": "unordered",
+							"items": [
+								{
+									"content": "Fixed issues caused by changes to the SteamClient API",
+									"items": []
+								},
+								{
+									"content": "Fixed the game start hook not running as intended",
+									"items": []
+								},
+								{
+									"content": "Fixed a typo causing non app shortcuts to break",
+									"items": []
+								}
+							]
+						}
+					},
+					{
+						"id": "gGJoITC9hm",
+						"type": "header",
+						"data": {
+							"text": "Update v2.0.0",
+							"level": 2
+						}
+					},
+					{
+						"id": "Lp5gN5R84O",
+						"type": "paragraph",
+						"data": {
+							"text": "Bash Shortcuts is now feature complete."
+						}
+					},
+					{
+						"id": "8tNnFLMuyb",
+						"type": "list",
+						"data": {
+							"style": "unordered",
+							"items": [
+								{
+									"content": "Switched to the new reorderable list",
+									"items": []
+								},
+								{
+									"content": "Added support for running multiple shortcuts at once",
+									"items": []
+								},
+								{
+									"content": "Switched over to instance model",
+									"items": []
+								},
+								{
+									"content": "Plugin now deletes any leftover instances on boot",
+									"items": []
+								},
+								{
+									"content": "Added support for killing long running shortcuts",
+									"items": []
+								},
+								{
+									"content": "Plugin now uses the new Decky log directory",
+									"items": []
+								},
+								{
+									"content": "Plugin now uses the new Decky settings manager",
+									"items": []
+								},
+								{
+									"content": "UI now updates properly when the shortcut is exited from outside the plugin",
+									"items": []
+								},
+								{
+									"content": "Added custom deployment scripts",
+									"items": []
+								},
+								{
+									"content": "Implemented WebSocket to allow for backend -&gt; frontend communication",
+									"items": [
+										{
+											"content": "<a target=\"_blank\" href=\"https://github.com/pikhovkin/simple-websocket-server\">Docs for websocket server I used</a>",
+											"items": []
+										},
+										{
+											"content": "<a target=\"_blank\" href=\"https://github.com/websocket-client/websocket-client\">Docs for the websocket client I used</a>",
+											"items": []
+										}
+									]
+								},
+								{
+									"content": "Non app shortcuts now show a toast when the finish",
+									"items": []
+								},
+								{
+									"content": "Switched the manager window to be called config and added icons to better align with Steam’s settings window",
+									"items": []
+								},
+								{
+									"content": "Plugin now has a setting for WebSocket Port",
+									"items": []
+								},
+								{
+									"content": "Fixed apps not opening fullscreen",
+									"items": [
+										{
+											"content": "Switched from using wmctrl (which Valve no longer installs automatically) to Xdotool",
+											"items": []
+										}
+									]
+								},
+								{
+									"content": "Fixed the error that was showing up in konsole when launched",
+									"items": []
+								},
+								{
+									"content": "Added setting to enable/disable flags",
+									"items": []
+								},
+								{
+									"content": "All non app shortcuts are now given 5 flags",
+									"items": [
+										{
+											"content": "Date",
+											"items": []
+										},
+										{
+											"content": "Time",
+											"items": []
+										},
+										{
+											"content": "Current user's username",
+											"items": []
+										},
+										{
+											"content": "Current gameId",
+											"items": []
+										},
+										{
+											"content": "Current game name",
+											"items": []
+										}
+									]
+								},
+								{
+									"content": "Added guides to config window",
+									"items": [
+										{
+											"content": "Using <a target=\"_blank\" href=\"https://github.com/markdown-it/markdown-it\">Markdown-it</a> for parsing the markdown",
+											"items": []
+										}
+									]
+								},
+								{
+									"content": "Added hooks for:",
+									"items": [
+										{
+											"content": "Log In and Out",
+											"items": []
+										},
+										{
+											"content": "Game Start and End",
+											"items": []
+										},
+										{
+											"content": "Game Install, Update, and Uninstall",
+											"items": []
+										},
+										{
+											"content": "Achievement Unlocked",
+											"items": []
+										},
+										{
+											"content": "Screenshot Taken",
+											"items": []
+										},
+										{
+											"content": "Deck Sleep and Shutdown",
+											"items": []
+										}
+									]
+								},
+								{
+									"content": "Plugin now checks if shortcut is running when edited/deleted and kill it<a target=\"_blank\" href=\"https://github.com/pikhovkin/simple-websocket-server\"></a>",
+									"items": []
+								}
+							]
+						}
+					},
+					{
+						"id": "Z4BivgwJkR",
+						"type": "header",
+						"data": {
+							"text": "Update v1.2.0",
+							"level": 2
+						}
+					},
+					{
+						"id": "1MnkECsl_4",
+						"type": "list",
+						"data": {
+							"style": "unordered",
+							"items": [
+								{
+									"content": "Fixed issue where the plugin deleted other shortcuts",
+									"items": []
+								},
+								{
+									"content": "Fixed multiple shortcuts getting created",
+									"items": []
+								},
+								{
+									"content": "Fixed issues on non-stable SteamOS channels",
+									"items": []
+								},
+								{
+									"content": "Steam was not running shortcutsRunner.sh",
+									"items": [
+										{
+											"content": "Issue with line endings, fixed with dos2unix",
+											"items": []
+										}
+									]
+								},
+								{
+									"content": "Added support for non-default user names and devices other than steamdecks",
+									"items": []
+								},
+								{
+									"content": "Fixed bug where plugin would lag UI from infinite refreshes when there were 0 shortcuts",
+									"items": []
+								},
+								{
+									"content": "Added a lot of logging to help with error tracking",
+									"items": []
+								}
+							]
+						}
+					},
+					{
+						"id": "mXmVM7rad_",
+						"type": "header",
+						"data": {
+							"text": "Purpose",
+							"level": 2
+						}
+					},
+					{
+						"id": "xevYl-aYqV",
+						"type": "list",
+						"data": {
+							"style": "unordered",
+							"items": [
+								{
+									"content": "Wanted to contribute to the homebrew Steam Deck community",
+									"items": []
+								},
+								{
+									"content": "Wanted a more customizable alternative to the existing keyboards",
+									"items": []
+								},
+								{
+									"content": "Wanted customizable keyboards that worked offline",
+									"items": []
+								}
+							]
+						}
+					},
+					{
+						"id": "KgQPukLNZY",
+						"type": "header",
+						"data": {
+							"text": "Conclusion",
+							"level": 2
+						}
+					},
+					{
+						"id": "qXVdi9yViM",
+						"type": "list",
+						"data": {
+							"style": "unordered",
+							"items": [
+								{
+									"content": "Came up with a unique idea for the homebrew community",
+									"items": []
+								},
+								{
+									"content": "Created a highly customizable keyboard that also works offline",
+									"items": []
+								}
+							]
+						}
+					}
+				],
+				"version": "2.27.0"
+			},
+			"link": "https://github.com/Tormak9970/bash-shortcuts",
+			"isRelative": false,
+			"img": "./img/projs/thumbnail.png",
+			"org": "steam-deck-homebrew"
+		},
 		"steam-art-manager": {
 			"category": "software-engineering",
 			"name": "Steam Art Manager",
-			"time": "37 hours",
+			"time": "64 hours",
 			"status": "In Progress",
 			"difficulty": "Complex",
 			"description": "Steam Art Manager is a tool for managing the art for your Steam game library. It allows users to view their library and upload images either from their computer, or they can browse images from SteamGridDB. The tool also allows users to export their custom art to and from .zip files for easy transfers between computers. The app manages to do all this while avoiding needless usage of the Steam Web API.",
 			"content": {
-				"time": 1680881048334,
+				"time": 1686667741075,
 				"blocks": [
 					{
 						"id": "h5k8NLOocY",
@@ -2542,6 +2355,36 @@
 						}
 					},
 					{
+						"id": "zP8pvwJ4Is",
+						"type": "header",
+						"data": {
+							"text": "Grid Cleaning",
+							"level": 3
+						}
+					},
+					{
+						"id": "ROFBONAJcy",
+						"type": "paragraph",
+						"data": {
+							"text": "Sometimes Steam randomly changes the appid of non steam games, which leads to having a lot of images that aren't in use. This feature automatically finds them and deletes them, but can also be configured to delete grids for any game."
+						}
+					},
+					{
+						"id": "RnN8fwPdYt",
+						"type": "header",
+						"data": {
+							"text": "Manual Games",
+							"level": 3
+						}
+					},
+					{
+						"id": "D_jG3KRZjw",
+						"type": "paragraph",
+						"data": {
+							"text": "Some Steam games get delisted, and consequently aren't loaded by SARM. To account for this, users are able to manually add games to SARM, which function like regular Steam games."
+						}
+					},
+					{
 						"id": "vRkIK_fBwy",
 						"type": "header",
 						"data": {
@@ -2691,6 +2534,626 @@
 						}
 					},
 					{
+						"id": "YxNYz6qID4",
+						"type": "header",
+						"data": {
+							"text": "Update v2.6.3",
+							"level": 2
+						}
+					},
+					{
+						"id": "eaSLstbwLh",
+						"type": "paragraph",
+						"data": {
+							"text": "Fixes:"
+						}
+					},
+					{
+						"id": "puyWNGP8-9",
+						"type": "list",
+						"data": {
+							"style": "unordered",
+							"items": [
+								{
+									"content": "added check for logoPosition property when loading logo configs",
+									"items": []
+								},
+								{
+									"content": "added header to manual game list",
+									"items": []
+								},
+								{
+									"content": "logo positions no longer breaks saving when removed",
+									"items": []
+								},
+								{
+									"content": "settings modal now closes properly",
+									"items": []
+								},
+								{
+									"content": "selected sgdb game properly reset on game change",
+									"items": []
+								},
+								{
+									"content": "steam not installed warning now displays correctly",
+									"items": []
+								}
+							]
+						}
+					},
+					{
+						"id": "b7Jmhixysn",
+						"type": "header",
+						"data": {
+							"text": "Update v2.6.0",
+							"level": 2
+						}
+					},
+					{
+						"id": "dU-GvRrKKp",
+						"type": "paragraph",
+						"data": {
+							"text": "Features:"
+						}
+					},
+					{
+						"id": "9H7wAP1N1l",
+						"type": "list",
+						"data": {
+							"style": "unordered",
+							"items": [
+								{
+									"content": "added chocolatey package",
+									"items": []
+								},
+								{
+									"content": "added confirmation dialog to reload button",
+									"items": []
+								},
+								{
+									"content": "added grid cleaning",
+									"items": []
+								},
+								{
+									"content": "added panic capture to logging",
+									"items": []
+								},
+								{
+									"content": "added timeouts to all http requests",
+									"items": []
+								},
+								{
+									"content": "added timeouts to all grid image fetching",
+									"items": []
+								},
+								{
+									"content": "added window position persistance",
+									"items": []
+								},
+								{
+									"content": "added manual game manager",
+									"items": []
+								}
+							]
+						}
+					},
+					{
+						"id": "hMUc9qDxhi",
+						"type": "paragraph",
+						"data": {
+							"text": "Fixes:"
+						}
+					},
+					{
+						"id": "AbBmnenFRW",
+						"type": "list",
+						"data": {
+							"style": "unordered",
+							"items": [
+								{
+									"content": "duplicate games are now detected on load",
+									"items": []
+								},
+								{
+									"content": "settings manager moved to a modal for consistency",
+									"items": []
+								}
+							]
+						}
+					},
+					{
+						"id": "prEJF9XCK8",
+						"type": "paragraph",
+						"data": {
+							"text": "Build Pipeline Improvements:"
+						}
+					},
+					{
+						"id": "m31Vt93Ssq",
+						"type": "list",
+						"data": {
+							"style": "unordered",
+							"items": [
+								{
+									"content": "pipeline improvements now included in releases",
+									"items": []
+								},
+								{
+									"content": "release assets no longer have version tied to their file names",
+									"items": []
+								}
+							]
+						}
+					},
+					{
+						"id": "s0x1iIQsV9",
+						"type": "header",
+						"data": {
+							"text": "Update v2.5.0",
+							"level": 2
+						}
+					},
+					{
+						"id": "3mvA8GJrR4",
+						"type": "paragraph",
+						"data": {
+							"text": "Features:"
+						}
+					},
+					{
+						"id": "dYRJGRNoU3",
+						"type": "list",
+						"data": {
+							"style": "unordered",
+							"items": [
+								{
+									"content": "added connectivity check to the Linux installer",
+									"items": []
+								},
+								{
+									"content": "added Linux uninstaller and uninstall shortcuts",
+									"items": []
+								}
+							]
+						}
+					},
+					{
+						"id": "EjIQgPKE4i",
+						"type": "paragraph",
+						"data": {
+							"text": "Fixes:"
+						}
+					},
+					{
+						"id": "0tiisr-x3K",
+						"type": "list",
+						"data": {
+							"style": "unordered",
+							"items": [
+								{
+									"content": "footer tooltips now make more sense",
+									"items": []
+								},
+								{
+									"content": "installer no longer messes up version number",
+									"items": []
+								},
+								{
+									"content": "linux installer no longer errors",
+									"items": []
+								}
+							]
+						}
+					},
+					{
+						"id": "4kqzI3FQ70",
+						"type": "header",
+						"data": {
+							"text": "Update v2.4.0",
+							"level": 2
+						}
+					},
+					{
+						"id": "jOK4kF3bdW",
+						"type": "paragraph",
+						"data": {
+							"text": "Features:"
+						}
+					},
+					{
+						"id": "bGPbKh6K5X",
+						"type": "list",
+						"data": {
+							"style": "unordered",
+							"items": [
+								{
+									"content": "added check for Steam installation",
+									"items": []
+								},
+								{
+									"content": "now checks if there is at least one user",
+									"items": []
+								},
+								{
+									"content": "Linux installer now creates desktop and start menu shortcuts",
+									"items": []
+								}
+							]
+						}
+					},
+					{
+						"id": "U-vaRQnGjp",
+						"type": "paragraph",
+						"data": {
+							"text": "Fixes:"
+						}
+					},
+					{
+						"id": "3N3_mO8udh",
+						"type": "list",
+						"data": {
+							"style": "unordered",
+							"items": [
+								{
+									"content": "added check for malformed userconfig",
+									"items": []
+								}
+							]
+						}
+					},
+					{
+						"id": "aYqlLAPseK",
+						"type": "header",
+						"data": {
+							"text": "Update v2.3.0",
+							"level": 2
+						}
+					},
+					{
+						"id": "90Nl52l94y",
+						"type": "paragraph",
+						"data": {
+							"text": "Features:"
+						}
+					},
+					{
+						"id": "tN8_PEpOZO",
+						"type": "list",
+						"data": {
+							"style": "unordered",
+							"items": [
+								{
+									"content": "added logo config support to import and export",
+									"items": []
+								},
+								{
+									"content": "added reset logo position button",
+									"items": []
+								},
+								{
+									"content": "changed footer buttons to icons with tooltips",
+									"items": []
+								},
+								{
+									"content": "logo positions are loaded only if they exist",
+									"items": []
+								},
+								{
+									"content": "major overhaul of logging format",
+									"items": []
+								}
+							]
+						}
+					},
+					{
+						"id": "baTGiR8nXU",
+						"type": "paragraph",
+						"data": {
+							"text": "Fixes:"
+						}
+					},
+					{
+						"id": "1brzp1ZD2J",
+						"type": "list",
+						"data": {
+							"style": "unordered",
+							"items": [
+								{
+									"content": "dropdown arrow no longer bugs out on game switch",
+									"items": []
+								},
+								{
+									"content": "dropdowns are no longer bugged when closing",
+									"items": []
+								},
+								{
+									"content": "images are no longer draggable",
+									"items": []
+								},
+								{
+									"content": "reload now relaunches the entire app",
+									"items": []
+								},
+								{
+									"content": "removing logos deletes the correct files",
+									"items": []
+								},
+								{
+									"content": "selected sgdb game persists when switching grid type",
+									"items": []
+								},
+								{
+									"content": "steam api keys are now loaded properly",
+									"items": []
+								}
+							]
+						}
+					},
+					{
+						"id": "d3dnTlNIJ_",
+						"type": "header",
+						"data": {
+							"text": "Update v2.1.2",
+							"level": 2
+						}
+					},
+					{
+						"id": "0_YPac5d3J",
+						"type": "paragraph",
+						"data": {
+							"text": "Fixes:"
+						}
+					},
+					{
+						"id": "l520M33ZXX",
+						"type": "list",
+						"data": {
+							"style": "unordered",
+							"items": [
+								{
+									"content": "non steam games are loading properly again",
+									"items": []
+								},
+								{
+									"content": "shortcut icons now load and save properly",
+									"items": []
+								},
+								{
+									"content": "platform switching side effects fixed",
+									"items": []
+								},
+								{
+									"content": "shortcut icons now point to the correct location",
+									"items": []
+								}
+							]
+						}
+					},
+					{
+						"id": "cvX-gqzi9O",
+						"type": "header",
+						"data": {
+							"text": "Update v2.1.0",
+							"level": 2
+						}
+					},
+					{
+						"id": "bAMvSMRm8J",
+						"type": "paragraph",
+						"data": {
+							"text": "Features:"
+						}
+					},
+					{
+						"id": "NRo6SLMfto",
+						"type": "list",
+						"data": {
+							"style": "unordered",
+							"items": [
+								{
+									"content": "added game name tooltips on hover",
+									"items": []
+								},
+								{
+									"content": "added single instance inforcement",
+									"items": []
+								},
+								{
+									"content": "clear grids now displays only if game has grids",
+									"items": []
+								},
+								{
+									"content": "added global error failsafe to frontend",
+									"items": []
+								}
+							]
+						}
+					},
+					{
+						"id": "MLCQcxP-_D",
+						"type": "paragraph",
+						"data": {
+							"text": "Fixes:"
+						}
+					},
+					{
+						"id": "Xj9-9FncdF",
+						"type": "list",
+						"data": {
+							"style": "unordered",
+							"items": [
+								{
+									"content": "clearing grids no longer erases image in UI",
+									"items": []
+								},
+								{
+									"content": "fixed loading if game selected on key change",
+									"items": []
+								},
+								{
+									"content": "theme state now properly saved and loaded",
+									"items": []
+								},
+								{
+									"content": "webp images are now properly applied",
+									"items": []
+								}
+							]
+						}
+					},
+					{
+						"id": "tbEYp71vGH",
+						"type": "header",
+						"data": {
+							"text": "Update v2.0.0",
+							"level": 2
+						}
+					},
+					{
+						"id": "3slZvF_d01",
+						"type": "paragraph",
+						"data": {
+							"text": "Features:"
+						}
+					},
+					{
+						"id": "9goTwJAwTZ",
+						"type": "list",
+						"data": {
+							"style": "unordered",
+							"items": [
+								{
+									"content": "added the ability to change the current steam user",
+									"items": []
+								},
+								{
+									"content": "added the ability to discard changes per game",
+									"items": []
+								},
+								{
+									"content": "added animated download indicator to grids",
+									"items": []
+								},
+								{
+									"content": "added full support for non steam games",
+									"items": []
+								},
+								{
+									"content": "added grid preview modals",
+									"items": []
+								},
+								{
+									"content": "added message when attempting to quit without saving",
+									"items": []
+								},
+								{
+									"content": "added notes icon to grids",
+									"items": []
+								},
+								{
+									"content": "added reload button to footer",
+									"items": []
+								},
+								{
+									"content": "animated images only animate when hovered",
+									"items": []
+								},
+								{
+									"content": "ctrl+f now navigates to the app's search bar",
+									"items": []
+								},
+								{
+									"content": "added sgdb selection for steam games",
+									"items": []
+								},
+								{
+									"content": "grid type is now always shown",
+									"items": []
+								},
+								{
+									"content": "added lightmode for haters",
+									"items": []
+								},
+								{
+									"content": "added loading games via localconfig",
+									"items": []
+								},
+								{
+									"content": "added non steam game import/export",
+									"items": []
+								}
+							]
+						}
+					},
+					{
+						"id": "JnYc43I-nN",
+						"type": "paragraph",
+						"data": {
+							"text": "Fixes:"
+						}
+					},
+					{
+						"id": "4wnjXZN1DA",
+						"type": "list",
+						"data": {
+							"style": "unordered",
+							"items": [
+								{
+									"content": "apngs now download properly",
+									"items": []
+								},
+								{
+									"content": "app no longer takes ages to load (caused by persisted-scope mem leak)",
+									"items": []
+								},
+								{
+									"content": "app now loads on launch without interaction",
+									"items": []
+								},
+								{
+									"content": "app now retries online test multiple times",
+									"items": []
+								},
+								{
+									"content": "appinfo reading is faster and more reliable",
+									"items": []
+								},
+								{
+									"content": "changes now apply after multiple saves",
+									"items": []
+								},
+								{
+									"content": "filters now work properly",
+									"items": []
+								},
+								{
+									"content": "grids now save for games previously without them",
+									"items": []
+								},
+								{
+									"content": "ico images now properly render",
+									"items": []
+								},
+								{
+									"content": "logo and icon images now preview properly",
+									"items": []
+								},
+								{
+									"content": "numbers no longer look terrible",
+									"items": []
+								},
+								{
+									"content": "settings now load properly",
+									"items": []
+								},
+								{
+									"content": "strings no longer get malformed when read",
+									"items": []
+								}
+							]
+						}
+					},
+					{
 						"id": "MVS4ipoKoC",
 						"type": "header",
 						"data": {
@@ -2721,7 +3184,7 @@
 						}
 					}
 				],
-				"version": "2.24.3"
+				"version": "2.27.0"
 			},
 			"link": "https://github.com/Tormak9970/Steam-Art-Manager",
 			"isRelative": false,
@@ -4018,6 +4481,250 @@
 			"link": "https://github.com/Tormak9970/blender-projects",
 			"isRelative": false,
 			"img": "./img/projs/Marching Squares in Blender.png",
+			"org": "none"
+		},
+		"tweakpane-gradient-plugin": {
+			"category": "web-dev",
+			"name": "Tweakpane Gradient Plugin",
+			"time": "6 hours",
+			"status": "Complete",
+			"difficulty": "Moderate",
+			"description": "I started this project because I had been using the Tweakpane library for editable parameters in another project, and needed a gradient texture input. The layout and controls are based on Blender's color ramp node, which node, which does something similar. The plugin allows the user to edit the stop position and color for the gradient, and then outputs an ImageData object with the consequent texture.",
+			"content": {
+				"time": 1675718368657,
+				"blocks": [
+					{
+						"id": "QExxjEfEMq",
+						"type": "header",
+						"data": {
+							"text": "Description",
+							"level": 2
+						}
+					},
+					{
+						"id": "CKN0Yktxl4",
+						"type": "paragraph",
+						"data": {
+							"text": "I started this project because I had been using the Tweakpane library for editable parameters in another project, and needed a gradient texture input. The layout and controls are based on Blender's color ramp node, which node, which does something similar. The plugin allows the user to edit the stop position and color for the gradient, and then outputs an ImageData object with the consequent texture."
+						}
+					},
+					{
+						"id": "QaV7pBHTdv",
+						"type": "header",
+						"data": {
+							"text": "Purpose",
+							"level": 2
+						}
+					},
+					{
+						"id": "1FRJ0qdqnz",
+						"type": "list",
+						"data": {
+							"style": "unordered",
+							"items": [
+								{
+									"content": "Needed a Tweakpane compatible gradient generator",
+									"items": []
+								}
+							]
+						}
+					},
+					{
+						"id": "nW0C8tES70",
+						"type": "header",
+						"data": {
+							"text": "Conclusion",
+							"level": 2
+						}
+					},
+					{
+						"id": "BhGZAGTjU8",
+						"type": "list",
+						"data": {
+							"style": "unordered",
+							"items": [
+								{
+									"content": "Created a plugin that allows the user to customize gradient textures",
+									"items": []
+								},
+								{
+									"content": "First introduction to the MVC design pattern",
+									"items": []
+								}
+							]
+						}
+					}
+				],
+				"version": "2.24.3"
+			},
+			"link": "https://github.com/Tormak9970/tweakpane-plugin-gradient",
+			"isRelative": false,
+			"img": "./img/projs/tweakpane-plugin-gradient.png",
+			"org": "none"
+		},
+		"tiled-wave-function-collapse": {
+			"category": "web-dev",
+			"name": "Tiled Wave Function Collapse",
+			"time": "8 hours",
+			"status": "Complete",
+			"difficulty": "Moderate",
+			"description": "The wave function collapse algorithm is an algorithm used to generate images and 3D models using either a sample input or a set of tiles with rules determining how they connect. I love procedural generation, and when I stumbled across the GitHub <a target=\"_blank\" rel=\"noreferrer noopener\" href=\"https://github.com/mxgmn/WaveFunctionCollapse\">repository</a>&nbsp;for the original implementation, I knew I needed to try it myself. I focused on the tiled version, since it was more intuitive to start.",
+			"content": {
+				"time": 1668886721798,
+				"blocks": [
+					{
+						"id": "aQTC3zqwqP",
+						"type": "header",
+						"data": {
+							"text": "Description",
+							"level": 2
+						}
+					},
+					{
+						"id": "7Qeyl4YpTz",
+						"type": "paragraph",
+						"data": {
+							"text": "The wave function collapse algorithm is an algorithm used to generate images and 3D models using either a sample input or a set of tiles with rules determining how they connect. I love procedural generation, and when I stumbled across the GitHub <a target=\"_blank\" rel=\"noreferrer noopener\" href=\"https://github.com/mxgmn/WaveFunctionCollapse\">repository</a>&nbsp;for the original implementation, I knew I needed to try it myself. I focused on the tiled version, since it was more intuitive to start."
+						}
+					},
+					{
+						"id": "L0HrQjJxVY",
+						"type": "paragraph",
+						"data": {
+							"text": "My initial implementation worked, but would often fail because it would randomly pick a tile and if it didn't work it would restart, instead of trying another. I fixed this by adding a check to make sure that the random value would work, and if it wouldn't try another. This resulted in almost 100% successful attempts."
+						}
+					},
+					{
+						"id": "2GvGanFezN",
+						"type": "header",
+						"data": {
+							"text": "Purpose",
+							"level": 2
+						}
+					},
+					{
+						"id": "aTINhgk4au",
+						"type": "paragraph",
+						"data": {
+							"text": "The main reason for this project was simply my interest in procedural generation."
+						}
+					},
+					{
+						"id": "dhWhMG5vhV",
+						"type": "header",
+						"data": {
+							"text": "Conculsion",
+							"level": 2
+						}
+					},
+					{
+						"id": "3dU09rpjNZ",
+						"type": "paragraph",
+						"data": {
+							"text": "I gained some experience with taking the conceptual description of an algorithm and creating an actual implementation."
+						}
+					}
+				],
+				"version": "2.24.3"
+			},
+			"link": "https://wave-function-collapse.travislane.dev",
+			"isRelative": false,
+			"img": "./img/projs/wave-function-collapse.png",
+			"org": "none"
+		},
+		"simple-sudoku": {
+			"category": "web-games",
+			"name": "Simple Sudoku",
+			"time": "35 hours",
+			"status": "Complete",
+			"difficulty": "Moderate",
+			"description": "I came across an article about different ways to approach generating sudoku puzzles and solving them, and it caught my interest. I thought it would be a fun way to work on my web development skills and create a fun end product I could actually put up online. It was very interesting to explore how to not just generate solvable puzzles, but puzzles that look good to the player.",
+			"content": {
+				"time": 1675718489728,
+				"blocks": [
+					{
+						"id": "Ak6PmaiUqJ",
+						"type": "header",
+						"data": {
+							"text": "Description",
+							"level": 2
+						}
+					},
+					{
+						"id": "ZAx1af6NrV",
+						"type": "paragraph",
+						"data": {
+							"text": "I came across an article about different ways to approach generating sudoku puzzles and solving them, and it caught my interest. I thought it would be a fun way to work on my web development skills and create a fun end product I could actually put up online. It was very interesting to explore how to not just generate solvable puzzles, but puzzles that look good to the player."
+						}
+					},
+					{
+						"id": "3V81lWYhL8",
+						"type": "header",
+						"data": {
+							"text": "Purpose",
+							"level": 2
+						}
+					},
+					{
+						"id": "rIs3bW3TDZ",
+						"type": "list",
+						"data": {
+							"style": "unordered",
+							"items": [
+								{
+									"content": "Wanted to practice implementing responsive design",
+									"items": []
+								},
+								{
+									"content": "Wanted to explore how to create different themes for a website using plain CSS",
+									"items": []
+								},
+								{
+									"content": "Was interested in exploring sudoku board generation and methods of solving",
+									"items": []
+								},
+								{
+									"content": "Wanted to create a polished Progressive Web App (PWA)",
+									"items": []
+								}
+							]
+						}
+					},
+					{
+						"id": "FJvN-7xpWZ",
+						"type": "header",
+						"data": {
+							"text": "Conclusion",
+							"level": 2
+						}
+					},
+					{
+						"id": "dDU_V6jNCL",
+						"type": "list",
+						"data": {
+							"style": "unordered",
+							"items": [
+								{
+									"content": "Came up with a simple strategy for implementing themes into websites",
+									"items": []
+								},
+								{
+									"content": "Got to learn about some of the more complicated features of the Svelte JavaScript library",
+									"items": []
+								},
+								{
+									"content": "Created a polished PWA that can be downloaded on any device or operating system",
+									"items": []
+								}
+							]
+						}
+					}
+				],
+				"version": "2.24.3"
+			},
+			"link": "https://sudoku.travislane.dev/",
+			"isRelative": false,
+			"img": "./img/projs/simple-sudoku.png",
 			"org": "none"
 		}
 	},
