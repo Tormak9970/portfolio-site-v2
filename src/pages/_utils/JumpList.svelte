@@ -126,15 +126,15 @@
         background-color: var(--foreground);
         border-top-right-radius: 8px;
         border-bottom-right-radius: 8px;
-        background-color: var(--foreground);
-        border-top-right-radius: 8px;
-        border-bottom-right-radius: 8px;
         margin-bottom: 21px;
         box-shadow: #151515 1px 1px 10px 0px;
     }
     #jumpToCont .layout-toggle .option { margin: 1px 2px; cursor: pointer; }
     #jumpToCont .layout-toggle .option .selected { color: var(--highlight); fill: var(--highlight); }
+    #jumpToCont .layout-toggle .option .selected:hover { color: var(--highlight-hover); fill: var(--highlight-hover); }
     #jumpToCont .layout-toggle .option a {
+        color: var(--fore-accent-hover);
+        fill: var(--fore-accent-hover);
         width: 20px;
         height: 20px;
         display: flex;
@@ -145,7 +145,7 @@
         font-size: 16px;
     }
     #jumpToCont .layout-toggle .option a i { width: 16px; height: 16px; }
-    #jumpToCont .layout-toggle .option a:hover { color: var(--highlight-hover); }
+    #jumpToCont .layout-toggle .option a:hover { color: var(--fore-accent-selected); fill: var(--fore-accent-selected); }
     #jumpToCont .layout-toggle .option .tooltip { position: relative; }
     #jumpToCont .layout-toggle .option .tooltip .tooltip-text {
         white-space: nowrap;
