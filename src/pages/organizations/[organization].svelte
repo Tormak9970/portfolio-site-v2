@@ -144,13 +144,12 @@
 		justify-content: center;
 		align-items: center;
 		background-color: var(--foreground);
-		border-radius: 8px;
-		box-shadow: black -6px -6px 16px 2px;
+		border-radius: 4px;
 	}
 	.orgEntry .org-layout-cont .org-main-img img {
 		height: 100%;
 		width: auto;
-		border-radius: 8px;
+		border-radius: 4px;
 	}
 	@media (orientation: landscape) {
 		.orgEntry .org-layout-cont .org-img-cont {
@@ -167,43 +166,43 @@
 		margin-top: 20px;
 		max-width: 650px;
 		background-color: var(--foreground);
-		border-radius: 8px;
+		border-radius: 4px;
 	}
 
-    .projects {
-        width: 100%;
-        height: 100%;
-        font-size: 16px;
-    }
-    .projects ul {
-        width: 100%;
+  .projects {
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+  }
+  .projects ul {
+    width: 100%;
 
-        margin-top: 0px;
-        margin-bottom: 0px;
-    }
-    .projects ul li { width: 100%; }
-    .projects ul li .proj-entr {
-        height: 100%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+  .projects ul li { width: 100%; }
+  .projects ul li .proj-entr {
+    height: 100%;
 
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-    }
-    .projects ul li .proj-entr .name { margin-right: 7px; }
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .projects ul li .proj-entr .name { margin-right: 7px; }
 
-    .projects ul li .proj-entr .proj-link {
-        height: 100%;
+  .projects ul li .proj-entr .proj-link {
+    height: 100%;
 
-        display: flex;
-        flex-direction: row;
-        align-items: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 
-        color: var(--highlight);
+    color: var(--highlight);
 
-        cursor: pointer;
-        font-size: 10px;
-    }
-    .projects ul li .proj-entr .proj-link :hover { color: var(--highlight-hover); }
+    cursor: pointer;
+    font-size: 10px;
+  }
+  .projects ul li .proj-entr .proj-link :hover { color: var(--highlight-hover); }
 
 	@media (orientation: landscape) {
 		.orgEntry .org-layout-cont .entr-cont {

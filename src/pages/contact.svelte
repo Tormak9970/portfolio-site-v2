@@ -159,9 +159,7 @@
 
         background-color: var(--foreground);
 
-        border-radius: 8px;
-
-        box-shadow: #151515 1px 1px 10px 0px;
+        border-radius: 4px;
     }
     #infoSection .info-container .form-wrapper #contactForm {
         width: 100%;

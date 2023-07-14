@@ -198,8 +198,9 @@
 	main .header {
 		width: 100%;
 		height: 50px;
-		background-color: var(--foreground);
-		box-shadow: #151515 1px 1px 10px 0px;
+		/* background-color: var(--foreground); */
+		/* box-shadow: #151515 1px 1px 10px 0px; */
+    border-bottom: 1px solid var(--srcery-xgray2);
 		display: flex;
 		flex-direction: row;
 		align-items: center;

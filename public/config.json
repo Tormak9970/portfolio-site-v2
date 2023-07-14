@@ -4852,8 +4852,8 @@
 			"img": "./img/projs/Cyberpunk_cityscape.png",
 			"description": "AI art has been a hot topic as of late. I decided to try them out and see how easy it was to tell that an AI made the art (this piece is the best result I got). Pieces from the same AI have clear similarities, which is amusing as it shows that it's just an algorithm."
 		},
-		"alloy-oil-effect": {
-			"name": "Alloy Oil Effect",
+		"aloy-oil-effect": {
+			"name": "Aloy Oil Effect",
 			"img": "./img/projs/Alloy_before_after.png",
 			"description": "This piece is a stylized version of one of the concept art images for Horizon Zero Dawn. I made this as I was learning how to modify images with Gimp. As the name implies, the goal was to create an oil painting effect."
 		},

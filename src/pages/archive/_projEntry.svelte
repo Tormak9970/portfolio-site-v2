@@ -116,8 +116,7 @@
         justify-content: center;
         align-items: center;
         background-color: var(--foreground);
-        border-radius: 8px;
-        box-shadow: black -6px -6px 16px 2px;
+        border-radius: 4px;
     }
     .projEntry .content-container .imgs-cont .proj-main-img :global(img) {
         position: static;

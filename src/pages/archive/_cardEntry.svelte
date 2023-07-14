@@ -40,6 +40,7 @@
         height: fit-content;
 
         background-color: var(--foreground);
+        border-radius: 4px;
 
         margin: 14px;
     }

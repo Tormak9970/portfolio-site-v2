@@ -151,14 +151,13 @@
 		justify-content: center;
 		align-items: center;
 		background-color: var(--foreground);
-		border-radius: 8px;
-		box-shadow: black -6px -6px 16px 2px;
+		border-radius: 4px;
 	}
 	.projEntry .proj-layout-cont .proj-main-img img {
 		position: static;
 		width: 100%;
 		height: auto;
-		border-radius: 8px;
+		border-radius: 4px;
 	}
 	@media (orientation: landscape) {
 		.projEntry .proj-layout-cont .proj-img-cont {
@@ -175,7 +174,7 @@
 		margin-top: 20px;
 		max-width: 650px;
 		background-color: var(--foreground);
-		border-radius: 8px;
+		border-radius: 4px;
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
@@ -188,7 +187,7 @@
 		margin-top: 20px;
 		max-width: 650px;
 		background-color: var(--foreground);
-		border-radius: 8px;
+		border-radius: 4px;
 	}
 	.projEntry .proj-layout-cont #entrContent :global(.cdx-block) { background-color: var(--foreground); }
 	.projEntry .proj-layout-cont #entrContent :global(.image-tool__caption) { display: none; }

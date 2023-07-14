@@ -13,24 +13,24 @@
 </div>
 
 <style>
-    @import "/theme.css";
+  @import "/theme.css";
 	#socials {
-        z-index: 10;
+    z-index: 10;
 
-        background-color: var(--foreground);
+    background-color: var(--foreground);
 
 		display: flex;
 		flex-direction: column;
-        align-items: center;
+    align-items: center;
 
-        border-top-left-radius: 8px;
-        border-bottom-left-radius: 8px;
-        
-        position: absolute;
-        right: 0;
-        top: 24%;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    
+    position: absolute;
+    right: 0;
+    top: 24%;
 
-        box-shadow: #151515 1px 1px 10px 0px;
+    box-shadow: #151515 1px 1px 10px 0px;
 	}
 
     #socials > .socials-entr { margin: 4px; }

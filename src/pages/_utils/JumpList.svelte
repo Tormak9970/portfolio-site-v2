@@ -124,8 +124,8 @@
         flex-direction: column;
         align-items: center;
         background-color: var(--foreground);
-        border-top-right-radius: 8px;
-        border-bottom-right-radius: 8px;
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 4px;
         margin-bottom: 21px;
         box-shadow: #151515 1px 1px 10px 0px;
     }
@@ -150,17 +150,17 @@
     #jumpToCont .layout-toggle .option .tooltip .tooltip-text {
         white-space: nowrap;
         visibility: hidden;
-        background-color: var(--foreground-hover);
-        color: #fff;
+        background-color: var(--foreground);
+        color: var(--font-color);
         text-align: center;
         padding: 2px 6px;
-        border-radius: 6px;
+        border-radius: 4px;
         /* Position the tooltip text */
         position: absolute;
         z-index: 1;
         top: -2px;
         left: 105%;
-        margin-left: 5px;
+        margin-left: 9px;
         /* Fade in tooltip */
         opacity: 0;
         transition: opacity 0.3s;
@@ -174,7 +174,7 @@
         margin-top: -5px;
         border-width: 5px;
         border-style: solid;
-        border-color: transparent var(--foreground-hover) transparent transparent;
+        border-color: transparent var(--foreground) transparent transparent;
     }
     #jumpToCont .layout-toggle .option .tooltip:hover .tooltip-text { visibility: visible; opacity: 1; }
     #jumpToCont .layout-toggle :first-child { margin-top: 2px; }
@@ -185,9 +185,9 @@
         align-items: center;
 
         background-color: var(--foreground);
-        border-top-right-radius: 8px;
-        border-bottom-right-radius: 8px;
-        box-shadow: #151515 1px 1px 10px 0px;
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 4px;
+        /* box-shadow: #151515 1px 1px 10px 0px; */
 
         position: relative;
         height: calc(100% - 54px);
@@ -227,17 +227,17 @@
     #jumpToCont .jump-nav-container div .tooltip .tooltip-text {
         white-space: nowrap;
         visibility: hidden;
-        background-color: var(--foreground-hover);
-        color: #fff;
+        background-color: var(--foreground);
+        color: var(--font-color);
         text-align: center;
         padding: 2px 6px;
-        border-radius: 6px;
+        border-radius: 4px;
         /* Position the tooltip text */
         position: absolute;
         z-index: 1;
         top: -2px;
         left: 105%;
-        margin-left: 5px;
+        margin-left: 10px;
         /* Fade in tooltip */
         opacity: 0;
         transition: opacity 0.3s;
@@ -251,7 +251,7 @@
         margin-top: -5px;
         border-width: 5px;
         border-style: solid;
-        border-color: transparent var(--foreground-hover) transparent transparent;
+        border-color: transparent var(--foreground) transparent transparent;
     }
     #jumpToCont .jump-nav-container div .tooltip:hover .tooltip-text { visibility: visible; opacity: 1; }
 </style>
