@@ -8,6 +8,8 @@
 	import { imageModalData, navCheck, projScrollIdx } from "../Stores";
 	import { loadConfig } from "../linkConfig";
 
+  let mobileMenuOpen = false;
+
 	function removeAllIndicators() {
 		const intInds = document.querySelectorAll(".interaction-indicator");
 
@@ -69,12 +71,8 @@
 		}
 	}
 
-	function handleMobileClick(e: Event) {
-		const elem = <HTMLElement>e.currentTarget;
-		elem.classList.toggle("change");
-		document
-			.querySelector(".content-wrapper")
-			.classList.toggle("menu-hidden");
+	function handleMobileClick() {
+    mobileMenuOpen = !mobileMenuOpen;
 	}
 </script>
 
@@ -127,16 +125,16 @@
 				<div class="mobile-header">
 					<div class="home-container">
 						<img src="/img/logo.svg" alt="logo" height="30" width="30" />
-						<div class="nav-toggle" on:click|stopPropagation={handleMobileClick} >
+						<div class="nav-toggle" class:change={mobileMenuOpen} on:click|stopPropagation={handleMobileClick} >
 							<div class="bar1" />
-							<div class="bar2" />
+							<div class="bar2" style="transition: none;" />
 							<div class="bar3" />
 						</div>
 					</div>
 				</div>
 			{/if}
 		</MediaQuery>
-		<div class="content-wrapper menu-hidden">
+		<div class="content-wrapper" class:menu-hidden={!mobileMenuOpen}>
 			<div class="content-body">
 				<Socials />
 				<slot />
@@ -198,8 +196,6 @@
 	main .header {
 		width: 100%;
 		height: 50px;
-		/* background-color: var(--foreground); */
-		/* box-shadow: #151515 1px 1px 10px 0px; */
     border-bottom: 1px solid var(--srcery-xgray2);
 		display: flex;
 		flex-direction: row;
@@ -252,8 +248,7 @@
 	}
 	main .mobile-header {
 		width: 100%;
-		background-color: var(--foreground);
-		box-shadow: #151515 1px 1px 10px 0px;
+    border-bottom: 1px solid var(--srcery-xgray2);
 		display: flex;
 		flex-direction: column;
 	}
@@ -279,20 +274,21 @@
 		background-color: var(--font-color);
 		margin: 6px 0;
 		transition: 0.4s;
-		border-radius: 8px;
+		border-radius: 4px;
 	}
 	main .mobile-header .home-container .change .bar1 {
 		-webkit-transform: rotate(-45deg) translate(-9px, 6px);
 		transform: rotate(-45deg) translate(-9px, 6px);
-		border-radius: 8px;
+		border-radius: 4px;
 	}
 	main .mobile-header .home-container .change .bar2 {
 		opacity: 0;
+    visibility: hidden;
 	}
 	main .mobile-header .home-container .change .bar3 {
-		-webkit-transform: rotate(45deg) translate(-8px, -8px);
+		-webkit-transform: rotate(45deg) translate(-9px, -7px);
 		transform: rotate(45deg) translate(-9px, -7px);
-		border-radius: 8px;
+		border-radius: 4px;
 	}
 	main .mobile-header .home-container img {
 		margin-left: 7px;
@@ -329,11 +325,12 @@
 		justify-content: flex-start;
 		align-items: center;
 		background-color: var(--foreground);
+    border-left: 1px solid var(--srcery-xgray2);
 	}
 	main .content-wrapper .navigation .spacer {
 		width: 80%;
 		height: 1px;
-		background-color: #5e5d5d;
+		/* background-color: var(--srcery-xgray2); */
 	}
 	main .content-wrapper .navigation .nav-btn-cont {
 		height: 40px;
@@ -352,7 +349,7 @@
 		color: var(--font-color);
 	}
 	main .content-wrapper .navigation .rendered {
-		background-color: var(--background-selected);
+		background-color: var(--fore-accent);
 	}
 	main .content-wrapper .navigation .nav-btn-cont:hover {
 		cursor: pointer;

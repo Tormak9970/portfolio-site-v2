@@ -1,9 +1,9 @@
 <script lang="ts">
-    import { fade } from "svelte/transition";
+  import { fade } from "svelte/transition";
 	import { featured } from "../linkConfig";
-    import ProjEntry from "./projects/_projEntry.svelte";
-    import MediaQuery from "./_utils/MediaQuery.svelte";
-    import CardEntry from "./projects/_cardEntry.svelte";
+  import ProjEntry from "./projects/_projEntry.svelte";
+  import MediaQuery from "./_utils/MediaQuery.svelte";
+  import CardEntry from "./projects/_cardEntry.svelte";
 </script>
 
 <div id="featured" in:fade>
