@@ -44,7 +44,7 @@
 <div class="projEntry" in:fly|local={inParams} out:fly|local={outParams} on:introend="{handleTransEnd}">
     <div class="content-container">
         <div class="imgs-cont">
-            <img src="{(entryData.organization != "none") ? organizations.get(entryData.organization).image : "/img/orgs/Logo-black-round.png"}" class="{(entryData.organization != "none") ? "" : "round"}" alt="">
+            <img src="{(entryData.organization != "none") ? organizations.get(entryData.organization).image : "/images/orgs/Logo-black-round.png"}" class="{(entryData.organization != "none") ? "" : "round"}" alt="">
             <div class="proj-main-img" bind:this="{contentCont}">
                 {#if !image}
                     <img src="{entryData.image}" alt="{entryData.name}">

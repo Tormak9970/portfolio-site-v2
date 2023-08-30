@@ -84,7 +84,7 @@
 			{#if matches}
 				<div class="header">
 					<div class="home-container" on:click={() => { $goto("./index"); }} >
-						<img src="/img/logo.svg" alt="logo" height="30" width="30" />
+						<img src="/images/logo.svg" alt="logo" height="30" width="30" />
 					</div>
 					<div class="navigation">
 						<div id="1" class="nav-btn-cont" on:mouseenter={handleNavHover1} on:mouseleave={handleNavHover2} on:click={forwardClick} >
@@ -124,7 +124,7 @@
 			{:else}
 				<div class="mobile-header">
 					<div class="home-container">
-						<img src="/img/logo.svg" alt="logo" height="30" width="30" />
+						<img src="/images/logo.svg" alt="logo" height="30" width="30" />
 						<div class="nav-toggle" class:change={mobileMenuOpen} on:click|stopPropagation={handleMobileClick} >
 							<div class="bar1" />
 							<div class="bar2" style="transition: none;" />
