@@ -191,7 +191,7 @@
 			"link": "https://github.com/Tormak9970/SteamDeckThemes",
 			"isRelative": false,
 			"img": "./img/projs/SteamDeckU.png",
-			"org": "steam-deck-homebrew"
+			"org": "deck-themes"
 		},
 		"portfolio-updater": {
 			"category": "software-engineering",
@@ -3121,7 +3121,7 @@
 			"link": "https://marketplace.visualstudio.com/items?itemName=DeckThemes.css-loader-for-vs-code",
 			"isRelative": false,
 			"img": "./img/projs/css-loader-for-vs-code.png",
-			"org": "none"
+			"org": "deck-themes"
 		}
 	},
 	"archive": {
@@ -4988,9 +4988,26 @@
 	},
 	"featured": "steam-art-manager",
 	"organizations": {
+		"deck-themes": {
+			"name": "Deck Themes",
+			"img": "./img/orgs/css-loader-logo_128x128.png",
+			"link": "https://deckthemes.com",
+			"about": "Deck Themes is a collection of tools for making custom themes and audio packs for Steam.",
+			"description": "My involvement with Deck Themes started out with my work on decky plugins, since what would become Deck Themes started out as a single plugin. Now I review theme submissions, work on that original plugin (CSS Loader), keep the VS Code extension up to date, and provide general design feedback for other members of the team.",
+			"projects": [
+				{
+					"name": "CSS Loader for VS Code",
+					"linkId": "css-loader-for-vs-code"
+				},
+				{
+					"name": "Steam Deck Themes",
+					"linkId": "steam-deck-themes"
+				}
+			]
+		},
 		"steamgriddb": {
 			"name": "SteamGridDB",
-			"img": "./img/projs/sgdb-logo.svg",
+			"img": "./img/orgs/sgdb-logo.svg",
 			"link": "https://github.com/SteamGridDB",
 			"about": "SteamGridDB is a website for sharing community art assets for games, as well as an API for fetching those assets. The community also develops various tools and wrappers based on this API, including SGDBoop, Steam Rom Manager, and more.",
 			"description": "My involvement with SteamGridDB started while working on the Steam Art Manager, since I use the SGDB api to load the custom art options for each game. Since then I have continued to work on SARM, contribute to decky-SGDB, node-steamgriddb as well as create my own wrapper for the SGDB API, tauri-steamgriddb.",
