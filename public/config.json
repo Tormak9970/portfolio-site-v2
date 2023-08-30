@@ -5080,6 +5080,12 @@
 			"img": "./img/projs/citywood-white.png",
 			"position": "External Developer",
 			"description": "I worked on creating an inventory management tool (dubbed Log Tracker) for City Wood. The web app uses Firebase for hosting, authentication, and data storage, as well as Google Cloud for the Gmail and Maps APIs. I completed the beta stage and stopped receiving contact, so the project remains unfinished."
+		},
+		"actalent-software-engineer": {
+			"company": "Actalent",
+			"position": "Software Engineer",
+			"img": "./img/exp/actalent-logo.svg",
+			"description": "From June 2023 to August of 2023 I worked as a Software Engineer for Actalent llc. I worked in Angular 16 on a Thermostat app for Mitsubichi Electric, and in NextJS on a Dashboard for Cisco Systems Inc. I familiarized myself with both of these technologies, as well as gained valuable experience working collaboratively with a team, as well as while under deadlines."
 		}
 	},
 	"art": {
