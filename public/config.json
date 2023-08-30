@@ -332,186 +332,6 @@
 			"img": "./img/projs/portfolio-updater.png",
 			"org": "none"
 		},
-		"swtorslicers.org": {
-			"category": "web-dev",
-			"name": "swtorslicers.org",
-			"time": "38 hours",
-			"status": "In Progress",
-			"difficulty": "Moderate",
-			"description": "Components",
-			"content": {
-				"time": 1675718420130,
-				"blocks": [
-					{
-						"id": "5yG04KIu_B",
-						"type": "header",
-						"data": {
-							"text": "Description",
-							"level": 2
-						}
-					},
-					{
-						"id": "yEN2XzRlhf",
-						"type": "header",
-						"data": {
-							"text": "Components",
-							"level": 3
-						}
-					},
-					{
-						"id": "TkOJXFsF5j",
-						"type": "header",
-						"data": {
-							"text": "Home Page",
-							"level": 4
-						}
-					},
-					{
-						"id": "40GEPTpZVB",
-						"type": "image",
-						"data": {
-							"file": {
-								"url": "./img/projs/slicers-org.png"
-							},
-							"caption": "",
-							"withBorder": false,
-							"stretched": false,
-							"withBackground": false
-						}
-					},
-					{
-						"id": "04sESMpuoO",
-						"type": "paragraph",
-						"data": {
-							"text": "This component of the website is a quick overview of the organization and our main tools."
-						}
-					},
-					{
-						"id": "-qKjqKx_Z6",
-						"type": "header",
-						"data": {
-							"text": "Frequently Asked Questions",
-							"level": 4
-						}
-					},
-					{
-						"id": "TcSsYut9HS",
-						"type": "image",
-						"data": {
-							"file": {
-								"url": "./img/projs/slicers-faq.png"
-							},
-							"caption": "",
-							"withBorder": false,
-							"stretched": false,
-							"withBackground": false
-						}
-					},
-					{
-						"id": "F_QSR1lrMF",
-						"type": "paragraph",
-						"data": {
-							"text": "The FAQ component covers the questions we get asked on a regularly."
-						}
-					},
-					{
-						"id": "aeoB3-o9Tq",
-						"type": "header",
-						"data": {
-							"text": "Wiki",
-							"level": 4
-						}
-					},
-					{
-						"id": "mxoFgWEgfI",
-						"type": "image",
-						"data": {
-							"file": {
-								"url": "./img/projs/slicers-wiki.png"
-							},
-							"caption": "",
-							"withBorder": false,
-							"stretched": false,
-							"withBackground": false
-						}
-					},
-					{
-						"id": "nkvVvnRjIH",
-						"type": "paragraph",
-						"data": {
-							"text": "The last component is the wiki. This will serve as a replacement for our GitHub wiki once we get everything migrated over."
-						}
-					},
-					{
-						"id": "qbMTucXH-t",
-						"type": "header",
-						"data": {
-							"text": "Purpose",
-							"level": 2
-						}
-					},
-					{
-						"id": "xmmgZmTMQf",
-						"type": "list",
-						"data": {
-							"style": "unordered",
-							"items": [
-								{
-									"content": "Wanted to create a place for all of the information about the organization to be easily accessible",
-									"items": []
-								},
-								{
-									"content": "Wanted to shift our organization's wiki off of GitHub",
-									"items": []
-								},
-								{
-									"content": "Wanted to make our wiki available offline",
-									"items": []
-								},
-								{
-									"content": "I wanted to look into how to make a Progressive Web App (PWA)",
-									"items": []
-								}
-							]
-						}
-					},
-					{
-						"id": "XbqJ1h3Mdb",
-						"type": "header",
-						"data": {
-							"text": "Conclusion",
-							"level": 2
-						}
-					},
-					{
-						"id": "PtY85p-Cl2",
-						"type": "list",
-						"data": {
-							"style": "unordered",
-							"items": [
-								{
-									"content": "Was able to create a website that represents the SWTOR Slicers, and provides all the information about us",
-									"items": []
-								},
-								{
-									"content": "Created a simple wiki system that covers all of our needs",
-									"items": []
-								},
-								{
-									"content": "Learned the basics of how to make a PWA",
-									"items": []
-								}
-							]
-						}
-					}
-				],
-				"version": "2.24.3"
-			},
-			"link": "https://swtorslicers.org",
-			"isRelative": false,
-			"img": "./img/projs/slicers-org.png",
-			"org": "swtor-slicers"
-		},
 		"vite-plugin-sitemap": {
 			"category": "web-dev",
 			"name": "Vite-Plugin-Sitemap",
@@ -1373,149 +1193,6 @@
 			"isRelative": false,
 			"img": "./img/projs/portfolio-site-v2.png",
 			"org": "none"
-		},
-		"slicers-gui": {
-			"category": "software-engineering",
-			"name": "Slicers GUI",
-			"time": "430+ hours",
-			"status": "In progress (Beta)",
-			"difficulty": "Complexed",
-			"description": "This is by far the project I am the most proud of. It is the culmination of a lot of work by both me and the SWTOR Slicers community, and the result is a truly unique piece of software that serves its purpose well. The idea behind making it was to optimize and improve all existing tools, and bundle them all into one cohesive, fully customizable application.",
-			"content": {
-				"time": 1675718683291,
-				"blocks": [
-					{
-						"id": "6rSLg_atGs",
-						"type": "header",
-						"data": {
-							"text": "Description",
-							"level": 2
-						}
-					},
-					{
-						"id": "Lx6r8GlO94",
-						"type": "paragraph",
-						"data": {
-							"text": "This is by far the project I am the most proud of. It is the culmination of a lot of work by both me and the SWTOR Slicers community, and the result is a truly unique piece of software that serves its purpose well. The idea behind making it was to optimize and improve all existing tools, and bundle them all into one cohesive, fully customizable application."
-						}
-					},
-					{
-						"id": "5rNtDDFBGz",
-						"type": "header",
-						"data": {
-							"text": "Updates",
-							"level": 2
-						}
-					},
-					{
-						"id": "RseKw1a0eq",
-						"type": "list",
-						"data": {
-							"style": "unordered",
-							"items": [
-								{
-									"content": "Switched locator to NPM package",
-									"items": []
-								},
-								{
-									"content": "Added support for all SWTOR NPC types",
-									"items": []
-								},
-								{
-									"content": "Updated the extraction presets to be more dynamic",
-									"items": []
-								}
-							]
-						}
-					},
-					{
-						"id": "rCYqP-GvHT",
-						"type": "header",
-						"data": {
-							"text": "Purpose",
-							"level": 2
-						}
-					},
-					{
-						"id": "hPvtdTw4mr",
-						"type": "list",
-						"data": {
-							"style": "unordered",
-							"items": [
-								{
-									"content": "I wanted to make an application, because I had never done that before",
-									"items": []
-								},
-								{
-									"content": "I was sick of all the default C# UIs on the existing tools",
-									"items": []
-								},
-								{
-									"content": "I wanted to make improvements to a lot of the existing tools because they were not nearly as efficient as the could be",
-									"items": []
-								}
-							]
-						}
-					},
-					{
-						"id": "AYxAPU5RS0",
-						"type": "header",
-						"data": {
-							"text": "Conclusion",
-							"level": 2
-						}
-					},
-					{
-						"id": "16uDzqC2VL",
-						"type": "list",
-						"data": {
-							"style": "unordered",
-							"items": [
-								{
-									"content": "How to make apps using the Electron.js framework",
-									"items": []
-								},
-								{
-									"content": "Learned the GO programming language",
-									"items": []
-								},
-								{
-									"content": "How to write native code and run it in process using Edge.js",
-									"items": []
-								},
-								{
-									"content": "How to take advantage of offloading tasks to web workers",
-									"items": []
-								},
-								{
-									"content": "How to effectively run a beta test and implement user feedback",
-									"items": []
-								},
-								{
-									"content": "How to create a good UX (user experience)",
-									"items": []
-								},
-								{
-									"content": "How to effectively pass data between different parts of an application, without compromising on performance",
-									"items": []
-								}
-							]
-						}
-					},
-					{
-						"id": "BIIC3nLKZ6",
-						"type": "paragraph",
-						"data": {
-							"text": "This is a long term project, so I am sure I will continue to learn from it"
-						}
-					}
-				],
-				"version": "2.24.3"
-			},
-			"link": "https://github.com/SWTOR-Slicers/Slicers-GUI",
-			"isRelative": false,
-			"img": "./img/projs/Slicers GUI.png",
-			"org": "swtor-slicers"
 		},
 		"darkest-dungeon-save-editor": {
 			"category": "software-engineering",
@@ -3190,9 +2867,258 @@
 			"isRelative": false,
 			"img": "./img/projs/final-sarm-ui.png",
 			"org": "none"
+		},
+		"css-loader-for-vs-code": {
+			"category": "miscellaneous",
+			"name": "CSS Loader for VS Code",
+			"time": "20 hours",
+			"status": "Complete",
+			"difficulty": "Moderate",
+			"description": "CSS Loader for VS Code is a Visual Studio Code extension that adds intellisense support and file icons to CSS Loader theme.json files. This makes it easier to catch mistakes, as well as improves the developer experience when making themes.",
+			"content": {
+				"time": 1693399735329,
+				"blocks": [
+					{
+						"type": "header",
+						"data": {
+							"text": "Description",
+							"level": 2
+						}
+					},
+					{
+						"type": "paragraph",
+						"data": {
+							"text": "CSS Loader for VS Code is a Visual Studio Code extension that adds intellisense support and file icons to CSS Loader theme.json files. This makes it easier to catch mistakes, as well as improves the developer experience when making themes."
+						}
+					},
+					{
+						"type": "header",
+						"data": {
+							"text": "Design Process",
+							"level": 2
+						}
+					},
+					{
+						"type": "paragraph",
+						"data": {
+							"text": "Making the actual extension wasn't all that difficult. While the VS Code API docs are less then sub-par, I was able to create the file icon association and custom JSON Schema relatively quickly. The complexity of this project came from having to deal with Microsoft Azure and the VS Code marketplace. Both had issues when run in certain browsers, as well as being finnicky overall, however now that they are set up"
+						}
+					},
+					{
+						"type": "header",
+						"data": {
+							"text": "Purpose",
+							"level": 2
+						}
+					},
+					{
+						"type": "list",
+						"data": {
+							"style": "unordered",
+							"items": [
+								{
+									"content": "Wanted to create a VS Code extension",
+									"items": []
+								},
+								{
+									"content": "Wanted to alleviate repeated questions I received on the theme.json spec",
+									"items": []
+								},
+								{
+									"content": "Wanted to speed up CSS Loader theme development",
+									"items": []
+								}
+							]
+						}
+					},
+					{
+						"type": "header",
+						"data": {
+							"text": "Conclusion",
+							"level": 2
+						}
+					},
+					{
+						"type": "list",
+						"data": {
+							"style": "unordered",
+							"items": [
+								{
+									"content": "Now have experience making extensions for VSCode",
+									"items": []
+								},
+								{
+									"content": "Now have experience making JSON Schemas",
+									"items": []
+								},
+								{
+									"content": "Got acquainted with how Azure DevOps and the VS Code marketplace work",
+									"items": []
+								},
+								{
+									"content": "Updated my custom changelog GitHub action to also write to a changelog file",
+									"items": []
+								},
+								{
+									"content": "Learned how to schedule automatic update checks with GitHub actions",
+									"items": []
+								}
+							]
+						}
+					}
+				],
+				"version": "2.19.3"
+			},
+			"link": "https://marketplace.visualstudio.com/items?itemName=DeckThemes.css-loader-for-vs-code",
+			"isRelative": false,
+			"img": "./img/projs/css-loader-for-vs-code.png",
+			"org": "none"
 		}
 	},
 	"archive": {
+		"slicers-gui": {
+			"category": "software-engineering",
+			"name": "Slicers GUI",
+			"time": "430+ hours",
+			"status": "Complete",
+			"difficulty": "Complexed",
+			"description": "This is by far the project I am the most proud of. It is the culmination of a lot of work by both me and the SWTOR Slicers community, and the result is a truly unique piece of software that serves its purpose well. The idea behind making it was to optimize and improve all existing tools, and bundle them all into one cohesive, fully customizable application.",
+			"content": {
+				"time": 1675718683291,
+				"blocks": [
+					{
+						"id": "6rSLg_atGs",
+						"type": "header",
+						"data": {
+							"text": "Description",
+							"level": 2
+						}
+					},
+					{
+						"id": "Lx6r8GlO94",
+						"type": "paragraph",
+						"data": {
+							"text": "This is by far the project I am the most proud of. It is the culmination of a lot of work by both me and the SWTOR Slicers community, and the result is a truly unique piece of software that serves its purpose well. The idea behind making it was to optimize and improve all existing tools, and bundle them all into one cohesive, fully customizable application."
+						}
+					},
+					{
+						"id": "5rNtDDFBGz",
+						"type": "header",
+						"data": {
+							"text": "Updates",
+							"level": 2
+						}
+					},
+					{
+						"id": "RseKw1a0eq",
+						"type": "list",
+						"data": {
+							"style": "unordered",
+							"items": [
+								{
+									"content": "Switched locator to NPM package",
+									"items": []
+								},
+								{
+									"content": "Added support for all SWTOR NPC types",
+									"items": []
+								},
+								{
+									"content": "Updated the extraction presets to be more dynamic",
+									"items": []
+								}
+							]
+						}
+					},
+					{
+						"id": "rCYqP-GvHT",
+						"type": "header",
+						"data": {
+							"text": "Purpose",
+							"level": 2
+						}
+					},
+					{
+						"id": "hPvtdTw4mr",
+						"type": "list",
+						"data": {
+							"style": "unordered",
+							"items": [
+								{
+									"content": "I wanted to make an application, because I had never done that before",
+									"items": []
+								},
+								{
+									"content": "I was sick of all the default C# UIs on the existing tools",
+									"items": []
+								},
+								{
+									"content": "I wanted to make improvements to a lot of the existing tools because they were not nearly as efficient as the could be",
+									"items": []
+								}
+							]
+						}
+					},
+					{
+						"id": "AYxAPU5RS0",
+						"type": "header",
+						"data": {
+							"text": "Conclusion",
+							"level": 2
+						}
+					},
+					{
+						"id": "16uDzqC2VL",
+						"type": "list",
+						"data": {
+							"style": "unordered",
+							"items": [
+								{
+									"content": "How to make apps using the Electron.js framework",
+									"items": []
+								},
+								{
+									"content": "Learned the GO programming language",
+									"items": []
+								},
+								{
+									"content": "How to write native code and run it in process using Edge.js",
+									"items": []
+								},
+								{
+									"content": "How to take advantage of offloading tasks to web workers",
+									"items": []
+								},
+								{
+									"content": "How to effectively run a beta test and implement user feedback",
+									"items": []
+								},
+								{
+									"content": "How to create a good UX (user experience)",
+									"items": []
+								},
+								{
+									"content": "How to effectively pass data between different parts of an application, without compromising on performance",
+									"items": []
+								}
+							]
+						}
+					},
+					{
+						"id": "BIIC3nLKZ6",
+						"type": "paragraph",
+						"data": {
+							"text": "This is a long term project, so I am sure I will continue to learn from it"
+						}
+					}
+				],
+				"version": "2.24.3"
+			},
+			"link": "https://github.com/SWTOR-Slicers/Slicers-GUI",
+			"isRelative": false,
+			"img": "./img/projs/Slicers GUI.png",
+			"org": "swtor-slicers"
+		},
 		"three.js-marching-cubes": {
 			"category": "web-dev",
 			"name": "Three.js Marching Cubes",
@@ -3279,6 +3205,189 @@
 			"isRelative": false,
 			"img": "./img/projs/threejs-marching-cubes.png",
 			"org": "none"
+		},
+		"swtorslicers.org": {
+			"category": "web-dev",
+			"name": "swtorslicers.org",
+			"time": "38 hours",
+			"status": "Complete",
+			"difficulty": "Moderate",
+			"description": "Components",
+			"content": {
+				"time": 1675718420130,
+				"blocks": [
+					{
+						"id": "5yG04KIu_B",
+						"type": "header",
+						"data": {
+							"text": "Description",
+							"level": 2
+						}
+					},
+					{
+						"id": "yEN2XzRlhf",
+						"type": "header",
+						"data": {
+							"text": "Components",
+							"level": 3
+						}
+					},
+					{
+						"id": "TkOJXFsF5j",
+						"type": "header",
+						"data": {
+							"text": "Home Page",
+							"level": 4
+						}
+					},
+					{
+						"id": "40GEPTpZVB",
+						"type": "image",
+						"data": {
+							"file": {
+								"url": "https://asset.localhost/C%3A%5CUsers%5CTorma%5CDocuments%5CGithub%5Cportfolio-site-v2%5Cpublic%5Cimg%5Cprojs%5Cslicers-org.png",
+								"webUrl": "./img/projs/slicers-org.png"
+							},
+							"caption": "",
+							"withBorder": false,
+							"stretched": false,
+							"withBackground": false
+						}
+					},
+					{
+						"id": "04sESMpuoO",
+						"type": "paragraph",
+						"data": {
+							"text": "This component of the website is a quick overview of the organization and our main tools."
+						}
+					},
+					{
+						"id": "-qKjqKx_Z6",
+						"type": "header",
+						"data": {
+							"text": "Frequently Asked Questions",
+							"level": 4
+						}
+					},
+					{
+						"id": "TcSsYut9HS",
+						"type": "image",
+						"data": {
+							"file": {
+								"url": "https://asset.localhost/C%3A%5CUsers%5CTorma%5CDocuments%5CGithub%5Cportfolio-site-v2%5Cpublic%5Cimg%5Cprojs%5Cslicers-faq.png",
+								"webUrl": "./img/projs/slicers-faq.png"
+							},
+							"caption": "",
+							"withBorder": false,
+							"stretched": false,
+							"withBackground": false
+						}
+					},
+					{
+						"id": "F_QSR1lrMF",
+						"type": "paragraph",
+						"data": {
+							"text": "The FAQ component covers the questions we get asked on a regularly."
+						}
+					},
+					{
+						"id": "aeoB3-o9Tq",
+						"type": "header",
+						"data": {
+							"text": "Wiki",
+							"level": 4
+						}
+					},
+					{
+						"id": "mxoFgWEgfI",
+						"type": "image",
+						"data": {
+							"file": {
+								"url": "https://asset.localhost/C%3A%5CUsers%5CTorma%5CDocuments%5CGithub%5Cportfolio-site-v2%5Cpublic%5Cimg%5Cprojs%5Cslicers-wiki.png",
+								"webUrl": "./img/projs/slicers-wiki.png"
+							},
+							"caption": "",
+							"withBorder": false,
+							"stretched": false,
+							"withBackground": false
+						}
+					},
+					{
+						"id": "nkvVvnRjIH",
+						"type": "paragraph",
+						"data": {
+							"text": "The last component is the wiki. This will serve as a replacement for our GitHub wiki once we get everything migrated over."
+						}
+					},
+					{
+						"id": "qbMTucXH-t",
+						"type": "header",
+						"data": {
+							"text": "Purpose",
+							"level": 2
+						}
+					},
+					{
+						"id": "xmmgZmTMQf",
+						"type": "list",
+						"data": {
+							"style": "unordered",
+							"items": [
+								{
+									"content": "Wanted to create a place for all of the information about the organization to be easily accessible",
+									"items": []
+								},
+								{
+									"content": "Wanted to shift our organization's wiki off of GitHub",
+									"items": []
+								},
+								{
+									"content": "Wanted to make our wiki available offline",
+									"items": []
+								},
+								{
+									"content": "I wanted to look into how to make a Progressive Web App (PWA)",
+									"items": []
+								}
+							]
+						}
+					},
+					{
+						"id": "XbqJ1h3Mdb",
+						"type": "header",
+						"data": {
+							"text": "Conclusion",
+							"level": 2
+						}
+					},
+					{
+						"id": "PtY85p-Cl2",
+						"type": "list",
+						"data": {
+							"style": "unordered",
+							"items": [
+								{
+									"content": "Was able to create a website that represents the SWTOR Slicers, and provides all the information about us",
+									"items": []
+								},
+								{
+									"content": "Created a simple wiki system that covers all of our needs",
+									"items": []
+								},
+								{
+									"content": "Learned the basics of how to make a PWA",
+									"items": []
+								}
+							]
+						}
+					}
+				],
+				"version": "2.24.3"
+			},
+			"link": "https://swtorslicers.org",
+			"isRelative": false,
+			"img": "./img/projs/slicers-org.png",
+			"org": "swtor-slicers"
 		},
 		"torc-npc-3d-viewers": {
 			"category": "web-dev",
@@ -4161,7 +4270,7 @@
 			"category": "miscellaneous",
 			"name": "Slicers Blender Importer",
 			"time": "15 hours",
-			"status": "Ongoing",
+			"status": "Complete",
 			"difficulty": "Moderate-Complexed",
 			"description": "The blender importer was very different before I started making changes. I added multi file importing, as well as one click imports. The one click imports work with the TORC Character Designer and my Locator tool to import all models and materials for a given SWTOR character, allowing artists to get right to making art.",
 			"content": {
@@ -4728,8 +4837,16 @@
 			"org": "none"
 		}
 	},
-	"featured": "darkest-dungeon-save-editor",
+	"featured": "steam-art-manager",
 	"organizations": {
+		"steamgriddb": {
+			"name": "SteamGridDB",
+			"img": "./img/projs/sgdb-logo.svg",
+			"link": "https://github.com/SteamGridDB",
+			"about": "SteamGridDB is a website for sharing community art assets for games, as well as an API for fetching those assets. The community also develops various tools and wrappers based on this API, including SGDBoop, Steam Rom Manager, and more.",
+			"description": "My involvement with SteamGridDB started while working on the Steam Art Manager, since I use the SGDB api to load the custom art options for each game. Since then I have continued to work on SARM, contribute to decky-SGDB, node-steamgriddb as well as create my own wrapper for the SGDB API, tauri-steamgriddb.",
+			"projects": []
+		},
 		"steam-deck-homebrew": {
 			"name": "Steam Deck Homebrew",
 			"img": "./img/projs/logo.png",
@@ -4817,11 +4934,6 @@
 		}
 	},
 	"art": {
-		"let-the-wookie-win": {
-			"name": "Let the Wookie Win",
-			"img": "./img/art pieces/Let the Wookie Win Final.png",
-			"description": "If you are a Star Wars fan you may recognize the name of this piece. It was inspired by a scene from Star Wars IV: A New Hope."
-		},
 		"swtor-neon-sign": {
 			"name": "SWTOR Neon Sign",
 			"img": "./img/art pieces/SWTOR Neon Final Marked.png",
