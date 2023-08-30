@@ -3,15 +3,14 @@
 		"steam-deck-themes": {
 			"category": "steam-deck",
 			"name": "Steam Deck Themes",
-			"time": "8 hours",
+			"time": "24 hours",
 			"status": "Complete",
 			"difficulty": "Simple",
-			"description": "This project is a collection of CSS themes for the Steamdeck gaming handheld. Generally, my approach is to style things as dynamically as possible and provide inputs for all the colors. The themes are applied using a homebrew plugin for injecting CSS into the Steamdeck UI.",
+			"description": "This project is a collection of CSS themes for the Steam Deck gaming handheld. Generally, my approach is to style things as dynamically as possible and provide inputs for all the colors. The themes are applied using a homebrew plugin for injecting CSS into the Steamdeck UI.",
 			"content": {
-				"time": 1686665407413,
+				"time": 1693400212073,
 				"blocks": [
 					{
-						"id": "nZjfcxUvB2",
 						"type": "header",
 						"data": {
 							"text": "Description",
@@ -19,14 +18,37 @@
 						}
 					},
 					{
-						"id": "nR_Ke-hHDh",
 						"type": "paragraph",
 						"data": {
 							"text": "This project is a collection of CSS themes for the Steam Deck gaming handheld. Generally, my approach is to style things as dynamically as possible and provide inputs for all the colors. The themes are applied using a homebrew plugin for injecting CSS into the Steamdeck UI."
 						}
 					},
 					{
-						"id": "BAZdeMai7h",
+						"type": "header",
+						"data": {
+							"text": "ColorMaster",
+							"level": 2
+						}
+					},
+					{
+						"type": "image",
+						"data": {
+							"file": {
+								"url": "./img/projs/color-master.png"
+							},
+							"caption": "",
+							"withBorder": false,
+							"stretched": false,
+							"withBackground": false
+						}
+					},
+					{
+						"type": "paragraph",
+						"data": {
+							"text": "ColorMaster is by far the most complex theme I have made so far. 's goal is to provide styling for the entire steam desktop client. With over 30 options, it gives full control to the users, while also positioning itself as the perfect dependency for other themes wanting to style the entire client."
+						}
+					},
+					{
 						"type": "header",
 						"data": {
 							"text": "Colored Toggles Desktop",
@@ -34,7 +56,6 @@
 						}
 					},
 					{
-						"id": "Ba3o_97Ag5",
 						"type": "image",
 						"data": {
 							"file": {
@@ -47,14 +68,12 @@
 						}
 					},
 					{
-						"id": "34b7S89qS_",
 						"type": "paragraph",
 						"data": {
 							"text": "A port of the colored toggles theme that works with Steam's desktop mode"
 						}
 					},
 					{
-						"id": "DBzRAX8_JJ",
 						"type": "header",
 						"data": {
 							"text": "Show Download Status",
@@ -62,7 +81,6 @@
 						}
 					},
 					{
-						"id": "lsb98Vtar7",
 						"type": "image",
 						"data": {
 							"file": {
@@ -75,7 +93,6 @@
 						}
 					},
 					{
-						"id": "OodBgXLK5M",
 						"type": "image",
 						"data": {
 							"file": {
@@ -88,14 +105,12 @@
 						}
 					},
 					{
-						"id": "pYPNn855aB",
 						"type": "paragraph",
 						"data": {
 							"text": "This theme adds an icon to the library and homepage view indicating if a game is installed or not."
 						}
 					},
 					{
-						"id": "RS_k1qv86T",
 						"type": "header",
 						"data": {
 							"text": "Stylish Footer",
@@ -103,7 +118,6 @@
 						}
 					},
 					{
-						"id": "2UkiyOKWI9",
 						"type": "image",
 						"data": {
 							"file": {
@@ -116,14 +130,12 @@
 						}
 					},
 					{
-						"id": "XnZr_97qns",
 						"type": "paragraph",
 						"data": {
 							"text": "This theme makes the header and footer elements transparent while giving call to action descriptions a black background to maintain visibility."
 						}
 					},
 					{
-						"id": "CAIN-YCX9-",
 						"type": "header",
 						"data": {
 							"text": "SteamDeck U",
@@ -131,7 +143,6 @@
 						}
 					},
 					{
-						"id": "1CiorPrng7",
 						"type": "image",
 						"data": {
 							"file": {
@@ -144,14 +155,12 @@
 						}
 					},
 					{
-						"id": "xPDAeM17W0",
 						"type": "paragraph",
 						"data": {
 							"text": "This theme provides users with options to customize each part of their keyboard. Valve offers first party keyboard themes, but they are eyesores and only work online."
 						}
 					},
 					{
-						"id": "mXmVM7rad_",
 						"type": "header",
 						"data": {
 							"text": "Purpose",
@@ -159,7 +168,6 @@
 						}
 					},
 					{
-						"id": "xevYl-aYqV",
 						"type": "list",
 						"data": {
 							"style": "unordered",
@@ -172,7 +180,7 @@
 						}
 					}
 				],
-				"version": "2.27.0"
+				"version": "2.19.3"
 			},
 			"link": "https://github.com/Tormak9970/SteamDeckThemes",
 			"isRelative": false,
@@ -1855,7 +1863,7 @@
 			},
 			"link": "https://github.com/Tormak9970/bash-shortcuts",
 			"isRelative": false,
-			"img": "./img/projs/thumbnail.png",
+			"img": "./img/projs/bash-shortcuts-preview.png",
 			"org": "steam-deck-homebrew"
 		},
 		"steam-art-manager": {
