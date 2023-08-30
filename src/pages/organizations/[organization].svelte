@@ -31,7 +31,7 @@
 	</div>
     <div class="org-layout-cont">
         <div class="org-main-img org-img-cont">
-			<img src=".{orgData.img}" alt="">
+			<img src=".{orgData.image}" alt="">
 		</div>
         <div id="entrContent" class="entr-cont">
             <h2>About</h2>

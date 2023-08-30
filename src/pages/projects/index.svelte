@@ -71,12 +71,12 @@
         });
         jumpNames.set(i, entr.name);
 
-        if (entr.img) {
+        if (entr.image) {
             const img = new Image();
             img.onload = () => {
                 imgsMap.set(i, img);
             }
-            img.src = entr.img;
+            img.src = entr.image;
         }
 
         return entr; 

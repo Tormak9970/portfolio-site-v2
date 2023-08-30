@@ -7,7 +7,7 @@
         {entryData.position}
     </div>
     <div class="img-cont">
-        <img src="{entryData.img}" alt="">
+        <img src="{entryData.image}" alt="">
     </div>
     <div class="desc-cont">Company: {entryData.company}</div>
     <div class="desc-cont">

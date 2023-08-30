@@ -1,6 +1,6 @@
 <script lang="ts">
     import { beforeUpdate, onMount } from "svelte";
-    import { fly, FlyParams } from "svelte/transition";
+    import { fly } from "svelte/transition";
     import { goto } from '@roxi/routify';
 
     import { scrollDir, allowScroll } from "../../Stores";
@@ -14,8 +14,8 @@
 
     let contentCont:HTMLDivElement;
 
-    let inParams: FlyParams;
-    let outParams: FlyParams;
+    let inParams: any;
+    let outParams: any;
 
     function openProjectEntry() {
         $goto(`./:project`, {project: entryData.name.toLowerCase().replaceAll(" ", "-").replaceAll("'", "")});
@@ -45,10 +45,10 @@
     <div class="content-container">
         <div class="imgs-cont">
             <div class="positioner">
-                <img src="{(entryData.org != "none") ? organizations.get(entryData.org).img : "/img/orgs/Logo-black-round.png"}" class="{(entryData.org != "none") ? "" : "round"}" alt="">
+                <img src="{(entryData.organization != "none") ? organizations.get(entryData.organization).image : "/img/orgs/Logo-black-round.png"}" class="{(entryData.organization != "none") ? "" : "round"}" alt="">
                 <div class="proj-main-img" bind:this="{contentCont}">
                     {#if !image}
-                        <img src="{entryData.img}" alt="{entryData.name}">
+                        <img src="{entryData.image}" alt="{entryData.name}">
                     {/if}
                 </div>
             </div>

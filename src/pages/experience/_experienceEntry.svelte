@@ -1,6 +1,6 @@
 <script lang="ts">
     import { beforeUpdate } from "svelte";
-    import { fly, FlyParams } from "svelte/transition";
+    import { fly } from "svelte/transition";
 
     import { scrollDir, allowScroll } from "../../Stores";
     import { getTransitions } from "../../utils";
@@ -8,8 +8,8 @@
     export let entryData:Experience;
     export let isLast:boolean;
 
-    let inParams: FlyParams;
-    let outParams: FlyParams;
+    let inParams: any;
+    let outParams: any;
 
     function handleTransEnd(): void { $allowScroll = true; }
 
@@ -24,10 +24,10 @@
     <div class="experience-header">
         <h2>{entryData.position}</h2>
     </div>
-    {#if entryData.img}
+    {#if entryData.image}
         <div class="content-container">
             <div class="img-cont">
-                <img src="{entryData.img}" alt="{entryData.position}">
+                <img src="{entryData.image}" alt="{entryData.position}">
             </div>
             <div>
                 <div class="description">

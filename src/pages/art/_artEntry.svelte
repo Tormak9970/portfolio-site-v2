@@ -1,6 +1,6 @@
 <script lang="ts">
     import { beforeUpdate, onMount } from "svelte";
-    import { fly, FlyParams } from "svelte/transition";
+    import { fly } from "svelte/transition";
 
     import { imageModalData, scrollDir, showing, allowScroll } from "../../Stores";
     
@@ -12,11 +12,11 @@
 
     let contentCont:HTMLDivElement;
 
-    let inParams: FlyParams;
-    let outParams: FlyParams;
+    let inParams: any;
+    let outParams: any;
 
     function showModal() {
-        $imageModalData = { "id": "artPreviewModal", "data": { "img": entryData.img, "name": entryData.name } };
+        $imageModalData = { "id": "artPreviewModal", "data": { "img": entryData.image, "name": entryData.name } };
         setTimeout(() => { $showing = true; }, 30);
     }
 
@@ -45,10 +45,10 @@
     <div class="art-header">
         <h2>{entryData.name}</h2>
     </div>
-    {#if entryData.img}
+    {#if entryData.image}
         <div class="content-container" bind:this="{contentCont}">
             {#if !image}
-                <img src="{entryData.img}" alt="{entryData.name}" on:click="{showModal}">
+                <img src="{entryData.image}" alt="{entryData.name}" on:click="{showModal}">
             {/if}
             <div class="description">
                 <p>{entryData.description}</p>

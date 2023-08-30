@@ -1,6 +1,6 @@
 <script lang="ts">
     import { beforeUpdate, onMount } from "svelte";
-    import { fly, FlyParams } from "svelte/transition";
+    import { fly } from "svelte/transition";
     import { goto } from "@roxi/routify";
 
     import { scrollDir, allowScroll } from "../../Stores";
@@ -13,8 +13,8 @@
 
     let contentCont:HTMLDivElement;
 
-    let inParams: FlyParams;
-    let outParams: FlyParams;
+    let inParams: any;
+    let outParams: any;
 
     function openOrgEntry() {
         $goto(`./:organization`, {organization: entryData.name.toLowerCase().replaceAll(" ", "-").replaceAll("'", "")});
@@ -44,7 +44,7 @@
     <div class="content-container">
         <div class="imgs-cont" bind:this="{contentCont}">
             {#if !image}
-                <img src="{entryData.img}" alt="{entryData.name}">
+                <img src="{entryData.image}" alt="{entryData.name}">
             {/if}
         </div>
         <div class="org-overview-cont">

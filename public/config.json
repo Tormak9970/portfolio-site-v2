@@ -190,8 +190,8 @@
 			},
 			"link": "https://github.com/Tormak9970/SteamDeckThemes",
 			"isRelative": false,
-			"img": "./img/projs/SteamDeckU.png",
-			"org": "deck-themes"
+			"image": "./img/projs/SteamDeckU.png",
+			"organization": "deck-themes"
 		},
 		"portfolio-updater": {
 			"category": "software-engineering",
@@ -343,8 +343,8 @@
 			},
 			"link": "https://github.com/Tormak9970/portfolio-updater",
 			"isRelative": false,
-			"img": "./img/projs/portfolio-updater.png",
-			"org": "none"
+			"image": "./img/projs/portfolio-updater.png",
+			"organization": "none"
 		},
 		"vite-plugin-sitemap": {
 			"category": "web-dev",
@@ -430,8 +430,8 @@
 			},
 			"link": "https://www.npmjs.com/package/@tormak/vite-plugin-sitemap",
 			"isRelative": false,
-			"img": "./img/projs/vite-plugin-sitemap.png",
-			"org": "none"
+			"image": "./img/projs/vite-plugin-sitemap.png",
+			"organization": "none"
 		},
 		"torc-character-designer": {
 			"category": "web-dev",
@@ -834,8 +834,8 @@
 			},
 			"link": "https://torcommunity.com/tools/character-designer",
 			"isRelative": false,
-			"img": "./img/projs/Release_one.png",
-			"org": "torcommunity"
+			"image": "./img/projs/Release_one.png",
+			"organization": "torcommunity"
 		},
 		"decky-frontend-lib": {
 			"category": "steam-deck",
@@ -942,8 +942,8 @@
 			},
 			"link": "https://github.com/SteamDeckHomebrew/decky-frontend-lib",
 			"isRelative": false,
-			"img": "./img/projs/Decky-frontend-lib.png",
-			"org": "steam-deck-homebrew"
+			"image": "./img/projs/Decky-frontend-lib.png",
+			"organization": "steam-deck-homebrew"
 		},
 		"portfolio-v2": {
 			"category": "web-dev",
@@ -1205,8 +1205,8 @@
 			},
 			"link": "https://travislane.dev",
 			"isRelative": false,
-			"img": "./img/projs/portfolio-site-v2.png",
-			"org": "none"
+			"image": "./img/projs/portfolio-site-v2.png",
+			"organization": "none"
 		},
 		"darkest-dungeon-save-editor": {
 			"category": "software-engineering",
@@ -1424,8 +1424,8 @@
 			},
 			"link": "https://github.com/Tormak9970/Darkest-Dungeon-Save-Editor",
 			"isRelative": false,
-			"img": "./img/projs/DDSEditor-main-ui.png",
-			"org": "none"
+			"image": "./img/projs/DDSEditor-main-ui.png",
+			"organization": "none"
 		},
 		"untitled-card-game": {
 			"category": "web-games",
@@ -1534,8 +1534,8 @@
 			},
 			"link": "https://solitaire.travislane.dev/",
 			"isRelative": false,
-			"img": "./img/projs/untitled-card-game.png",
-			"org": "none"
+			"image": "./img/projs/untitled-card-game.png",
+			"organization": "none"
 		},
 		"bash-shortcuts": {
 			"category": "steam-deck",
@@ -1869,8 +1869,8 @@
 			},
 			"link": "https://github.com/Tormak9970/bash-shortcuts",
 			"isRelative": false,
-			"img": "./img/projs/bash-shortcuts-preview.png",
-			"org": "steam-deck-homebrew"
+			"image": "./img/projs/bash-shortcuts-preview.png",
+			"organization": "steam-deck-homebrew"
 		},
 		"steam-art-manager": {
 			"category": "software-engineering",
@@ -3014,8 +3014,8 @@
 			},
 			"link": "https://github.com/Tormak9970/Steam-Art-Manager",
 			"isRelative": false,
-			"img": "./img/projs/final-ui_v2.7.0.png",
-			"org": "none"
+			"image": "./img/projs/final-ui_v2.7.0.png",
+			"organization": "none"
 		},
 		"css-loader-for-vs-code": {
 			"category": "miscellaneous",
@@ -3120,8 +3120,8 @@
 			},
 			"link": "https://marketplace.visualstudio.com/items?itemName=DeckThemes.css-loader-for-vs-code",
 			"isRelative": false,
-			"img": "./img/projs/css-loader-for-vs-code.png",
-			"org": "deck-themes"
+			"image": "./img/projs/css-loader-for-vs-code.png",
+			"organization": "deck-themes"
 		}
 	},
 	"archive": {
@@ -3265,8 +3265,8 @@
 			},
 			"link": "https://github.com/SWTOR-Slicers/Slicers-GUI",
 			"isRelative": false,
-			"img": "./img/projs/Slicers GUI.png",
-			"org": "swtor-slicers"
+			"image": "./img/projs/Slicers GUI.png",
+			"organization": "swtor-slicers"
 		},
 		"three.js-marching-cubes": {
 			"category": "web-dev",
@@ -3352,8 +3352,8 @@
 			},
 			"link": "https://marching-cubes.travislane.dev/",
 			"isRelative": false,
-			"img": "./img/projs/threejs-marching-cubes.png",
-			"org": "none"
+			"image": "./img/projs/threejs-marching-cubes.png",
+			"organization": "none"
 		},
 		"swtorslicers.org": {
 			"category": "web-dev",
@@ -3535,8 +3535,8 @@
 			},
 			"link": "https://swtorslicers.org",
 			"isRelative": false,
-			"img": "./img/projs/slicers-org.png",
-			"org": "swtor-slicers"
+			"image": "./img/projs/slicers-org.png",
+			"organization": "swtor-slicers"
 		},
 		"torc-npc-3d-viewers": {
 			"category": "web-dev",
@@ -3630,8 +3630,8 @@
 			},
 			"link": "https://torcommunity.com/database/search/npc",
 			"isRelative": false,
-			"img": "./img/projs/torc-npc-viewer.png",
-			"org": "torcommunity"
+			"image": "./img/projs/torc-npc-viewer.png",
+			"organization": "torcommunity"
 		},
 		"wiki-editor": {
 			"category": "software-engineering",
@@ -3713,8 +3713,8 @@
 			},
 			"link": "https://github.com/SWTOR-Slicers/Wiki-Editor",
 			"isRelative": false,
-			"img": "./img/projs/wiki-editor.png",
-			"org": "swtor-slicers"
+			"image": "./img/projs/wiki-editor.png",
+			"organization": "swtor-slicers"
 		},
 		"tor-model-locator": {
 			"category": "software-engineering",
@@ -3792,8 +3792,8 @@
 			},
 			"link": "https://github.com/Tormak9970/tor-model-locator",
 			"isRelative": false,
-			"img": "./img/projs/tor-model-locator.png",
-			"org": "none"
+			"image": "./img/projs/tor-model-locator.png",
+			"organization": "none"
 		},
 		"swtor-slicers-wiki": {
 			"category": "miscellaneous",
@@ -3871,8 +3871,8 @@
 			},
 			"link": "https://github.com/SWTOR-Slicers/WikiPedia/wiki",
 			"isRelative": false,
-			"img": "./img/projs/slicers-wiki.png",
-			"org": "swtor-slicers"
+			"image": "./img/projs/slicers-wiki.png",
+			"organization": "swtor-slicers"
 		},
 		"tetris": {
 			"category": "web-games",
@@ -3962,8 +3962,8 @@
 			},
 			"link": "https://tetris.travislane.dev",
 			"isRelative": false,
-			"img": "./img/projs/Tetris.png",
-			"org": "none"
+			"image": "./img/projs/Tetris.png",
+			"organization": "none"
 		},
 		"minesweeper": {
 			"category": "web-games",
@@ -4053,8 +4053,8 @@
 			},
 			"link": "https://minesweeper.travislane.dev",
 			"isRelative": false,
-			"img": "./img/projs/Minesweeper.png",
-			"org": "none"
+			"image": "./img/projs/Minesweeper.png",
+			"organization": "none"
 		},
 		"pong": {
 			"category": "web-games",
@@ -4144,8 +4144,8 @@
 			},
 			"link": "https://pong.travislane.dev",
 			"isRelative": false,
-			"img": "./img/projs/Pong.png",
-			"org": "none"
+			"image": "./img/projs/Pong.png",
+			"organization": "none"
 		},
 		"portfolio-v1": {
 			"category": "web-dev",
@@ -4321,8 +4321,8 @@
 			},
 			"link": "web-dev",
 			"isRelative": false,
-			"img": "./img/projs/Portfolio site homepage.png",
-			"org": "none"
+			"image": "./img/projs/Portfolio site homepage.png",
+			"organization": "none"
 		},
 		"intro-to-web-dev-camp": {
 			"category": "education",
@@ -4412,8 +4412,8 @@
 			},
 			"link": "",
 			"isRelative": false,
-			"img": "./img/projs/intro-to-web-dev-camp.png",
-			"org": "none"
+			"image": "./img/projs/intro-to-web-dev-camp.png",
+			"organization": "none"
 		},
 		"slicers-blender-importer": {
 			"category": "miscellaneous",
@@ -4520,8 +4520,8 @@
 			},
 			"link": "https://github.com/SWTOR-Slicers/Granny2-Plug-In-Blender-2.8x",
 			"isRelative": false,
-			"img": "./img/projs/slicers-blender-importer.png",
-			"org": "swtor-slicers"
+			"image": "./img/projs/slicers-blender-importer.png",
+			"organization": "swtor-slicers"
 		},
 		"hex-world-generator": {
 			"category": "blender",
@@ -4631,8 +4631,8 @@
 			},
 			"link": "https://github.com/Tormak9970/blender-projects",
 			"isRelative": false,
-			"img": "./img/projs/Hex World.png",
-			"org": "none"
+			"image": "./img/projs/Hex World.png",
+			"organization": "none"
 		},
 		"marching-squares": {
 			"category": "blender",
@@ -4738,8 +4738,8 @@
 			},
 			"link": "https://github.com/Tormak9970/blender-projects",
 			"isRelative": false,
-			"img": "./img/projs/Marching Squares in Blender.png",
-			"org": "none"
+			"image": "./img/projs/Marching Squares in Blender.png",
+			"organization": "none"
 		},
 		"tweakpane-gradient-plugin": {
 			"category": "web-dev",
@@ -4817,8 +4817,8 @@
 			},
 			"link": "https://github.com/Tormak9970/tweakpane-plugin-gradient",
 			"isRelative": false,
-			"img": "./img/projs/tweakpane-plugin-gradient.png",
-			"org": "none"
+			"image": "./img/projs/tweakpane-plugin-gradient.png",
+			"organization": "none"
 		},
 		"tiled-wave-function-collapse": {
 			"category": "web-dev",
@@ -4887,8 +4887,8 @@
 			},
 			"link": "https://wave-function-collapse.travislane.dev",
 			"isRelative": false,
-			"img": "./img/projs/wave-function-collapse.png",
-			"org": "none"
+			"image": "./img/projs/wave-function-collapse.png",
+			"organization": "none"
 		},
 		"simple-sudoku": {
 			"category": "web-games",
@@ -4982,15 +4982,15 @@
 			},
 			"link": "https://sudoku.travislane.dev/",
 			"isRelative": false,
-			"img": "./img/projs/simple-sudoku.png",
-			"org": "none"
+			"image": "./img/projs/simple-sudoku.png",
+			"organization": "none"
 		}
 	},
 	"featured": "steam-art-manager",
 	"organizations": {
 		"deck-themes": {
 			"name": "Deck Themes",
-			"img": "./img/orgs/css-loader-logo_128x128.png",
+			"image": "./img/orgs/css-loader-logo_128x128.png",
 			"link": "https://deckthemes.com",
 			"about": "Deck Themes is a collection of tools for making custom themes and audio packs for Steam.",
 			"description": "My involvement with Deck Themes started out with my work on decky plugins, since what would become Deck Themes started out as a single plugin. Now I review theme submissions, work on that original plugin (CSS Loader), keep the VS Code extension up to date, and provide general design feedback for other members of the team.",
@@ -5007,7 +5007,7 @@
 		},
 		"steamgriddb": {
 			"name": "SteamGridDB",
-			"img": "./img/orgs/sgdb-logo.svg",
+			"image": "./img/orgs/sgdb-logo.svg",
 			"link": "https://github.com/SteamGridDB",
 			"about": "SteamGridDB is a website for sharing community art assets for games, as well as an API for fetching those assets. The community also develops various tools and wrappers based on this API, including SGDBoop, Steam Rom Manager, and more.",
 			"description": "My involvement with SteamGridDB started while working on the Steam Art Manager, since I use the SGDB api to load the custom art options for each game. Since then I have continued to work on SARM, contribute to decky-SGDB, node-steamgriddb as well as create my own wrapper for the SGDB API, tauri-steamgriddb.",
@@ -5015,7 +5015,7 @@
 		},
 		"steam-deck-homebrew": {
 			"name": "Steam Deck Homebrew",
-			"img": "./img/projs/logo.png",
+			"image": "./img/projs/logo.png",
 			"about": "Steam Deck Homebrew (SDH) is a group of programmers, designers and more whose goal is to bring awesome new functionality to the Steam Deck.",
 			"description": "My involvement with SDH started when I came across the Decky Plugin Loader. Since then I have published my own plugin and contributed to the reverse engineered UI components the organization uses",
 			"projects": [
@@ -5036,7 +5036,7 @@
 		},
 		"swtor-slicers": {
 			"name": "SWTOR Slicers",
-			"img": "./img/orgs/SwtorSlicers.png",
+			"image": "./img/orgs/SwtorSlicers.png",
 			"about": "The SWTOR Slicers Collaboration is a group who enjoys taking Star Wars The Old Republic beyond the game. Whether this be through using models for fan films, or creating tools for the community (such as my <i>Character and Outfit Designer</i>), the community enjoys finding new and unique was to utilize the game.",
 			"description": "I got involved with the community because of my work on the <i>Character and Outfit Designer</i>. This was because I added a secondary feature to my tool, the ability to download a <i>.zip</i> file with all of the nessesary information to recreate the character in Blender. This in tandem with other tools I have made expedites the extraction process. Since finishing the <i>Character Designer</i>, I continue to help people, as well as work to make the process even easier.",
 			"projects": [
@@ -5069,7 +5069,7 @@
 		},
 		"torcommunity": {
 			"name": "TORCommunity.com",
-			"img": "./img/orgs/torc-icon-2016.png",
+			"image": "./img/orgs/torc-icon-2016.png",
 			"about": "TORCommunity.com is a fan site for Star Wars The Old Republic. It was started in 2008, and has many neat features, such as guides, walkthroughs, tips, tools, and multiple databases. The sites goal is to provide great resources, and improve the experience players have while playing the game.",
 			"description": "I got involved with TORCommunity after the owner and head dev of the site reached out to me while I was working on the <i>Character and Outfit Designer</i> and asked if I would be willing to put it up on TORCommunity. He had been looking for a tool just like it for the site for a while, and I was hoping to get it up on one of the fan sites as well. After finishing the app, and putting it up live on the site, he offered me the opportunity to continue working on the site, which I gladly took him up on. Since then, I have continued to work on the <i>Character and Outfit Designer</i>, as well as other parts of the site.",
 			"projects": [
@@ -5088,62 +5088,62 @@
 	"experience": {
 		"synergy-animal-behavior-behavior-assistant": {
 			"company": "Synergy Animal Behavior",
-			"img": "./img/exp/synergy.png",
+			"image": "./img/exp/synergy.png",
 			"position": "Behavior Assistant",
 			"description": "Created and managed client databases and resources for Synergy Animal Behavior as a summer job."
 		},
 		"city-wood-external-developer": {
 			"company": "City Wood",
-			"img": "./img/projs/citywood-white.png",
+			"image": "./img/projs/citywood-white.png",
 			"position": "External Developer",
 			"description": "I worked on creating an inventory management tool (dubbed Log Tracker) for City Wood. The web app uses Firebase for hosting, authentication, and data storage, as well as Google Cloud for the Gmail and Maps APIs. I completed the beta stage and stopped receiving contact, so the project remains unfinished."
 		},
 		"actalent-software-engineer": {
 			"company": "Actalent",
 			"position": "Software Engineer",
-			"img": "./img/exp/actalent-logo.svg",
+			"image": "./img/exp/actalent-logo.svg",
 			"description": "From June 2023 to August of 2023 I worked as a Software Engineer for Actalent llc. I worked in Angular 16 on a Thermostat app for Mitsubichi Electric, and in NextJS on a Dashboard for Cisco Systems Inc. I familiarized myself with both of these technologies, as well as gained valuable experience working collaboratively with a team, as well as while under deadlines."
 		}
 	},
 	"art": {
 		"swtor-neon-sign": {
 			"name": "SWTOR Neon Sign",
-			"img": "./img/art pieces/SWTOR Neon Final Marked.png",
+			"image": "./img/art pieces/SWTOR Neon Final Marked.png",
 			"description": "This piece is a 3D render of a neon sign inspired SWTOR (Star Wars The Old Republic) logo, made in blender. This was my first original piece."
 		},
 		"operative-neon-sign": {
 			"name": "Operative Neon Sign",
-			"img": "./img/art pieces/Operative Neon Marked.png",
+			"image": "./img/art pieces/Operative Neon Marked.png",
 			"description": "This was my second attempt to make a neon sign using blender. It has a bit more detail then the previous one, and the pipes and corners are a bit cleaner."
 		},
 		"guardian-neon-sign": {
 			"name": "Guardian Neon Sign",
-			"img": "./img/art pieces/Guardian Neon Marked.png",
+			"image": "./img/art pieces/Guardian Neon Marked.png",
 			"description": "This piece was my third and most recent attemp at making a neon sign in blender. I was satisfied with how the previous sign turned out, however I wanted to add more detail. I settled on modeling a bracket, screws, and clips to 'hold' the sign to the brick wall behind, which turned out really nice."
 		},
 		"vault-hunter-neon": {
 			"name": "Vault Hunter Neon",
-			"img": "./img/art pieces/Vault finished v2.png",
+			"image": "./img/art pieces/Vault finished v2.png",
 			"description": "This piece is based on the vault hunter's icon from borderlands 2. I tried making a more realistic brick wall, but the realism took away from the sign itself, so I reverted it back to the older material."
 		},
 		"apex-legends-sign": {
 			"name": "Apex Legends Sign",
-			"img": "./img/projs/Apex Logo Desktop.png",
+			"image": "./img/projs/Apex Logo Desktop.png",
 			"description": "When I started on this piece I had been having a blast playing Apex Legends, so it was a no-brainer. I decided to try some new techniques, such as the wooden background."
 		},
 		"cyberpunk-city-(ai)": {
 			"name": "Cyberpunk City (AI)",
-			"img": "./img/projs/Cyberpunk_cityscape.png",
+			"image": "./img/projs/Cyberpunk_cityscape.png",
 			"description": "AI art has been a hot topic as of late. I decided to try them out and see how easy it was to tell that an AI made the art (this piece is the best result I got). Pieces from the same AI have clear similarities, which is amusing as it shows that it's just an algorithm."
 		},
 		"aloy-oil-effect": {
 			"name": "Aloy Oil Effect",
-			"img": "./img/projs/Alloy_before_after.png",
+			"image": "./img/projs/Alloy_before_after.png",
 			"description": "This piece is a stylized version of one of the concept art images for Horizon Zero Dawn. I made this as I was learning how to modify images with Gimp. As the name implies, the goal was to create an oil painting effect."
 		},
 		"outer-worlds-logo": {
 			"name": "Outer Worlds Logo",
-			"img": "./img/projs/Outer Worlds Final.png",
+			"image": "./img/projs/Outer Worlds Final.png",
 			"description": "This was my first time using reference images in one of my pieces. I wanted to capture the feel of the Outer Worlds, so I used a few images of the in-game environment to help achieve a similar aesthetic with the border of the logo."
 		}
 	}

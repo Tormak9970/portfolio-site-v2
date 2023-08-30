@@ -2,7 +2,7 @@
     import { imageModalData, showing } from "../../Stores";
     export let entryData:Art;
 
-    function showImageModal() { $imageModalData = { "id": "artPreviewModal", "data": { "img": entryData.img, "name": entryData.name } }; setTimeout(() => { $showing = true; }, 30); }
+    function showImageModal() { $imageModalData = { "id": "artPreviewModal", "data": { "img": entryData.image, "name": entryData.name } }; setTimeout(() => { $showing = true; }, 30); }
 </script>
 
 <div class="card-entr">
@@ -10,7 +10,7 @@
         {entryData.name}
     </div>
     <div class="img-cont">
-        <img src="{entryData.img}" alt="" on:click|stopPropagation="{showImageModal}">
+        <img src="{entryData.image}" alt="" on:click|stopPropagation="{showImageModal}">
     </div>
     <div class="desc-cont">
         {@html entryData.description}
