@@ -2,42 +2,29 @@
     
 </script>
 
-<main>
-	<div class="frown">:(</div>
-	<div class="msg">Error 404. Either I broke something, or you made a typo! <br/>You can return home by clicking the logo in the top left of your screen.</div>
-	<div class="qrcode-cont">
-		<div class="qrcode">
-			<img src="/images/error.svg" alt="error qrcode" width="100px" height="100px">
-		</div>
-		<div class="qrcode-msg">For more information about the issue, please scan the QR Code.</div>
-	</div>
-</main>
+<div class="not-found-error">
+  <div class="error">Error 404</div>
+  <div class="message">Either I broke something, or you made a typo! You can return home by clicking the logo in the top left of your screen.</div>
+</div>
 
 <style>
-	main {
-		width: calc(100% - 28px);
-		height: calc(100% - 28px);
+	.not-found-error {
+    width: 100%;
+    height: 100%;
 
-		padding: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 
-		background-color: blue;
-	}
+  .error {
+    font-size: 62px;
+  }
 
-	.frown {
-		font-size: 80px;
-		margin-bottom: 14px;
-	}
-
-	.msg {
-		font-size: 18px;
-		margin-bottom: 14px;
-	}
-
-	.qrcode-cont {
-		display: flex;
-	}
-
-	.qrcode {
-		margin-right: 14px;
-	}
+  .message {
+    width: 450px;
+    font-size: 18px;
+    text-align: center;
+  }
 </style>
