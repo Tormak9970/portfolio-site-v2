@@ -123,7 +123,7 @@
 						"type": "image",
 						"data": {
 							"file": {
-								"url": "https://asset.localhost/C%3A%5CUsers%5CTorma%5CDocuments%5CGithub%5Cportfolio-site-v2%5Cpublic%5Cimg%5Cprojs%5Ccolor-master.png",
+								"url": "https://asset.localhost/C%3A%5CUsers%5CTorma%5CDocuments%5CGithub%5Cportfolio-site-v2%5Cpublic%5Cimage%5Cprojects%5Ccolor-master.png",
 								"webUrl": "./images/projects/color-master.png"
 							},
 							"caption": "",
@@ -149,7 +149,7 @@
 						"type": "image",
 						"data": {
 							"file": {
-								"url": "https://asset.localhost/C%3A%5CUsers%5CTorma%5CDocuments%5CGithub%5Cportfolio-site-v2%5Cpublic%5Cimg%5Cprojs%5Ccolored-toggles-desktop.png",
+								"url": "https://asset.localhost/C%3A%5CUsers%5CTorma%5CDocuments%5CGithub%5Cportfolio-site-v2%5Cpublic%5Cimage%5Cprojects%5Ccolored-toggles-desktop.png",
 								"webUrl": "./images/projects/colored-toggles-desktop.png"
 							},
 							"caption": "",
@@ -175,7 +175,7 @@
 						"type": "image",
 						"data": {
 							"file": {
-								"url": "https://asset.localhost/C%3A%5CUsers%5CTorma%5CDocuments%5CGithub%5Cportfolio-site-v2%5Cpublic%5Cimg%5Cprojs%5CShow-Download-Status.png",
+								"url": "https://asset.localhost/C%3A%5CUsers%5CTorma%5CDocuments%5CGithub%5Cportfolio-site-v2%5Cpublic%5Cimage%5Cprojects%5CShow-Download-Status.png",
 								"webUrl": "./images/projects/Show-Download-Status.png"
 							},
 							"caption": "",
@@ -188,7 +188,7 @@
 						"type": "image",
 						"data": {
 							"file": {
-								"url": "https://asset.localhost/C%3A%5CUsers%5CTorma%5CDocuments%5CGithub%5Cportfolio-site-v2%5Cpublic%5Cimg%5Cprojs%5CShow-Download-Status_uninstalled.png",
+								"url": "https://asset.localhost/C%3A%5CUsers%5CTorma%5CDocuments%5CGithub%5Cportfolio-site-v2%5Cpublic%5Cimage%5Cprojects%5CShow-Download-Status_uninstalled.png",
 								"webUrl": "./images/projects/Show-Download-Status_uninstalled.png"
 							},
 							"caption": "",
@@ -214,7 +214,7 @@
 						"type": "image",
 						"data": {
 							"file": {
-								"url": "https://asset.localhost/C%3A%5CUsers%5CTorma%5CDocuments%5CGithub%5Cportfolio-site-v2%5Cpublic%5Cimg%5Cprojs%5CStylish-Footer.png",
+								"url": "https://asset.localhost/C%3A%5CUsers%5CTorma%5CDocuments%5CGithub%5Cportfolio-site-v2%5Cpublic%5Cimage%5Cprojects%5CStylish-Footer.png",
 								"webUrl": "./images/projects/Stylish-Footer.png"
 							},
 							"caption": "",
@@ -240,7 +240,7 @@
 						"type": "image",
 						"data": {
 							"file": {
-								"url": "https://asset.localhost/C%3A%5CUsers%5CTorma%5CDocuments%5CGithub%5Cportfolio-site-v2%5Cpublic%5Cimg%5Cprojs%5CSteamDeckU.png",
+								"url": "https://asset.localhost/C%3A%5CUsers%5CTorma%5CDocuments%5CGithub%5Cportfolio-site-v2%5Cpublic%5Cimage%5Cprojects%5CSteamDeckU.png",
 								"webUrl": "./images/projects/SteamDeckU.png"
 							},
 							"caption": "",
@@ -283,7 +283,7 @@
 			"organization": "deck-themes"
 		},
 		"portfolio-updater": {
-			"index": 2,
+			"index": 0,
 			"category": "software-engineering",
 			"name": "Portfolio Updater",
 			"time": "55 hours",
@@ -291,10 +291,9 @@
 			"difficulty": "Moderate",
 			"description": "Initially, this project was going to be written using the Electron framework, but right around when I started it, I heard about Tauri. Tauri is great because it allows you to build more secure apps with smaller bundle sizes, and has a better developer experience then Electron. The app itself makes updating my portfolio easy and straightforward, allowing me to focus more on my projects.",
 			"content": {
-				"time": 1679187370092,
+				"time": 1693489605400,
 				"blocks": [
 					{
-						"id": "mGX3WmsU_L",
 						"type": "header",
 						"data": {
 							"text": "Description",
@@ -302,14 +301,148 @@
 						}
 					},
 					{
-						"id": "Sw2-lnOmFJ",
 						"type": "paragraph",
 						"data": {
 							"text": "Initially, this project was going to be written using the Electron framework, but right around when I started it, I heard about Tauri. Tauri is great because it allows you to build more secure apps with smaller bundle sizes, and has a better developer experience then Electron. The app itself makes updating my portfolio easy and straightforward, allowing me to focus more on my projects."
 						}
 					},
 					{
-						"id": "zaDlOd6pQA",
+						"type": "header",
+						"data": {
+							"text": "Version 2.1.0",
+							"level": 2
+						}
+					},
+					{
+						"type": "paragraph",
+						"data": {
+							"text": "Fixes:"
+						}
+					},
+					{
+						"type": "list",
+						"data": {
+							"style": "unordered",
+							"items": [
+								{
+									"content": "Fixed recurring image save/display issue",
+									"items": []
+								},
+								{
+									"content": "Added transitions to all background color changes",
+									"items": []
+								},
+								{
+									"content": "EditorJS usage is much more reliable",
+									"items": []
+								},
+								{
+									"content": "All components now utilize the proper Svelte features",
+									"items": [
+										{
+											"content": "Previously many were just regular JavaScript grouped into a Svelte component. Now they leverage Svelte's amazing reactivity.",
+											"items": []
+										}
+									]
+								},
+								{
+									"content": "Removed creation modals and replaced with simplified \"new entry\" generation",
+									"items": []
+								},
+								{
+									"content": "Revamped EditorJS styles",
+									"items": [
+										{
+											"content": "Simplified the style rules, and now have better coverage",
+											"items": []
+										}
+									]
+								},
+								{
+									"content": "Images in EditorJS blocks now properly get added to scope",
+									"items": []
+								}
+							]
+						}
+					},
+					{
+						"type": "paragraph",
+						"data": {
+							"text": "Features:"
+						}
+					},
+					{
+						"type": "list",
+						"data": {
+							"style": "unordered",
+							"items": [
+								{
+									"content": "Added an \"Unsaved Changes\" warning modal",
+									"items": []
+								},
+								{
+									"content": "Switched to using the Srcery color palette",
+									"items": []
+								},
+								{
+									"content": "Added reordering to entry lists",
+									"items": []
+								},
+								{
+									"content": "Shifted the design language to better match my personal choice",
+									"items": [
+										{
+											"content": "A flatter design, with subtle rounding to smooth out the look, while not being garish",
+											"items": []
+										}
+									]
+								}
+							]
+						}
+					},
+					{
+						"type": "paragraph",
+						"data": {
+							"text": "Refactoring:"
+						}
+					},
+					{
+						"type": "list",
+						"data": {
+							"style": "unordered",
+							"items": [
+								{
+									"content": "Revamped the entire layout of the app",
+									"items": []
+								},
+								{
+									"content": "Renamed almost all variables to be more readable",
+									"items": []
+								},
+								{
+									"content": "Abstracted EditorJS to a shared component for reduced code complexity",
+									"items": []
+								},
+								{
+									"content": "Significantly decreased overall code complexity",
+									"items": []
+								},
+								{
+									"content": "All interactables now share property names",
+									"items": []
+								},
+								{
+									"content": "Split state into multiple stores for easier reactivity",
+									"items": []
+								},
+								{
+									"content": "Switched the delete",
+									"items": []
+								}
+							]
+						}
+					},
+					{
 						"type": "header",
 						"data": {
 							"text": "Version 1.2.3",
@@ -317,7 +450,6 @@
 						}
 					},
 					{
-						"id": "ItRCOkv4TI",
 						"type": "list",
 						"data": {
 							"style": "unordered",
@@ -338,7 +470,6 @@
 						}
 					},
 					{
-						"id": "GgPP4taLLc",
 						"type": "header",
 						"data": {
 							"text": "Version 1.2.2",
@@ -346,7 +477,6 @@
 						}
 					},
 					{
-						"id": "E-oQ4QDwfj",
 						"type": "list",
 						"data": {
 							"style": "unordered",
@@ -371,7 +501,6 @@
 						}
 					},
 					{
-						"id": "uTV1I6vgqh",
 						"type": "header",
 						"data": {
 							"text": "Purpose",
@@ -379,7 +508,6 @@
 						}
 					},
 					{
-						"id": "VCn01A58rk",
 						"type": "list",
 						"data": {
 							"style": "unordered",
@@ -400,7 +528,6 @@
 						}
 					},
 					{
-						"id": "RKQSFtpQz_",
 						"type": "header",
 						"data": {
 							"text": "Conclusion",
@@ -408,7 +535,6 @@
 						}
 					},
 					{
-						"id": "NlLvb9jqp4",
 						"type": "list",
 						"data": {
 							"style": "unordered",
@@ -429,11 +555,11 @@
 						}
 					}
 				],
-				"version": "2.24.3"
+				"version": "2.19.3"
 			},
 			"link": "https://github.com/Tormak9970/portfolio-updater",
 			"isRelative": false,
-			"image": "./images/projects/portfolio-updater.png",
+			"image": "./images/projects/v2.0.0-portfolio-editor.png",
 			"organization": "none"
 		},
 		"torc-character-designer": {
@@ -3408,7 +3534,7 @@
 						"type": "image",
 						"data": {
 							"file": {
-								"url": "https://asset.localhost/C%3A%5CUsers%5CTorma%5CDocuments%5CGithub%5Cportfolio-site-v2%5Cpublic%5Cimg%5Cprojs%5Cslicers-org.png",
+								"url": "https://asset.localhost/C%3A%5CUsers%5CTorma%5CDocuments%5CGithub%5Cportfolio-site-v2%5Cpublic%5Cimage%5Cprojects%5Cslicers-org.png",
 								"webUrl": "./images/projects/slicers-org.png"
 							},
 							"caption": "",
@@ -3437,7 +3563,7 @@
 						"type": "image",
 						"data": {
 							"file": {
-								"url": "https://asset.localhost/C%3A%5CUsers%5CTorma%5CDocuments%5CGithub%5Cportfolio-site-v2%5Cpublic%5Cimg%5Cprojs%5Cslicers-faq.png",
+								"url": "https://asset.localhost/C%3A%5CUsers%5CTorma%5CDocuments%5CGithub%5Cportfolio-site-v2%5Cpublic%5Cimage%5Cprojects%5Cslicers-faq.png",
 								"webUrl": "./images/projects/slicers-faq.png"
 							},
 							"caption": "",
@@ -3466,7 +3592,7 @@
 						"type": "image",
 						"data": {
 							"file": {
-								"url": "https://asset.localhost/C%3A%5CUsers%5CTorma%5CDocuments%5CGithub%5Cportfolio-site-v2%5Cpublic%5Cimg%5Cprojs%5Cslicers-wiki.png",
+								"url": "https://asset.localhost/C%3A%5CUsers%5CTorma%5CDocuments%5CGithub%5Cportfolio-site-v2%5Cpublic%5Cimage%5Cprojects%5Cslicers-wiki.png",
 								"webUrl": "./images/projects/slicers-wiki.png"
 							},
 							"caption": "",
@@ -4438,115 +4564,6 @@
 			"image": "./images/projects/intro-to-web-dev-camp.png",
 			"organization": "none"
 		},
-		"slicers-blender-importer": {
-			"index": 12,
-			"category": "miscellaneous",
-			"name": "Slicers Blender Importer",
-			"time": "15 hours",
-			"status": "Complete",
-			"difficulty": "Moderate-Complexed",
-			"description": "The blender importer was very different before I started making changes. I added multi file importing, as well as one click imports. The one click imports work with the TORC Character Designer and my Locator tool to import all models and materials for a given SWTOR character, allowing artists to get right to making art.",
-			"content": {
-				"time": 1675718965273,
-				"blocks": [
-					{
-						"id": "k3nSWJlJ69",
-						"type": "header",
-						"data": {
-							"text": "Description",
-							"level": 2
-						}
-					},
-					{
-						"id": "qYiXnsE3Nw",
-						"type": "paragraph",
-						"data": {
-							"text": "The blender importer was very different before I started making changes. I added multi file importing, as well as one click imports. The one click imports work with the TORC Character Designer and my Locator tool to import all models and materials for a given SWTOR character, allowing artists to get right to making art."
-						}
-					},
-					{
-						"id": "2FvZcjWoOA",
-						"type": "header",
-						"data": {
-							"text": "Updates",
-							"level": 2
-						}
-					},
-					{
-						"id": "TqYufwokBg",
-						"type": "list",
-						"data": {
-							"style": "unordered",
-							"items": [
-								{
-									"content": "Added support for all SWTOR NPC types",
-									"items": []
-								}
-							]
-						}
-					},
-					{
-						"id": "Hfb11vexVb",
-						"type": "header",
-						"data": {
-							"text": "Purpose",
-							"level": 2
-						}
-					},
-					{
-						"id": "rWIKyKfauv",
-						"type": "list",
-						"data": {
-							"style": "unordered",
-							"items": [
-								{
-									"content": "Wanted to help contribute to the organization",
-									"items": []
-								},
-								{
-									"content": "People had been asking for multi model importing for a while",
-									"items": []
-								},
-								{
-									"content": "I wanted to automate the last piece of the process, as I had already done the first two",
-									"items": []
-								}
-							]
-						}
-					},
-					{
-						"id": "IyUtn1ErXZ",
-						"type": "header",
-						"data": {
-							"text": "Conclusion",
-							"level": 2
-						}
-					},
-					{
-						"id": "VJFplbo3Vx",
-						"type": "list",
-						"data": {
-							"style": "unordered",
-							"items": [
-								{
-									"content": "Was able to meet people's requests for multi file importing",
-									"items": []
-								},
-								{
-									"content": "I was able to fully automate the importing process, taking a nearly 2 hour process and making it take 20 seconds",
-									"items": []
-								}
-							]
-						}
-					}
-				],
-				"version": "2.24.3"
-			},
-			"link": "https://github.com/SWTOR-Slicers/Granny2-Plug-In-Blender-2.8x",
-			"isRelative": false,
-			"image": "./images/projects/slicers-blender-importer.png",
-			"organization": "swtor-slicers"
-		},
 		"hex-world-generator": {
 			"index": 13,
 			"category": "blender",
@@ -4767,86 +4784,6 @@
 			"image": "./images/projects/Marching Squares in Blender.png",
 			"organization": "none"
 		},
-		"tweakpane-gradient-plugin": {
-			"index": 15,
-			"category": "web-dev",
-			"name": "Tweakpane Gradient Plugin",
-			"time": "6 hours",
-			"status": "Complete",
-			"difficulty": "Moderate",
-			"description": "I started this project because I had been using the Tweakpane library for editable parameters in another project, and needed a gradient texture input. The layout and controls are based on Blender's color ramp node, which node, which does something similar. The plugin allows the user to edit the stop position and color for the gradient, and then outputs an ImageData object with the consequent texture.",
-			"content": {
-				"time": 1675718368657,
-				"blocks": [
-					{
-						"id": "QExxjEfEMq",
-						"type": "header",
-						"data": {
-							"text": "Description",
-							"level": 2
-						}
-					},
-					{
-						"id": "CKN0Yktxl4",
-						"type": "paragraph",
-						"data": {
-							"text": "I started this project because I had been using the Tweakpane library for editable parameters in another project, and needed a gradient texture input. The layout and controls are based on Blender's color ramp node, which node, which does something similar. The plugin allows the user to edit the stop position and color for the gradient, and then outputs an ImageData object with the consequent texture."
-						}
-					},
-					{
-						"id": "QaV7pBHTdv",
-						"type": "header",
-						"data": {
-							"text": "Purpose",
-							"level": 2
-						}
-					},
-					{
-						"id": "1FRJ0qdqnz",
-						"type": "list",
-						"data": {
-							"style": "unordered",
-							"items": [
-								{
-									"content": "Needed a Tweakpane compatible gradient generator",
-									"items": []
-								}
-							]
-						}
-					},
-					{
-						"id": "nW0C8tES70",
-						"type": "header",
-						"data": {
-							"text": "Conclusion",
-							"level": 2
-						}
-					},
-					{
-						"id": "BhGZAGTjU8",
-						"type": "list",
-						"data": {
-							"style": "unordered",
-							"items": [
-								{
-									"content": "Created a plugin that allows the user to customize gradient textures",
-									"items": []
-								},
-								{
-									"content": "First introduction to the MVC design pattern",
-									"items": []
-								}
-							]
-						}
-					}
-				],
-				"version": "2.24.3"
-			},
-			"link": "https://github.com/Tormak9970/tweakpane-plugin-gradient",
-			"isRelative": false,
-			"image": "./images/projects/tweakpane-plugin-gradient.png",
-			"organization": "none"
-		},
 		"tiled-wave-function-collapse": {
 			"index": 16,
 			"category": "web-dev",
@@ -5047,7 +4984,7 @@
 		"steam-deck-homebrew": {
 			"index": 2,
 			"name": "Steam Deck Homebrew",
-			"image": "./images/projects/logo.png",
+			"image": "./images/organizations/steam-deck-homebrew-logo.png",
 			"about": "Steam Deck Homebrew (SDH) is a group of programmers, designers and more whose goal is to bring awesome new functionality to the Steam Deck.",
 			"description": "My involvement with SDH started when I came across the Decky Plugin Loader. Since then I have published my own plugin and contributed to the reverse engineered UI components the organization uses",
 			"projects": [
