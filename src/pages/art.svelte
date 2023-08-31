@@ -5,10 +5,10 @@
   import { afterPageLoad } from '@roxi/routify';
   import { onMount } from "svelte";
   import { orientationQuery } from "../utils";
-    import MediaQuery from "src/components/utils/MediaQuery.svelte";
-    import ArtEntry from "src/components/entries/ArtEntry.svelte";
-    import ArtCardEntry from "src/components/cards/ArtCardEntry.svelte";
-    import JumpList from "src/components/utils/JumpList.svelte";
+    import MediaQuery from "../components/utils/MediaQuery.svelte";
+    import ArtEntry from "../components/entries/ArtEntry.svelte";
+    import ArtCardEntry from "../components/cards/ArtCardEntry.svelte";
+    import JumpList from "../components/utils/JumpList.svelte";
 
   interface ArtEntry {
     key:string,
