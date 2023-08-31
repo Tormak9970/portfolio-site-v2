@@ -1,37 +1,48 @@
-<script lang="ts" context="module">
-  // svelte-ignore unused-export-let
-  export let jumpTo = (_id:string) => {}
-</script>
 <script lang="ts">
-  import { onMount } from "svelte";
   import { fade } from "svelte/transition";
-  import { projects } from "../../linkConfig";
-  import { projScrollIdx, orientation, scrollDir, allowScroll } from "../../Stores";
-  import { afterPageLoad } from "@roxi/routify";
-  import { orientationQuery } from "../../utils";
-  import MediaQuery from "../../components/utils/MediaQuery.svelte";
-  import ProjectEntry from "../../components/entries/ProjectEntry.svelte";
-  import ProjectCardEntry from "../../components/cards/ProjectCardEntry.svelte";
-  import JumpList from "../../components/utils/JumpList.svelte";
+  import { allowScroll, artScrollIdx, orientation, scrollDir } from "../Stores";
+  import { art } from '../linkConfig';
+  import { afterPageLoad } from '@roxi/routify';
+  import { onMount } from "svelte";
+  import { orientationQuery } from "../utils";
+    import MediaQuery from "src/components/utils/MediaQuery.svelte";
+    import ArtEntry from "src/components/entries/ArtEntry.svelte";
+    import ArtCardEntry from "src/components/cards/ArtCardEntry.svelte";
+    import JumpList from "src/components/utils/JumpList.svelte";
 
-  interface ProjectListEntry {
+  interface ArtEntry {
     key:string,
-    data:Project,
+    data:Art,
     isLast:boolean
   }
 
-  let entries: ProjectListEntry[] = [];
-  const jumpNames: Map<number, string> = new Map();
-  const imgsMap: Map<number, HTMLImageElement> = new Map();
+  const jumpNames:Map<number, string> = new Map([[0, "Foreword"]]);
+
+  let pieces:ArtEntry[] = [
+    {
+      "key": "forword",
+      "data": {
+        "index": -1,
+        "name": "Foreword",
+        "image": undefined,
+        "description": `I am by no means a professional artist, but I have always liked being creative and making different forms of art. 
+          I enjoy practicing art, and it is a good to take a break from development every now and again. 
+          Additionally, I find this practice invaluable when it comes to being a developer, 
+          as being able to impliment creativity into your work can really set you apart, and greatly improve whatever product you are designing.`
+      },
+      "isLast": false
+    }
+  ];
+  const imgsMap:Map<number, HTMLImageElement> = new Map();
 
   function interceptScroll(e: WheelEvent) {
     const direction:boolean = e.deltaY > 0; // true = down, false = up
     
-    if (!($projScrollIdx == 0 && !direction) && !($projScrollIdx == entries.length-1 && direction) && Math.abs(e.deltaY) != 0) {
+    if (!($artScrollIdx == 0 && !direction) && !($artScrollIdx == pieces.length-1 && direction) && Math.abs(e.deltaY) != 0) {
       if (direction) {
-        $projScrollIdx++;
+        $artScrollIdx++;
       } else {
-        $projScrollIdx--;
+        $artScrollIdx--;
       }
       $scrollDir = direction;
     } else {
@@ -39,42 +50,28 @@
     }
   }
   function interceptScrollFromIdx(direction:boolean, tarIdx:number) {
-    $projScrollIdx = tarIdx;
+    $artScrollIdx = tarIdx;
     $scrollDir = direction;
   }
   function jumpToHandler(e: MouseEvent) {
     const target:HTMLElement = <HTMLElement>e.currentTarget;
-    const curIdx = $projScrollIdx;
+    const curIdx = $artScrollIdx;
     const tarIdx:number = parseInt(target.id.substring(0, target.id.indexOf('-')));
     interceptScrollFromIdx(curIdx < tarIdx, tarIdx);
   }
 
-  jumpTo = (id:string) => {
-    const project:Project = projects.get(id);
-    if (project) {
-      const curIdx = entries.findIndex((val:ProjectListEntry) => { return val.key == id; });
-      const curHIdx = $projScrollIdx;
-      
-      $projScrollIdx = curIdx < curHIdx ? curIdx-1 : curIdx+1;
-      $projScrollIdx--;
-      $scrollDir = false;
-    } else {
-      throw Error(`Expected key ${id} to be in map but was not.`);
-    }
-  }
-
-  function processEntries([key, entr]:[string, Project], i:number) { 
-    entries.push({
+  function processEntries([key, entr]:[string, Art], i:number) { 
+    pieces.push({
       "key": key,
       "data": entr,
-      "isLast": i+1 == projects.size
+      "isLast": i+1 == art.size
     });
-    jumpNames.set(i, entr.name);
+    jumpNames.set(i+1, entr.name);
 
     if (entr.image) {
       const img = new Image();
       img.onload = () => {
-        imgsMap.set(i, img);
+          imgsMap.set(i+1, img);
       }
       img.src = entr.image;
     }
@@ -93,62 +90,72 @@
   }
 
   $afterPageLoad(() => {
-    if ($projScrollIdx != 0) {
-      $projScrollIdx -= 1;
-      if ($orientation == 0) interceptScrollFromIdx(false, $projScrollIdx+1);
+    if ($artScrollIdx != 0) {
+      $artScrollIdx -= 1;
+      if ($orientation == 0) interceptScrollFromIdx(false, $artScrollIdx+1);
     }
     return true;
   });
+
   onMount(() => {
-    Array.from(projects).sort((a, b) => a[1].index - b[1].index).map(processEntries);
-    entries = [...entries];
+    Array.from(art).sort((a, b) => a[1].index - b[1].index).map(processEntries);
+    pieces = [...pieces];
   });
 </script>
-<svelte:window on:wheel|stopPropagation|preventDefault="{manageScroll}" />
 
-<div id="projects">
+<svelte:window on:wheel|stopPropagation="{manageScroll}" />
+
+<div id="art">
   <div class="content{$orientation == 0 ? ' fancy' : ' card'}" in:fade>
     <MediaQuery query="{orientationQuery}" let:matches>
       {#if matches && $orientation == 0}
-        {#key $projScrollIdx}
-          <ProjectEntry entryData={entries[$projScrollIdx].data} image={imgsMap.get($projScrollIdx)} isLast={entries[$projScrollIdx].isLast}/>
+        {#key $artScrollIdx}
+          <ArtEntry entryData={pieces[$artScrollIdx].data} image={imgsMap.get($artScrollIdx)} isLast={pieces[$artScrollIdx].isLast}/>
         {/key}
       {:else}
-        {#each entries as projEntr}
-          <ProjectCardEntry entryData={projEntr.data}/>
+        {#each pieces as artEntr}
+          <ArtCardEntry entryData={artEntr.data}/>
         {/each }
       {/if}
     </MediaQuery>
   </div>
   <MediaQuery query="{orientationQuery}" let:matches>
     {#if matches}
-      <JumpList len={projects.size} tooltips={jumpNames} handler={jumpToHandler} scrollIdx={$projScrollIdx}/>
+      <JumpList len={art.size+1} tooltips={jumpNames} handler={jumpToHandler} scrollIdx={$artScrollIdx}/>
     {/if}
   </MediaQuery>
 </div>
 
 <style>
-	#projects {
+  #art {
     width: 100%;
     height: 100%;
+
     position: relative;
+
     overflow: hidden;
   }
+
   @media (orientation: landscape) and (min-width:1200px) {
     .content {
       width: 100%;
       height: 100%;
+
       position: relative;
       overflow-x: hidden;
     }
+
     .fancy {
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
+
       position: relative;
+
       overflow: hidden;
     }
+
     .card {
       display: grid;
       grid-template-columns: repeat(auto-fill, 330px);
@@ -158,14 +165,18 @@
       overflow: scroll;
     }
   }
+
   @media (orientation: portrait) or (max-width: 1199px) {
     .content {
       width: 100%;
       height: 100%;
+
       display: flex;
       flex-direction: column;
       align-items: center;
+
       position: relative;
+
       overflow: scroll;
       overflow-x: hidden;
     }

@@ -1,6 +1,6 @@
 <script lang="ts">
   import { fade } from "svelte/transition";
-  import MediaQuery from "./_utils/MediaQuery.svelte";
+  import MediaQuery from "../components/utils/MediaQuery.svelte";
 </script>
 
 <MediaQuery query="(orientation:landscape)" let:matches>

@@ -1,62 +1,62 @@
 <script lang="ts">
-    import { goto } from "@roxi/routify";
+  import { goto } from "@roxi/routify";
 
 	import { organizations, projects } from '../../linkConfig';
-    import { jumpTo as jumpToProj } from "../projects/index.svelte";
+  import { jumpTo as jumpToProj } from "../projects/index.svelte";
 
 	export let organization:string;
 
 	let orgData = organizations.get(organization);
     
-    function linkToProj(id:string) {
-        if (projects.get(id)) {
-            $goto('../projects');
-            setTimeout(() => { jumpToProj(id); }, 10);
-        } else {
-            $goto('../archive');
-        }
+  function linkToProj(id:string) {
+    if (projects.get(id)) {
+      $goto('../projects');
+      setTimeout(() => { jumpToProj(id); }, 10);
+    } else {
+      $goto('../archive');
     }
+  }
 </script>
 
 <div class="orgEntry">
-    <div class="header-cont">
-		<div class="back-cont"></div>
-		<h2 class="org-header">{orgData.name}</h2>
-		<div class="cit-cont {orgData.link != "" ? "" : " hidden"}">
-			<div class="cit-label">Visit:</div>
-			<a class="org-link" href="{orgData.link}" rel="noreferrer noopener" target="_blank">
-                <i class="fas fa-external-link-alt"></i>
-            </a>
-		</div>
+  <div class="header-cont">
+    <div class="back-cont"></div>
+    <h2 class="org-header">{orgData.name}</h2>
+    <div class="cit-cont {orgData.link != "" ? "" : " hidden"}">
+      <div class="cit-label">Visit:</div>
+      <a class="org-link" href="{orgData.link}" rel="noreferrer noopener" target="_blank">
+        <i class="fas fa-external-link-alt"></i>
+      </a>
+    </div>
 	</div>
-    <div class="org-layout-cont">
-        <div class="org-main-img org-img-cont">
+  <div class="org-layout-cont">
+    <div class="org-main-img org-img-cont">
 			<img src=".{orgData.image}" alt="">
 		</div>
-        <div id="entrContent" class="entr-cont">
-            <h2>About</h2>
+    <div id="entrContent" class="entr-cont">
+      <h2>About</h2>
 			{@html orgData.about}
 
-            <h2>My Involvement</h2>
-            {@html orgData.description}
+      <h2>My Involvement</h2>
+      {@html orgData.description}
 
-            <h2>Associated Projects:</h2>
-            <div class="projects">
-                <ul>
-                    {#each orgData.projects as proj}
-                        <li>
-                            <div class="proj-entr">
-                                <div class="name">{proj.name}</div>
-                                <div class="proj-link" on:click|stopPropagation="{() => { linkToProj(proj.linkId); }}">
-                                    <i class="fas fa-link"></i>
-                                </div>
-                            </div>
-                        </li>
-                    {/each }
-                </ul>
-            </div>
+      <h2>Associated Projects:</h2>
+      <div class="projects">
+        <ul>
+          {#each orgData.projects as proj}
+            <li>
+              <div class="proj-entr">
+                <div class="name">{proj.name}</div>
+                <div class="proj-link" on:click|stopPropagation="{() => { linkToProj(proj.linkId); }}">
+                  <i class="fas fa-link"></i>
+                </div>
+              </div>
+            </li>
+          {/each }
+        </ul>
+      </div>
 		</div>
-    </div>
+  </div>
 </div>
 
 <style>

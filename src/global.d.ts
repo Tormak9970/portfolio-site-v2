@@ -1,6 +1,7 @@
 /// <reference types="svelte" />
 
 interface Project {
+  index: number,
   name: string,
   time: string,
   status: string,
@@ -15,12 +16,14 @@ interface Project {
 }
 
 interface Art {
+  index: number,
   name: string,
   image: string,
   description: string
 }
 
 interface Organization {
+  index: number,
   name: string,
   image: string,
   about: string,
@@ -35,6 +38,7 @@ interface OrganizationProj {
 }
 
 interface Experience {
+  index: number,
   company: string,
   image: string,
   position: string,
