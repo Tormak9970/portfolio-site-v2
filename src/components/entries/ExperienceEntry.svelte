@@ -77,6 +77,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
     }
     .experienceEntry > .content-container > .img-cont > img { max-width: 100%; height: auto; margin-top: 14px; }
     .experienceEntry > .msg { margin-top: 56px; font-size: 24px; }

@@ -44,4 +44,6 @@ export function getKeyFromName(name: string): string {
   return name.toLowerCase().replaceAll(" ", "-").replaceAll("'", "");
 }
 
+export const sortEntriesBasedOnIndex = (a: any, b: any) => a[1].index - b[1].index;
+
 export const orientationQuery = "(orientation:landscape) and (min-width: 1200px)";

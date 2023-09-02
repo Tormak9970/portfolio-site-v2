@@ -4,7 +4,7 @@
   import { organizations } from "../../linkConfig";
   import { allowScroll, orgScrollIdx, orientation, scrollDir } from "../../Stores";
   import { afterPageLoad } from "@roxi/routify";
-  import { orientationQuery } from "../../utils";
+  import { orientationQuery, sortEntriesBasedOnIndex } from "../../utils";
   import MediaQuery from "../../components/utils/MediaQuery.svelte";
   import JumpList from "../../components/utils/JumpList.svelte";
   import OrganizationEntry from "../../components/entries/OrganizationEntry.svelte";
@@ -83,7 +83,7 @@
   });
 
   onMount(() => {
-    Array.from(organizations).sort((a, b) => a[1].index - b[1].index).map(processEntries);
+    Array.from(organizations).sort(sortEntriesBasedOnIndex).map(processEntries);
     entries = [...entries];
   });
 </script>

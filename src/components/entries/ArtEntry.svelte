@@ -16,7 +16,7 @@
     let outParams: any;
 
     function showModal() {
-        $imageModalData = { "id": "artPreviewModal", "data": { "img": entryData.image, "name": entryData.name } };
+        $imageModalData = { "id": "artPreviewModal", "data": { "image": entryData.image, "name": entryData.name } };
         setTimeout(() => { $showing = true; }, 30);
     }
 

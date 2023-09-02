@@ -3,6 +3,7 @@
   import { fade } from "svelte/transition";
   import { archive } from "../../linkConfig";
   import CardEntry from "../../components/CardEntry.svelte";
+    import { sortEntriesBasedOnIndex } from "../../utils";
 
   interface ProjectListEntry {
     key:string,
@@ -34,7 +35,7 @@
   }
 
   onMount(() => {
-    Array.from(archive).sort((a, b) => a[1].index - b[1].index).map(processEntries);
+    Array.from(archive).sort(sortEntriesBasedOnIndex).map(processEntries);
     entries = [...entries];
   });
 </script>

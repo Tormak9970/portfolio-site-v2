@@ -8,7 +8,7 @@
   import { projects } from "../../linkConfig";
   import { projScrollIdx, orientation, scrollDir, allowScroll } from "../../Stores";
   import { afterPageLoad } from "@roxi/routify";
-  import { orientationQuery } from "../../utils";
+  import { orientationQuery, sortEntriesBasedOnIndex } from "../../utils";
   import MediaQuery from "../../components/utils/MediaQuery.svelte";
   import ProjectEntry from "../../components/entries/ProjectEntry.svelte";
   import JumpList from "../../components/utils/JumpList.svelte";
@@ -100,7 +100,7 @@
     return true;
   });
   onMount(() => {
-    Array.from(projects).sort((a, b) => a[1].index - b[1].index).map(processEntries);
+    Array.from(projects).sort(sortEntriesBasedOnIndex).map(processEntries);
     entries = [...entries];
   });
 </script>

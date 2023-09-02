@@ -4,7 +4,7 @@
   import { art } from '../linkConfig';
   import { afterPageLoad } from '@roxi/routify';
   import { onMount } from "svelte";
-  import { orientationQuery } from "../utils";
+  import { orientationQuery, sortEntriesBasedOnIndex } from "../utils";
   import MediaQuery from "../components/utils/MediaQuery.svelte";
   import ArtEntry from "../components/entries/ArtEntry.svelte";
   import JumpList from "../components/utils/JumpList.svelte";
@@ -98,7 +98,7 @@
   });
 
   onMount(() => {
-    Array.from(art).sort((a, b) => a[1].index - b[1].index).map(processEntries);
+    Array.from(art).sort(sortEntriesBasedOnIndex).map(processEntries);
     pieces = [...pieces];
   });
 </script>

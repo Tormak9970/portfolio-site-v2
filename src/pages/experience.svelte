@@ -4,7 +4,7 @@
   import { experience } from '../linkConfig';
   import { afterPageLoad } from '@roxi/routify';
   import { onMount } from "svelte";
-  import { orientationQuery } from "../utils";
+  import { orientationQuery, sortEntriesBasedOnIndex } from "../utils";
   import MediaQuery from "../components/utils/MediaQuery.svelte";
   import ExperienceEntry from "../components/entries/ExperienceEntry.svelte";
   import JumpList from "../components/utils/JumpList.svelte";
@@ -74,7 +74,7 @@
   });
 
   onMount(() => {
-    Array.from(experience).sort((a, b) => a[1].index - b[1].index).map(processEntries);
+    Array.from(experience).sort(sortEntriesBasedOnIndex).map(processEntries);
     entries = [...entries];
   });
 </script>
