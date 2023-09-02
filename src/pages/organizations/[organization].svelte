@@ -40,21 +40,23 @@
       <h2>My Involvement</h2>
       {@html orgData.description}
 
-      <h2>Associated Projects:</h2>
-      <div class="projects">
-        <ul>
-          {#each orgData.projects as proj}
-            <li>
-              <div class="proj-entr">
-                <div class="name">{proj.name}</div>
-                <div class="proj-link" on:click|stopPropagation="{() => { linkToProj(proj.linkId); }}">
-                  <i class="fas fa-link"></i>
+      {#if orgData.projects.length >= 0}
+        <h2>Associated Projects:</h2>
+        <div class="projects">
+          <ul>
+            {#each orgData.projects as proj}
+              <li>
+                <div class="proj-entr">
+                  <div class="name">{proj.name}</div>
+                  <div class="proj-link" on:click|stopPropagation="{() => { linkToProj(proj.linkId); }}">
+                    <i class="fas fa-link"></i>
+                  </div>
                 </div>
-              </div>
-            </li>
-          {/each }
-        </ul>
-      </div>
+              </li>
+            {/each }
+          </ul>
+        </div>
+      {/if}
 		</div>
   </div>
 </div>
