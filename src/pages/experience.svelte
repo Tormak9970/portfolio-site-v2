@@ -7,8 +7,8 @@
   import { orientationQuery } from "../utils";
   import MediaQuery from "../components/utils/MediaQuery.svelte";
   import ExperienceEntry from "../components/entries/ExperienceEntry.svelte";
-  import ExperienceCardEntry from "../components/cards/ExperienceCardEntry.svelte";
   import JumpList from "../components/utils/JumpList.svelte";
+  import CardEntry from "../components/CardEntry.svelte";
 
   interface ExperienceListEntry {
     key:string,
@@ -90,7 +90,7 @@
         {/key}
       {:else}
         {#each entries as expEntr}
-          <ExperienceCardEntry entryData={expEntr.data}/>
+          <CardEntry entryData={expEntr.data}/>
         {/each }
       {/if}
     </MediaQuery>

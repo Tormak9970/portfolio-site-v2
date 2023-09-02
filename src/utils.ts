@@ -40,4 +40,8 @@ export function throttle(func: any, wait: number) {
   };
 }
 
+export function getKeyFromName(name: string): string {
+  return name.toLowerCase().replaceAll(" ", "-").replaceAll("'", "");
+}
+
 export const orientationQuery = "(orientation:landscape) and (min-width: 1200px)";

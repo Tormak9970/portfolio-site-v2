@@ -11,8 +11,8 @@
   import { orientationQuery } from "../../utils";
   import MediaQuery from "../../components/utils/MediaQuery.svelte";
   import ProjectEntry from "../../components/entries/ProjectEntry.svelte";
-  import ProjectCardEntry from "../../components/cards/ProjectCardEntry.svelte";
   import JumpList from "../../components/utils/JumpList.svelte";
+  import CardEntry from "../../components/CardEntry.svelte";
 
   interface ProjectListEntry {
     key:string,
@@ -115,7 +115,7 @@
         {/key}
       {:else}
         {#each entries as projEntr}
-          <ProjectCardEntry entryData={projEntr.data}/>
+          <CardEntry entryData={projEntr.data}/>
         {/each }
       {/if}
     </MediaQuery>

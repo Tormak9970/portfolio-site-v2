@@ -7,8 +7,8 @@
   import { orientationQuery } from "../../utils";
   import MediaQuery from "../../components/utils/MediaQuery.svelte";
   import JumpList from "../../components/utils/JumpList.svelte";
-  import OrganizationCardEntry from "../../components/cards/OrganizationCardEntry.svelte";
   import OrganizationEntry from "../../components/entries/OrganizationEntry.svelte";
+  import CardEntry from "../../components/CardEntry.svelte";
 
   type OrganizationListEntry = {
     key:string,
@@ -99,7 +99,7 @@
           {/key}
         {:else}
           {#each entries as orgEntr}
-            <OrganizationCardEntry entryData={orgEntr.data}/>
+            <CardEntry entryData={orgEntr.data}/>
           {/each }
         {/if}
       </MediaQuery>

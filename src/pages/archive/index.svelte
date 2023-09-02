@@ -2,7 +2,7 @@
   import { onMount } from "svelte";
   import { fade } from "svelte/transition";
   import { archive } from "../../linkConfig";
-  import ProjectCardEntry from "../../components/cards/ProjectCardEntry.svelte";
+  import CardEntry from "../../components/CardEntry.svelte";
 
   interface ProjectListEntry {
     key:string,
@@ -42,7 +42,7 @@
 <div id="archive">
   <div class="content card" in:fade>
     {#each entries as entry}
-      <ProjectCardEntry entryData={entry.data}/>
+      <CardEntry entryData={entry.data}/>
     {/each }
   </div>
 </div>

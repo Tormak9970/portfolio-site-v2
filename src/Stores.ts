@@ -1,6 +1,5 @@
 import { writable } from "svelte/store";
 
-export const navCheck = writable(false);
 export const showing = writable(false);
 export const projScrollIdx = writable(0);
 export const orgScrollIdx = writable(0);

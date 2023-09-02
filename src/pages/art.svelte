@@ -7,8 +7,8 @@
   import { orientationQuery } from "../utils";
   import MediaQuery from "../components/utils/MediaQuery.svelte";
   import ArtEntry from "../components/entries/ArtEntry.svelte";
-  import ArtCardEntry from "../components/cards/ArtCardEntry.svelte";
   import JumpList from "../components/utils/JumpList.svelte";
+  import CardEntry from "../components/CardEntry.svelte";
 
   interface ArtEntry {
     key:string,
@@ -114,7 +114,7 @@
         {/key}
       {:else}
         {#each pieces as artEntr}
-          <ArtCardEntry entryData={artEntr.data}/>
+          <CardEntry entryData={artEntr.data}/>
         {/each }
       {/if}
     </MediaQuery>
