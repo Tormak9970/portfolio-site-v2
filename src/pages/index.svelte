@@ -117,8 +117,6 @@
 </div>
 
 <style>
-	@import "/theme.css";
-
   :root {
     --desc-color: "";
   }

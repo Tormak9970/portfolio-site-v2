@@ -10,7 +10,7 @@
         <div class="img-container">
           <!-- svelte-ignore a11y-img-redundant-alt -->
           <img
-          src="images/icons/maskable_icon_x512.webp"
+            src="images/icons/maskable_icon_x512.webp"
             width="384"
             height="384"
             alt="temporary profile picture"

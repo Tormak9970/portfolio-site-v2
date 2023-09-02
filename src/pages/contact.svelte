@@ -234,7 +234,7 @@
     border-radius: 4px;
 
     outline: none;
-    border: 1px solid black;
+    border: none;
 
     color: var(--font-color);
   }
@@ -251,7 +251,7 @@
     border-radius: 4px;
 
     outline: none;
-    border: 1px solid black;
+    border: none;
 
     color: var(--font-color);
 
