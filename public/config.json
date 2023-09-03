@@ -2066,15 +2066,14 @@
 			"index": 6,
 			"category": "web-dev",
 			"name": "Portfolio V2",
-			"time": "63 hours",
+			"time": "70 hours",
 			"status": "Complete (continually updated)",
 			"difficulty": "Moderate",
 			"description": "This project is the website you are currently on. It is a replacement for my previous portfolio website, which I had not been keeping up to date. I decided to remake it from scratch using Svelte, TypeScript, and SASS (later removed), all of which are awesome frameworks I have wanted to learn for a while.",
 			"content": {
-				"time": 1679187485479,
+				"time": 1693762663522,
 				"blocks": [
 					{
-						"id": "EHEWUSDdP5",
 						"type": "header",
 						"data": {
 							"text": "Description",
@@ -2082,14 +2081,127 @@
 						}
 					},
 					{
-						"id": "5NmJ0NTUar",
 						"type": "paragraph",
 						"data": {
 							"text": "This project is the website you are currently on. It is a replacement for my previous portfolio website, which I had not been keeping up to date. I decided to remake it from scratch using Svelte, TypeScript, and SASS (later removed), all of which are awesome frameworks I have wanted to learn for a while."
 						}
 					},
 					{
-						"id": "YUb2kWw8H1",
+						"type": "header",
+						"data": {
+							"text": "Update v3.2.0",
+							"level": 2
+						}
+					},
+					{
+						"type": "paragraph",
+						"data": {
+							"text": "Features:"
+						}
+					},
+					{
+						"type": "list",
+						"data": {
+							"style": "unordered",
+							"items": [
+								{
+									"content": "Now using the Srcery color palette",
+									"items": []
+								},
+								{
+									"content": "\"Flattened\" the UI to make it feel more cohesive",
+									"items": []
+								},
+								{
+									"content": "Overhauled the 404 error screen to better fit the rest of the website",
+									"items": []
+								},
+								{
+									"content": "Now leveraging Svelte's features wherever possible",
+									"items": [
+										{
+											"content": "Previously had a lot of old JavaScript logic",
+											"items": []
+										}
+									]
+								}
+							]
+						}
+					},
+					{
+						"type": "paragraph",
+						"data": {
+							"text": "Fixes:"
+						}
+					},
+					{
+						"type": "list",
+						"data": {
+							"style": "unordered",
+							"items": [
+								{
+									"content": "Removed duplicate theme.css imports",
+									"items": []
+								},
+								{
+									"content": "Made all card entries have the same height",
+									"items": []
+								},
+								{
+									"content": "Removed the PWA manifest from the website",
+									"items": [
+										{
+											"content": "Didn't really make sense to have the website be a PWA, since its not a tool",
+											"items": []
+										}
+									]
+								},
+								{
+									"content": "Organizations now hide \"Associated Projects\" when the list is empty",
+									"items": []
+								},
+								{
+									"content": "Updated the versions for many dependencies",
+									"items": []
+								},
+								{
+									"content": "Fixed bad naming conventions used in variables and file paths throughout the website",
+									"items": []
+								}
+							]
+						}
+					},
+					{
+						"type": "paragraph",
+						"data": {
+							"text": "Changes:"
+						}
+					},
+					{
+						"type": "list",
+						"data": {
+							"style": "unordered",
+							"items": [
+								{
+									"content": "Simplified the card entries into one component",
+									"items": []
+								},
+								{
+									"content": "Split the navigation elements into components",
+									"items": []
+								},
+								{
+									"content": "Changed the desktop entries to use a shared base component",
+									"items": []
+								},
+								{
+									"content": "Abstracted many duplicated functions to a utility file to improve maintainability",
+									"items": []
+								}
+							]
+						}
+					},
+					{
 						"type": "header",
 						"data": {
 							"text": "Update v3.1.1",
@@ -2097,7 +2209,6 @@
 						}
 					},
 					{
-						"id": "Srxpm2Eomq",
 						"type": "list",
 						"data": {
 							"style": "unordered",
@@ -2118,7 +2229,6 @@
 						}
 					},
 					{
-						"id": "Pcag4cH_PI",
 						"type": "header",
 						"data": {
 							"text": "Update v3.1.0",
@@ -2126,7 +2236,6 @@
 						}
 					},
 					{
-						"id": "j1kUxlOTAT",
 						"type": "list",
 						"data": {
 							"style": "unordered",
@@ -2159,7 +2268,6 @@
 						}
 					},
 					{
-						"id": "ot3gQL5aAL",
 						"type": "header",
 						"data": {
 							"text": "Update v3.0.0",
@@ -2167,7 +2275,6 @@
 						}
 					},
 					{
-						"id": "apgMEblnTs",
 						"type": "list",
 						"data": {
 							"style": "unordered",
@@ -2200,7 +2307,6 @@
 						}
 					},
 					{
-						"id": "S0i4_y-_iq",
 						"type": "header",
 						"data": {
 							"text": "Update v2.0.0",
@@ -2208,7 +2314,6 @@
 						}
 					},
 					{
-						"id": "aRs6sJ9plG",
 						"type": "list",
 						"data": {
 							"style": "unordered",
@@ -2269,7 +2374,6 @@
 						}
 					},
 					{
-						"id": "7NBr7k3fWI",
 						"type": "header",
 						"data": {
 							"text": "Purpose",
@@ -2277,7 +2381,6 @@
 						}
 					},
 					{
-						"id": "yaPSjIxAEs",
 						"type": "list",
 						"data": {
 							"style": "unordered",
@@ -2294,7 +2397,6 @@
 						}
 					},
 					{
-						"id": "NmpQSXEmtS",
 						"type": "header",
 						"data": {
 							"text": "Conclusion",
@@ -2302,7 +2404,6 @@
 						}
 					},
 					{
-						"id": "n2iyN06a-3",
 						"type": "list",
 						"data": {
 							"style": "unordered",
@@ -2319,11 +2420,11 @@
 						}
 					}
 				],
-				"version": "2.24.3"
+				"version": "2.19.3"
 			},
 			"link": "https://travislane.dev",
 			"isRelative": false,
-			"image": "./images/projects/portfolio-site-v2.png",
+			"image": "./images/projects/portfolio-v2-updated.png",
 			"organization": "none"
 		},
 		"untitled-card-game": {
@@ -3843,190 +3944,6 @@
 			"image": "./images/projects/threejs-marching-cubes.png",
 			"organization": "none"
 		},
-		"swtorslicers.org": {
-			"index": 3,
-			"category": "web-dev",
-			"name": "swtorslicers.org",
-			"time": "38 hours",
-			"status": "Complete",
-			"difficulty": "Moderate",
-			"description": "Components",
-			"content": {
-				"time": 1675718420130,
-				"blocks": [
-					{
-						"id": "5yG04KIu_B",
-						"type": "header",
-						"data": {
-							"text": "Description",
-							"level": 2
-						}
-					},
-					{
-						"id": "yEN2XzRlhf",
-						"type": "header",
-						"data": {
-							"text": "Components",
-							"level": 3
-						}
-					},
-					{
-						"id": "TkOJXFsF5j",
-						"type": "header",
-						"data": {
-							"text": "Home Page",
-							"level": 4
-						}
-					},
-					{
-						"id": "40GEPTpZVB",
-						"type": "image",
-						"data": {
-							"file": {
-								"url": "https://asset.localhost/C%3A%5CUsers%5CTorma%5CDocuments%5CGithub%5Cportfolio-site-v2%5Cpublic%5Cimage%5Cprojects%5Cslicers-org.png",
-								"webUrl": "./images/projects/slicers-org.png"
-							},
-							"caption": "",
-							"withBorder": false,
-							"stretched": false,
-							"withBackground": false
-						}
-					},
-					{
-						"id": "04sESMpuoO",
-						"type": "paragraph",
-						"data": {
-							"text": "This component of the website is a quick overview of the organization and our main tools."
-						}
-					},
-					{
-						"id": "-qKjqKx_Z6",
-						"type": "header",
-						"data": {
-							"text": "Frequently Asked Questions",
-							"level": 4
-						}
-					},
-					{
-						"id": "TcSsYut9HS",
-						"type": "image",
-						"data": {
-							"file": {
-								"url": "https://asset.localhost/C%3A%5CUsers%5CTorma%5CDocuments%5CGithub%5Cportfolio-site-v2%5Cpublic%5Cimage%5Cprojects%5Cslicers-faq.png",
-								"webUrl": "./images/projects/slicers-faq.png"
-							},
-							"caption": "",
-							"withBorder": false,
-							"stretched": false,
-							"withBackground": false
-						}
-					},
-					{
-						"id": "F_QSR1lrMF",
-						"type": "paragraph",
-						"data": {
-							"text": "The FAQ component covers the questions we get asked on a regularly."
-						}
-					},
-					{
-						"id": "aeoB3-o9Tq",
-						"type": "header",
-						"data": {
-							"text": "Wiki",
-							"level": 4
-						}
-					},
-					{
-						"id": "mxoFgWEgfI",
-						"type": "image",
-						"data": {
-							"file": {
-								"url": "https://asset.localhost/C%3A%5CUsers%5CTorma%5CDocuments%5CGithub%5Cportfolio-site-v2%5Cpublic%5Cimage%5Cprojects%5Cslicers-wiki.png",
-								"webUrl": "./images/projects/slicers-wiki.png"
-							},
-							"caption": "",
-							"withBorder": false,
-							"stretched": false,
-							"withBackground": false
-						}
-					},
-					{
-						"id": "nkvVvnRjIH",
-						"type": "paragraph",
-						"data": {
-							"text": "The last component is the wiki. This will serve as a replacement for our GitHub wiki once we get everything migrated over."
-						}
-					},
-					{
-						"id": "qbMTucXH-t",
-						"type": "header",
-						"data": {
-							"text": "Purpose",
-							"level": 2
-						}
-					},
-					{
-						"id": "xmmgZmTMQf",
-						"type": "list",
-						"data": {
-							"style": "unordered",
-							"items": [
-								{
-									"content": "Wanted to create a place for all of the information about the organization to be easily accessible",
-									"items": []
-								},
-								{
-									"content": "Wanted to shift our organization's wiki off of GitHub",
-									"items": []
-								},
-								{
-									"content": "Wanted to make our wiki available offline",
-									"items": []
-								},
-								{
-									"content": "I wanted to look into how to make a Progressive Web App (PWA)",
-									"items": []
-								}
-							]
-						}
-					},
-					{
-						"id": "XbqJ1h3Mdb",
-						"type": "header",
-						"data": {
-							"text": "Conclusion",
-							"level": 2
-						}
-					},
-					{
-						"id": "PtY85p-Cl2",
-						"type": "list",
-						"data": {
-							"style": "unordered",
-							"items": [
-								{
-									"content": "Was able to create a website that represents the SWTOR Slicers, and provides all the information about us",
-									"items": []
-								},
-								{
-									"content": "Created a simple wiki system that covers all of our needs",
-									"items": []
-								},
-								{
-									"content": "Learned the basics of how to make a PWA",
-									"items": []
-								}
-							]
-						}
-					}
-				],
-				"version": "2.24.3"
-			},
-			"link": "https://swtorslicers.org",
-			"isRelative": false,
-			"image": "./images/projects/slicers-org.png",
-			"organization": "swtor-slicers"
-		},
 		"hex-world-generator": {
 			"index": 4,
 			"category": "blender",
@@ -4185,7 +4102,8 @@
 						"type": "image",
 						"data": {
 							"file": {
-								"url": "./images/projects/Marching Squares inner.png"
+								"url": "https://asset.localhost/C%3A%5CUsers%5CTorma%5CDocuments%5CGithub%5Cportfolio-site-v2%5Cpublic%5Cimages%5Cprojects%5CMarching%20Squares%20inner.png",
+								"webUrl": "./images/projects/Marching Squares inner.png"
 							},
 							"caption": "",
 							"withBorder": false,
@@ -4573,90 +4491,6 @@
 			"isRelative": false,
 			"image": "./images/projects/wave-function-collapse.png",
 			"organization": "none"
-		},
-		"wiki-editor": {
-			"index": 10,
-			"category": "software-engineering",
-			"name": "Wiki Editor",
-			"time": "42 hours",
-			"status": "Complete",
-			"difficulty": "Moderate",
-			"description": "I had the idea for this project after I started working on a website for the SWTOR Slicers. We wanted to transition from using GitHub's wiki system to using our own on the new website, and so I had the idea to make an app for creating, editing, and deleting wiki articles. The app uses similar principles to my Portfolio Updater app, but is written using the Electron framework.",
-			"content": {
-				"time": 1675718726363,
-				"blocks": [
-					{
-						"id": "8pyZwk6oS7",
-						"type": "header",
-						"data": {
-							"text": "Description",
-							"level": 2
-						}
-					},
-					{
-						"id": "ADh_1Tm5wQ",
-						"type": "paragraph",
-						"data": {
-							"text": "I had the idea for this project after I started working on a website for the SWTOR Slicers. We wanted to transition from using GitHub's wiki system to using our own on the new website, and so I had the idea to make an app for creating, editing, and deleting wiki articles. The app uses similar principles to my Portfolio Updater app, but is written using the Electron framework."
-						}
-					},
-					{
-						"id": "3ZPku9LDei",
-						"type": "header",
-						"data": {
-							"text": "Purpose",
-							"level": 2
-						}
-					},
-					{
-						"id": "oM8XyPiqaC",
-						"type": "list",
-						"data": {
-							"style": "unordered",
-							"items": [
-								{
-									"content": "Needed a way to efficiently manage wiki articles for the SWTOR Slicers website.",
-									"items": []
-								},
-								{
-									"content": "Wanted to continue learning about the Svelte library",
-									"items": []
-								}
-							]
-						}
-					},
-					{
-						"id": "_2UutP1Sya",
-						"type": "header",
-						"data": {
-							"text": "Conclusion",
-							"level": 2
-						}
-					},
-					{
-						"id": "rRCzKan6OH",
-						"type": "list",
-						"data": {
-							"style": "unordered",
-							"items": [
-								{
-									"content": "Was able to create an intuitive app for managing the SWTOR Slicers Wiki",
-									"items": []
-								},
-								{
-									"content": "Got to experiment with more advanced svelte components",
-									"items": []
-								}
-							]
-						}
-					}
-				],
-				"version": "2.24.3"
-			},
-			"link": "https://github.com/SWTOR-Slicers/Wiki-Editor",
-			"isRelative": false,
-			"image": "./images/projects/wiki-editor.png",
-			"organization": "swtor-slicers"
 		},
 		"portfolio-v1": {
 			"index": 11,
@@ -5210,7 +5044,7 @@
 		"deck-themes": {
 			"index": 0,
 			"name": "Deck Themes",
-			"image": "./images/organizations/css-loader-logo_128x128.png",
+			"image": "./images/organizations/css-loader-logo_512x512.png",
 			"link": "https://deckthemes.com",
 			"about": "Deck Themes is a collection of tools for making custom themes and audio packs for Steam.",
 			"description": "My involvement with Deck Themes started out with my work on decky plugins, since what would become Deck Themes started out as a single plugin. Now I review theme submissions, work on that original plugin (CSS Loader), keep the VS Code extension up to date, and provide general design feedback for other members of the team.",
