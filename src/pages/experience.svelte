@@ -1,6 +1,6 @@
 <script lang="ts">
   import { fade } from "svelte/transition";
-  import { expScrollIdx, orientation } from "../Stores";
+  import { experienceScrollIdx, orientation } from "../Stores";
   import { experience } from '../linkConfig';
   import { afterPageLoad } from '@roxi/routify';
   import { onMount } from "svelte";
@@ -21,9 +21,9 @@
   let entries: ExperienceListEntry[] = [];
 
   $afterPageLoad(() => {
-    if ($expScrollIdx != 0) {
-      $expScrollIdx -= 1;
-      if ($orientation === 0) interceptScrollFromIdx(false, $expScrollIdx+1, expScrollIdx);
+    if ($experienceScrollIdx != 0) {
+      $experienceScrollIdx -= 1;
+      if ($orientation === 0) interceptScrollFromIdx(false, $experienceScrollIdx+1, experienceScrollIdx);
     }
     return true;
   });
@@ -34,14 +34,14 @@
   });
 </script>
 
-<svelte:window on:wheel|stopPropagation|preventDefault="{manageScroll(entries, expScrollIdx)}" />
+<svelte:window on:wheel|stopPropagation|preventDefault="{manageScroll(entries, experienceScrollIdx)}" />
 
 <div id="experience">
   <div class="content{$orientation === 0 ? ' fancy' : ' card'}" in:fade>
     <MediaQuery query="{orientationQuery}" let:matches>
       {#if matches && $orientation === 0}
-        {#key $expScrollIdx}
-          <ExperienceEntry entryData={entries[$expScrollIdx].data} isLast={entries[$expScrollIdx].isLast}/>
+        {#key $experienceScrollIdx}
+          <ExperienceEntry entryData={entries[$experienceScrollIdx].data} isLast={entries[$experienceScrollIdx].isLast}/>
         {/key}
       {:else}
         {#each entries as expEntr}
@@ -52,7 +52,7 @@
   </div>
   <MediaQuery query="{orientationQuery}" let:matches>
     {#if matches}
-      <JumpList len={experience.size} tooltips={jumpNames} handler={jumpToHandler(expScrollIdx)} scrollIdx={$expScrollIdx}/>
+      <JumpList len={experience.size} tooltips={jumpNames} handler={jumpToHandler(experienceScrollIdx)} scrollIdx={$experienceScrollIdx}/>
     {/if}
   </MediaQuery>
 </div>

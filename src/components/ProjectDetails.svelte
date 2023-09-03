@@ -1,15 +1,15 @@
 <script lang="ts">
 	import { url } from '@roxi/routify';
+
 	import edjsHTML from "editorjs-html";
 
-	import { projects } from '../../linkConfig';
+	import { archive } from '../linkConfig';
 
-	export let project:string;
+	export let projectKey:string;
 
-	let entryData = projects.get(project);
+	let entryData = archive.get(projectKey);
 
-	let isRelative:boolean;
-	$: isRelative = false;
+	let isRelative = false;
 
 	function imageParser({data}) {
 		return `<img class="image-tool__image-picture" src=".${data.file.url}">`;
@@ -34,10 +34,10 @@
 </script>
 
 <div class="projEntry">
-    <div class="header-cont">
+  <div class="header-cont">
 		<div class="back-cont"></div>
 		<h2 class="proj-header">{entryData.name}</h2>
-		<div class="cit-cont {entryData.link != "" ? "" : " hidden"}">
+		<div class="cit-cont" class:hidden={entryData.link === ""}>
 			<div class="cit-label">Visit:</div>
 			{#if isRelative}
 				<a class="proj-link" href="{$url(entryData.link)}">
@@ -50,8 +50,8 @@
 			{/if}
 		</div>
 	</div>
-    <div class="proj-layout-cont">
-        <div class="proj-main-img proj-img-cont">
+  <div class="proj-layout-cont">
+    <div class="proj-main-img proj-img-cont">
 			<img src=".{entryData.image}" alt="">
 		</div>
 		<div class="data-container entr-cont">
@@ -60,10 +60,10 @@
 			<div class="data-entr"><b>Status:</b> {entryData.status}</div>
 			<div class="data-entr"><b>Difficulty:</b> {entryData.difficulty}</div>
 		</div>
-        <div id="entrContent" class="entr-cont">
+    <div id="entrContent" class="entr-cont">
 			{@html output ? output : ''}
 		</div>
-    </div>
+  </div>
 </div>
 
 <style>
@@ -115,17 +115,17 @@
 	}
 	.projEntry .header-cont .cit-cont .cit-label {
 		margin-right: 7px;
-		font-size: 16px;
+		font-size: 20px;
 	}
 	.projEntry .header-cont .cit-cont .proj-link {
 		text-decoration: none;
-		padding-top: 0px;
+		padding-top: 3px;
 		display: flex;
 		flex-direction: row;
 		align-items: center;
 		color: var(--highlight);
 		cursor: pointer;
-		font-size: 12px;
+		font-size: 14px;
 	}
 	.projEntry .header-cont .cit-cont .proj-link:hover { color: var(--highlight-hover); }
 	.projEntry .header-cont .cit-cont .proj-link:focus { color: var(--highlight-hover); }

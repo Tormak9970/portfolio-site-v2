@@ -1,10 +1,10 @@
 import { writable } from "svelte/store";
 
 // Scroll index stores
-export const projScrollIdx = writable(0);
-export const orgScrollIdx = writable(0);
+export const projectScrollIdx = writable(0);
+export const organizationScrollIdx = writable(0);
 export const artScrollIdx = writable(0);
-export const expScrollIdx = writable(0);
+export const experienceScrollIdx = writable(0);
 
 
 export const lastOrientSelected = writable(0);

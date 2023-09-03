@@ -4,15 +4,15 @@
 </script>
 <script lang="ts">
   import { onMount } from "svelte";
-  import { fade } from "svelte/transition";
   import { projects } from "../../linkConfig";
-  import { projScrollIdx, orientation, scrollDir } from "../../Stores";
+  import { projectScrollIdx, orientation, scrollDir } from "../../Stores";
   import { afterPageLoad } from "@roxi/routify";
   import { interceptScrollFromIdx, jumpToHandler, manageScroll, orientationQuery, processEntries, sortEntriesBasedOnIndex } from "../../utils";
   import MediaQuery from "../../components/utils/MediaQuery.svelte";
   import ProjectEntry from "../../components/entries/ProjectEntry.svelte";
   import JumpList from "../../components/utils/JumpList.svelte";
   import CardEntry from "../../components/CardEntry.svelte";
+  import { fade } from "svelte/transition";
 
   interface ProjectListEntry {
     key:string,
@@ -28,10 +28,10 @@
     const project:Project = projects.get(id);
     if (project) {
       const curIdx = entries.findIndex((val:ProjectListEntry) => { return val.key == id; });
-      const curHIdx = $projScrollIdx;
+      const curHIdx = $projectScrollIdx;
       
-      $projScrollIdx = curIdx < curHIdx ? curIdx-1 : curIdx+1;
-      $projScrollIdx--;
+      $projectScrollIdx = curIdx < curHIdx ? curIdx-1 : curIdx+1;
+      $projectScrollIdx--;
       $scrollDir = false;
     } else {
       throw Error(`Expected key ${id} to be in map but was not.`);
@@ -39,25 +39,25 @@
   }
 
   $afterPageLoad(() => {
-    if ($projScrollIdx != 0) {
-      $projScrollIdx -= 1;
-      if ($orientation === 0) interceptScrollFromIdx(false, $projScrollIdx+1, projScrollIdx);
+    if ($projectScrollIdx != 0) {
+      $projectScrollIdx -= 1;
+      if ($orientation === 0) interceptScrollFromIdx(false, $projectScrollIdx+1, projectScrollIdx);
     }
     return true;
   });
   onMount(() => {
     Array.from(projects).sort(sortEntriesBasedOnIndex).map(processEntries(entries, projects, jumpNames, 0, imageMap));
-    entries = [...entries];
+    entries = [ ...entries ];
   });
 </script>
-<svelte:window on:wheel|stopPropagation|preventDefault="{manageScroll(entries, projScrollIdx)}" />
+<svelte:window on:wheel|stopPropagation|preventDefault="{manageScroll(entries, projectScrollIdx)}" />
 
 <div id="projects">
   <div class="content{$orientation === 0 ? ' fancy' : ' card'}" in:fade>
     <MediaQuery query="{orientationQuery}" let:matches>
       {#if matches && $orientation === 0}
-        {#key $projScrollIdx}
-          <ProjectEntry entryData={entries[$projScrollIdx].data} image={imageMap.get($projScrollIdx)} isLast={entries[$projScrollIdx].isLast}/>
+        {#key $projectScrollIdx}
+          <ProjectEntry entryData={entries[$projectScrollIdx].data} image={imageMap.get($projectScrollIdx)} isLast={entries[$projectScrollIdx].isLast}/>
         {/key}
       {:else}
         {#each entries as projEntr}
@@ -68,7 +68,7 @@
   </div>
   <MediaQuery query="{orientationQuery}" let:matches>
     {#if matches}
-      <JumpList len={projects.size} tooltips={jumpNames} handler={jumpToHandler(projScrollIdx)} scrollIdx={$projScrollIdx}/>
+      <JumpList len={projects.size} tooltips={jumpNames} handler={jumpToHandler(projectScrollIdx)} scrollIdx={$projectScrollIdx}/>
     {/if}
   </MediaQuery>
 </div>

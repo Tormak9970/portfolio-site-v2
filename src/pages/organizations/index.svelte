@@ -2,7 +2,7 @@
   import { onMount } from "svelte";
   import { fade } from "svelte/transition";
   import { organizations } from "../../linkConfig";
-  import { orgScrollIdx, orientation } from "../../Stores";
+  import { organizationScrollIdx, orientation } from "../../Stores";
   import { afterPageLoad } from "@roxi/routify";
   import { interceptScrollFromIdx, jumpToHandler, manageScroll, orientationQuery, processEntries, sortEntriesBasedOnIndex } from "../../utils";
   import MediaQuery from "../../components/utils/MediaQuery.svelte";
@@ -21,9 +21,9 @@
   const imageMap: Map<number, HTMLImageElement> = new Map();
 
   $afterPageLoad(() => {
-    if ($orgScrollIdx != 0) {
-      $orgScrollIdx -= 1;
-      if ($orientation === 0) interceptScrollFromIdx(false, $orgScrollIdx+1, orgScrollIdx);
+    if ($organizationScrollIdx != 0) {
+      $organizationScrollIdx -= 1;
+      if ($orientation === 0) interceptScrollFromIdx(false, $organizationScrollIdx+1, organizationScrollIdx);
     }
     return true;
   });
@@ -34,14 +34,14 @@
   });
 </script>
 
-<svelte:window on:wheel|stopPropagationon|preventDefault="{manageScroll(entries, orgScrollIdx)}" />
+<svelte:window on:wheel|stopPropagationon|preventDefault="{manageScroll(entries, organizationScrollIdx)}" />
 
 <div id="orgs">
   <div class="content{$orientation === 0 ? ' fancy' : ' card'}" in:fade>
       <MediaQuery query="{orientationQuery}" let:matches>
         {#if matches && $orientation === 0}
-          {#key $orgScrollIdx}
-            <OrganizationEntry entryData={entries[$orgScrollIdx].data} image={imageMap.get($orgScrollIdx)} isLast={entries[$orgScrollIdx].isLast}/>
+          {#key $organizationScrollIdx}
+            <OrganizationEntry entryData={entries[$organizationScrollIdx].data} image={imageMap.get($organizationScrollIdx)} isLast={entries[$organizationScrollIdx].isLast}/>
           {/key}
         {:else}
           {#each entries as orgEntr}
@@ -53,7 +53,7 @@
     
   <MediaQuery query="{orientationQuery}" let:matches>
     {#if matches}
-      <JumpList len={organizations.size} tooltips={jumpNames} handler={jumpToHandler(orgScrollIdx)} scrollIdx={$orgScrollIdx}/>
+      <JumpList len={organizations.size} tooltips={jumpNames} handler={jumpToHandler(organizationScrollIdx)} scrollIdx={$organizationScrollIdx}/>
     {/if}
   </MediaQuery>
 </div>

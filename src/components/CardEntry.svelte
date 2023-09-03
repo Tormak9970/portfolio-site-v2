@@ -1,7 +1,7 @@
 <script lang="ts">
-  import { goto } from '@roxi/routify';
+  import { goto, isActive } from '@roxi/routify';
   import { getKeyFromName } from "../utils";
-  import { imageModalData, showImagePreviewModal } from "../Stores";
+  import { imageModalData, orientation, showImagePreviewModal } from "../Stores";
 
   export let entryData:Project | Organization | Art | Experience;
 
@@ -25,17 +25,14 @@
 
   function showImageModal() {
     $imageModalData = {
-      "id": "artPreviewModal",
-      "data": {
-        "image": entryData.image,
-        "name": (entryData as Art).name
-      }
+      "image": entryData.image,
+      "name": (entryData as Art).name
     };
     setTimeout(() => { $showImagePreviewModal = true; }, 30);
   }
 </script>
 
-<div class="card-entry">
+<div class="card-entry" class:uniform-height={$orientation === 1 || $isActive("/archive")}>
   <div class="name-cont">
     {isExperience(entryData) ? entryData.position : entryData.name}
   </div>
@@ -86,6 +83,10 @@
     margin: 14px;
   }
 
+  .uniform-height {
+    height: 100%;
+  }
+
   .name-cont {
     width: 90%;
 
@@ -114,7 +115,7 @@
   }
 
   .link-cont {
-    height: 100%;
+    margin-top: auto;
     width: 100%;
 
     display: flex;
@@ -143,7 +144,7 @@
     cursor: pointer;
     font-size: 14px;
   }
-  .link-cont:hover {
+  .link-cont > .proj-link:hover {
     color: var(--highlight-hover);
   }
 </style>

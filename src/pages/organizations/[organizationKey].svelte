@@ -4,9 +4,9 @@
 	import { organizations, projects } from '../../linkConfig';
   import { jumpTo as jumpToProj } from "../projects/index.svelte";
 
-	export let organization:string;
+	export let organizationKey:string;
 
-	let orgData = organizations.get(organization);
+	let orgData = organizations.get(organizationKey);
     
   function linkToProj(id:string) {
     if (projects.get(id)) {
@@ -22,7 +22,7 @@
   <div class="header-cont">
     <div class="back-cont"></div>
     <h2 class="org-header">{orgData.name}</h2>
-    <div class="cit-cont {orgData.link != "" ? "" : " hidden"}">
+    <div class="cit-cont" class:hidden={orgData.link === ""}>
       <div class="cit-label">Visit:</div>
       <a class="org-link" href="{orgData.link}" rel="noreferrer noopener" target="_blank">
         <i class="fas fa-external-link-alt"></i>
