@@ -5,45 +5,17 @@
   import CardEntry from "../../components/CardEntry.svelte";
   import { sortEntriesBasedOnIndex } from "../../utils";
 
-  interface ProjectListEntry {
-    key:string,
-    data:Project,
-    isLast:boolean
-  }
-
-  let entries: ProjectListEntry[] = [];
-  const jumpNames: Map<number, string> = new Map();
-  const imgsMap: Map<number, HTMLImageElement> = new Map();
-
-  function processEntries([key, entr]:[string, Project], i:number) { 
-    entries.push({
-      "key": key,
-      "data": entr,
-      "isLast": i+1 == archive.size
-    });
-    jumpNames.set(i, entr.name);
-
-    if (entr.image) {
-      const img = new Image();
-      img.onload = () => {
-        imgsMap.set(i, img);
-      }
-      img.src = entr.image;
-    }
-
-    return entr; 
-  }
+  let entries: Project[] = [];
 
   onMount(() => {
-    Array.from(archive).sort(sortEntriesBasedOnIndex).map(processEntries);
-    entries = [...entries];
+    entries = [...Array.from(archive).sort(sortEntriesBasedOnIndex).map(([key, entry]) => entry)];
   });
 </script>
 
 <div id="archive">
   <div class="content card" in:fade>
     {#each entries as entry}
-      <CardEntry entryData={entry.data}/>
+      <CardEntry entryData={entry}/>
     {/each }
   </div>
 </div>

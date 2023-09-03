@@ -2,9 +2,9 @@
   import { onMount } from "svelte";
   import { fade } from "svelte/transition";
   import { organizations } from "../../linkConfig";
-  import { allowScroll, orgScrollIdx, orientation, scrollDir } from "../../Stores";
+  import { orgScrollIdx, orientation } from "../../Stores";
   import { afterPageLoad } from "@roxi/routify";
-  import { orientationQuery, sortEntriesBasedOnIndex } from "../../utils";
+  import { interceptScrollFromIdx, jumpToHandler, manageScroll, orientationQuery, processEntries, sortEntriesBasedOnIndex } from "../../utils";
   import MediaQuery from "../../components/utils/MediaQuery.svelte";
   import JumpList from "../../components/utils/JumpList.svelte";
   import OrganizationEntry from "../../components/entries/OrganizationEntry.svelte";
@@ -18,84 +18,30 @@
 
   let entries: OrganizationListEntry[] = [];
   const jumpNames: Map<number, string> = new Map();
-  const imgsMap: Map<number, HTMLImageElement> = new Map();
-
-  function interceptScroll(e: WheelEvent) {
-    const direction:boolean = e.deltaY > 0; // true = down, false = up
-    
-    if (!($orgScrollIdx == 0 && !direction) && !($orgScrollIdx == entries.length-1 && direction) && Math.abs(e.deltaY) != 0) {
-      if (direction) {
-        $orgScrollIdx++;
-      } else {
-        $orgScrollIdx--;
-      }
-      $scrollDir = direction;
-    } else {
-      $allowScroll = true;
-    }
-  }
-  function interceptScrollFromIdx(direction:boolean, tarIdx:number) {
-    $orgScrollIdx = tarIdx;
-    $scrollDir = direction;
-  }
-  function jumpToHandler(e: MouseEvent) {
-    const target:HTMLElement = <HTMLElement>e.currentTarget;
-    const curIdx = $orgScrollIdx;
-    const tarIdx:number = parseInt(target.id.substring(0, target.id.indexOf('-')));
-    interceptScrollFromIdx(curIdx < tarIdx, tarIdx);
-  }
-
-  function processEntries([key, entr]:[string, Organization], i:number) { 
-    entries.push({
-      "key": key,
-      "data": entr,
-      "isLast": i+1 == organizations.size
-    });
-    jumpNames.set(i, entr.name);
-    
-    if (entr.image) {
-      const img = new Image();
-      img.onload = () => {
-          imgsMap.set(i, img);
-      }
-      img.src = entr.image;
-    }
-
-    return entr; 
-  }
-  
-  function manageScroll(e: WheelEvent) {
-    if ($orientation === 0) {
-      if ($allowScroll) {
-        $allowScroll = false;
-        setTimeout(() => $allowScroll = true, 300);
-        interceptScroll(e);
-      }
-    }
-  }
+  const imageMap: Map<number, HTMLImageElement> = new Map();
 
   $afterPageLoad(() => {
     if ($orgScrollIdx != 0) {
       $orgScrollIdx -= 1;
-      if ($orientation === 0) interceptScrollFromIdx(false, $orgScrollIdx+1);
+      if ($orientation === 0) interceptScrollFromIdx(false, $orgScrollIdx+1, orgScrollIdx);
     }
     return true;
   });
 
   onMount(() => {
-    Array.from(organizations).sort(sortEntriesBasedOnIndex).map(processEntries);
+    Array.from(organizations).sort(sortEntriesBasedOnIndex).map(processEntries(entries, organizations, jumpNames, 0, imageMap));
     entries = [...entries];
   });
 </script>
 
-<svelte:window on:wheel|stopPropagationon|preventDefault="{manageScroll}" />
+<svelte:window on:wheel|stopPropagationon|preventDefault="{manageScroll(entries, orgScrollIdx)}" />
 
 <div id="orgs">
   <div class="content{$orientation === 0 ? ' fancy' : ' card'}" in:fade>
       <MediaQuery query="{orientationQuery}" let:matches>
         {#if matches && $orientation === 0}
           {#key $orgScrollIdx}
-            <OrganizationEntry entryData={entries[$orgScrollIdx].data} image={imgsMap.get($orgScrollIdx)} isLast={entries[$orgScrollIdx].isLast}/>
+            <OrganizationEntry entryData={entries[$orgScrollIdx].data} image={imageMap.get($orgScrollIdx)} isLast={entries[$orgScrollIdx].isLast}/>
           {/key}
         {:else}
           {#each entries as orgEntr}
@@ -107,7 +53,7 @@
     
   <MediaQuery query="{orientationQuery}" let:matches>
     {#if matches}
-      <JumpList len={organizations.size} tooltips={jumpNames} handler={jumpToHandler} scrollIdx={$orgScrollIdx}/>
+      <JumpList len={organizations.size} tooltips={jumpNames} handler={jumpToHandler(orgScrollIdx)} scrollIdx={$orgScrollIdx}/>
     {/if}
   </MediaQuery>
 </div>

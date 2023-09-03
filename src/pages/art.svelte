@@ -1,10 +1,10 @@
 <script lang="ts">
   import { fade } from "svelte/transition";
-  import { allowScroll, artScrollIdx, orientation, scrollDir } from "../Stores";
+  import { artScrollIdx, orientation } from "../Stores";
   import { art } from '../linkConfig';
   import { afterPageLoad } from '@roxi/routify';
   import { onMount } from "svelte";
-  import { orientationQuery, sortEntriesBasedOnIndex } from "../utils";
+  import { interceptScrollFromIdx, jumpToHandler, manageScroll, orientationQuery, processEntries, sortEntriesBasedOnIndex } from "../utils";
   import MediaQuery from "../components/utils/MediaQuery.svelte";
   import ArtEntry from "../components/entries/ArtEntry.svelte";
   import JumpList from "../components/utils/JumpList.svelte";
@@ -16,9 +16,10 @@
     isLast:boolean
   }
 
-  const jumpNames:Map<number, string> = new Map([[0, "Foreword"]]);
+  const jumpNames: Map<number, string> = new Map([[0, "Foreword"]]);
+  const imageMap: Map<number, HTMLImageElement> = new Map();
 
-  let pieces:ArtEntry[] = [
+  let entries: ArtEntry[] = [
     {
       "key": "forword",
       "data": {
@@ -33,87 +34,32 @@
       "isLast": false
     }
   ];
-  const imgsMap:Map<number, HTMLImageElement> = new Map();
-
-  function interceptScroll(e: WheelEvent) {
-    const direction:boolean = e.deltaY > 0; // true = down, false = up
-    
-    if (!($artScrollIdx == 0 && !direction) && !($artScrollIdx == pieces.length-1 && direction) && Math.abs(e.deltaY) != 0) {
-      if (direction) {
-        $artScrollIdx++;
-      } else {
-        $artScrollIdx--;
-      }
-      $scrollDir = direction;
-    } else {
-      $allowScroll = true;
-    }
-  }
-  function interceptScrollFromIdx(direction:boolean, tarIdx:number) {
-    $artScrollIdx = tarIdx;
-    $scrollDir = direction;
-  }
-  function jumpToHandler(e: MouseEvent) {
-    const target:HTMLElement = <HTMLElement>e.currentTarget;
-    const curIdx = $artScrollIdx;
-    const tarIdx:number = parseInt(target.id.substring(0, target.id.indexOf('-')));
-    interceptScrollFromIdx(curIdx < tarIdx, tarIdx);
-  }
-
-  function processEntries([key, entr]:[string, Art], i:number) { 
-    pieces.push({
-      "key": key,
-      "data": entr,
-      "isLast": i+1 == art.size
-    });
-    jumpNames.set(i+1, entr.name);
-
-    if (entr.image) {
-      const img = new Image();
-      img.onload = () => {
-          imgsMap.set(i+1, img);
-      }
-      img.src = entr.image;
-    }
-
-    return entr; 
-  }
-
-  function manageScroll(e: WheelEvent) {
-    if ($orientation === 0) {
-      if ($allowScroll) {
-        $allowScroll = false;
-        setTimeout(() => $allowScroll = true, 300);
-        interceptScroll(e);
-      }
-    }
-  }
 
   $afterPageLoad(() => {
     if ($artScrollIdx != 0) {
       $artScrollIdx -= 1;
-      if ($orientation === 0) interceptScrollFromIdx(false, $artScrollIdx+1);
+      if ($orientation === 0) interceptScrollFromIdx(false, $artScrollIdx+1, artScrollIdx);
     }
     return true;
   });
 
   onMount(() => {
-    Array.from(art).sort(sortEntriesBasedOnIndex).map(processEntries);
-    pieces = [...pieces];
+    Array.from(art).sort(sortEntriesBasedOnIndex).map(processEntries(entries, art, jumpNames, 1, imageMap));
+    entries = [...entries];
   });
 </script>
 
-<svelte:window on:wheel|stopPropagation="{manageScroll}" />
+<svelte:window on:wheel|stopPropagation="{manageScroll(entries, artScrollIdx)}" />
 
 <div id="art">
   <div class="content{$orientation === 0 ? ' fancy' : ' card'}" in:fade>
     <MediaQuery query="{orientationQuery}" let:matches>
       {#if matches && $orientation === 0}
         {#key $artScrollIdx}
-          <ArtEntry entryData={pieces[$artScrollIdx].data} image={imgsMap.get($artScrollIdx)} isLast={pieces[$artScrollIdx].isLast}/>
+          <ArtEntry entryData={entries[$artScrollIdx].data} image={imageMap.get($artScrollIdx)} isLast={entries[$artScrollIdx].isLast}/>
         {/key}
       {:else}
-        {#each pieces as artEntr}
+        {#each entries as artEntr}
           <CardEntry entryData={artEntr.data}/>
         {/each }
       {/if}
@@ -121,7 +67,7 @@
   </div>
   <MediaQuery query="{orientationQuery}" let:matches>
     {#if matches}
-      <JumpList len={art.size+1} tooltips={jumpNames} handler={jumpToHandler} scrollIdx={$artScrollIdx}/>
+      <JumpList len={art.size+1} tooltips={jumpNames} handler={jumpToHandler(artScrollIdx)} scrollIdx={$artScrollIdx}/>
     {/if}
   </MediaQuery>
 </div>

@@ -1,10 +1,10 @@
 <script lang="ts">
   import { fade } from "svelte/transition";
-  import { allowScroll, expScrollIdx, orientation, scrollDir } from "../Stores";
+  import { expScrollIdx, orientation } from "../Stores";
   import { experience } from '../linkConfig';
   import { afterPageLoad } from '@roxi/routify';
   import { onMount } from "svelte";
-  import { orientationQuery, sortEntriesBasedOnIndex } from "../utils";
+  import { interceptScrollFromIdx, jumpToHandler, manageScroll, orientationQuery, processEntries, sortEntriesBasedOnIndex } from "../utils";
   import MediaQuery from "../components/utils/MediaQuery.svelte";
   import ExperienceEntry from "../components/entries/ExperienceEntry.svelte";
   import JumpList from "../components/utils/JumpList.svelte";
@@ -20,66 +20,21 @@
 
   let entries: ExperienceListEntry[] = [];
 
-  function interceptScroll(e: WheelEvent) {
-    const direction:boolean = e.deltaY > 0; // true = down, false = up
-    
-    if (!($expScrollIdx == 0 && !direction) && !($expScrollIdx == entries.length-1 && direction) && Math.abs(e.deltaY) != 0) {
-      if (direction) {
-        $expScrollIdx++;
-      } else {
-        $expScrollIdx--;
-      }
-      $scrollDir = direction;
-    } else {
-      $allowScroll = true;
-    }
-  }
-  function interceptScrollFromIdx(direction: boolean, tarIdx: number) {
-    $expScrollIdx = tarIdx;
-    $scrollDir = direction;
-  }
-  function jumpToHandler(e: MouseEvent) {
-    const target:HTMLElement = <HTMLElement>e.currentTarget;
-    const curIdx = $expScrollIdx;
-    const tarIdx:number = parseInt(target.id.substring(0, target.id.indexOf('-')));
-    interceptScrollFromIdx(curIdx < tarIdx, tarIdx);
-  }
-
-  function manageScroll(e: WheelEvent) {
-    if ($orientation === 0) {
-      if ($allowScroll) {
-        $allowScroll = false;
-        setTimeout(() => $allowScroll = true, 300);
-        interceptScroll(e);
-      }
-    }
-  }
-
-  function processEntries([key, entr]:[string, Experience], i: number) { 
-    entries.push({
-      "key": key,
-      "data": entr,
-      "isLast": i+1 == experience.size
-    });
-    jumpNames.set(i, entr.position);
-    return entr; 
-  }
-
   $afterPageLoad(() => {
     if ($expScrollIdx != 0) {
       $expScrollIdx -= 1;
-      if ($orientation === 0) interceptScrollFromIdx(false, $expScrollIdx+1);
+      if ($orientation === 0) interceptScrollFromIdx(false, $expScrollIdx+1, expScrollIdx);
     }
     return true;
   });
 
   onMount(() => {
-    Array.from(experience).sort(sortEntriesBasedOnIndex).map(processEntries);
+    Array.from(experience).sort(sortEntriesBasedOnIndex).map(processEntries(entries, experience, jumpNames, 0));
     entries = [...entries];
   });
 </script>
 
-<svelte:window on:wheel|stopPropagation|preventDefault="{manageScroll}" />
+<svelte:window on:wheel|stopPropagation|preventDefault="{manageScroll(entries, expScrollIdx)}" />
 
 <div id="experience">
   <div class="content{$orientation === 0 ? ' fancy' : ' card'}" in:fade>
@@ -97,7 +52,7 @@
   </div>
   <MediaQuery query="{orientationQuery}" let:matches>
     {#if matches}
-      <JumpList len={experience.size} tooltips={jumpNames} handler={jumpToHandler} scrollIdx={$expScrollIdx}/>
+      <JumpList len={experience.size} tooltips={jumpNames} handler={jumpToHandler(expScrollIdx)} scrollIdx={$expScrollIdx}/>
     {/if}
   </MediaQuery>
 </div>
