@@ -3,16 +3,16 @@
 
   import { fade } from "svelte/transition";
   import { orientationQuery } from "../utils";
-  import NoisyDots from "../components/utils/NoisyDots.svelte";
+  import NoisyDots from "../components/NoisyDots.svelte";
   import MediaQuery from "../components/utils/MediaQuery.svelte";
 
 
-  let descIdx = 0;
+  let descriptionIdx = 0;
   const descs = [
     {desc: "Developer", color: "#0f87d1"},
     {desc: "Artist", color: "#ff7700"},
     {desc: "Learner", color: "#3cd10f"},
-  ]
+  ];
 
   let descCont:HTMLDivElement;
 
@@ -22,7 +22,7 @@
   let blink = false;
 
   async function initAnim(): Promise<void> {
-    descIdx = 0;
+    descriptionIdx = 0;
     descRuns = 0;
     
     await wait(speed);
@@ -30,8 +30,8 @@
   }
 
   async function typeDescs(): Promise<void> {
-    if (descRuns < descs[descIdx].desc.length) {
-      if (descCont) descCont.innerText = descs[descIdx].desc.substring(0, descRuns+1);
+    if (descRuns < descs[descriptionIdx].desc.length) {
+      if (descCont) descCont.innerText = descs[descriptionIdx].desc.substring(0, descRuns+1);
       descRuns++;
       
       await wait(speed);
@@ -49,7 +49,7 @@
     } else {
       await wait(speed);
       if (descCont) descCont.innerText = "";
-      descIdx++;
+      descriptionIdx++;
     }
   }
 
@@ -58,8 +58,8 @@
     blink = true;
     await wait(1200);
     
-    descRuns = descs[descIdx].desc.length;
-    if (descIdx != descs.length - 1) {
+    descRuns = descs[descriptionIdx].desc.length;
+    if (descriptionIdx != descs.length - 1) {
       blink = false;
       await delDescs();
       blink = true;
@@ -76,7 +76,7 @@
     blink = false;
     await delDescs();
     blink = true;
-    descIdx = 0;
+    descriptionIdx = 0;
     await wait(500);
     blink = false;
     initAnim();
@@ -88,7 +88,7 @@
 
   onMount(() => {
     initAnim();
-  })
+  });
 </script>
 
 <div class="bg-cont">
@@ -97,17 +97,17 @@
   </div>
   <MediaQuery query="{orientationQuery}" let:matches>
     {#if matches}
-      <div id="aboutSection" class="landscape" in:fade>
-        <div id="name">Travis Lane</div>
-        <div class="desc-cont" style="--desc-color: {descs[descIdx]?.color ? descs[descIdx].color : '#0f87d1'}">
+      <div class="home-container landscape" in:fade>
+        <div class="name">Travis Lane</div>
+        <div class="desc-cont" style="--desc-color: {descs[descriptionIdx]?.color ? descs[descriptionIdx].color : '#0f87d1'}">
           <div id="desc" bind:this="{descCont}"></div>
           <div class="caret" class:animate="{blink}"></div>
         </div>
       </div>
     {:else}
-      <div id="aboutSection" class="mobile" in:fade>
-        <div id="name">Travis Lane</div>
-        <div class="desc-cont" style="--desc-color: {descs[descIdx]?.color ? descs[descIdx].color : '#0f87d1'}">
+      <div class="home-container mobile" in:fade>
+        <div class="name">Travis Lane</div>
+        <div class="desc-cont" style="--desc-color: {descs[descriptionIdx]?.color ? descs[descriptionIdx].color : '#0f87d1'}">
           <div id="desc" bind:this="{descCont}"></div>
           <div class="caret" class:animate="{blink}"></div>
         </div>
@@ -143,7 +143,7 @@
     z-index: 1;
   }
 
-  #aboutSection {
+  .home-container {
     z-index: 2;
   }
 
@@ -158,7 +158,7 @@
 
     position: relative;
   }
-  #name {
+  .name {
     --height: 64px;
     font-weight: bold;
     font-size: var(--height);

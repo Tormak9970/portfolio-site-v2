@@ -65,7 +65,7 @@
   }
   
   function manageScroll(e: WheelEvent) {
-    if ($orientation == 0) {
+    if ($orientation === 0) {
       if ($allowScroll) {
         $allowScroll = false;
         setTimeout(() => $allowScroll = true, 300);
@@ -77,7 +77,7 @@
   $afterPageLoad(() => {
     if ($orgScrollIdx != 0) {
       $orgScrollIdx -= 1;
-      if ($orientation == 0) interceptScrollFromIdx(false, $orgScrollIdx+1);
+      if ($orientation === 0) interceptScrollFromIdx(false, $orgScrollIdx+1);
     }
     return true;
   });
@@ -91,9 +91,9 @@
 <svelte:window on:wheel|stopPropagationon|preventDefault="{manageScroll}" />
 
 <div id="orgs">
-  <div class="content{$orientation == 0 ? ' fancy' : ' card'}" in:fade>
+  <div class="content{$orientation === 0 ? ' fancy' : ' card'}" in:fade>
       <MediaQuery query="{orientationQuery}" let:matches>
-        {#if matches && $orientation == 0}
+        {#if matches && $orientation === 0}
           {#key $orgScrollIdx}
             <OrganizationEntry entryData={entries[$orgScrollIdx].data} image={imgsMap.get($orgScrollIdx)} isLast={entries[$orgScrollIdx].isLast}/>
           {/key}

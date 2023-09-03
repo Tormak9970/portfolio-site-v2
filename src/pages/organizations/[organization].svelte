@@ -62,8 +62,6 @@
 </div>
 
 <style>
-	@import "/theme.css";
-
 	.orgEntry {
 		width: 100%;
 		height: 100%;

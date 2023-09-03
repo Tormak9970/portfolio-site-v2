@@ -1,7 +1,7 @@
 <script lang="ts">
   import { goto } from '@roxi/routify';
   import { getKeyFromName } from "../utils";
-  import { imageModalData, showing } from "../Stores";
+  import { imageModalData, showImagePreviewModal } from "../Stores";
 
   export let entryData:Project | Organization | Art | Experience;
 
@@ -31,7 +31,7 @@
         "name": (entryData as Art).name
       }
     };
-    setTimeout(() => { $showing = true; }, 30);
+    setTimeout(() => { $showImagePreviewModal = true; }, 30);
   }
 </script>
 

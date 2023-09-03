@@ -4,73 +4,38 @@
 </script>
 
 <MediaQuery query="(orientation:landscape)" let:matches>
-  {#if matches}
-    <div id="aboutSection" class="landscape" in:fade>
-      <div class="container">
-        <div class="img-container">
-          <!-- svelte-ignore a11y-img-redundant-alt -->
-          <img
-            src="images/icons/maskable_icon_x512.webp"
-            width="384"
-            height="384"
-            alt="temporary profile picture"
-          />
-        </div>
-      </div>
-      <div class="container">
-        <p class="bio">
-          Hi, my name is Travis<br /><br />
-          I am a web developer and software engineer. I enjoy learning new concepts
-          through self guided projects, and sharing my knowledge with others. Currently
-          I am attending
-          <a href="https://vt.edu/" rel="noopenner norefferer" target="_blank"
-            >Virginia Polytechnic Institute and State University</a
-          >, pursuing an education in Computer Science.
-          <br />
-          My interest in Computer Science started in highschool, and I have continued
-          to expand my knowledge and skills since. I believe that CS is both a powerful
-          tool for solving problems, as well as an inspiring outlet for creative
-          expression. After all, the best solutions to any problem are inspiring.
-          <br />
-          Alongside being a developer, I also like to make art in my free time. I
-          enjoy mixing my two passions in a fusion of technology and art.
-        </p>
+  <div id="aboutSection" class:landscape={matches} class:mobile={!matches} in:fade>
+    <div class="container">
+      <div class="img-container">
+        <!-- svelte-ignore a11y-img-redundant-alt -->
+        <img
+          src="images/icons/maskable_icon_x512.webp"
+          width="{matches ? 384 : 192}"
+          height="{matches ? 384 : 192}"
+          alt="temporary profile picture"
+        />
       </div>
     </div>
-  {:else}
-    <div id="aboutSection" class="mobile" in:fade>
-      <div class="container">
-        <div class="img-container">
-          <!-- svelte-ignore a11y-img-redundant-alt -->
-          <img
-            src="images/icons/maskable_icon_x192.webp"
-            width="192"
-            height="192"
-            alt="temporary profile picture"
-          />
-        </div>
-      </div>
-      <div class="bio-cont">
-        <p class="bio">
-          Hi, my name is Travis<br /><br />
-          I am a web developer and software engineer. I enjoy learning new concepts
-          through self guided projects, and sharing my knowledge with others. Currently
-          I am attending
-          <a href="https://vt.edu/" rel="noopenner norefferer" target="_blank"
-            >Virginia Polytechnic Institute and State University</a
-          >, pursuing an education in Computer Science.
-          <br />
-          My interest in Computer Science started in highschool, and I have continued
-          to expand my knowledge and skills since. I believe that CS is both a powerful
-          tool for solving problems, as well as an inspiring outlet for creative
-          expression. After all, the best solutions to any problem are inspiring.
-          <br />
-          Alongside being a developer, I also like to make art in my free time. I
-          enjoy mixing my two passions in a fusion of technology and art.
-        </p>
-      </div>
+    <div class:container={matches} class:bio-cont={!matches}>
+      <p class="bio">
+        Hi, my name is Travis<br /><br />
+        I am a web developer and software engineer. I enjoy learning new concepts
+        through self guided projects, and sharing my knowledge with others. Currently
+        I am attending
+        <a href="https://vt.edu/" rel="noopenner norefferer" target="_blank"
+          >Virginia Polytechnic Institute and State University</a
+        >, pursuing an education in Computer Science.
+        <br />
+        My interest in Computer Science started in highschool, and I have continued
+        to expand my knowledge and skills since. I believe that CS is both a powerful
+        tool for solving problems, as well as an inspiring outlet for creative
+        expression. After all, the best solutions to any problem are inspiring.
+        <br />
+        Alongside being a developer, I also like to make art in my free time. I
+        enjoy mixing my two passions in a fusion of technology and art.
+      </p>
     </div>
-  {/if}
+  </div>
 </MediaQuery>
 
 <style>

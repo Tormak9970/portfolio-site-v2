@@ -18,7 +18,7 @@
 
             const isSameElem:boolean = compPos == window.getComputedStyle(selInd).top;
             
-            if (!isSameElem && $orientation == 0) {
+            if (!isSameElem && $orientation === 0) {
                 selInd.style.top = compPos;
             }
         }
@@ -31,7 +31,7 @@
 
         const isSameElem:boolean = compPos == window.getComputedStyle(selInd).top;
         
-        if (!isSameElem && $orientation == 0) {
+        if (!isSameElem && $orientation === 0) {
             selInd.style.top = compPos;
             handler(e);
         }
@@ -57,7 +57,7 @@
             const topPos = window.getComputedStyle(wrapperDiv as HTMLElement).top;
             const compPos = `${parseFloat(topPos.substring(0, topPos.length-2))+4}px`;
             
-            if ($orientation == 0) {
+            if ($orientation === 0) {
                 selInd.style.top = compPos;
             }
         }
@@ -69,19 +69,19 @@
 <div id="jumpToCont">
     <div class="layout-toggle">
         <div class="option">
-            <a id="fancy" class="tooltip{$orientation == 0 ? ' selected' : ''}" on:click="{setOrientation}">
+            <a id="fancy" class="tooltip{$orientation === 0 ? ' selected' : ''}" on:click="{setOrientation}">
                 <i class="fas fa-bars"></i>
                 <span class="tooltip-text">Fancy</span>
             </a>
         </div>
         <div class="option">
-            <a id="card" class="tooltip{$orientation == 1 ? ' selected' : ''}" on:click="{setOrientation}">
+            <a id="card" class="tooltip{$orientation === 1 ? ' selected' : ''}" on:click="{setOrientation}">
                 <i class="fas fa-grip-horizontal"></i>
                 <span class="tooltip-text">Card</span>
             </a>
         </div>
     </div>
-    {#if $orientation == 0}
+    {#if $orientation === 0}
         <div class="jump-nav-container">
             <svg xmlns="http://www.w3.org/2000/svg">
                 <rect class="track" x="10px" y="2%" width="4px" rx="3px" height="96%" />
@@ -107,8 +107,6 @@
 
 <!-- svelte-ignore unused-css-style-selector -->
 <style>
-    @import "/theme.css";
-    
     #jumpToCont {
         z-index: 2;
         position: absolute;

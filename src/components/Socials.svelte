@@ -13,7 +13,6 @@
 </div>
 
 <style>
-  @import "/theme.css";
 	#socials {
     z-index: 10;
 

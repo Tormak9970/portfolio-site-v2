@@ -68,8 +68,6 @@
 </div>
 
 <style>
-	@import "/theme.css";
-
 	.projEntry {
 		width: 100%;
 		height: 100%;

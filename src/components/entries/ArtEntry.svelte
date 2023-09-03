@@ -1,89 +1,79 @@
 <script lang="ts">
-    import { beforeUpdate, onMount } from "svelte";
-    import { fly } from "svelte/transition";
+  import { onMount } from "svelte";
 
-    import { imageModalData, scrollDir, showing, allowScroll } from "../../Stores";
-    
-    import { getTransitions } from "../../utils";
+  import { imageModalData, showImagePreviewModal } from "../../Stores";
+  import Entry from "./Entry.svelte";
 
-    export let entryData:Art;
-    export let image:HTMLImageElement;
-    export let isLast:boolean;
+  export let entryData: Art;
+  export let image: HTMLImageElement;
+  export let isLast: boolean;
 
-    let contentCont:HTMLDivElement;
+  let contentCont: HTMLDivElement;
 
-    let inParams: any;
-    let outParams: any;
+  function showModal() {
+    $imageModalData = { image: entryData.image, name: entryData.name };
+    $showImagePreviewModal = true;
+  }
 
-    function showModal() {
-        $imageModalData = { "id": "artPreviewModal", "data": { "image": entryData.image, "name": entryData.name } };
-        setTimeout(() => { $showing = true; }, 30);
+  onMount(() => {
+    if (image) {
+      image.alt = entryData.name;
+      image.onclick = showModal;
+      contentCont.insertBefore(image, contentCont.children[0]);
     }
-
-    function handleTransEnd(): void { $allowScroll = true; }
-
-    beforeUpdate(() => {
-        const transition = getTransitions($scrollDir);
-        inParams = transition.in;
-        outParams = transition.out;
-    });
-
-    onMount(() => {
-        const transition = getTransitions($scrollDir);
-        inParams = transition.in;
-        outParams = transition.out;
-
-        if (image) {
-            image.alt = entryData.name;
-            image.onclick = showModal;
-            contentCont.insertBefore(image, contentCont.children[0]);
-        }
-    });
+  });
 </script>
 
-<div id="{entryData.name}" class="artEntry" in:fly|local={inParams} out:fly|local={outParams} on:introend="{handleTransEnd}">
-    <div class="art-header">
-        <h2>{entryData.name}</h2>
+<Entry isLast={isLast} useContentContainer={false}>
+  <div class="art-header">
+    <h2>{entryData.name}</h2>
+  </div>
+  {#if entryData.image}
+    <div class="content-container" bind:this={contentCont}>
+      {#if !image}
+        <img src={entryData.image} alt={entryData.name} on:click={showModal} />
+      {/if}
+      <div class="description">
+        <p>{entryData.description}</p>
+      </div>
     </div>
-    {#if entryData.image}
-        <div class="content-container" bind:this="{contentCont}">
-            {#if !image}
-                <img src="{entryData.image}" alt="{entryData.name}" on:click="{showModal}">
-            {/if}
-            <div class="description">
-                <p>{entryData.description}</p>
-            </div>
-        </div>
-    {:else}
-        <div class="description">
-            <p>{entryData.description}</p>
-        </div>
-    {/if}
-
-    <div class="msg">{isLast ? "To be continued..." : "Scroll to continue..."}</div>
-</div>
+  {:else}
+    <div class="description">
+      <p>{entryData.description}</p>
+    </div>
+  {/if}
+</Entry>
 
 <style>
-    .artEntry {
-        width: 64%;
+  .art-header {
+    font-size: 27px;
+  }
 
-        position: absolute;
+  .content-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(400px, 1fr));
+    column-gap: 14px;
+  }
 
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-    }
+  .content-container :global(img) {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 100%;
+    margin-top: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
 
-    .artEntry > .art-header { font-size: 27px; }
-    .artEntry > .content-container {
-        width: 100%;
-        display: grid;
-        grid-template-columns: repeat(2, minmax(400px, 1fr));
-        column-gap: 14px;
-    }
-    .artEntry > .content-container > :global(img) { width: auto; max-width: 100%; height: auto; max-height: 100%; margin-top: 14px; border-radius: 5px; cursor: pointer; }
-    .artEntry > .content-container > :global(img:hover) { opacity: 0.7; }
-    .artEntry .description { width: 100%; margin-top: 14px; font-size: 24px; text-align: center; }
-    .artEntry .msg { margin-top: 56px; font-size: 24px; }
+  .content-container :global(img:hover) {
+    opacity: 0.7;
+  }
+
+  .description {
+    width: 100%;
+    margin-top: 14px;
+    font-size: 24px;
+    text-align: center;
+  }
 </style>

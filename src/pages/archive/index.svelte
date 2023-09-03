@@ -3,7 +3,7 @@
   import { fade } from "svelte/transition";
   import { archive } from "../../linkConfig";
   import CardEntry from "../../components/CardEntry.svelte";
-    import { sortEntriesBasedOnIndex } from "../../utils";
+  import { sortEntriesBasedOnIndex } from "../../utils";
 
   interface ProjectListEntry {
     key:string,

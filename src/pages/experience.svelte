@@ -46,7 +46,7 @@
   }
 
   function manageScroll(e: WheelEvent) {
-    if ($orientation == 0) {
+    if ($orientation === 0) {
       if ($allowScroll) {
         $allowScroll = false;
         setTimeout(() => $allowScroll = true, 300);
@@ -68,7 +68,7 @@
   $afterPageLoad(() => {
     if ($expScrollIdx != 0) {
       $expScrollIdx -= 1;
-      if ($orientation == 0) interceptScrollFromIdx(false, $expScrollIdx+1);
+      if ($orientation === 0) interceptScrollFromIdx(false, $expScrollIdx+1);
     }
     return true;
   });
@@ -82,9 +82,9 @@
 <svelte:window on:wheel|stopPropagation|preventDefault="{manageScroll}" />
 
 <div id="experience">
-  <div class="content{$orientation == 0 ? ' fancy' : ' card'}" in:fade>
+  <div class="content{$orientation === 0 ? ' fancy' : ' card'}" in:fade>
     <MediaQuery query="{orientationQuery}" let:matches>
-      {#if matches && $orientation == 0}
+      {#if matches && $orientation === 0}
         {#key $expScrollIdx}
           <ExperienceEntry entryData={entries[$expScrollIdx].data} isLast={entries[$expScrollIdx].isLast}/>
         {/key}

@@ -1,148 +1,111 @@
 <script lang="ts">
-    import { beforeUpdate, onMount } from "svelte";
-    import { fly } from "svelte/transition";
-    import { goto } from "@roxi/routify";
+  import { onMount } from "svelte";
+  import { goto } from "@roxi/routify";
 
-    import { scrollDir, allowScroll } from "../../Stores";
+  import { getKeyFromName } from "../../utils";
+  import Entry from "./Entry.svelte";
 
-    import { getTransitions } from "../../utils";
+  export let entryData: Organization;
+  export let image: HTMLImageElement;
+  export let isLast: boolean;
 
-    export let entryData:Organization;
-    export let image:HTMLImageElement;
-    export let isLast:boolean;
+  let contentCont: HTMLDivElement;
 
-    let contentCont:HTMLDivElement;
+  function openOrgEntry() {
+    $goto(`./:organization`, { organization: getKeyFromName(entryData.name) });
+  }
 
-    let inParams: any;
-    let outParams: any;
-
-    function openOrgEntry() {
-        $goto(`./:organization`, {organization: entryData.name.toLowerCase().replaceAll(" ", "-").replaceAll("'", "")});
+  onMount(() => {
+    if (image) {
+      image.alt = entryData.name;
+      contentCont.insertBefore(image, contentCont.children[0]);
     }
-
-    function handleTransEnd(): void { $allowScroll = true; }
-
-    beforeUpdate(() => {
-        const transition = getTransitions($scrollDir);
-        inParams = transition.in;
-        outParams = transition.out;
-    });
-
-    onMount(() => {
-        const transition = getTransitions($scrollDir);
-        inParams = transition.in;
-        outParams = transition.out;
-
-        if (image) {
-            image.alt = entryData.name;
-            contentCont.insertBefore(image, contentCont.children[0]);
-        }
-    });
+  });
 </script>
 
-<div id="{entryData.name}" class="orgEntry" in:fly|local={inParams} out:fly|local={outParams} on:introend="{handleTransEnd}">
-    <div class="content-container">
-        <div class="imgs-cont" bind:this="{contentCont}">
-            {#if !image}
-                <img src="{entryData.image}" alt="{entryData.name}">
-            {/if}
-        </div>
-        <div class="org-overview-cont">
-            <div class="org-header">
-                <h2 style="margin-top: 0px;">{entryData.name}</h2>
-            </div>
-            <p class="overview">
-                {@html entryData.about}
-            </p>
-            <div class="org-link-cont">
-                <div class="name">Learn more:</div>
-                <div class="org-link" on:click|stopPropagation="{openOrgEntry}">
-                    <i class="fas fa-external-link-alt"></i>
-                </div>
-            </div>
-        </div>
+<Entry isLast={isLast}>
+  <div class="imgs-cont" bind:this={contentCont}>
+    {#if !image}
+      <img src={entryData.image} alt={entryData.name} />
+    {/if}
+  </div>
+  <div class="org-overview-cont">
+    <div class="org-header">
+      <h2 style="margin-top: 0px;">{entryData.name}</h2>
     </div>
-
-    <div class="msg">{isLast ? "" : "Scroll to continue..."}</div>
-</div>
+    <p class="overview">
+      {@html entryData.about}
+    </p>
+    <div class="org-link-cont">
+      <div class="name">Learn more:</div>
+      <div class="org-link" on:click|stopPropagation={openOrgEntry}>
+        <i class="fas fa-external-link-alt" />
+      </div>
+    </div>
+  </div>
+</Entry>
 
 <style>
-    .orgEntry {
-        height: 81%;
-        width: 80%;
-        position: absolute;
+  .org-header {
+    font-size: 27px;
+  }
 
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    .orgEntry .org-header {
-        font-size: 27px;
-    }
-    .orgEntry .content-container {
-        width: 100%;
-        height: calc(100% - 87px);
-        display: grid;
-        grid-template-columns: minmax(600px, 3fr) minmax(400px, 2fr);
-        column-gap: 14px;
-        justify-items: center;
-        align-items: center;
-    }
-    .orgEntry .content-container .imgs-cont {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-    }
-    .orgEntry .content-container .imgs-cont :global(img) {
-        max-width: 400px;
-        width: 100%;
-        max-height: 70%;
-        width: auto;
-    }
-    .orgEntry .content-container .org-overview-cont {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+  .imgs-cont {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
 
-        height: 100%;
-    }
-    .orgEntry .content-container .org-overview-cont .overview {
-        width: 100%;
-        margin-top: 14px;
-        font-size: 20px;
-        text-align: center;
-    }
-    .orgEntry .content-container .org-overview-cont .org-link-cont {
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-    }
-    .orgEntry .content-container .org-overview-cont .org-link-cont .name {
-        height: 100%;
-        margin-right: 7px;
-        font-size: 20px;
-    }
-    .orgEntry .content-container .org-overview-cont .org-link-cont .org-link {
-        padding-top: 3px;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        color: var(--highlight);
-        cursor: pointer;
-        font-size: 14px;
-    }
-    .orgEntry .content-container .org-overview-cont .org-link-cont .org-link:hover {
-        color: var(--highlight-hover);
-    }
-    .orgEntry .msg {
-        margin-top: 56px;
-        font-size: 24px;
-    }
+  .imgs-cont :global(img) {
+    max-width: 400px;
+    width: 100%;
+    max-height: 70%;
+    width: auto;
+  }
+
+  .org-overview-cont {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    height: 100%;
+  }
+
+  .overview {
+    width: 100%;
+    margin-top: 14px;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .org-link-cont {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .name {
+    height: 100%;
+    margin-right: 7px;
+    font-size: 20px;
+  }
+
+  .org-link {
+    padding-top: 3px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: var(--highlight);
+    cursor: pointer;
+    font-size: 14px;
+  }
+  .org-link:hover {
+    color: var(--highlight-hover);
+  }
 </style>

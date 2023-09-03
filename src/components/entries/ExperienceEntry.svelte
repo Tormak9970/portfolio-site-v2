@@ -1,84 +1,58 @@
 <script lang="ts">
-    import { beforeUpdate } from "svelte";
-    import { fly } from "svelte/transition";
+  import Entry from "./Entry.svelte";
 
-    import { scrollDir, allowScroll } from "../../Stores";
-    import { getTransitions } from "../../utils";
-
-    export let entryData:Experience;
-    export let isLast:boolean;
-
-    let inParams: any;
-    let outParams: any;
-
-    function handleTransEnd(): void { $allowScroll = true; }
-
-    beforeUpdate(() => {
-        const transition = getTransitions($scrollDir);
-        inParams = transition.in;
-        outParams = transition.out;
-    });
+  export let entryData: Experience;
+  export let isLast: boolean;
 </script>
 
-<div id="{entryData.company.toLocaleLowerCase().concat("-").concat(entryData.position.toLocaleLowerCase()).replaceAll(" ", "-")}" class="experienceEntry" in:fly|local={inParams} out:fly|local={outParams} on:introend="{handleTransEnd}">
-    <div class="experience-header">
-        <h2>{entryData.position}</h2>
+<Entry isLast={isLast} useContentContainer={false}>
+  <div class="experience-header">
+    <h2>{entryData.position}</h2>
+  </div>
+  <div class="content-container">
+    <div class="img-cont">
+      <img src={entryData.image} alt={entryData.position} />
     </div>
-    {#if entryData.image}
-        <div class="content-container">
-            <div class="img-cont">
-                <img src="{entryData.image}" alt="{entryData.position}">
-            </div>
-            <div>
-                <div class="description">
-                    <div>Company: {entryData.company}</div>
-                </div>
-                <div class="description">
-                    <p>{entryData.description}</p>
-                </div>
-            </div>
-        </div>
-    {:else}
-        <div>
-            <div class="description">
-                <div>Company: {entryData.company}</div>
-            </div>
-            <div class="description">
-                <p>{entryData.description}</p>
-            </div>
-        </div>
-    {/if}
-
-    <div class="msg">{isLast ? "To be continued..." : "Scroll to continue..."}</div>
-</div>
+    <div>
+      <div class="description">
+        <div>Company: {entryData.company}</div>
+      </div>
+      <div class="description">
+        <p>{entryData.description}</p>
+      </div>
+    </div>
+  </div>
+</Entry>
 
 <style>
-    .experienceEntry {
-        width: 64%;
+  .experience-header {
+    font-size: 27px;
+  }
 
-        position: absolute;
+  .description {
+    width: 100%;
+    margin-top: 14px;
+    font-size: 24px;
+    text-align: center;
+  }
 
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-    }
+  .content-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(400px, 1fr));
+    column-gap: 14px;
+  }
 
-    .experienceEntry .experience-header { font-size: 27px; }
-    .experienceEntry .description { width: 100%; margin-top: 14px; font-size: 24px; text-align: center; }
-    .experienceEntry .content-container {
-        width: 100%;
-        display: grid;
-        grid-template-columns: repeat(2, minmax(400px, 1fr));
-        column-gap: 14px;
-    }
-    .experienceEntry > .content-container > .img-cont {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-    .experienceEntry > .content-container > .img-cont > img { max-width: 100%; height: auto; margin-top: 14px; }
-    .experienceEntry > .msg { margin-top: 56px; font-size: 24px; }
+  .img-cont {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .img-cont > img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 14px;
+  }
 </style>

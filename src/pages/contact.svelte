@@ -2,13 +2,8 @@
   import { fade } from "svelte/transition";
   import { beforeUrlChange } from "@roxi/routify";
 
-  let showThank: boolean;
-
-  $: showThank = false;
-
-  let showCrumb: boolean;
-
-  $: showCrumb = false;
+  let showThank = false;
+  let showCrumb = false;
 
   function copyToClipboard() {
     copyTextToClipboard("Tormak9970@gmail.com");
@@ -29,25 +24,22 @@
     );
   }
 
-  function showBreadcrumb(msg: string) {
-    document.getElementById("breadCrumbCont").innerHTML = msg;
+  function showBreadcrumb(message: string) {
+    document.getElementById("breadCrumbCont").innerHTML = message;
     showCrumb = true;
     setTimeout(() => {
       showCrumb = false;
     }, 3000);
   }
 
-  // @ts-ignore
   $beforeUrlChange(() => {
     showThank = false;
     return true;
   });
 
   function handleSubmit(e: Event) {
-    e.preventDefault();
-    const form = <HTMLFormElement>e.currentTarget;
+    const form = e.currentTarget as HTMLFormElement;
     const data = new FormData(form);
-    // @ts-ignore
     let numErrored = 0;
 
     for (const [key, value] of data) {
@@ -87,7 +79,7 @@
   }
 </script>
 
-<div id="infoSection" in:fade>
+<div class="contact-form" in:fade>
   <h2 class="info-header">Get in touch</h2>
   <div class="info-container">
     <div class="blurb">
@@ -114,7 +106,7 @@
           action="https://formsubmit.co/Tormak9970@gmail.com"
           method="POST"
           id="contactForm"
-          on:submit|stopPropagation={handleSubmit}
+          on:submit|stopPropagation|preventDefault={handleSubmit}
         >
           <label for="email">Email Adress</label>
           <input
@@ -156,9 +148,7 @@
 </div>
 
 <style>
-  @import "/theme.css";
-
-  #infoSection {
+  .contact-form {
     width: 100%;
     height: 100%;
 
@@ -167,7 +157,7 @@
     align-items: center;
   }
 
-  #infoSection .info-header {
+  .info-header {
     margin: 7px;
 
     padding: 0;
@@ -175,7 +165,7 @@
     font-size: 1.45em;
   }
 
-  #infoSection .info-container {
+  .info-container {
     height: calc(100% - 49px);
     width: calc(100% - 20px);
 
@@ -184,12 +174,12 @@
     align-items: center;
     justify-content: flex-start;
   }
-  #infoSection .info-container .blurb {
+  .info-container .blurb {
     max-width: 400px;
     width: calc(100% - 20px);
     text-align: center;
   }
-  #infoSection .info-container .blurb .email-link {
+  .info-container .blurb .email-link {
     font-style: normal;
     text-decoration: underline;
 
@@ -197,10 +187,10 @@
 
     cursor: pointer;
   }
-  #infoSection .info-container .blurb .email-link:hover {
+  .info-container .blurb .email-link:hover {
     color: var(--highlight-hover);
   }
-  #infoSection .info-container .form-wrapper {
+  .info-container .form-wrapper {
     max-width: 400px;
     width: calc(100% - 20px);
 
@@ -214,17 +204,17 @@
 
     border-radius: 4px;
   }
-  #infoSection .info-container .form-wrapper #contactForm {
+  .info-container .form-wrapper #contactForm {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
   }
-  #infoSection .info-container .form-wrapper #contactForm label {
+  .info-container .form-wrapper #contactForm label {
     width: calc(100% - 10px);
     font-size: 18px;
   }
-  #infoSection .info-container .form-wrapper #contactForm input {
+  .info-container .form-wrapper #contactForm input {
     width: calc(100% - 10px);
 
     margin-bottom: 7px;
@@ -238,10 +228,10 @@
 
     color: var(--font-color);
   }
-  #infoSection .info-container .form-wrapper #contactForm input:focus {
+  .info-container .form-wrapper #contactForm input:focus {
     outline: 1px solid var(--highlight);
   }
-  #infoSection .info-container .form-wrapper #contactForm textarea {
+  .info-container .form-wrapper #contactForm textarea {
     width: calc(100% - 10px);
 
     margin-bottom: 7px;
@@ -257,10 +247,10 @@
 
     resize: none;
   }
-  #infoSection .info-container .form-wrapper #contactForm textarea:focus {
+  .info-container .form-wrapper #contactForm textarea:focus {
     outline: 1px solid var(--highlight);
   }
-  #infoSection .info-container .form-wrapper #contactForm button {
+  .info-container .form-wrapper #contactForm button {
     height: 24px;
     width: 80px;
 
@@ -279,14 +269,14 @@
 
     color: var(--font-color);
   }
-  #infoSection .info-container .form-wrapper #contactForm button:hover {
+  .info-container .form-wrapper #contactForm button:hover {
     background-color: var(--highlight-hover);
   }
-  #infoSection .info-container .form-wrapper #contactForm button:focus {
+  .info-container .form-wrapper #contactForm button:focus {
     outline: none;
   }
 
-  #infoSection .info-container .thank-cont {
+  .info-container .thank-cont {
     max-width: 400px;
     width: calc(100% - 20px);
 
@@ -294,12 +284,12 @@
     flex-direction: column;
     align-items: center;
   }
-  #infoSection .info-container .thank-cont p {
+  .info-container .thank-cont p {
     font-size: 16px;
     text-align: center;
   }
 
-  #infoSection .breadcrump-cont {
+  .breadcrump-cont {
     position: absolute;
 
     padding: 6px 10px;
@@ -313,11 +303,11 @@
 
     transition: bottom 0.4s;
   }
-  #infoSection .breadcrump-cont #breadCrumbCont {
+  .breadcrump-cont #breadCrumbCont {
     font-size: 14px;
   }
 
-  #infoSection .hidden {
+  .hidden {
     bottom: -40px;
   }
 </style>
