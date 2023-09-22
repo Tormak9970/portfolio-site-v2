@@ -3,11 +3,12 @@
 
 	import edjsHTML from "editorjs-html";
 
-	import { archive } from '../linkConfig';
+	import { archive, projects } from '../linkConfig';
 
+  export let shouldUseArchive = false
 	export let projectKey:string;
 
-	let entryData = archive.get(projectKey);
+	let entryData = (shouldUseArchive ? archive : projects).get(projectKey);
 
 	let isRelative = false;
 

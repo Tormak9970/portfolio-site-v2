@@ -4,4 +4,4 @@
 	export let projectKey:string;
 </script>
 
-<ProjectDetails projectKey={projectKey} />
+<ProjectDetails projectKey={projectKey} shouldUseArchive />
