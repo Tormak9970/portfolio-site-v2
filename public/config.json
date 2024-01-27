@@ -1156,7 +1156,7 @@
 			"difficulty": "Moderate",
 			"description": "TabMaster is a Decky plugin for the Valve Steam Deck that gives users full control over their library tabs. From making custom tabs, to replacing existing ones, it can do it all, with a robust filtering system to allow for extremely complexed filtering.",
 			"content": {
-				"time": 1706280780229,
+				"time": 1706374162836,
 				"blocks": [
 					{
 						"type": "header",
@@ -1184,15 +1184,19 @@
 							"style": "unordered",
 							"items": [
 								{
-									"content": "Ability to make custom tabs",
+									"content": "Make custom tabs",
 									"items": []
 								},
 								{
-									"content": "Ability to hide existing tabs",
+									"content": "Hide existing tabs",
 									"items": []
 								},
 								{
-									"content": "Ability to reorder both custom and existing tabs",
+									"content": "Reorder both custom and existing tabs",
+									"items": []
+								},
+								{
+									"content": "Tab profiles for creating interchangeable ",
 									"items": []
 								},
 								{
@@ -1295,7 +1299,7 @@
 									"items": []
 								},
 								{
-									"content": "",
+									"content": "MicroSD Card - Selects apps that are present on the inserted/specific MicroSD Car",
 									"items": []
 								}
 							]
