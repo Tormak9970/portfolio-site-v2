@@ -54,7 +54,8 @@
 						"type": "image",
 						"data": {
 							"file": {
-								"url": "./images/projects/final-ui_v2.7.0.png"
+								"url": "https://asset.localhost/C%3A%5CUsers%5CTormak%5CDocuments%5CGitHub%5Cportfolio-site-v2%5Cpublic%5Cimages%5Cprojects%5Cfinal-ui_v2.7.0.png",
+								"webUrl": "./images/projects/final-ui_v2.7.0.png"
 							},
 							"caption": "",
 							"withBorder": false,
@@ -1150,12 +1151,12 @@
 			"index": 1,
 			"category": "steam-deck",
 			"name": "TabMaster",
-			"time": "46 hours",
+			"time": "75 hours",
 			"status": "In Progress",
 			"difficulty": "Moderate",
 			"description": "TabMaster is a Decky plugin for the Valve Steam Deck that gives users full control over their library tabs. From making custom tabs, to replacing existing ones, it can do it all, with a robust filtering system to allow for extremely complexed filtering.",
 			"content": {
-				"time": 1693493705230,
+				"time": 1706280780229,
 				"blocks": [
 					{
 						"type": "header",
@@ -1252,6 +1253,50 @@
 								{
 									"content": "Merge Group - a sub group of filters that includes games that pass the sub group",
 									"items": []
+								},
+								{
+									"content": "Platform - Selects Steam or non-Steam apps",
+									"items": []
+								},
+								{
+									"content": "Deck Compatibility - Selects apps that have a specific Steam Deck compatibility status",
+									"items": []
+								},
+								{
+									"content": "Review Score - Selects apps that are greater/less than the provided Metacritic/Steam review score",
+									"items": []
+								},
+								{
+									"content": "Time Played - Selects apps that have a play time greater/less than the provided time",
+									"items": []
+								},
+								{
+									"content": "Size on Disk - Selects apps that have an install size greater/less than the provided size",
+									"items": []
+								},
+								{
+									"content": "Release Date - Selects apps that were released before/after the provided date",
+									"items": []
+								},
+								{
+									"content": "Last Played - Selects apps that were last played before/after the provided date",
+									"items": []
+								},
+								{
+									"content": "Demo - Selects apps that are/aren't demos",
+									"items": []
+								},
+								{
+									"content": "Streamable - Selects apps that can/can't be streamed from another computer",
+									"items": []
+								},
+								{
+									"content": "Steam Features - Selects apps that support specific Steam Features",
+									"items": []
+								},
+								{
+									"content": "",
+									"items": []
 								}
 							]
 						}
@@ -1287,14 +1332,14 @@
 			},
 			"link": "https://github.com/Tormak9970/TabMaster",
 			"isRelative": false,
-			"image": "./images/projects/tabmaster-preview.png",
+			"image": "./images/projects/thumbnail.png",
 			"organization": "none"
 		},
 		"css-loader-for-vs-code": {
 			"index": 2,
 			"category": "miscellaneous",
 			"name": "CSS Loader for VS Code",
-			"time": "20 hours",
+			"time": "25 hours",
 			"status": "Complete",
 			"difficulty": "Moderate",
 			"description": "CSS Loader for VS Code is a Visual Studio Code extension that adds intellisense support and file icons to CSS Loader theme.json files. This makes it easier to catch mistakes, as well as improves the developer experience when making themes.",
@@ -1725,344 +1770,8 @@
 			"image": "./images/projects/decky-steamgriddb.png",
 			"organization": "steamgriddb"
 		},
-		"bash-shortcuts": {
-			"index": 5,
-			"category": "steam-deck",
-			"name": "Bash Shortcuts",
-			"time": "70 hours",
-			"status": "Complete",
-			"difficulty": "Complex",
-			"description": "This project is a plugin for Valve's Steam Deck handheld game console that allows users to run scripts and apps from game mode. It supports passing flags to scripts with a variety of values, and hooks for notable events that can occur while using the device. The name comes from the plugin using bash to run other scripts in order to trick Steam into thinking they are games.",
-			"content": {
-				"time": 1686665149067,
-				"blocks": [
-					{
-						"id": "nZjfcxUvB2",
-						"type": "header",
-						"data": {
-							"text": "Description",
-							"level": 2
-						}
-					},
-					{
-						"id": "xPDAeM17W0",
-						"type": "paragraph",
-						"data": {
-							"text": "This project is a plugin for Valve's Steam Deck handheld game console that allows users to run scripts and apps from game mode. It supports passing flags to scripts with a variety of values, and hooks for notable events that can occur while using the device. The name comes from the plugin using bash to run other scripts in order to trick Steam into thinking they are games."
-						}
-					},
-					{
-						"id": "ZcPh5ZImZc",
-						"type": "header",
-						"data": {
-							"text": "Update v2.0.3",
-							"level": 2
-						}
-					},
-					{
-						"id": "LlkMa_AAqK",
-						"type": "list",
-						"data": {
-							"style": "unordered",
-							"items": [
-								{
-									"content": "Fixed issues caused by changes to the SteamClient API",
-									"items": []
-								},
-								{
-									"content": "Fixed the game start hook not running as intended",
-									"items": []
-								},
-								{
-									"content": "Fixed a typo causing non app shortcuts to break",
-									"items": []
-								}
-							]
-						}
-					},
-					{
-						"id": "gGJoITC9hm",
-						"type": "header",
-						"data": {
-							"text": "Update v2.0.0",
-							"level": 2
-						}
-					},
-					{
-						"id": "Lp5gN5R84O",
-						"type": "paragraph",
-						"data": {
-							"text": "Bash Shortcuts is now feature complete."
-						}
-					},
-					{
-						"id": "8tNnFLMuyb",
-						"type": "list",
-						"data": {
-							"style": "unordered",
-							"items": [
-								{
-									"content": "Switched to the new reorderable list",
-									"items": []
-								},
-								{
-									"content": "Added support for running multiple shortcuts at once",
-									"items": []
-								},
-								{
-									"content": "Switched over to instance model",
-									"items": []
-								},
-								{
-									"content": "Plugin now deletes any leftover instances on boot",
-									"items": []
-								},
-								{
-									"content": "Added support for killing long running shortcuts",
-									"items": []
-								},
-								{
-									"content": "Plugin now uses the new Decky log directory",
-									"items": []
-								},
-								{
-									"content": "Plugin now uses the new Decky settings manager",
-									"items": []
-								},
-								{
-									"content": "UI now updates properly when the shortcut is exited from outside the plugin",
-									"items": []
-								},
-								{
-									"content": "Added custom deployment scripts",
-									"items": []
-								},
-								{
-									"content": "Implemented WebSocket to allow for backend -&gt; frontend communication",
-									"items": [
-										{
-											"content": "<a target=\"_blank\" href=\"https://github.com/pikhovkin/simple-websocket-server\">Docs for websocket server I used</a>",
-											"items": []
-										},
-										{
-											"content": "<a target=\"_blank\" href=\"https://github.com/websocket-client/websocket-client\">Docs for the websocket client I used</a>",
-											"items": []
-										}
-									]
-								},
-								{
-									"content": "Non app shortcuts now show a toast when the finish",
-									"items": []
-								},
-								{
-									"content": "Switched the manager window to be called config and added icons to better align with Steam’s settings window",
-									"items": []
-								},
-								{
-									"content": "Plugin now has a setting for WebSocket Port",
-									"items": []
-								},
-								{
-									"content": "Fixed apps not opening fullscreen",
-									"items": [
-										{
-											"content": "Switched from using wmctrl (which Valve no longer installs automatically) to Xdotool",
-											"items": []
-										}
-									]
-								},
-								{
-									"content": "Fixed the error that was showing up in konsole when launched",
-									"items": []
-								},
-								{
-									"content": "Added setting to enable/disable flags",
-									"items": []
-								},
-								{
-									"content": "All non app shortcuts are now given 5 flags",
-									"items": [
-										{
-											"content": "Date",
-											"items": []
-										},
-										{
-											"content": "Time",
-											"items": []
-										},
-										{
-											"content": "Current user's username",
-											"items": []
-										},
-										{
-											"content": "Current gameId",
-											"items": []
-										},
-										{
-											"content": "Current game name",
-											"items": []
-										}
-									]
-								},
-								{
-									"content": "Added guides to config window",
-									"items": [
-										{
-											"content": "Using <a target=\"_blank\" href=\"https://github.com/markdown-it/markdown-it\">Markdown-it</a> for parsing the markdown",
-											"items": []
-										}
-									]
-								},
-								{
-									"content": "Added hooks for:",
-									"items": [
-										{
-											"content": "Log In and Out",
-											"items": []
-										},
-										{
-											"content": "Game Start and End",
-											"items": []
-										},
-										{
-											"content": "Game Install, Update, and Uninstall",
-											"items": []
-										},
-										{
-											"content": "Achievement Unlocked",
-											"items": []
-										},
-										{
-											"content": "Screenshot Taken",
-											"items": []
-										},
-										{
-											"content": "Deck Sleep and Shutdown",
-											"items": []
-										}
-									]
-								},
-								{
-									"content": "Plugin now checks if shortcut is running when edited/deleted and kill it<a target=\"_blank\" href=\"https://github.com/pikhovkin/simple-websocket-server\"></a>",
-									"items": []
-								}
-							]
-						}
-					},
-					{
-						"id": "Z4BivgwJkR",
-						"type": "header",
-						"data": {
-							"text": "Update v1.2.0",
-							"level": 2
-						}
-					},
-					{
-						"id": "1MnkECsl_4",
-						"type": "list",
-						"data": {
-							"style": "unordered",
-							"items": [
-								{
-									"content": "Fixed issue where the plugin deleted other shortcuts",
-									"items": []
-								},
-								{
-									"content": "Fixed multiple shortcuts getting created",
-									"items": []
-								},
-								{
-									"content": "Fixed issues on non-stable SteamOS channels",
-									"items": []
-								},
-								{
-									"content": "Steam was not running shortcutsRunner.sh",
-									"items": [
-										{
-											"content": "Issue with line endings, fixed with dos2unix",
-											"items": []
-										}
-									]
-								},
-								{
-									"content": "Added support for non-default user names and devices other than steamdecks",
-									"items": []
-								},
-								{
-									"content": "Fixed bug where plugin would lag UI from infinite refreshes when there were 0 shortcuts",
-									"items": []
-								},
-								{
-									"content": "Added a lot of logging to help with error tracking",
-									"items": []
-								}
-							]
-						}
-					},
-					{
-						"id": "mXmVM7rad_",
-						"type": "header",
-						"data": {
-							"text": "Purpose",
-							"level": 2
-						}
-					},
-					{
-						"id": "xevYl-aYqV",
-						"type": "list",
-						"data": {
-							"style": "unordered",
-							"items": [
-								{
-									"content": "Wanted to contribute to the homebrew Steam Deck community",
-									"items": []
-								},
-								{
-									"content": "Wanted a more customizable alternative to the existing keyboards",
-									"items": []
-								},
-								{
-									"content": "Wanted customizable keyboards that worked offline",
-									"items": []
-								}
-							]
-						}
-					},
-					{
-						"id": "KgQPukLNZY",
-						"type": "header",
-						"data": {
-							"text": "Conclusion",
-							"level": 2
-						}
-					},
-					{
-						"id": "qXVdi9yViM",
-						"type": "list",
-						"data": {
-							"style": "unordered",
-							"items": [
-								{
-									"content": "Came up with a unique idea for the homebrew community",
-									"items": []
-								},
-								{
-									"content": "Created a highly customizable keyboard that also works offline",
-									"items": []
-								}
-							]
-						}
-					}
-				],
-				"version": "2.27.0"
-			},
-			"link": "https://github.com/Tormak9970/bash-shortcuts",
-			"isRelative": false,
-			"image": "./images/projects/bash-shortcuts-preview.png",
-			"organization": "steam-deck-homebrew"
-		},
 		"portfolio-v2": {
-			"index": 6,
+			"index": 5,
 			"category": "web-dev",
 			"name": "Portfolio V2",
 			"time": "70 hours",
@@ -2427,7 +2136,7 @@
 			"organization": "none"
 		},
 		"untitled-card-game": {
-			"index": 7,
+			"index": 6,
 			"category": "web-games",
 			"name": "Untitled Card Game",
 			"time": "35 hours",
@@ -2538,7 +2247,7 @@
 			"organization": "none"
 		},
 		"portfolio-updater": {
-			"index": 8,
+			"index": 7,
 			"category": "software-engineering",
 			"name": "Portfolio Updater",
 			"time": "55 hours",
@@ -2818,7 +2527,7 @@
 			"organization": "none"
 		},
 		"steam-deck-themes": {
-			"index": 9,
+			"index": 8,
 			"category": "steam-deck",
 			"name": "Steam Deck Themes",
 			"time": "24 hours",
@@ -3006,7 +2715,7 @@
 			"organization": "deck-themes"
 		},
 		"torc-character-designer": {
-			"index": 10,
+			"index": 9,
 			"category": "web-dev",
 			"name": "TORC Character Designer",
 			"time": "350+ hours",
@@ -3411,7 +3120,7 @@
 			"organization": "torcommunity"
 		},
 		"decky-frontend-lib": {
-			"index": 11,
+			"index": 10,
 			"category": "steam-deck",
 			"name": "Decky Frontend Lib",
 			"time": "6 hours",
@@ -3520,7 +3229,7 @@
 			"organization": "steam-deck-homebrew"
 		},
 		"vite-plugin-sitemap": {
-			"index": 12,
+			"index": 11,
 			"category": "web-dev",
 			"name": "Vite-Plugin-Sitemap",
 			"time": "20 hours",
@@ -3609,8 +3318,344 @@
 		}
 	},
 	"archive": {
-		"slicers-gui": {
+		"bash-shortcuts": {
 			"index": 0,
+			"category": "steam-deck",
+			"name": "Bash Shortcuts",
+			"time": "70 hours",
+			"status": "Complete",
+			"difficulty": "Complex",
+			"description": "This project is a plugin for Valve's Steam Deck handheld game console that allows users to run scripts and apps from game mode. It supports passing flags to scripts with a variety of values, and hooks for notable events that can occur while using the device. The name comes from the plugin using bash to run other scripts in order to trick Steam into thinking they are games.",
+			"content": {
+				"time": 1686665149067,
+				"blocks": [
+					{
+						"id": "nZjfcxUvB2",
+						"type": "header",
+						"data": {
+							"text": "Description",
+							"level": 2
+						}
+					},
+					{
+						"id": "xPDAeM17W0",
+						"type": "paragraph",
+						"data": {
+							"text": "This project is a plugin for Valve's Steam Deck handheld game console that allows users to run scripts and apps from game mode. It supports passing flags to scripts with a variety of values, and hooks for notable events that can occur while using the device. The name comes from the plugin using bash to run other scripts in order to trick Steam into thinking they are games."
+						}
+					},
+					{
+						"id": "ZcPh5ZImZc",
+						"type": "header",
+						"data": {
+							"text": "Update v2.0.3",
+							"level": 2
+						}
+					},
+					{
+						"id": "LlkMa_AAqK",
+						"type": "list",
+						"data": {
+							"style": "unordered",
+							"items": [
+								{
+									"content": "Fixed issues caused by changes to the SteamClient API",
+									"items": []
+								},
+								{
+									"content": "Fixed the game start hook not running as intended",
+									"items": []
+								},
+								{
+									"content": "Fixed a typo causing non app shortcuts to break",
+									"items": []
+								}
+							]
+						}
+					},
+					{
+						"id": "gGJoITC9hm",
+						"type": "header",
+						"data": {
+							"text": "Update v2.0.0",
+							"level": 2
+						}
+					},
+					{
+						"id": "Lp5gN5R84O",
+						"type": "paragraph",
+						"data": {
+							"text": "Bash Shortcuts is now feature complete."
+						}
+					},
+					{
+						"id": "8tNnFLMuyb",
+						"type": "list",
+						"data": {
+							"style": "unordered",
+							"items": [
+								{
+									"content": "Switched to the new reorderable list",
+									"items": []
+								},
+								{
+									"content": "Added support for running multiple shortcuts at once",
+									"items": []
+								},
+								{
+									"content": "Switched over to instance model",
+									"items": []
+								},
+								{
+									"content": "Plugin now deletes any leftover instances on boot",
+									"items": []
+								},
+								{
+									"content": "Added support for killing long running shortcuts",
+									"items": []
+								},
+								{
+									"content": "Plugin now uses the new Decky log directory",
+									"items": []
+								},
+								{
+									"content": "Plugin now uses the new Decky settings manager",
+									"items": []
+								},
+								{
+									"content": "UI now updates properly when the shortcut is exited from outside the plugin",
+									"items": []
+								},
+								{
+									"content": "Added custom deployment scripts",
+									"items": []
+								},
+								{
+									"content": "Implemented WebSocket to allow for backend -&gt; frontend communication",
+									"items": [
+										{
+											"content": "<a target=\"_blank\" href=\"https://github.com/pikhovkin/simple-websocket-server\">Docs for websocket server I used</a>",
+											"items": []
+										},
+										{
+											"content": "<a target=\"_blank\" href=\"https://github.com/websocket-client/websocket-client\">Docs for the websocket client I used</a>",
+											"items": []
+										}
+									]
+								},
+								{
+									"content": "Non app shortcuts now show a toast when the finish",
+									"items": []
+								},
+								{
+									"content": "Switched the manager window to be called config and added icons to better align with Steam’s settings window",
+									"items": []
+								},
+								{
+									"content": "Plugin now has a setting for WebSocket Port",
+									"items": []
+								},
+								{
+									"content": "Fixed apps not opening fullscreen",
+									"items": [
+										{
+											"content": "Switched from using wmctrl (which Valve no longer installs automatically) to Xdotool",
+											"items": []
+										}
+									]
+								},
+								{
+									"content": "Fixed the error that was showing up in konsole when launched",
+									"items": []
+								},
+								{
+									"content": "Added setting to enable/disable flags",
+									"items": []
+								},
+								{
+									"content": "All non app shortcuts are now given 5 flags",
+									"items": [
+										{
+											"content": "Date",
+											"items": []
+										},
+										{
+											"content": "Time",
+											"items": []
+										},
+										{
+											"content": "Current user's username",
+											"items": []
+										},
+										{
+											"content": "Current gameId",
+											"items": []
+										},
+										{
+											"content": "Current game name",
+											"items": []
+										}
+									]
+								},
+								{
+									"content": "Added guides to config window",
+									"items": [
+										{
+											"content": "Using <a target=\"_blank\" href=\"https://github.com/markdown-it/markdown-it\">Markdown-it</a> for parsing the markdown",
+											"items": []
+										}
+									]
+								},
+								{
+									"content": "Added hooks for:",
+									"items": [
+										{
+											"content": "Log In and Out",
+											"items": []
+										},
+										{
+											"content": "Game Start and End",
+											"items": []
+										},
+										{
+											"content": "Game Install, Update, and Uninstall",
+											"items": []
+										},
+										{
+											"content": "Achievement Unlocked",
+											"items": []
+										},
+										{
+											"content": "Screenshot Taken",
+											"items": []
+										},
+										{
+											"content": "Deck Sleep and Shutdown",
+											"items": []
+										}
+									]
+								},
+								{
+									"content": "Plugin now checks if shortcut is running when edited/deleted and kill it<a target=\"_blank\" href=\"https://github.com/pikhovkin/simple-websocket-server\"></a>",
+									"items": []
+								}
+							]
+						}
+					},
+					{
+						"id": "Z4BivgwJkR",
+						"type": "header",
+						"data": {
+							"text": "Update v1.2.0",
+							"level": 2
+						}
+					},
+					{
+						"id": "1MnkECsl_4",
+						"type": "list",
+						"data": {
+							"style": "unordered",
+							"items": [
+								{
+									"content": "Fixed issue where the plugin deleted other shortcuts",
+									"items": []
+								},
+								{
+									"content": "Fixed multiple shortcuts getting created",
+									"items": []
+								},
+								{
+									"content": "Fixed issues on non-stable SteamOS channels",
+									"items": []
+								},
+								{
+									"content": "Steam was not running shortcutsRunner.sh",
+									"items": [
+										{
+											"content": "Issue with line endings, fixed with dos2unix",
+											"items": []
+										}
+									]
+								},
+								{
+									"content": "Added support for non-default user names and devices other than steamdecks",
+									"items": []
+								},
+								{
+									"content": "Fixed bug where plugin would lag UI from infinite refreshes when there were 0 shortcuts",
+									"items": []
+								},
+								{
+									"content": "Added a lot of logging to help with error tracking",
+									"items": []
+								}
+							]
+						}
+					},
+					{
+						"id": "mXmVM7rad_",
+						"type": "header",
+						"data": {
+							"text": "Purpose",
+							"level": 2
+						}
+					},
+					{
+						"id": "xevYl-aYqV",
+						"type": "list",
+						"data": {
+							"style": "unordered",
+							"items": [
+								{
+									"content": "Wanted to contribute to the homebrew Steam Deck community",
+									"items": []
+								},
+								{
+									"content": "Wanted a more customizable alternative to the existing keyboards",
+									"items": []
+								},
+								{
+									"content": "Wanted customizable keyboards that worked offline",
+									"items": []
+								}
+							]
+						}
+					},
+					{
+						"id": "KgQPukLNZY",
+						"type": "header",
+						"data": {
+							"text": "Conclusion",
+							"level": 2
+						}
+					},
+					{
+						"id": "qXVdi9yViM",
+						"type": "list",
+						"data": {
+							"style": "unordered",
+							"items": [
+								{
+									"content": "Came up with a unique idea for the homebrew community",
+									"items": []
+								},
+								{
+									"content": "Created a highly customizable keyboard that also works offline",
+									"items": []
+								}
+							]
+						}
+					}
+				],
+				"version": "2.27.0"
+			},
+			"link": "https://github.com/Tormak9970/bash-shortcuts",
+			"isRelative": false,
+			"image": "./images/projects/bash-shortcuts-preview.png",
+			"organization": "steam-deck-homebrew"
+		},
+		"slicers-gui": {
+			"index": 1,
 			"category": "software-engineering",
 			"name": "Slicers GUI",
 			"time": "430+ hours",
@@ -3754,7 +3799,7 @@
 			"organization": "swtor-slicers"
 		},
 		"simple-sudoku": {
-			"index": 1,
+			"index": 2,
 			"category": "web-games",
 			"name": "Simple Sudoku",
 			"time": "35 hours",
@@ -3850,7 +3895,7 @@
 			"organization": "none"
 		},
 		"three.js-marching-cubes": {
-			"index": 2,
+			"index": 3,
 			"category": "web-dev",
 			"name": "Three.js Marching Cubes",
 			"time": "11 hours",
@@ -4485,7 +4530,7 @@
 			"organization": "none"
 		},
 		"portfolio-v1": {
-			"index": 11,
+			"index": 10,
 			"category": "web-dev",
 			"name": "Portfolio V1",
 			"time": "25 hours",
@@ -4663,7 +4708,7 @@
 			"organization": "none"
 		},
 		"intro-to-web-dev-camp": {
-			"index": 12,
+			"index": 11,
 			"category": "education",
 			"name": "Intro to web dev camp",
 			"time": "30 hours",
@@ -4755,7 +4800,7 @@
 			"organization": "none"
 		},
 		"tetris": {
-			"index": 13,
+			"index": 12,
 			"category": "web-games",
 			"name": "Tetris",
 			"time": "30 hours",
@@ -4847,7 +4892,7 @@
 			"organization": "none"
 		},
 		"minesweeper": {
-			"index": 14,
+			"index": 13,
 			"category": "web-games",
 			"name": "Minesweeper",
 			"time": "15 hours",
@@ -4939,7 +4984,7 @@
 			"organization": "none"
 		},
 		"pong": {
-			"index": 15,
+			"index": 14,
 			"category": "web-games",
 			"name": "Pong",
 			"time": "10 hours",
@@ -5028,6 +5073,102 @@
 			"link": "https://pong.travislane.dev",
 			"isRelative": false,
 			"image": "./images/projects/Pong.png",
+			"organization": "none"
+		},
+		"": {
+			"index": 2,
+			"category": "web-games",
+			"name": "Simple Sudoku",
+			"time": "40 hours",
+			"status": "Complete",
+			"difficulty": "Moderate",
+			"description": "I came across an article about different ways to approach generating sudoku puzzles and solving them, and it caught my interest. I thought it would be a fun way to work on my web development skills and create a fun end product I could actually put up online. It was very interesting to explore how to not just generate solvable puzzles, but puzzles that look good to the player.",
+			"content": {
+				"time": 1675718489728,
+				"blocks": [
+					{
+						"id": "Ak6PmaiUqJ",
+						"type": "header",
+						"data": {
+							"text": "Description",
+							"level": 2
+						}
+					},
+					{
+						"id": "ZAx1af6NrV",
+						"type": "paragraph",
+						"data": {
+							"text": "I came across an article about different ways to approach generating sudoku puzzles and solving them, and it caught my interest. I thought it would be a fun way to work on my web development skills and create a fun end product I could actually put up online. It was very interesting to explore how to not just generate solvable puzzles, but puzzles that look good to the player."
+						}
+					},
+					{
+						"id": "3V81lWYhL8",
+						"type": "header",
+						"data": {
+							"text": "Purpose",
+							"level": 2
+						}
+					},
+					{
+						"id": "rIs3bW3TDZ",
+						"type": "list",
+						"data": {
+							"style": "unordered",
+							"items": [
+								{
+									"content": "Wanted to practice implementing responsive design",
+									"items": []
+								},
+								{
+									"content": "Wanted to explore how to create different themes for a website using plain CSS",
+									"items": []
+								},
+								{
+									"content": "Was interested in exploring sudoku board generation and methods of solving",
+									"items": []
+								},
+								{
+									"content": "Wanted to create a polished Progressive Web App (PWA)",
+									"items": []
+								}
+							]
+						}
+					},
+					{
+						"id": "FJvN-7xpWZ",
+						"type": "header",
+						"data": {
+							"text": "Conclusion",
+							"level": 2
+						}
+					},
+					{
+						"id": "dDU_V6jNCL",
+						"type": "list",
+						"data": {
+							"style": "unordered",
+							"items": [
+								{
+									"content": "Came up with a simple strategy for implementing themes into websites",
+									"items": []
+								},
+								{
+									"content": "Got to learn about some of the more complicated features of the Svelte JavaScript library",
+									"items": []
+								},
+								{
+									"content": "Created a polished PWA that can be downloaded on any device or operating system",
+									"items": []
+								}
+							]
+						}
+					}
+				],
+				"version": "2.24.3"
+			},
+			"link": "https://sudoku.travislane.dev/",
+			"isRelative": false,
+			"image": "./images/projects/simple-sudoku-image.png",
 			"organization": "none"
 		}
 	},
