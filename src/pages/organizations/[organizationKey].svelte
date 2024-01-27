@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { goto } from "@roxi/routify";
+  import { goto, url } from "@roxi/routify";
 
 	import { organizations, projects } from '../../linkConfig';
   import { jumpTo as jumpToProj } from "../projects/index.svelte";
@@ -20,14 +20,17 @@
 
 <div class="orgEntry">
   <div class="header-cont">
-    <div class="back-cont"></div>
-    <h2 class="org-header">{orgData.name}</h2>
-    <div class="cit-cont" class:hidden={orgData.link === ""}>
-      <div class="cit-label">Visit:</div>
-      <a class="org-link" href="{orgData.link}" rel="noreferrer noopener" target="_blank">
-        <i class="fas fa-external-link-alt"></i>
+    <div class="cit-cont">
+      <a class="back-cont org-link" href="{$url("/organizations")}">
+        Back
       </a>
     </div>
+		<h2 class="org-header">{orgData.name}</h2>
+		<div class="cit-cont" style="margin-right: 14px;" class:hidden={orgData.link === ""}>
+			<a class="org-link" href="{orgData.link}" rel="noreferrer noopener" target="_blank">
+        Visit
+      </a>
+		</div>
 	</div>
   <div class="org-layout-cont">
     <div class="org-main-img org-img-cont">
@@ -73,24 +76,14 @@
 	}
 	.orgEntry .header-cont {
 		width: 100%;
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		align-items: center;
-		justify-items: center;
+		
+    display: flex;
+    justify-content: space-between;
+
+    max-width: 700px;
 	}
 	.orgEntry .header-cont .back-cont {
-		justify-self: flex-start;
 		margin-left: 14px;
-		height: 100%;
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		font-size: 20px;
-	}
-	.orgEntry .header-cont .back-cont .cit-label {
-		font-size: 16px;
-		height: 100%;
-		margin-right: 7px;
 	}
 	.orgEntry .header-cont .org-header {
 		font-size: 27px;
@@ -108,22 +101,24 @@
 		justify-content: center;
 		align-items: center;
 	}
-	.orgEntry .header-cont .cit-cont .cit-label {
-		margin-right: 7px;
-		font-size: 16px;
-	}
-	.orgEntry .header-cont .cit-cont .org-link {
+	.org-link {
 		text-decoration: none;
-		padding-top: 0px;
 		display: flex;
 		flex-direction: row;
 		align-items: center;
-		color: var(--highlight);
-		cursor: pointer;
-		font-size: 12px;
+
+		color: var(--font-color);
+		font-size: 18px;
+
+    padding: 3px 6px;
+    border-radius: 4px;
+
+    background-color: var(--highlight);
+    
+    cursor: pointer;
 	}
-	.orgEntry .header-cont .cit-cont .org-link:hover { color: var(--highlight-hover); }
-	.orgEntry .header-cont .cit-cont .org-link:focus { color: var(--highlight-hover); }
+	.org-link:hover { background-color: var(--highlight-hover); }
+	.org-link:focus { background-color: var(--highlight-hover); }
 	.orgEntry .header-cont .hidden { visibility: hidden; }
 	.orgEntry .org-layout-cont {
 		width: 100%;

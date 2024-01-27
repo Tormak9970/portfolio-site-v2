@@ -50,18 +50,12 @@
     {@html entryData.description}
   </div>
   {#if isProject(entryData)}
-    <div class="link-cont">
-      <div class="name">Learn more:</div>
-      <div class="proj-link" on:click|stopPropagation="{openProjectEntry}">
-        <i class="fas fa-external-link-alt"></i>
-      </div>
+    <div class="proj-link" on:click|stopPropagation="{openProjectEntry}">
+      Read More
     </div>
   {:else if isOrganization(entryData)}
-    <div class="link-cont">
-      <div class="name">Learn more:</div>
-      <div class="proj-link" on:click|stopPropagation="{openOrganiationEntry}">
-        <i class="fas fa-external-link-alt"></i>
-      </div>
+    <div class="proj-link" on:click|stopPropagation="{openOrganiationEntry}">
+      Read More
     </div>
   {/if}
 </div>
@@ -114,9 +108,8 @@
     margin-bottom: 5px;
   }
 
-  .link-cont {
+  .proj-link {
     margin-top: auto;
-    width: 100%;
 
     display: flex;
     flex-direction: row;
@@ -124,27 +117,15 @@
     align-items: center;
 
     margin-bottom: 5px;
-  }
-  .link-cont > .name {
-    height: 100%;
+
+    padding: 3px 6px;
+    border-radius: 4px;
+
+    background-color: var(--highlight);
     
-    margin-right: 7px;
-    font-size: 20px;
-  }
-
-  .link-cont > .proj-link {
-    padding-top: 3px;
-
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-
-    color: var(--highlight);
-
     cursor: pointer;
-    font-size: 14px;
   }
-  .link-cont > .proj-link:hover {
-    color: var(--highlight-hover);
+  .proj-link:hover, .proj-link:focus {
+    background-color: var(--highlight-hover);
   }
 </style>

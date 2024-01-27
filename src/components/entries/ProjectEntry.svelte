@@ -25,22 +25,23 @@
 </script>
 
 <Entry isLast={isLast}>
-  <div class="imgs-cont" bind:this={contentCont}>
-    {#if !image}
-      <img src="{entryData.image}" alt="{entryData.name}" style="max-height: min(100%, 400px); max-width: min(100%, 652px);">
-    {/if}
+  <div class="imgs-cont">
+    <div class="inner-cont" bind:this={contentCont}>
+      {#if !image}
+        <img src="{entryData.image}" alt="{entryData.name}" style="max-height: min(100%, 400px); max-width: min(100%, 652px);">
+      {/if}
+    </div>
   </div>
   <div class="proj-overview-cont">
     <div class="proj-header">
-      <h2>{entryData.name}</h2>
+      <h2 style="text-align: center;">{entryData.name}</h2>
     </div>
     <p class="overview">
       {@html entryData.description}
     </p>
     <div class="proj-link-cont">
-      <div class="name">Learn more:</div>
       <div class="proj-link" on:click|stopPropagation="{openProjectEntry}">
-        <i class="fas fa-external-link-alt"></i>
+        Read More
       </div>
     </div>
   </div>
@@ -65,6 +66,15 @@
     justify-content: center;
   }
 
+  .inner-cont {
+    overflow: hidden;
+
+    border-radius: 4px;
+
+    height: calc(100% - 14px);
+    width: calc(100% - 14px);
+  }
+
   .proj-overview-cont {
     display: flex;
     flex-direction: column;
@@ -85,21 +95,24 @@
     justify-content: center;
     align-items: center;
   }
-  .name {
-    height: 100%;
-    margin-right: 7px;
-    font-size: 20px;
-  }
   .proj-link {
-    padding-top: 3px;
+    margin-top: auto;
+
     display: flex;
     flex-direction: row;
+    justify-content: center;
     align-items: center;
-    color: var(--highlight);
+
+    margin-bottom: 5px;
+
+    padding: 3px 6px;
+    border-radius: 4px;
+
+    background-color: var(--highlight);
+    
     cursor: pointer;
-    font-size: 14px;
   }
-  .proj-link:hover {
-    color: var(--highlight-hover);
+  .proj-link:hover, .proj-link:focus {
+    background-color: var(--highlight-hover);
   }
 </style>

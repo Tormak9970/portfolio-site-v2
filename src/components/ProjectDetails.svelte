@@ -36,17 +36,20 @@
 
 <div class="projEntry">
   <div class="header-cont">
-		<div class="back-cont"></div>
+		<div class="cit-cont">
+      <a class="back-cont proj-link" href="{$url("/projects")}">
+        Back
+      </a>
+    </div>
 		<h2 class="proj-header">{entryData.name}</h2>
-		<div class="cit-cont" class:hidden={entryData.link === ""}>
-			<div class="cit-label">Visit:</div>
+		<div class="cit-cont" style="margin-right: 14px;" class:hidden={entryData.link === ""}>
 			{#if isRelative}
 				<a class="proj-link" href="{$url(entryData.link)}">
-					<i class="fas fa-external-link-alt"></i>
+					Visit
 				</a>
 			{:else}
 				<a class="proj-link" href="{entryData.link}" rel="noreferrer noopener" target="_blank">
-					<i class="fas fa-external-link-alt"></i>
+					Visit
 				</a>
 			{/if}
 		</div>
@@ -79,24 +82,14 @@
 	}
 	.projEntry .header-cont {
 		width: 100%;
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		align-items: center;
-		justify-items: center;
+		
+    display: flex;
+    justify-content: space-between;
+
+    max-width: 700px;
 	}
 	.projEntry .header-cont .back-cont {
-		justify-self: flex-start;
 		margin-left: 14px;
-		height: 100%;
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		font-size: 20px;
-	}
-	.projEntry .header-cont .back-cont .cit-label {
-		font-size: 16px;
-		height: 100%;
-		margin-right: 7px;
 	}
 	.projEntry .header-cont .proj-header {
 		font-size: 27px;
@@ -107,29 +100,30 @@
 	}
 	.projEntry .header-cont .cit-cont {
 		justify-self: flex-end;
-		margin-right: 14px;
 		height: 100%;
 		display: flex;
 		flex-direction: row;
 		justify-content: center;
 		align-items: center;
 	}
-	.projEntry .header-cont .cit-cont .cit-label {
-		margin-right: 7px;
-		font-size: 20px;
-	}
-	.projEntry .header-cont .cit-cont .proj-link {
+	.proj-link {
 		text-decoration: none;
-		padding-top: 3px;
 		display: flex;
 		flex-direction: row;
 		align-items: center;
-		color: var(--highlight);
-		cursor: pointer;
-		font-size: 14px;
+
+		color: var(--font-color);
+		font-size: 18px;
+
+    padding: 3px 6px;
+    border-radius: 4px;
+
+    background-color: var(--highlight);
+    
+    cursor: pointer;
 	}
-	.projEntry .header-cont .cit-cont .proj-link:hover { color: var(--highlight-hover); }
-	.projEntry .header-cont .cit-cont .proj-link:focus { color: var(--highlight-hover); }
+	.proj-link:hover { background-color: var(--highlight-hover); }
+	.proj-link:focus { background-color: var(--highlight-hover); }
 	.projEntry .header-cont .hidden { visibility: hidden; }
 	.projEntry .proj-layout-cont {
 		width: 100%;
