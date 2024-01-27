@@ -1339,8 +1339,129 @@
 			"image": "./images/projects/thumbnail.png",
 			"organization": "none"
 		},
-		"css-loader-for-vs-code": {
+		"reliable-changelog": {
 			"index": 2,
+			"category": "web-dev",
+			"name": "Reliable Changelog",
+			"time": "36",
+			"status": "Complete",
+			"difficulty": "Simple",
+			"description": "Reliable Changelog is a GitHub action that automatically generates changelogs based on commits formatted with CommitLint. It is highly configurable and easy to adapt to different use cases, such as automatic versioning or generating a Changelog.md file",
+			"content": {
+				"time": 1706375754956,
+				"blocks": [
+					{
+						"type": "header",
+						"data": {
+							"text": "Description",
+							"level": 2
+						}
+					},
+					{
+						"type": "paragraph",
+						"data": {
+							"text": "Reliable Changelog is a GitHub action that automatically generates changelogs based on commits formatted with CommitLint. It is highly configurable and easy to adapt to different use cases, such as automatic versioning or generating a Changelog.md file"
+						}
+					},
+					{
+						"type": "header",
+						"data": {
+							"text": "Features",
+							"level": 2
+						}
+					},
+					{
+						"type": "list",
+						"data": {
+							"style": "unordered",
+							"items": [
+								{
+									"content": "Supports all <a target=\"_blank\" rel=\"noreferrer noopener\" href=\"https://github.com/conventional-changelog/commitlint/blob/master/%40commitlint/config-angular/README.md\">@commitlint/config-angular</a> commit prefixes",
+									"items": []
+								},
+								{
+									"content": "Generates a clean changelog in markdown",
+									"items": []
+								},
+								{
+									"content": "Automatically calculates the next version (configureable)",
+									"items": []
+								},
+								{
+									"content": "Creates a release and release tag for the next version",
+									"items": []
+								},
+								{
+									"content": "Customize the action's git username and commit message",
+									"items": []
+								},
+								{
+									"content": "Can read the current version from a JSON, YAML, or TOML file",
+									"items": []
+								},
+								{
+									"content": "Customizable \"Major Version\" commit message",
+									"items": []
+								},
+								{
+									"content": "Option to strip commit prefixes from changelog",
+									"items": []
+								},
+								{
+									"content": "Limit the types of commits included in the changelog",
+									"items": []
+								},
+								{
+									"content": "Change what commit types bump different parts of the version",
+									"items": []
+								},
+								{
+									"content": "Change the number of minor and patch commits needed to bump the version multiple times in one release",
+									"items": []
+								},
+								{
+									"content": "Customize the lab",
+									"items": []
+								}
+							]
+						}
+					},
+					{
+						"type": "header",
+						"data": {
+							"text": "Purpose",
+							"level": 2
+						}
+					},
+					{
+						"type": "paragraph",
+						"data": {
+							"text": "The main reason for making this was that the existing CommitLint changelog action was seemingly unusable, and I was looking for a solution for automating release changelogs. I decided to simplify the existing one while adding additional features I thought would be useful."
+						}
+					},
+					{
+						"type": "header",
+						"data": {
+							"text": "Conclusion",
+							"level": 2
+						}
+					},
+					{
+						"type": "paragraph",
+						"data": {
+							"text": "I was able to create a stable, adaptable GitHub action that is highly configurable and allows users to easily generate changelogs and version bumps for their projects. I find myself using it in every new project I make, and it has saved me an immense amount of time."
+						}
+					}
+				],
+				"version": "2.19.3"
+			},
+			"link": "https://github.com/Tormak9970/reliable-changelog",
+			"isRelative": false,
+			"image": "./images/projects/reliable-changelog.png",
+			"organization": "none"
+		},
+		"css-loader-for-vs-code": {
+			"index": 3,
 			"category": "miscellaneous",
 			"name": "CSS Loader for VS Code",
 			"time": "25 hours",
@@ -1447,7 +1568,7 @@
 			"organization": "deck-themes"
 		},
 		"darkest-dungeon-save-editor": {
-			"index": 3,
+			"index": 4,
 			"category": "software-engineering",
 			"name": "Darkest Dungeon Save Editor",
 			"time": "28 hours",
@@ -1507,7 +1628,8 @@
 						"type": "image",
 						"data": {
 							"file": {
-								"url": "./images/projects/DDSEditor-main-ui.png"
+								"url": "https://asset.localhost/C%3A%5CUsers%5CTorma%5CDocuments%5CGithub%5Cportfolio-site-v2%5Cpublic%5Cimages%5Cprojects%5CDDSEditor-main-ui.png",
+								"webUrl": "./images/projects/DDSEditor-main-ui.png"
 							},
 							"caption": "",
 							"withBorder": false,
@@ -1534,7 +1656,8 @@
 						"type": "image",
 						"data": {
 							"file": {
-								"url": "./images/projects/json-editor.png"
+								"url": "https://asset.localhost/C%3A%5CUsers%5CTorma%5CDocuments%5CGithub%5Cportfolio-site-v2%5Cpublic%5Cimages%5Cprojects%5Cjson-editor.png",
+								"webUrl": "./images/projects/json-editor.png"
 							},
 							"caption": "",
 							"withBorder": false,
@@ -1561,7 +1684,8 @@
 						"type": "image",
 						"data": {
 							"file": {
-								"url": "./images/projects/Backup-manager.png"
+								"url": "https://asset.localhost/C%3A%5CUsers%5CTorma%5CDocuments%5CGithub%5Cportfolio-site-v2%5Cpublic%5Cimages%5Cprojects%5CBackup-manager.png",
+								"webUrl": "./images/projects/Backup-manager.png"
 							},
 							"caption": "",
 							"withBorder": false,
@@ -1667,7 +1791,7 @@
 			"organization": "none"
 		},
 		"decky-steamgriddb": {
-			"index": 4,
+			"index": 5,
 			"category": "steam-deck",
 			"name": "Decky SteamGridDB",
 			"time": "16 hours",
@@ -1775,7 +1899,7 @@
 			"organization": "steamgriddb"
 		},
 		"portfolio-v2": {
-			"index": 5,
+			"index": 6,
 			"category": "web-dev",
 			"name": "Portfolio V2",
 			"time": "70 hours",
@@ -2140,7 +2264,7 @@
 			"organization": "none"
 		},
 		"untitled-card-game": {
-			"index": 6,
+			"index": 7,
 			"category": "web-games",
 			"name": "Untitled Card Game",
 			"time": "35 hours",
@@ -2251,7 +2375,7 @@
 			"organization": "none"
 		},
 		"portfolio-updater": {
-			"index": 7,
+			"index": 8,
 			"category": "software-engineering",
 			"name": "Portfolio Updater",
 			"time": "55 hours",
@@ -2531,7 +2655,7 @@
 			"organization": "none"
 		},
 		"steam-deck-themes": {
-			"index": 8,
+			"index": 9,
 			"category": "steam-deck",
 			"name": "Steam Deck Themes",
 			"time": "24 hours",
@@ -2719,7 +2843,7 @@
 			"organization": "deck-themes"
 		},
 		"torc-character-designer": {
-			"index": 9,
+			"index": 10,
 			"category": "web-dev",
 			"name": "TORC Character Designer",
 			"time": "350+ hours",
@@ -3122,115 +3246,6 @@
 			"isRelative": false,
 			"image": "./images/projects/Release_one.png",
 			"organization": "torcommunity"
-		},
-		"decky-frontend-lib": {
-			"index": 10,
-			"category": "steam-deck",
-			"name": "Decky Frontend Lib",
-			"time": "6 hours",
-			"status": "In Progress",
-			"difficulty": "Simple",
-			"description": "The Decky Frontend Lib is a library with reversed engineered UI components, custom components and utility classes. The library helps plugin developers integrate their plugins seamlessly with Valve's react UI, and modify css styles without affecting the regular UI.",
-			"content": {
-				"time": 1675718637746,
-				"blocks": [
-					{
-						"id": "lAVCthO1td",
-						"type": "header",
-						"data": {
-							"text": "Description",
-							"level": 2
-						}
-					},
-					{
-						"id": "vc4JYLLrvS",
-						"type": "paragraph",
-						"data": {
-							"text": "The Decky Frontend Lib is a library with reversed engineered UI components, custom components and utility classes. The library helps plugin developers integrate their plugins seamlessly with Valve's react UI, and modify css styles without affecting the regular UI."
-						}
-					},
-					{
-						"id": "flN2mXc-or",
-						"type": "header",
-						"data": {
-							"text": "Contributions",
-							"level": 2
-						}
-					},
-					{
-						"id": "tT3t6l_RiR",
-						"type": "list",
-						"data": {
-							"style": "unordered",
-							"items": [
-								{
-									"content": "Refactoring of static classes to use a more dynamic approach",
-									"items": []
-								},
-								{
-									"content": "ReorderableList component - gamepad interactable reorderable list",
-									"items": []
-								}
-							]
-						}
-					},
-					{
-						"id": "AMb_eC9-kr",
-						"type": "header",
-						"data": {
-							"text": "Purpose",
-							"level": 2
-						}
-					},
-					{
-						"id": "UMY1MXQSOi",
-						"type": "list",
-						"data": {
-							"style": "unordered",
-							"items": [
-								{
-									"content": "Wanted to fix bugs I encountered",
-									"items": []
-								},
-								{
-									"content": "Wanted to add features I had discovered",
-									"items": []
-								},
-								{
-									"content": "Wanted to contribute to SDH",
-									"items": []
-								}
-							]
-						}
-					},
-					{
-						"id": "gG-wf_ZTmW",
-						"type": "header",
-						"data": {
-							"text": "Conclusion",
-							"level": 2
-						}
-					},
-					{
-						"id": "sdDs1ClfLh",
-						"type": "list",
-						"data": {
-							"style": "unordered",
-							"items": [
-								{
-									"content": "Learned how to use the Remote React Debugger",
-									"items": []
-								}
-							]
-						}
-					}
-				],
-				"version": "2.24.3"
-			},
-			"link": "https://github.com/SteamDeckHomebrew/decky-frontend-lib",
-			"isRelative": false,
-			"image": "./images/projects/Decky-frontend-lib.png",
-			"organization": "steam-deck-homebrew"
 		},
 		"vite-plugin-sitemap": {
 			"index": 11,
@@ -5174,6 +5189,115 @@
 			"isRelative": false,
 			"image": "./images/projects/simple-sudoku-image.png",
 			"organization": "none"
+		},
+		"decky-frontend-lib": {
+			"index": 10,
+			"category": "steam-deck",
+			"name": "Decky Frontend Lib",
+			"time": "6 hours",
+			"status": "In Progress",
+			"difficulty": "Simple",
+			"description": "The Decky Frontend Lib is a library with reversed engineered UI components, custom components and utility classes. The library helps plugin developers integrate their plugins seamlessly with Valve's react UI, and modify css styles without affecting the regular UI.",
+			"content": {
+				"time": 1675718637746,
+				"blocks": [
+					{
+						"id": "lAVCthO1td",
+						"type": "header",
+						"data": {
+							"text": "Description",
+							"level": 2
+						}
+					},
+					{
+						"id": "vc4JYLLrvS",
+						"type": "paragraph",
+						"data": {
+							"text": "The Decky Frontend Lib is a library with reversed engineered UI components, custom components and utility classes. The library helps plugin developers integrate their plugins seamlessly with Valve's react UI, and modify css styles without affecting the regular UI."
+						}
+					},
+					{
+						"id": "flN2mXc-or",
+						"type": "header",
+						"data": {
+							"text": "Contributions",
+							"level": 2
+						}
+					},
+					{
+						"id": "tT3t6l_RiR",
+						"type": "list",
+						"data": {
+							"style": "unordered",
+							"items": [
+								{
+									"content": "Refactoring of static classes to use a more dynamic approach",
+									"items": []
+								},
+								{
+									"content": "ReorderableList component - gamepad interactable reorderable list",
+									"items": []
+								}
+							]
+						}
+					},
+					{
+						"id": "AMb_eC9-kr",
+						"type": "header",
+						"data": {
+							"text": "Purpose",
+							"level": 2
+						}
+					},
+					{
+						"id": "UMY1MXQSOi",
+						"type": "list",
+						"data": {
+							"style": "unordered",
+							"items": [
+								{
+									"content": "Wanted to fix bugs I encountered",
+									"items": []
+								},
+								{
+									"content": "Wanted to add features I had discovered",
+									"items": []
+								},
+								{
+									"content": "Wanted to contribute to SDH",
+									"items": []
+								}
+							]
+						}
+					},
+					{
+						"id": "gG-wf_ZTmW",
+						"type": "header",
+						"data": {
+							"text": "Conclusion",
+							"level": 2
+						}
+					},
+					{
+						"id": "sdDs1ClfLh",
+						"type": "list",
+						"data": {
+							"style": "unordered",
+							"items": [
+								{
+									"content": "Learned how to use the Remote React Debugger",
+									"items": []
+								}
+							]
+						}
+					}
+				],
+				"version": "2.24.3"
+			},
+			"link": "https://github.com/SteamDeckHomebrew/decky-frontend-lib",
+			"isRelative": false,
+			"image": "./images/projects/Decky-frontend-lib.png",
+			"organization": "steam-deck-homebrew"
 		}
 	},
 	"featured": "steam-art-manager",
