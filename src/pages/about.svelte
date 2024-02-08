@@ -9,10 +9,10 @@
       <div class="img-container">
         <!-- svelte-ignore a11y-img-redundant-alt -->
         <img
-          src="images/icons/maskable_icon_x512.webp"
+          src="images/headshot.jpg"
           width="{matches ? 384 : 192}"
           height="{matches ? 384 : 192}"
-          alt="temporary profile picture"
+          alt="headshot"
         />
       </div>
     </div>
