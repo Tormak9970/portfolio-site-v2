@@ -1,12 +1,10 @@
 <script lang="ts">
   import { onMount } from "svelte";
   import { goto } from '@roxi/routify';
-  import { getKeyFromName } from "../../utils";
-  import Entry from "./Entry.svelte";
+  import { getKeyFromName } from "../../Utils";
 
   export let entryData:Project;
   export let image:HTMLImageElement;
-  export let isLast:boolean;
 
   let contentCont:HTMLDivElement;
 
@@ -24,30 +22,51 @@
   });
 </script>
 
-<Entry isLast={isLast}>
-  <div class="imgs-cont">
-    <div class="inner-cont" bind:this={contentCont}>
-      {#if !image}
-        <img src="{entryData.image}" alt="{entryData.name}" style="max-height: min(100%, 400px); max-width: min(100%, 652px);">
-      {/if}
+<div class="entry">
+  <div class="content-container">
+    <div class="imgs-cont">
+      <div class="inner-cont" bind:this={contentCont}>
+        {#if !image}
+          <img src="{entryData.image}" alt="{entryData.name}" style="max-height: min(100%, 400px); max-width: min(100%, 652px);">
+        {/if}
+      </div>
     </div>
-  </div>
-  <div class="proj-overview-cont">
-    <div class="proj-header">
-      <h2 style="text-align: center;">{entryData.name}</h2>
-    </div>
-    <p class="overview">
-      {@html entryData.description}
-    </p>
-    <div class="proj-link-cont">
-      <div class="proj-link" on:click|stopPropagation="{openProjectEntry}">
-        Read More
+    <div class="proj-overview-cont">
+      <div class="proj-header">
+        <h2 style="text-align: center;">{entryData.name}</h2>
+      </div>
+      <p class="overview">
+        {@html entryData.description}
+      </p>
+      <div class="proj-link-cont">
+        <!-- svelte-ignore a11y-click-events-have-key-events -->
+        <div class="proj-link" on:click|stopPropagation="{openProjectEntry}">
+          Read More
+        </div>
       </div>
     </div>
   </div>
-</Entry>
+</div>
 
 <style>
+  .entry {
+    width: 64%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .content-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: minmax(600px, 3fr) minmax(400px, 2fr);
+    column-gap: 14px;
+    justify-items: center;
+    align-items: center;
+  }
+
   .proj-header {
     font-size: 27px;
   }

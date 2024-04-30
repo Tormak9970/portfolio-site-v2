@@ -1,58 +1,44 @@
 <script lang="ts">
-  import Entry from "./Entry.svelte";
-
   export let entryData: Experience;
-  export let isLast: boolean;
 </script>
 
-<Entry isLast={isLast} useContentContainer={false}>
-  <div class="experience-header">
-    <h2>{entryData.position}</h2>
+<div class="entry">
+  <h2 class="experience-header">{entryData.position} at {entryData.company}</h2>
+  <div class="description">
+    <p>{entryData.description}</p>
   </div>
-  <div class="content-container">
-    <div class="img-cont">
-      <img src={entryData.image} alt={entryData.position} />
-    </div>
-    <div>
-      <div class="description">
-        <div>Company: {entryData.company}</div>
-      </div>
-      <div class="description">
-        <p>{entryData.description}</p>
-      </div>
-    </div>
-  </div>
-</Entry>
+</div>
 
 <style>
+  .entry {
+    width: 80%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    margin-bottom: 20px;
+    margin-top: 30px;
+  }
+
   .experience-header {
-    font-size: 27px;
+    font-size: 24px;
+    margin: 0px;
+    padding: 0;
+
+    text-align: center;
   }
 
   .description {
     width: 100%;
-    margin-top: 14px;
-    font-size: 24px;
+    max-width: 600px;
+    margin-top: 0px;
+    font-size: 18px;
     text-align: center;
   }
 
-  .content-container {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(2, minmax(400px, 1fr));
-    column-gap: 14px;
-  }
-
-  .img-cont {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  .img-cont > img {
-    max-width: 100%;
-    height: auto;
-    margin-top: 14px;
+  .description p {
+    margin-top: 10px;
   }
 </style>

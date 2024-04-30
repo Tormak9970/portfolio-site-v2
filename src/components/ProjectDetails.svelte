@@ -3,7 +3,7 @@
 
 	import edjsHTML from "editorjs-html";
 
-	import { projects } from '../linkConfig';
+	import { projects } from '../loadConfig';
 
 	export let projectKey:string;
 

@@ -2,9 +2,9 @@
   import { onMount } from "svelte";
 
   import { fade } from "svelte/transition";
-  import { orientationQuery } from "../utils";
   import NoisyDots from "../components/NoisyDots.svelte";
   import MediaQuery from "../components/utils/MediaQuery.svelte";
+  import { orientationQuery } from "../Utils";
 
 
   let descriptionIdx = 0;

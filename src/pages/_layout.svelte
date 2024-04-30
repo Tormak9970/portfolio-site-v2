@@ -1,7 +1,7 @@
 <script lang="ts">
 	import MediaQuery from "../components/utils/MediaQuery.svelte";
 
-	import { loadConfig } from "../linkConfig";
+	import { loadConfig } from "../loadConfig";
   import DesktopNav from "../components/nav/DesktopNav.svelte";
   import MobileNav from "../components/nav/MobileNav.svelte";
   import MobileHeader from "../components/nav/MobileHeader.svelte";
