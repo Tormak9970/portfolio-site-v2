@@ -1,9 +1,5 @@
 const projects: Map<string, Project> = new Map();
-const archive: Map<string, Project> = new Map();
-const organizations: Map<string, Organization> = new Map();
-const art: Map<string, Art> = new Map();
 const experience: Map<string, Experience> = new Map();
-let featured: Project;
 
 let configLoaded = false;
 
@@ -15,26 +11,12 @@ async function loadConfig() {
       projects.set(entr[0], entr[1] as Project);
     }
 
-    for (const entr of Object.entries(config['archive'])) {
-      archive.set(entr[0], entr[1] as Project);
-    }
-
-    for (const entr of Object.entries(config['organizations'])) {
-      organizations.set(entr[0], entr[1] as Organization);
-    }
-
-    for (const entr of Object.entries(config['art'])) {
-      art.set(entr[0], entr[1] as Art);
-    }
-
     for (const entr of Object.entries(config['experience'])) {
       experience.set(entr[0], entr[1] as Experience);
     }
 
-    const feat = config['featured'];
-    featured = projects.get(feat);
     configLoaded = true;
   }
 }
 
-export { loadConfig, projects, organizations, art, experience, archive, featured };
+export { loadConfig, projects, experience };

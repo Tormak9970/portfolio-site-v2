@@ -13,10 +13,7 @@
     <DesktopNavLink label="About" route="./about" />
     <DesktopNavLink label="Experience" route="./experience" />
     <DesktopNavLink label="Projects" route="./projects" />
-    <DesktopNavLink label="Organizations" route="./organizations" />
-    <DesktopNavLink label="Art Gallery" route="./art" />
     <DesktopNavLink label="Contact" route="./contact" />
-    <DesktopNavLink label="Archive" route="./archive" />
   </div>
 </div>
 

@@ -1,9 +1,7 @@
 <script lang="ts">
-	import ImagePreviewModal from "../components/ImagePreviewModal.svelte";
 	import MediaQuery from "../components/utils/MediaQuery.svelte";
 	import Socials from "../components/Socials.svelte";
 
-	import { showImagePreviewModal } from "../Stores";
 	import { loadConfig } from "../linkConfig";
   import DesktopNav from "../components/nav/DesktopNav.svelte";
   import MobileNav from "../components/nav/MobileNav.svelte";
@@ -35,9 +33,6 @@
 			</MediaQuery>
 		</div>
 	{/await}
-  {#if $showImagePreviewModal}
-    <ImagePreviewModal />
-  {/if}
 	<div class="rights">© Travis Lane {new Date().getFullYear()}</div>
 </div>
 

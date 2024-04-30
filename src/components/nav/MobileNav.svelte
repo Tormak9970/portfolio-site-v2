@@ -9,10 +9,7 @@
   <MobileNavLink label="About" route="./about" />
   <MobileNavLink label="Experience" route="./experience" />
   <MobileNavLink label="Projects" route="./projects" />
-  <MobileNavLink label="Organizations" route="./organizations" />
-  <MobileNavLink label="Art Gallery" route="./art" />
   <MobileNavLink label="Contact" route="./contact" />
-  <MobileNavLink label="Archive" route="./archive" />
 </div>
 
 <style>
