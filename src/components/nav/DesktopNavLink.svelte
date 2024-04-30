@@ -7,10 +7,10 @@
   let isHovered = false;
 </script>
 
-<div class="nav-link" on:mouseenter={() => isHovered = true} on:mouseleave={() => isHovered = false}>
-  <a href={$url(route)} class="nav-btn">{label}</a>
+<a class="nav-link" href={$url(route)} on:mouseenter={() => isHovered = true} on:mouseleave={() => isHovered = false}>
+  <div class="nav-btn">{label}</div>
   <div class="interaction-indicator" class:rendered={$isActive(route)} class:hovered={isHovered}/>
-</div>
+</a>
 
 <style>
   .nav-link {
@@ -19,6 +19,7 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: flex-start;
+		text-decoration: none;
 	}
 	.nav-btn {
 		color: var(--font-color);
