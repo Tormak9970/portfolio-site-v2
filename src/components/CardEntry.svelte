@@ -3,32 +3,17 @@
   import { getKeyFromName } from "../utils";
   import { imageModalData, orientation, showImagePreviewModal } from "../Stores";
 
-  export let entryData:Project | Organization | Art | Experience;
-
-  function openOrganiationEntry() {
-    $goto(`./:organization`, { organization: getKeyFromName((entryData as Organization).name) });
-  }
+  export let entryData:Project | Experience;
 
   function openProjectEntry() {
     $goto(`./:project`, { project: getKeyFromName((entryData as Project).name) });
   }
 
-  function isExperience(entry: Project | Organization | Art | Experience): entry is Experience {
+  function isExperience(entry: Project | Experience): entry is Experience {
     return (entry as Experience).position !== undefined;
   }
-  function isProject(entry: Project | Organization | Art | Experience): entry is Project {
-    return (entry as Project).category !== undefined;
-  }
-  function isOrganization(entry: Project | Organization | Art | Experience): entry is Organization {
-    return (entry as Organization).projects !== undefined;
-  }
-
-  function showImageModal() {
-    $imageModalData = {
-      "image": entryData.image,
-      "name": (entryData as Art).name
-    };
-    setTimeout(() => { $showImagePreviewModal = true; }, 30);
+  function isProject(entry: Project | Experience): entry is Project {
+    return (entry as Project).content !== undefined;
   }
 </script>
 
@@ -37,11 +22,7 @@
     {isExperience(entryData) ? entryData.position : entryData.name}
   </div>
   <div class="img-cont">
-    {#if isProject(entryData) || isOrganization(entryData) || isExperience(entryData)}
-      <img src="{entryData.image}" alt="">
-    {:else}
-      <img src="{entryData.image}" alt="" on:click|stopPropagation="{showImageModal}">
-    {/if}
+    <img src="{entryData.image}" alt="">
   </div>
   {#if isExperience(entryData)}
     <div class="desc-cont">Company: {entryData.company}</div>
@@ -51,10 +32,6 @@
   </div>
   {#if isProject(entryData)}
     <div class="proj-link" on:click|stopPropagation="{openProjectEntry}">
-      Read More
-    </div>
-  {:else if isOrganization(entryData)}
-    <div class="proj-link" on:click|stopPropagation="{openOrganiationEntry}">
       Read More
     </div>
   {/if}

@@ -1,6 +1,7 @@
 <script lang="ts">
   import { fade } from "svelte/transition";
   import { beforeUrlChange } from "@roxi/routify";
+  import SocialButton from "../components/SocialButton.svelte";
 
   let showThank = false;
   let showCrumb = false;
@@ -36,47 +37,6 @@
     showThank = false;
     return true;
   });
-
-  function handleSubmit(e: Event) {
-    const form = e.currentTarget as HTMLFormElement;
-    const data = new FormData(form);
-    let numErrored = 0;
-
-    for (const [key, value] of data) {
-      if (value == "" && key != "g-recaptcha-response") {
-        numErrored++;
-        const elem = document.getElementById(key);
-        elem.style.outline = "1px solid #e24a4a";
-      }
-    }
-
-    if (numErrored > 0) {
-      showBreadcrumb("Please complete the highlighted fields.");
-    } else {
-      sendMimicPost(data);
-      form.reset();
-      showThank = true;
-    }
-  }
-
-  function sendMimicPost(data: FormData) {
-    fetch("https://formsubmit.co/Tormak9970@gmail.com", {
-      method: "POST",
-      headers: {
-        Accept:
-          "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
-        "content-type": "application/x-www-form-urlencoded",
-      },
-      mode: "cors",
-      body: `email=${data.get("email")}&_subject=${data.get(
-        "_subject"
-      )}&body=${data.get("body")}&_captcha=false`,
-    });
-  }
-
-  function highlightHandler(e: Event) {
-    (e.currentTarget as HTMLElement).style.outline = "";
-  }
 </script>
 
 <div class="contact-form" in:fade>
@@ -84,63 +44,27 @@
   <div class="info-container">
     <div class="blurb">
       <p>
-        The best way to get in touch with me is via email. You can either use
-        the form below or email me at <i
+        The best way to get in touch with me is via email. You can email me at <i
           class="email-link"
           on:click|stopPropagation={copyToClipboard}>Tormak9970@gmail.com</i
-        >
+        >. You can also reach out to me on one of the platforms below:
       </p>
     </div>
 
-    {#if showThank}
-      <div class="thank-cont" in:fade>
-        <h1>Thank you!</h1>
-        <p>
-          Thanks for reaching out! I will try to get back to you as soon as
-          possible!
-        </p>
-      </div>
-    {:else}
-      <div class="form-wrapper" in:fade>
-        <form
-          action="https://formsubmit.co/Tormak9970@gmail.com"
-          method="POST"
-          id="contactForm"
-          on:submit|stopPropagation|preventDefault={handleSubmit}
-        >
-          <label for="email">Email Adress</label>
-          <input
-            id="email"
-            type="email"
-            name="email"
-            placeholder="foo@bar.com"
-            on:focus={highlightHandler}
-          />
-
-          <label for="_subject">Subject</label>
-          <input
-            id="_subject"
-            type="text"
-            name="_subject"
-            placeholder="What's on your mind?"
-            on:focus={highlightHandler}
-          />
-
-          <label for="body">Message</label>
-          <textarea
-            id="body"
-            name="body"
-            cols="30"
-            rows="10"
-            on:focus={highlightHandler}
-          />
-
-          <div id="recaptchaCont" />
-
-          <button type="submit">Submit</button>
-        </form>
-      </div>
-    {/if}
+    <div class="socials-container" style="display: flex;">
+      <SocialButton url="https://github.com/Tormak9970">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+          <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+          <path d="M448 96c0-35.3-28.7-64-64-64H64C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96zM265.8 407.7c0-1.8 0-6 .1-11.6c.1-11.4 .1-28.8 .1-43.7c0-15.6-5.2-25.5-11.3-30.7c37-4.1 76-9.2 76-73.1c0-18.2-6.5-27.3-17.1-39c1.7-4.3 7.4-22-1.7-45c-13.9-4.3-45.7 17.9-45.7 17.9c-13.2-3.7-27.5-5.6-41.6-5.6s-28.4 1.9-41.6 5.6c0 0-31.8-22.2-45.7-17.9c-9.1 22.9-3.5 40.6-1.7 45c-10.6 11.7-15.6 20.8-15.6 39c0 63.6 37.3 69 74.3 73.1c-4.8 4.3-9.1 11.7-10.6 22.3c-9.5 4.3-33.8 11.7-48.3-13.9c-9.1-15.8-25.5-17.1-25.5-17.1c-16.2-.2-1.1 10.2-1.1 10.2c10.8 5 18.4 24.2 18.4 24.2c9.7 29.7 56.1 19.7 56.1 19.7c0 9 .1 21.7 .1 30.6c0 4.8 .1 8.6 .1 10c0 4.3-3 9.5-11.5 8C106 393.6 59.8 330.8 59.8 257.4c0-91.8 70.2-161.5 162-161.5s166.2 69.7 166.2 161.5c.1 73.4-44.7 136.3-110.7 158.3c-8.4 1.5-11.5-3.7-11.5-8zm-90.5-54.8c-.2-1.5 1.1-2.8 3-3.2c1.9-.2 3.7 .6 3.9 1.9c.3 1.3-1 2.6-3 3c-1.9 .4-3.7-.4-3.9-1.7zm-9.1 3.2c-2.2 .2-3.7-.9-3.7-2.4c0-1.3 1.5-2.4 3.5-2.4c1.9-.2 3.7 .9 3.7 2.4c0 1.3-1.5 2.4-3.5 2.4zm-14.3-2.2c-1.9-.4-3.2-1.9-2.8-3.2s2.4-1.9 4.1-1.5c2 .6 3.3 2.1 2.8 3.4c-.4 1.3-2.4 1.9-4.1 1.3zm-12.5-7.3c-1.5-1.3-1.9-3.2-.9-4.1c.9-1.1 2.8-.9 4.3 .6c1.3 1.3 1.8 3.3 .9 4.1c-.9 1.1-2.8 .9-4.3-.6zm-8.5-10c-1.1-1.5-1.1-3.2 0-3.9c1.1-.9 2.8-.2 3.7 1.3c1.1 1.5 1.1 3.3 0 4.1c-.9 .6-2.6 0-3.7-1.5zm-6.3-8.8c-1.1-1.3-1.3-2.8-.4-3.5c.9-.9 2.4-.4 3.5 .6c1.1 1.3 1.3 2.8 .4 3.5c-.9 .9-2.4 .4-3.5-.6zm-6-6.4c-1.3-.6-1.9-1.7-1.5-2.6c.4-.6 1.5-.9 2.8-.4c1.3 .7 1.9 1.8 1.5 2.6c-.4 .9-1.7 1.1-2.8 .4z"/>
+        </svg>
+      </SocialButton>
+      <SocialButton url="https://github.com/Tormak9970">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+          <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+          <path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/>
+        </svg>
+      </SocialButton>
+    </div>
   </div>
   <div class="breadcrump-cont{showCrumb ? '' : ' hidden'}">
     <div id="breadCrumbCont">Placeholder</div>
@@ -189,104 +113,6 @@
   }
   .info-container .blurb .email-link:hover {
     color: var(--highlight-hover);
-  }
-  .info-container .form-wrapper {
-    max-width: 400px;
-    width: calc(100% - 20px);
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    padding: 10px;
-
-    background-color: var(--foreground);
-
-    border-radius: 4px;
-  }
-  .info-container .form-wrapper #contactForm {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .info-container .form-wrapper #contactForm label {
-    width: calc(100% - 10px);
-    font-size: 18px;
-  }
-  .info-container .form-wrapper #contactForm input {
-    width: calc(100% - 10px);
-
-    margin-bottom: 7px;
-
-    background-color: var(--background);
-
-    border-radius: 4px;
-
-    outline: none;
-    border: none;
-
-    color: var(--font-color);
-  }
-  .info-container .form-wrapper #contactForm input:focus {
-    outline: 1px solid var(--highlight);
-  }
-  .info-container .form-wrapper #contactForm textarea {
-    width: calc(100% - 10px);
-
-    margin-bottom: 7px;
-
-    background-color: var(--background);
-
-    border-radius: 4px;
-
-    outline: none;
-    border: none;
-
-    color: var(--font-color);
-
-    resize: none;
-  }
-  .info-container .form-wrapper #contactForm textarea:focus {
-    outline: 1px solid var(--highlight);
-  }
-  .info-container .form-wrapper #contactForm button {
-    height: 24px;
-    width: 80px;
-
-    cursor: pointer;
-    background-color: var(--highlight);
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    border-radius: 4px;
-
-    outline: none;
-    border: none;
-
-    color: var(--font-color);
-  }
-  .info-container .form-wrapper #contactForm button:hover {
-    background-color: var(--highlight-hover);
-  }
-  .info-container .form-wrapper #contactForm button:focus {
-    outline: none;
-  }
-
-  .info-container .thank-cont {
-    max-width: 400px;
-    width: calc(100% - 20px);
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .info-container .thank-cont p {
-    font-size: 16px;
-    text-align: center;
   }
 
   .breadcrump-cont {

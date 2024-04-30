@@ -3,14 +3,11 @@
 
 	import edjsHTML from "editorjs-html";
 
-	import { archive, projects } from '../linkConfig';
+	import { projects } from '../linkConfig';
 
-  export let shouldUseArchive = false
 	export let projectKey:string;
 
-	let entryData = (shouldUseArchive ? archive : projects).get(projectKey);
-
-	let isRelative = false;
+	let entryData = projects.get(projectKey);
 
 	function imageParser({data}) {
 		return `<img class="image-tool__image-picture" src=".${data.file.url}">`;
@@ -30,7 +27,6 @@
 		} else {
 			output = null;
 		}
-		isRelative = entryData.isRelative;
 	}
 </script>
 
@@ -43,15 +39,9 @@
     </div>
 		<h2 class="proj-header">{entryData.name}</h2>
 		<div class="cit-cont" style="margin-right: 14px;" class:hidden={entryData.link === ""}>
-			{#if isRelative}
-				<a class="proj-link" href="{$url(entryData.link)}">
-					Visit
-				</a>
-			{:else}
-				<a class="proj-link" href="{entryData.link}" rel="noreferrer noopener" target="_blank">
-					Visit
-				</a>
-			{/if}
+			<a class="proj-link" href="{entryData.link}" rel="noreferrer noopener" target="_blank">
+        Visit
+      </a>
 		</div>
 	</div>
   <div class="proj-layout-cont">
@@ -60,9 +50,6 @@
 		</div>
 		<div class="data-container entr-cont">
 			<div class="data-entr"><b>Name:</b> {entryData.name}</div>
-			<div class="data-entr"><b>Time:</b> {entryData.time}</div>
-			<div class="data-entr"><b>Status:</b> {entryData.status}</div>
-			<div class="data-entr"><b>Difficulty:</b> {entryData.difficulty}</div>
 		</div>
     <div id="entrContent" class="entr-cont">
 			{@html output ? output : ''}

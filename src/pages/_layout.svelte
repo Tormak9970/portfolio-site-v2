@@ -1,6 +1,5 @@
 <script lang="ts">
 	import MediaQuery from "../components/utils/MediaQuery.svelte";
-	import Socials from "../components/Socials.svelte";
 
 	import { loadConfig } from "../linkConfig";
   import DesktopNav from "../components/nav/DesktopNav.svelte";
@@ -23,7 +22,6 @@
 		</MediaQuery>
 		<div class="content-wrapper" class:menu-hidden={!mobileNavOpen}>
 			<div class="content-body">
-				<Socials />
 				<slot />
 			</div>
 			<MediaQuery query="(orientation:landscape)" let:matches>

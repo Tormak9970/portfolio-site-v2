@@ -1139,9 +1139,7 @@
 				"version": "2.19.3"
 			},
 			"link": "https://github.com/Tormak9970/Steam-Art-Manager",
-			"isRelative": false,
-			"image": "./images/projects/final-ui_v2.7.0.png",
-			"organization": "none"
+			"image": "./images/projects/final-ui_v2.7.0.png"
 		},
 		"tabmaster": {
 			"index": 1,
@@ -1327,9 +1325,7 @@
 				"version": "2.19.3"
 			},
 			"link": "https://github.com/Tormak9970/TabMaster",
-			"isRelative": false,
-			"image": "./images/projects/thumbnail.png",
-			"organization": "none"
+			"image": "./images/projects/thumbnail.png"
 		},
 		"reliable-changelog": {
 			"index": 2,
@@ -1444,9 +1440,7 @@
 				"version": "2.19.3"
 			},
 			"link": "https://github.com/Tormak9970/reliable-changelog",
-			"isRelative": false,
-			"image": "./images/projects/reliable-changelog.png",
-			"organization": "none"
+			"image": "./images/projects/reliable-changelog.png"
 		},
 		"css-loader-for-vs-code": {
 			"index": 3,
@@ -1547,9 +1541,7 @@
 				"version": "2.19.3"
 			},
 			"link": "https://marketplace.visualstudio.com/items?itemName=DeckThemes.css-loader-for-vs-code",
-			"isRelative": false,
-			"image": "./images/projects/css-loader-for-vs-code.png",
-			"organization": "deck-themes"
+			"image": "./images/projects/css-loader-for-vs-code.png"
 		},
 		"darkest-dungeon-save-editor": {
 			"index": 4,
@@ -1766,9 +1758,7 @@
 				"version": "2.24.3"
 			},
 			"link": "https://github.com/Tormak9970/Darkest-Dungeon-Save-Editor",
-			"isRelative": false,
-			"image": "./images/projects/DDSEditor-main-ui.png",
-			"organization": "none"
+			"image": "./images/projects/DDSEditor-main-ui.png"
 		},
 		"decky-steamgriddb": {
 			"index": 5,
@@ -1870,13 +1860,11 @@
 				"version": "2.19.3"
 			},
 			"link": "https://github.com/SteamGridDB/decky-steamgriddb",
-			"isRelative": false,
-			"image": "./images/projects/decky-steamgriddb.png",
-			"organization": "steamgriddb"
+			"image": "./images/projects/decky-steamgriddb.png"
 		},
-		"portfolio-v2": {
+		"portfolio": {
 			"index": 6,
-			"name": "Portfolio V2",
+			"name": "Portfolio",
 			"description": "This project is the website you are currently on. It is a replacement for my previous portfolio website, which I had not been keeping up to date. I decided to remake it from scratch using Svelte, TypeScript, and SASS (later removed), all of which are awesome frameworks I have wanted to learn for a while.",
 			"content": {
 				"time": 1693762663522,
@@ -2231,9 +2219,7 @@
 				"version": "2.19.3"
 			},
 			"link": "https://travislane.dev",
-			"isRelative": false,
-			"image": "./images/projects/portfolio-v2-updated.png",
-			"organization": "none"
+			"image": "./images/projects/portfolio-v2-updated.png"
 		},
 		"untitled-card-game": {
 			"index": 7,
@@ -2338,9 +2324,7 @@
 				"version": "2.24.3"
 			},
 			"link": "https://solitaire.travislane.dev/",
-			"isRelative": false,
-			"image": "./images/projects/untitled-card-game.png",
-			"organization": "none"
+			"image": "./images/projects/untitled-card-game.png"
 		},
 		"portfolio-updater": {
 			"index": 8,
@@ -2614,9 +2598,7 @@
 				"version": "2.19.3"
 			},
 			"link": "https://github.com/Tormak9970/portfolio-updater",
-			"isRelative": false,
-			"image": "./images/projects/v2.0.0-portfolio-editor.png",
-			"organization": "none"
+			"image": "./images/projects/v2.0.0-portfolio-editor.png"
 		},
 		"steam-deck-themes": {
 			"index": 9,
@@ -2798,9 +2780,7 @@
 				"version": "2.19.3"
 			},
 			"link": "https://github.com/Tormak9970/SteamDeckThemes",
-			"isRelative": false,
-			"image": "./images/projects/SteamDeckU.png",
-			"organization": "deck-themes"
+			"image": "./images/projects/SteamDeckU.png"
 		},
 		"torc-character-designer": {
 			"index": 10,
@@ -3199,9 +3179,7 @@
 				"version": "2.24.3"
 			},
 			"link": "https://torcommunity.com/tools/character-designer",
-			"isRelative": false,
-			"image": "./images/projects/Release_one.png",
-			"organization": "torcommunity"
+			"image": "./images/projects/Release_one.png"
 		},
 		"vite-plugin-sitemap": {
 			"index": 11,
@@ -3283,9 +3261,7 @@
 				"version": "2.24.3"
 			},
 			"link": "https://www.npmjs.com/package/@tormak/vite-plugin-sitemap",
-			"isRelative": false,
-			"image": "./images/projects/vite-plugin-sitemap.png",
-			"organization": "none"
+			"image": "./images/projects/vite-plugin-sitemap.png"
 		}
 	},
 	"experience": {
@@ -3306,7 +3282,7 @@
 		"actalent-software-engineer": {
 			"index": 0,
 			"company": "Actalent",
-			"position": "Software Engineer",
+			"position": "Full Stack Software Engineer",
 			"image": "./images/experience/actalent-logo.svg",
 			"description": "From June 2023 to August of 2023 I worked as a Software Engineer for Actalent Inc. I worked in Angular 16 on a Thermostat app for Mitsubichi Electric, and in NextJS on a Dashboard for Cisco Systems Inc. I familiarized myself with both of these technologies, as well as gained valuable experience working collaboratively with a team, as well as while under deadlines."
 		}
