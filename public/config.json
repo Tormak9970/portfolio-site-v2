@@ -3,7 +3,13 @@
 		"steam-art-manager": {
 			"index": 0,
 			"name": "Steam Art Manager",
-			"description": "Steam Art Manager is a tool for managing the art for your Steam game library. It allows users to view their library and upload images either from their computer, or they can browse images from SteamGridDB. The tool also allows users to export their custom art to and from .zip files for easy transfers between computers. The app manages to do all this while avoiding needless usage of the Steam Web API.",
+			"description": "Elegant and simple Steam library customization.",
+      "tech": [
+        "Svelte",
+        "Tauri",
+        "Rust",
+        "TypeScript"
+      ],
 			"content": {
 				"time": 1693401475825,
 				"blocks": [
@@ -1144,7 +1150,12 @@
 		"tabmaster": {
 			"index": 1,
 			"name": "TabMaster",
-			"description": "TabMaster is a Decky plugin for the Valve Steam Deck that gives users full control over their library tabs. From making custom tabs, to replacing existing ones, it can do it all, with a robust filtering system to allow for extremely complexed filtering.",
+			"description": "A Decky plugin for the Valve Steam Deck that gives users full control over their library tabs.",
+      "tech": [
+        "Decky",
+        "React",
+        "TypeScript"
+      ],
 			"content": {
 				"time": 1706374162836,
 				"blocks": [
@@ -1330,7 +1341,12 @@
 		"reliable-changelog": {
 			"index": 2,
 			"name": "Reliable Changelog",
-			"description": "Reliable Changelog is a GitHub action that automatically generates changelogs based on commits formatted with CommitLint. It is highly configurable and easy to adapt to different use cases, such as automatic versioning or generating a Changelog.md file",
+			"description": "A GitHub action that generates changelogs based on your commits. Highly configurable and adaptable",
+      "tech": [
+        "Actions",
+        "CI/CD",
+        "TypeScript"
+      ],
 			"content": {
 				"time": 1706375754956,
 				"blocks": [
@@ -1445,7 +1461,12 @@
 		"css-loader-for-vs-code": {
 			"index": 3,
 			"name": "CSS Loader for VS Code",
-			"description": "CSS Loader for VS Code is a Visual Studio Code extension that adds intellisense support and file icons to CSS Loader theme.json files. This makes it easier to catch mistakes, as well as improves the developer experience when making themes.",
+			"description": "A VS Code extension that adds intellisense support and icons to CSS Loader theme.json files.",
+      "tech": [
+        "VS Code",
+        "TypeScript",
+        "JSON"
+      ],
 			"content": {
 				"time": 1693399735329,
 				"blocks": [
@@ -1546,7 +1567,13 @@
 		"darkest-dungeon-save-editor": {
 			"index": 4,
 			"name": "Darkest Dungeon Save Editor",
-			"description": "This project is a save editor for the Indie Rogue-lite game, Darkest Dungeon. The app includes a robust backup system, de-hashing feature, save decoding to valid JSON, save file encoding from JSON, and offers all features through the command line as well. The app is made using Tauri, Svelte, and TypeScript.",
+			"description": "An app for viewing and editing saves from Darkest Dungeon, an Indie Rogue-lite game.",
+      "tech": [
+        "Svelte",
+        "Tauri",
+        "TypeScript",
+        "Rust"
+      ],
 			"content": {
 				"time": 1668884602490,
 				"blocks": [
@@ -1760,112 +1787,14 @@
 			"link": "https://github.com/Tormak9970/Darkest-Dungeon-Save-Editor",
 			"image": "./images/projects/DDSEditor-main-ui.png"
 		},
-		"decky-steamgriddb": {
-			"index": 5,
-			"name": "Decky SteamGridDB",
-			"description": "Very similar to Steam Art Manager, this Decky plugin allows users to customize the art for their Steam games, however with the plugin, this can be done from SteamOS. This provides a clean, controller friendly experience for users who do not want to use their desktop and install alternatives.",
-			"content": {
-				"time": 1693491589727,
-				"blocks": [
-					{
-						"type": "header",
-						"data": {
-							"text": "Description",
-							"level": 2
-						}
-					},
-					{
-						"type": "paragraph",
-						"data": {
-							"text": "Very similar to Steam Art Manager, this Decky plugin allows users to customize the art for their Steam games, however with the plugin, this can be done from SteamOS. This provides a clean, controller friendly experience for users who do not want to use their desktop and install alternatives."
-						}
-					},
-					{
-						"type": "header",
-						"data": {
-							"text": "Features",
-							"level": 2
-						}
-					},
-					{
-						"type": "list",
-						"data": {
-							"style": "unordered",
-							"items": [
-								{
-									"content": "Browse art for the selected game",
-									"items": []
-								},
-								{
-									"content": "Supports non steam games such as emulated titles",
-									"items": []
-								},
-								{
-									"content": "Allows user specified files to be used",
-									"items": []
-								},
-								{
-									"content": "Can patch the Steam UI to force grids to be square",
-									"items": []
-								},
-								{
-									"content": "Ability to reset the art back to stock",
-									"items": []
-								},
-								{
-									"content": "A controller friendly logo positioner",
-									"items": []
-								}
-							]
-						}
-					},
-					{
-						"type": "header",
-						"data": {
-							"text": "My Contributions",
-							"level": 2
-						}
-					},
-					{
-						"type": "paragraph",
-						"data": {
-							"text": "While I did not create this project, I have made sizeable contributions to it, notably:"
-						}
-					},
-					{
-						"type": "list",
-						"data": {
-							"style": "unordered",
-							"items": [
-								{
-									"content": "Fixed the square art patch so it can be unpatched and repatched without restarting, as well as made it less taxing on performance",
-									"items": []
-								},
-								{
-									"content": "Polished the UI to make it better fit SteamOS",
-									"items": []
-								},
-								{
-									"content": "Made the context menu patching more reliable",
-									"items": []
-								},
-								{
-									"content": "Significantly refactored the codebase organization to be more manageable",
-									"items": []
-								}
-							]
-						}
-					}
-				],
-				"version": "2.19.3"
-			},
-			"link": "https://github.com/SteamGridDB/decky-steamgriddb",
-			"image": "./images/projects/decky-steamgriddb.png"
-		},
 		"portfolio": {
-			"index": 6,
+			"index": 5,
 			"name": "Portfolio",
-			"description": "This project is the website you are currently on. It is a replacement for my previous portfolio website, which I had not been keeping up to date. I decided to remake it from scratch using Svelte, TypeScript, and SASS (later removed), all of which are awesome frameworks I have wanted to learn for a while.",
+			"description": "A website for displaying my work experience and projects.",
+      "tech": [
+        "Svelte",
+        "TypeScript"
+      ],
 			"content": {
 				"time": 1693762663522,
 				"blocks": [
@@ -2222,9 +2151,9 @@
 			"image": "./images/projects/portfolio-v2-updated.png"
 		},
 		"untitled-card-game": {
-			"index": 7,
+			"index": 6,
 			"name": "Untitled Card Game",
-			"description": "This is a TypeScript and Svelte implementation of the classic card game Solitaire, based on the Klondike rules. The UI has a pixel art theme, and the face cards are animated using classic frame by frame sprites. It has a full undo/redo system, difficulty settings, score keeping, and animations for flipping over cards, undos, and redos. These were especially difficult considering a side effect of the Drag-n-Drop library I settled on is that Svelte's built in animation system doesn't work, so these had to be done by hand.",
+			"description": "A Solitaire game made with animated cards and a pixel art style.",
 			"content": {
 				"time": 1679188413134,
 				"blocks": [
@@ -2327,9 +2256,15 @@
 			"image": "./images/projects/untitled-card-game.png"
 		},
 		"portfolio-updater": {
-			"index": 8,
+			"index": 7,
 			"name": "Portfolio Updater",
-			"description": "Initially, this project was going to be written using the Electron framework, but right around when I started it, I heard about Tauri. Tauri is great because it allows you to build more secure apps with smaller bundle sizes, and has a better developer experience then Electron. The app itself makes updating my portfolio easy and straightforward, allowing me to focus more on my projects.",
+			"description": "An app that augments updating my portfolio, giving me no excuse to keep it up to date.",
+      "tech": [
+        "Svelte",
+        "Tauri",
+        "TypeScript",
+        "Rust"
+      ],
 			"content": {
 				"time": 1693489605400,
 				"blocks": [
@@ -2601,9 +2536,12 @@
 			"image": "./images/projects/v2.0.0-portfolio-editor.png"
 		},
 		"steam-deck-themes": {
-			"index": 9,
+			"index": 8,
 			"name": "Steam Deck Themes",
-			"description": "This project is a collection of CSS themes for the Steam Deck gaming handheld. Generally, my approach is to style things as dynamically as possible and provide inputs for all the colors. The themes are applied using a homebrew plugin for injecting CSS into the Steamdeck UI.",
+			"description": "A collection of my CSS Themes for customizing the Steamdeck's UI.",
+      "tech": [
+        "CSS"
+      ],
 			"content": {
 				"time": 1693400212073,
 				"blocks": [
@@ -2782,409 +2720,15 @@
 			"link": "https://github.com/Tormak9970/SteamDeckThemes",
 			"image": "./images/projects/SteamDeckU.png"
 		},
-		"torc-character-designer": {
-			"index": 10,
-			"name": "TORC Character Designer",
-			"description": "This is one of my favorite projects. It is an external character creator and outfit designer for Star Wars The Old Republic. I really love this game and the community, and wanted to do something everyone could use and enjoy. It is very complexed, and I had to learn a lot of new topics and skills while working on it. I'm also very proud of it since it is the first tool of its kind made by anyone, ever, and that required me to solve a lot of problems no one else has done  before.",
-			"content": {
-				"time": 1675718503345,
-				"blocks": [
-					{
-						"id": "Hr1P2ZVs1P",
-						"type": "header",
-						"data": {
-							"text": "Description",
-							"level": 2
-						}
-					},
-					{
-						"id": "Z_ibVmilFC",
-						"type": "paragraph",
-						"data": {
-							"text": "This is one of my favorite projects. It is an external character creator and outfit designer for Star Wars The Old Republic. I really love this game and the community, and wanted to do something everyone could use and enjoy. It is very complexed, and I had to learn a lot of new topics and skills while working on it. I'm also very proud of it since it is the first tool of its kind made by anyone, ever, and that required me to solve a lot of problems no one else has done  before."
-						}
-					},
-					{
-						"id": "7wGwqDv3JP",
-						"type": "header",
-						"data": {
-							"text": "Purpose",
-							"level": 2
-						}
-					},
-					{
-						"id": "GIJaPDViYn",
-						"type": "list",
-						"data": {
-							"style": "unordered",
-							"items": [
-								{
-									"content": "I wanted to make something truly unique that had not been done before.",
-									"items": [
-										{
-											"content": "This is the only Star Wars The Old Republic external character designer",
-											"items": []
-										}
-									]
-								},
-								{
-									"content": "I also wanted to make something people would not only want to use, but also something that would inspire people, and help them realize what they can do.",
-									"items": []
-								},
-								{
-									"content": "I had read comments and posts on a variety of platforms from people requesting/asking about a character viewer/creator, the earliest dating back to around 2014.",
-									"items": []
-								},
-								{
-									"content": "I also wanted to expedite the process from re-creating your character outside of the game (for 3D modeling, printing, or just for fun).",
-									"items": [
-										{
-											"content": "The process could take upwards of one to two hour for one character.",
-											"items": []
-										},
-										{
-											"content": "With my program, it takes ~20 minutes.",
-											"items": []
-										}
-									]
-								}
-							]
-						}
-					},
-					{
-						"id": "GjKDJqUFzQ",
-						"type": "header",
-						"data": {
-							"text": "Conclusion",
-							"level": 2
-						}
-					},
-					{
-						"id": "J4pkgn-Eko",
-						"type": "list",
-						"data": {
-							"style": "unordered",
-							"items": [
-								{
-									"content": "How to read hexadecimal headers",
-									"items": []
-								},
-								{
-									"content": "How to read custom file formats",
-									"items": []
-								},
-								{
-									"content": "Basics of PHP",
-									"items": []
-								},
-								{
-									"content": "Advanced JavaScript",
-									"items": []
-								},
-								{
-									"content": "Better code organization",
-									"items": []
-								},
-								{
-									"content": "Better planning strategies",
-									"items": []
-								},
-								{
-									"content": "How to break down problems into achievable sections",
-									"items": []
-								},
-								{
-									"content": "How to effectively troubleshoot issues and debug",
-									"items": []
-								},
-								{
-									"content": "Sometimes the best solution is to take a break and work on different part/something else for a while",
-									"items": []
-								},
-								{
-									"content": "How to use the THREE.js library",
-									"items": []
-								},
-								{
-									"content": "Basics of 3D design/modeling",
-									"items": [
-										{
-											"content": "HLSL",
-											"items": []
-										},
-										{
-											"content": "GLSL",
-											"items": []
-										},
-										{
-											"content": "The graphics pipeline (how 3D models are shaded and rendered)",
-											"items": []
-										},
-										{
-											"content": "How models, textures, lighting and shadows work",
-											"items": []
-										}
-									]
-								}
-							]
-						}
-					},
-					{
-						"id": "7rIyp4Rdz7",
-						"type": "header",
-						"data": {
-							"text": "3.0.0",
-							"level": 2
-						}
-					},
-					{
-						"id": "NNFFVvkVLe",
-						"type": "paragraph",
-						"data": {
-							"text": "Features:"
-						}
-					},
-					{
-						"id": "Vvfc4n8kxD",
-						"type": "list",
-						"data": {
-							"style": "unordered",
-							"items": [
-								{
-									"content": "Changed the way loading the options work",
-									"items": [
-										{
-											"content": "It is now based of the head model's ID, which is how the game does it currently",
-											"items": []
-										}
-									]
-								},
-								{
-									"content": "Converted the entire project to TypeScript, which helped eliminate some cases where output data would be a string instead of a number",
-									"items": []
-								},
-								{
-									"content": "Project now uses Vite for bundling and minifying, which improves performance",
-									"items": []
-								}
-							]
-						}
-					},
-					{
-						"id": "LX4pxBmLp1",
-						"type": "header",
-						"data": {
-							"text": "2.0.0",
-							"level": 2
-						}
-					},
-					{
-						"id": "PRoxoiGs_k",
-						"type": "paragraph",
-						"data": {
-							"text": "Bug Fixes:"
-						}
-					},
-					{
-						"id": "0KDYqJ2WAc",
-						"type": "list",
-						"data": {
-							"style": "unordered",
-							"items": [
-								{
-									"content": "Fixed many broken items (only a few left still needing to be fixed)",
-									"items": []
-								},
-								{
-									"content": "Fixed a few edge cases where things like hoods would render on Togrutas and Twi'leks",
-									"items": []
-								},
-								{
-									"content": "Fixed an issue where exporting the zip had no file extension on Firefox",
-									"items": []
-								},
-								{
-									"content": "Fixed long loading times",
-									"items": []
-								}
-							]
-						}
-					},
-					{
-						"id": "UE1PWmPCZO",
-						"type": "paragraph",
-						"data": {
-							"text": "Changes:"
-						}
-					},
-					{
-						"id": "xjjLeJudXG",
-						"type": "list",
-						"data": {
-							"style": "unordered",
-							"items": [
-								{
-									"content": "Now has dark side corruption",
-									"items": []
-								}
-							]
-						}
-					},
-					{
-						"id": "rXcChFl3ch",
-						"type": "image",
-						"data": {
-							"file": {
-								"url": "./images/projects/Release2__corruption.png"
-							},
-							"caption": "",
-							"withBorder": false,
-							"stretched": false,
-							"withBackground": false
-						}
-					},
-					{
-						"id": "CzLhCiUG21",
-						"type": "list",
-						"data": {
-							"style": "unordered",
-							"items": [
-								{
-									"content": "Added Eye Cube Maps (the glossy reflection on the character's eyes)",
-									"items": []
-								}
-							]
-						}
-					},
-					{
-						"id": "L6fWJJIRH3",
-						"type": "image",
-						"data": {
-							"file": {
-								"url": "./images/projects/EyeCubeMap.png"
-							},
-							"caption": "",
-							"withBorder": false,
-							"stretched": false,
-							"withBackground": false
-						}
-					},
-					{
-						"id": "L8A6Ifg9Be",
-						"type": "list",
-						"data": {
-							"style": "unordered",
-							"items": [
-								{
-									"content": "Changed the lighting to be closer to the preview window",
-									"items": []
-								},
-								{
-									"content": "Added a Unify Colors option for each armor slot (this makes the slot in question become the same color as the chest slot)",
-									"items": []
-								},
-								{
-									"content": "Added ability to apply dyes for each slot",
-									"items": []
-								},
-								{
-									"content": "Added tick marks to make it easier to tell where to click to move the slider to a specific value",
-									"items": []
-								},
-								{
-									"content": "Re-arranged the order of a few customizations to match in-game numbering",
-									"items": []
-								},
-								{
-									"content": "Updated many of the UI images to make them clearer",
-									"items": []
-								},
-								{
-									"content": "Now have a randomize button, and it also randomizes the slider values on load",
-									"items": []
-								},
-								{
-									"content": "Tweaked a bunch of the rendering settings (camera position, lighting angle, lighting intensity, etc.)",
-									"items": []
-								}
-							]
-						}
-					},
-					{
-						"id": "phWf751nHJ",
-						"type": "header",
-						"data": {
-							"text": "1.0.0",
-							"level": 2
-						}
-					},
-					{
-						"id": "UnOPXgDHGc",
-						"type": "paragraph",
-						"data": {
-							"text": "Features:"
-						}
-					},
-					{
-						"id": "UtAn8loNXU",
-						"type": "list",
-						"data": {
-							"style": "unordered",
-							"items": [
-								{
-									"content": "Users can download a <i>.zip</i> with all the necessary info to re-create their character in blender",
-									"items": []
-								},
-								{
-									"content": "Has all character creator options that the game has",
-									"items": [
-										{
-											"content": "Customization sliders",
-											"items": []
-										},
-										{
-											"content": "Gender",
-											"items": []
-										},
-										{
-											"content": "Classes",
-											"items": []
-										},
-										{
-											"content": "Species",
-											"items": []
-										}
-									]
-								},
-								{
-									"content": "Allows changing of light-color gradient",
-									"items": []
-								},
-								{
-									"content": "Users can search by keywords to get a list of every related item, which they can then select from to display one",
-									"items": []
-								},
-								{
-									"content": "Users can add a global dye to their outfit",
-									"items": []
-								},
-								{
-									"content": "Users can share their creations using the sharing url button at the bottom",
-									"items": []
-								}
-							]
-						}
-					}
-				],
-				"version": "2.24.3"
-			},
-			"link": "https://torcommunity.com/tools/character-designer",
-			"image": "./images/projects/Release_one.png"
-		},
 		"vite-plugin-sitemap": {
-			"index": 11,
+			"index": 9,
 			"name": "Vite-Plugin-Sitemap",
-			"description": "I had the idea to make this npm package because I was working on my portfolio, and came across a neat little rollup plugin for generating sitemaps. Vite allows users to use most rollup plugins, so I just used that, but it caused some issues, so I decided to write my own with some added features.",
+			"description": "A Vite plugin for generating web sitemaps at build time.",
+      "tech": [
+        "Vite",
+        "Rollup",
+        "TypeScript"
+      ],
 			"content": {
 				"time": 1675718444292,
 				"blocks": [
