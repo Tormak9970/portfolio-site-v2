@@ -2811,6 +2811,8 @@
 	"experience": {
 		"synergy-animal-behavior-behavior-assistant": {
 			"index": 2,
+      "start": "May 20",
+      "end": "Aug 20",
 			"company": "Synergy Animal Behavior",
 			"image": "./images/experience/synergy.png",
 			"position": "Assistant",
@@ -2818,6 +2820,8 @@
 		},
 		"city-wood-external-developer": {
 			"index": 1,
+      "start": "June 22",
+      "end": "Aug 22",
 			"company": "City Wood",
 			"image": "./images/experience/citywood-white.png",
 			"position": "External Developer",
@@ -2825,10 +2829,12 @@
 		},
 		"actalent-software-engineer": {
 			"index": 0,
+      "start": "June 23",
+      "end": "Present",
 			"company": "Actalent",
 			"position": "Full Stack Software Engineer",
 			"image": "./images/experience/actalent-logo.svg",
-			"description": "From June 2023 to August of 2023 I worked as a Software Engineer for Actalent Inc. I worked in Angular 16 on a Thermostat app for Mitsubichi Electric, and in NextJS on a Dashboard for Cisco Systems Inc. I familiarized myself with both of these technologies, as well as gained valuable experience working collaboratively with a team, as well as while under deadlines."
+			"description": "I have worked on a small team alongside Mitsubishi Electric US using Angular for a thermostat app, and alongside Cisco Systems Inc. using NextJS 13 for a hardware test automation dashboard."
 		}
 	}
 }
