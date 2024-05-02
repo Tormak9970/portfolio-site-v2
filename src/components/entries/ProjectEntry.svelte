@@ -23,21 +23,14 @@
 </script>
 
 <div class="entry">
-  <div class="content-container">
-    <div class="imgs-cont">
-      <div class="inner-cont" bind:this={contentCont}>
-        {#if !image}
-          <img src="{entryData.image}" alt="{entryData.name}" style="max-height: min(100%, 400px); max-width: min(100%, 652px);">
-        {/if}
-      </div>
-    </div>
-    <div class="proj-overview-cont">
-      <div class="proj-header">
-        <h2 style="text-align: center;">{entryData.name}</h2>
-      </div>
-      <p class="overview">
-        {@html entryData.description}
-      </p>
+  <div class="image-container" bind:this={contentCont}>
+    {#if !image}
+      <img src="{entryData.image}" alt="{entryData.name}">
+    {/if}
+  </div>
+  <div class="details-container">
+    <div class="header-container">
+      <h2 class="header">{entryData.name}</h2>
       <div class="proj-link-cont">
         <!-- svelte-ignore a11y-click-events-have-key-events -->
         <div class="proj-link" on:click|stopPropagation="{openProjectEntry}">
@@ -45,67 +38,64 @@
         </div>
       </div>
     </div>
+    <p class="description">
+      {@html entryData.description}
+    </p>
   </div>
 </div>
 
 <style>
   .entry {
-    width: 64%;
+    width: 80%;
+    max-width: 900px;
 
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: flex-start;
     align-items: center;
+
+    background-color: var(--foreground);
+
+    margin-top: 30px;
+
+    border-radius: 4px;
   }
 
-  .content-container {
-    width: 100%;
-    display: grid;
-    grid-template-columns: minmax(600px, 3fr) minmax(400px, 2fr);
-    column-gap: 14px;
-    justify-items: center;
-    align-items: center;
-  }
-
-  .proj-header {
-    font-size: 27px;
-  }
-  .imgs-cont {
-    width: 100%;
-    max-width: calc(666px - 14px);
-    max-height: min(100%, 400px);
+  img {
+    max-width: 300px;
+    max-height: 200px;
+    height: auto;
 
     padding: 7px;
     border-radius: 4px;
 
-    background-color: var(--foreground);
+    margin: 0px 7px;
+
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
   }
 
-  .inner-cont {
-    overflow: hidden;
-
-    border-radius: 4px;
-
-    height: calc(100% - 14px);
-    width: calc(100% - 14px);
-  }
-
-  .proj-overview-cont {
+  .header-container {
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
   }
-  .overview {
+
+  .header {
+    font-size: 24px;
+    margin: 0px;
+    padding: 0;
+  }
+
+  .description {
     width: 100%;
-    margin-top: 14px;
-    font-size: 20px;
-    text-align: center;
+    max-width: 600px;
+    margin-top: 0px;
+    font-size: 18px;
   }
+
   .proj-link-cont {
     height: 100%;
     width: 100%;
@@ -114,6 +104,7 @@
     justify-content: center;
     align-items: center;
   }
+
   .proj-link {
     margin-top: auto;
 
@@ -131,6 +122,7 @@
     
     cursor: pointer;
   }
+
   .proj-link:hover, .proj-link:focus {
     background-color: var(--highlight-hover);
   }

@@ -5,6 +5,7 @@ interface Project {
   index: number,
   name: string,
   description: string,
+  tech: string[],
   content: any,
   link?: string,
   image: string
@@ -13,6 +14,8 @@ interface Project {
 interface Experience {
   index: number,
   company: string,
+  start: string,
+  end: string,
   image: string,
   position: string,
   description: string

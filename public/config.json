@@ -2816,7 +2816,7 @@
 			"company": "Synergy Animal Behavior",
 			"image": "./images/experience/synergy.png",
 			"position": "Assistant",
-			"description": "Created and managed client databases and resources for Synergy Animal Behavior as a summer job."
+			"description": "Created and managed a database of clients and resources for Synergy Animal Behavior. I also spent time researching and summarizing academic articles."
 		},
 		"city-wood-external-developer": {
 			"index": 1,
@@ -2825,7 +2825,7 @@
 			"company": "City Wood",
 			"image": "./images/experience/citywood-white.png",
 			"position": "External Developer",
-			"description": "I worked on creating an inventory management tool (dubbed Log Tracker) for City Wood. The web app uses Firebase for hosting, authentication, and data storage, as well as Google Cloud for the Gmail and Maps APIs. I completed the beta stage and stopped receiving contact, so the project remains unfinished."
+			"description": "I worked on creating an inventory management tool. The web app uses Firebase for hosting, authentication, and data storage, as well as Google Cloud. I completed the beta stage and stopped receiving contact, so the project remains unfinished."
 		},
 		"actalent-software-engineer": {
 			"index": 0,
