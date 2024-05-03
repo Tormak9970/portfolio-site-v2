@@ -19,16 +19,16 @@
   });
 </script>
 
-<div id="projects">
+<div class="projects-container">
   <div class="content" in:fade>
-    {#each entries as projEntr, i}
-      <ProjectEntry entryData={projEntr} image={imageMap.get(i)}/>
+    {#each entries as entry, i}
+      <ProjectEntry entry={entry} image={imageMap.get(i)}/>
     {/each }
   </div>
 </div>
 
 <style>
-	#projects {
+	.projects-container {
     width: 100%;
     height: 100%;
 

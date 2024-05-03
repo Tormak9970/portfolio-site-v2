@@ -1,7 +1,7 @@
 <script lang="ts">
   import ProjectDetails from "../../components/ProjectDetails.svelte";
 
-	export let projectKey:string;
+	export let id:string;
 </script>
 
-<ProjectDetails projectKey={projectKey} />
+<ProjectDetails id={id} />

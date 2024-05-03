@@ -1,20 +1,20 @@
 <script lang="ts">
   import { onMount } from "svelte";
   import { goto } from '@roxi/routify';
-  import { getKeyFromName } from "../../Utils";
+  import { getIdFromName } from "../../Utils";
 
-  export let entryData:Project;
+  export let entry:Project;
   export let image:HTMLImageElement;
 
   let contentCont:HTMLDivElement;
 
   function openProjectEntry() {
-    $goto(`./:project`, { project: getKeyFromName(entryData.name) });
+    $goto(`./:id`, { id: getIdFromName(entry.name) });
   }
 
   onMount(() => {
     if (image) {
-      image.alt = entryData.name;
+      image.alt = entry.name;
       image.style.maxHeight = "min(100%, 400px)";
       image.style.maxWidth = "min(100%, 652px)";
       contentCont.appendChild(image);
@@ -25,12 +25,12 @@
 <div class="entry">
   <div class="image-container" bind:this={contentCont}>
     {#if !image}
-      <img src="{entryData.image}" alt="{entryData.name}">
+      <img src="{entry.image}" alt="{entry.name}">
     {/if}
   </div>
   <div class="details-container">
     <div class="header-container">
-      <h2 class="header">{entryData.name}</h2>
+      <h2 class="header">{entry.name}</h2>
       <div class="proj-link-cont">
         <!-- svelte-ignore a11y-click-events-have-key-events -->
         <div class="proj-link" on:click|stopPropagation="{openProjectEntry}">
@@ -39,7 +39,7 @@
       </div>
     </div>
     <p class="description">
-      {@html entryData.description}
+      {@html entry.description}
     </p>
   </div>
 </div>

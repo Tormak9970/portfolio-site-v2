@@ -2811,8 +2811,7 @@
 	"experience": {
 		"synergy-animal-behavior-behavior-assistant": {
 			"index": 2,
-      "start": "May 20",
-      "end": "Aug 20",
+      "duration": "Summer 2020",
 			"company": "Synergy Animal Behavior",
 			"image": "./images/experience/synergy.png",
 			"position": "Assistant",
@@ -2820,8 +2819,7 @@
 		},
 		"city-wood-external-developer": {
 			"index": 1,
-      "start": "June 22",
-      "end": "Aug 22",
+      "duration": "Summer 2022",
 			"company": "City Wood",
 			"image": "./images/experience/citywood-white.png",
 			"position": "External Developer",
@@ -2829,8 +2827,7 @@
 		},
 		"actalent-software-engineer": {
 			"index": 0,
-      "start": "June 23",
-      "end": "Present",
+      "duration": "2023 — Present",
 			"company": "Actalent",
 			"position": "Full Stack Software Engineer",
 			"image": "./images/experience/actalent-logo.svg",

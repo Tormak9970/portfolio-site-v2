@@ -14,8 +14,7 @@ interface Project {
 interface Experience {
   index: number,
   company: string,
-  start: string,
-  end: string,
+  duration: string,
   image: string,
   position: string,
   description: string

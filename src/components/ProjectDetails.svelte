@@ -5,9 +5,9 @@
 
 	import { projects } from '../loadConfig';
 
-	export let projectKey:string;
+	export let id:string;
 
-	let entryData = projects.get(projectKey);
+	let entryData = projects.get(id);
 
 	function imageParser({data}) {
 		return `<img class="image-tool__image-picture" src=".${data.file.url}">`;

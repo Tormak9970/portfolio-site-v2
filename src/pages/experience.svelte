@@ -7,16 +7,16 @@
   let entries: Experience[] = Array.from(experience.values()).sort(sortEntriesBasedOnIndex);
 </script>
 
-<div id="experience">
+<div class="experience-container">
   <div class="content" in:fade>
-    {#each entries as expEntr}
-      <ExperienceEntry entryData={expEntr}/>
+    {#each entries as entry}
+      <ExperienceEntry entry={entry}/>
     {/each }
   </div>
 </div>
 
 <style>
-  #experience {
+  .experience-container {
     width: 100%;
     height: 100%;
     
