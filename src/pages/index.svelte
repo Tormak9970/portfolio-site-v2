@@ -3,11 +3,11 @@
   import NoisyDots from "../components/NoisyDots.svelte";
 </script>
 
-<div class="bg-cont">
+<div class="bg-cont" in:fade>
   <div class="dots-cont">
     <NoisyDots />
   </div>
-  <div class="home-container" in:fade>
+  <div class="home-container">
     <div class="name">Travis Lane</div>
   </div>
 </div>

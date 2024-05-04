@@ -5,6 +5,7 @@
 </script>
 
 <div class="header">
+  <!-- svelte-ignore a11y-click-events-have-key-events -->
   <div class="home-container" on:click={() => { $goto("./index"); }} >
     <img src="/images/logo.svg" alt="logo" height="30" width="30" />
   </div>
@@ -13,7 +14,6 @@
     <DesktopNavLink label="About" route="./about" />
     <DesktopNavLink label="Experience" route="./experience" />
     <DesktopNavLink label="Projects" route="./projects" />
-    <DesktopNavLink label="Contact" route="./contact" />
   </div>
 </div>
 

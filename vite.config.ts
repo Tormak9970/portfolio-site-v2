@@ -13,7 +13,6 @@ export default defineConfig({
         { path: '/', name: 'Home' },
         { path: '/experience', name: 'Experience' },
         { path: '/projects', name: 'Projects' },
-        { path: '/contact', name: 'Contact' },
       ],
       urlGenHook: async (config: { routes: any; }) => {
         let routes = config.routes;
