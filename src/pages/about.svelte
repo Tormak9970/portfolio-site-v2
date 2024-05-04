@@ -2,8 +2,10 @@
   import { fade } from "svelte/transition";
   import MediaQuery from "../components/utils/MediaQuery.svelte";
   import SocialButton from "../components/SocialButton.svelte";
+  import { onMount } from "svelte";
 
   let showCrumb = false;
+  let imageContainer: HTMLDivElement;
 
   function copyTextToClipboard(text: string) {
     if (!navigator.clipboard) {
@@ -31,20 +33,23 @@
   function navigateToUrl(url:string) {
     window.open(url, '_blank', 'noopener noreferrer');
   }
+
+  onMount(() => {
+    const img = new Image();
+    img.onload = () => {
+      imageContainer.appendChild(img);
+    }
+    img.src = "images/headshot.jpg";
+    img.alt = "headshot";
+    img.style.maxHeight = "min(100%, 400px)";
+    img.style.maxWidth = "min(100%, 652px)";
+  });
 </script>
 
 <MediaQuery query="(orientation:landscape)" let:matches>
   <div class:landscape={matches} class:mobile={!matches} in:fade>
     <div class="container">
-      <div class="img-container">
-        <!-- svelte-ignore a11y-img-redundant-alt -->
-        <img
-          src="images/headshot.jpg"
-          width="{matches ? 384 : 192}"
-          height="{matches ? 384 : 192}"
-          alt="headshot"
-        />
-      </div>
+      <div class="img-container" style="width: {matches ? 384 : 192}px; height: {matches ? 384 : 192}px;" bind:this={imageContainer} />
     </div>
     <div class:container={matches} class:bio-cont={!matches}>
       <p class="bio">
@@ -140,10 +145,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-  }
-  .mobile .container img {
-    width: 100%;
-    height: 100%;
   }
   .mobile .bio-cont {
     width: 90%;
