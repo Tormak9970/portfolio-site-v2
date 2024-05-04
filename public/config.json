@@ -1145,7 +1145,7 @@
 				"version": "2.19.3"
 			},
 			"link": "https://github.com/Tormak9970/Steam-Art-Manager",
-			"image": "./images/projects/final-ui_v2.7.0.png"
+			"image": "./images/projects/steam-art-manager.png"
 		},
 		"tabmaster": {
 			"index": 1,
@@ -1336,12 +1336,12 @@
 				"version": "2.19.3"
 			},
 			"link": "https://github.com/Tormak9970/TabMaster",
-			"image": "./images/projects/thumbnail.png"
+			"image": "./images/projects/tabmaster.png"
 		},
 		"reliable-changelog": {
 			"index": 2,
 			"name": "Reliable Changelog",
-			"description": "A GitHub action that generates changelogs based on your commits. Highly configurable and adaptable",
+			"description": "A GitHub action that generates changelogs based on your commits. Highly configurable and adaptable.",
       "tech": [
         "Actions",
         "CI/CD",
@@ -2255,10 +2255,10 @@
 			"link": "https://solitaire.travislane.dev/",
 			"image": "./images/projects/untitled-card-game.png"
 		},
-		"portfolio-updater": {
+		"portfolio-editor": {
 			"index": 7,
-			"name": "Portfolio Updater",
-			"description": "An app that augments updating my portfolio, giving me no excuse to keep it up to date.",
+			"name": "Portfolio Editor",
+			"description": "An app that augments editing my portfolio, giving me no excuse to keep it up to date.",
       "tech": [
         "Svelte",
         "Tauri",
@@ -2533,195 +2533,10 @@
 				"version": "2.19.3"
 			},
 			"link": "https://github.com/Tormak9970/portfolio-updater",
-			"image": "./images/projects/v2.0.0-portfolio-editor.png"
-		},
-		"steam-deck-themes": {
-			"index": 8,
-			"name": "Steam Deck Themes",
-			"description": "A collection of my CSS Themes for customizing the Steamdeck's UI.",
-      "tech": [
-        "CSS"
-      ],
-			"content": {
-				"time": 1693400212073,
-				"blocks": [
-					{
-						"type": "header",
-						"data": {
-							"text": "Description",
-							"level": 2
-						}
-					},
-					{
-						"type": "paragraph",
-						"data": {
-							"text": "This project is a collection of CSS themes for the Steam Deck gaming handheld. Generally, my approach is to style things as dynamically as possible and provide inputs for all the colors. The themes are applied using a homebrew plugin for injecting CSS into the Steamdeck UI."
-						}
-					},
-					{
-						"type": "header",
-						"data": {
-							"text": "ColorMaster",
-							"level": 2
-						}
-					},
-					{
-						"type": "image",
-						"data": {
-							"file": {
-								"url": "./images/projects/color-master.png"
-							},
-							"caption": "",
-							"withBorder": false,
-							"stretched": false,
-							"withBackground": false
-						}
-					},
-					{
-						"type": "paragraph",
-						"data": {
-							"text": "ColorMaster is by far the most complex theme I have made so far. 's goal is to provide styling for the entire steam desktop client. With over 30 options, it gives full control to the users, while also positioning itself as the perfect dependency for other themes wanting to style the entire client."
-						}
-					},
-					{
-						"type": "header",
-						"data": {
-							"text": "Colored Toggles Desktop",
-							"level": 2
-						}
-					},
-					{
-						"type": "image",
-						"data": {
-							"file": {
-								"url": "./images/projects/colored-toggles-desktop.png"
-							},
-							"caption": "",
-							"withBorder": false,
-							"stretched": false,
-							"withBackground": false
-						}
-					},
-					{
-						"type": "paragraph",
-						"data": {
-							"text": "A port of the colored toggles theme that works with Steam's desktop mode"
-						}
-					},
-					{
-						"type": "header",
-						"data": {
-							"text": "Show Download Status",
-							"level": 2
-						}
-					},
-					{
-						"type": "image",
-						"data": {
-							"file": {
-								"url": "./images/projects/Show-Download-Status.png"
-							},
-							"caption": "",
-							"withBorder": false,
-							"stretched": false,
-							"withBackground": false
-						}
-					},
-					{
-						"type": "image",
-						"data": {
-							"file": {
-								"url": "./images/projects/Show-Download-Status_uninstalled.png"
-							},
-							"caption": "",
-							"withBorder": false,
-							"stretched": false,
-							"withBackground": false
-						}
-					},
-					{
-						"type": "paragraph",
-						"data": {
-							"text": "This theme adds an icon to the library and homepage view indicating if a game is installed or not."
-						}
-					},
-					{
-						"type": "header",
-						"data": {
-							"text": "Stylish Footer",
-							"level": 2
-						}
-					},
-					{
-						"type": "image",
-						"data": {
-							"file": {
-								"url": "./images/projects/Stylish-Footer.png"
-							},
-							"caption": "",
-							"withBorder": false,
-							"stretched": false,
-							"withBackground": false
-						}
-					},
-					{
-						"type": "paragraph",
-						"data": {
-							"text": "This theme makes the header and footer elements transparent while giving call to action descriptions a black background to maintain visibility."
-						}
-					},
-					{
-						"type": "header",
-						"data": {
-							"text": "SteamDeck U",
-							"level": 2
-						}
-					},
-					{
-						"type": "image",
-						"data": {
-							"file": {
-								"url": "./images/projects/SteamDeckU.png"
-							},
-							"caption": "",
-							"withBorder": false,
-							"stretched": false,
-							"withBackground": false
-						}
-					},
-					{
-						"type": "paragraph",
-						"data": {
-							"text": "This theme provides users with options to customize each part of their keyboard. Valve offers first party keyboard themes, but they are eyesores and only work online."
-						}
-					},
-					{
-						"type": "header",
-						"data": {
-							"text": "Purpose",
-							"level": 2
-						}
-					},
-					{
-						"type": "list",
-						"data": {
-							"style": "unordered",
-							"items": [
-								{
-									"content": "Wanted to contribute to the homebrew Steam Deck community",
-									"items": []
-								}
-							]
-						}
-					}
-				],
-				"version": "2.19.3"
-			},
-			"link": "https://github.com/Tormak9970/SteamDeckThemes",
-			"image": "./images/projects/Show-Download-Status.png"
+			"image": "./images/projects/portfolio-editor.png"
 		},
 		"vite-plugin-sitemap": {
-			"index": 9,
+			"index": 8,
 			"name": "Vite-Plugin-Sitemap",
 			"description": "A Vite plugin for generating web sitemaps at build time.",
       "tech": [

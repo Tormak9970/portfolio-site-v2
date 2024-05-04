@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { fly } from "svelte/transition";
   import { onMount } from "svelte";
   import { goto } from '@roxi/routify';
   import { getIdFromName } from "../../Utils";
@@ -17,13 +18,13 @@
       contentCont.appendChild(img);
     }
     img.alt = entry.name;
-    img.style.maxHeight = "min(100%, 400px)";
-    img.style.maxWidth = "min(100%, 652px)";
+    img.style.maxHeight = "400px";
+    img.style.maxWidth = "600px";
     img.src = entry.image;
   });
 </script>
 
-<div class="entry">
+<div class="entry" in:fly={{ delay: entry.index * 300, x: 200, duration: 1000 }}>
   <div class="image-container" bind:this={contentCont} />
   <div class="details-container">
     <div class="header-container">
