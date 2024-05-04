@@ -18,7 +18,7 @@
     <LoadingAnimation />
   {:then} 
     <div class="content" in:fade>
-      {#each entries as entry, i}
+      {#each entries as entry}
         <ProjectEntry entry={entry} />
       {/each }
     </div>

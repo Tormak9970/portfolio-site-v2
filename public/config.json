@@ -2150,6 +2150,10 @@
 			"index": 6,
 			"name": "Untitled Card Game",
 			"description": "A Solitaire game made with animated cards and a pixel art style.",
+      "tech": [
+        "Svelte",
+        "TypeScript"
+      ],
 			"content": {
 				"time": 1679188413134,
 				"blocks": [

@@ -1,16 +1,13 @@
 <script lang="ts">
   import { fly } from "svelte/transition";
   import { onMount } from "svelte";
-  import { goto } from '@roxi/routify';
   import { getIdFromName } from "../../Utils";
+
+  import RightLink from "../utils/RightLink.svelte";
 
   export let entry:Project;
 
   let contentCont:HTMLDivElement;
-
-  function openProjectEntry() {
-    $goto(`./:id`, { id: getIdFromName(entry.name) });
-  }
 
   onMount(() => {
     const img = new Image();
@@ -18,8 +15,6 @@
       contentCont.appendChild(img);
     }
     img.alt = entry.name;
-    img.style.maxHeight = "400px";
-    img.style.maxWidth = "600px";
     img.src = entry.image;
   });
 </script>
@@ -29,51 +24,54 @@
   <div class="details-container">
     <div class="header-container">
       <h2 class="header">{entry.name}</h2>
-      <div class="proj-link-cont">
-        <!-- svelte-ignore a11y-click-events-have-key-events -->
-        <div class="proj-link" on:click|stopPropagation="{openProjectEntry}">
-          Read More
-        </div>
-      </div>
     </div>
+    <RightLink label="View Writeup" url="./:id" urlParams={{ id: getIdFromName(entry.name) }} />
     <p class="description">
       {@html entry.description}
     </p>
+    <div class="tags-container">
+      {#each entry.tech as tag}
+        <div class="tag">{tag}</div>
+      {/each}
+    </div>
   </div>
 </div>
 
 <style>
   .entry {
-    width: 80%;
-    max-width: 900px;
-
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-
-    background-color: var(--foreground);
+    width: calc(90%);
+    max-width: 800px;
 
     margin-top: 30px;
 
-    border-radius: 4px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 10px;
   }
 
   :global(.entry .image-container img) {
-    max-width: 300px;
-    max-height: 200px;
-    height: auto;
-
-    padding: 7px;
-    border-radius: 4px;
-
-    margin: 0px 7px;
-
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+		width: 100%;
+		height: auto;
+		border-radius: 4px;
   }
+
+  .image-container {
+    width: calc(100% - 22px);
+		max-width: 330px;
+
+		padding: 10px;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		border: 1px solid var(--border);
+
+    border-radius: 4px;
+	}
 
   .header-container {
     display: flex;
@@ -87,41 +85,30 @@
     padding: 0;
   }
 
+  .details-container {
+    width: 350px;
+  }
+
   .description {
     width: 100%;
     max-width: 600px;
-    margin-top: 0px;
+    margin-top: 5px;
+    margin-bottom: 0px;
     font-size: 18px;
   }
 
-  .proj-link-cont {
-    height: 100%;
-    width: 100%;
+  .tags-container {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    flex-wrap: wrap;
   }
 
-  .proj-link {
-    margin-top: auto;
-
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-
-    margin-bottom: 5px;
-
-    padding: 3px 6px;
+  .tag {
     border-radius: 4px;
+    padding: 4px 6px;
 
-    background-color: var(--highlight);
-    
-    cursor: pointer;
-  }
+    margin-right: 10px;
+    margin-top: 10px;
 
-  .proj-link:hover, .proj-link:focus {
-    background-color: var(--highlight-hover);
+    background-color: var(--foreground);
   }
 </style>
