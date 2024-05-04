@@ -3,7 +3,7 @@ const experience: Map<string, Experience> = new Map();
 
 let configLoaded = false;
 
-async function loadConfig() {
+async function loadConfig(): Promise<boolean> {
   if (!configLoaded) {
     const config = await fetch('/config.json').then(response => { return response.json(); });
 
@@ -17,6 +17,8 @@ async function loadConfig() {
 
     configLoaded = true;
   }
+
+  return configLoaded;
 }
 
 export { loadConfig, projects, experience };

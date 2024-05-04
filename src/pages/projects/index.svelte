@@ -1,18 +1,28 @@
 <script lang="ts">
-  import { projects } from "../../loadConfig";
+  import { loadConfig, projects } from "../../loadConfig";
   import { sortEntriesBasedOnIndex } from "../../Utils";
   import ProjectEntry from "../../components/entries/ProjectEntry.svelte";
   import { fade } from "svelte/transition";
+  import LoadingAnimation from "../../components/utils/LoadingAnimation.svelte";
 
-  let entries: Project[] = Array.from(projects.values()).sort(sortEntriesBasedOnIndex);
+  let configLoadPromise = loadConfig();
+  let entries: Project[];
+
+  configLoadPromise.then(() => {
+    entries = Array.from(projects.values()).sort(sortEntriesBasedOnIndex)
+  });
 </script>
 
 <div class="projects-container">
-  <div class="content" in:fade>
-    {#each entries as entry, i}
-      <ProjectEntry entry={entry} />
-    {/each }
-  </div>
+  {#await configLoadPromise}
+    <LoadingAnimation />
+  {:then} 
+    <div class="content" in:fade>
+      {#each entries as entry, i}
+        <ProjectEntry entry={entry} />
+      {/each }
+    </div>
+  {/await}
 </div>
 
 <style>

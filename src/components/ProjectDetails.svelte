@@ -1,13 +1,19 @@
 <script lang="ts">
 	import { url } from '@roxi/routify';
-
 	import edjsHTML from "editorjs-html";
+  
+  import LoadingAnimation from "./utils/LoadingAnimation.svelte";
 
-	import { projects } from '../loadConfig';
+	import { loadConfig, projects } from '../loadConfig';
 
 	export let id:string;
 
-	let entryData = projects.get(id);
+  let configLoadPromise = loadConfig();
+	let entryData: Project;
+
+  configLoadPromise.then(() => {
+    entryData = projects.get(id);
+  });
 
 	function imageParser({data}) {
 		return `<img class="image-tool__image-picture" src=".${data.file.url}">`;
@@ -17,12 +23,12 @@
 		image: imageParser
 	});
 
-	$: data = entryData.content;
+	$: data = entryData?.content;
 
 	let output: any[];
 
 	$: {
-		if (data.time && data.blocks?.length > 0 && data.version) {
+		if (data && data.time && data.blocks?.length > 0 && data.version) {
 			output = edjsParser.parse(data).join("");
 		} else {
 			output = null;
@@ -31,30 +37,34 @@
 </script>
 
 <div class="projEntry">
-  <div class="header-cont">
-		<div class="cit-cont">
-      <a class="back-cont proj-link" href="{$url("/projects")}">
-        Back
-      </a>
+  {#await configLoadPromise}
+    <LoadingAnimation />
+  {:then} 
+    <div class="header-cont">
+      <div class="cit-cont">
+        <a class="back-cont proj-link" href="{$url("/projects")}">
+          Back
+        </a>
+      </div>
+      <h2 class="proj-header">{entryData.name}</h2>
+      <div class="cit-cont" style="margin-right: 14px;" class:hidden={entryData.link === ""}>
+        <a class="proj-link" href="{entryData.link}" rel="noreferrer noopener" target="_blank">
+          Visit
+        </a>
+      </div>
     </div>
-		<h2 class="proj-header">{entryData.name}</h2>
-		<div class="cit-cont" style="margin-right: 14px;" class:hidden={entryData.link === ""}>
-			<a class="proj-link" href="{entryData.link}" rel="noreferrer noopener" target="_blank">
-        Visit
-      </a>
-		</div>
-	</div>
-  <div class="proj-layout-cont">
-    <div class="proj-main-img proj-img-cont">
-			<img src=".{entryData.image}" alt="">
-		</div>
-		<div class="data-container entr-cont">
-			<div class="data-entr"><b>Name:</b> {entryData.name}</div>
-		</div>
-    <div id="entrContent" class="entr-cont">
-			{@html output ? output : ''}
-		</div>
-  </div>
+    <div class="proj-layout-cont">
+      <div class="proj-main-img proj-img-cont">
+        <img src=".{entryData.image}" alt="">
+      </div>
+      <div class="data-container entr-cont">
+        <div class="data-entr"><b>Name:</b> {entryData.name}</div>
+      </div>
+      <div id="entrContent" class="entr-cont">
+        {@html output ? output : ''}
+      </div>
+    </div>
+  {/await}
 </div>
 
 <style>

@@ -1,18 +1,28 @@
 <script lang="ts">
   import { fade } from "svelte/transition";
   import { sortEntriesBasedOnIndex } from "../Utils";
-  import { experience } from '../loadConfig';
+  import { experience, loadConfig } from '../loadConfig';
   import ExperienceEntry from "../components/entries/ExperienceEntry.svelte";
+  import LoadingAnimation from "../components/utils/LoadingAnimation.svelte";
 
-  let entries: Experience[] = Array.from(experience.values()).sort(sortEntriesBasedOnIndex);
+  let configLoadPromise = loadConfig();
+  let entries: Experience[];
+
+  configLoadPromise.then(() => {
+    entries = Array.from(experience.values()).sort(sortEntriesBasedOnIndex)
+  });
 </script>
 
 <div class="experience-container">
-  <div class="content" in:fade>
-    {#each entries as entry}
+  {#await configLoadPromise}
+    <LoadingAnimation />
+  {:then}
+    <div class="content" in:fade>
+      {#each entries as entry}
       <ExperienceEntry entry={entry}/>
     {/each }
-  </div>
+    </div>
+  {/await}
 </div>
 
 <style>
