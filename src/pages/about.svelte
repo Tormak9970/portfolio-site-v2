@@ -128,7 +128,6 @@
   }
   .landscape .container .bio a:focus {
     color: var(--link-color_clicked);
-    text-decoration: none;
   }
   .mobile {
     width: 100%;
@@ -162,7 +161,10 @@
   }
   .mobile .bio-cont .bio a:focus {
     color: var(--link-color_clicked);
-    text-decoration: none;
+  }
+  a:focus,
+  a:hover {
+    text-decoration: underline !important;
   }
 
   .breadcrump-cont {
