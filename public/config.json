@@ -56,8 +56,7 @@
 						"type": "image",
 						"data": {
 							"file": {
-								"url": "https://asset.localhost/C%3A%5CUsers%5CTormak%5CDocuments%5CGitHub%5Cportfolio-site-v2%5Cpublic%5Cimages%5Cprojects%5Cfinal-ui_v2.7.0.png",
-								"webUrl": "./images/projects/final-ui_v2.7.0.png"
+								"url": "steam-art-manager.png"
 							},
 							"caption": "",
 							"withBorder": false,
@@ -1627,8 +1626,7 @@
 						"type": "image",
 						"data": {
 							"file": {
-								"url": "https://asset.localhost/C%3A%5CUsers%5CTorma%5CDocuments%5CGithub%5Cportfolio-site-v2%5Cpublic%5Cimages%5Cprojects%5CDDSEditor-main-ui.png",
-								"webUrl": "./images/projects/DDSEditor-main-ui.png"
+								"url": "DDSEditor-main-ui.png"
 							},
 							"caption": "",
 							"withBorder": false,
@@ -1655,8 +1653,7 @@
 						"type": "image",
 						"data": {
 							"file": {
-								"url": "https://asset.localhost/C%3A%5CUsers%5CTorma%5CDocuments%5CGithub%5Cportfolio-site-v2%5Cpublic%5Cimages%5Cprojects%5Cjson-editor.png",
-								"webUrl": "./images/projects/json-editor.png"
+								"url": "json-editor.png"
 							},
 							"caption": "",
 							"withBorder": false,
@@ -1683,8 +1680,7 @@
 						"type": "image",
 						"data": {
 							"file": {
-								"url": "https://asset.localhost/C%3A%5CUsers%5CTorma%5CDocuments%5CGithub%5Cportfolio-site-v2%5Cpublic%5Cimages%5Cprojects%5CBackup-manager.png",
-								"webUrl": "./images/projects/Backup-manager.png"
+								"url": "Backup-manager.png"
 							},
 							"caption": "",
 							"withBorder": false,
@@ -2628,7 +2624,6 @@
 			"index": 2,
       "duration": "Summer 2020",
 			"company": "Synergy Animal Behavior",
-			"image": "./images/experience/synergy.png",
 			"position": "Assistant",
       "companyLink": "https://synergyanimalbehavior.com/",
 			"description": "Created and managed a database of clients and resources for Synergy Animal Behavior. I also spent time researching and summarizing academic articles."
@@ -2637,7 +2632,6 @@
 			"index": 1,
       "duration": "Summer 2022",
 			"company": "City Wood",
-			"image": "./images/experience/citywood-white.png",
 			"position": "External Developer",
       "companyLink": "http://www.city-wood.com/",
 			"description": "I worked on creating an inventory management tool. The web app uses Firebase for hosting, authentication, and data storage, as well as Google Cloud. I completed the beta stage and stopped receiving contact, so the project remains unfinished."
@@ -2647,7 +2641,6 @@
       "duration": "2023 — Present",
 			"company": "Actalent",
 			"position": "Full Stack Software Engineer",
-			"image": "./images/experience/actalent-logo.svg",
       "companyLink": "https://www.actalentservices.com/",
 			"description": "I have worked on a small team alongside Mitsubishi Electric US using Angular for a thermostat app, and alongside Cisco Systems Inc. using NextJS 13 for a hardware test automation dashboard."
 		}

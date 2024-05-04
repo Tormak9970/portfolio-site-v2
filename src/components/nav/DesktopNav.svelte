@@ -21,7 +21,7 @@
   .header {
 		width: 100%;
 		height: 50px;
-    border-bottom: 1px solid var(--page-borders);
+    border-bottom: 1px solid var(--border);
 		display: flex;
 		flex-direction: row;
 		align-items: center;

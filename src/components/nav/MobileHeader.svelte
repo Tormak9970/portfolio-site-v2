@@ -18,7 +18,7 @@
 <style>
 	.mobile-header {
 		width: 100%;
-    border-bottom: 1px solid var(--page-borders);
+    border-bottom: 1px solid var(--border);
 		display: flex;
 		flex-direction: column;
 	}

@@ -16,6 +16,7 @@
   --background-hover: #303030;
 
   --foreground: #58483b;
+  --foreground-hover: #635142;
 
   --fore-accent: #332b24;
   --fore-accent-hover: #332b24;
@@ -30,7 +31,8 @@
 
   --warning-red: #e24a4a;
 
-  --page-borders: var(--srcery-xgray2);
+  --border: var(--srcery-xgray2);
+  --border-hover: #3c3c3c;
 
   --toast-shadow: #151515;
 }
