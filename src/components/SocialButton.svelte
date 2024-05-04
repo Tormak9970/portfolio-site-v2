@@ -26,7 +26,7 @@
     fill: var(--highlight);
     font-size: 40px;
 
-    transition: fill 0.3s ease-in-out;
+    transition: fill 0.2s ease-in-out;
   }
   .social-button:hover { cursor: pointer; }
   :global(.social-button:hover svg) { fill: var(--highlight-hover);  }

@@ -66,11 +66,15 @@
   .company-link {
     display: flex;
     align-items: center;
+    transition: text-decoration 0.2s ease-in-out;
   }
 
   .company-link:hover {
     text-decoration: underline;
     cursor: pointer;
+  }
+  .company-link:hover svg {
+    fill: var(--link-color_clicked);
   }
 
   .company {
@@ -80,6 +84,7 @@
   svg {
     margin-top: 2px;
     fill: var(--link-color);
+    transition: fill 0.2s ease-in-out;
   }
 
   .description {

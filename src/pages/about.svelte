@@ -3,18 +3,20 @@
   import MediaQuery from "../components/utils/MediaQuery.svelte";
   import SocialButton from "../components/SocialButton.svelte";
   import { onMount } from "svelte";
+  import Toast from "../components/utils/Toast.svelte";
 
-  let showCrumb = false;
+  let toastMessage = "Copied to Clipboard!"
+  let showToast = false;
   let imageContainer: HTMLDivElement;
 
   function copyTextToClipboard(text: string) {
     if (!navigator.clipboard) {
-      showBreadcrumb("Your browser does not support the clipboard api :(");
+      showBreadcrumb("Clipboard not supported by browser");
       return;
     }
     navigator.clipboard.writeText(text).then(
       function () {
-        showBreadcrumb("Copied to clipboard.");
+        showBreadcrumb("Copied to Clipboard!");
       },
       function (err) {
         console.error("Async: Could not copy text: ", err);
@@ -23,10 +25,10 @@
   }
 
   function showBreadcrumb(message: string) {
-    document.getElementById("breadCrumbCont").innerHTML = message;
-    showCrumb = true;
+    toastMessage = message;
+    showToast = true;
     setTimeout(() => {
-      showCrumb = false;
+      showToast = false;
     }, 3000);
   }
 
@@ -47,7 +49,7 @@
 </script>
 
 <MediaQuery query="(orientation:landscape)" let:matches>
-  <div class:landscape={matches} class:mobile={!matches} in:fade>
+  <div class="about-page" class:landscape={matches} class:mobile={!matches} in:fade>
     <div class="container">
       <div class="img-container" style="width: {matches ? 384 : 192}px; height: {matches ? 384 : 192}px;" bind:this={imageContainer} />
     </div>
@@ -56,9 +58,9 @@
         I am a web developer and software engineer. I enjoy learning new concepts
         through self guided projects, and sharing my knowledge with others. Currently
         I am attending
-        <a href="https://vt.edu/" rel="noopenner norefferer" target="_blank"
-          >Virginia Polytechnic Institute and State University</a
-        >, pursuing an education in Computer Science.
+        <a href="https://vt.edu/" rel="noopenner norefferer" target="_blank">
+          Virginia Polytechnic Institute and State University
+        </a>, pursuing an education in Computer Science.
         <br />
         <br />
         My interest in Computer Science started in highschool, and I have continued
@@ -92,59 +94,40 @@
     </div>
   </div>
 </MediaQuery>
-<div class="breadcrump-cont{showCrumb ? '' : ' hidden'}">
-  <div id="breadCrumbCont">Placeholder</div>
-</div>
+<Toast bind:message={toastMessage} bind:show={showToast} />
 
 <style>
+  .about-page {
+    display: flex;
+    align-items: center;
+  }
+
   .landscape {
     width: 80%;
     height: 80%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
   }
 
   .img-container {
     border-radius: 50%;
     overflow: hidden;
   }
-  .landscape .img-container { height: 384px; }
   
-  .landscape .container {
+  .container {
     width: 50%;
-    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
-  .landscape .container .bio {
-    font-size: 22px;
-  }
-  .landscape .container .bio a {
-    color: var(--link-color);
-    text-decoration: none;
-  }
-  .landscape .container .bio a:focus {
-    color: var(--link-color_clicked);
-  }
+  
   .mobile {
     width: 100%;
     height: 100%;
     padding: 10% 0;
-    display: flex;
     flex-direction: column;
-    align-items: center;
     overflow: scroll;
   }
-  .mobile .container {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
+  
   .mobile .bio-cont {
     width: 90%;
     display: flex;
@@ -152,40 +135,19 @@
     justify-content: center;
     align-items: center;
   }
-  .mobile .bio-cont .bio {
-    font-size: 18px;
-  }
-  .mobile .bio-cont .bio a {
+  
+  .landscape .bio { font-size: 22px; }
+  .mobile .bio { font-size: 18px; }
+  
+  a {
     color: var(--link-color);
+    transition: color 0.2s ease-in-out, text-decoration 0.2s ease-in-out;
     text-decoration: none;
   }
-  .mobile .bio-cont .bio a:focus {
-    color: var(--link-color_clicked);
-  }
+  
   a:focus,
   a:hover {
+    color: var(--link-color_clicked);
     text-decoration: underline !important;
-  }
-
-  .breadcrump-cont {
-    position: absolute;
-
-    padding: 6px 10px;
-    border-radius: 4px;
-
-    background-color: var(--foreground);
-
-    box-shadow: var(--breadcrumb-shadow) 1px 1px 10px 0px;
-
-    bottom: 40px;
-
-    transition: bottom 0.4s;
-  }
-  .breadcrump-cont #breadCrumbCont {
-    font-size: 14px;
-  }
-
-  .hidden {
-    bottom: -40px;
   }
 </style>
