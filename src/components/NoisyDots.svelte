@@ -2,31 +2,16 @@
   import { createNoise3D } from "simplex-noise";
   import { afterUpdate, onMount } from "svelte";
 
+  export let fillColor: string;
+
   let canvas:HTMLCanvasElement;
   let ctx:CanvasRenderingContext2D;
 
-  function mapRange(value: number, inputMin: number, inputMax: number, outputMin: number, outputMax: number, clamp: boolean) {
+  function mapRange(value: number, inputMin: number, inputMax: number, outputMin: number, outputMax: number) {
     if (Math.abs(inputMin - inputMax) < Number.EPSILON) {
       return outputMin;
     } else {
-      let outVal =
-        ((value - inputMin) / (inputMax - inputMin)) * (outputMax - outputMin) +
-        outputMin;
-      if (clamp) {
-        if (outputMax < outputMin) {
-          if (outVal < outputMax) {
-            outVal = outputMax;
-          } else if (outVal > outputMin) {
-            outVal = outputMin;
-          }
-        } else {
-          if (outVal > outputMax) {
-            outVal = outputMax;
-          } else if (outVal < outputMin) {
-            outVal = outputMin;
-          }
-        }
-      }
+      let outVal = ((value - inputMin) / (inputMax - inputMin)) * (outputMax - outputMin) + outputMin;
       return outVal;
     }
   }
@@ -47,9 +32,9 @@
   }
 
   function drawScaledCircle(x:number, y:number, noise:number) {
-    ctx.fillStyle = "#252525"; // also try #2c2c2c, #303030, #383838
+    ctx.fillStyle = fillColor; // also try #2c2c2c, #303030, #383838
     ctx.beginPath();
-    ctx.arc(x, y, mapRange(noise, -1, 1, minCircleRad, maxCircleRad, false), 0, 2 * Math.PI);
+    ctx.arc(x, y, mapRange(noise, -1, 1, minCircleRad, maxCircleRad), 0, 2 * Math.PI);
     ctx.fill();
   }
 
@@ -62,7 +47,7 @@
       for (let j = 0; j < numIttsY; j++) {
         const y = pointSpacing * j;
 
-        const n = noise( x / canvas.width * frequencyX, y / canvas.height * frequencyY, time * 0.5) * amplitude;
+        const n = noise(x / canvas.width * frequencyX, y / canvas.height * frequencyY, time * 0.5) * amplitude;
 
         drawScaledCircle(x, y, n);
       }

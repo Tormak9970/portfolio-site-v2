@@ -5,7 +5,7 @@
 
 <div class="bg-cont" in:fade>
   <div class="dots-cont">
-    <NoisyDots />
+    <NoisyDots fillColor="#252525" />
   </div>
   <div class="home-container">
     <div class="name">Travis Lane</div>
