@@ -17,6 +17,7 @@ interface Experience {
   duration: string,
   image: string,
   position: string,
+  companyLink: string,
   description: string
 }
 
