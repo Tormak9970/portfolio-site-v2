@@ -39,10 +39,10 @@
     img.onload = () => {
       imageContainer.appendChild(img);
     }
-    img.src = "images/headshot.jpg";
     img.alt = "headshot";
     img.style.maxHeight = "min(100%, 400px)";
     img.style.maxWidth = "min(100%, 652px)";
+    img.src = "images/headshot.jpg";
   });
 </script>
 

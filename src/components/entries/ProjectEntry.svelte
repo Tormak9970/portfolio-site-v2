@@ -4,7 +4,6 @@
   import { getIdFromName } from "../../Utils";
 
   export let entry:Project;
-  export let image:HTMLImageElement;
 
   let contentCont:HTMLDivElement;
 
@@ -13,21 +12,19 @@
   }
 
   onMount(() => {
-    if (image) {
-      image.alt = entry.name;
-      image.style.maxHeight = "min(100%, 400px)";
-      image.style.maxWidth = "min(100%, 652px)";
-      contentCont.appendChild(image);
+    const img = new Image();
+    img.onload = () => {
+      contentCont.appendChild(img);
     }
+    img.alt = entry.name;
+    img.style.maxHeight = "min(100%, 400px)";
+    img.style.maxWidth = "min(100%, 652px)";
+    img.src = entry.image;
   });
 </script>
 
 <div class="entry">
-  <div class="image-container" bind:this={contentCont}>
-    {#if !image}
-      <img src="{entry.image}" alt="{entry.name}">
-    {/if}
-  </div>
+  <div class="image-container" bind:this={contentCont} />
   <div class="details-container">
     <div class="header-container">
       <h2 class="header">{entry.name}</h2>
@@ -61,7 +58,7 @@
     border-radius: 4px;
   }
 
-  img {
+  :global(.entry .image-container img) {
     max-width: 300px;
     max-height: 200px;
     height: auto;

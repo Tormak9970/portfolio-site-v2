@@ -30,5 +30,7 @@
 
   --warning-red: #e24a4a;
 
+  --page-borders: var(--srcery-xgray2);
+
   --breadcrumb-shadow: #151515;
 }

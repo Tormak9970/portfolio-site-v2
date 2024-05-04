@@ -24,7 +24,7 @@
 		justify-content: flex-start;
 		align-items: center;
 		background-color: var(--foreground);
-    border-left: 1px solid var(--srcery-xgray2);
+    border-left: 1px solid var(--page-borders);
 	}
 
 	.menu-hidden {
