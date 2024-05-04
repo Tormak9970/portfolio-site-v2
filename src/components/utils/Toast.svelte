@@ -16,11 +16,9 @@
 
     background-color: var(--foreground);
 
-    box-shadow: var(--toast-shadow) 1px 1px 10px 0px;
-
     bottom: 40px;
 
-    transition: bottom 0.4s;
+    transition: bottom 0.2s;
   }
   .toast {
     font-size: 14px;

@@ -141,7 +141,7 @@
   
   a {
     color: var(--link-color);
-    transition: color 0.2s ease-in-out, text-decoration 0.2s ease-in-out;
+    transition: color 0.15s ease-in-out, text-decoration 0.15s ease-in-out;
     text-decoration: none;
   }
   

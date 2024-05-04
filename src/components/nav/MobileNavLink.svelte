@@ -27,7 +27,7 @@
 		color: var(--font-color);
 	}
 	.rendered {
-		background-color: var(--fore-accent);
+		background-color: var(--foreground-light);
 	}
 	.nav-link:hover {
 		cursor: pointer;

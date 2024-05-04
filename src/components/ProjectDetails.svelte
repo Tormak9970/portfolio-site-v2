@@ -1,11 +1,12 @@
 <script lang="ts">
+  import { fade } from "svelte/transition"
 	import edjsHTML from "editorjs-html";
   
   import LoadingAnimation from "./utils/LoadingAnimation.svelte";
 
 	import { loadConfig, projects } from '../loadConfig';
-    import GoBackButton from "./utils/GoBackButton.svelte";
-    import DiagonalLink from "./utils/DiagonalLink.svelte";
+  import GoBackButton from "./utils/GoBackButton.svelte";
+  import DiagonalLink from "./utils/DiagonalLink.svelte";
 
 	export let id:string;
 
@@ -41,7 +42,7 @@
   }
 </script>
 
-<div class="details-container">
+<div class="details-container" in:fade>
   <div class="details">
     {#await configLoadPromise}
       <LoadingAnimation />
@@ -117,10 +118,11 @@
 		justify-content: center;
 		align-items: center;
 
-		/* background-color: var(--foreground); */
 		border: 1px solid var(--border);
 
     border-radius: 4px;
+
+    margin-bottom: 10px;
 	}
 	.image-container img {
 		width: 100%;
@@ -139,4 +141,8 @@
 	:global(.image-tool__image-picture) {
 		max-width: 100%;
 	}
+
+	.writeup :global(a) { color: var(--link-color); }
+	.writeup :global(a):hover { color: var(--link-color_clicked); }
+	.writeup :global(a):focus { color: var(--link-color_clicked); }
 </style>

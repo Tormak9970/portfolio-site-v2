@@ -1,38 +1,55 @@
-:root {
-  --srcery-black:          #1C1B19;
-  --srcery-blue:           #2C78BF;
-  --srcery-bright-black:   #918175;
-  --srcery-bright-blue:    #68A8E4;
-  --srcery-bright-green:   #98BC37;
-  --srcery-bright-white:   #FCE8C3;
-  --srcery-green:          #519F50;
-  --srcery-hard-black:     #121212;
-  --srcery-white:          #BAA67F;
-  --srcery-xgray2:         #303030;
+/* :root {
+  --font-color: #FCE8C3;
 
-
-  --background: var(--srcery-black);
+  --background: #918175;
   --background-selected: #2c2c2c;
   --background-hover: #303030;
 
   --foreground: #58483b;
   --foreground-hover: #635142;
 
-  --fore-accent: #332b24;
-  --fore-accent-hover: #332b24;
-  --fore-accent-selected: #251f1a;
+  --foreground-light: #332b24;
+  --foreground-light-hover: #332b24;
+  --foreground-light-selected: #251f1a;
 
   --highlight: #82b74bff;
   --highlight-hover: #8ac24e;
 
-  --font-color: var(--srcery-bright-white);
-  --link-color: var(--srcery-blue);
+  --link-color: #2C78BF;
   --link-color_clicked: #005eff;
 
   --warning-red: #e24a4a;
 
-  --border: var(--srcery-xgray2);
+  --border: #303030;
   --border-hover: #3c3c3c;
 
   --toast-shadow: #151515;
+} */
+
+/* TODO: not monotone */
+
+:root {
+  --font-color: rgb(183, 232, 252);
+
+  --background: #070F2B;
+
+  --foreground: #3b52a5;
+  --foreground-hover: #4a62b9;
+
+  /* TODO: these need work */
+  --foreground-light: rgba(50, 72, 212, 0.9);
+  --foreground-light-hover: #332b24;
+  --foreground-light-text: #74d9e9;
+
+  /* TODO: these need work */
+  --highlight: #369cfb;
+  --highlight-hover: #479ded;
+
+  /* TODO: these need work */
+  --link-color: #2C78BF;
+  --link-color_clicked: #005eff;
+
+  /* TODO: these may need work */
+  --border: #1c2855;
+  --border-hover: #233269;
 }

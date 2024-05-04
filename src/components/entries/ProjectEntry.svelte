@@ -25,7 +25,7 @@
     <div class="header-container">
       <h2 class="header">{entry.name}</h2>
     </div>
-    <RightLink label="View Writeup" url="./:id" urlParams={{ id: getIdFromName(entry.name) }} />
+    <RightLink label="View Writeup" url="./:id" urlParams={{ id: getIdFromName(entry.name) }} isRelative />
     <p class="description">
       {@html entry.description}
     </p>
@@ -109,6 +109,7 @@
     margin-right: 10px;
     margin-top: 10px;
 
-    background-color: var(--foreground);
+    background-color: var(--foreground-light);
+    color: var(--foreground-light-text);
   }
 </style>
