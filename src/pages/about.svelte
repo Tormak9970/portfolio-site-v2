@@ -49,11 +49,9 @@
 </script>
 
 <MediaQuery query="(orientation:landscape)" let:matches>
-  <div class="about-page" class:landscape={matches} class:mobile={!matches} in:fade>
-    <div class="container">
-      <div class="img-container" style="width: {matches ? 384 : 192}px; height: {matches ? 384 : 192}px;" bind:this={imageContainer} />
-    </div>
-    <div class:container={matches} class:bio-cont={!matches}>
+  <div class="about-page" in:fade>
+    <div class="img-container" style="width: {matches ? 384 : 192}px; height: {matches ? 384 : 192}px;" bind:this={imageContainer} />
+    <div class="bio-container"style="font-size: {matches ? 22 : 18}px;">
       <p class="bio">
         I am a web developer and software engineer. I enjoy learning new concepts
         through self guided projects, and sharing my knowledge with others. Currently
@@ -98,13 +96,13 @@
 
 <style>
   .about-page {
+    padding: min(6%, 20px) 0px;
     display: flex;
     align-items: center;
-  }
-
-  .landscape {
-    width: 80%;
-    height: 80%;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow-y: scroll;
+    gap: 20px;
   }
 
   .img-container {
@@ -112,32 +110,18 @@
     overflow: hidden;
   }
   
-  .container {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .mobile {
-    width: 100%;
-    height: 100%;
-    padding: 10% 0;
-    flex-direction: column;
-    overflow: scroll;
-  }
-  
-  .mobile .bio-cont {
+  .bio-container {
     width: 90%;
+    max-width: 600px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
-  
-  .landscape .bio { font-size: 22px; }
-  .mobile .bio { font-size: 18px; }
+
+  .bio {
+    margin-top: 5px;
+  }
   
   a {
     color: var(--link-color);

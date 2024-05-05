@@ -40,10 +40,11 @@
 
   svg {
     fill: var(--foreground);
-    transition: fill 0.15s ease-in-out;
+    transition: fill 0.15s ease-in-out, transform 0.15s ease-out;
   }
 
   .back-button:hover svg {
     fill: var(--foreground-hover);
+    transform: translate(-3px);
   }
 </style>

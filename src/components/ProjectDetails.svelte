@@ -134,6 +134,7 @@
 
 	.writeup :global(a) {
     color: var(--link-color);
+    font-weight: bold;
     text-decoration: none;
   }
 

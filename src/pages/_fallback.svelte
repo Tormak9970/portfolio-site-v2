@@ -1,15 +1,18 @@
 <script lang="ts">
-    
+  import { url } from "@roxi/routify";
 </script>
 
 <div class="not-found-error">
-  <div class="error">Error 404</div>
-  <div class="message">Either I broke something, or you made a typo! You can return home by clicking the logo in the top left of your screen.</div>
+  <div class="error">Page not found</div>
+  <div class="message">
+    Either I broke something, or you made a typo! Click
+    <a href="{$url("/")}">here</a> to return to the home page.
+  </div>
 </div>
 
 <style>
 	.not-found-error {
-    width: 100%;
+    width: 90%;
     height: 100%;
 
     display: flex;
@@ -19,12 +22,24 @@
   }
 
   .error {
-    font-size: 62px;
+    font-size: 40px;
   }
 
   .message {
-    width: 450px;
+    max-width: 450px;
     font-size: 18px;
     text-align: center;
+  }
+
+  a {
+    color: var(--link-color);
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+	a:hover,
+	a:focus {
+    color: var(--link-color_clicked);
+    text-decoration: underline;
   }
 </style>

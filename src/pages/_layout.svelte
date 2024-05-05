@@ -1,7 +1,5 @@
 <script lang="ts">
 	import MediaQuery from "../components/utils/MediaQuery.svelte";
-
-	import { loadConfig } from "../loadConfig";
   import DesktopNav from "../components/nav/DesktopNav.svelte";
   import MobileNav from "../components/nav/MobileNav.svelte";
   import MobileHeader from "../components/nav/MobileHeader.svelte";
@@ -10,27 +8,23 @@
 </script>
 
 <div class="layout">
-	{#await loadConfig()}
-		<!-- <LoadingSpinner /> -->
-	{:then _}
-		<MediaQuery query="(orientation:landscape)" let:matches>
-			{#if matches}
-				<DesktopNav />
-			{:else}
-				<MobileHeader bind:mobileNavOpen={mobileNavOpen} />
-			{/if}
-		</MediaQuery>
-		<div class="content-wrapper" class:menu-hidden={!mobileNavOpen}>
-			<div class="content-body">
-				<slot />
-			</div>
-			<MediaQuery query="(orientation:landscape)" let:matches>
-				{#if !matches}
-					<MobileNav showing={mobileNavOpen} />
-				{/if}
-			</MediaQuery>
-		</div>
-	{/await}
+	<MediaQuery query="(orientation:landscape)" let:matches>
+    {#if matches}
+      <DesktopNav />
+    {:else}
+      <MobileHeader bind:mobileNavOpen={mobileNavOpen} />
+    {/if}
+  </MediaQuery>
+  <div class="content-wrapper" class:menu-hidden={!mobileNavOpen}>
+    <div class="content-body">
+      <slot />
+    </div>
+    <MediaQuery query="(orientation:landscape)" let:matches>
+      {#if !matches}
+        <MobileNav showing={mobileNavOpen} />
+      {/if}
+    </MediaQuery>
+  </div>
 	<div class="rights">© Travis Lane {new Date().getFullYear()}</div>
 </div>
 

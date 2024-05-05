@@ -42,6 +42,7 @@
   .time-container {
     width: 150px;
     color: var(--highlight);
+    font-weight: bold;
   }
 
   .info-container {
