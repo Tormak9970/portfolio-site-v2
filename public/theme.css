@@ -27,29 +27,29 @@
 } */
 
 /* TODO: not monotone */
+/* ? add green */
 
 :root {
-  --font-color: rgb(183, 232, 252);
+  --font-color: #fff3e1;
 
-  --background: #070F2B;
+  --background: #251d1e;
 
-  --foreground: #3b52a5;
-  --foreground-hover: #4a62b9;
-
-  /* TODO: these need work */
-  --foreground-light: rgba(50, 72, 212, 0.9);
-  --foreground-light-hover: #332b24;
-  --foreground-light-text: #74d9e9;
+  --foreground: #801336;
+  --foreground-hover: #9b0f3c;
+  --foreground-text: #e45218;
 
   /* TODO: these need work */
-  --highlight: #369cfb;
-  --highlight-hover: #479ded;
+  --foreground-light: #801336;
+  --foreground-light-hover: #c72c41;
+  --foreground-light-text: var(--font-color);
+
+  --highlight: #ee4540;
+  --highlight-hover: #f41c14;
 
   /* TODO: these need work */
-  --link-color: #2C78BF;
-  --link-color_clicked: #005eff;
+  --link-color: #ee4540;
+  --link-color_clicked: #f41c14;
 
-  /* TODO: these may need work */
-  --border: #1c2855;
-  --border-hover: #233269;
+  --border: #510a32;
+  --border-hover: #610e32;
 }

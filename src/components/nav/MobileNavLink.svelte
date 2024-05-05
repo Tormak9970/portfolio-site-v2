@@ -19,15 +19,15 @@
 		justify-content: center;
 	}
 	.nav-link .nav-btn {
-		color: var(--font-color);
+		color: var(--foreground-light-text);
 		text-decoration: none;
 		margin: 7px 0px;
 	}
 	.nav-link .nav-btn:focus {
-		color: var(--font-color);
+		color: var(--foreground-light-text);
 	}
 	.rendered {
-		background-color: var(--foreground-light);
+		background-color: var(--foreground-light-hover);
 	}
 	.nav-link:hover {
 		cursor: pointer;

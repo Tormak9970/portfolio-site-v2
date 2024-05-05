@@ -23,7 +23,7 @@
 		flex-direction: column;
 		justify-content: flex-start;
 		align-items: center;
-		background-color: var(--foreground);
+		background-color: var(--foreground-light);
     border-left: 1px solid var(--border);
 	}
 

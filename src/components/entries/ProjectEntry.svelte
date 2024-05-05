@@ -109,7 +109,9 @@
     margin-right: 10px;
     margin-top: 10px;
 
-    background-color: var(--foreground-light);
-    color: var(--foreground-light-text);
+    font-weight: 600;
+
+    background-color: var(--foreground);
+    color: var(--foreground-text);
   }
 </style>

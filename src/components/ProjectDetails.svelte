@@ -129,12 +129,6 @@
 		height: auto;
 		border-radius: 4px;
 	}
-  
-	.writeup :global(.cdx-block) { background-color: var(--foreground); }
-	.writeup :global(.image-tool__caption) { display: none; }
-	.writeup :global(.embed-project-link) { color: var(--font-color); }
-	.writeup :global(.embed-project-link):hover { color: var(--highlight-hover); }
-	.writeup :global(.embed-project-link):focus { color: var(--highlight-hover); }
 
   .writeup { width: 100%; }
 
