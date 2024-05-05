@@ -111,7 +111,7 @@
 
     font-weight: 600;
 
-    background-color: var(--foreground);
-    color: var(--foreground-text);
+    background-color: var(--highlight-alt);
+    color: var(--highlight-alt-text);
   }
 </style>

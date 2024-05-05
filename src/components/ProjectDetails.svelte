@@ -36,10 +36,6 @@
 			output = null;
 		}
 	}
-
-  function openProjectLink() {
-    window.open(entry.link, '_blank', 'noopener noreferrer');
-  }
 </script>
 
 <div class="details-container" in:fade>
@@ -136,7 +132,25 @@
 		max-width: 100%;
 	}
 
-	.writeup :global(a) { color: var(--link-color); }
-	.writeup :global(a):hover { color: var(--link-color_clicked); }
-	.writeup :global(a):focus { color: var(--link-color_clicked); }
+	.writeup :global(a) {
+    color: var(--link-color);
+    text-decoration: none;
+  }
+
+	.writeup :global(a):hover,
+	.writeup :global(a):focus {
+    color: var(--link-color_clicked);
+    text-decoration: underline;
+  }
+
+  .writeup :global(ul),
+  .writeup :global(ol) {
+    list-style-position: inside;
+    padding-left: 10px;
+  }
+
+  
+  .writeup :global(ul ul) {
+    padding-left: 20px;
+  }
 </style>

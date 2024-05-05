@@ -1,34 +1,3 @@
-/* :root {
-  --font-color: #FCE8C3;
-
-  --background: #918175;
-  --background-selected: #2c2c2c;
-  --background-hover: #303030;
-
-  --foreground: #58483b;
-  --foreground-hover: #635142;
-
-  --foreground-light: #332b24;
-  --foreground-light-hover: #332b24;
-  --foreground-light-selected: #251f1a;
-
-  --highlight: #82b74bff;
-  --highlight-hover: #8ac24e;
-
-  --link-color: #2C78BF;
-  --link-color_clicked: #005eff;
-
-  --warning-red: #e24a4a;
-
-  --border: #303030;
-  --border-hover: #3c3c3c;
-
-  --toast-shadow: #151515;
-} */
-
-/* TODO: not monotone */
-/* ? add green */
-
 :root {
   --font-color: #fff3e1;
 
@@ -38,18 +7,20 @@
   --foreground-hover: #9b0f3c;
   --foreground-text: #e45218;
 
-  /* TODO: these need work */
   --foreground-light: #801336;
   --foreground-light-hover: #c72c41;
   --foreground-light-text: var(--font-color);
 
+  --border: #510a32;
+  --border-hover: #610e32;
+
+  
   --highlight: #ee4540;
   --highlight-hover: #f41c14;
 
-  /* TODO: these need work */
-  --link-color: #ee4540;
-  --link-color_clicked: #f41c14;
+  --highlight-alt: #324b18;
+  --highlight-alt-text: #84cc37;
 
-  --border: #510a32;
-  --border-hover: #610e32;
+  --link-color: #3184d2;
+  --link-color_clicked: #398fdf;
 }

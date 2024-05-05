@@ -35,7 +35,7 @@
   .link-container svg {
     margin-left: 5px;
     margin-top: 2px;
-    fill: var(--highlight);
+    fill: var(--link-color);
     transition: fill 0.15s ease-in-out, transform 0.15s ease-out;
   }
 
