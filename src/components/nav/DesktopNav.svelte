@@ -7,7 +7,7 @@
 <div class="header">
   <!-- svelte-ignore a11y-click-events-have-key-events -->
   <div class="home-container" on:click={() => { $goto("./index"); }} >
-    <img src="/images/logo.svg" alt="logo" height="30" width="30" />
+    <img src="/images/logo-new.svg" alt="logo" height="30" width="30" />
   </div>
   <div class="navigation">
     <DesktopNavLink label="Home" route="./index" />

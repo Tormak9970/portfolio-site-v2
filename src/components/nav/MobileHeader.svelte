@@ -4,7 +4,7 @@
 
 <div class="mobile-header">
   <div class="home-container">
-    <img src="/images/logo.svg" alt="logo" height="30" width="30" />
+    <img src="/images/logo-new.svg" alt="logo" height="30" width="30" />
     <!-- svelte-ignore a11y-click-events-have-key-events -->
     <div class="menu-toggle" class:change={mobileNavOpen} on:click|stopPropagation={() => mobileNavOpen = !mobileNavOpen} >
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="26px" height="26px">
