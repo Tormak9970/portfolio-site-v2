@@ -5,10 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "routify -c dev:vite ",
-    "build": "routify -b && svelte-check && vite build",
+    "build": "routify -b && vite build",
     "dev:vite": "vite",
     "serve": "vite preview",
-    "validate": "svelte-check"
+    "validate": "svelte-check --tsconfig ./tsconfig.json"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^17.1.0",
@@ -26,7 +26,6 @@
     "vite": "^4.0.0"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.15.4",
     "editorjs-html": "^3.4.3",
     "firebase": "^9.23.0",
     "rollup-plugin-workbox": "^6.2.2",
