@@ -15,10 +15,10 @@
       return;
     }
     navigator.clipboard.writeText(text).then(
-      function () {
+      () => {
         showBreadcrumb("Copied to Clipboard!");
       },
-      function (err) {
+      (err) => {
         console.error("Async: Could not copy text: ", err);
       }
     );
