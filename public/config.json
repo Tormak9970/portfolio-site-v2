@@ -4,14 +4,8 @@
 			"index": 0,
 			"name": "Steam Art Manager",
 			"description": "Elegant and simple Steam library customization.",
-      "tech": [
-        "Svelte",
-        "Tauri",
-        "Rust",
-        "TypeScript"
-      ],
 			"content": {
-				"time": 1693401475825,
+				"time": 1721925528230,
 				"blocks": [
 					{
 						"type": "header",
@@ -55,13 +49,13 @@
 					{
 						"type": "image",
 						"data": {
-							"file": {
-								"url": "steam-art-manager.png"
-							},
 							"caption": "",
 							"withBorder": false,
+							"withBackground": false,
 							"stretched": false,
-							"withBackground": false
+							"file": {
+								"url": "C%253A%255CUsers%255CTorma%255CDocuments%255CGithub%255Cportfolio-site-v2%255Cpublic%255Cimages%255Cprojects%255Csteam-art-manager.png"
+							}
 						}
 					},
 					{
@@ -325,6 +319,539 @@
 						"type": "paragraph",
 						"data": {
 							"text": "I did finally manage to get the pipeline working, but it took almost 80 workflow runs to get to that point. Definitely worth it, but a struggle nonetheless."
+						}
+					},
+					{
+						"type": "header",
+						"data": {
+							"text": "Update v3.6.8",
+							"level": 2
+						}
+					},
+					{
+						"type": "paragraph",
+						"data": {
+							"text": "Fixes:"
+						}
+					},
+					{
+						"type": "list",
+						"data": {
+							"style": "unordered",
+							"items": [
+								{
+									"content": "path resolution on linux now works correctly",
+									"items": []
+								},
+								{
+									"content": "now loads first page for games",
+									"items": []
+								},
+								{
+									"content": "added additional paths to allowlist to prevent sarm from not finding install paths",
+									"items": []
+								},
+								{
+									"content": "grids now refresh properly when a custom name is set",
+									"items": []
+								},
+								{
+									"content": "grids now reset properly on game change",
+									"items": []
+								}
+							]
+						}
+					},
+					{
+						"type": "header",
+						"data": {
+							"text": "Update v3.6.3",
+							"level": 2
+						}
+					},
+					{
+						"type": "paragraph",
+						"data": {
+							"text": "Fixes:"
+						}
+					},
+					{
+						"type": "list",
+						"data": {
+							"style": "unordered",
+							"items": [
+								{
+									"content": "linux build no longer panics on load",
+									"items": []
+								},
+								{
+									"content": "no longer loads duplicate grids or looses grids",
+									"items": []
+								},
+								{
+									"content": "object settings now save properly",
+									"items": []
+								},
+								{
+									"content": "sgdb api key now properly validates",
+									"items": []
+								},
+								{
+									"content": "steam path validation now works on linux",
+									"items": []
+								}
+							]
+						}
+					},
+					{
+						"type": "header",
+						"data": {
+							"text": "Update v3.6.1",
+							"level": 2
+						}
+					},
+					{
+						"type": "paragraph",
+						"data": {
+							"text": "Fixes:"
+						}
+					},
+					{
+						"type": "list",
+						"data": {
+							"style": "unordered",
+							"items": [
+								{
+									"content": "additional grids now load if the window is resized",
+									"items": []
+								},
+								{
+									"content": "appinfo games now load properly again",
+									"items": []
+								},
+								{
+									"content": "other modals will no longer show below the update modal",
+									"items": []
+								},
+								{
+									"content": "settings window no longer overflows on small screens",
+									"items": []
+								},
+								{
+									"content": "steam install path properly resolves symlinks during validation",
+									"items": []
+								}
+							]
+						}
+					},
+					{
+						"type": "header",
+						"data": {
+							"text": "Update v3.6.0",
+							"level": 2
+						}
+					},
+					{
+						"type": "paragraph",
+						"data": {
+							"text": "Features:"
+						}
+					},
+					{
+						"type": "list",
+						"data": {
+							"style": "unordered",
+							"items": [
+								{
+									"content": "added button to settings that open the app log directory",
+									"items": []
+								},
+								{
+									"content": "added debug mode setting",
+									"items": []
+								},
+								{
+									"content": "added detection for steam api key changes",
+									"items": []
+								},
+								{
+									"content": "added install path change validation",
+									"items": []
+								},
+								{
+									"content": "added loading of additional grid pages",
+									"items": []
+								},
+								{
+									"content": "added validation to all settings",
+									"items": []
+								}
+							]
+						}
+					},
+					{
+						"type": "paragraph",
+						"data": {
+							"text": "Fixes:"
+						}
+					},
+					{
+						"type": "list",
+						"data": {
+							"style": "unordered",
+							"items": [
+								{
+									"content": "added additional fail-safes for typos in api keys",
+									"items": []
+								},
+								{
+									"content": "added support for scoop steam installs",
+									"items": []
+								},
+								{
+									"content": "app no longer breaks when saved install path no longer exists",
+									"items": []
+								},
+								{
+									"content": "error messages no longer show briefly when changing games",
+									"items": []
+								},
+								{
+									"content": "the game loading system is now more robust",
+									"items": []
+								},
+								{
+									"content": "users dropdown no longer displays undefined",
+									"items": []
+								}
+							]
+						}
+					},
+					{
+						"type": "header",
+						"data": {
+							"text": "Update v3.2.1",
+							"level": 2
+						}
+					},
+					{
+						"type": "paragraph",
+						"data": {
+							"text": "Fixes:"
+						}
+					},
+					{
+						"type": "list",
+						"data": {
+							"style": "unordered",
+							"items": [
+								{
+									"content": "added scopes for bazzite support",
+									"items": []
+								},
+								{
+									"content": "added symlink support for linux steam installs",
+									"items": []
+								},
+								{
+									"content": "changing steam path now properly adds it to scope",
+									"items": []
+								},
+								{
+									"content": "steam path modal no longer gets stuck after saving changes",
+									"items": []
+								},
+								{
+									"content": "updated csp to specify video sources",
+									"items": []
+								}
+							]
+						}
+					},
+					{
+						"type": "header",
+						"data": {
+							"text": "Update v3.2.0",
+							"level": 2
+						}
+					},
+					{
+						"type": "paragraph",
+						"data": {
+							"text": "Features:"
+						}
+					},
+					{
+						"type": "list",
+						"data": {
+							"style": "unordered",
+							"items": [
+								{
+									"content": "added info modal",
+									"items": []
+								},
+								{
+									"content": "added link to sgdb page for each grid",
+									"items": []
+								},
+								{
+									"content": "added list view",
+									"items": []
+								},
+								{
+									"content": "added modal to view current grids for games",
+									"items": []
+								},
+								{
+									"content": "added start menu tiles updating system",
+									"items": []
+								},
+								{
+									"content": "app now saves modal settings",
+									"items": []
+								},
+								{
+									"content": "app window is slightly rounded to match design language",
+									"items": []
+								},
+								{
+									"content": "filter choices now persist after app is closed",
+									"items": []
+								},
+								{
+									"content": "overhauled settings sytem and added new settings",
+									"items": []
+								},
+								{
+									"content": "panel positions are now consistent",
+									"items": []
+								}
+							]
+						}
+					},
+					{
+						"type": "paragraph",
+						"data": {
+							"text": "Fixes:"
+						}
+					},
+					{
+						"type": "list",
+						"data": {
+							"style": "unordered",
+							"items": [
+								{
+									"content": "corrected typo breaking game loading",
+									"items": []
+								},
+								{
+									"content": "hiding games now works properly again",
+									"items": []
+								},
+								{
+									"content": "images now load faster and more reliably",
+									"items": []
+								},
+								{
+									"content": "large libraries should now render gracefully",
+									"items": []
+								},
+								{
+									"content": "settings system overhaul and fixes",
+									"items": []
+								},
+								{
+									"content": "slight tweaks to lightmode",
+									"items": []
+								},
+								{
+									"content": "tooltip are slightly smaller and better styled",
+									"items": []
+								},
+								{
+									"content": "tooltip text is now shorter where possible",
+									"items": []
+								},
+								{
+									"content": "update modal layout no longer breaks with large changelogs",
+									"items": []
+								},
+								{
+									"content": "user is no longer changeable when modals are open",
+									"items": []
+								}
+							]
+						}
+					},
+					{
+						"type": "paragraph",
+						"data": {
+							"text": "Build Pipeline:"
+						}
+					},
+					{
+						"type": "list",
+						"data": {
+							"style": "unordered",
+							"items": [
+								{
+									"content": "added eslint",
+									"items": []
+								},
+								{
+									"content": "fixed changelog generating colons at the end",
+									"items": []
+								}
+							]
+						}
+					},
+					{
+						"type": "header",
+						"data": {
+							"text": "Update v3.0.0",
+							"level": 2
+						}
+					},
+					{
+						"type": "paragraph",
+						"data": {
+							"text": "Features:"
+						}
+					},
+					{
+						"type": "list",
+						"data": {
+							"style": "unordered",
+							"items": [
+								{
+									"content": "added custom search system for game names",
+									"items": []
+								},
+								{
+									"content": "added custom steam path support",
+									"items": []
+								},
+								{
+									"content": "added git social preview",
+									"items": []
+								},
+								{
+									"content": "added librarycache exists check",
+									"items": []
+								},
+								{
+									"content": "added loading skeletons to games and grids",
+									"items": []
+								},
+								{
+									"content": "dialog now shows when no users are found",
+									"items": []
+								},
+								{
+									"content": "switched to all custom dialogs",
+									"items": []
+								},
+								{
+									"content": "updated app icon and image in readme",
+									"items": []
+								}
+							]
+						}
+					},
+					{
+						"type": "paragraph",
+						"data": {
+							"text": "Fixes:"
+						}
+					},
+					{
+						"type": "list",
+						"data": {
+							"style": "unordered",
+							"items": [
+								{
+									"content": "added frontend logging to log controller",
+									"items": []
+								},
+								{
+									"content": "app now properly exits when click close from taskbar",
+									"items": []
+								},
+								{
+									"content": "buttons are no longer cramped on small screens",
+									"items": []
+								},
+								{
+									"content": "consecutive dialog modals now work properly",
+									"items": []
+								},
+								{
+									"content": "corrected small inconsistencies in headers",
+									"items": []
+								},
+								{
+									"content": "grid preview no longer opens in the incorrect size",
+									"items": []
+								},
+								{
+									"content": "linux installer and uninstaller are now more robust",
+									"items": []
+								},
+								{
+									"content": "linux shortcut now uses clearer icon and can be pinned to taskbar",
+									"items": []
+								},
+								{
+									"content": "linux-installer will now fetch the specific version of sarm",
+									"items": []
+								},
+								{
+									"content": "modals no longer close on right click",
+									"items": []
+								},
+								{
+									"content": "modals no longer close unexpectedly when drag clicking",
+									"items": []
+								},
+								{
+									"content": "modals now blur background instead of applying opacity",
+									"items": []
+								},
+								{
+									"content": "scroll padding is now consistent everywhere",
+									"items": []
+								},
+								{
+									"content": "undefined no longer occasionally shows in selected game field",
+									"items": []
+								},
+								{
+									"content": "",
+									"items": []
+								}
+							]
+						}
+					},
+					{
+						"type": "paragraph",
+						"data": {
+							"text": "Build Pipeline:"
+						}
+					},
+					{
+						"type": "list",
+						"data": {
+							"style": "unordered",
+							"items": [
+								{
+									"content": "build process now generates a changelog.md file",
+									"items": []
+								},
+								{
+									"content": "switched to reliable-changelog",
+									"items": []
+								}
+							]
 						}
 					},
 					{
@@ -1144,17 +1671,23 @@
 				"version": "2.19.3"
 			},
 			"link": "https://github.com/Tormak9970/Steam-Art-Manager",
-			"image": "./images/projects/steam-art-manager.png"
+			"image": "./images/projects/steam-art-manager.png",
+			"tech": [
+				"Svelte",
+				"Tauri",
+				"Rust",
+				"TypeScript"
+			]
 		},
 		"tabmaster": {
 			"index": 1,
 			"name": "TabMaster",
 			"description": "A Decky plugin for the Valve Steam Deck that gives users full control over their library tabs.",
-      "tech": [
-        "Decky",
-        "React",
-        "TypeScript"
-      ],
+			"tech": [
+				"Decky",
+				"React",
+				"TypeScript"
+			],
 			"content": {
 				"time": 1706374162836,
 				"blocks": [
@@ -1341,11 +1874,11 @@
 			"index": 2,
 			"name": "Reliable Changelog",
 			"description": "A GitHub action that generates changelogs based on your commits. Highly configurable and adaptable.",
-      "tech": [
-        "Actions",
-        "CI/CD",
-        "TypeScript"
-      ],
+			"tech": [
+				"Actions",
+				"CI/CD",
+				"TypeScript"
+			],
 			"content": {
 				"time": 1706375754956,
 				"blocks": [
@@ -1461,11 +1994,11 @@
 			"index": 3,
 			"name": "CSS Loader for VS Code",
 			"description": "A VS Code extension that adds intellisense support and icons to CSS Loader theme.json files.",
-      "tech": [
-        "VS Code",
-        "TypeScript",
-        "JSON"
-      ],
+			"tech": [
+				"VS Code",
+				"TypeScript",
+				"JSON"
+			],
 			"content": {
 				"time": 1693399735329,
 				"blocks": [
@@ -1567,12 +2100,12 @@
 			"index": 4,
 			"name": "Darkest Dungeon Save Editor",
 			"description": "An app for viewing and editing saves from Darkest Dungeon, an Indie Rogue-lite game.",
-      "tech": [
-        "Svelte",
-        "Tauri",
-        "TypeScript",
-        "Rust"
-      ],
+			"tech": [
+				"Svelte",
+				"Tauri",
+				"TypeScript",
+				"Rust"
+			],
 			"content": {
 				"time": 1668884602490,
 				"blocks": [
@@ -1787,10 +2320,10 @@
 			"index": 5,
 			"name": "Portfolio",
 			"description": "A website for displaying my work experience and projects.",
-      "tech": [
-        "Svelte",
-        "TypeScript"
-      ],
+			"tech": [
+				"Svelte",
+				"TypeScript"
+			],
 			"content": {
 				"time": 1693762663522,
 				"blocks": [
@@ -2150,10 +2683,10 @@
 			"index": 6,
 			"name": "Untitled Card Game",
 			"description": "A Solitaire game made with animated cards and a pixel art style.",
-      "tech": [
-        "Svelte",
-        "TypeScript"
-      ],
+			"tech": [
+				"Svelte",
+				"TypeScript"
+			],
 			"content": {
 				"time": 1679188413134,
 				"blocks": [
@@ -2259,12 +2792,12 @@
 			"index": 7,
 			"name": "Portfolio Editor",
 			"description": "An app that augments editing my portfolio, giving me no excuse to keep it up to date.",
-      "tech": [
-        "Svelte",
-        "Tauri",
-        "TypeScript",
-        "Rust"
-      ],
+			"tech": [
+				"Svelte",
+				"Tauri",
+				"TypeScript",
+				"Rust"
+			],
 			"content": {
 				"time": 1693489605400,
 				"blocks": [
@@ -2539,11 +3072,11 @@
 			"index": 8,
 			"name": "Vite-Plugin-Sitemap",
 			"description": "A Vite plugin for generating web sitemaps at build time.",
-      "tech": [
-        "Vite",
-        "Rollup",
-        "TypeScript"
-      ],
+			"tech": [
+				"Vite",
+				"Rollup",
+				"TypeScript"
+			],
 			"content": {
 				"time": 1675718444292,
 				"blocks": [
@@ -2626,26 +3159,26 @@
 	"experience": {
 		"synergy-animal-behavior-behavior-assistant": {
 			"index": 2,
-      "duration": "Summer 2020",
+			"duration": "Summer 2020",
 			"company": "Synergy Animal Behavior",
 			"position": "Assistant",
-      "companyLink": "https://synergyanimalbehavior.com/",
+			"companyLink": "https://synergyanimalbehavior.com/",
 			"description": "Created and managed a database of clients and resources for Synergy Animal Behavior. I also spent time researching and summarizing academic articles."
 		},
 		"city-wood-external-developer": {
 			"index": 1,
-      "duration": "Summer 2022",
+			"duration": "Summer 2022",
 			"company": "City Wood",
 			"position": "External Developer",
-      "companyLink": "http://www.city-wood.com/",
+			"companyLink": "http://www.city-wood.com/",
 			"description": "I worked on creating an inventory management tool. The web app uses Firebase for hosting, authentication, and data storage, as well as Google Cloud. I completed the beta stage and stopped receiving contact, so the project remains unfinished."
 		},
 		"actalent-software-engineer": {
 			"index": 0,
-      "duration": "2023 — Present",
+			"duration": "2023 — Present",
 			"company": "Actalent",
 			"position": "Full Stack Software Engineer",
-      "companyLink": "https://www.actalentservices.com/",
+			"companyLink": "https://www.actalentservices.com/",
 			"description": "I have worked on a small team alongside Mitsubishi Electric US using Angular for a thermostat app, and alongside Cisco Systems Inc. using NextJS 13 for a hardware test automation dashboard."
 		}
 	}
