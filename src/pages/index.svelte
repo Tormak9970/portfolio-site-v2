@@ -9,6 +9,7 @@
   </div>
   <div class="home-container">
     <div class="name">Travis Lane</div>
+    <div class="specialties">Full Stack • UI/UX Design</div>
   </div>
 </div>
 
@@ -58,6 +59,10 @@
 
     position: absolute;
     bottom: 50%;
+  }
+
+  .specialties {
+    font-size: 20px;
   }
 
   @keyframes blink {
