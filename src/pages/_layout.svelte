@@ -56,7 +56,7 @@
 	.content-wrapper {
     position: relative;
 		z-index: 2;
-		overflow-x: hidden;
+		overflow: hidden;
 		height: calc(100% - 50px);
 		width: 100%;
 		display: flex;
