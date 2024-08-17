@@ -1,7 +1,7 @@
 {
 	"projects": {
 		"steam-art-manager": {
-			"index": 0,
+			"index": 2,
 			"name": "Steam Art Manager",
 			"description": "Elegant and simple Steam library customization.",
 			"content": {
@@ -54,7 +54,7 @@
 							"withBackground": false,
 							"stretched": false,
 							"file": {
-								"url": "C%253A%255CUsers%255CTorma%255CDocuments%255CGithub%255Cportfolio-site-v2%255Cpublic%255Cimages%255Cprojects%255Csteam-art-manager.png"
+								"url": "steam-art-manager.png"
 							}
 						}
 					},
@@ -1680,7 +1680,7 @@
 			]
 		},
 		"tabmaster": {
-			"index": 1,
+			"index": 3,
 			"name": "TabMaster",
 			"description": "A Decky plugin for the Valve Steam Deck that gives users full control over their library tabs.",
 			"tech": [
@@ -1871,7 +1871,7 @@
 			"image": "./images/projects/tabmaster.png"
 		},
 		"reliable-changelog": {
-			"index": 2,
+			"index": 4,
 			"name": "Reliable Changelog",
 			"description": "A GitHub action that generates changelogs based on your commits. Highly configurable and adaptable.",
 			"tech": [
@@ -1991,7 +1991,7 @@
 			"image": "./images/projects/reliable-changelog.png"
 		},
 		"css-loader-for-vs-code": {
-			"index": 3,
+			"index": 5,
 			"name": "CSS Loader for VS Code",
 			"description": "A VS Code extension that adds intellisense support and icons to CSS Loader theme.json files.",
 			"tech": [
@@ -2097,7 +2097,7 @@
 			"image": "./images/projects/css-loader-for-vs-code.png"
 		},
 		"darkest-dungeon-save-editor": {
-			"index": 4,
+			"index": 6,
 			"name": "Darkest Dungeon Save Editor",
 			"description": "An app for viewing and editing saves from Darkest Dungeon, an Indie Rogue-lite game.",
 			"tech": [
@@ -2317,7 +2317,7 @@
 			"image": "./images/projects/DDSEditor-main-ui.png"
 		},
 		"portfolio": {
-			"index": 5,
+			"index": 7,
 			"name": "Portfolio",
 			"description": "A website for displaying my work experience and projects.",
 			"tech": [
@@ -2680,7 +2680,7 @@
 			"image": "./images/projects/portfolio-site.png"
 		},
 		"untitled-card-game": {
-			"index": 6,
+			"index": 8,
 			"name": "Untitled Card Game",
 			"description": "A Solitaire game made with animated cards and a pixel art style.",
 			"tech": [
@@ -2789,7 +2789,7 @@
 			"image": "./images/projects/untitled-card-game.png"
 		},
 		"portfolio-editor": {
-			"index": 7,
+			"index": 9,
 			"name": "Portfolio Editor",
 			"description": "An app that augments editing my portfolio, giving me no excuse to keep it up to date.",
 			"tech": [
@@ -3069,7 +3069,7 @@
 			"image": "./images/projects/portfolio-editor.png"
 		},
 		"vite-plugin-sitemap": {
-			"index": 8,
+			"index": 10,
 			"name": "Vite-Plugin-Sitemap",
 			"description": "A Vite plugin for generating web sitemaps at build time.",
 			"tech": [
@@ -3163,7 +3163,8 @@
 			"company": "Synergy Animal Behavior",
 			"position": "Assistant",
 			"companyLink": "https://synergyanimalbehavior.com/",
-			"description": "Created and managed a database of clients and resources for Synergy Animal Behavior. I also spent time researching and summarizing academic articles."
+			"description": "Created and managed a database of clients and resources for Synergy Animal Behavior. I also spent time researching and summarizing academic articles.",
+      "content": {}
 		},
 		"city-wood-external-developer": {
 			"index": 1,
@@ -3171,7 +3172,8 @@
 			"company": "City Wood",
 			"position": "External Developer",
 			"companyLink": "http://www.city-wood.com/",
-			"description": "I worked on creating an inventory management tool. The web app uses Firebase for hosting, authentication, and data storage, as well as Google Cloud. I completed the beta stage and stopped receiving contact, so the project remains unfinished."
+			"description": "I worked on creating an inventory management tool. The web app uses Firebase for hosting, authentication, and data storage, as well as Google Cloud. I completed the beta stage and stopped receiving contact, so the project remains unfinished.",
+      "content": {}
 		},
 		"actalent-software-engineer": {
 			"index": 0,
@@ -3179,7 +3181,8 @@
 			"company": "Actalent",
 			"position": "Full Stack Software Engineer",
 			"companyLink": "https://www.actalentservices.com/",
-			"description": "I have worked on a small team alongside Mitsubishi Electric US using Angular for a thermostat app, and alongside Cisco Systems Inc. using NextJS 13 for a hardware test automation dashboard."
+			"description": "I have worked on a small team alongside Mitsubishi Electric US using Angular for a thermostat app, and alongside Cisco Systems Inc. using NextJS 13 for a hardware test automation dashboard.",
+      "content": {}
 		}
 	}
 }
