@@ -3164,7 +3164,7 @@
 			"position": "Assistant",
 			"companyLink": "https://synergyanimalbehavior.com/",
 			"description": "Created and managed a database of clients and resources for Synergy Animal Behavior. I also spent time researching and summarizing academic articles.",
-      "content": {}
+			"content": {}
 		},
 		"city-wood-external-developer": {
 			"index": 1,
@@ -3173,16 +3173,161 @@
 			"position": "External Developer",
 			"companyLink": "http://www.city-wood.com/",
 			"description": "I worked on creating an inventory management tool. The web app uses Firebase for hosting, authentication, and data storage, as well as Google Cloud. I completed the beta stage and stopped receiving contact, so the project remains unfinished.",
-      "content": {}
+			"content": {}
 		},
 		"actalent-software-engineer": {
 			"index": 0,
-			"duration": "2023 — Present",
 			"company": "Actalent",
 			"position": "Full Stack Software Engineer",
 			"companyLink": "https://www.actalentservices.com/",
-			"description": "I have worked on a small team alongside Mitsubishi Electric US using Angular for a thermostat app, and alongside Cisco Systems Inc. using NextJS 13 for a hardware test automation dashboard.",
-      "content": {}
+			"duration": "2023 — Present",
+			"description": "As an Engineer at Actalent, I have built mobile and web apps with Next.js, Prime React, Angular, and other modern web technologies, alongside working with clients.",
+			"content": {
+				"time": 1724006227024,
+				"blocks": [
+					{
+						"id": "myiAGLhTC4",
+						"type": "header",
+						"data": {
+							"text": "Summary",
+							"level": 2
+						}
+					},
+					{
+						"id": "Iq4DmGN6KD",
+						"type": "paragraph",
+						"data": {
+							"text": "Since starting at Actalent in 2023 I have worked on four different projects:"
+						}
+					},
+					{
+						"id": "R2xDqDA_zF",
+						"type": "header",
+						"data": {
+							"text": "Athena",
+							"level": 3
+						}
+					},
+					{
+						"id": "l0oa6H4tSj",
+						"type": "paragraph",
+						"data": {
+							"text": "Athena was an effort to combine of almost every tool Actalent used internally into one modernized app. This was my first time using Unit Testing in a project, as well as working with a larger team (20+ developers). I also learned how to efficiently perform code review, as well as how to pair progr&nbsp;"
+						}
+					},
+					{
+						"id": "xAUVhwtglR",
+						"type": "header",
+						"data": {
+							"text": "Ambyint Well Automation",
+							"level": 3
+						}
+					},
+					{
+						"id": "KywSBDxPA2",
+						"type": "paragraph",
+						"data": {
+							"text": "This project was the first time I got to exercise and hone my own UI/UX skills. I learned about best practices for both design and Next.js which has helped elevate my skills overall. This project involved more interaction with our client than I had experienced in past projects, and helped me learn strategies for communicating design choices and discussing approaches to problems."
+						}
+					},
+					{
+						"id": "ARZxHZx4XZ",
+						"type": "header",
+						"data": {
+							"text": "Cisico Timing Dashboard",
+							"level": 3
+						}
+					},
+					{
+						"id": "NYUDIgB2W9",
+						"type": "paragraph",
+						"data": {
+							"text": "The Timing Dashboard was a tool built for Cisco Systems Inc. that helped automate and summarize some of their hardware testing. This was my first exposure to Next.js and Tailwind, and proved to be a great learning experience for both."
+						}
+					},
+					{
+						"id": "1saztXQsV1",
+						"type": "header",
+						"data": {
+							"text": "Mitsubishi Kumo Cloud",
+							"level": 3
+						}
+					},
+					{
+						"id": "fwpQrF8uK5",
+						"type": "paragraph",
+						"data": {
+							"text": "Kumo cloud was an Angular based mobile app for Mitsubishi's home appliances. Our task was to migrate it from Angular.js to Angular 16, as well as fixed the mountain of bugs it had. While working on this project I learned the Angular framework, how to use Jira to track issues, and had my first experience working with clients. This project was also a great opportunity to learn how to work with a team (which I had limited exposure to previously)."
+						}
+					},
+					{
+						"id": "HP3rezZobf",
+						"type": "header",
+						"data": {
+							"text": "Skills &amp; Tools",
+							"level": 2
+						}
+					},
+					{
+						"id": "DsdlRl1S3-",
+						"type": "list",
+						"data": {
+							"style": "unordered",
+							"items": [
+								{
+									"content": "Next.js",
+									"items": []
+								},
+								{
+									"content": "Prime React / Prime Flex",
+									"items": []
+								},
+								{
+									"content": "React",
+									"items": []
+								},
+								{
+									"content": "Tailwind",
+									"items": []
+								},
+								{
+									"content": "SASS",
+									"items": []
+								},
+								{
+									"content": "Angular 16",
+									"items": []
+								},
+								{
+									"content": "TypeScript",
+									"items": []
+								},
+								{
+									"content": "Jira",
+									"items": []
+								},
+								{
+									"content": "Strapi",
+									"items": []
+								},
+								{
+									"content": "React-Query",
+									"items": []
+								},
+								{
+									"content": "Code Review",
+									"items": []
+								},
+								{
+									"content": "Team Collaboration and Communication",
+									"items": []
+								}
+							]
+						}
+					}
+				],
+				"version": "2.30.5"
+			}
 		}
 	}
 }
