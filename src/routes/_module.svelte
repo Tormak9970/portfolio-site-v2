@@ -100,6 +100,8 @@
 		justify-content: center;
 		align-items: center;
 		overflow: hidden;
+
+    z-index: 2;
 	}
   
 	.rights {

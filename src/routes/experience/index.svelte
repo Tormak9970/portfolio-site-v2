@@ -1,45 +1,46 @@
 <script lang="ts">
-  import { loadConfig, projects } from "../../loadConfig";
-  import { sortEntriesBasedOnIndex } from "../../Utils";
-  import ProjectEntry from "../../components/entries/ProjectEntry.svelte";
   import { fade } from "svelte/transition";
+  import { sortEntriesBasedOnIndex } from "../../lib/utils";
+  import { experience, loadConfig } from '../../lib/loadConfig';
+  import ExperienceEntry from "../../components/entries/ExperienceEntry.svelte";
   import LoadingAnimation from "../../components/utils/LoadingAnimation.svelte";
 
   let configLoadPromise = loadConfig();
-  let entries: Project[];
+  let entries: Experience[];
 
   configLoadPromise.then(() => {
-    entries = Array.from(projects.values()).sort(sortEntriesBasedOnIndex)
+    entries = Array.from(experience.values()).sort(sortEntriesBasedOnIndex)
   });
 </script>
 
-<div class="projects-container">
+<div class="experience-container">
   {#await configLoadPromise}
     <LoadingAnimation />
-  {:then} 
+  {:then}
     <div class="content" in:fade>
       {#each entries as entry}
-        <ProjectEntry entry={entry} />
-      {/each }
+        <ExperienceEntry entry={entry}/>
+      {/each}
     </div>
   {/await}
 </div>
 
 <style>
-	.projects-container {
+  .experience-container {
     width: 100%;
     height: 100%;
-
+    
     overflow-y: scroll;
     overflow-x: hidden;
   }
-  
+
   .content {
     width: 100%;
-    
+
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 
     padding-bottom: 30px;
   }

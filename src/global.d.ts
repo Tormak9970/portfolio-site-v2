@@ -15,10 +15,10 @@ interface Experience {
   index: number,
   company: string,
   duration: string,
-  image: string,
   position: string,
   companyLink: string,
-  description: string
+  description: string,
+  content?: any
 }
 
 declare module 'editorjs-html';

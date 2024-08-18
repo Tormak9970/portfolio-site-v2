@@ -4,17 +4,17 @@
   
   import LoadingAnimation from "./utils/LoadingAnimation.svelte";
 
-	import { loadConfig, projects } from '../lib/loadConfig';
+	import { experience, loadConfig, projects } from '../lib/loadConfig';
   import GoBackButton from "./utils/GoBackButton.svelte";
   import DiagonalLink from "./utils/DiagonalLink.svelte";
 
 	export let id:string;
 
   let configLoadPromise = loadConfig();
-	let entry: Project;
+	let entry: Experience;
 
   configLoadPromise.then(() => {
-    entry = projects.get(id);
+    entry = experience.get(id);
   });
 
 	function imageParser({data}) {
@@ -44,14 +44,11 @@
       <LoadingAnimation />
     {:then} 
       <div class="header-container">
-        <GoBackButton url="/projects" />
-        <h2 class="header">{entry.name}</h2>
-      </div>
-      <div class="image-container">
-        <img src=".{entry.image}" alt="">
+        <GoBackButton url="/experience" />
+        <!-- <h2 class="header">{entry.name}</h2> -->
       </div>
       <!-- svelte-ignore a11y-click-events-have-key-events -->
-      <DiagonalLink label="Check it out" url={entry.link} />
+      <DiagonalLink label="Check it out" url={entry.companyLink} />
       <div class="writeup">
         {@html output ? output : ''}
       </div>

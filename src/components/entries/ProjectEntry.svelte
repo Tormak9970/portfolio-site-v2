@@ -1,7 +1,7 @@
 <script lang="ts">
   import { fly } from "svelte/transition";
   import { onMount } from "svelte";
-  import { getIdFromName } from "../../Utils";
+  import { getIdFromName } from "../../lib/utils";
 
   import RightLink from "../utils/RightLink.svelte";
 

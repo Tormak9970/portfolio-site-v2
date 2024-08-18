@@ -3,9 +3,13 @@ import { svelte } from '@sveltejs/vite-plugin-svelte'
 import sveltePreprocess from "svelte-preprocess";
 import { generateSW } from 'rollup-plugin-workbox';
 import { VitePluginSitemap } from '@tormak/vite-plugin-sitemap';
+import routify from '@roxi/routify/vite-plugin'
 
 export default defineConfig({
   plugins: [
+    routify({
+      
+    }),
     VitePluginSitemap({
       baseUrl: 'https://travislane.dev',
       contentBase: 'public',
