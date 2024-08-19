@@ -4,7 +4,7 @@
   
   import LoadingAnimation from "./utils/LoadingAnimation.svelte";
 
-	import { experience, loadConfig, projects } from '../lib/loadConfig';
+	import { experience, loadConfig } from '../lib/loadConfig';
   import GoBackButton from "./utils/GoBackButton.svelte";
   import DiagonalLink from "./utils/DiagonalLink.svelte";
 
@@ -14,10 +14,10 @@
 	let entry: Experience;
 
   configLoadPromise.then(() => {
-    entry = experience.get(id);
+    entry = experience.get(id)!;
   });
 
-	function imageParser({data}) {
+	function imageParser({ data }: any) {
 		return `<img class="image-tool__image-picture" src="/images/projects/${data.file.url}">`;
 	}
 
@@ -33,7 +33,7 @@
 		if (data && data.time && data.blocks?.length > 0 && data.version) {
 			output = edjsParser.parse(data).join("");
 		} else {
-			output = null;
+			output = [];
 		}
 	}
 </script>
@@ -45,10 +45,10 @@
     {:then} 
       <div class="header-container">
         <GoBackButton url="/experience" />
-        <!-- <h2 class="header">{entry.name}</h2> -->
+        <h2 class="header">{entry.position}</h2>
       </div>
       <!-- svelte-ignore a11y-click-events-have-key-events -->
-      <DiagonalLink label="Check it out" url={entry.companyLink} />
+      <DiagonalLink label={entry.company} url={entry.companyLink ?? ""} />
       <div class="writeup">
         {@html output ? output : ''}
       </div>
@@ -84,6 +84,8 @@
 		width: 100%;
 
     margin-top: 14px;
+
+    margin-bottom: 0.5rem;
 		
     display: flex;
     align-items: center;
@@ -96,31 +98,6 @@
 		font-size: 27px;
 		margin: 0;
 		padding: 0;
-	}
-  
-  /* TODO: fix */
-	.image-container {
-    width: calc(100% - 22px);
-		max-width: 800px;
-
-		margin-top: 22px;
-		padding: 10px;
-
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-
-		border: 1px solid var(--border);
-
-    border-radius: 4px;
-
-    margin-bottom: 10px;
-	}
-	.image-container img {
-		width: 100%;
-		height: auto;
-		border-radius: 4px;
 	}
 
   .writeup { width: 100%; }

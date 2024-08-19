@@ -2,8 +2,13 @@
   import { fly } from "svelte/transition";
   import MediaQuery from "../utils/MediaQuery.svelte";
   import DiagonalLink from "../utils/DiagonalLink.svelte";
+  import RightLink from "../utils/RightLink.svelte";
+  import { getIdFromName } from "../../lib/utils";
 
   export let entry: Experience;
+
+  $: id = getIdFromName(entry.company) + "-" + getIdFromName(entry.position);
+  $: console.log(id);
 </script>
 
 <div class="entry" in:fly={{ delay: entry.index * 300, x: 200, duration: 1000 }}>
@@ -22,8 +27,11 @@
       {/if}
       <!-- svelte-ignore a11y-click-events-have-key-events -->
       
-      <DiagonalLink label={entry.company} url={entry.companyLink} />
+      <DiagonalLink label={entry.company} url={entry.companyLink} useIcon={false}/>
       <div class="description">{entry.description}</div>
+      {#if entry.content?.blocks?.length > 0}
+        <RightLink label="View Details" url="/experience/:id" urlParams={{ id: id }} isRelative />
+      {/if}
     </div>
   </MediaQuery>
 </div>

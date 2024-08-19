@@ -1,31 +1,21 @@
 <script lang="ts">
   import { fly } from "svelte/transition";
-  import { onMount } from "svelte";
   import { getIdFromName } from "../../lib/utils";
 
   import RightLink from "../utils/RightLink.svelte";
 
   export let entry:Project;
-
-  let contentCont:HTMLDivElement;
-
-  onMount(() => {
-    const img = new Image();
-    img.onload = () => {
-      contentCont.appendChild(img);
-    }
-    img.alt = entry.name;
-    img.src = entry.image;
-  });
 </script>
 
 <div class="entry" in:fly={{ delay: entry.index * 300, x: 200, duration: 1000 }}>
-  <div class="image-container" bind:this={contentCont} />
+  <div class="image-container">
+    <img src=".{entry.image}" alt={entry.name} />
+  </div>
   <div class="details-container">
     <div class="header-container">
       <h2 class="header">{entry.name}</h2>
     </div>
-    <RightLink label="View Writeup" url="./:id" urlParams={{ id: getIdFromName(entry.name) }} isRelative />
+    <RightLink label="View Writeup" url="/projects/:id" urlParams={{ id: getIdFromName(entry.name) }} isRelative />
     <p class="description">
       {@html entry.description}
     </p>

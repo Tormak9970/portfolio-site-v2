@@ -14,10 +14,10 @@
 	let entry: Project;
 
   configLoadPromise.then(() => {
-    entry = projects.get(id);
+    entry = projects.get(id)!;
   });
 
-	function imageParser({data}) {
+	function imageParser({ data }: any) {
 		return `<img class="image-tool__image-picture" src="/images/projects/${data.file.url}">`;
 	}
 
@@ -33,7 +33,7 @@
 		if (data && data.time && data.blocks?.length > 0 && data.version) {
 			output = edjsParser.parse(data).join("");
 		} else {
-			output = null;
+			output = [];
 		}
 	}
 </script>
@@ -51,7 +51,7 @@
         <img src=".{entry.image}" alt="">
       </div>
       <!-- svelte-ignore a11y-click-events-have-key-events -->
-      <DiagonalLink label="Check it out" url={entry.link} />
+      <DiagonalLink label="Check it out" url={entry.link ?? ""} />
       <div class="writeup">
         {@html output ? output : ''}
       </div>
