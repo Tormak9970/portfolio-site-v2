@@ -6,6 +6,7 @@
   <div class="home-container">
     <img src="/images/logo-new.svg" alt="logo" height="30" width="30" />
     <!-- svelte-ignore a11y-click-events-have-key-events -->
+    <!-- svelte-ignore a11y-no-static-element-interactions -->
     <div class="menu-toggle" class:change={mobileNavOpen} on:click|stopPropagation={() => mobileNavOpen = !mobileNavOpen} >
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="26px" height="26px">
         <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->

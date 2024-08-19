@@ -6,6 +6,7 @@
 
 <div class="header">
   <!-- svelte-ignore a11y-click-events-have-key-events -->
+  <!-- svelte-ignore a11y-no-static-element-interactions -->
   <div class="home-container" on:click={() => { $goto("./index"); }} >
     <img src="/images/logo-new.svg" alt="logo" height="30" width="30" />
   </div>
