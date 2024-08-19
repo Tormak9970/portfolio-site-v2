@@ -7,7 +7,7 @@
   export let entry:Project;
 </script>
 
-<div class="entry" in:fly={{ delay: entry.index * 300, x: 200, duration: 1000 }}>
+<div class="entry" in:fly|global={{ delay: entry.index * 200, x: 200, duration: 800 }}>
   <div class="image-container">
     <img src=".{entry.image}" alt={entry.name} />
   </div>

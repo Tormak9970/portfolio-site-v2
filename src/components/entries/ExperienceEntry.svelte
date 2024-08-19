@@ -11,7 +11,7 @@
   $: console.log(id);
 </script>
 
-<div class="entry" in:fly={{ delay: entry.index * 300, x: 200, duration: 1000 }}>
+<div class="entry" in:fly|global={{ delay: entry.index * 300, x: 200, duration: 1000 }}>
   <MediaQuery query="(min-width: 750px)" let:matches>
     {#if matches}
       <div class="time-container" style="margin-top: 15px;">
