@@ -3175,10 +3175,10 @@
 			"description": "I worked on creating an inventory management tool. The web app uses Firebase for hosting, authentication, and data storage, as well as Google Cloud. I completed the beta stage and stopped receiving contact, so the project remains unfinished.",
 			"content": {}
 		},
-		"actalent-full-stack-software-engineer": {
+		"actalent-full-stack-engineer": {
 			"index": 0,
 			"company": "Actalent",
-			"position": "Full Stack Software Engineer",
+			"position": "Full Stack Engineer",
 			"companyLink": "https://www.actalentservices.com/",
 			"duration": "2023 — Present",
 			"description": "As an Engineer at Actalent, I have built mobile and web apps with Next.js, Prime React, Angular, and other modern web technologies, alongside working with clients.",

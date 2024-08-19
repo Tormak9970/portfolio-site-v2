@@ -8,7 +8,6 @@
   export let entry: Experience;
 
   $: id = getIdFromName(entry.company) + "-" + getIdFromName(entry.position);
-  $: console.log(id);
 </script>
 
 <div class="entry" in:fly|global={{ delay: entry.index * 300, x: 200, duration: 1000 }}>

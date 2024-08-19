@@ -1,33 +1,23 @@
 <script lang="ts">
+  import SideSheet from "../utils/SideSheet.svelte";
   import MobileNavLink from "./MobileNavLink.svelte";
 
-  export let showing: boolean;
+  export let mobileNavOpen: boolean;
 </script>
 
-<div class="navigation" class:menu-hidden={!showing}>
-  <MobileNavLink label="Home" route="./index" />
-  <MobileNavLink label="About" route="./about" />
-  <MobileNavLink label="Experience" route="./experience" />
-  <MobileNavLink label="Projects" route="./projects" />
-</div>
+<SideSheet on:close={() => mobileNavOpen = false}>
+  <!-- svelte-ignore a11y-click-events-have-key-events -->
+  <!-- svelte-ignore a11y-no-static-element-interactions -->
+  <div class="nav-container" on:click={() => mobileNavOpen = false}>
+    <MobileNavLink label="Home" route="./index" />
+    <MobileNavLink label="About" route="./about" />
+    <MobileNavLink label="Experience" route="./experience" />
+    <MobileNavLink label="Projects" route="./projects" />
+  </div>
+</SideSheet>
 
 <style>
-  .navigation {
-		z-index: 100;
-		position: absolute;
-		left: calc(100% - 150px);
-		top: 50px;
-		transition: left 0.4s;
-		height: 100%;
-		display: flex;
-		flex-direction: column;
-		justify-content: flex-start;
-		align-items: center;
-		background-color: var(--foreground-light);
-    border-left: 1px solid var(--border);
-	}
-
-	.menu-hidden {
-		left: 100%;
+  .nav-container {
+		width: 100%;
 	}
 </style>

@@ -27,6 +27,7 @@
   "dependencies": {
     "editorjs-html": "^3.4.3",
     "rollup-plugin-workbox": "^6.2.2",
-    "simplex-noise": "^4.0.1"
+    "simplex-noise": "^4.0.1",
+    "svelte-gesture": "^0.1.4"
   }
 }

@@ -21,7 +21,7 @@
   .back-button {
     position: absolute;
     left: 0;
-    top: calc(50% - 13px);
+    top: calc(50% - 15px);
 
     border: 1px solid var(--border);
 

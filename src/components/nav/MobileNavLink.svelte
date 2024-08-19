@@ -1,22 +1,26 @@
 <script lang="ts">
-	import { isActive, url } from "@roxi/routify";
+	import { goto, isActive, url } from "@roxi/routify";
   
   export let label: string;
   export let route: string;
 </script>
 
-<div id="1" class="nav-link" class:rendered={$isActive(route)}>
-  <a href={$url(route)} class="nav-btn">{label}</a>
+<!-- svelte-ignore a11y-click-events-have-key-events -->
+<!-- svelte-ignore a11y-no-static-element-interactions -->
+<div id="1"class="nav-link" on:click={$goto(route)} class:rendered={$isActive(route)}>
+  <div class="nav-btn">{label}</div>
 </div>
 
 <style>
 	.nav-link {
 		height: 40px;
-		width: 150px;
+		width: 100%;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
+
+    border-radius: 10px;
 	}
 	.nav-link .nav-btn {
 		color: var(--foreground-light-text);

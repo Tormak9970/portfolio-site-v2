@@ -22,8 +22,8 @@
       <slot />
     </div>
     <MediaQuery query="(orientation:landscape)" let:matches>
-      {#if !matches}
-        <MobileNav showing={mobileNavOpen} />
+      {#if !matches && mobileNavOpen}
+        <MobileNav bind:mobileNavOpen={mobileNavOpen} />
       {/if}
     </MediaQuery>
   </div>
