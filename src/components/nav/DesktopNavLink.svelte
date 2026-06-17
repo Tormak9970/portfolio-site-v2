@@ -9,7 +9,7 @@
 
 <a class="nav-link" href={$url(route)} on:mouseenter={() => isHovered = true} on:mouseleave={() => isHovered = false}>
   <div class="nav-btn">{label}</div>
-  <div class="interaction-indicator" class:rendered={$isActive(route)} class:hovered={isHovered}/>
+  <div class="interaction-indicator" class:rendered={$isActive(route)} class:hovered={isHovered}></div>
 </a>
 
 <style>

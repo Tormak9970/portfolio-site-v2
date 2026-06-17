@@ -16,8 +16,8 @@
     {/if}
   </MediaQuery>
   <div class="content-wrapper" class:menu-hidden={!mobileNavOpen}>
-    <div class="grad-left" />
-    <div class="grad-right" />
+    <div class="grad-left"></div>
+    <div class="grad-right"></div>
     <div class="content-body">
       <slot />
     </div>

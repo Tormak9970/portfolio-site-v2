@@ -65,12 +65,12 @@
   }
 
   function updateCanvas() {
-    canvas.width = canvas.parentElement.clientWidth;
-    canvas.height = canvas.parentElement.clientHeight;
+    canvas.width = canvas.parentElement!.clientWidth;
+    canvas.height = canvas.parentElement!.clientHeight;
   }
 
   onMount(() => {
-    ctx = canvas.getContext('2d');
+    ctx = canvas.getContext('2d') as CanvasRenderingContext2D;
     updateCanvas();
     animate(0);
   });
@@ -83,7 +83,7 @@
 <svelte:window on:resize="{() => { updateCanvas(); }}" />
 
 <div class="noisy-dots">
-  <canvas bind:this="{canvas}" />
+  <canvas bind:this="{canvas}"></canvas>
 </div>
 
 <style>

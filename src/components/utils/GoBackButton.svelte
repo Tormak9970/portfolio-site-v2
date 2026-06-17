@@ -3,8 +3,10 @@
 
   export let url: string;
 
+  const navigateToURL = $goto
+
   function goBack() {
-    $goto(url);
+    navigateToURL(url);
   }
 </script>
 

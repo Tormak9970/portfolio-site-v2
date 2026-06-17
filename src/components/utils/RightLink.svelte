@@ -5,10 +5,12 @@
   export let url: string;
   export let isRelative = false;
   export let urlParams: any;
+  
+  const navigateToURL = $goto
 
   function openLink() {
     if (isRelative) {
-      $goto(url, urlParams);
+      navigateToURL(url, urlParams);
     } else {
       window.open(url, '_blank', 'noopener noreferrer');
     }

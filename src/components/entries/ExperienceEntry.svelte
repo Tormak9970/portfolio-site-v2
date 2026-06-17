@@ -29,7 +29,7 @@
       <DiagonalLink label={entry.company} url={entry.companyLink} useIcon={false}/>
       <div class="description">{entry.description}</div>
       {#if entry.content?.blocks?.length > 0}
-        <RightLink label="View Details" url="/experience/:id" urlParams={{ id: id }} isRelative />
+        <RightLink label="View Details" url="/experience/[id]" urlParams={{ id: id }} isRelative />
       {/if}
     </div>
   </MediaQuery>

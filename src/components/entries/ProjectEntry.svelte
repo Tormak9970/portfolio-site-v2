@@ -15,7 +15,7 @@
     <div class="header-container">
       <h2 class="header">{entry.name}</h2>
     </div>
-    <RightLink label="View Writeup" url="/projects/:id" urlParams={{ id: getIdFromName(entry.name) }} isRelative />
+    <RightLink label="View Writeup" url="/projects/[id]" urlParams={{ id: getIdFromName(entry.name) }} isRelative />
     <p class="description">
       {@html entry.description}
     </p>
