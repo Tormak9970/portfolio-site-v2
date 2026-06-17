@@ -50,15 +50,17 @@
 
 <MediaQuery query="(orientation:landscape)" let:matches>
   <div class="about-page" in:fade>
-    <div class="img-container" style="width: {matches ? 384 : 192}px; height: {matches ? 384 : 192}px;" bind:this={imageContainer} />
+    <div class="img-container" style="width: {matches ? 384 : 192}px; height: {matches ? 384 : 192}px;" bind:this={imageContainer}></div>
     <div class="bio-container"style="font-size: {matches ? 22 : 18}px;">
       <p class="bio">
-        I am a web developer and software engineer. I enjoy learning new concepts
-        through self guided projects, and sharing my knowledge with others. Currently
-        I am attending
+        I am a Full Stack Engineer currently working at <a href="https://www.actalentservices.com/en" rel="noopenner norefferer" target="_blank">Actalent Inc</a>. I enjoy learning new concepts
+        through self guided projects, and sharing my knowledge with others.
+        <br/>
+        <br/>
+        I have a Bachelors in Science in Computational Modeling and Data Analytics, with minors in Computer Science and Mathematics from
         <a href="https://vt.edu/" rel="noopenner norefferer" target="_blank">
           Virginia Polytechnic Institute and State University
-        </a>, pursuing an education in Computer Science.
+        </a>.
         <br />
         <br />
         My interest in Computer Science started in highschool, and I have continued
