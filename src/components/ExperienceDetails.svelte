@@ -31,7 +31,7 @@
 
 	$: {
 		if (data && data.time && data.blocks?.length > 0 && data.version) {
-			output = edjsParser.parse(data).join("");
+			output = edjsParser.parse(data);
 		} else {
 			output = [];
 		}
