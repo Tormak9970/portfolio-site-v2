@@ -10,20 +10,18 @@
     "validate": "svelte-check --tsconfig ./tsconfig.json"
   },
   "devDependencies": {
-    "@rollup/plugin-commonjs": "29.0.3",
-    "@rollup/plugin-node-resolve": "16.0.3",
-    "@rollup/plugin-typescript": "12.3.0",
     "@roxi/routify": "3.6.4",
     "@tormak/vite-plugin-sitemap": "^1.1.18",
-    "@sveltejs/vite-plugin-svelte": "7.1.2",
-    "@tsconfig/svelte": "5.0.8",
-    "svelte": "5.56.3",
-    "svelte-check": "4.6.0",
-    "svelte-preprocess": "6.0.5",
-    "tslib": "2.8.1",
-    "typescript": "6.0.3",
-    "vite": "8.0.16",
-    "firebase": "^10.14.1"
+    "@sveltejs/vite-plugin-svelte": "^7.3.1",
+    "@tsconfig/svelte": "^5.0.8",
+    "@types/node": "^24.15.0",
+    "eslint": "^10.12.0",
+    "svelte": "5.57.2",
+    "svelte-check": "^4.7.6",
+    "svelte-preprocess": "^6.0.5",
+    "tslib": "^2.8.1",
+    "typescript": "^6.0.3",
+    "vite": "^8.3.2"
   },
   "dependencies": {
     "editorjs-html": "4.0.5",

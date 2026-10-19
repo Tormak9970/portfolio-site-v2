@@ -8,7 +8,8 @@ interface Project {
   tech: string[],
   content: any,
   link?: string,
-  image: string
+  image: string,
+  downloads?: number,
 }
 
 interface Experience {

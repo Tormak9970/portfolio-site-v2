@@ -1,7 +1,11 @@
 <script lang="ts">
   import ProjectDetails from "../../components/ProjectDetails.svelte";
 
-	export let id:string;
+  type Props = {
+    id:string
+  }
+
+	let { id }: Props = $props()
 </script>
 
 <ProjectDetails id={id} />

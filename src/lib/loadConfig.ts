@@ -18,6 +18,8 @@ async function loadConfig(): Promise<boolean> {
     configLoaded = true;
   }
 
+  console.log(projects)
+
   return configLoaded;
 }
 

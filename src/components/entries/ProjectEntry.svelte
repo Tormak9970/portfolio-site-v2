@@ -24,6 +24,11 @@
         <div class="tag">{tag}</div>
       {/each}
     </div>
+    <div class="tags-container">
+      {#if entry.downloads !== null && entry.downloads !== undefined}
+        <div class="tag downloads">{entry.downloads > 1000 ? `${(entry.downloads / 1000).toFixed(0)}K` : entry.downloads} Downloads</div>
+      {/if}
+    </div>
   </div>
 </div>
 
@@ -103,5 +108,10 @@
 
     background-color: var(--highlight-alt);
     color: var(--highlight-alt-text);
+  }
+
+  .downloads {
+    background-color: var(--foreground);
+    color: var(--foreground-text);
   }
 </style>

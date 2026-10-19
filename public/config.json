@@ -1677,7 +1677,8 @@
 				"Tauri",
 				"Rust",
 				"TypeScript"
-			]
+			],
+      "downloads": 60000
 		},
 		"tabmaster": {
 			"index": 3,
@@ -1868,7 +1869,8 @@
 				"version": "2.19.3"
 			},
 			"link": "https://github.com/Tormak9970/TabMaster",
-			"image": "./images/projects/tabmaster.png"
+			"image": "./images/projects/tabmaster.png",
+      "downloads": 302000
 		},
 		"reliable-changelog": {
 			"index": 4,
@@ -3212,7 +3214,7 @@
 						"id": "l0oa6H4tSj",
 						"type": "paragraph",
 						"data": {
-							"text": "Athena was an effort to combine of almost every tool Actalent used internally into one modernized app. This was my first time using Unit Testing in a project, as well as working with a larger team (20+ developers). I also learned how to efficiently perform code review, as well as how to pair progr&nbsp;"
+							"text": "Athena was an effort to combine of almost every tool Actalent used internally into one modernized app. This was my first time using Unit Testing in a project, as well as working with a larger team (20+ developers). I've gotten to work closely with various stakeholder groups, develop new features alongside them, and implement their feedback. I also learned how to efficiently perform code review, leverage Claude Code, and more."
 						}
 					},
 					{

@@ -1,6 +1,6 @@
 import { defineConfig } from 'vite'
 import { svelte } from '@sveltejs/vite-plugin-svelte'
-import sveltePreprocess from "svelte-preprocess";
+import { sveltePreprocess } from "svelte-preprocess";
 // import { generateSW } from 'rollup-plugin-workbox';
 import { VitePluginSitemap } from '@tormak/vite-plugin-sitemap';
 import routify from '@roxi/routify/vite-plugin'
@@ -27,6 +27,9 @@ export default defineConfig({
           typescript: true,
         }),
       ],
+      compilerOptions: {
+        // runes: true
+      }
     }),
     // generateSW({
     //   swDest: './dist/client/service-worker.js',
@@ -65,5 +68,17 @@ export default defineConfig({
     //     },
     //   }],
     // })
-  ]
+  ],
+  // build: {
+  //   minify: true,
+  //   sourcemap: true,
+  //   rolldownOptions: {
+  //       output: {
+  //           format: 'esm',
+  //           sourcemapPathTransform: relativeSourcePath =>
+  //               relativeSourcePath.replace(/^\.\.\//, `decky://decky/plugin/${encodeURIComponent(manifest.name)}/`),
+  //           exports: 'default',
+  //       },
+  //   },
+  // }
 });
