@@ -1,56 +1,64 @@
 <script lang="ts">
-  import { fade } from "svelte/transition"
-	import edjsHTML from "editorjs-html";
-  
+  import { fade } from "svelte/transition";
+  import edjsHTML from "editorjs-html";
+
   import LoadingAnimation from "./utils/LoadingAnimation.svelte";
 
-	import { experience, loadConfig } from '../lib/loadConfig';
+  import { experience, loadConfig } from "../lib/loadConfig";
   import GoBackButton from "./utils/GoBackButton.svelte";
   import DiagonalLink from "./utils/DiagonalLink.svelte";
 
-	export let id:string;
+  type Props = {
+    id: string;
+  };
+
+  let { id }: Props = $props();
 
   let configLoadPromise = loadConfig();
-	let entry: Experience;
+  let entry: Experience | undefined = $state();
 
-  configLoadPromise.then(() => {
-    entry = experience.get(id)!;
+  $effect(() => {
+    configLoadPromise.then(() => {
+      entry = experience.get(id)!;
+    });
   });
 
-	function imageParser({ data }: any) {
-		return `<img class="image-tool__image-picture" src="/images/projects/${data.file.url}">`;
-	}
+  function imageParser({ data }: any) {
+    return `<img class="image-tool__image-picture" src="/images/projects/${data.file.url}">`;
+  }
 
-	const edjsParser = edjsHTML({
-		image: imageParser
-	});
+  const edjsParser = edjsHTML({
+    image: imageParser,
+  });
 
-	$: data = entry?.content;
+  let data = $derived(entry?.content);
 
-	let output: any[];
+  let output: any[] = $state([]);
 
-	$: {
-		if (data && data.time && data.blocks?.length > 0 && data.version) {
-			output = edjsParser.parse(data);
-		} else {
-			output = [];
-		}
-	}
+  $effect(() => {
+    if (data && data.time && data.blocks?.length > 0 && data.version) {
+      output = edjsParser.parse(data);
+    } else {
+      output = [];
+    }
+  });
 </script>
 
 <div class="details-container" in:fade>
   <div class="details">
     {#await configLoadPromise}
       <LoadingAnimation />
-    {:then} 
+    {:then}
       <div class="header-container">
         <GoBackButton url="/experience" />
-        <h2 class="header">{entry.position}</h2>
+        <h2 class="header">{entry?.position}</h2>
       </div>
-      <!-- svelte-ignore a11y-click-events-have-key-events -->
-      <DiagonalLink label={entry.company} url={entry.companyLink ?? ""} />
+      <DiagonalLink
+        label={entry?.company ?? ""}
+        url={entry?.companyLink ?? ""}
+      />
       <div class="writeup">
-        {@html output ? output : ''}
+        {@html output ? output : ""}
       </div>
     {/await}
   </div>
@@ -61,59 +69,61 @@
     width: calc(100% - 20px);
     padding: 0px 5px;
     margin: 0px 5px;
-		height: 100%;
+    height: 100%;
 
-		display: flex;
-		flex-direction: column;
-		align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     overflow-y: scroll;
   }
 
-	.details {
-		width: 95%;
+  .details {
+    width: 95%;
     max-width: 600px;
 
-		display: flex;
-		flex-direction: column;
-		justify-content: flex-start;
-		align-items: center;
-	}
-  
-	.header-container {
-		width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .header-container {
+    width: 100%;
 
     margin-top: 14px;
 
     margin-bottom: 0.5rem;
-		
+
     display: flex;
     align-items: center;
     justify-content: center;
 
     position: relative;
-	}
-  
-	.header-container .header {
-		font-size: 27px;
-		margin: 0;
-		padding: 0;
-	}
+  }
 
-  .writeup { width: 100%; }
+  .header-container .header {
+    font-size: 27px;
+    margin: 0;
+    padding: 0;
+  }
 
-	:global(.image-tool__image-picture) {
-		max-width: 100%;
-	}
+  .writeup {
+    width: 100%;
+  }
 
-	.writeup :global(a) {
+  :global(.image-tool__image-picture) {
+    max-width: 100%;
+  }
+
+  .writeup :global(a) {
     color: var(--link-color);
     font-weight: bold;
     text-decoration: none;
   }
 
-	.writeup :global(a):hover,
-	.writeup :global(a):focus {
+  .writeup :global(a):hover,
+  .writeup :global(a):focus {
     color: var(--link-color_clicked);
     text-decoration: underline;
   }
@@ -124,7 +134,6 @@
     padding-left: 10px;
   }
 
-  
   .writeup :global(ul ul) {
     padding-left: 20px;
   }

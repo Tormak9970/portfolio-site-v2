@@ -1,15 +1,11 @@
 <script lang="ts">
-	import { goto } from "@roxi/routify";
-  
   import DesktopNavLink from "./DesktopNavLink.svelte";
 </script>
 
 <div class="header">
-  <!-- svelte-ignore a11y-click-events-have-key-events -->
-  <!-- svelte-ignore a11y-no-static-element-interactions -->
-  <div class="home-container" on:click={() => { $goto("./index"); }} >
+  <a class="home-container" href="./index">
     <img src="/images/logo-new.svg" alt="logo" height="30" width="30" />
-  </div>
+  </a>
   <div class="navigation">
     <DesktopNavLink label="Home" route="./index" />
     <DesktopNavLink label="About" route="./about" />
@@ -20,27 +16,27 @@
 
 <style>
   .header {
-		width: 100%;
-		height: 50px;
+    width: 100%;
+    height: 50px;
     border-bottom: 1px solid var(--border);
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		justify-content: space-between;
-	}
-	.home-container {
-		height: 100%;
-		width: 50px;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		cursor: pointer;
-	}
-	.navigation {
-		height: 100%;
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-	}
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .home-container {
+    height: 100%;
+    width: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  .navigation {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
 </style>

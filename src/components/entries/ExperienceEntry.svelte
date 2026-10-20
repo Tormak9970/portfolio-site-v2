@@ -5,33 +5,51 @@
   import RightLink from "../utils/RightLink.svelte";
   import { getIdFromName } from "../../lib/utils";
 
-  export let entry: Experience;
+  type Props = {
+    entry: Experience;
+  };
 
-  $: id = getIdFromName(entry.company) + "-" + getIdFromName(entry.position);
+  let { entry }: Props = $props();
+
+  let id = $derived(
+    getIdFromName(entry.company) + "-" + getIdFromName(entry.position),
+  );
 </script>
 
-<div class="entry" in:fly|global={{ delay: entry.index * 300, x: 200, duration: 1000 }}>
-  <MediaQuery query="(min-width: 750px)" let:matches>
-    {#if matches}
-      <div class="time-container" style="margin-top: 15px;">
-        {entry.duration}
-      </div>
-    {/if}
-    <div class="info-container">
-      <h2 class="experience-header">{entry.position}</h2>
-      {#if !matches}
-        <div class="time-container">
+<div
+  class="entry"
+  in:fly|global={{ delay: entry.index * 300, x: 200, duration: 1000 }}
+>
+  <MediaQuery query="(min-width: 750px)">
+    {#snippet children(matches)}
+      {#if matches}
+        <div class="time-container" style="margin-top: 15px;">
           {entry.duration}
         </div>
       {/if}
-      <!-- svelte-ignore a11y-click-events-have-key-events -->
-      
-      <DiagonalLink label={entry.company} url={entry.companyLink} useIcon={false}/>
-      <div class="description">{entry.description}</div>
-      {#if entry.content?.blocks?.length > 0}
-        <RightLink label="View Details" url="/experience/[id]" urlParams={{ id: id }} isRelative />
-      {/if}
-    </div>
+      <div class="info-container">
+        <h2 class="experience-header">{entry.position}</h2>
+        {#if !matches}
+          <div class="time-container">
+            {entry.duration}
+          </div>
+        {/if}
+        <DiagonalLink
+          label={entry.company}
+          url={entry.companyLink}
+          useIcon={false}
+        />
+        <div class="description">{entry.description}</div>
+        {#if entry.content?.blocks?.length > 0}
+          <RightLink
+            label="View Details"
+            url="/experience/[id]"
+            urlParams={{ id: id }}
+            isRelative
+          />
+        {/if}
+      </div>
+    {/snippet}
   </MediaQuery>
 </div>
 
@@ -66,7 +84,7 @@
   .description {
     width: 100%;
     max-width: 450px;
-    
+
     margin-top: 10px;
 
     font-size: 18px;

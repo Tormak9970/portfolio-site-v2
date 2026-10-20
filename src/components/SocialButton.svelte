@@ -1,17 +1,24 @@
 <script lang="ts">
-	export let onClick: () => void;
+  import type { Snippet } from "svelte";
+
+  type Props = {
+    onClick: () => void;
+    children: Snippet;
+  };
+
+  let { onClick, children }: Props = $props();
 </script>
 
 <div class="social-button-container">
-  <!-- svelte-ignore a11y-click-events-have-key-events -->
-  <!-- svelte-ignore a11y-no-static-element-interactions -->
-  <div on:click="{onClick}" class="social-button">
-    <slot />
-  </div>
+  <button type="button" onclick={onClick} class="social-button">
+    {@render children()}
+  </button>
 </div>
 
 <style>
-  .social-button-container { margin: 4px; }
+  .social-button-container {
+    margin: 4px;
+  }
   .social-button {
     width: 40px;
     height: 40px;
@@ -22,6 +29,14 @@
     align-items: center;
 
     text-decoration: none;
+
+    /* reset default button styling */
+    background: none;
+    border: none;
+    padding: 0;
+    font: inherit;
+    color: inherit;
+    cursor: pointer;
   }
   :global(.social-button svg) {
     fill: var(--highlight);
@@ -29,6 +44,10 @@
 
     transition: fill 0.15s ease-in-out;
   }
-  .social-button:hover { cursor: pointer; }
-  :global(.social-button:hover svg) { fill: var(--highlight-hover);  }
+  .social-button:hover {
+    cursor: pointer;
+  }
+  :global(.social-button:hover svg) {
+    fill: var(--highlight-hover);
+  }
 </style>

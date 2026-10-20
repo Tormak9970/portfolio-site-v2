@@ -1,17 +1,29 @@
 <script lang="ts">
   import { createNoise3D } from "simplex-noise";
-  import { afterUpdate, onMount } from "svelte";
+  import { onMount } from "svelte";
 
-  export let fillColor: string;
+  type Props = {
+    fillColor: string;
+  };
 
-  let canvas:HTMLCanvasElement;
-  let ctx:CanvasRenderingContext2D;
+  let { fillColor }: Props = $props();
 
-  function mapRange(value: number, inputMin: number, inputMax: number, outputMin: number, outputMax: number) {
+  let canvas: HTMLCanvasElement;
+  let ctx: CanvasRenderingContext2D;
+
+  function mapRange(
+    value: number,
+    inputMin: number,
+    inputMax: number,
+    outputMin: number,
+    outputMax: number,
+  ) {
     if (Math.abs(inputMin - inputMax) < Number.EPSILON) {
       return outputMin;
     } else {
-      let outVal = ((value - inputMin) / (inputMax - inputMin)) * (outputMax - outputMin) + outputMin;
+      let outVal =
+        ((value - inputMin) / (inputMax - inputMin)) * (outputMax - outputMin) +
+        outputMin;
       return outVal;
     }
   }
@@ -31,10 +43,16 @@
     ctx.fillRect(0, 0, canvas.width, canvas.height);
   }
 
-  function drawScaledCircle(x:number, y:number, noise:number) {
+  function drawScaledCircle(x: number, y: number, noise: number) {
     ctx.fillStyle = fillColor; // also try #2c2c2c, #303030, #383838
     ctx.beginPath();
-    ctx.arc(x, y, mapRange(noise, -1, 1, minCircleRad, maxCircleRad), 0, 2 * Math.PI);
+    ctx.arc(
+      x,
+      y,
+      mapRange(noise, -1, 1, minCircleRad, maxCircleRad),
+      0,
+      2 * Math.PI,
+    );
     ctx.fill();
   }
 
@@ -43,18 +61,23 @@
     const numIttsY = Math.ceil(canvas.height / pointSpacing) + 1;
     for (let i = 0; i < numIttsX; i++) {
       const x = pointSpacing * i;
-      
+
       for (let j = 0; j < numIttsY; j++) {
         const y = pointSpacing * j;
 
-        const n = noise(x / canvas.width * frequencyX, y / canvas.height * frequencyY, time * 0.5) * amplitude;
+        const n =
+          noise(
+            (x / canvas.width) * frequencyX,
+            (y / canvas.height) * frequencyY,
+            time * 0.5,
+          ) * amplitude;
 
         drawScaledCircle(x, y, n);
       }
     }
   }
 
-  function animate(currentTime:number): void {
+  function animate(currentTime: number): void {
     if (canvas) {
       clear();
       currentTime *= 0.001;
@@ -70,20 +93,24 @@
   }
 
   onMount(() => {
-    ctx = canvas.getContext('2d') as CanvasRenderingContext2D;
+    ctx = canvas.getContext("2d") as CanvasRenderingContext2D;
     updateCanvas();
     animate(0);
   });
 
-  afterUpdate(() => {
+  $effect(() => {
     updateCanvas();
   });
 </script>
 
-<svelte:window on:resize="{() => { updateCanvas(); }}" />
+<svelte:window
+  on:resize={() => {
+    updateCanvas();
+  }}
+/>
 
 <div class="noisy-dots">
-  <canvas bind:this="{canvas}"></canvas>
+  <canvas bind:this={canvas}></canvas>
 </div>
 
 <style>

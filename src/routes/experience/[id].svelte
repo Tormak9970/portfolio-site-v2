@@ -1,7 +1,11 @@
 <script lang="ts">
   import ExperienceDetails from "../../components/ExperienceDetails.svelte";
 
-	export let id:string;
+  type Props = {
+    id: string;
+  };
+
+  let { id }: Props = $props();
 </script>
 
-<ExperienceDetails id={id} />
+<ExperienceDetails {id} />

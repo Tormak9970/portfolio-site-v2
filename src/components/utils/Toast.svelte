@@ -1,6 +1,10 @@
 <script lang="ts">
-  export let show: boolean = false;
-  export let message: string;
+  type Props = {
+    show?: boolean;
+    message: string;
+  };
+
+  let { show = $bindable(false), message = $bindable() }: Props = $props();
 </script>
 
 <div class="toast-container" class:hidden={!show}>

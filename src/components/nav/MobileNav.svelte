@@ -2,13 +2,19 @@
   import SideSheet from "../utils/SideSheet.svelte";
   import MobileNavLink from "./MobileNavLink.svelte";
 
-  export let mobileNavOpen: boolean;
+  type Props = {
+    mobileNavOpen: boolean;
+  };
+
+  let { mobileNavOpen = $bindable() }: Props = $props();
 </script>
 
-<SideSheet on:close={() => mobileNavOpen = false}>
-  <!-- svelte-ignore a11y-click-events-have-key-events -->
-  <!-- svelte-ignore a11y-no-static-element-interactions -->
-  <div class="nav-container" on:click={() => mobileNavOpen = false}>
+<SideSheet onClose={() => (mobileNavOpen = false)}>
+  <div
+    class="nav-container"
+    role="presentation"
+    onclick={() => (mobileNavOpen = false)}
+  >
     <MobileNavLink label="Home" route="./index" />
     <MobileNavLink label="About" route="./about" />
     <MobileNavLink label="Experience" route="./experience" />
@@ -18,6 +24,6 @@
 
 <style>
   .nav-container {
-		width: 100%;
-	}
+    width: 100%;
+  }
 </style>

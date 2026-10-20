@@ -4,7 +4,11 @@
 
   import RightLink from "../utils/RightLink.svelte";
 
-  export let entry:Project;
+  type Props = {
+    entry: Project
+  }
+
+  let { entry }: Props = $props()
 </script>
 
 <div class="entry" in:fly|global={{ delay: entry.index * 200, x: 200, duration: 800 }}>

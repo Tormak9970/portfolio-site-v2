@@ -6,12 +6,12 @@
   <div class="error">Page not found</div>
   <div class="message">
     Either I broke something, or you made a typo! Click
-    <a href="{$url("/")}">here</a> to return to the home page.
+    <a href={$url("/")}>here</a> to return to the home page.
   </div>
 </div>
 
 <style>
-	.not-found-error {
+  .not-found-error {
     width: 90%;
     height: 100%;
 
@@ -37,8 +37,8 @@
     text-decoration: none;
   }
 
-	a:hover,
-	a:focus {
+  a:hover,
+  a:focus {
     color: var(--link-color_clicked);
     text-decoration: underline;
   }

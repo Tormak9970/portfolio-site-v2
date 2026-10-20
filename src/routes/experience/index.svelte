@@ -1,15 +1,15 @@
 <script lang="ts">
   import { fade } from "svelte/transition";
   import { sortEntriesBasedOnIndex } from "../../lib/utils";
-  import { experience, loadConfig } from '../../lib/loadConfig';
+  import { experience, loadConfig } from "../../lib/loadConfig";
   import ExperienceEntry from "../../components/entries/ExperienceEntry.svelte";
   import LoadingAnimation from "../../components/utils/LoadingAnimation.svelte";
 
   let configLoadPromise = loadConfig();
-  let entries: Experience[];
+  let entries: Experience[] = $state([]);
 
   configLoadPromise.then(() => {
-    entries = Array.from(experience.values()).sort(sortEntriesBasedOnIndex)
+    entries = Array.from(experience.values()).sort(sortEntriesBasedOnIndex);
   });
 </script>
 
@@ -19,7 +19,7 @@
   {:then}
     <div class="content" in:fade>
       {#each entries as entry}
-        <ExperienceEntry entry={entry}/>
+        <ExperienceEntry {entry} />
       {/each}
     </div>
   {/await}
@@ -29,7 +29,7 @@
   .experience-container {
     width: 100%;
     height: 100%;
-    
+
     overflow-y: scroll;
     overflow-x: hidden;
   }

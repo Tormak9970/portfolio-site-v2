@@ -1,26 +1,26 @@
-const projects: Map<string, Project> = new Map();
-const experience: Map<string, Experience> = new Map();
+const projects: Map<string, Project> = new Map()
+const experience: Map<string, Experience> = new Map()
 
-let configLoaded = false;
+let configLoaded = false
 
 async function loadConfig(): Promise<boolean> {
-  if (!configLoaded) {
-    const config = await fetch('/config.json').then(response => { return response.json(); });
+    if (!configLoaded) {
+        const config = await fetch('/config.json').then(response => {
+            return response.json()
+        })
 
-    for (const entr of Object.entries(config['projects'])) {
-      projects.set(entr[0], entr[1] as Project);
+        for (const entr of Object.entries(config['projects'])) {
+            projects.set(entr[0], entr[1] as Project)
+        }
+
+        for (const entr of Object.entries(config['experience'])) {
+            experience.set(entr[0], entr[1] as Experience)
+        }
+
+        configLoaded = true
     }
 
-    for (const entr of Object.entries(config['experience'])) {
-      experience.set(entr[0], entr[1] as Experience);
-    }
-
-    configLoaded = true;
-  }
-
-  console.log(projects)
-
-  return configLoaded;
+    return configLoaded
 }
 
-export { loadConfig, projects, experience };
+export { loadConfig, projects, experience }

@@ -1,27 +1,24 @@
 <script lang="ts">
-    import { onMount } from "svelte";
+  import type { Snippet } from "svelte";
 
-    export let query:string;
+  type Props = {
+    query: string;
+    children?: Snippet<[boolean]>;
+  };
 
-    let mql:MediaQueryList;
-    let queryLstn:any;
-    let wasMounted = false;
-    let matches = false;
+  let { query, children }: Props = $props();
 
-    onMount(() => { wasMounted = true; return () => { removeActiveListener(); }; });
+  let matches = $state(false);
 
-    $: {
-        if (wasMounted) { removeActiveListener(); addNewListener(query); }
-    }
+  $effect(() => {
+    const mql = window.matchMedia(query);
+    const onChange = (e: MediaQueryListEvent) => (matches = e.matches);
 
-    function addNewListener(query:string) {
-        mql = window.matchMedia(query);
-        queryLstn = (v:MediaQueryList) => matches = v.matches;
-        mql.addEventListener("change", queryLstn);
-        matches = mql.matches;
-    }
+    matches = mql.matches;
+    mql.addEventListener("change", onChange);
 
-    function removeActiveListener() { if (mql && queryLstn) mql.removeEventListener('change', queryLstn); }
+    return () => mql.removeEventListener("change", onChange);
+  });
 </script>
 
-<slot {matches} />
+{@render children?.(matches)}
